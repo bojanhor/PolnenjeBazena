@@ -14,58 +14,37 @@ namespace WebApplication1.Pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Val.guiController.PageDefault_ = new GuiController.PageDefault(this);
+            Val.guiController.PageDefault_ = new GuiController.PageDefault(this, Session);
 
             Helper.EveryPageProtocol("Dobrodošli", this, Session, TemplateClassID);
+
+
             Initialise();
-
-            
+                                    
         }
-
+                      
         private void Initialise()
         {
-
-            TemplateClassID.Controls.Add(Val.guiController.PageDefault_.btnPannel);
             CreateInitializePanel();
+            
+            TemplateClassID.Controls.Add(Val.guiController.PageDefault_.Tmr_LuciUpdatePanel);
+            TemplateClassID.Controls.Add(Val.guiController.PageDefault_.LuciUpdatePanel);
+            TemplateClassID.Controls.Add(Val.guiController.PageDefault_.btnPannel);
 
             Val.guiController.PageDefault_.RegisterOnClick();
-
         }
-
-        private void AddLuci()
-        {
-            foreach (var item in Val.guiController.PageDefault_.Luc)
-            {
-                if (item != null)
-                {
-                    if (item.Width != "0")
-                    {
-                        LuciPanel.ContentTemplateContainer.Controls.Add(item);
-
-                    }
-                }
-            }
-        }
-
+               
         void CreateInitializePanel()
         {
-            Timer1.Interval = Settings.UpdateValuesPCms;
-            LuciPanel.ContentTemplateContainer.Controls.Add(
-                Val.guiController.PageDefault_.divStala);
-            AddLuci();
 
             Timer2.Interval = Settings.UpdateValuesPCms * 5;
             TemperaturePanel.ContentTemplateContainer.Controls.Add(
-                Val.guiController.PageDefault_.divWeather);
-
-
+            Val.guiController.PageDefault_.divWeather);
         }
-
 
         protected void Timer1_Tick(object sender, EventArgs e)
         {
-            // Updates panel implicitly (with postback whole class is recreated)
-
+            // Updates panel implicitly (with postback whole class is recreated)           
         }
     }
 

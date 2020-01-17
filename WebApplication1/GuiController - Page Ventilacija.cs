@@ -252,7 +252,7 @@ namespace WebApplication1
 
                 void positionControls_Left()
                 {
-
+                    
                     rowbuff = row1;
 
                     SetControlAbsolutePos(lbl_tn1, rowbuff, col1); rowbuff += rowspacing;
@@ -274,12 +274,13 @@ namespace WebApplication1
                     SetControlAbsolutePos(btnNastavi2, rowbuff, col2, btnHeight * ratio, btnHeight); rowbuff += rowspacing;
                     SetControlAbsolutePos(btnNastavi3, rowbuff, col2, btnHeight * ratio, btnHeight); rowbuff += rowspacing;
                     SetControlAbsolutePos(btnNastaviObr, rowbuff, col2, btnHeight * ratio, btnHeight);
-
+                                       
                     rowbuff = row1 - btnOffset;
 
                     SetControlAbsolutePos(btnNastaviObr1, rowbuff, col5, btnHeight * ratio, btnHeight); rowbuff += rowspacing;
                     SetControlAbsolutePos(btnNastaviObr2, rowbuff, col5, btnHeight * ratio, btnHeight); rowbuff += rowspacing;
                     SetControlAbsolutePos(btnNastaviObr3, rowbuff, col5, btnHeight * ratio, btnHeight); rowbuff += rowspacing;
+                                       
 
                     positionSeparators_Left();
                 }

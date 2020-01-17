@@ -192,7 +192,7 @@ namespace WebApplication1
                 // button value changes from Val.SpremljajChecked on postback
 
                 setSpremljajChecked(Spremljaj.active);
-                Helper.Refresh(Session,thisPage);
+                Helper.Refresh();
 
             }
             

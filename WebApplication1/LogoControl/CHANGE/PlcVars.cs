@@ -629,7 +629,7 @@ namespace WebApplication1
                 Value = true;               
             }            
 
-            public void stopSendPulse()
+            private void stopSendPulse()
             {
                 if (sendpulseState == 2)
                 {

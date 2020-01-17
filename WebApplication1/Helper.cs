@@ -21,8 +21,8 @@ namespace WebApplication1
         {
             _thisPage.Response.Redirect(site, false);
         }
-        
-        public static void Refresh(System.Web.SessionState.HttpSessionState session, Page thisPage)
+
+        private static void Refresh(System.Web.SessionState.HttpSessionState session, Page thisPage)
         {
             var pageHistory = (PageHistory)session[ViewStateElement_PageHistory];
             var lastPage = pageHistory.getLastPage();
@@ -66,7 +66,7 @@ namespace WebApplication1
             if (_thisPage.IsPostBack)
             {
                 Val.guiController.Reconstruct();
-            }
+            }           
             
             // Background
             GuiController.CreateEnclosingDivForReference(TemplateClassID);

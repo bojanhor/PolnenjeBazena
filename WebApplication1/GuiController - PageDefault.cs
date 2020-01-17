@@ -12,9 +12,16 @@ namespace WebApplication1
     {
         public class PageDefault
         {
+            public static string ViewStateElement_LucActiveOnGui = "LucActiveOnGui";
+                        
             Page thisPage;
+            System.Web.SessionState.HttpSessionState session;
             public GControls.MasterMenuButton[] imagebuttons;
             public Panel btnPannel;
+
+            public UpdatePanel LuciUpdatePanel;
+            public AsyncPostBackTrigger Ap_LuciUpdatePanel;
+            public Timer Tmr_LuciUpdatePanel;
 
             public GControls.Luc[] Luc;
 
@@ -32,12 +39,13 @@ namespace WebApplication1
             Image Stala;
 
             HtmlGenericControl divMasterButtons;
+                                   
+            public PageDefault(Page _thisPage, System.Web.SessionState.HttpSessionState session)
+            {               
+                this.session = session;
 
-            string UpdatePanelId_Luci = "LuciPanel";
+                
 
-
-            public PageDefault(Page _thisPage)
-            {
                 try
                 {
                     thisPage = _thisPage;
@@ -49,26 +57,42 @@ namespace WebApplication1
 
                     Stala = new Image();
 
-                    AddbtnPanel();
+                    ManageUpdatePanelLuci();
                     AddStala();
                     InitializeLuci();
-                    AddImageButtons();
+                    AddImageButtons_Menu();
                     AddWeather();
+                    AddbtnPanel();
 
                 }
                 catch (Exception ex)
                 {
-
                     throw new Exception("Internal error inside PageDefault class constructor: " + ex.Message);
                 }
 
 
             }
 
+            void ManageUpdatePanelLuci()
+            {
+                LuciUpdatePanel = new UpdatePanel();
+                LuciUpdatePanel.UpdateMode = UpdatePanelUpdateMode.Conditional;
+                LuciUpdatePanel.ID = "LuciUpdatePanel";
+
+                Tmr_LuciUpdatePanel = new Timer();
+                Tmr_LuciUpdatePanel.Interval = Settings.UpdateValuesPCms;
+                Tmr_LuciUpdatePanel.ID = "Tmr_LuciUpdatePanel";
+
+                Ap_LuciUpdatePanel = new AsyncPostBackTrigger();
+                Ap_LuciUpdatePanel.ControlID = "Tmr_LuciUpdatePanel";
+
+                LuciUpdatePanel.Triggers.Add(Ap_LuciUpdatePanel);
+            }
+
             void AddWeather()
             {
                 divWeather = DIV.CreateDiv("77%", "70%", "25%", "16%");
-
+                divWeather.Style.Add(HtmlTextWriterStyle.ZIndex, "10");
 
                 inTemp = new ImageButton()
                 {
@@ -160,14 +184,23 @@ namespace WebApplication1
                 divWeather.Controls.Add(rainSenseD);
 
             }
+                       
 
             private void InitializeLuci()
-            {
-                
-                for (int i = 1; i <= XmlController.GetHowManyLucIcons(); i++)
+            {     
+                for (int i = 1; i <= XmlController.GetHowManyLucIcons(); i++) 
                 {
-                    Luc[i] = new GControls.Luc(i, (UpdatePanel)thisPage.FindControl(UpdatePanelId_Luci));
+                    Luc[i] = new GControls.Luc(i);                    
                 }
+
+                foreach (var item in Luc)
+                {
+                    if (item != null)
+                    {
+                        divStala.Controls.Add(item);
+                    }                    
+                }
+                LuciUpdatePanel.ContentTemplateContainer.Controls.Add(divStala);
 
             }
 
@@ -176,36 +209,18 @@ namespace WebApplication1
                 for (int i = 0; i < imagebuttons.Length; i++)
                 {
                     imagebuttons[i].Click += (sender, e)=>BtnMasterMenuClick(sender, e, thisPage);
-                }
-
-                for (int i = 1; i < Luc.Length; i++)
-                {
-                    Luc[i].button.Click += ZarnicaClick;
-                }
+                }          
 
                 inTemp.Click += InTemp_Click;
                 outTemp.Click += InTemp_Click;
                 rainSense.Click += InTemp_Click;
-
 
             }
 
             private void InTemp_Click(object sender, ImageClickEventArgs e)
             {
                 Helper.Redirect("vreme", thisPage);
-            }
-
-            private void ZarnicaClick(object sender, EventArgs e)
-            {
-
-                var luc = (GControls.LucBtn)sender;
-                var plcItemWrite = Val.logocontroler.Prop1.LucStatus_WriteToPLC[luc.btnID];
-                plcItemWrite.SendPulse();
-
-                var plcItemRead = Val.logocontroler.Prop1.LucStatus_ReadToPC[luc.btnID]; // TODO odstrani
-
-
-            }
+            }                        
 
             private void BtnMasterMenuClick(object sender, ImageClickEventArgs e, Page thisPage)
             {
@@ -217,7 +232,6 @@ namespace WebApplication1
             {
                 return XmlController.GetHowManyMenuItems();
             }
-
 
             void AddbtnPanel()
             {
@@ -232,8 +246,7 @@ namespace WebApplication1
             void AddStala()
             {
 
-                Stala.ImageUrl = "~/Pictures/MasterPic.png ";
-                Stala.Style.Add(HtmlTextWriterStyle.ZIndex, "1");
+                Stala.ImageUrl = "~/Pictures/MasterPic.png ";                
                 Stala.Style.Add(HtmlTextWriterStyle.Width, "100%");
 
                 divStala.Controls.Add(Stala);
@@ -243,27 +256,23 @@ namespace WebApplication1
 
             }
 
-            private void AddImageButtons()
+            private void AddImageButtons_Menu()
             {
                 float spacing = 17.5F;
                 float initialPos = 11.0F;
 
                 for (int i = 0; i < imagebuttons.Length; i++)
                 {
-                    
-                   
                     divMasterButtons = DIV.CreateDiv(Helper.FloatToStringWeb(initialPos, "%"));
                     initialPos += spacing;
                     imagebuttons[i] = new GControls.MasterMenuButton(i + 1);
                     divMasterButtons.ID = imagebuttons[i].ID + "_div";
                     divMasterButtons.Controls.Add(imagebuttons[i]);
-                    btnPannel.Controls.Add(divMasterButtons);
+                    btnPannel.Controls.Add(divMasterButtons);             
 
                 }
             }
-
-
+                                  
         }
-
     }
 }

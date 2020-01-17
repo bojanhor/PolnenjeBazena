@@ -41,7 +41,7 @@ namespace WebApplication1
             public class VrataSettingsSubmenu : GControls.SettingsSubMenu
             {
                 public VrataSettingsSubmenu(VrazaZaveseContent SettingsContent)
-                    : base(1, "Vrata", true, SettingsContent)
+                    : base(1, "Vrata", false, SettingsContent)
                 {
 
                 }
@@ -50,7 +50,7 @@ namespace WebApplication1
             public class ZaveseSettingsSubmenu : GControls.SettingsSubMenu
             {
                 public ZaveseSettingsSubmenu(VrazaZaveseContent SettingsContent)
-                    : base(1, "Zavese", true, SettingsContent)
+                    : base(1, "Zavese", false, SettingsContent)
                 {
 
                 }

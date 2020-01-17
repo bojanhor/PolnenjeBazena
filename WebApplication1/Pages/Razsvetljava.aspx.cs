@@ -18,13 +18,8 @@ namespace WebApplication1.Pages
             
             Helper.EveryPageProtocol("Razsvetljava", this, Session, TemplateClassID);
             Initialise();            
-            LoadComplete += Razsvetljava_LoadComplete;
-        }
-
-        private void Razsvetljava_LoadComplete(object sender, EventArgs e)
-        {
-            Val.guiController.PageRazsvetljava_.AddScript(this, TemplateClassID);
-        }
+           
+        }   
 
         private void Initialise()
         {

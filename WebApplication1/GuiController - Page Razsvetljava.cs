@@ -57,8 +57,10 @@ namespace WebApplication1
                     divLuciSettings.ID = "divLuciSettings";
 
                     divLuciSettings.Controls.Add(LuciSettings);
-                    
-                                                            
+
+                    HidePanel();
+
+
                 }
                 catch (Exception ex)
                 {
@@ -92,12 +94,11 @@ namespace WebApplication1
                     getCurrentLuciSettingsShown() + incrementBy);
             }
 
-            public void AddScript(Page p, HtmlGenericControl divForScript)
+            public void HidePanel()
             {
                 if (getCurrentLuciSettingsShown() == 0)
-                {                    
-                    var panel = (HtmlGenericControl)ThisPage.FindControl("divLuciSettings");
-                    panel.Style.Add(HtmlTextWriterStyle.Visibility, "hidden");                   
+                {   
+                    divLuciSettings.Style.Add(HtmlTextWriterStyle.Visibility, "hidden");                   
                 }                
 
             }
@@ -136,19 +137,19 @@ namespace WebApplication1
             private void ExitButton_Click(object sender, ImageClickEventArgs e)
             {               
                 setCurrentLuciSettingsShown(0); // hideDiv
-                Helper.Refresh(Session, ThisPage);
+                Helper.Refresh();
             }
 
             void PrevButton_Click(object sender, ImageClickEventArgs e)
             {
                 incrementCurrentLuciSettingsShown(-1);
-                Helper.Refresh(Session, ThisPage);
+                Helper.Refresh();
             }
 
             void NextButton_Click(object sender, ImageClickEventArgs e)
             {
                 incrementCurrentLuciSettingsShown(1);
-                Helper.Refresh(Session, ThisPage);
+                Helper.Refresh();
             }
 
             private void InitializeLuci()
@@ -190,7 +191,7 @@ namespace WebApplication1
                 var panel = (HtmlGenericControl)ThisPage.FindControl("divLuciSettings");
                 panel.Style.Add(HtmlTextWriterStyle.Visibility, "visible");
 
-                Helper.Refresh(Session, ThisPage);
+                Helper.Refresh();
             }
 
             private void UgasniVseLuci_Click(object sender, EventArgs e)
@@ -217,7 +218,6 @@ namespace WebApplication1
                 
                 divBtns.Controls.Add(ugasniPodnevi);
             }
-
 
             void AddStala()
             {
@@ -250,7 +250,6 @@ namespace WebApplication1
                 }
                
             }
-
             
             public class LuciSubmenuContent : HtmlGenericControl
             {

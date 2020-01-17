@@ -41,7 +41,7 @@ namespace WebApplication1.Pages
         private void Refresh_Click1(object sender, System.Web.UI.ImageClickEventArgs e)
         {
             XmlController.RefreshFile_readAgain();
-            Helper.Refresh(Session, Page);
+            Helper.Refresh();
         }
 
         private void Save_Click(object sender, System.Web.UI.ImageClickEventArgs e)

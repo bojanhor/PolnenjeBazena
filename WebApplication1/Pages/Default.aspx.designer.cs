@@ -40,24 +40,6 @@ namespace WebApplication1.Pages {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl TemplateClassID;
         
         /// <summary>
-        /// LuciPanel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel LuciPanel;
-        
-        /// <summary>
-        /// Timer1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.Timer Timer1;
-        
-        /// <summary>
         /// TemperaturePanel control.
         /// </summary>
         /// <remarks>

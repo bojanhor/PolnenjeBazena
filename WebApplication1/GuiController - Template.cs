@@ -157,6 +157,7 @@ namespace WebApplication1
                 
 
                 PrevButton.ID = "BackBtn";
+                PrevButton.Style.Add(HtmlTextWriterStyle.ZIndex, "10");
 
                 TemplateClassID.Controls.Add(PrevButton);
 

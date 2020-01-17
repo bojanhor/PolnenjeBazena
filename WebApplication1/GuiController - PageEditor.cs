@@ -12,8 +12,8 @@ namespace WebApplication1
 
         public class PageEditor
         {           
-            public GControls.ButtonWithLabel save = new GControls.ButtonWithLabel("Save", 10, 1.2F);
-            public GControls.ButtonWithLabel refresh = new GControls.ButtonWithLabel("Refresh", 10, 1.2F);
+            public GControls.ButtonWithLabel save = new GControls.ButtonWithLabel("Save", 7, 1.2F);
+            public GControls.ButtonWithLabel refresh = new GControls.ButtonWithLabel("Refresh", 7, 1.2F);
 
             public PageEditor()
             {
@@ -24,15 +24,10 @@ namespace WebApplication1
             {
                 var size = 7;
                 SetControlAbsolutePos(save, 0, 35, size, size);
-                SetControlAbsolutePos(refresh, 0, 45, size, size);
-                
+                SetControlAbsolutePos(refresh, 0, 45, size, size);                
 
             }
-
-            
-            
         }
-
 
     }
 }

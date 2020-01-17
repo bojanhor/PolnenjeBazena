@@ -29,20 +29,20 @@ namespace WebApplication1
             }
 
             public class Luc : HtmlGenericControl
-            {
-                public string UpdatePanelId;
-                readonly UpdatePanel ParentUpdatePanel;
+            {     
+                              
                 public LucBtn button;
-                public ImageButton Zarnica = new ImageButton();
-                public Label Number = new Label();
+                public ImageButton Zarnica1;
+                public ImageButton Zarnica0;
+                public Label Number1;
+                public Label Number0;
                 public int btnID;
                 public Helper.Position position;
-                public bool active;
+                public bool active = false;               
                 public string address;
                 public readonly string deactivatedPicture = "~\\Pictures\\Zarnica.png";
                 public readonly string activatedPicture = "~\\Pictures\\Zarnica1.png";
-
-
+               
                 public string Top
                 {
                     set
@@ -77,38 +77,29 @@ namespace WebApplication1
                     }
                 }
 
-               
-                public Luc(int _btnID, UpdatePanel Parent)
-                {
-                    this.ParentUpdatePanel = Parent;
 
+                public Luc(int _btnID)
+                {
+                    
                     try
-                    {
+                    {                        
                         button = new LucBtn(this, _btnID);
                         btnID = _btnID;
-                        ID = "Luc" + btnID;                       
+                        ID = "Luc" + btnID;
                         Style.Add(HtmlTextWriterStyle.Position, "absolute");
-
+                                                
                         position = XmlController.GetPositionLucForDefaultScreen(btnID);
 
                         Top = position.top.ToString().Replace(",", ".");
                         Left = position.left.ToString().Replace(",", ".");
                         Width = position.width.ToString().Replace(",", ".");
 
-                        var ls = Val.logocontroler.Prop1.LucStatus_ReadToPC;
-
-                        if (ls[btnID].Value == true)
-                        {
-                            Activate();
-                        }
-                        else
-                        {
-                            Deactivate();
-                        }
-
-                        AddNumber();
+                        getZarnicaValue();
+                        
                         addImageButton();
+                        AddNumber();
                         addButtonOverlay();
+                        getZarnicaValue();                          
 
                     }
                     catch (Exception ex)
@@ -116,90 +107,118 @@ namespace WebApplication1
                         throw ex;
                     }
 
-                    button.Click += Button_Click; // temporary toggle state until panel is refreshed
+                    button.Click += Button_Click;
+
+                }
+
+                void getZarnicaValue()
+                {
+                   active = Val.logocontroler.Prop1.LucStatus_ReadToPC[btnID].Value;                                                                              
                 }
 
                 private void Button_Click(object sender, ImageClickEventArgs e)
                 {
-                    ToggleState(); // temporary toggle state until panel is refreshed
-                }
+                    var l = Val.logocontroler.Prop1.LucStatus_ReadToPC[btnID].Value;
+                    
+                    var writeVal = Val.logocontroler.Prop1.LucStatus_WriteToPLC[btnID];
+                    writeVal.SendPulse();
 
-                public void ToggleState()
-                {
+
+                    // temporary set values (until next refresh)
                     if (active)
                     {
-                        Deactivate();
+                        Controls.Add(Zarnica0);
+                        Controls.Add(Number0);
                     }
                     else
                     {
-                        Activate();
+                        Controls.Add(Zarnica1);
+                        Controls.Add(Number1);
                     }
-                }
-
-                public void Activate()
-                {
-                    Zarnica.ImageUrl = activatedPicture; // + "?" + DateTime.Now;                     
-                    Number.Style.Add(HtmlTextWriterStyle.Color, "black");
-                    if (!active)
-                    {
-                        ParentUpdatePanel.Update();
-                        active = true;
-                    }
-                }
-
-                public void Deactivate()
-                {
-                    Zarnica.ImageUrl = deactivatedPicture; // + "?" + DateTime.Now; ;  
-                    Number.Style.Add(HtmlTextWriterStyle.Color, "white");
-                    if (active)
-                    {
-                        ParentUpdatePanel.Update();
-                        active = false;
-                    }
-                }
-
-                public void UpdatePanel()
-                {
-                    this.ParentUpdatePanel.Update();
+                                                          
                 }
 
                 void AddNumber()
                 {
+                    Number1 = new Label();
+                    Number0 = new Label();
+
                     var size = 100;
 
-                    Number.Text = btnID + "";
+                    Number1.Text = btnID + "";
+                    Number1.Style.Add(HtmlTextWriterStyle.Position, "absolute");
+                    Number1.Style.Add(HtmlTextWriterStyle.Top, "32%");
+                    Number1.Style.Add(HtmlTextWriterStyle.Left, "0%");
+                    Number1.Style.Add(HtmlTextWriterStyle.Width, size + "%");
+                    Number1.Style.Add(HtmlTextWriterStyle.Height, size + "%");
+                    Number1.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
+                    Number1.Style.Add(HtmlTextWriterStyle.VerticalAlign, "middle");
+                    Number1.Style.Add(HtmlTextWriterStyle.FontSize, "1.5vw");
+                    Number1.Style.Add(HtmlTextWriterStyle.Color, "black");
+                    Number1.Style.Add(HtmlTextWriterStyle.ZIndex, "9");
 
-                    Number.Style.Add(HtmlTextWriterStyle.Position, "absolute");
-                    Number.Style.Add(HtmlTextWriterStyle.Top, "32%");
-                    Number.Style.Add(HtmlTextWriterStyle.Left, "0%");
-                    Number.Style.Add(HtmlTextWriterStyle.Width, size + "%");
-                    Number.Style.Add(HtmlTextWriterStyle.Height, size + "%");
-                    Number.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
-                    Number.Style.Add(HtmlTextWriterStyle.VerticalAlign, "middle");
-                    Number.Style.Add(HtmlTextWriterStyle.FontSize, "1.5vw");
-                                       
-                    Number.Style.Add(HtmlTextWriterStyle.ZIndex, "9");
+                    Number0.Text = btnID + "";
+                    Number0.Style.Add(HtmlTextWriterStyle.Position, "absolute");
+                    Number0.Style.Add(HtmlTextWriterStyle.Top, "32%");
+                    Number0.Style.Add(HtmlTextWriterStyle.Left, "0%");
+                    Number0.Style.Add(HtmlTextWriterStyle.Width, size + "%");
+                    Number0.Style.Add(HtmlTextWriterStyle.Height, size + "%");
+                    Number0.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
+                    Number0.Style.Add(HtmlTextWriterStyle.VerticalAlign, "middle");
+                    Number0.Style.Add(HtmlTextWriterStyle.FontSize, "1.5vw");
+                    Number0.Style.Add(HtmlTextWriterStyle.Color, "white");
+                    Number0.Style.Add(HtmlTextWriterStyle.ZIndex, "9");
 
-                    Controls.Add(Number);
+                    if (active)
+                    {
+                        Controls.Add(Number1);
+                    }
+                    else
+                    {
+                        Controls.Add(Number0);
+                    }
+                    
                 }
 
                 void addImageButton()
                 {
                     var size = 100;
-                    
-                    Zarnica.Style.Add(HtmlTextWriterStyle.Position, "absolute");
-                    Zarnica.Style.Add(HtmlTextWriterStyle.Top, "0%");
-                    Zarnica.Style.Add(HtmlTextWriterStyle.Left, "0%");
-                    Zarnica.Style.Add(HtmlTextWriterStyle.Width, size + "%");
-                    Zarnica.Style.Add(HtmlTextWriterStyle.Height, size + "%");
-                    Zarnica.Style.Add(HtmlTextWriterStyle.ZIndex, "8");
-                    Controls.Add(Zarnica);
+                    Zarnica0 = new ImageButton();
+                    Zarnica1 = new ImageButton();
+                    Zarnica1.ImageUrl = activatedPicture;// + "?" + DateTime.Now;
+                    Zarnica0.ImageUrl = deactivatedPicture;// + "?" + DateTime.Now;
+
+                    Zarnica0.ID = "ZarnicaOff" + btnID;
+                    Zarnica0.Style.Add(HtmlTextWriterStyle.Position, "absolute");
+                    Zarnica0.Style.Add(HtmlTextWriterStyle.Top, "0%");
+                    Zarnica0.Style.Add(HtmlTextWriterStyle.Left, "0%");
+                    Zarnica0.Style.Add(HtmlTextWriterStyle.Width, size + "%");
+                    Zarnica0.Style.Add(HtmlTextWriterStyle.Height, size + "%");
+                    Zarnica0.Style.Add(HtmlTextWriterStyle.ZIndex, "8");
+
+                    Zarnica1.ID = "ZarnicaOn" + btnID;
+                    Zarnica1.Style.Add(HtmlTextWriterStyle.Position, "absolute");
+                    Zarnica1.Style.Add(HtmlTextWriterStyle.Top, "0%");
+                    Zarnica1.Style.Add(HtmlTextWriterStyle.Left, "0%");
+                    Zarnica1.Style.Add(HtmlTextWriterStyle.Width, size + "%");
+                    Zarnica1.Style.Add(HtmlTextWriterStyle.Height, size + "%");
+                    Zarnica1.Style.Add(HtmlTextWriterStyle.ZIndex, "8");
+
+                    if (active)
+                    {
+                        Controls.Add(Zarnica1);
+                    }
+                    else
+                    {
+                        Controls.Add(Zarnica0);
+                    }                    
                 }
 
                 void addButtonOverlay()
                 {
                     var size = 100;
 
+                    button.ID = "Zarnica_Btn" + btnID;
                     button.Style.Add(HtmlTextWriterStyle.Position, "absolute");
                     button.Style.Add(HtmlTextWriterStyle.Top, "0%");
                     button.Style.Add(HtmlTextWriterStyle.Left, "0%");
@@ -214,7 +233,8 @@ namespace WebApplication1
             public class LucSet : Luc
             {   
                               
-                public LucSet(int _btnID, UpdatePanel Parent) : base(_btnID, Parent)
+                public LucSet(int _btnID, UpdatePanel Parent) 
+                    : base(_btnID)
                 {                      
                         
                 }                       
@@ -488,8 +508,7 @@ namespace WebApplication1
             }
                         
             public class DropDown : HtmlGenericControl
-            {
-                
+            {                
                 public ListItem SelectedItem { get; private set; } // you can handle the event "DropDown.UpdateEventHandler" to get this value on change
                 public string Name { get; set; }
                 public float Top { get; private set; }
@@ -542,20 +561,14 @@ namespace WebApplication1
                 {
                     setDropdown(dataSource, ID, size, 0.3F, 1, fontSize);
                 }
-
-                public DropDown(Helper.Datasource dataSource, string ID, float size, float shadowsize, float bordreradius, float fontSize)
-                {
-                    setDropdown(dataSource, ID, size, shadowsize, bordreradius, fontSize);
-                }
-
+                               
                 public DropDown(Helper.Datasource dataSource, string ID, float top, float left, double size, float fontSize)
                 {
                     Style.Add("top", Helper.FloatToStringWeb(top, "%"));
                     Style.Add("left", Helper.FloatToStringWeb(left, "%"));
                     setDropdown(dataSource, ID, (float)size, 0.3F, 1, fontSize);
                 }
-
-
+                
                 void setDropdown(Helper.Datasource dataSource, string ID, float size, float shadowsize, float borderradius, float fontSize)
                 {                
 
@@ -567,24 +580,21 @@ namespace WebApplication1
                     UpdateTimer.ID = ID + "_tmr";
 
                     dropdown = new ButtonWithLabel_SelectMenu(Name, dataSource, ID + "_s", PropComm.NA, 1.5F, UpdateTimer)
-                    {                        
+                    {
                         ID = ID + "_dd"
                     };
 
                     SaveClicked += DropDown_SaveClicked;
-
-                    // init
+                           
                     ctc = updatePanel.ContentTemplateContainer;
-
                     ctc.Controls.Add(SetControlAbsolutePos(dropdown, 0, 0, 100, 100));
-
 
                     triggers = updatePanel.Triggers;
 
                     updatePanel.UpdateMode = UpdatePanelUpdateMode.Conditional;
                     updatePanel.ID = ID + "_up";
 
-                    Controls.Add(updatePanel);                    
+                    Controls.Add(updatePanel);
                     Controls.Add(UpdateTimer);
 
                     trigger = new AsyncPostBackTrigger();
@@ -599,7 +609,8 @@ namespace WebApplication1
                     Style.Add(HtmlTextWriterStyle.Height, Helper.FloatToStringWeb(size, "vw"));
                                         
                 }
-
+                                
+               
                 private void DropDown_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
                     this.selectedItem = selectedItem;
@@ -772,8 +783,6 @@ namespace WebApplication1
                     ctor();
                 }
 
-
-
                 public string GetSelectedValue()
                 {
                     return selectedItem.Value;
@@ -928,6 +937,7 @@ namespace WebApplication1
                 {
                     ctor(null, dataSource, ID, text, FontSize, updateTimer);
                 }
+                               
 
                 void ctor(string Name, Helper.Datasource dataSource, string ID, string text, float FontSize, Timer updateTimer)
                 {
@@ -954,17 +964,18 @@ namespace WebApplication1
                     Controls.Add(Image);
                     Controls.Add(CreateLabelInside(text, this, 30, 10, FontSize, true, true, Settings.LightBlackColor));
                     Controls.Add(button);
+
                     Controls.Add(submenu);
 
-                    //button.OnClientClick = "document.getElementById('" + submenu.ID + "').style.display=\"block\"; document.getElementById('" + updateTimer.ClientID + "').set_interval(9999); return false;"; // opens panel and does not post back + stops updatePanel from refreshing
-                    button.Click += (sender, e) => Button_Click(sender, e, updateTimer);
+                    button.Click += (sender, e) => Button_Click(sender, e, updateTimer); // OnClick Event
 
                 }
 
                 private void Button_Click(object sender, ImageClickEventArgs e, Timer updateTimer)
                 {
+                    // TODO is this necesarry
                     submenu.Style.Remove(HtmlTextWriterStyle.Display);
-                    submenu.Style.Add(HtmlTextWriterStyle.Display,"block");
+                    submenu.Style.Add(HtmlTextWriterStyle.Display, "block");
 
                     updateTimer.Enabled = false;
                    
@@ -1013,21 +1024,18 @@ namespace WebApplication1
                             Width = Unit.Percentage(5)
                         };
 
-                        SetControlAbsolutePos(exitButton, 5, 87, 10);
-                        //exitButton.OnClientClick = "getElementById(" + ID + ").style.display=\"none\"; return false;";
+                        SetControlAbsolutePos(exitButton, 5, 87, 10);                        
                         exitButton.Click += ExitButton_Click;
 
                         Controls.Add(exitButton);
 
                         // Save btn
-
                         saveBtn = new ButtonWithLabel("Shrani", 30, 1.5F);
                         SetControlAbsolutePos(saveBtn, 65, 36);
 
                         Controls.Add(saveBtn);
 
                         // dropdown list
-
                         DropDown = new DropDownList();
                         DropDown.DataSource = list;
                         DropDown.DataBind();
@@ -1074,7 +1082,7 @@ namespace WebApplication1
                         SetControlAbsolutePos(TitleNameLabel, 5, 3, 50, 15);
                         Controls.Add(TitleNameLabel);
                     }
-
+                                        
                 }
 
             }
@@ -1237,12 +1245,14 @@ namespace WebApplication1
 
                 public GroupBox(string top, string left, string width, string height)
                 {
+                    // TODO tweak popups
                     Style.Add("position","fixed");
-                    Style.Add(HtmlTextWriterStyle.Top, "30%");
-                    Style.Add(HtmlTextWriterStyle.Left, "30%");
+                    Style.Add(HtmlTextWriterStyle.Top, "15vw");
+                    Style.Add(HtmlTextWriterStyle.Left, "30vw");
                     Style.Add(HtmlTextWriterStyle.Width, XmlController.GetMasterWindowScaleX()/3 + "%");                    
                     Style.Add(HtmlTextWriterStyle.PaddingBottom, XmlController.GetMasterWindowScaleY()/3 + "%");
                     Style.Add(HtmlTextWriterStyle.ZIndex, "99");
+                                       
 
                     Style.Add("border-radius", 1 + "vw");
                     Style.Add("background-color", "#f7f7f7");

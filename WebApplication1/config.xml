@@ -45,15 +45,17 @@
 		<MenuItemLink4>asdf</MenuItemLink4>								// Page name in Main Menu
 		<MenuItemLink5>Advanced</MenuItemLink5>							// Page name in Main Menu
 		//
-		<HowManyLucIcons>5</HowManyLucIcons>			// How many Luc icons is showed on page
-		<PositionLuc1>46;21,5;5;</PositionLuc1>			// Relative position of buttons on main screen. Format(Distance from Top; Left; Width) Example(50;50;5) - set last number to 0 to disable icon
+		//		// Position of buttons on main screen. 
+		//		// Format(Distance from Top; Left; Width) Example(50;50;5)
+		//		// set last number to 0 to disable icons from this point on
+		<PositionLuc1>46;21,5;5;</PositionLuc1>							//
 		<PositionLuc2>32;21,5;5;</PositionLuc2>							//
 		<PositionLuc3>39;49,0;5;</PositionLuc3>							//
 		<PositionLuc4>37;65,5;5;</PositionLuc4>							//
 		<PositionLuc5>37;73,5;5;</PositionLuc5>							//
 		<PositionLuc6>20;42;5;</PositionLuc6>							//
-		<PositionLuc7>50;50;0;</PositionLuc7>							//
-		<PositionLuc8>50;50;0;</PositionLuc8>							//
+		<PositionLuc7>12;50;5;</PositionLuc7>							//
+		<PositionLuc8>12;60;5;</PositionLuc8>							//
 		<PositionLuc9>50;50;0;</PositionLuc9>							//
 		<PositionLuc10>50;50;0;</PositionLuc10>							//
 		//				
@@ -68,7 +70,7 @@
 		<HasDimmer9>true</HasDimmer9>							//
 		<HasDimmer10>true</HasDimmer10>							//
 		//
-		<AddressLuc_ReadToPC1>bit at 31.0</AddressLuc_ReadToPC1>						// Set Address for LOGO communication example "bit at 11.0" (used to read value from plc)
+		<AddressLuc_ReadToPC1>bit at 31.0</AddressLuc_ReadToPC1>				// Set Address for LOGO communication example "bit at 11.0" (used to read value from plc)
 		<AddressLuc_ReadToPC2>bit at 32.0</AddressLuc_ReadToPC2>						//
 		<AddressLuc_ReadToPC3>bit at 33.0</AddressLuc_ReadToPC3>						//
 		<AddressLuc_ReadToPC4>bit at 34.0</AddressLuc_ReadToPC4>						//
@@ -79,7 +81,7 @@
 		<AddressLuc_ReadToPC9>bit at 39.0</AddressLuc_ReadToPC9>						//
 		<AddressLuc_ReadToPC10>bit at 40.0</AddressLuc_ReadToPC10>						//
 		//
-		<AddressLuc_WriteToPLC1>bit at 21.0</AddressLuc_WriteToPLC1>					// Set Address for LOGO communication example "bit at 11.0" (used to write value to plc)
+		<AddressLuc_WriteToPLC1>bit at 21.0</AddressLuc_WriteToPLC1>				// Set Address for LOGO communication example "bit at 11.0" (used to write value to plc)
 		<AddressLuc_WriteToPLC2>bit at 22.0</AddressLuc_WriteToPLC2>					//
 		<AddressLuc_WriteToPLC3>bit at 23.0</AddressLuc_WriteToPLC3>					//
 		<AddressLuc_WriteToPLC4>bit at 24.0</AddressLuc_WriteToPLC4>					//

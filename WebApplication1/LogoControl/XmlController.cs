@@ -13,9 +13,9 @@ namespace WebApplication1
     {
 
         public static string BaseDirectoryPath = "";
-        private static string XML;
-                
-        static bool refresherPaused = false;
+        private static string XML;                
+        
+        static bool forceRefresh = false;
 
         // xml file
         private static XDocument _XmlFile;
@@ -126,9 +126,7 @@ namespace WebApplication1
             s.Write(Settings.XmlDeclaration + Environment.NewLine + newContent);            
             s.Flush();
             s.Dispose();
-        }
-
-        
+        }        
 
         public static void XmlControllerInitialize()
         {
@@ -152,30 +150,35 @@ namespace WebApplication1
 
         }
 
-        static bool refresherIsStationary = false;
-
         static void Refresher_Thread()
         {
+            DateTime dt1;
             XDocument newXml;
             while (true)
             {
                 try
                 {
-                    if (!refresherPaused)
+                    dt1 = DateTime.Now;
+
+
+                    newXml = LoadXML();
+                    if (newXml.Element("root").Value != XmlFile.Element("root").Value)
                     {
-                        refresherIsStationary = false;                       
-                        newXml = LoadXML();
-                        if (newXml.Element("root").Value != XmlFile.Element("root").Value)
-                        {
-                            RefreshCache(newXml);                            
-                        }
-                    }
-                    else
-                    {
-                        refresherIsStationary = true;
+                        RefreshCache(newXml); // refresh if different
                     }
 
-                    System.Threading.Thread.Sleep(Settings.XmlRefreshrate);
+                    forceRefresh = false;  // reset flag (notifies other methods that fresh copy was aquired)
+
+                    while (DateTime.Now < (dt1 + TimeSpan.FromMilliseconds(Settings.XmlRefreshrate))) // wait for some time
+                    {
+                        System.Threading.Thread.Sleep(Settings.defultCheckTimingInterval);
+
+                        if (forceRefresh)  // periodically check for force refresh flag
+                        {                           
+                            break;
+                        }
+                    }
+
                 }
                 catch (Exception ex)
                 {
@@ -191,46 +194,26 @@ namespace WebApplication1
             SetClass();
             Helper.XML_Was_Changed();
         }
-       
+
         public static string GetXMLTextAndStopRefreshing()
         {
-            resumeRefresher();
-            pauseRefresher();
             return XmlFile.ToString();
         }
 
-        
         public static void SaveCurrentTB(string value)
-        {            
-            SaveXML(value);            
+        {
+            SaveXML(value);
         }
 
-        
         public static void RefreshFile_readAgain()
         {
-            resumeRefresher();
-            pauseRefresher();
-        }
+            forceRefresh = true;
 
-
-        static void pauseRefresher()
-        {
-            refresherPaused = true;
-            while (!refresherIsStationary)
+            while (forceRefresh)
             {
                 System.Threading.Thread.Sleep(Settings.defultCheckTimingInterval);
             }
-        }
-
-        static void resumeRefresher()
-        {
-            refresherPaused = false;
-            while (refresherIsStationary)
-            {
-                System.Threading.Thread.Sleep(Settings.defultCheckTimingInterval);
-            }
-        }
-
+        }      
 
         private static void SetClass()
         {
@@ -306,7 +289,6 @@ namespace WebApplication1
                 throw e;
             }
         }
-
 
         public static string GetLogoRemoteTsap(int n)
         {
@@ -590,11 +572,11 @@ namespace WebApplication1
             {
 
                 searchValue = prefix + index;
-                buff = XmlGUI.Element(searchValue).Value;
-                arr = buff.Split(';');
-                pos.top = Convert.ToSingle(arr[0]);
-                pos.left = Convert.ToSingle(arr[1]);
-                pos.width = Convert.ToSingle(arr[2]);
+                buff = XmlGUI.Element(searchValue).Value; // gets string from xml
+                arr = buff.Split(';');  // splits value in 3 parts
+                pos.top = Convert.ToSingle(arr[0]); // distance from top
+                pos.left = Convert.ToSingle(arr[1]); // distance from left
+                pos.width = Convert.ToSingle(arr[2]); // last part is size
 
             }
             catch (Exception)
@@ -605,8 +587,6 @@ namespace WebApplication1
                 "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
                 "format must be #;#;#; .  Example: 50;50;5;");
             }
-
-
 
             return pos;
         }
@@ -635,7 +615,6 @@ namespace WebApplication1
 
         }
 
-
         public static string GetLucAddress_WriteToPLC(int ID)
         {
             var searchValue = "AddressLuc_WriteToPLC" + ID;
@@ -661,26 +640,42 @@ namespace WebApplication1
 
         public static int GetHowManyLucIcons()
         {
-            var searchValue = "HowManyLucIcons";
-
+            int cnt = 0;          
+            var prefix = "PositionLuc";
+            string buff;
+            var searchValue = "";
+            var arr = new string[3];
+            Helper.Position pos = new Helper.Position();
+                       
             try
             {
-                var buff = Convert.ToInt32(XmlGUI.Element(searchValue).Value);
-                if (buff < 1 || buff > 10)
+                for (int i = 1; i < 10; i++) // scan 10 items
                 {
-                    throw new Exception();
+                    searchValue = prefix + i;
+                    buff = XmlGUI.Element(searchValue).Value; // gets string from xml
+                    arr = buff.Split(';'); // splits value in 3 parts
+                    var w = pos.width = Convert.ToSingle(arr[2]); // last part is size
+                    if (w > 0) // if size exists (is not disabled)
+                    {
+                        cnt++;
+                    }
+                    else
+                    {
+                        break; // breaks on first disabled icon
+                    }
                 }
-
-                return buff;
             }
             catch (Exception)
             {
+
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
-                    "format must be number (example: 10) - min value 1, max value 10.");
+                "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                "format must be #;#;#; .  Example: 50;50;5;");
             }
 
+            return cnt; // returns number of items that have size greater than 0
+                        
         }
 
         public static string GetDeviceName(int index)
