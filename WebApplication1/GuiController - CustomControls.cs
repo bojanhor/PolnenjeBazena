@@ -93,9 +93,7 @@ namespace WebApplication1
                         Top = position.top.ToString().Replace(",", ".");
                         Left = position.left.ToString().Replace(",", ".");
                         Width = position.width.ToString().Replace(",", ".");
-
-                        getZarnicaValue();
-                        
+                                                                       
                         addImageButton();
                         AddNumber();
                         addButtonOverlay();
@@ -153,7 +151,7 @@ namespace WebApplication1
                     Number1.Style.Add(HtmlTextWriterStyle.Height, size + "%");
                     Number1.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
                     Number1.Style.Add(HtmlTextWriterStyle.VerticalAlign, "middle");
-                    Number1.Style.Add(HtmlTextWriterStyle.FontSize, "1.5vw");
+                    Number1.Style.Add(HtmlTextWriterStyle.FontSize, Helper.FloatToStringWeb((position.width / 3.5F), "vw")); 
                     Number1.Style.Add(HtmlTextWriterStyle.Color, "black");
                     Number1.Style.Add(HtmlTextWriterStyle.ZIndex, "9");
 
@@ -164,8 +162,8 @@ namespace WebApplication1
                     Number0.Style.Add(HtmlTextWriterStyle.Width, size + "%");
                     Number0.Style.Add(HtmlTextWriterStyle.Height, size + "%");
                     Number0.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
-                    Number0.Style.Add(HtmlTextWriterStyle.VerticalAlign, "middle");
-                    Number0.Style.Add(HtmlTextWriterStyle.FontSize, "1.5vw");
+                    Number0.Style.Add(HtmlTextWriterStyle.VerticalAlign, "middle");                    
+                    Number0.Style.Add(HtmlTextWriterStyle.FontSize, Helper.FloatToStringWeb((position.width / 3.5F), "vw"));
                     Number0.Style.Add(HtmlTextWriterStyle.Color, "white");
                     Number0.Style.Add(HtmlTextWriterStyle.ZIndex, "9");
 
@@ -506,379 +504,6 @@ namespace WebApplication1
                 }
 
             }
-                        
-            public class DropDown : HtmlGenericControl
-            {                
-                public ListItem SelectedItem { get; private set; } // you can handle the event "DropDown.UpdateEventHandler" to get this value on change
-                public string Name { get; set; }
-                public float Top { get; private set; }
-                public float Left { get; private set; }
-                public float Width { get; private set; }
-                public float Height { get; private set; }
-
-                private int _ZIndex;
-                public int ZIndex
-                {
-                    get
-                    {
-                        return _ZIndex;
-                    }
-                    set
-                    {
-                        Style.Add(HtmlTextWriterStyle.ZIndex, value.ToString());
-                        _ZIndex = value;
-                    }
-                }
-
-                public ButtonWithLabel_SelectMenu dropdown;  // button 
-
-                
-                public delegate void UpdateEventHandler(object sender, ImageClickEventArgs e, ListItem selectedItem);     // used to get selected value in dropdown control inside menu    
-       
-                public event UpdateEventHandler SaveClicked
-                {
-                    add
-                    {
-                        dropdown.SaveClicked += value;
-                    }
-
-                    remove { dropdown.SaveClicked -= value; }
-                }
-
-                
-                public ListItem selectedItem;
-                public List<ListItem> DataSource = new List<ListItem>();
-
-                // updatable
-                public UpdatePanel updatePanel = new UpdatePanel();
-                Control ctc;
-                UpdatePanelTriggerCollection triggers;
-                AsyncPostBackTrigger trigger;
-                Timer UpdateTimer;
-
-
-                public DropDown(Helper.Datasource dataSource, string ID, float size, float fontSize)
-                {
-                    setDropdown(dataSource, ID, size, 0.3F, 1, fontSize);
-                }
-                               
-                public DropDown(Helper.Datasource dataSource, string ID, float top, float left, double size, float fontSize)
-                {
-                    Style.Add("top", Helper.FloatToStringWeb(top, "%"));
-                    Style.Add("left", Helper.FloatToStringWeb(left, "%"));
-                    setDropdown(dataSource, ID, (float)size, 0.3F, 1, fontSize);
-                }
-                
-                void setDropdown(Helper.Datasource dataSource, string ID, float size, float shadowsize, float borderradius, float fontSize)
-                {                
-
-                    this.ID = ID;
-                    Style.Add("position", "absolute");
-
-                    UpdateTimer = new Timer();
-                    UpdateTimer.Interval = Settings.UpdateValuesPCms;
-                    UpdateTimer.ID = ID + "_tmr";
-
-                    dropdown = new ButtonWithLabel_SelectMenu(Name, dataSource, ID + "_s", PropComm.NA, 1.5F, UpdateTimer)
-                    {
-                        ID = ID + "_dd"
-                    };
-
-                    SaveClicked += DropDown_SaveClicked;
-                           
-                    ctc = updatePanel.ContentTemplateContainer;
-                    ctc.Controls.Add(SetControlAbsolutePos(dropdown, 0, 0, 100, 100));
-
-                    triggers = updatePanel.Triggers;
-
-                    updatePanel.UpdateMode = UpdatePanelUpdateMode.Conditional;
-                    updatePanel.ID = ID + "_up";
-
-                    Controls.Add(updatePanel);
-                    Controls.Add(UpdateTimer);
-
-                    trigger = new AsyncPostBackTrigger();
-                    trigger.ControlID = UpdateTimer.ID;
-                    triggers.Add(trigger);
-
-
-                    // 
-                    RegisterTimer();
-
-                    Style.Add(HtmlTextWriterStyle.Width, Helper.FloatToStringWeb(size * 2, "vw"));
-                    Style.Add(HtmlTextWriterStyle.Height, Helper.FloatToStringWeb(size, "vw"));
-                                        
-                }
-                                
-               
-                private void DropDown_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
-                {
-                    this.selectedItem = selectedItem;
-                    Helper.Refresh();
-                }
-
-                void RegisterTimer()
-                {
-                    UpdateTimer.Tick += UpdateTimer_Tick1;
-                    SetUpdateInterval();
-                }
-
-
-                private void UpdateTimer_Tick1(object sender, EventArgs e)
-                {
-                    // Implicit update
-                }
-
-
-                void SetUpdateInterval()
-                {
-                    //trigger.EventName = "Tick";
-                    triggers.Add(trigger);
-                }
-                
-            }
-
-            public class DropDownListForDimmer : DropDown
-            {
-                static Helper.DimmerSelectorDatasource datasource = new Helper.DimmerSelectorDatasource();
-
-                public DropDownListForDimmer(string ID, float size, float fontSize)
-                    : base(datasource, ID, size, fontSize)
-                {
-                    ctor();
-                }
-
-                public DropDownListForDimmer(string ID, float top, float left, double size, float fontSize)
-                    : base(datasource, ID, top, left, size, fontSize)
-                {
-                    ctor();
-                }
-
-                public DropDownListForDimmer(string ID, float size, float shadowsize, float bordreradius, float fontSize)
-                    : base(datasource, ID, size, shadowsize, bordreradius, fontSize)
-                {
-                    ctor();
-                }
-
-
-
-                public string GetSelectedValue()
-                {
-                    return selectedItem.Value;
-                }
-
-                public string GetSelectedText()
-                {
-                    return selectedItem.Text;
-                }
-
-                void ctor()
-                {
-                    DataSource = datasource;
-                    dropdown.DataBind();
-                }
-            }
-
-            public class DropDownListForHisteresis : DropDown
-            {
-                static Helper.HisteresisSelectorDatasource datasource = new Helper.HisteresisSelectorDatasource();
-
-                public DropDownListForHisteresis(string ID, float size, float fontSize)
-                    : base(datasource, ID, size, fontSize)
-                {
-                    ctor();
-                }
-
-                public DropDownListForHisteresis(string ID, float top, float left, double size, float fontSize)
-                    : base(datasource, ID, top, left, size, fontSize)
-                {
-                    ctor();
-                }
-
-                public DropDownListForHisteresis(string ID, float size, float shadowsize, float bordreradius, float fontSize)
-                    : base(datasource, ID, size, shadowsize, bordreradius, fontSize)
-                {
-                    ctor();
-                }
-
-
-
-                public string GetSelectedValue()
-                {
-                    return selectedItem.Value;
-                }
-
-                public string GetSelectedText()
-                {
-                    return selectedItem.Text;
-                }
-
-                void ctor()
-                {
-                    DataSource = datasource;
-                    dropdown.DataBind();
-                }
-            }
-
-            public class DropDownListForTimer_1_30s : DropDown
-            {
-                static Helper.TimerSelectorDatasource datasource = new Helper.TimerSelectorDatasource(1, 30, 1, "s");                                
-
-                public DropDownListForTimer_1_30s(string ID, float size, float fontSize)
-                    : base(datasource, ID, size, fontSize)
-                {
-                    ctor();
-                }
-
-                public DropDownListForTimer_1_30s(string ID, float top, float left, double size, float fontSize)
-                    : base(datasource, ID, top, left, size, fontSize)
-                {
-                    ctor();
-                }
-
-                public DropDownListForTimer_1_30s(string ID, float size, float shadowsize, float bordreradius, float fontSize)
-                    : base(datasource, ID, size, shadowsize, bordreradius, fontSize)
-                {
-                    ctor();
-                }
-
-
-
-                public string GetSelectedValue()
-                {
-                    return selectedItem.Value;
-                }
-
-                public string GetSelectedText()
-                {
-                    return selectedItem.Text;
-                }
-
-                void ctor()
-                {
-                    DataSource = datasource;
-                    dropdown.DataBind();
-                }
-            }
-
-            public class DropDownListForTemperatureSelect_10_30 : DropDown
-            {
-                static Helper.Temperature_10_30_SelectorDatasource datasource = new Helper.Temperature_10_30_SelectorDatasource();
-
-                public DropDownListForTemperatureSelect_10_30(string ID, float size, float fontSize)
-                    : base(datasource, ID, size, fontSize)
-                {
-                    ctor();
-                }
-
-                public DropDownListForTemperatureSelect_10_30(string ID, float top, float left, double size, float fontSize)
-                    : base(datasource, ID, top, left, size, fontSize)
-                {
-                    ctor();
-                }
-
-                public DropDownListForTemperatureSelect_10_30(string ID, float size, float shadowsize, float bordreradius, float fontSize)
-                    : base(datasource, ID, size, shadowsize, bordreradius, fontSize)
-                {
-                    ctor();
-                }
-
-                public string GetSelectedValue()
-                {
-                    return selectedItem.Value;
-                }
-
-                public string GetSelectedText()
-                {
-                    return selectedItem.Text;
-                }
-
-                void ctor()
-                {
-                    DataSource = datasource;
-                    dropdown.DataBind();
-                }
-            }
-
-            public class DropDownListForHourSelect : DropDown
-            {
-                static Helper.TimeSelectorDatasource datasource = new Helper.TimeSelectorDatasource();
-
-                public DropDownListForHourSelect(string ID, float size, float fontSize)
-                   : base(datasource, ID, size, fontSize)
-                {
-                    ctor();
-                }
-
-                public DropDownListForHourSelect(string ID, float top, float left, double size, float fontSize)
-                   : base(datasource, ID, top, left, size, fontSize)
-                {
-                    ctor();
-                }
-
-                public DropDownListForHourSelect(string ID, float size, float shadowsize, float bordreradius, float fontSize)
-                    : base(datasource, ID, size, shadowsize, bordreradius, fontSize)
-                {
-                    ctor();
-                }
-
-
-                public string GetSelectedValue()
-                {
-                    return selectedItem.Value;
-                }
-
-                public string GetSelectedText()
-                {
-                    return selectedItem.Text;
-                }
-
-                void ctor()
-                {
-                    DataSource = datasource;
-                    dropdown.DataBind();
-                }
-            }
-
-            public class DropDownListForYesNoSelect : DropDown
-            {
-                static Helper.YesNoSelectorDatasource datasource = new Helper.YesNoSelectorDatasource();
-
-                public DropDownListForYesNoSelect(string ID, float size, float fontSize)
-                    : base(datasource, ID, size, fontSize)
-                {
-                    ctor();
-                }
-
-                public DropDownListForYesNoSelect(string ID, float top, float left, double size, float fontSize)
-                    : base(datasource, ID, top, left, size, fontSize)
-                {
-                    ctor();
-                }
-
-                public DropDownListForYesNoSelect(string ID, float size, float shadowsize, float bordreradius, float fontSize)
-                    : base(datasource, ID, size, shadowsize, bordreradius, fontSize)
-                {
-                    ctor();
-                }
-
-
-                public string GetSelectedValue()
-                {
-                    return selectedItem.Value;
-                }
-
-                public string GetSelectedText()
-                {
-                    return selectedItem.Text;
-                }
-
-                void ctor()
-                {
-                    DataSource = datasource;
-                    dropdown.DataBind();
-                }
-            }
 
             public class ButtonWithLabel : HtmlGenericControl
             {
@@ -933,12 +558,7 @@ namespace WebApplication1
                     ctor(Name, dataSource, ID, text, FontSize, updateTimer);
                 }
 
-                public ButtonWithLabel_SelectMenu(Helper.Datasource dataSource, string ID, string text, float FontSize, Timer updateTimer)
-                {
-                    ctor(null, dataSource, ID, text, FontSize, updateTimer);
-                }
-                               
-
+                
                 void ctor(string Name, Helper.Datasource dataSource, string ID, string text, float FontSize, Timer updateTimer)
                 {
 
@@ -953,11 +573,11 @@ namespace WebApplication1
 
                     if (Name != null)
                     {
-                        submenu = new SubMenuSelect(menuID + "_submenu", Name, dataSource);
+                        submenu = new SubMenuSelect(menuID + "_submenu", Name, dataSource, text, updateTimer);
                     }
                     else
                     {
-                        submenu = new SubMenuSelect(menuID + "_submenu", dataSource);
+                        submenu = new SubMenuSelect(menuID + "_submenu", dataSource, text, updateTimer);
                     }
 
 
@@ -978,7 +598,7 @@ namespace WebApplication1
                     submenu.Style.Add(HtmlTextWriterStyle.Display, "block");
 
                     updateTimer.Enabled = false;
-                   
+                    
                 }
 
                 class SubMenuSelect : GroupBox
@@ -1010,7 +630,7 @@ namespace WebApplication1
 
                     Label TitleNameLabel;
 
-                    void ctor(string ID, List<ListItem> list)
+                    void ctor(string ID, List<ListItem> DataSource, string text, Timer updateTimer)
                     {
                                                
                         this.ID = ID;
@@ -1037,7 +657,7 @@ namespace WebApplication1
 
                         // dropdown list
                         DropDown = new DropDownList();
-                        DropDown.DataSource = list;
+                        DropDown.DataSource = DataSource;
                         DropDown.DataBind();
 
                         DropDown.Style.Add(HtmlTextWriterStyle.FontSize, "1.5vw");
@@ -1049,8 +669,39 @@ namespace WebApplication1
                         DropDown.Style.Add("border-color", "#ededed");
                         SetControlAbsolutePos(DropDown, 30, 39, 23, 23);
 
+                        ManageSelectedItem(text, DataSource);
+
+                        saveBtn.button.Click += (sender, e) => saveBtn_Click1(sender, e, updateTimer);
+
                         Controls.Add(DropDown);
                                               
+                    }
+
+                    void ManageSelectedItem(string PlcTextValue, List<ListItem> DataSource)
+                    {
+                        string buffSelectedItem = PlcTextValue ?? PropComm.NA;
+
+                        for (int i = 0; i < DataSource.Count; i++)
+                        {
+                            var item = DataSource[i];
+
+                            if (item != null)
+                            {
+                                if (item.Text == PlcTextValue || item.Value == PlcTextValue)
+                                {
+                                    this.DropDown.SelectedIndex = i;
+                                    return;
+                                }
+                            }
+                        }
+                        DropDown.SelectedIndex = 0; //return PropComm.NA;
+
+
+                    }
+
+                    private void saveBtn_Click1(object sender, ImageClickEventArgs e, Timer updateTimer)
+                    {
+                        updateTimer.Enabled = true;
                     }
 
                     private void ExitButton_Click(object sender, ImageClickEventArgs e)
@@ -1058,16 +709,16 @@ namespace WebApplication1
                         Helper.Refresh(); // loads inital page (with closed/invisible menu and restarts updatepanel timer)
                     }
 
-                    public SubMenuSelect(string ID, List<ListItem> list) 
+                    public SubMenuSelect(string ID, List<ListItem> list, string text, Timer updateTimer) 
                         : base(top, left, width, height)
                     {
-                        ctor(ID, list);
+                        ctor(ID, list, text, updateTimer);
                     }
 
-                    public SubMenuSelect(string ID, string NameLable, List<ListItem> list)
+                    public SubMenuSelect(string ID, string NameLable, List<ListItem> list, string text, Timer updateTimer)
                         : base(top, left, width, height)
                     {
-                        ctor(ID, list);
+                        ctor(ID, list, text, updateTimer);
 
                         addLabel(NameLable);
                     }
@@ -1081,10 +732,8 @@ namespace WebApplication1
 
                         SetControlAbsolutePos(TitleNameLabel, 5, 3, 50, 15);
                         Controls.Add(TitleNameLabel);
-                    }
-                                        
+                    }                                        
                 }
-
             }
 
             public class SettingsSubMenu : HtmlGenericControl
@@ -1114,71 +763,79 @@ namespace WebApplication1
 
                 public void ctor_(int id, string Name_, bool hasNext, bool hasPreious, bool hasExit, bool hasPLCTimeShow, HtmlGenericControl content)
                 {
-
-                    ID = Name_ + id;
-                    Name.Text = Name_.ToUpper();
-                    AddSettingsPanelContent();
-
-
-                    if (hasNext)
+                    try
                     {
-                        nextButton = new ImageButton()
+                        ID = Name_ + id;
+                        Name.Text = Name_.ToUpper();
+                        AddSettingsPanelContent();
+
+
+                        if (hasNext)
                         {
-                            ImageUrl = "~/Pictures/nxt.png",
-                            Width = Unit.Percentage(2.6)
-                        };
+                            nextButton = new ImageButton()
+                            {
+                                ImageUrl = "~/Pictures/nxt.png",
+                                Width = Unit.Percentage(2.6)
+                            };
 
-                        SetControlAbsolutePos(nextButton, 5, 37);
+                            SetControlAbsolutePos(nextButton, 5, 37);
 
-                        nextButton.ID = "UpdatePanelSettings_nxt";
+                            nextButton.ID = "UpdatePanelSettings_nxt";
 
-                        Controls.Add(nextButton);
-                    }
+                            Controls.Add(nextButton);
+                        }
 
-                    if (hasPreious)
-                    {
-                        PrevButton = new ImageButton()
+                        if (hasPreious)
                         {
-                            ImageUrl = "~/Pictures/prv.png",
-                            Width = Unit.Percentage(2.6)
-                        };
-                        SetControlAbsolutePos(PrevButton, 5, 3);
+                            PrevButton = new ImageButton()
+                            {
+                                ImageUrl = "~/Pictures/prv.png",
+                                Width = Unit.Percentage(2.6)
+                            };
+                            SetControlAbsolutePos(PrevButton, 5, 3);
 
-                        PrevButton.ID = "UpdatePanelSettings_prv";
+                            PrevButton.ID = "UpdatePanelSettings_prv";
 
-                        Controls.Add(PrevButton);
+                            Controls.Add(PrevButton);
 
-                    }
+                        }
 
-                    if (hasExit)
-                    {
-                        Style.Add(HtmlTextWriterStyle.BackgroundImage, "/Pictures/alert.png");
-
-                        exitButton = new ImageButton()
+                        if (hasExit)
                         {
-                            ImageUrl = "~/Pictures/exit.png",
-                            Width = Unit.Percentage(5)
-                        };
+                            Style.Add(HtmlTextWriterStyle.BackgroundImage, "/Pictures/alert.png");
 
-                        SetControlAbsolutePos(exitButton, 5, 92);
+                            exitButton = new ImageButton()
+                            {
+                                ImageUrl = "~/Pictures/exit.png",
+                                Width = Unit.Percentage(5)
+                            };
 
-                        Controls.Add(exitButton);
+                            SetControlAbsolutePos(exitButton, 5, 92);
+
+                            Controls.Add(exitButton);
+
+                        }
+                        else
+                        {
+                            Style.Add(HtmlTextWriterStyle.BackgroundImage, "/Pictures/alertNoExitBtn.png");
+                        }
+
+                        if (hasPLCTimeShow)
+                        {
+                            AddClock();
+                        }
+
+                        Controls.Add(Clock);
+                        Controls.Add(content);
+
 
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        Style.Add(HtmlTextWriterStyle.BackgroundImage, "/Pictures/alertNoExitBtn.png");
+
+                        throw new Exception("Error constructing object SettingsSubMenu. Error message: " +ex.Message);
                     }
-
-                    if (hasPLCTimeShow)
-                    {
-                        AddClock();
-                    }                    
-
-                    Controls.Add(Clock);
-                    Controls.Add(content);
-
-
+                   
                 }
 
                 void AddClock()
@@ -1528,6 +1185,410 @@ namespace WebApplication1
 
             }
 
+            public class DropDown : HtmlGenericControl
+            {
+
+                public string Name { get; set; }
+                public float Top { get; private set; }
+                public float Left { get; private set; }
+                public float Width { get; private set; }
+                public float Height { get; private set; }
+
+                private int _ZIndex;
+                public int ZIndex
+                {
+                    get
+                    {
+                        return _ZIndex;
+                    }
+                    set
+                    {
+                        Style.Add(HtmlTextWriterStyle.ZIndex, value.ToString());
+                        _ZIndex = value;
+                    }
+                }
+
+                public ButtonWithLabel_SelectMenu dropdown;  // button 
+
+
+                public delegate void UpdateEventHandler(object sender, ImageClickEventArgs e, ListItem selectedItem);     // used to get selected value in dropdown control inside menu    
+
+                public event UpdateEventHandler SaveClicked
+                {
+                    add
+                    {
+                        dropdown.SaveClicked += value;
+                    }
+
+                    remove { dropdown.SaveClicked -= value; }
+                }
+
+
+                public ListItem selectedItem;
+                public Helper.Datasource DataSource = new Helper.Datasource();
+
+                // updatable
+                public UpdatePanel updatePanel = new UpdatePanel();
+                Control ctc;
+                UpdatePanelTriggerCollection triggers;
+                AsyncPostBackTrigger trigger;
+                Timer UpdateTimer;
+
+
+                public DropDown(Helper.Datasource dataSource, string ID, string PlcTextValue, float size, float fontSize)
+                {
+                    DataSource = dataSource;
+                    setDropdown(ID, PlcTextValue, size, 0.3F, 1, fontSize);
+                }
+
+                public DropDown(Helper.Datasource dataSource, string ID, string PlcTextValue, float top, float left, double size, float fontSize)
+                {
+                    DataSource = dataSource;
+                    Style.Add("top", Helper.FloatToStringWeb(top, "%"));
+                    Style.Add("left", Helper.FloatToStringWeb(left, "%"));
+                    setDropdown(ID, PlcTextValue, (float)size, 0.3F, 1, fontSize);
+                }
+
+                string ManageSelectedItem(string PlcTextValue)
+                {
+                    string buffSelectedItem = PlcTextValue ?? PropComm.NA;
+                    foreach (var item in DataSource)
+                    {
+                        if (item != null)
+                        {
+                            if (item.Text == PlcTextValue)
+                            {
+                                selectedItem = item;
+                                return selectedItem.Text;
+                            }
+                        }
+                    }
+
+                    foreach (var item in DataSource)
+                    {
+                        if (item != null)
+                        {
+                            if (item.Value == PlcTextValue)
+                            {
+                                selectedItem = item;
+                                return selectedItem.Text;
+                            }
+                        }
+                    }
+
+                    return PlcTextValue;
+                }
+
+                void setDropdown(string ID, string PlcTextValue, float size, float shadowsize, float borderradius, float fontSize)
+                {
+
+                    this.ID = ID;
+                    Style.Add("position", "absolute");
+
+                    UpdateTimer = new Timer();
+                    UpdateTimer.Interval = Settings.UpdateValuesPCms;
+                    UpdateTimer.ID = ID + "_tmr";
+
+                    dropdown = new ButtonWithLabel_SelectMenu(Name, DataSource, ID + "_s", ManageSelectedItem(PlcTextValue), 1.5F, UpdateTimer)
+                    {
+                        ID = ID + "_dd"
+                    };
+
+                    SaveClicked += DropDown_SaveClicked;
+
+                    ctc = updatePanel.ContentTemplateContainer;
+                    ctc.Controls.Add(SetControlAbsolutePos(dropdown, 0, 0, 100, 100));
+
+                    triggers = updatePanel.Triggers;
+
+                    updatePanel.UpdateMode = UpdatePanelUpdateMode.Conditional;
+                    updatePanel.ID = ID + "_up";
+
+                    Controls.Add(updatePanel);
+                    updatePanel.ContentTemplateContainer.Controls.Add(UpdateTimer);
+
+                    trigger = new AsyncPostBackTrigger();
+                    trigger.ControlID = UpdateTimer.ID;
+                    triggers.Add(trigger);
+
+
+                    // 
+                    RegisterTimer();
+
+                    Style.Add(HtmlTextWriterStyle.Width, Helper.FloatToStringWeb(size * 2, "vw"));
+                    Style.Add(HtmlTextWriterStyle.Height, Helper.FloatToStringWeb(size, "vw"));
+
+                }
+
+
+                private void DropDown_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
+                {
+                    this.selectedItem = selectedItem;               
+                    Helper.Refresh();
+                }
+
+                void RegisterTimer()
+                {
+                    UpdateTimer.Tick += UpdateTimer_Tick1;
+                    SetUpdateInterval();
+                }
+
+
+                private void UpdateTimer_Tick1(object sender, EventArgs e)
+                {
+                    // Implicit update
+                }
+
+
+                void SetUpdateInterval()
+                {
+                    //trigger.EventName = "Tick";
+                    triggers.Add(trigger);
+                }
+
+            }
+
+            public class DropDownListForDimmer : DropDown
+            {
+                static Helper.DimmerSelectorDatasource datasource = new Helper.DimmerSelectorDatasource();
+
+                public DropDownListForDimmer(string ID, string PlcTextValue, float size, float fontSize)
+                    : base(datasource, ID, PlcTextValue, size, fontSize)
+                {
+                    ctor();
+                }
+
+                public DropDownListForDimmer(string ID, string PlcTextValue, float top, float left, double size, float fontSize)
+                    : base(datasource, ID, PlcTextValue, top, left, size, fontSize)
+                {
+                    ctor();
+                }
+
+                public DropDownListForDimmer(string ID, string PlcTextValue, float size, float shadowsize, float bordreradius, float fontSize)
+                    : base(datasource, ID, PlcTextValue, size, shadowsize, bordreradius, fontSize)
+                {
+                    ctor();
+                }
+
+
+
+                public string GetSelectedValue()
+                {
+                    return selectedItem.Value;
+                }
+
+                public string GetSelectedText()
+                {
+                    return selectedItem.Text;
+                }
+
+                void ctor()
+                {
+                    DataSource = datasource;
+                    dropdown.DataBind();
+                }
+            }
+
+            public class DropDownListForHisteresis : DropDown
+            {
+                static Helper.HisteresisSelectorDatasource datasource = new Helper.HisteresisSelectorDatasource();
+
+                public DropDownListForHisteresis(string ID, string PlcTextValue, float size, float fontSize)
+                    : base(datasource, ID, PlcTextValue, size, fontSize)
+                {
+                    ctor();
+                }
+
+                public DropDownListForHisteresis(string ID, string PlcTextValue, float top, float left, double size, float fontSize)
+                    : base(datasource, ID, PlcTextValue, top, left, size, fontSize)
+                {
+                    ctor();
+                }
+
+                public DropDownListForHisteresis(string ID, string PlcTextValue, float size, float shadowsize, float bordreradius, float fontSize)
+                    : base(datasource, ID, PlcTextValue, size, shadowsize, bordreradius, fontSize)
+                {
+                    ctor();
+                }
+
+
+
+                public string GetSelectedValue()
+                {
+                    return selectedItem.Value;
+                }
+
+                public string GetSelectedText()
+                {
+                    return selectedItem.Text;
+                }
+
+                void ctor()
+                {
+                    DataSource = datasource;
+                    dropdown.DataBind();
+                }
+            }
+
+            public class DropDownListForTimer_1_30s : DropDown
+            {
+                static Helper.TimerSelectorDatasource datasource = new Helper.TimerSelectorDatasource(1, 30, 1, "s");
+
+                public DropDownListForTimer_1_30s(string ID, string PlcTextValue, float size, float fontSize)
+                    : base(datasource, ID, PlcTextValue, size, fontSize)
+                {
+                    ctor();
+                }
+
+                public DropDownListForTimer_1_30s(string ID, string PlcTextValue, float top, float left, double size, float fontSize)
+                    : base(datasource, ID, PlcTextValue, top, left, size, fontSize)
+                {
+                    ctor();
+                }
+
+                public DropDownListForTimer_1_30s(string ID, string PlcTextValue, float size, float shadowsize, float bordreradius, float fontSize)
+                    : base(datasource, ID, PlcTextValue, size, shadowsize, bordreradius, fontSize)
+                {
+                    ctor();
+                }
+
+
+
+                public string GetSelectedValue()
+                {
+                    return selectedItem.Value;
+                }
+
+                public string GetSelectedText()
+                {
+                    return selectedItem.Text;
+                }
+
+                void ctor()
+                {
+                    DataSource = datasource;
+                    dropdown.DataBind();
+                }
+            }
+
+            public class DropDownListForTemperatureSelect_10_30 : DropDown
+            {
+                static Helper.Temperature_10_30_SelectorDatasource datasource = new Helper.Temperature_10_30_SelectorDatasource();
+
+                public DropDownListForTemperatureSelect_10_30(string ID, string PlcTextValue, float size, float fontSize)
+                    : base(datasource, ID, PlcTextValue, size, fontSize)
+                {
+                    ctor();
+                }
+
+                public DropDownListForTemperatureSelect_10_30(string ID, string PlcTextValue, float top, float left, double size, float fontSize)
+                    : base(datasource, ID, PlcTextValue, top, left, size, fontSize)
+                {
+                    ctor();
+                }
+
+                public DropDownListForTemperatureSelect_10_30(string ID, string PlcTextValue, float size, float shadowsize, float bordreradius, float fontSize)
+                    : base(datasource, ID, PlcTextValue, size, shadowsize, bordreradius, fontSize)
+                {
+                    ctor();
+                }
+
+                public string GetSelectedValue()
+                {
+                    return selectedItem.Value;
+                }
+
+                public string GetSelectedText()
+                {
+                    return selectedItem.Text;
+                }
+
+                void ctor()
+                {
+                    DataSource = datasource;
+                    dropdown.DataBind();
+                }
+            }
+
+            public class DropDownListForHourSelect : DropDown
+            {
+                static Helper.TimeSelectorDatasource datasource = new Helper.TimeSelectorDatasource();                
+
+                public DropDownListForHourSelect(string ID, string PlcTextValue, float size, float fontSize)
+                   : base(datasource, ID, PlcTextValue, size, fontSize)
+                {
+                    ctor();
+                }
+
+                public DropDownListForHourSelect(string ID, string PlcTextValue, float top, float left, double size, float fontSize)
+                   : base(datasource, ID, PlcTextValue, top, left, size, fontSize)
+                {
+                    ctor();
+                }
+
+                public DropDownListForHourSelect(string ID, string PlcTextValue, float size, float shadowsize, float bordreradius, float fontSize)
+                    : base(datasource, ID, PlcTextValue, size, shadowsize, bordreradius, fontSize)
+                {
+                    ctor();
+                }
+
+
+                public string GetSelectedValue()
+                {
+                    return selectedItem.Value;
+                }
+
+                public string GetSelectedText()
+                {
+                    return selectedItem.Text;
+                }
+
+                void ctor()
+                {                   
+                    DataSource = datasource;
+                    dropdown.DataBind();
+                }
+            }
+
+            public class DropDownListForYesNoSelect : DropDown
+            {
+                static Helper.YesNoSelectorDatasource datasource = new Helper.YesNoSelectorDatasource();
+
+                public DropDownListForYesNoSelect(string ID, bool PlcTextValue, float size, float fontSize)
+                    : base(datasource, ID, PlcTextValue.ToString(), size, fontSize)
+                {
+                    ctor();
+                }
+
+                public DropDownListForYesNoSelect(string ID, bool PlcTextValue, float top, float left, double size, float fontSize)
+                    : base(datasource, ID, PlcTextValue.ToString(), top, left, size, fontSize)
+                {
+                    ctor();
+                }
+
+                public DropDownListForYesNoSelect(string ID, bool PlcTextValue, float size, float shadowsize, float bordreradius, float fontSize)
+                    : base(datasource, ID, PlcTextValue.ToString(), size, shadowsize, bordreradius, fontSize)
+                {
+                    ctor();
+                }
+
+
+                public string GetSelectedValue()
+                {
+                    return selectedItem.Value;
+                }
+
+                public string GetSelectedText()
+                {
+                    return selectedItem.Text;
+                }
+
+                void ctor()
+                {
+                    DataSource = datasource;
+                    dropdown.DataBind();
+                }
+            }
         }
     }
 }

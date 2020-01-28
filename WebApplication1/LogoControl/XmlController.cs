@@ -563,7 +563,7 @@ namespace WebApplication1
             var arr = new string[3];
             Helper.Position pos = new Helper.Position();
 
-            if (index < 1 || index > 10)
+            if (index < 1 || index > GetHowManyLucIcons())
             {
                 throw new Exception("Index out of range inside method GetPositionLucForDefaultScreen(int index);");
             }
@@ -597,7 +597,7 @@ namespace WebApplication1
 
             try
             {
-                if (ID < 1 || ID > 10)
+                if (ID < 1 || ID > GetHowManyLucIcons())
                 {
                     throw new Exception();
                 }
@@ -621,7 +621,7 @@ namespace WebApplication1
 
             try
             {
-                if (ID < 1 || ID > 10)
+                if (ID < 1 || ID > GetHowManyLucIcons())
                 {
                     throw new Exception();
                 }
@@ -649,7 +649,7 @@ namespace WebApplication1
                        
             try
             {
-                for (int i = 1; i < 10; i++) // scan 10 items
+                for (int i = 1; i <= 12; i++) // scan 12 items
                 {
                     searchValue = prefix + i;
                     buff = XmlGUI.Element(searchValue).Value; // gets string from xml

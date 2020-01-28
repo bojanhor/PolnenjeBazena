@@ -90,6 +90,22 @@ namespace WebApplication1
 
             }
 
+            foreach (var item in prop.DimmerDop)
+            {
+                if (item != null)
+                {
+                    item.SyncWithPLC();
+                }
+            }
+
+            foreach (var item in prop.DimmerPop)
+            {
+                if (item != null)
+                {
+                    item.SyncWithPLC();
+                }
+            }
+
 
 
         }

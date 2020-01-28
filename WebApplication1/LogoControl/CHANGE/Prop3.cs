@@ -23,6 +23,8 @@ namespace WebApplication1
         public PlcVars.Bit KoncnoStikaloGor1;
         public PlcVars.Bit KoncnoStikaloDol1;
 
+        public PlcVars.Word CasPotovanja1;
+
         // 2
         public PlcVars.Bit VrataGorPulse2;
         public PlcVars.Bit VrataDolPulse2;
@@ -31,6 +33,8 @@ namespace WebApplication1
         public PlcVars.Bit UporabljaKoncnaStikala2;
         public PlcVars.Bit KoncnoStikaloGor2;
         public PlcVars.Bit KoncnoStikaloDol2;
+
+        public PlcVars.Word CasPotovanja2;
 
 
 
@@ -48,6 +52,7 @@ namespace WebApplication1
             KoncnoStikaloGor1 = new PlcVars.Bit(Client, "", "", "", false); 
             KoncnoStikaloDol1 = new PlcVars.Bit(Client, "", "", "", false);
 
+            CasPotovanja1 = new PlcVars.Word(Client, "", "", "", true);
 
             // 2
             VrataGorPulse2 = new PlcVars.Bit(Client, "", "", "", true); // TODO adress
@@ -57,6 +62,8 @@ namespace WebApplication1
             UporabljaKoncnaStikala2 = new PlcVars.Bit(Client, "", "", "", false);
             KoncnoStikaloGor2 = new PlcVars.Bit(Client, "", "", "", false);
             KoncnoStikaloDol2 = new PlcVars.Bit(Client, "", "", "", false);
+
+            CasPotovanja2 = new PlcVars.Word(Client, "", "", "", true);
 
         }
 

@@ -114,9 +114,9 @@ namespace WebApplication1
                 }
 
                 // In case if you want to write DWORD value
-                else if (typeAndAdress.Contains("DW "))
+                else if (typeAndAdress.Contains("DW"))
                 {
-                    typeAndAdress = typeAndAdress.Replace("DW ", "");
+                    typeAndAdress = typeAndAdress.Replace("DW", "");
                     address = int.Parse(typeAndAdress);
                     S7.SetDWordAt(b, 0, (uint)value);
                     errCode = Client.DBWrite(1, address, 4, b);
@@ -124,9 +124,9 @@ namespace WebApplication1
                 }
 
                 // In case if you want to write Word value
-                else if (typeAndAdress.Contains("W "))
+                else if (typeAndAdress.Contains("W"))
                 {
-                    typeAndAdress = typeAndAdress.Replace("W ", "");
+                    typeAndAdress = typeAndAdress.Replace("W", "");
                     address = int.Parse(typeAndAdress);
                     S7.SetWordAt(b, 0, (ushort)value);
                     errCode = Client.DBWrite(1, address, 2, b);
@@ -182,10 +182,10 @@ namespace WebApplication1
                 }
 
                 // In case if you want to read DWORD value
-                else if (typeAndAdress.Contains("DW "))
+                else if (typeAndAdress.Contains("DW"))
                 {
-                    typeAndAdress = typeAndAdress.Replace("DW ", "");
-
+                    typeAndAdress = typeAndAdress.Replace("DW", "");
+                    typeAndAdress = typeAndAdress.Replace("V", "");
                     try
                     {
                         address = int.Parse(typeAndAdress);
@@ -201,10 +201,11 @@ namespace WebApplication1
                 
 
                 // In case if you want to read WORD value
-                else if (typeAndAdress.Contains("W "))
+                else if (typeAndAdress.Contains("W"))
                 {
-                    typeAndAdress = typeAndAdress.Replace("W ", "");
-                    
+                    typeAndAdress = typeAndAdress.Replace("W", "");
+                    typeAndAdress = typeAndAdress.Replace("V", "");
+
                     try
                     {
                         address = int.Parse(typeAndAdress);

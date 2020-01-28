@@ -47,16 +47,16 @@ namespace WebApplication1
                     divStala = DIV.CreateDivAbsolute();
 
                     Stala = new Image();
-                                        
+
+                    divLuciSettings = new HtmlGenericControl("div");
+                    divLuciSettings.ID = "divLuciSettings";
+
                     InitializeLuci();
                     AddStala();
                     initializeLuciSettings();
                     AddBtns();
 
-                    divLuciSettings = new HtmlGenericControl("div");
-                    divLuciSettings.ID = "divLuciSettings";
-
-                    divLuciSettings.Controls.Add(LuciSettings);
+                              
 
                     HidePanel();
 
@@ -105,33 +105,48 @@ namespace WebApplication1
 
             void initializeLuciSettings()
             {
+                try
+                {
+                    bool hasPrevious = true;
+                    bool hasNext = true;
+                    int lucIconsCnt = XmlController.GetHowManyLucIcons();
+                    int currentShown = getCurrentLuciSettingsShown();
+                    string Showname = "Cona" + currentShown + "/" + lucIconsCnt; // Custom name for user
 
-                bool hasPrevious = true;
-                bool hasNext = true;
-                int lucIconsCnt = XmlController.GetHowManyLucIcons();
-                int currentShown = getCurrentLuciSettingsShown();
-                string Showname = "Cona" + currentShown + "/" + lucIconsCnt; // Custom name for user
+                    if (currentShown <= 1)
+                    {
+                        hasPrevious = false;
+                    }
+                    else if (currentShown >= lucIconsCnt)
+                    {
+                        hasNext = false;
+                    }
 
-                if (currentShown <= 1)
-                {
-                    hasPrevious = false;
-                }
-                else if (currentShown >= lucIconsCnt)
-                {
-                    hasNext = false;
-                }
+                    if (currentShown > 0)
+                    {
+                        LuciSettings = new LuciSettingsMenu(currentShown, Showname, hasNext, hasPrevious, true);
 
-                LuciSettings = new LuciSettingsMenu(currentShown, Showname, hasNext, hasPrevious, true);
-                
-                LuciSettings.exitButton.Click += ExitButton_Click;
-                if (LuciSettings.PrevButton != null)
-                {
-                    LuciSettings.PrevButton.Click += PrevButton_Click;
+                        LuciSettings.exitButton.Click += ExitButton_Click;
+                        if (LuciSettings.PrevButton != null)
+                        {
+                            LuciSettings.PrevButton.Click += PrevButton_Click;
+                        }
+                        if (LuciSettings.nextButton != null)
+                        {
+                            LuciSettings.nextButton.Click += NextButton_Click;
+                        }
+                        divLuciSettings.Controls.Add(LuciSettings);
+
+                    }
+                    
+
+                    
                 }
-                if (LuciSettings.nextButton != null)
+                catch (Exception ex)
                 {
-                    LuciSettings.nextButton.Click += NextButton_Click;
+                    throw new Exception("Error inside initializeLuciSettings() method. Error info: " +ex.Message);
                 }
+               
             }
 
             private void ExitButton_Click(object sender, ImageClickEventArgs e)
@@ -154,20 +169,28 @@ namespace WebApplication1
 
             private void InitializeLuci()
             {
-                for (int i = 1; i <= XmlController.GetHowManyLucIcons(); i++)
+                try
                 {
-                    Luc[i] = new GControls.LucSet(i, (UpdatePanel)ThisPage.FindControl(UpdatePanelId_Luci));
-                    AboveLucLableDimmer[i] = new Label();
+                    for (int i = 1; i <= XmlController.GetHowManyLucIcons(); i++)
+                    {
+                        Luc[i] = new GControls.LucSet(i, (UpdatePanel)ThisPage.FindControl(UpdatePanelId_Luci));
+                        AboveLucLableDimmer[i] = new Label();
 
-                    AboveLucLableDimmer[i] = CreateLabelTitle_OnTop(
-                        "100%", Luc[i], 2.5F, 0, Convert.ToInt32(Luc[i].Width), 1, false, true, "black"); // TODO PLC Value 100%
+                        AboveLucLableDimmer[i] = CreateLabelTitle_OnTop(
+                            "100%", Luc[i], 2.5F, 0, Convert.ToInt32(Luc[i].Width), 1, false, true, "black"); // TODO PLC Value 100%
 
-                    AboveLucLableDimmer[i].Style.Add(HtmlTextWriterStyle.BackgroundColor, "white");
+                        AboveLucLableDimmer[i].Style.Add(HtmlTextWriterStyle.BackgroundColor, "white");
 
-                    AboveLucLableDimmer[i].Style.Add("border-radius", "10%");
-                    AboveLucLableDimmer[i].Style.Add(HtmlTextWriterStyle.BorderStyle, "solid");
-                    AboveLucLableDimmer[i].Style.Add(HtmlTextWriterStyle.BorderWidth, "0.1vw");
+                        AboveLucLableDimmer[i].Style.Add("border-radius", "10%");
+                        AboveLucLableDimmer[i].Style.Add(HtmlTextWriterStyle.BorderStyle, "solid");
+                        AboveLucLableDimmer[i].Style.Add(HtmlTextWriterStyle.BorderWidth, "0.1vw");
+                    }
                 }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error inside InitializeLuci() method. Error info: " +ex.Message);
+                }
+               
 
 
             }
@@ -201,36 +224,52 @@ namespace WebApplication1
                         
             void AddBtns()
             {
-                divBtns = DIV.CreateDiv("10%", "80%", "14%", "83%");
-                ugasniVseLuci = new ImageButton
+                try
                 {
-                    ImageUrl = "~/Pictures/UgasniVseLuci.png",
-                    Width = Unit.Percentage(100)
-                };
+                    divBtns = DIV.CreateDiv("10%", "80%", "14%", "83%");
+                    ugasniVseLuci = new ImageButton
+                    {
+                        ImageUrl = "~/Pictures/UgasniVseLuci.png",
+                        Width = Unit.Percentage(100)
+                    };
 
-                divBtns.Controls.Add(ugasniVseLuci);
+                    divBtns.Controls.Add(ugasniVseLuci);
 
-                //
-                ugasniPodnevi = new GControls.PaddedOnOffButton("Ugasni podnevi", 1, false, new Helper.Position(20, 0, 100), GControls.OnOffButton.Type.WithText);                
+                    //
+                    ugasniPodnevi = new GControls.PaddedOnOffButton("Ugasni podnevi", 1, false, new Helper.Position(20, 0, 100), GControls.OnOffButton.Type.WithText);
 
-                //
+                    //
 
+
+                    divBtns.Controls.Add(ugasniPodnevi);
+                }
+                catch (Exception ex)
+                {
+
+                    throw new Exception("Error inside UgasniVseLuci_Click() method. Error info: " + ex.Message);
+                }
                 
-                divBtns.Controls.Add(ugasniPodnevi);
             }
 
             void AddStala()
             {
+                try
+                {
+                    Stala.ImageUrl = "~/Pictures/MasterPic.png";
+                    Stala.Style.Add(HtmlTextWriterStyle.ZIndex, "1");
+                    Stala.Style.Add(HtmlTextWriterStyle.Width, "100%");
 
-                Stala.ImageUrl = "~/Pictures/MasterPic.png";
-                Stala.Style.Add(HtmlTextWriterStyle.ZIndex, "1");
-                Stala.Style.Add(HtmlTextWriterStyle.Width, "100%");
+                    divStala.Controls.Add(Stala);
+                    divStala.Style.Add(HtmlTextWriterStyle.Width, "100%");
+                    divStala.Style.Add(HtmlTextWriterStyle.Height, "100%");
+                    divStala.ID = "divStalaR";
 
-                divStala.Controls.Add(Stala);
-                divStala.Style.Add(HtmlTextWriterStyle.Width, "100%");
-                divStala.Style.Add(HtmlTextWriterStyle.Height, "100%");
-                divStala.ID = "divStalaR";
-
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error inside AddStala() method. Error Info: " + ex.Message); ;
+                }
+               
             }
 
             public class LuciSettingsMenu : GControls.SettingsSubMenu
@@ -290,121 +329,128 @@ namespace WebApplication1
                                
                 public LuciSubmenuContent(int id)
                 {
-
-                    // TODO add xml value
-                    hasDimmer = XmlController.GetHasDimmer(id + 1);
-
-                    if (hasDimmer)
+                    try
                     {
-                        DimmerDop = new GControls.DropDownListForDimmer("DD_dimAm", widthbtn, fontSize);
-                        DimmerPop = new GControls.DropDownListForDimmer("DD_dimPm", widthbtn, fontSize);
+                        hasDimmer = XmlController.GetHasDimmer(id + 1);
+                        var prop = Val.logocontroler.Prop1;
+
+                        if (hasDimmer)
+                        {
+                            DimmerDop = new GControls.DropDownListForDimmer("DD_dimAm", prop.DimmerDop[id].Value_string, widthbtn, fontSize);
+                            DimmerPop = new GControls.DropDownListForDimmer("DD_dimPm", prop.DimmerPop[id].Value_string, widthbtn, fontSize);
+                        }
+
+                        Dopoldne.Text = "Dopoldne:";
+                        Popoldne.Text = "Popoldne:";
+
+                        SetFontProperties_vw(Dopoldne, 1.5F, true);
+                        SetFontProperties_vw(Popoldne, 1.5F, true);
+
+                        SetControlAbsolutePos(Dopoldne, 2, 1);
+                        SetControlAbsolutePos(Popoldne, 2, 1);
+
+                        Dopoldne.Style.Add(HtmlTextWriterStyle.Color, Settings.LightBlackColor);
+                        Popoldne.Style.Add(HtmlTextWriterStyle.Color, Settings.LightBlackColor);
+
+                        myID = id;
+
+                        Groupbox1 = new GControls.GroupBox(19, 10, 80, 35);
+                        Groupbox2 = new GControls.GroupBox(57, 10, 80, 35);
+
+                        var rce = new Helper.TimeSelectorDatasource();
+
+                        Vklop1 = new GControls.DropDownListForHourSelect("DD_on1", prop.VklopConadop[id].Value_WeektimerForSiemensLogoFormat, widthbtn, fontSize)
+                        {
+                            Name = "VKLOP DOPOLDNE"
+                        };
+
+                        Vklop2 = new GControls.DropDownListForHourSelect("DD_on2", prop.VklopConapop[id].Value_WeektimerForSiemensLogoFormat, widthbtn, fontSize)
+                        {
+                            Name = "VKLOP POPOLDNE"
+                        };
+
+                        Izklop1 = new GControls.DropDownListForHourSelect("DD_off1", prop.IzklopConadop[id].Value_WeektimerForSiemensLogoFormat, widthbtn, fontSize)
+                        {
+                            Name = "IZKLOP DOPOLDNE"
+                        };
+
+                        Izklop2 = new GControls.DropDownListForHourSelect("DD_off2", prop.IzklopConapop[id].Value_WeektimerForSiemensLogoFormat, widthbtn, fontSize)
+                        {
+                            Name = "IZKLOP POPOLDNE"
+                        };
+
+                        VklopUrnika1 = new GControls.PaddedOnOffButton(
+                            "Vklop Urnika", myID + 10, false, new Helper.Position(tr1 - 9, lc3, widthbtn), GuiController.GControls.OnOffButton.Type.WithText);
+                        VklopUrnika2 = new GControls.PaddedOnOffButton(
+                            "Vklop Urnika", myID + 20, false, new Helper.Position(tr1 - 9, lc3, widthbtn), GuiController.GControls.OnOffButton.Type.WithText);
+
+                        if (hasDimmer)
+                        {
+                            DimmerDop.SaveClicked += DimmerDop_SaveClicked;
+                            DimmerPop.SaveClicked += DimmerPop_SaveClicked;
+                        }
+
+
+                        TagName = "div";
+
+                        SetControlAbsolutePos(Cona, tr1, tr1, widthdd);
+                        SetControlAbsolutePos(Vklop1, tr1, lc1, widthdd);
+                        SetControlAbsolutePos(Vklop2, tr1, lc1, widthdd);
+                        SetControlAbsolutePos(Izklop1, tr1, lc2, widthdd);
+                        SetControlAbsolutePos(Izklop2, tr1, lc2, widthdd);
+
+                        VklopUrnika1.button.Click += VklopUrnika1_Button_Click;
+                        VklopUrnika2.button.Click += VklopUrnika2Button_Click;
+
+                        SetControlAbsolutePos(VklopUrnika1);
+                        SetControlAbsolutePos(VklopUrnika2);
+
+                        SetControlAbsolutePos(DimmerDop, tr2, lc1, widthbtn);
+                        SetControlAbsolutePos(DimmerPop, tr2, lc1, widthbtn);
+
+                        Controls.Add(Cona);
+
+                        var topOffsetLabel = 10;
+
+                        Groupbox1.Controls.Add(Vklop1);
+                        Groupbox1.Controls.Add(CreateLabelTitle_OnLeft("Start:", Vklop1, topOffsetLabel, 5F, 10, 1.1F, true, Settings.LightBlackColor));
+                        Groupbox1.Controls.Add(Izklop1);
+                        Groupbox1.Controls.Add(CreateLabelTitle_OnLeft("Stop:", Izklop1, topOffsetLabel, 5F, 10, 1.1F, true, Settings.LightBlackColor));
+                        Groupbox1.Controls.Add(VklopUrnika1);
+                        Groupbox1.Controls.Add(Dopoldne);
+                        Groupbox1.Controls.Add(DimmerDop);
+                        Groupbox1.Controls.Add(CreateLabelTitle_OnLeft("Svetilnost:", DimmerDop, topOffsetLabel, 9.5F, 10, 1.1F, true, Settings.LightBlackColor));
+
+
+                        Groupbox2.Controls.Add(Vklop2);
+                        Groupbox2.Controls.Add(CreateLabelTitle_OnLeft("Start:", Vklop2, topOffsetLabel, 5F, 10, 1.1F, true, Settings.LightBlackColor));
+                        Groupbox2.Controls.Add(Izklop2);
+                        Groupbox2.Controls.Add(CreateLabelTitle_OnLeft("Stop:", Izklop2, topOffsetLabel, 5F, 10, 1.1F, true, Settings.LightBlackColor));
+                        Groupbox2.Controls.Add(VklopUrnika2);
+                        Groupbox2.Controls.Add(Popoldne);
+                        Groupbox2.Controls.Add(DimmerPop);
+                        Groupbox2.Controls.Add(CreateLabelTitle_OnLeft("Svetilnost:", DimmerPop, topOffsetLabel, 9.5F, 10, 1.1F, true, Settings.LightBlackColor));
+
+                        Controls.Add(Groupbox1);
+                        Controls.Add(Groupbox2);
+
+
+                        Vklop1.SaveClicked += Vklop1_SaveClicked;
+                        Vklop2.SaveClicked += Vklop2_SaveClicked;
+                        Izklop1.SaveClicked += Izklop1_SaveClicked;
+                        Izklop2.SaveClicked += Izklop2_SaveClicked;
+
                     }
-
-                    Dopoldne.Text = "Dopoldne:";
-                    Popoldne.Text = "Popoldne:";
-
-                    SetFontProperties_vw(Dopoldne, 1.5F, true);
-                    SetFontProperties_vw(Popoldne, 1.5F, true);
-
-                    SetControlAbsolutePos(Dopoldne, 2, 1);
-                    SetControlAbsolutePos(Popoldne, 2, 1);
-
-                    Dopoldne.Style.Add(HtmlTextWriterStyle.Color, Settings.LightBlackColor);
-                    Popoldne.Style.Add(HtmlTextWriterStyle.Color, Settings.LightBlackColor);
-
-
-
-                    myID = id;
-
-                    Groupbox1 = new GControls.GroupBox(19, 10, 80, 35);
-                    Groupbox2= new GControls.GroupBox(57, 10, 80, 35);
-
-                    var rce = new Helper.TimeSelectorDatasource();
-
-                    Vklop1 = new GControls.DropDownListForHourSelect("DD_on1", widthbtn, fontSize)
+                    catch (Exception ex)
                     {
-                        Name = "VKLOP DOPOLDNE"                        
-                    };
 
-                    Vklop2 = new GControls.DropDownListForHourSelect("DD_on2", widthbtn, fontSize)
-                    {
-                        Name = "VKLOP POPOLDNE"
-                    };
-
-                    Izklop1 = new GControls.DropDownListForHourSelect("DD_off1", widthbtn, fontSize)
-                    {
-                        Name = "IZKLOP DOPOLDNE"
-                    };
-
-                    Izklop2 = new GControls.DropDownListForHourSelect("DD_off2", widthbtn, fontSize)
-                    {
-                        Name = "IZKLOP POPOLDNE"
-                    };
-
-                    VklopUrnika1 = new GControls.PaddedOnOffButton(
-                        "Vklop Urnika", myID + 10, false, new Helper.Position(tr1 - 9, lc3, widthbtn), GuiController.GControls.OnOffButton.Type.WithText);
-                    VklopUrnika2 = new GControls.PaddedOnOffButton(
-                        "Vklop Urnika", myID + 20, false, new Helper.Position(tr1 - 9, lc3, widthbtn), GuiController.GControls.OnOffButton.Type.WithText);
-
-                    if (hasDimmer)
-                    {
-                        DimmerDop.SaveClicked += DimmerDop_SaveClicked;
-                        DimmerPop.SaveClicked += DimmerPop_SaveClicked;
+                        throw new Exception("Error inside LuciSubmenuContent(int id) construstor. Error info:" + ex.Message);
                     }
-
                     
-                    TagName = "div";
-
-                    SetControlAbsolutePos(Cona, tr1, tr1, widthdd);
-                    SetControlAbsolutePos(Vklop1, tr1, lc1, widthdd);
-                    SetControlAbsolutePos(Vklop2, tr1, lc1, widthdd);
-                    SetControlAbsolutePos(Izklop1, tr1, lc2, widthdd);
-                    SetControlAbsolutePos(Izklop2, tr1, lc2, widthdd);
-
-                    VklopUrnika1.button.Click += VklopUrnika1_Button_Click;
-                    VklopUrnika2.button.Click += VklopUrnika2Button_Click;
-
-                    SetControlAbsolutePos(VklopUrnika1);
-                    SetControlAbsolutePos(VklopUrnika2);
-
-                    SetControlAbsolutePos(DimmerDop, tr2, lc1, widthbtn);
-                    SetControlAbsolutePos(DimmerPop, tr2, lc1, widthbtn);
-
-                    Controls.Add(Cona);
-
-                    var topOffsetLabel = 10;
-
-                    Groupbox1.Controls.Add(Vklop1);
-                    Groupbox1.Controls.Add(CreateLabelTitle_OnLeft("Start:", Vklop1, topOffsetLabel, 5F, 10, 1.1F, true, Settings.LightBlackColor));
-                    Groupbox1.Controls.Add(Izklop1);
-                    Groupbox1.Controls.Add(CreateLabelTitle_OnLeft("Stop:", Izklop1, topOffsetLabel, 5F, 10, 1.1F, true, Settings.LightBlackColor));
-                    Groupbox1.Controls.Add(VklopUrnika1);
-                    Groupbox1.Controls.Add(Dopoldne);
-                    Groupbox1.Controls.Add(DimmerDop);
-                    Groupbox1.Controls.Add(CreateLabelTitle_OnLeft("Svetilnost:", DimmerDop, topOffsetLabel, 9.5F, 10, 1.1F, true, Settings.LightBlackColor));
-
-
-                    Groupbox2.Controls.Add(Vklop2);
-                    Groupbox2.Controls.Add(CreateLabelTitle_OnLeft("Start:", Vklop2, topOffsetLabel, 5F, 10, 1.1F, true, Settings.LightBlackColor));
-                    Groupbox2.Controls.Add(Izklop2);
-                    Groupbox2.Controls.Add(CreateLabelTitle_OnLeft("Stop:", Izklop2, topOffsetLabel, 5F, 10, 1.1F, true, Settings.LightBlackColor));
-                    Groupbox2.Controls.Add(VklopUrnika2);
-                    Groupbox2.Controls.Add(Popoldne);
-                    Groupbox2.Controls.Add(DimmerPop);
-                    Groupbox2.Controls.Add(CreateLabelTitle_OnLeft("Svetilnost:", DimmerPop, topOffsetLabel, 9.5F, 10, 1.1F, true, Settings.LightBlackColor));
-
-                    Controls.Add(Groupbox1);
-                    Controls.Add(Groupbox2);
-                    
-                    
-                    Vklop1.SaveClicked += Vklop1_SaveClicked;
-                    Vklop2.SaveClicked += Vklop2_SaveClicked;
-                    Izklop1.SaveClicked += Izklop1_SaveClicked;
-                    Izklop2.SaveClicked += Izklop2_SaveClicked;
 
                 }
+                             
 
-                               
                 private void Izklop2_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
                     Val.logocontroler.Prop1.IzklopConapop[myID].SyncWithPC(selectedItem.Value, 1);
@@ -432,7 +478,7 @@ namespace WebApplication1
 
                 private void DimmerDop_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop1.DimmerDop[myID].SyncWithPC(selectedItem.Value);
+                    Val.logocontroler.Prop1.DimmerDop[myID].Value = Convert.ToInt16(selectedItem.Text);
                 }
 
                 private void VklopUrnika1_Button_Click(object sender, ImageClickEventArgs e)

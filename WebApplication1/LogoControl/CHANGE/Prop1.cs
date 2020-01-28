@@ -35,6 +35,8 @@ namespace WebApplication1
         public Prop1(Sharp7.S7Client client, LogoControler logoControler)
         {
             Client = client;
+            
+            int inc = 10;
 
             for (int i = 1; i < LucStatus_ReadToPC.Length; i++)
             {
@@ -46,15 +48,27 @@ namespace WebApplication1
                 IzklopConadop[i] = new PlcVars.TimeSet(Client, "VW552", true); // TODO vpiši adress                
                 IzklopConapop[i] = new PlcVars.TimeSet(Client, "VW556", true); // TODO vpiši adress
                 VklopUrnika1[i] = new PlcVars.WordForCheckBox(Client, "", true); // TODO vpiši adress
-                VklopUrnika2[i] = new PlcVars.WordForCheckBox(Client, "", true); // TODO vpiši adress
-                DimmerDop[i] = new PlcVars.Word(Client, "", "", "", true); // TODO vpiši adress
-                DimmerPop[i] = new PlcVars.Word(Client, "", "", "", true); // TODO vpiši adress
+                VklopUrnika2[i] = new PlcVars.WordForCheckBox(Client, "", true); // TODO vpiši adress  
+               
+                
+
+               
+
+
 
                 LogoClock = new PlcVars.TimeSet(Client, "", false); // TODO vpiši address
 
             }
 
-            UgasniVseLuci = new PlcVars.Bit(Client, "bit at 1.0", "", "", true);
+            int buffDimmD = 310, buffDimmP = 314;
+            for (int i = 1; i < 4+1; i++)
+            {
+                DimmerDop[i] = new PlcVars.Word(Client, "VW" + buffDimmD, "", "", true);
+                DimmerPop[i] = new PlcVars.Word(Client, "VW" + buffDimmP, "", "", true);
+                buffDimmD += inc; buffDimmP += inc;
+            }
+
+            UgasniVseLuci = new PlcVars.Bit(Client, "bit at 700.0", "", "", true);
 
             
                        

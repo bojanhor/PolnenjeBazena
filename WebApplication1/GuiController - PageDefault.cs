@@ -75,132 +75,165 @@ namespace WebApplication1
 
             void ManageUpdatePanelLuci()
             {
-                LuciUpdatePanel = new UpdatePanel();
-                LuciUpdatePanel.UpdateMode = UpdatePanelUpdateMode.Conditional;
-                LuciUpdatePanel.ID = "LuciUpdatePanel";
+                try
+                {
+                    LuciUpdatePanel = new UpdatePanel();
+                    LuciUpdatePanel.UpdateMode = UpdatePanelUpdateMode.Conditional;
+                    LuciUpdatePanel.ID = "LuciUpdatePanel";
 
-                Tmr_LuciUpdatePanel = new Timer();
-                Tmr_LuciUpdatePanel.Interval = Settings.UpdateValuesPCms;
-                Tmr_LuciUpdatePanel.ID = "Tmr_LuciUpdatePanel";
+                    Tmr_LuciUpdatePanel = new Timer();
+                    Tmr_LuciUpdatePanel.Interval = Settings.UpdateValuesPCms;
+                    Tmr_LuciUpdatePanel.ID = "Tmr_LuciUpdatePanel";
 
-                Ap_LuciUpdatePanel = new AsyncPostBackTrigger();
-                Ap_LuciUpdatePanel.ControlID = "Tmr_LuciUpdatePanel";
+                    Ap_LuciUpdatePanel = new AsyncPostBackTrigger();
+                    Ap_LuciUpdatePanel.ControlID = "Tmr_LuciUpdatePanel";
 
-                LuciUpdatePanel.Triggers.Add(Ap_LuciUpdatePanel);
+                    LuciUpdatePanel.Triggers.Add(Ap_LuciUpdatePanel);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error was encountered inside ManageUpdatePanelLuci() method. Error details: " + ex.Message);
+                }
+                
             }
 
             void AddWeather()
             {
-                divWeather = DIV.CreateDiv("77%", "70%", "25%", "16%");
-                divWeather.Style.Add(HtmlTextWriterStyle.ZIndex, "10");
-
-                inTemp = new ImageButton()
+                try
                 {
-                    ImageUrl = "~/Pictures/temp-in.png",
-                    Width = Unit.Percentage(20),
-                };
+                    divWeather = DIV.CreateDiv("77%", "70%", "25%", "16%");
+                    divWeather.Style.Add(HtmlTextWriterStyle.ZIndex, "10");
 
-                outTemp = new ImageButton()
+                    inTemp = new ImageButton()
+                    {
+                        ImageUrl = "~/Pictures/temp-in.png",
+                        Width = Unit.Percentage(20),
+                    };
+
+                    outTemp = new ImageButton()
+                    {
+                        ImageUrl = "~/Pictures/temp-out.png",
+                        Width = inTemp.Width,
+                    };
+
+                    rainSense = new ImageButton()
+                    {
+                        ImageUrl = "~/Pictures/vlaznost.png",
+                        Width = inTemp.Width,
+                    };
+
+                    guiSepare1 = new ImageButton()
+                    {
+                        ImageUrl = "~/Pictures/gui_separator.png",
+                        Width = Unit.Percentage(5),
+                    };
+                    guiSepare2 = new ImageButton()
+                    {
+                        ImageUrl = "~/Pictures/gui_separator.png",
+                        Width = guiSepare1.Width,
+                    };
+
+
+                    var topOffset = 75;
+
+                    var spacingLeft = 25;
+
+
+                    var t = inTemp.Width.ToString();
+                    var inTempD = DIV.CreateDiv(t);
+                    var outTempD = DIV.CreateDiv(t);
+                    var rainSenseD = DIV.CreateDiv(t);
+
+                    inTempL = new Label
+                    {
+                        Text = "25.5°C",
+                        Width = Unit.Percentage(100),
+                    };
+                    inTempD.Style.Add(HtmlTextWriterStyle.Width, inTemp.Width + "");
+                    inTempL.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
+                    inTempL.Style.Add(HtmlTextWriterStyle.FontSize, "1.2vw");
+                    inTempD.Style.Add(HtmlTextWriterStyle.Top, topOffset + "%");
+                    inTempD.Style.Add(HtmlTextWriterStyle.Left, 0 + "%");
+                    inTempD.Controls.Add(inTempL);
+
+                    outTempL = new Label
+                    {
+                        Text = "-16.5°C",
+                        Width = Unit.Percentage(100),
+                    };
+                    outTempD.Style.Add(HtmlTextWriterStyle.Width, inTemp.Width + "");
+                    outTempL.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
+                    outTempL.Style.Add(HtmlTextWriterStyle.FontSize, "1.2vw");
+                    outTempD.Style.Add(HtmlTextWriterStyle.Top, topOffset + "%");
+                    outTempD.Style.Add(HtmlTextWriterStyle.Left, spacingLeft + "%");
+                    outTempD.Controls.Add(outTempL);
+
+
+                    rainSenseL = new Label
+                    {
+                        Text = "25L/dan",
+                        Width = Unit.Percentage(100),
+                    };
+                    rainSenseD.Style.Add(HtmlTextWriterStyle.Width, inTemp.Width + "");
+                    rainSenseL.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
+                    rainSenseL.Style.Add(HtmlTextWriterStyle.FontSize, "1.2vw");
+                    rainSenseD.Style.Add(HtmlTextWriterStyle.Top, topOffset + "%");
+                    rainSenseD.Style.Add(HtmlTextWriterStyle.Left, spacingLeft * 2 + "%");
+                    rainSenseD.Controls.Add(rainSenseL);
+
+
+
+                    divWeather.Controls.Add(inTemp);
+                    divWeather.Controls.Add(guiSepare1);
+                    divWeather.Controls.Add(outTemp);
+                    divWeather.Controls.Add(guiSepare2);
+                    divWeather.Controls.Add(rainSense);
+
+                    divWeather.Controls.Add(inTempD);
+                    divWeather.Controls.Add(outTempD);
+                    divWeather.Controls.Add(rainSenseD);
+                }
+                catch (Exception ex)
                 {
-                    ImageUrl = "~/Pictures/temp-out.png",
-                    Width = inTemp.Width,
-                };
 
-                rainSense = new ImageButton()
-                {
-                    ImageUrl = "~/Pictures/vlaznost.png",
-                    Width = inTemp.Width,
-                };
-
-                guiSepare1 = new ImageButton()
-                {
-                    ImageUrl = "~/Pictures/gui_separator.png",
-                    Width = Unit.Percentage(5),
-                };
-                guiSepare2 = new ImageButton()
-                {
-                    ImageUrl = "~/Pictures/gui_separator.png",
-                    Width = guiSepare1.Width,
-                };
-
-
-                var topOffset = 75;
+                    throw new Exception("Error iside AddWeather() method. Error info: "+ex.Message);
+                }
                 
-                var spacingLeft = 25;
-
-                
-                var t = inTemp.Width.ToString();
-                var inTempD = DIV.CreateDiv(t);
-                var outTempD = DIV.CreateDiv(t);
-                var rainSenseD = DIV.CreateDiv(t);
-
-                inTempL = new Label
-                {
-                    Text = "25.5°C",
-                    Width = Unit.Percentage(100),
-                };
-                inTempD.Style.Add(HtmlTextWriterStyle.Width, inTemp.Width + "");
-                inTempL.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
-                inTempL.Style.Add(HtmlTextWriterStyle.FontSize, "1.2vw");
-                inTempD.Style.Add(HtmlTextWriterStyle.Top, topOffset + "%");
-                inTempD.Style.Add(HtmlTextWriterStyle.Left, 0 + "%");
-                inTempD.Controls.Add(inTempL);
-
-                outTempL = new Label
-                {
-                    Text = "-16.5°C",
-                    Width = Unit.Percentage(100),
-                };
-                outTempD.Style.Add(HtmlTextWriterStyle.Width, inTemp.Width + "");
-                outTempL.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
-                outTempL.Style.Add(HtmlTextWriterStyle.FontSize, "1.2vw");
-                outTempD.Style.Add(HtmlTextWriterStyle.Top, topOffset + "%");
-                outTempD.Style.Add(HtmlTextWriterStyle.Left, spacingLeft + "%");
-                outTempD.Controls.Add(outTempL);
-
-
-                rainSenseL = new Label
-                {
-                    Text = "25L/dan",
-                    Width = Unit.Percentage(100),
-                };
-                rainSenseD.Style.Add(HtmlTextWriterStyle.Width, inTemp.Width + "");
-                rainSenseL.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
-                rainSenseL.Style.Add(HtmlTextWriterStyle.FontSize, "1.2vw");
-                rainSenseD.Style.Add(HtmlTextWriterStyle.Top, topOffset + "%");
-                rainSenseD.Style.Add(HtmlTextWriterStyle.Left, spacingLeft * 2 + "%");
-                rainSenseD.Controls.Add(rainSenseL);
-
-
-
-                divWeather.Controls.Add(inTemp);
-                divWeather.Controls.Add(guiSepare1);
-                divWeather.Controls.Add(outTemp);
-                divWeather.Controls.Add(guiSepare2);
-                divWeather.Controls.Add(rainSense);
-
-                divWeather.Controls.Add(inTempD);
-                divWeather.Controls.Add(outTempD);
-                divWeather.Controls.Add(rainSenseD);
 
             }
                        
 
             private void InitializeLuci()
-            {     
-                for (int i = 1; i <= XmlController.GetHowManyLucIcons(); i++) 
+            {
+                try
                 {
-                    Luc[i] = new GControls.Luc(i);                    
+                    for (int i = 1; i <= XmlController.GetHowManyLucIcons(); i++)
+                    {
+                        Luc[i] = new GControls.Luc(i);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error initialising GControls.Luc() class instances. Error info: " + ex.Message);
                 }
 
-                foreach (var item in Luc)
+                try
                 {
-                    if (item != null)
+                    foreach (var item in Luc)
                     {
-                        divStala.Controls.Add(item);
-                    }                    
+                        if (item != null)
+                        {
+                            divStala.Controls.Add(item);
+                        }
+                    }
+
+                    LuciUpdatePanel.ContentTemplateContainer.Controls.Add(divStala);
                 }
-                LuciUpdatePanel.ContentTemplateContainer.Controls.Add(divStala);
+                catch (Exception ex)
+                {
+                    throw new Exception("Error adding controls to panel (LuciUpdatePanel). Error info: " + ex.Message);
+                }
+               
 
             }
 
@@ -245,14 +278,22 @@ namespace WebApplication1
 
             void AddStala()
             {
+                try
+                {
+                    Stala.ImageUrl = "~/Pictures/MasterPic.png ";
+                    Stala.Style.Add(HtmlTextWriterStyle.Width, "100%");
 
-                Stala.ImageUrl = "~/Pictures/MasterPic.png ";                
-                Stala.Style.Add(HtmlTextWriterStyle.Width, "100%");
+                    divStala.Controls.Add(Stala);
+                    divStala.Style.Add(HtmlTextWriterStyle.Width, "100%");
+                    divStala.Style.Add(HtmlTextWriterStyle.Height, "100%");
+                    divStala.ID = "divStala";
+                }
+                catch (Exception ex)
+                {
 
-                divStala.Controls.Add(Stala);
-                divStala.Style.Add(HtmlTextWriterStyle.Width, "100%");
-                divStala.Style.Add(HtmlTextWriterStyle.Height, "100%");
-                divStala.ID = "divStala";
+                    throw new Exception("Error was encountered inside AddStala() method. Error details: " + ex.Message);
+                }
+                
 
             }
 
@@ -261,16 +302,25 @@ namespace WebApplication1
                 float spacing = 17.5F;
                 float initialPos = 11.0F;
 
-                for (int i = 0; i < imagebuttons.Length; i++)
+                try
                 {
-                    divMasterButtons = DIV.CreateDiv(Helper.FloatToStringWeb(initialPos, "%"));
-                    initialPos += spacing;
-                    imagebuttons[i] = new GControls.MasterMenuButton(i + 1);
-                    divMasterButtons.ID = imagebuttons[i].ID + "_div";
-                    divMasterButtons.Controls.Add(imagebuttons[i]);
-                    btnPannel.Controls.Add(divMasterButtons);             
+                    for (int i = 0; i < imagebuttons.Length; i++)
+                    {
+                        divMasterButtons = DIV.CreateDiv(Helper.FloatToStringWeb(initialPos, "%"));
+                        initialPos += spacing;
+                        imagebuttons[i] = new GControls.MasterMenuButton(i + 1);
+                        divMasterButtons.ID = imagebuttons[i].ID + "_div";
+                        divMasterButtons.Controls.Add(imagebuttons[i]);
+                        btnPannel.Controls.Add(divMasterButtons);
 
+                    }
                 }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error inside AddImageButtons_Menu() method. Error info: " + ex.Message);
+                }
+
+                
             }
                                   
         }

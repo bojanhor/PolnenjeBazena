@@ -188,25 +188,27 @@ namespace WebApplication1
 
                     var s = 3.9F;
 
-                    btnNastavi1 = new GControls.DropDownListForTemperatureSelect_10_30("btnNastavi1", s, FontSize);
+                    var prop = Val.logocontroler.Prop2;
+
+                    btnNastavi1 = new GControls.DropDownListForTemperatureSelect_10_30("btnNastavi1", prop.TempNivo1.Value, s, FontSize);
                     btnNastavi1.SaveClicked += BtnNastavi1_SaveClicked;
 
-                    btnNastavi2 = new GControls.DropDownListForTemperatureSelect_10_30("btnNastavi2", s, FontSize);
+                    btnNastavi2 = new GControls.DropDownListForTemperatureSelect_10_30("btnNastavi2", prop.TempNivo2.Value, s, FontSize);
                     btnNastavi2.SaveClicked += BtnNastavi2_SaveClicked;
 
-                    btnNastavi3 = new GControls.DropDownListForTemperatureSelect_10_30("btnNastavi3", s, FontSize);
+                    btnNastavi3 = new GControls.DropDownListForTemperatureSelect_10_30("btnNastavi3", prop.TempNivo3.Value, s, FontSize);
                     btnNastavi3.SaveClicked += BtnNastavi3_SaveClicked;
 
-                    btnNastaviObr = new GControls.DropDownListForDimmer("btnNastaviObr", s, FontSize);
+                    btnNastaviObr = new GControls.DropDownListForDimmer("btnNastaviObr", prop.Obrati_Omejevalnik_L.Value_string, s, FontSize);
                     btnNastaviObr.SaveClicked += BtnNastaviObr_SaveClicked;
 
-                    btnNastaviObr1 = new GControls.DropDownListForDimmer("btnNastaviObr1", s, FontSize);
+                    btnNastaviObr1 = new GControls.DropDownListForDimmer("btnNastaviObr1", prop.Obrati1.Value_string,  s, FontSize);
                     btnNastaviObr1.SaveClicked += BtnNastaviObr1_SaveClicked;
 
-                    btnNastaviObr2 = new GControls.DropDownListForDimmer("btnNastaviObr2", s, FontSize);
+                    btnNastaviObr2 = new GControls.DropDownListForDimmer("btnNastaviObr2", prop.Obrati2.Value_string, s, FontSize);
                     btnNastaviObr2.SaveClicked += BtnNastaviObr2_SaveClicked;
 
-                    btnNastaviObr3 = new GControls.DropDownListForDimmer("btnNastaviObr3", s, FontSize);
+                    btnNastaviObr3 = new GControls.DropDownListForDimmer("btnNastaviObr3", prop.Obrati3.Value_string, s, FontSize);
                     btnNastaviObr3.SaveClicked += BtnNastaviObr3_SaveClicked;
 
 
@@ -338,7 +340,9 @@ namespace WebApplication1
 
                     Lbl_OmObratov = new GControls.SuperLabel("OMEJEVALNIK OBRATOV:", nextH + 4, leftBorder, 50, 10);
 
-                    DropD_OmObratov = new GControls.DropDownListForYesNoSelect("DD_OmObr_yesno", nextH, 50, sizeBtn, FontSize); nextH += DropD_OmObratov.Height + spacing * 3.5F;
+                    var prop = Val.logocontroler.Prop2;
+
+                    DropD_OmObratov = new GControls.DropDownListForYesNoSelect("DD_OmObr_yesno", prop.Obrati_Omejevalnik_R.Value, nextH, 50, sizeBtn, FontSize); nextH += DropD_OmObratov.Height + spacing * 3.5F;
                     DropD_OmObratov.SaveClicked += DropD_OmObratov_SaveClicked;
 
                     //
@@ -350,17 +354,17 @@ namespace WebApplication1
                     var tmp = Lbl_OmejiObrate.Left + Lbl_OmejiObrate.Width + 2;
                     var tmp1 = tmp;
 
-                    DropD_OmejiObrate = new GControls.DropDownListForDimmer("DD_OmObr_prc", nextH, tmp, sizeBtn, FontSize); nextH += DropD_OmejiObrate.Height + spacing + 7;
+                    DropD_OmejiObrate = new GControls.DropDownListForDimmer("DD_OmObr_prc", prop.OmejiObrateNa.Value_string, nextH, tmp, sizeBtn, FontSize); nextH += DropD_OmejiObrate.Height + spacing + 7;
                     DropD_OmejiObrate.SaveClicked += DropD_OmejiObrate_SaveClicked;
 
                     Lbl_Med = new GControls.SuperLabel("med", nextH + 4, leftBorder + 25, 20, 10);
 
-                    DropD_Start = new GControls.DropDownListForHourSelect("DD_start", nextH, tmp, sizeBtn, FontSize); tmp += 24;
+                    DropD_Start = new GControls.DropDownListForHourSelect("DD_start", prop.OmObrMedA.Value_WeektimerForSiemensLogoFormat, nextH, tmp, sizeBtn, FontSize); tmp += 24;
                     DropD_Start.SaveClicked += DropD_Start_SaveClicked;
 
                     Lbl_In = new GControls.SuperLabel("in", nextH + 4, tmp, 20, 10); tmp += 5;
 
-                    DropD_Stop = new GControls.DropDownListForHourSelect("DD_stop", nextH, tmp, sizeBtn, FontSize); nextH += DropD_Stop.Height + spacing * 3.5F;
+                    DropD_Stop = new GControls.DropDownListForHourSelect("DD_stop", prop.OmObrMedB.Value_WeektimerForSiemensLogoFormat, nextH, tmp, sizeBtn, FontSize); nextH += DropD_Stop.Height + spacing * 3.5F;
                     DropD_Stop.SaveClicked += DropD_Stop_SaveClicked;
 
                     //
@@ -369,7 +373,7 @@ namespace WebApplication1
 
                     Lbl_UpostevajZT = new GControls.SuperLabel("UPOŠTEVAJ ZUNANJO TEMPERATURO:", nextH + 2, leftBorder, 22, 10);
 
-                    DropD_UpostevajZT = new GControls.DropDownListForYesNoSelect("DD_OutTempReg", nextH + 2, tmp1, sizeBtn, FontSize); nextH += DropD_UpostevajZT.Height + spacing * 4;
+                    DropD_UpostevajZT = new GControls.DropDownListForYesNoSelect("DD_OutTempReg", prop.UpostevajZT.Value, nextH + 2, tmp1, sizeBtn, FontSize); nextH += DropD_UpostevajZT.Height + spacing * 4;
                     DropD_UpostevajZT.SaveClicked += DropD_UpostevajZT_SaveClicked;
 
                     //
@@ -378,7 +382,7 @@ namespace WebApplication1
 
                     Histereza = new GControls.SuperLabel("HISTEREZA:", nextH + 4, leftBorder, 20, 10);
 
-                    DropD_Histereza = new GControls.DropDownListForHisteresis("DD_Hist", nextH, tmp1, sizeBtn, FontSize); nextH += DropD_Histereza.Height + spacing;
+                    DropD_Histereza = new GControls.DropDownListForHisteresis("DD_Hist", prop.Histereza.Value_string, nextH, tmp1, sizeBtn, FontSize); nextH += DropD_Histereza.Height + spacing;
                     DropD_Histereza.SaveClicked += DropD_Histereza_SaveClicked;
 
                     gb_R = new GControls.GroupBox(17, 51, 45, 76);
