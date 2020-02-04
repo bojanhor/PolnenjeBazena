@@ -9,9 +9,14 @@ namespace WebApplication1
 {
     public class PlcVars
     {
+        public static void ReportComunicatoonMessage(string message)
+        {
+            Val.Message.Setmessage(message);
+        }
+
         public class Word
         {
-            public short Value
+            public short? Value
             {
                 get
                 {
@@ -26,7 +31,10 @@ namespace WebApplication1
                 }
                 set
                 {
-                    ReadFromPCtoBuffer(value, true);
+                    if (value != null)
+                    {
+                        ReadFromPCtoBuffer(value, true);
+                    }                    
                 }
             }
 
@@ -66,8 +74,16 @@ namespace WebApplication1
 
             public void SyncWithPLC()
             {
-                ReadFromPLCtoBuffer(false);
-                WriteToPLCFromBuffer();
+                try
+                {                    
+                    ReadFromPLCtoBuffer(false);
+                    WriteToPLCFromBuffer();
+                }
+                catch (Exception ex)
+                {
+                    ReportComunicatoonMessage(ex.Message);
+                }
+                
             }
 
             private void ReadFromPLCtoBuffer(bool forceRead)
@@ -77,7 +93,14 @@ namespace WebApplication1
                     if (_Client != null)
                     {
                         buffRead = Connection.PLCread(_Client, _TypeAndAdress, out ErrRead);
-                        if (ErrRead == 0 && buffRead != null) { PLCval = buffRead; buffRead = null; }
+                        if (ErrRead == 0 && buffRead != null)
+                        {
+                            PLCval = buffRead; buffRead = null;
+                        }
+                        else
+                        {
+                            ReportError_throwException("Read from PLC failed.", null, forceRead);
+                        }
                     }
                 }
             }
@@ -99,12 +122,20 @@ namespace WebApplication1
                             if (_Client != null)
                             {
                                 if (_IsWritable)
-                                {
+                                {                                    
                                     Connection.PLCwrite(_Client, _TypeAndAdress, (short)buffWrite, out ErrWrite);
                                     if (ErrWrite == 0)
                                     {
                                         PLCval = buffWrite; 
                                     }
+                                    else
+                                    {
+                                        ReportError_throwException( "Write to PLC failed.");
+                                    }
+                                }
+                                else
+                                {
+                                    ReportError_throwException("Write to PLC failed IsWritable flag must be true for writing to PLC.");
                                 }
                             }                            
                         }
@@ -119,10 +150,13 @@ namespace WebApplication1
                 {
                     WriteToPCFromBuffer(value);
                 }
-                catch { }
+                catch (Exception ex)
+                {
+                    ReportError_throwException("Write To PC failed." + ex.Message);
+                }
 
                 try
-                {
+                {                    
                     if (value != PropComm.NA)
                     {
                         if (value != null)
@@ -134,9 +168,9 @@ namespace WebApplication1
                         }
                     }
                 }
-                catch
+                catch(Exception ex)
                 {
-
+                    ReportError_throwException("Read from PC failed." + ex.Message);
                 }
 
             }
@@ -172,6 +206,42 @@ namespace WebApplication1
                     }
                 }
             }
+
+            public void ReportError_throwException(string Message)
+            {
+                ReportError_throwException(Message, null, null);
+            }
+            public void ReportError_throwException(string Message, bool? forceSet_FlagToReport, bool? forceRead_FlagToReport)
+            {               
+                string Address = _TypeAndAdress;
+                string ErrTyp_Read = _Client.ErrorText(ErrRead);
+                string ErrTyp_Write = _Client.ErrorText(ErrWrite);
+                string Client = "Logo" + _Client.deviceID;
+                string Flags;
+
+                Flags = "directionToPLC: " + directionToPLC;
+
+                if (forceSet_FlagToReport != null)
+                {
+                    Flags += " forceSet: " + forceSet_FlagToReport.ToString() + ";";
+                }
+
+                if (forceRead_FlagToReport != null)
+                {
+                    Flags += " forceRead: " + forceSet_FlagToReport.ToString() + ";";
+                }
+
+                Flags += " isWritable: " + _IsWritable.ToString() + ";";
+
+
+                throw new Exception(
+                    Message + " " +
+                    "Address: " + Address + ", " +
+                    "Read Error type: " + ErrTyp_Read + ", " +
+                    "Write Error type: " + ErrTyp_Write + ", " +
+                    "Client: " + Client + ". " +
+                    "Flags: " + Flags);
+            }
         }
 
 
@@ -191,7 +261,7 @@ namespace WebApplication1
                     return PropComm.NA;
                    
                 }
-                
+                               
             }
 
             public string Value_WeektimerForSiemensLogoFormat
@@ -208,6 +278,27 @@ namespace WebApplication1
                     return PropComm.NA;
 
                 }
+                set
+                {
+                    if (value != null)
+                    {
+                        if (value != PropComm.NA)
+                        {
+                            try
+                            {                                
+                                var buff = EncodeWordToTime(value);
+                                ReadFromPCtoBuffer(buff, true);
+                            }
+                            catch (Exception ex)
+                            {
+                                ReportError_throwException("Error setting value for weektimer." + ex.Message);
+                            }                            
+                        }
+                        
+                    }
+                }
+                
+
 
             }
 
@@ -235,8 +326,16 @@ namespace WebApplication1
 
             public void SyncWithPLC()
             {
-                ReadFromPLCtoBuffer(false);
-                WriteToPLCFromBuffer();
+
+                try
+                {
+                    ReadFromPLCtoBuffer(false);
+                    WriteToPLCFromBuffer();
+                }
+                catch (Exception ex)
+                {
+                    ReportComunicatoonMessage(ex.Message);
+                }
             }
 
             private void ReadFromPLCtoBuffer(bool forceRead)
@@ -247,6 +346,10 @@ namespace WebApplication1
                     {
                         buffRead = Connection.PLCread(_Client, _TypeAndAdress, out ErrRead);
                         if (ErrRead == 0 && buffRead != null) { PLCval = buffRead; buffRead = null; }
+                    }
+                    else
+                    {
+                        ReportError_throwException("Read from PLC failed.", null, forceRead);
                     }
                 }
             }
@@ -274,6 +377,14 @@ namespace WebApplication1
                                     {
                                         PLCval = buffWrite;
                                     }
+                                    else
+                                    {
+                                        ReportError_throwException("Write to PLC failed.");
+                                    }
+                                }
+                                else
+                                {
+                                    ReportError_throwException("Write to PLC failed IsWritable flag must be true for writing to PLC.");
                                 }
                             }                            
                         }                        
@@ -297,7 +408,10 @@ namespace WebApplication1
                 {
                     WriteToPCFromBuffer(value,  method);
                 }
-                catch { }
+                catch (Exception ex)
+                {
+                    ReportError_throwException("Write To PC failed." + ex.Message);
+                }
 
                 try
                 {
@@ -309,9 +423,9 @@ namespace WebApplication1
                         }
                     }
                 }
-                catch
+                catch (Exception ex)
                 {
-
+                    ReportError_throwException("Read from PC failed." + ex.Message);
                 }
 
             }
@@ -327,7 +441,6 @@ namespace WebApplication1
                     }
                 }
             }
-
 
             private void WriteToPCFromBuffer(string value, int method)
             {
@@ -349,6 +462,42 @@ namespace WebApplication1
                         }
                     }
                 }
+            }
+
+            public void ReportError_throwException(string Message)
+            {
+                ReportError_throwException(Message, null, null);
+            }
+            public void ReportError_throwException(string Message, bool? forceSet_FlagToReport, bool? forceRead_FlagToReport)
+            {
+                string Address = _TypeAndAdress;
+                string ErrTyp_Read = _Client.ErrorText(ErrRead);
+                string ErrTyp_Write = _Client.ErrorText(ErrWrite);
+                string Client = "Logo" + _Client.deviceID;
+                string Flags;
+
+                Flags = "directionToPLC: " + directionToPLC;
+
+                if (forceSet_FlagToReport != null)
+                {
+                    Flags += " forceSet: " + forceSet_FlagToReport.ToString() + ";";
+                }
+
+                if (forceRead_FlagToReport != null)
+                {
+                    Flags += " forceRead: " + forceSet_FlagToReport.ToString() + ";";
+                }
+
+                Flags += " isWritable: " + _IsWritable.ToString() + ";";
+
+
+                throw new Exception(
+                    Message + " " +
+                    "Address: " + Address + ", " +
+                    "Read Error type: " + ErrTyp_Read + ", " +
+                    "Write Error type: " + ErrTyp_Write + ", " +
+                    "Client: " + Client + ". " +
+                    "Flags: " + Flags);
             }
         }
 
@@ -411,7 +560,9 @@ namespace WebApplication1
 
         }
 
-
+        /// <summary>
+        /// ///////////////////////////////////////////////////////////////////////////////////////
+        /// </summary>
         public class WordForCheckBox
         {
             private short? PLCval;
@@ -426,6 +577,26 @@ namespace WebApplication1
             bool _IsWritable = false;
             bool datacorrupted = false;
 
+            public bool Value
+            {
+                get
+                {
+                    if (PLCval>0)
+                    {
+                        return true;
+                    }
+                    return false;
+                }
+
+                set
+                {
+                    ReadFromPCtoBuffer(
+                        value ? (short)1 : (short)0, 
+                        true);
+                }
+                
+            }
+
             public WordForCheckBox(Sharp7.S7Client Client, string TypeAndAdress, bool IsWritable)
             {
                 PLCval = null;
@@ -438,8 +609,15 @@ namespace WebApplication1
 
             public void SyncWithPLC()
             {
-                ReadFromPLCtoBuffer(false);
-                WriteToPLCFromBuffer();
+                try
+                {
+                    ReadFromPLCtoBuffer(false);
+                    WriteToPLCFromBuffer();
+                }
+                catch (Exception ex)
+                {
+                    ReportComunicatoonMessage(ex.Message);
+                }
             }
 
             private void ReadFromPLCtoBuffer(bool forceRead)
@@ -449,7 +627,22 @@ namespace WebApplication1
                     if (_Client != null)
                     {
                         buffRead = Connection.PLCread(_Client, _TypeAndAdress, out ErrRead);
-                        if (ErrRead == 0 && buffRead != null) { if (buffRead > 0) { PLCval = 1; } else { PLCval = 0; } PLCval = buffRead; buffRead = null; }
+                        if (ErrRead == 0 && buffRead != null)
+                        {
+                            if (buffRead > 0)
+                            {
+                                PLCval = 1;
+                            }
+                            else
+                            {
+                                PLCval = 0;
+                            }
+                            PLCval = buffRead; buffRead = null;
+                        }
+                        else
+                        {
+                            ReportError_throwException("Read from PLC failed.", null, forceRead);
+                        }
                     }
                 }
             }
@@ -485,6 +678,14 @@ namespace WebApplication1
                                     {
                                         PLCval = buffWrite;
                                     }
+                                    else
+                                    {
+                                        ReportError_throwException("Write to PLC failed.");
+                                    }
+                                }
+                                else
+                                {
+                                    ReportError_throwException("Write to PLC failed IsWritable flag must be true for writing to PLC.");
                                 }
                             }                            
                         }
@@ -499,7 +700,10 @@ namespace WebApplication1
                 {
                     WriteToPCFromBuffer(value);
                 }
-                catch { }
+                catch (Exception ex)
+                {
+                    ReportError_throwException("Write To PC failed." + ex.Message);
+                }
 
                 try
                 {
@@ -507,22 +711,22 @@ namespace WebApplication1
                     {
                         if (value != null)
                         {
-                            ReadFromPCtoBuffer(Convert.ToInt16(value));
+                            ReadFromPCtoBuffer(Convert.ToInt16(value), false);
                         }
                     }
                 }
-                catch
+                catch (Exception ex)
                 {
-
+                    ReportError_throwException("Read from PC failed." + ex.Message);
                 }
 
             }
 
-            private void ReadFromPCtoBuffer(short? value)
+            private void ReadFromPCtoBuffer(short? value, bool forceSet)
             {
                 if (value != null)
                 {
-                    if (value != PCval)
+                    if (value != PCval || forceSet)
                     {
                         directionToPLC = true;
                         PCval = value;
@@ -572,9 +776,44 @@ namespace WebApplication1
                     }
                 }
             }
+
+            public void ReportError_throwException(string Message)
+            {
+                ReportError_throwException(Message, null, null);
+            }
+            public void ReportError_throwException(string Message, bool? forceSet_FlagToReport, bool? forceRead_FlagToReport)
+            {
+                string Address = _TypeAndAdress;
+                string ErrTyp_Read = _Client.ErrorText(ErrRead);
+                string ErrTyp_Write = _Client.ErrorText(ErrWrite);
+                string Client = "Logo" + _Client.deviceID;
+                string Flags;
+
+                Flags = "directionToPLC: " + directionToPLC;
+
+                if (forceSet_FlagToReport != null)
+                {
+                    Flags += " forceSet: " + forceSet_FlagToReport.ToString() + ";";
+                }
+
+                if (forceRead_FlagToReport != null)
+                {
+                    Flags += " forceRead: " + forceSet_FlagToReport.ToString() + ";";
+                }
+
+                Flags += " isWritable: " + _IsWritable.ToString() + ";";
+
+
+                throw new Exception(
+                    Message + " " +
+                    "Address: " + Address + ", " +
+                    "Read Error type: " + ErrTyp_Read + ", " +
+                    "Write Error type: " + ErrTyp_Write + ", " +
+                    "Client: " + Client + ". " +
+                    "Flags: " + Flags);
+            }
         }
-
-
+        
         public class Bit
         {
             public bool Value
@@ -645,23 +884,29 @@ namespace WebApplication1
 
             public void SyncWithPLC()
             {
-                
-                if (sendpulseState == 1)
+                try
                 {
-                    WriteToPLCFromBuffer(true);
-                    Value = false;
-                    sendpulseState = 2;
+                    if (sendpulseState == 1)
+                    {
+                        WriteToPLCFromBuffer(true);
+                        Value = false;
+                        sendpulseState = 2;
+                    }
+                    else if (sendpulseState == 2)
+                    {
+                        WriteToPLCFromBuffer(true);
+                        stopSendPulse();
+                    }
+                    else
+                    {
+                        ReadFromPLCtoBuffer(false);
+                        WriteToPLCFromBuffer(false);
+                    }
                 }
-                else if (sendpulseState == 2)
+                catch (Exception ex)
                 {
-                    WriteToPLCFromBuffer(true);
-                    stopSendPulse();
+                    ReportComunicatoonMessage(ex.Message);
                 }
-                else
-                {                    
-                    ReadFromPLCtoBuffer(false);
-                    WriteToPLCFromBuffer(false);
-                }                
             }
 
             private void ReadFromPLCtoBuffer(bool forceRead)
@@ -672,6 +917,10 @@ namespace WebApplication1
                     {
                         buffRead = Connection.PLCread(_Client, _TypeAndAdress, out ErrRead);
                         if (ErrRead == 0 && buffRead != null) { if (buffRead > 0) { PLCval = true; } else { PLCval = false; } buffRead = null; }
+                        else
+                        {
+                            ReportError_throwException("Read from PLC failed.", null, forceRead);
+                        }
                     }
                 }
             }
@@ -699,6 +948,14 @@ namespace WebApplication1
                                     {
                                         PLCval = Convert.ToBoolean(buffWrite);
                                     }
+                                    else
+                                    {
+                                        ReportError_throwException("Write to PLC failed.");
+                                    }
+                                }
+                                else
+                                {
+                                    ReportError_throwException("Write to PLC failed IsWritable flag must be true for writing to PLC.");
                                 }
                             }
                         }
@@ -714,20 +971,13 @@ namespace WebApplication1
                 {
                     WriteToPCFromBuffer(value);
                 }
-                catch { }
+                catch (Exception ex)
+                {
+                    ReportError_throwException("Write To PC failed." + ex.Message);
+                }
 
                 try
                 {
-
-                    //if (value is DatagridTypes.CheckBox)
-                    //{
-                    //    if (value != null)
-                    //    {
-                    //        ReadFromPCtoBuffer(Convert.ToBoolean(value), false);
-                    //        return;
-                    //    }
-                    //}
-                    //else
                     {
                         if (value != PropComm.NA)
                         {
@@ -745,13 +995,16 @@ namespace WebApplication1
                                     return;
                                 }
 
-                                throw new Exception("Data parsed from datagridview is not valid boolean!");
+                                throw new Exception("Data parsed is not valid boolean!");
                             }
                         }
                     }
 
                 }
-                catch { }
+                catch (Exception ex)
+                {
+                    ReportError_throwException("Read from PC failed." + ex.Message);
+                }
 
             }
 
@@ -858,219 +1111,44 @@ namespace WebApplication1
 
             }
 
-        }
+            public void ReportError_throwException(string Message)
+            {
+                ReportError_throwException(Message, null, null);
+            }
+            public void ReportError_throwException(string Message, bool? forceSet_FlagToReport, bool? forceRead_FlagToReport)
+            {
+                string Address = _TypeAndAdress;
+                string ErrTyp_Read = _Client.ErrorText(ErrRead);
+                string ErrTyp_Write = _Client.ErrorText(ErrWrite);
+                string Client = "Logo" + _Client.deviceID;
+                string Flags;
 
+                Flags = "directionToPLC: " + directionToPLC;
+
+                if (forceSet_FlagToReport != null)
+                {
+                    Flags += " forceSet: " + forceSet_FlagToReport.ToString() + ";";
+                }
+
+                if (forceRead_FlagToReport != null)
+                {
+                    Flags += " forceRead: " + forceSet_FlagToReport.ToString() + ";";
+                }
+
+                Flags += " isWritable: " + _IsWritable.ToString() + ";";
+
+
+                throw new Exception(
+                    Message + " " +
+                    "Address: " + Address + ", " +
+                    "Read Error type: " + ErrTyp_Read + ", " +
+                    "Write Error type: " + ErrTyp_Write + ", " +
+                    "Client: " + Client + ". " +
+                    "Flags: " + Flags);
+            }
+
+        }        
         
-
-        public class BitForCheckBox
-        {
-            public bool Value
-            {
-                get
-                {
-                    if (PLCval != null)
-                    {
-                        return (bool)PLCval;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
-                set
-                {
-                    ReadFromPCtoBuffer(value, true);
-                }
-            }
-
-            private bool? PLCval;
-            private bool? PCval;
-            private bool directionToPLC = false;
-            private string _TypeAndAdress;
-            private Sharp7.S7Client _Client;
-            int ErrRead;
-            int ErrWrite;
-            short? buffRead;
-            short? buffWrite;
-            bool _IsWritable = false;
-            bool datacorrupted = false;
-
-            public BitForCheckBox(Sharp7.S7Client Client, string TypeAndAdress, bool IsWritable)
-            {
-                PLCval = null;
-                PCval = null;
-
-                _Client = Client;
-                _TypeAndAdress = TypeAndAdress;
-                _IsWritable = IsWritable;
-            }
-
-            public void SyncWithPLC()
-            {
-                ReadFromPLCtoBuffer(false);
-                WriteToPLCFromBuffer();
-            }
-
-            private void ReadFromPLCtoBuffer(bool forceRead)
-            {
-                if (directionToPLC == false || forceRead)
-                {
-                    if (_Client != null)
-                    {
-                        buffRead = Connection.PLCread(_Client, _TypeAndAdress, out ErrRead);
-                        if (ErrRead == 0 && buffRead != null) { if (buffRead > 0) { PLCval = true; } else { PLCval = false; } buffRead = null; }
-                    }
-                }
-
-            }
-
-            private void WriteToPLCFromBuffer()
-            {
-                if (PLCval == null)
-                {
-                    directionToPLC = false;
-                }
-                if (directionToPLC == true)
-                {
-                    if (PCval != null && PLCval != null)
-                    {
-                        if (PCval != PLCval)
-                        {
-                            if ((bool)PCval) { buffWrite = 1; } else { buffWrite = 0; }
-
-                            if (_Client != null)
-                            {
-                                if (_IsWritable)
-                                {
-                                    Connection.PLCwrite(_Client, _TypeAndAdress, (short)buffWrite, out ErrWrite);
-                                    if (ErrWrite == 0)
-                                    {
-                                        PLCval = Convert.ToBoolean(buffWrite);
-                                    }
-                                }
-                            }                            
-                        }
-                        directionToPLC = false;
-                    }
-                }
-            }
-
-            public void SyncWithPC(bool? value)
-            {
-                try
-                {
-                    if (value != null)
-                    {
-                        WriteToPCFromBuffer((bool)value);
-                    }                        
-
-                }
-                catch { }
-
-                try
-                {
-
-                    if (value != null)
-                    {
-                        ReadFromPCtoBuffer(Convert.ToBoolean(value), false);
-                        return;
-                    }
-                }
-                catch { }
-
-            }
-
-            private void ReadFromPCtoBuffer(bool? value, bool forceSet)
-            {
-                if (value != null)
-                {
-                    if (value != PCval || forceSet)
-                    {
-                        directionToPLC = true;
-                        PCval = value;
-                    }
-                }
-            }
-
-            private void WriteToPCFromBuffer(bool value)
-            {
-                if (directionToPLC == false)
-                {
-                    if (PLCval != null)
-                    {
-                        if (PLCval != PCval || datacorrupted)
-                        {
-                            if (PLCval == true)
-                            {
-                                value = true;
-                                datacorrupted = false;
-                                if (Convert.ToBoolean(value) != true)
-                                {
-                                    datacorrupted = true; // if displayed data is not as it should be they are overwriten next loop
-                                }
-                            }
-                            else
-                            {
-                                value = false;
-                                datacorrupted = false;
-                                if (Convert.ToBoolean(value) != false)
-                                {
-                                    datacorrupted = true; // if displayed data is not as it should be they are overwriten next loop
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-        }
-
-        public class PowerShow : TemperatureShow
-        {
-            public PowerShow(Sharp7.S7Client Client, string TypeAndAdress, string prefixToShow, string postFixToShow, float calibOffset, float calibMultiply, bool IsWritable)
-                : base(Client, TypeAndAdress, prefixToShow, postFixToShow, calibOffset, calibMultiply, IsWritable)
-            {
-
-            }
-
-            public override string Scalate(short? val)
-            {
-                if (val != null)
-                {
-                    return (_kx * (float)val + _n).ToString("F0");
-                }
-                else
-                {
-                    return PropComm.NA;
-                }
-
-            }
-        }
-
-        public class PhShow : TemperatureShow
-        {
-
-            public PhShow(Sharp7.S7Client Client, string TypeAndAdress, string prefixToShow, string postFixToShow, float calibOffset, float calibMultiply, bool IsWritable)
-                : base(Client, TypeAndAdress, prefixToShow, postFixToShow, calibOffset, calibMultiply, IsWritable)
-            {
-
-            }
-
-            public override string Scalate(short? val)
-            {
-                if (val != null)
-                {
-                    return (_kx * (float)val + _n).ToString("F1");
-                }
-                else
-                {
-                    return PropComm.NA;
-                }
-
-            }
-        }
-
-
         public class TemperatureShow
         {
 
@@ -1078,7 +1156,7 @@ namespace WebApplication1
             {
                 get
                 {
-                    return Scalate(PLCval);
+                    return _prefixToShow + Scalate(PLCval) + _postFixToShow;
                 }
             }
 
@@ -1097,13 +1175,32 @@ namespace WebApplication1
             public float _kx;
             public float _n;
             bool _isWritable;
+            private int decimalPlaces;
+            public int DecimalPlaces
+            {
+                get { return decimalPlaces; }
+                set {
+                    if (value <0)
+                    {
+                        decimalPlaces = 0;
+                    }
+                    if (value>5)
+                    {
+                        decimalPlaces = 5;
+                    }
+                    decimalPlaces = value;
+                }
+            }
 
 
-            public TemperatureShow(Sharp7.S7Client Client, string TypeAndAdress, string prefixToShow, string postFixToShow, float calibOffset, float calibMultiply, bool IsWritable)
+
+            public TemperatureShow(Sharp7.S7Client Client, string TypeAndAdress, string prefixToShow, string postFixToShow, float calibOffset, float calibMultiply, int decimals, bool IsWritable)
             {
                 PLCval = null;
                 PCval = null;
 
+                decimalPlaces = decimals;
+                
                 _Client = Client;
                 _TypeAndAdress = TypeAndAdress;
                 _prefixToShow = prefixToShow;
@@ -1116,8 +1213,15 @@ namespace WebApplication1
 
             public void SyncWithPLC()
             {
-                ReadFromPLCtoBuffer(false);
-                WriteToPLCFromBuffer();
+                try
+                {
+                    ReadFromPLCtoBuffer(false);
+                    WriteToPLCFromBuffer();
+                }
+                catch (Exception ex)
+                {
+                    ReportComunicatoonMessage(ex.Message);
+                }
             }
 
 
@@ -1127,9 +1231,9 @@ namespace WebApplication1
                 {
                     WriteToPCFromBuffer(value);
                 }
-                catch
+                catch (Exception ex)
                 {
-
+                    ReportError_throwException("Write To PC failed." + ex.Message);
                 }
 
                 try
@@ -1143,9 +1247,9 @@ namespace WebApplication1
                         }
                     }
                 }
-                catch
+                catch (Exception ex)
                 {
-
+                    ReportError_throwException("Read from PC failed." + ex.Message);
                 }
             }
 
@@ -1169,6 +1273,10 @@ namespace WebApplication1
                     {
                         buffRead = Connection.PLCread(_Client, _TypeAndAdress, out ErrRead);
                         if (ErrRead == 0 && buffRead != null) { PLCval = buffRead; buffRead = null; }
+                        else
+                        {
+                            ReportError_throwException("Read from PLC failed.", null, forceRead);
+                        }
                     }
                 }
             }
@@ -1195,7 +1303,15 @@ namespace WebApplication1
                                     if (ErrWrite == 0)
                                     {
                                         PLCval = buffWrite;
-                                    }                                    
+                                    }
+                                    else
+                                    {
+                                        ReportError_throwException("Write to PLC failed.");
+                                    }
+                                }
+                                else
+                                {
+                                    ReportError_throwException("Write to PLC failed IsWritable flag must be true for writing to PLC.");
                                 }
                             }                            
                         }
@@ -1228,7 +1344,7 @@ namespace WebApplication1
             {
                 if (val != null)
                 {
-                    return (_kx * (float)val + _n).ToString("F1");
+                    return (_kx * (float)val + _n).ToString("F" + decimalPlaces);
                 }
                 else
                 {
@@ -1255,8 +1371,42 @@ namespace WebApplication1
                 return null;
             }
 
+            public void ReportError_throwException(string Message)
+            {
+                ReportError_throwException(Message, null, null);
+            }
+            public void ReportError_throwException(string Message, bool? forceSet_FlagToReport, bool? forceRead_FlagToReport)
+            {
+                string Address = _TypeAndAdress;
+                string ErrTyp_Read = _Client.ErrorText(ErrRead);
+                string ErrTyp_Write = _Client.ErrorText(ErrWrite);
+                string Client = "Logo" + _Client.deviceID;
+                string Flags;
+
+                Flags = "directionToPLC: " + directionToPLC;
+
+                if (forceSet_FlagToReport != null)
+                {
+                    Flags += " forceSet: " + forceSet_FlagToReport.ToString() + ";";
+                }
+
+                if (forceRead_FlagToReport != null)
+                {
+                    Flags += " forceRead: " + forceSet_FlagToReport.ToString() + ";";
+                }
+                
+                throw new Exception(
+                    Message + " " +
+                    "Address: " + Address + ", " +
+                    "Read Error type: " + ErrTyp_Read + ", " +
+                    "Write Error type: " + ErrTyp_Write + ", " +
+                    "Client: " + Client + ". " +
+                    "Flags: " + Flags);
+            }
+
         }
 
+        // ////////////////////////////////////////////////////////
 
         public static string RemoveFromEnd(string s, string suffix)
         {

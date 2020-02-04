@@ -13,7 +13,7 @@ namespace WebApplication1
         public static Helper.Initialiser Initialiser = new Helper.Initialiser();
         public static LogoControler logocontroler = new LogoControler();
         public static string[] watchdog = new string[Settings.Devices + 1];
-        public static MessageToWeb message = new MessageToWeb();
+        public static MessageToWeb Message = new MessageToWeb();
         public static GuiController guiController = new GuiController();
         public static string ScrolToBottomTextboxScript = null;
         public static string RetainPositionTextboxScript = null;

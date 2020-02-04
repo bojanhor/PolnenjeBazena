@@ -13,7 +13,8 @@ namespace WebApplication1
     {
 
         public static string BaseDirectoryPath = "";
-        private static string XML;                
+        private static string XML;
+        static int? howManyLucIconsBuff = null;
         
         static bool forceRefresh = false;
 
@@ -649,6 +650,14 @@ namespace WebApplication1
                        
             try
             {
+                if (howManyLucIconsBuff != null)
+                {
+                    if (howManyLucIconsBuff > 0)
+                    {
+                        return (int)howManyLucIconsBuff; // get value from buffer
+                    }                    
+                }
+                
                 for (int i = 1; i <= 12; i++) // scan 12 items
                 {
                     searchValue = prefix + i;
@@ -661,6 +670,7 @@ namespace WebApplication1
                     }
                     else
                     {
+                        howManyLucIconsBuff = cnt; // save to buffer
                         break; // breaks on first disabled icon
                     }
                 }
@@ -727,8 +737,32 @@ namespace WebApplication1
 
             try
             {
+                if (lucID < 1 || lucID > GetHowManyLucIcons())
+                {
+                    throw new Exception();
+                }
+                return Convert.ToBoolean(XmlGUI.Element(searchValue).Value);
+            }
+            catch (Exception)
+            {
 
-                if (lucID < 1 || lucID > 10)
+                throw new Exception(
+                    searchValue + " value in config file is not valid " + searchValue + " value. " +
+                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "value must be \"true\" or \"false\"");
+            }
+
+
+        }
+
+        public static bool GetHasWeekTimer(int lucID)
+        {
+
+            var searchValue = "HasWeekTimer" + lucID;
+
+            try
+            {
+                if (lucID < 1 || lucID > GetHowManyLucIcons())
                 {
                     throw new Exception();
                 }

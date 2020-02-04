@@ -94,10 +94,9 @@ namespace WebApplication1
                 byte[] b = new byte[6];  // temporary array for writing
 
                 // In case if you want to write bit value
-                if (typeAndAdress.Contains("bit at"))
+                if (typeAndAdress.Contains("bit"))
                 {
-                    typeAndAdress = typeAndAdress.Replace("bit at", "");
-                    typeAndAdress = typeAndAdress.Replace(" ", "");
+                    typeAndAdress = CleanAddressText(typeAndAdress);
 
                     bool boolval = false;
                     boolval = Convert.ToBoolean(value);
@@ -116,7 +115,7 @@ namespace WebApplication1
                 // In case if you want to write DWORD value
                 else if (typeAndAdress.Contains("DW"))
                 {
-                    typeAndAdress = typeAndAdress.Replace("DW", "");
+                    typeAndAdress = CleanAddressText(typeAndAdress);
                     address = int.Parse(typeAndAdress);
                     S7.SetDWordAt(b, 0, (uint)value);
                     errCode = Client.DBWrite(1, address, 4, b);
@@ -126,7 +125,7 @@ namespace WebApplication1
                 // In case if you want to write Word value
                 else if (typeAndAdress.Contains("W"))
                 {
-                    typeAndAdress = typeAndAdress.Replace("W", "");
+                    typeAndAdress = CleanAddressText(typeAndAdress);
                     address = int.Parse(typeAndAdress);
                     S7.SetWordAt(b, 0, (ushort)value);
                     errCode = Client.DBWrite(1, address, 2, b);
@@ -137,15 +136,17 @@ namespace WebApplication1
                     errCode = S7Consts.err_typeError;
                 }
             }
-            catch
+            catch (Exception ex)
             {
                 errCode = S7Consts.err_Write;
+                throw new Exception(Client.ErrorText(errCode) + ". " + ex.Message);
             }
+                        
+        }
 
-
-
-
-
+        static string CleanAddressText(string typeAndAdress)
+        {
+            return  typeAndAdress.Replace("V", "").Replace(" ", "").Replace("D", "").Replace("W", "").Replace("bit", "").Replace("at", "");
         }
 
 

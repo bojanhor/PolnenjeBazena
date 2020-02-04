@@ -10,7 +10,7 @@ namespace WebApplication1
     public class Prop14
     {
         Misc.LoopTiming timing = new Misc.LoopTiming(Settings.UpdateValuesPCms, Settings.defultCheckTimingInterval);
-        public Sharp7.S7Client Client;
+        public static Sharp7.S7Client Client;
 
         public Prop14(Sharp7.S7Client client)
         {

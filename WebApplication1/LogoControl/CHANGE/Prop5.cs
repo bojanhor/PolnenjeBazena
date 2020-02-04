@@ -10,10 +10,10 @@ namespace WebApplication1
     public class Prop5
     {
         Misc.LoopTiming timing = new Misc.LoopTiming(Settings.UpdateValuesPCms, Settings.defultCheckTimingInterval);
-        public Sharp7.S7Client Client { get; set; }
+        public static Sharp7.S7Client Client;
         PlcVars.Word watchdog5;
 
-        public Prop5(Sharp7.S7Client client, LogoControler logoControler)
+        public Prop5(Sharp7.S7Client client)
         {
             Client = client;
             watchdog5 = new PlcVars.Word(Client, "DW 5", "", "", false);

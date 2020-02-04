@@ -212,7 +212,7 @@ namespace WebApplication1
 
                     gb = new GControls.GroupBox(19, 5, 43, 70);
                                         
-                    timerUpDn = new GControls.DropDownListForTimer_1_30s("timeToUpPos",prop.CasPotovanja1.Value_string, 20,10,size, fontSize);
+                    timerUpDn = new GControls.DropDownListForTimer_1_30s("timeToUpPos",prop.CasPotovanja1.Value_string, 20,10,size, fontSize, true);
                     positionUp = new Image();
                     positionDn = new Image();
 
@@ -232,7 +232,7 @@ namespace WebApplication1
                     gb2 = new GControls.GroupBox(19, 51, 43, 70);
 
                    
-                    timerUpDn2 = new GControls.DropDownListForTimer_1_30s("timeToUpPos", prop.CasPotovanja2.Value_string, 20, 10, size, fontSize);
+                    timerUpDn2 = new GControls.DropDownListForTimer_1_30s("timeToUpPos", prop.CasPotovanja2.Value_string, 20, 10, size, fontSize, true);
                     positionUp2 = new Image();
                     positionDn2 = new Image();
 

@@ -70,8 +70,7 @@ namespace WebApplication1
 
                 GControls.DropDownListForTemperatureSelect_10_30 btnNastavi1;
                 GControls.DropDownListForTemperatureSelect_10_30 btnNastavi2;
-                GControls.DropDownListForTemperatureSelect_10_30 btnNastavi3;
-                GControls.DropDownListForDimmer btnNastaviObr;
+                GControls.DropDownListForTemperatureSelect_10_30 btnNastavi3;                
 
                 Label lbl_na1 = new Label(); // na
                 Label lbl_na2 = new Label(); // na
@@ -108,12 +107,20 @@ namespace WebApplication1
                 GControls.DropDown DropD_UpostevajZT;
                 GControls.GuiSeparator gs3;
 
-                GControls.SuperLabel Histereza;
-                GControls.DropDown DropD_Histereza;
+                GControls.SuperLabel VklopRocniNacin;
+                GControls.DropDownListForYesNoSelect VklopRocniNacin_DD;
 
+                GControls.SuperLabel VrednostRocniNacin;
+                GControls.DropDownListForDimmer VrednostRocniNacin_DD;
+
+                Helper.UpdatePanelFull up = new Helper.UpdatePanelFull("VentilacijaUPanel", Settings.UpdateValuesPCms);
+                                             
 
                 public VentSettingsContent()
                 {
+                    // Top
+
+
                     // Left
 
                     TitleLeft.Text = "TEMPERATURNI NIVOJI";
@@ -135,6 +142,7 @@ namespace WebApplication1
                     positionControls();
                     styleControls(FontSize);
                     addControls();
+                    Controls.Add(up);
                 }
 
                 // BothGroups
@@ -153,6 +161,7 @@ namespace WebApplication1
 
                 void initializeValues()
                 {
+                    InitializeValues_Top();
                     initializeValues_Left();
                     initializeValues_Right();
                 }
@@ -168,19 +177,43 @@ namespace WebApplication1
                     styleControls_Right(FontSize);
                 }
 
+                // Top group
+                void InitializeValues_Top()
+                {
+                    var prop = Val.logocontroler.Prop2;
+                    var sizeBtn = 4;
+                    var top = 7.1F;
+                    var fontsize = 1;
+
+                    VklopRocniNacin= new GControls.SuperLabel("Ročni Način:", top+2, 50);
+                    VklopRocniNacin_DD = new GControls.DropDownListForYesNoSelect("VklopRocniNacin", prop.Vklop_RocniNacin.Value, sizeBtn, 1, false);
+                    VrednostRocniNacin = new GControls.SuperLabel("Nastavi obrate na:", top+2, 66, 7, 5);
+                    VrednostRocniNacin_DD = new GControls.DropDownListForDimmer("VrednostRocniNacin", prop.Obrati_RocniNacin.Value_string, sizeBtn, 1, false);
+
+                    VklopRocniNacin.FontSize = fontsize;
+                    SetControlAbsolutePos(VklopRocniNacin_DD, top, 54);
+                    VrednostRocniNacin.FontSize = fontsize;
+                    SetControlAbsolutePos(VrednostRocniNacin_DD, top, 72);
+                }
+
+                void addAndPositionControlsTop()
+                {
+                    Controls.Add(VklopRocniNacin);                    
+                    up.Controls_Add(VklopRocniNacin_DD);
+                    Controls.Add(VrednostRocniNacin);
+                    up.Controls_Add(VrednostRocniNacin_DD);
+                }
+
                 // Left Group
 
                 void initializeValues_Left()
                 {
-
                     var tn = "Temperaturni nivo ";
 
                     lbl_tn1.Text = tn + "1:";
                     lbl_tn2.Text = tn + "2:";
                     lbl_tn3.Text = tn + "3:";
                     lbl_OmejevalnikObratov.Text = "Omejevalnik obratov";
-
-
 
                     lbl_na1.Text = "na";
                     lbl_na2.Text = "na";
@@ -190,53 +223,45 @@ namespace WebApplication1
 
                     var prop = Val.logocontroler.Prop2;
 
-                    btnNastavi1 = new GControls.DropDownListForTemperatureSelect_10_30("btnNastavi1", prop.TempNivo1.Value, s, FontSize);
+                    btnNastavi1 = new GControls.DropDownListForTemperatureSelect_10_30("btnNastavi1", prop.TempNivo1.Value, s, FontSize, false);
                     btnNastavi1.SaveClicked += BtnNastavi1_SaveClicked;
 
-                    btnNastavi2 = new GControls.DropDownListForTemperatureSelect_10_30("btnNastavi2", prop.TempNivo2.Value, s, FontSize);
+                    btnNastavi2 = new GControls.DropDownListForTemperatureSelect_10_30("btnNastavi2", prop.TempNivo2.Value, s, FontSize, false);
                     btnNastavi2.SaveClicked += BtnNastavi2_SaveClicked;
 
-                    btnNastavi3 = new GControls.DropDownListForTemperatureSelect_10_30("btnNastavi3", prop.TempNivo3.Value, s, FontSize);
+                    btnNastavi3 = new GControls.DropDownListForTemperatureSelect_10_30("btnNastavi3", prop.TempNivo3.Value, s, FontSize, false);
                     btnNastavi3.SaveClicked += BtnNastavi3_SaveClicked;
-
-                    btnNastaviObr = new GControls.DropDownListForDimmer("btnNastaviObr", prop.Obrati_Omejevalnik_L.Value_string, s, FontSize);
-                    btnNastaviObr.SaveClicked += BtnNastaviObr_SaveClicked;
-
-                    btnNastaviObr1 = new GControls.DropDownListForDimmer("btnNastaviObr1", prop.Obrati1.Value_string,  s, FontSize);
+                                       
+                    btnNastaviObr1 = new GControls.DropDownListForDimmer("btnNastaviObr1", prop.ObratiTemperatura1.Value_string,  s, FontSize, false);
                     btnNastaviObr1.SaveClicked += BtnNastaviObr1_SaveClicked;
 
-                    btnNastaviObr2 = new GControls.DropDownListForDimmer("btnNastaviObr2", prop.Obrati2.Value_string, s, FontSize);
+                    btnNastaviObr2 = new GControls.DropDownListForDimmer("btnNastaviObr2", prop.ObratiTemperatura2.Value_string, s, FontSize, false);
                     btnNastaviObr2.SaveClicked += BtnNastaviObr2_SaveClicked;
 
-                    btnNastaviObr3 = new GControls.DropDownListForDimmer("btnNastaviObr3", prop.Obrati3.Value_string, s, FontSize);
+                    btnNastaviObr3 = new GControls.DropDownListForDimmer("btnNastaviObr3", prop.ObratiTemperatura3.Value_string, s, FontSize, false);
                     btnNastaviObr3.SaveClicked += BtnNastaviObr3_SaveClicked;
 
 
                     gb_L = new GControls.GroupBox(17, 4, 45, 76);
 
-                    Controls.Add(gb_L);
+                    up.Controls_Add(gb_L);
                 }
 
                 private void BtnNastaviObr3_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop2.Obrati3.SyncWithPC(selectedItem.Value);
+                    Val.logocontroler.Prop2.ObratiTemperatura3.SyncWithPC(selectedItem.Value);
                 }
 
                 private void BtnNastaviObr2_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop2.Obrati2.SyncWithPC(selectedItem.Value);
+                    Val.logocontroler.Prop2.ObratiTemperatura2.SyncWithPC(selectedItem.Value);
                 }
 
                 private void BtnNastaviObr1_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop2.Obrati1.SyncWithPC(selectedItem.Value);
+                    Val.logocontroler.Prop2.ObratiTemperatura1.SyncWithPC(selectedItem.Value);
                 }
-
-                private void BtnNastaviObr_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
-                {
-                    Val.logocontroler.Prop2.Obrati_Omejevalnik_L.SyncWithPC(selectedItem.Value);
-                }
-
+                                
                 private void BtnNastavi3_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
                     Val.logocontroler.Prop2.TempNivo3.SyncWithPC(selectedItem.Value);
@@ -275,8 +300,7 @@ namespace WebApplication1
                     SetControlAbsolutePos(btnNastavi1, rowbuff, col2, btnHeight * ratio, btnHeight); rowbuff += rowspacing;
                     SetControlAbsolutePos(btnNastavi2, rowbuff, col2, btnHeight * ratio, btnHeight); rowbuff += rowspacing;
                     SetControlAbsolutePos(btnNastavi3, rowbuff, col2, btnHeight * ratio, btnHeight); rowbuff += rowspacing;
-                    SetControlAbsolutePos(btnNastaviObr, rowbuff, col2, btnHeight * ratio, btnHeight);
-                                       
+                                                           
                     rowbuff = row1 - btnOffset;
 
                     SetControlAbsolutePos(btnNastaviObr1, rowbuff, col5, btnHeight * ratio, btnHeight); rowbuff += rowspacing;
@@ -342,7 +366,7 @@ namespace WebApplication1
 
                     var prop = Val.logocontroler.Prop2;
 
-                    DropD_OmObratov = new GControls.DropDownListForYesNoSelect("DD_OmObr_yesno", prop.Obrati_Omejevalnik_R.Value, nextH, 50, sizeBtn, FontSize); nextH += DropD_OmObratov.Height + spacing * 3.5F;
+                    DropD_OmObratov = new GControls.DropDownListForYesNoSelect("DD_OmObr_yesno", prop.Nocn_Nacin.Value, nextH, 50, sizeBtn, FontSize, false); nextH += DropD_OmObratov.Height + spacing * 3.5F;
                     DropD_OmObratov.SaveClicked += DropD_OmObratov_SaveClicked;
 
                     //
@@ -354,17 +378,17 @@ namespace WebApplication1
                     var tmp = Lbl_OmejiObrate.Left + Lbl_OmejiObrate.Width + 2;
                     var tmp1 = tmp;
 
-                    DropD_OmejiObrate = new GControls.DropDownListForDimmer("DD_OmObr_prc", prop.OmejiObrateNa.Value_string, nextH, tmp, sizeBtn, FontSize); nextH += DropD_OmejiObrate.Height + spacing + 7;
+                    DropD_OmejiObrate = new GControls.DropDownListForDimmer("DD_OmObr_prc", prop.OmejiObrateNa.Value_string, nextH, tmp, sizeBtn, FontSize, false); nextH += DropD_OmejiObrate.Height + spacing + 7;
                     DropD_OmejiObrate.SaveClicked += DropD_OmejiObrate_SaveClicked;
 
                     Lbl_Med = new GControls.SuperLabel("med", nextH + 4, leftBorder + 25, 20, 10);
 
-                    DropD_Start = new GControls.DropDownListForHourSelect("DD_start", prop.OmObrMedA.Value_WeektimerForSiemensLogoFormat, nextH, tmp, sizeBtn, FontSize); tmp += 24;
+                    DropD_Start = new GControls.DropDownListForHourSelect("DD_start", prop.OmObrMedA.Value_WeektimerForSiemensLogoFormat, nextH, tmp, sizeBtn, FontSize, false); tmp += 24;
                     DropD_Start.SaveClicked += DropD_Start_SaveClicked;
 
                     Lbl_In = new GControls.SuperLabel("in", nextH + 4, tmp, 20, 10); tmp += 5;
 
-                    DropD_Stop = new GControls.DropDownListForHourSelect("DD_stop", prop.OmObrMedB.Value_WeektimerForSiemensLogoFormat, nextH, tmp, sizeBtn, FontSize); nextH += DropD_Stop.Height + spacing * 3.5F;
+                    DropD_Stop = new GControls.DropDownListForHourSelect("DD_stop", prop.OmObrMedB.Value_WeektimerForSiemensLogoFormat, nextH, tmp, sizeBtn, FontSize, false); nextH += DropD_Stop.Height + spacing * 3.5F;
                     DropD_Stop.SaveClicked += DropD_Stop_SaveClicked;
 
                     //
@@ -373,27 +397,17 @@ namespace WebApplication1
 
                     Lbl_UpostevajZT = new GControls.SuperLabel("UPOŠTEVAJ ZUNANJO TEMPERATURO:", nextH + 2, leftBorder, 22, 10);
 
-                    DropD_UpostevajZT = new GControls.DropDownListForYesNoSelect("DD_OutTempReg", prop.UpostevajZT.Value, nextH + 2, tmp1, sizeBtn, FontSize); nextH += DropD_UpostevajZT.Height + spacing * 4;
+                    DropD_UpostevajZT = new GControls.DropDownListForYesNoSelect("DD_OutTempReg", prop.UpostevajZT.Value, nextH + 2, tmp1, sizeBtn, FontSize, false); nextH += DropD_UpostevajZT.Height + spacing * 4;
                     DropD_UpostevajZT.SaveClicked += DropD_UpostevajZT_SaveClicked;
 
                     //
                     gs3 = new GControls.GuiSeparator(nextH, leftBorder, 90, guiSepH); nextH += gs3.Height + spacing - 2;
                     //
-
-                    Histereza = new GControls.SuperLabel("HISTEREZA:", nextH + 4, leftBorder, 20, 10);
-
-                    DropD_Histereza = new GControls.DropDownListForHisteresis("DD_Hist", prop.Histereza.Value_string, nextH, tmp1, sizeBtn, FontSize); nextH += DropD_Histereza.Height + spacing;
-                    DropD_Histereza.SaveClicked += DropD_Histereza_SaveClicked;
-
+                    
                     gb_R = new GControls.GroupBox(17, 51, 45, 76);
-                    Controls.Add(gb_R);
+                    up.Controls_Add(gb_R);
                 }
-
-                private void DropD_Histereza_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
-                {
-                    Val.logocontroler.Prop2.Histereza.SyncWithPC(selectedItem.Value);
-                }
-
+                                
                 private void DropD_UpostevajZT_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
                     Val.logocontroler.Prop2.UpostevajZT.SyncWithPC(selectedItem.Value);
@@ -411,12 +425,12 @@ namespace WebApplication1
 
                 private void DropD_OmejiObrate_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop2.Obrati_Omejevalnik_R.SyncWithPC(selectedItem.Value);
+                    Val.logocontroler.Prop2.OmejiObrateNa.SyncWithPC(selectedItem.Value);
                 }
 
                 private void DropD_OmObratov_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop2.Obrati1.SyncWithPC(selectedItem.Value);
+                   
                 }
 
                 void styleControls_Right(float FontSize)
@@ -425,8 +439,7 @@ namespace WebApplication1
                     Lbl_OmejiObrate.FontSize = FontSize;
                     Lbl_Med.FontSize = FontSize;
                     Lbl_In.FontSize = FontSize;
-                    Lbl_UpostevajZT.FontSize = FontSize;
-                    Histereza.FontSize = FontSize;
+                    Lbl_UpostevajZT.FontSize = FontSize;                    
                 }
 
                 // Both Groups
@@ -439,7 +452,9 @@ namespace WebApplication1
 
                 void addControls()
                 {
+                    addAndPositionControlsTop();
 
+                    //
                     gb_L.Controls.Add(FormatTitle(TitleLeft));
 
                     gb_L.Controls.Add(lbl_tn1);
@@ -456,8 +471,7 @@ namespace WebApplication1
 
                     gb_L.Controls.Add(btnNastavi1);
                     gb_L.Controls.Add(btnNastavi2);
-                    gb_L.Controls.Add(btnNastavi3);
-                    gb_L.Controls.Add(btnNastaviObr);
+                    gb_L.Controls.Add(btnNastavi3);                   
 
                     gb_L.Controls.Add(btnNastaviObr1);
                     gb_L.Controls.Add(btnNastaviObr2);
@@ -484,11 +498,7 @@ namespace WebApplication1
                     gb_R.Controls.Add(Lbl_UpostevajZT);
                     gb_R.Controls.Add(DropD_UpostevajZT);
                     gb_R.Controls.Add(gs3);
-
-                    gb_R.Controls.Add(Histereza);
-                    gb_R.Controls.Add(DropD_Histereza);
-
-
+                                                           
                 }
 
             }

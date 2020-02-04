@@ -163,7 +163,7 @@ namespace WebApplication1.Pages
 
         private void WritelineDebug()
         {            
-            Val.guiController.PageAdvanced_.TextBoxDebug.Text = Val.message.GetMessage(); 
+            Val.guiController.PageAdvanced_.TextBoxDebug.Text = Val.Message.GetMessage(); 
         }
                
     }

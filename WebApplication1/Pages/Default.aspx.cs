@@ -36,7 +36,7 @@ namespace WebApplication1.Pages
                
         void CreateInitializePanel()
         {
-
+            // vreme
             Timer2.Interval = Settings.UpdateValuesPCms * 5;
             TemperaturePanel.ContentTemplateContainer.Controls.Add(
             Val.guiController.PageDefault_.divWeather);

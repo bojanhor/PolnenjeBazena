@@ -3612,10 +3612,10 @@ namespace Sharp7
             switch (Error)
             {
                 case S7Consts.err_UnspecifiedHigherLayer: return "Unspecified error in higher layer of communication. Please contact your SW supplier"; // added later
-                case S7Consts.err_cantConnect: return "Connection can not be established. Please check connection cables and settings.";
-                case S7Consts.err_WriteHigherLayer: return "Can not write data from PLC. Error ocurded in higher layer of communication. Please contact your SW supplier.";          // added later by Humar Sistemi
-                case S7Consts.err_ReadHigherLayer: return "Can not read data from PLC. Error ocurded in higher layer of communication. Please contact your SW supplier.";            // added later by Humar Sistemi
-                case S7Consts.err_Write: return "Can not write data from PLC";                               // added later by Humar Sistemi
+                case S7Consts.err_cantConnect: return "Connection can not be established. Please check connection cables and settings";
+                case S7Consts.err_WriteHigherLayer: return "Can not write data from PLC. Error ocurded in higher layer of communication. Please contact your SW supplier";          // added later by Humar Sistemi
+                case S7Consts.err_ReadHigherLayer: return "Can not read data from PLC. Error ocurded in higher layer of communication. Please contact your SW supplier";            // added later by Humar Sistemi
+                case S7Consts.err_Write: return "Can not write data to PLC";                               // added later by Humar Sistemi
                 case S7Consts.err_Read: return "Can not read data from PLC";                                 // added later by Humar Sistemi
                 case S7Consts.err_watchdogDoesntChange: return "Watchdog error - Watchdog does not change"; // added later by Humar Sistemi
                 case S7Consts.err_typeError: return "Type error - unsupported type wanted";                  // added later by Humar Sistemi

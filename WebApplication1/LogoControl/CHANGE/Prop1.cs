@@ -10,9 +10,8 @@ namespace WebApplication1
     public class Prop1
     {
         // Razsvetljava
-
-        Misc.LoopTiming timing = new Misc.LoopTiming(Settings.UpdateValuesPCms, Settings.defultCheckTimingInterval);
-        public Sharp7.S7Client Client;
+        
+        public static Sharp7.S7Client Client;
 
         static int LucIconsTableLength = XmlController.GetHowManyLucIcons() + 1;
 
@@ -20,8 +19,9 @@ namespace WebApplication1
         public PlcVars.Bit[] LucStatus_WriteToPLC = new PlcVars.Bit[LucIconsTableLength];
         public PlcVars.Bit UgasniVseLuci;
 
-        public PlcVars.WordForCheckBox[] VklopUrnika1 = new PlcVars.WordForCheckBox[LucIconsTableLength];
-        public PlcVars.WordForCheckBox[] VklopUrnika2 = new PlcVars.WordForCheckBox[LucIconsTableLength];
+        public PlcVars.Word[] VklopUrnika = new PlcVars.Word[LucIconsTableLength];
+        public PlcVars.Word IzklopKoJeDan;
+
         public PlcVars.TimeSet[] VklopConadop = new PlcVars.TimeSet[LucIconsTableLength];
         public PlcVars.TimeSet[] VklopConapop = new PlcVars.TimeSet[LucIconsTableLength];
         public PlcVars.TimeSet[] IzklopConadop = new PlcVars.TimeSet[LucIconsTableLength];
@@ -31,33 +31,48 @@ namespace WebApplication1
 
         public PlcVars.TimeSet LogoClock;
 
+        public PlcVars.TimeSet Vzhod_Read;
+        public PlcVars.TimeSet Zahod_Read;
+        public PlcVars.TimeSet VzhodOffset_Write;
+        public PlcVars.TimeSet ZahodOffset_Write;
+        public PlcVars.Word DanNoc_Vrednost_An;
+        public PlcVars.Bit DanNoc_Vrednost_Dig;
+        public PlcVars.Word DayLightPercentOn;
+        public PlcVars.Word DayLightPercentOff;
 
-        public Prop1(Sharp7.S7Client client, LogoControler logoControler)
+        public Prop1(Sharp7.S7Client client)
         {
             Client = client;
-            
-            int inc = 10;
 
-            for (int i = 1; i < LucStatus_ReadToPC.Length; i++)
+            LogoClock = new PlcVars.TimeSet(Client, "VW4", false);
+
+            const int inc = 10;
+            int vklopUrnikabuff = 210;
+
+            IzklopKoJeDan = new PlcVars.Word(Client, "VW744", "", "", true);
+
+            for (int i = 1; i < LucIconsTableLength; i++)
             {
                 LucStatus_ReadToPC[i] = new PlcVars.Bit(Client, XmlController.GetLucAddress_ReadToPC(i),"", "", false);
                 LucStatus_WriteToPLC[i] = new PlcVars.Bit(Client, XmlController.GetLucAddress_WriteToPLC(i), "", "", true);
-                
-                VklopConadop[i] = new PlcVars.TimeSet(Client, "VW550", true);  // TODO vpiši adress
-                VklopConapop[i] = new PlcVars.TimeSet(Client, "VW554", true);  // TODO vpiši adress
-                IzklopConadop[i] = new PlcVars.TimeSet(Client, "VW552", true); // TODO vpiši adress                
-                IzklopConapop[i] = new PlcVars.TimeSet(Client, "VW556", true); // TODO vpiši adress
-                VklopUrnika1[i] = new PlcVars.WordForCheckBox(Client, "", true); // TODO vpiši adress
-                VklopUrnika2[i] = new PlcVars.WordForCheckBox(Client, "", true); // TODO vpiši adress  
-               
-                
+                     
+                VklopUrnika[i] = new PlcVars.Word(Client, "VW" + (vklopUrnikabuff), "", "", true);
+                vklopUrnikabuff += inc;
 
-               
+            }
 
+            var buffCona = 16;
+            var buffConaIzkInc = 2;
+            var buffConaPopInc = 100;
+            for (int i = 1; i < LucStatus_ReadToPC.Length; i++)
+            {
+                VklopConadop[i] = new PlcVars.TimeSet(Client, "VW" + buffCona, true); 
+                IzklopConadop[i] = new PlcVars.TimeSet(Client, "VW" + (buffCona + buffConaIzkInc), true); 
 
+                VklopConapop[i] = new PlcVars.TimeSet(Client, "VW" + (buffCona + buffConaPopInc), true); 
+                IzklopConapop[i] = new PlcVars.TimeSet(Client, "VW" + (buffCona + buffConaPopInc + buffConaIzkInc), true);
 
-                LogoClock = new PlcVars.TimeSet(Client, "", false); // TODO vpiši address
-
+                buffCona += 10;
             }
 
             int buffDimmD = 310, buffDimmP = 314;
@@ -70,9 +85,174 @@ namespace WebApplication1
 
             UgasniVseLuci = new PlcVars.Bit(Client, "bit at 700.0", "", "", true);
 
-            
-                       
+            Vzhod_Read = new PlcVars.TimeSet(Client, "VW712", false);
+            Zahod_Read = new PlcVars.TimeSet(Client, "VW714", false);
+            VzhodOffset_Write = new PlcVars.TimeSet(Client, "VW716", false);
+            ZahodOffset_Write = new PlcVars.TimeSet(Client, "VW718", false);
+            DanNoc_Vrednost_An = new PlcVars.Word(Client, "VW736", "", "%", false);
+            DanNoc_Vrednost_Dig = new PlcVars.Bit(Client, "bit at 740", "Dan", "Noč", false);
+            DayLightPercentOn = new PlcVars.Word(Client, "VW724", "", "%", true);
+            DayLightPercentOff = new PlcVars.Word(Client, "VW728", "", "%", true);
+
         }
+
+
+        //
+        public bool GetIzklopiKoJeDan(int id)
+        {
+            try
+            {
+                if (id <= 0 || id > 16 || IzklopKoJeDan.Value == null)
+                {
+                    return false;
+                }
+
+                char[] b = getBitsFromWord((short)IzklopKoJeDan.Value);
+                return (b[id - 1]) != '0' ? true : false;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Internal error inside GetIzklopiKoJeDan(int id) method: " + ex.Message);
+            }
+            
+        }
+
+        public void SetIzklopKoJeDan(int id, bool value)
+        {
+            try
+            {
+                if (id <= 0 || id > 16 || IzklopKoJeDan.Value == null)
+                {
+                    return;
+                }
+
+                var buff = IzklopKoJeDan.Value ?? 0;
+                var bits = getBitsFromWord(buff);
+                bits[id - 1] = value ? '1' : '0';
                 
+                IzklopKoJeDan.Value = getWordFromBits(bits); 
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Internal error inside SetIzklopKoJeDan(int id, bool value) method: " + ex.Message);
+            }
+            
+
+
+        }
+
+        char[] getBitsFromWord(short value)
+        {
+            try
+            {                
+                var buff = Convert.ToInt16(value);
+                string s = Convert.ToString(buff, 2);
+                char[] b;
+                b = s.ToCharArray();
+                b = b.Reverse().ToArray();
+                char[] c = new char[16];
+                for (int i = 0; i < c.Length; i++)
+                {
+                    if (b.Length > i)
+                    {
+                        c[i] = b[i];
+                    }
+                    else
+                    {
+                        c[i] = '0';
+                    }
+                    
+                }
+                return c;//Reverse().ToArray();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Internal error inside getBitsFromWord(short value) method: " + ex.Message);
+            }
+            
+        }
+
+        short getWordFromBits(char[] bitArray)
+        {
+            try
+            {
+                short buff = 0;
+                double m;
+                for (int i = 0; i < bitArray.Length; i++)
+                {
+                    if (bitArray[i] != '0')
+                    {
+                        m = Math.Pow(2, i);
+                        buff += Convert.ToInt16(m);
+                    }
+                }
+                return buff;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Internal error inside getWordFromBits(char[] bitArray) method: " + ex.Message);
+            }
+            
+        }
+
+        public void GetVklopUrnika(out bool Dop, out bool Pop, int id)
+        {
+            //0 - Disable both;   
+            //1 - Enable 1  Disable 2;   
+            //2 - Enable both;   
+            //3 - Disable 1  Enable 2; 
+
+            var val = VklopUrnika[id].Value;
+
+            if (val == 1)
+            {
+                Dop = true;  Pop = false;
+            }
+
+            else if (val == 2)
+            {
+                Dop = true;  Pop = true;
+            }
+
+            else if (val == 3)
+            {
+                Dop = false;  Pop = true; // 
+            }
+
+            else
+            {
+                Dop = false;  Pop = false;
+            }
+        }
+
+        public void SetVklopUrnika(int id, bool value_Dop, bool value_Pop)
+        {
+            //0 - Disable both;   
+            //1 - Enable 1  Disable 2;   
+            //2 - Enable both;   
+            //3 - Disable 1  Enable 2; 
+                      
+            if (value_Dop && !value_Pop)
+            {
+                VklopUrnika[id].Value = 1;
+            }
+
+            else if (value_Dop && value_Pop)
+            {
+                VklopUrnika[id].Value = 2;
+            }
+
+            else if (!value_Dop && value_Pop)
+            {
+                VklopUrnika[id].Value = 3;
+            }
+
+            else
+            {
+                VklopUrnika[id].Value = 0;
+            }
+                        
+        }
+
     }
 }

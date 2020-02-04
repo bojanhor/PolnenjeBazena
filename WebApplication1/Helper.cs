@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
@@ -33,7 +34,7 @@ namespace WebApplication1
 
         public static void Refresh()
         {
-            Refresh(HttpContext.Current.Session , (Page)HttpContext.Current.Handler);
+            Refresh(HttpContext.Current.Session , GetCurrentPage());
         }
 
         public static void RedirectBack(System.Web.SessionState.HttpSessionState session, Page thisPage)
@@ -43,6 +44,11 @@ namespace WebApplication1
 
             Redirect(pageHistory.getPreviousPage(), thisPage);
 
+        }
+
+        public static Page GetCurrentPage()
+        {
+            return (Page)HttpContext.Current.Handler;
         }
 
         public static void EveryPageProtocol(string FriendlyPageNamePage, Page _thisPage, System.Web.SessionState.HttpSessionState session, HtmlGenericControl TemplateClassID)
@@ -229,9 +235,32 @@ namespace WebApplication1
             }
 
             new public void Add(ListItem item)
-            {
+            {         
                 base.Add(item);                
-            }            
+            }
+
+            public static int? GetValueFromText_int(string Text)
+            {
+                if (Text != null && Text != PropComm.NA)
+                {
+                    return Convert.ToInt32(GetNumbers(Text));
+                }
+                return null;
+            }
+
+            public static short? GetValueFromText_short(string Text)
+            {
+                if (Text != null && Text != PropComm.NA)
+                {
+                    return Convert.ToInt16(GetNumbers(Text));
+                }
+                return null;
+            }
+
+            static string GetNumbers(string input)
+            {
+                return new string(input.Where(c => char.IsDigit(c)).ToArray());
+            }
         }
 
         public class TimeSelectorDatasource : Datasource
@@ -288,12 +317,14 @@ namespace WebApplication1
                     CreateRow(buff + "%", buff.ToString());
                     buff += increment;
                 }
-                
+                                                
             }
 
             ListItem CreateRow(string text, string value)
             {
-                ListItem r = new ListItem(text, value);
+                ListItem r = new ListItem();
+                r.Text = text;
+                r.Value = value;
                 Add(r);
                 return r;
             }
@@ -445,8 +476,8 @@ namespace WebApplication1
             public void GetDataSource()
             {        
                 CreateRow(PropComm.NA, false);
-                CreateRow("DA", false);
-                CreateRow("NE", true);                
+                CreateRow("DA", true);
+                CreateRow("NE", false);                
 
             }
 
@@ -458,11 +489,40 @@ namespace WebApplication1
             }
         }
 
+        public class UpdatePanelFull : UpdatePanel
+        {           
+            public Timer Timer;
+            AsyncPostBackTrigger ap;
+
+            public UpdatePanelFull(string ID, int intervalUpdate)
+            {                
+                Timer = new Timer();
+                ap = new AsyncPostBackTrigger();
+
+                Timer.Interval = intervalUpdate;
+                Timer.ID = ID + "tmr";
+                ap.ControlID = Timer.ID;
+                ContentTemplateContainer.Controls.Add(Timer);
+                Triggers.Add(ap);
+            }
+
+            public void Controls_Add(Control c)
+            {
+                this.ContentTemplateContainer.Controls.Add(c);
+            }
+            
+        }
+
         public static string FloatToStringWeb(float f, string postFix)
         {
             return f.ToString("0.##").Replace(",", ".") + postFix;
         }
-        
+
+        public static string FloatToStringWeb(double f, string postFix)
+        {
+            return f.ToString("0.##").Replace(",", ".") + postFix;
+        }
+
         public class Initialiser
         {
             Misc.SmartThread InitialiseClass;

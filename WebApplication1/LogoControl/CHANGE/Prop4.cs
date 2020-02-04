@@ -10,7 +10,7 @@ namespace WebApplication1
     public class Prop4
     {
         Misc.LoopTiming timing = new Misc.LoopTiming(Settings.UpdateValuesPCms, Settings.defultCheckTimingInterval);
-        public Sharp7.S7Client Client { get; set; }
+        public static Sharp7.S7Client Client;
         PlcVars.Word watchdog4;
 
         public PlcVars.Bit VrataGorPulse;
@@ -21,7 +21,7 @@ namespace WebApplication1
         public PlcVars.Bit KoncnoStikaloGor;
         public PlcVars.Bit KoncnoStikaloDol;
 
-        public Prop4(Sharp7.S7Client client, LogoControler logoControler)
+        public Prop4(Sharp7.S7Client client)
         {
             Client = client;
             watchdog4 = new PlcVars.Word(Client, "", "", "", false); // TODO adress

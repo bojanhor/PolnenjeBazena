@@ -9,7 +9,7 @@ namespace WebApplication1
 {
     public partial class LogoControler
     {
-
+        private int[] forceRefresh = new int[Settings.Devices + 1];
 
         public int WatchdogRetries = 5;
 
@@ -62,15 +62,15 @@ namespace WebApplication1
                 };
 
                 LOGO[i].SetConnectionParams(LOGOConnection[i].IpAddress.ToString(), LOGOConnection[i].LocalTSAP_asushort, LOGOConnection[i].RemoteTSAP_asushort);
-
+                forceRefresh[i] = 0;
             }
 
 
-            Prop1 = new Prop1(LOGO[1], this);
-            Prop2 = new Prop2(LOGO[2], this);
-            Prop3 = new Prop3(LOGO[3], this);
-            Prop4 = new Prop4(LOGO[4], this);
-            Prop5 = new Prop5(LOGO[5], this);
+            Prop1 = new Prop1(LOGO[1]);
+            Prop2 = new Prop2(LOGO[2]);
+            Prop3 = new Prop3(LOGO[3]);
+            Prop4 = new Prop4(LOGO[4]);
+            Prop5 = new Prop5(LOGO[5]);
 
 
 
@@ -81,7 +81,7 @@ namespace WebApplication1
          void StartBackgroundTasks()
         {
             Watchdog_PC = new Thread(() => { Watchdog_PC_DoWork(null, null); });
-
+            
 
 
             for (int i = 1; i < BackgroundWorker.Length - 1; i++)
@@ -175,13 +175,16 @@ namespace WebApplication1
 
 
 
-
-
             try
             {
                 time1 = DateTime.Now;
                 while (true)
                 {
+
+                    if (forceRefresh[device] > 0) // force refresh values with minimum delay - int value represents how many cycles value will be forced to refresh
+                    {
+                        forceRefresh[device] -= 1;
+                    }                    
 
                     try
                     {
@@ -257,6 +260,7 @@ namespace WebApplication1
                     {
                         if (olderr != 0)
                         {
+                            WL("Connection error", device);
                             time2 = DateTime.Now.AddMilliseconds(3000);
                             LOGOConnection[device].connectionStatusLOGO = (int)Connection.Status.Connecting;
 
@@ -294,7 +298,12 @@ namespace WebApplication1
                                 while (DateTime.Now < time1.AddMilliseconds(RWcyc))
                                 {
                                     if (IfDisconnectProcedure(device)) { return; }
-                                    Thread.Sleep(10);
+                                    Thread.Sleep(Settings.defultCheckTimingInterval);
+                                    if (forceRefresh[device] > 0)
+                                    {
+                                        break;
+                                    }
+                                    
                                 }
                                 failCntr = 0;
                             }
@@ -398,7 +407,6 @@ namespace WebApplication1
             else { return false; }
         }
 
-
         void Watchdog_PC_DoWork(object sender, EventArgs e)
         {
 
@@ -477,8 +485,6 @@ namespace WebApplication1
             }
         }
 
-
-
         public void DisconnectAsync(int device)
         {
 
@@ -488,6 +494,11 @@ namespace WebApplication1
 
 
 
+        }
+
+        public void ForceRefreshValuesFromPLC(int device)
+        {
+            forceRefresh[device] = 2; // force refresh values with minimum delay - int value represents how many cycles value will be forced to refresh
         }
 
         /// <summary>        
@@ -540,7 +551,7 @@ namespace WebApplication1
                     System.Diagnostics.Debug.WriteLine(msg);
                 }
 
-                Val.message.Setmessage(msg); // post to website
+                Val.Message.Setmessage(msg); // post to website
             }
             catch (Exception ex)
             {

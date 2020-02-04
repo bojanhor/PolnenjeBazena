@@ -18,6 +18,8 @@ namespace WebApplication1
             public System.Web.SessionState.HttpSessionState Session;
             public static string ViewStateElement_CurrentLuciSettingsShown = "CurrentLuciSettingsShown";
 
+            public Helper.UpdatePanelFull updatePanel;
+
             public HtmlGenericControl divStala;
             Image Stala;           
 
@@ -28,8 +30,7 @@ namespace WebApplication1
 
             public HtmlGenericControl divBtns;
             ImageButton ugasniVseLuci;
-
-            GControls.OnOffButton ugasniPodnevi;
+          
             public LuciSettingsMenu LuciSettings;
 
             string UpdatePanelId_Luci = "LuciPanel";
@@ -107,6 +108,8 @@ namespace WebApplication1
             {
                 try
                 {
+                    updatePanel = new Helper.UpdatePanelFull("RazsvetljavaUP", Settings.UpdateValuesPCms);
+                    
                     bool hasPrevious = true;
                     bool hasNext = true;
                     int lucIconsCnt = XmlController.GetHowManyLucIcons();
@@ -124,7 +127,7 @@ namespace WebApplication1
 
                     if (currentShown > 0)
                     {
-                        LuciSettings = new LuciSettingsMenu(currentShown, Showname, hasNext, hasPrevious, true);
+                        LuciSettings = new LuciSettingsMenu(currentShown, Showname, hasNext, hasPrevious, true, updatePanel.Timer);
 
                         LuciSettings.exitButton.Click += ExitButton_Click;
                         if (LuciSettings.PrevButton != null)
@@ -135,11 +138,11 @@ namespace WebApplication1
                         {
                             LuciSettings.nextButton.Click += NextButton_Click;
                         }
-                        divLuciSettings.Controls.Add(LuciSettings);
+                      
+                        updatePanel.Controls_Add(LuciSettings);
+                        divLuciSettings.Controls.Add(updatePanel);
 
                     }
-                    
-
                     
                 }
                 catch (Exception ex)
@@ -234,19 +237,11 @@ namespace WebApplication1
                     };
 
                     divBtns.Controls.Add(ugasniVseLuci);
-
-                    //
-                    ugasniPodnevi = new GControls.PaddedOnOffButton("Ugasni podnevi", 1, false, new Helper.Position(20, 0, 100), GControls.OnOffButton.Type.WithText);
-
-                    //
-
-
-                    divBtns.Controls.Add(ugasniPodnevi);
+                                                        
                 }
                 catch (Exception ex)
                 {
-
-                    throw new Exception("Error inside UgasniVseLuci_Click() method. Error info: " + ex.Message);
+                    throw new Exception("Error inside AddBtns() method. Error info: " + ex.Message);
                 }
                 
             }
@@ -276,7 +271,7 @@ namespace WebApplication1
             {
                 public static LuciSubmenuContent content;
 
-                public LuciSettingsMenu(int id, string Name_, bool hasNext, bool hasPreious, bool hasExit) 
+                public LuciSettingsMenu(int id, string Name_, bool hasNext, bool hasPreious, bool hasExit, Timer UpdateTimer) 
                     :base(id, Name_, hasNext, hasPreious, hasExit, getContent(id))
                 {
                     
@@ -311,6 +306,8 @@ namespace WebApplication1
                 GControls.GroupBox Groupbox1;
                 GControls.GroupBox Groupbox2;
 
+                GControls.OnOffButton IzklopKoJeDan;
+
                 readonly int myID;
 
                 Label Cona = new Label();
@@ -329,15 +326,37 @@ namespace WebApplication1
                                
                 public LuciSubmenuContent(int id)
                 {
+                    Groupbox1 = new GControls.GroupBox(19, 10, 67, 35);
+                    Groupbox2 = new GControls.GroupBox(57, 10, 67, 35);
+
+                    var prop = Val.logocontroler.Prop1;
+
+                    IzklopKoJeDan = new GControls.OnOffButton("Izklop Podnevi", id, prop.GetIzklopiKoJeDan(id), new Helper.Position(18, 78, 18), GControls.OnOffButton.Type.WithText);
+
+                    var topOffsetLabel = 10;
+
                     try
                     {
-                        hasDimmer = XmlController.GetHasDimmer(id + 1);
-                        var prop = Val.logocontroler.Prop1;
+                        hasDimmer = XmlController.GetHasDimmer(id);
+                        
 
-                        if (hasDimmer)
+                        if (hasDimmer && prop.DimmerDop[id] != null)
                         {
-                            DimmerDop = new GControls.DropDownListForDimmer("DD_dimAm", prop.DimmerDop[id].Value_string, widthbtn, fontSize);
-                            DimmerPop = new GControls.DropDownListForDimmer("DD_dimPm", prop.DimmerPop[id].Value_string, widthbtn, fontSize);
+                            DimmerDop = new GControls.DropDownListForDimmer("DD_dimAm", prop.DimmerDop[id].Value_string, widthbtn, fontSize, false);
+                            DimmerPop = new GControls.DropDownListForDimmer("DD_dimPm", prop.DimmerPop[id].Value_string, widthbtn, fontSize, false);
+
+                            SetControlAbsolutePos(DimmerDop, tr2, lc1, widthbtn);
+                            SetControlAbsolutePos(DimmerPop, tr2, lc1, widthbtn);
+
+                            Groupbox1.Controls.Add(DimmerDop);
+                            Groupbox1.Controls.Add(CreateLabelTitle_OnLeft("Svetilnost:", DimmerDop, topOffsetLabel, 9.5F, 10, 1.1F, true, Settings.LightBlackColor));
+
+                            Groupbox2.Controls.Add(DimmerPop);
+                            Groupbox2.Controls.Add(CreateLabelTitle_OnLeft("Svetilnost:", DimmerPop, topOffsetLabel, 9.5F, 10, 1.1F, true, Settings.LightBlackColor));
+
+                            DimmerDop.SaveClicked += DimmerDop_SaveClicked;
+                            DimmerPop.SaveClicked += DimmerPop_SaveClicked;
+
                         }
 
                         Dopoldne.Text = "Dopoldne:";
@@ -346,155 +365,195 @@ namespace WebApplication1
                         SetFontProperties_vw(Dopoldne, 1.5F, true);
                         SetFontProperties_vw(Popoldne, 1.5F, true);
 
-                        SetControlAbsolutePos(Dopoldne, 2, 1);
-                        SetControlAbsolutePos(Popoldne, 2, 1);
+                        SetControlAbsolutePos(Dopoldne, 3, 2);
+                        SetControlAbsolutePos(Popoldne, 3, 2);
 
                         Dopoldne.Style.Add(HtmlTextWriterStyle.Color, Settings.LightBlackColor);
                         Popoldne.Style.Add(HtmlTextWriterStyle.Color, Settings.LightBlackColor);
 
-                        myID = id;
-
-                        Groupbox1 = new GControls.GroupBox(19, 10, 80, 35);
-                        Groupbox2 = new GControls.GroupBox(57, 10, 80, 35);
+                        myID = id;                        
 
                         var rce = new Helper.TimeSelectorDatasource();
+                        bool hasWeekTmr;
 
-                        Vklop1 = new GControls.DropDownListForHourSelect("DD_on1", prop.VklopConadop[id].Value_WeektimerForSiemensLogoFormat, widthbtn, fontSize)
+                        try
                         {
-                            Name = "VKLOP DOPOLDNE"
-                        };
+                            hasWeekTmr = XmlController.GetHasWeekTimer(id);
 
-                        Vklop2 = new GControls.DropDownListForHourSelect("DD_on2", prop.VklopConapop[id].Value_WeektimerForSiemensLogoFormat, widthbtn, fontSize)
+                            if (hasWeekTmr)
+                            {
+                                Vklop1 = new GControls.DropDownListForHourSelect("DD_on1", prop.VklopConadop[id].Value_WeektimerForSiemensLogoFormat, widthbtn, fontSize, false)
+                                {
+                                    Name = "VKLOP DOPOLDNE"
+                                };
+
+                                Vklop2 = new GControls.DropDownListForHourSelect("DD_on2", prop.VklopConapop[id].Value_WeektimerForSiemensLogoFormat, widthbtn, fontSize, false)
+                                {
+                                    Name = "VKLOP POPOLDNE"
+                                };
+
+                                Izklop1 = new GControls.DropDownListForHourSelect("DD_off1", prop.IzklopConadop[id].Value_WeektimerForSiemensLogoFormat, widthbtn, fontSize, false)
+                                {
+                                    Name = "IZKLOP DOPOLDNE"
+                                };
+
+                                Izklop2 = new GControls.DropDownListForHourSelect("DD_off2", prop.IzklopConapop[id].Value_WeektimerForSiemensLogoFormat, widthbtn, fontSize, false)
+                                {
+                                    Name = "IZKLOP POPOLDNE"
+                                };
+                            }                           
+
+                        }
+                        catch (Exception ex)
                         {
-                            Name = "VKLOP POPOLDNE"
-                        };
-
-                        Izklop1 = new GControls.DropDownListForHourSelect("DD_off1", prop.IzklopConadop[id].Value_WeektimerForSiemensLogoFormat, widthbtn, fontSize)
+                            throw new Exception ("Error initialising dropdowns for hour select. Error info: " + ex.Message);
+                        }
+                                                
+                        if (hasWeekTmr)
                         {
-                            Name = "IZKLOP DOPOLDNE"
-                        };
 
-                        Izklop2 = new GControls.DropDownListForHourSelect("DD_off2", prop.IzklopConapop[id].Value_WeektimerForSiemensLogoFormat, widthbtn, fontSize)
-                        {
-                            Name = "IZKLOP POPOLDNE"
-                        };
+                            VklopUrnika1 = new GControls.PaddedOnOffButton(
+                           "Vklop Urnika Dop", myID + 10, GetVklopUrnika_Dop(id), new Helper.Position(tr1 - 9, lc3, widthbtn*6), GControls.OnOffButton.Type.WithText);
 
-                        VklopUrnika1 = new GControls.PaddedOnOffButton(
-                            "Vklop Urnika", myID + 10, false, new Helper.Position(tr1 - 9, lc3, widthbtn), GuiController.GControls.OnOffButton.Type.WithText);
-                        VklopUrnika2 = new GControls.PaddedOnOffButton(
-                            "Vklop Urnika", myID + 20, false, new Helper.Position(tr1 - 9, lc3, widthbtn), GuiController.GControls.OnOffButton.Type.WithText);
+                            VklopUrnika2 = new GControls.PaddedOnOffButton(
+                           "Vklop Urnika Pop", myID + 10, GetVklopUrnika_Pop(id), new Helper.Position(tr1 - 9, lc3, widthbtn * 6), GControls.OnOffButton.Type.WithText);
 
-                        if (hasDimmer)
-                        {
-                            DimmerDop.SaveClicked += DimmerDop_SaveClicked;
-                            DimmerPop.SaveClicked += DimmerPop_SaveClicked;
+                            SetControlAbsolutePos(Vklop1, tr1, lc1, widthdd);
+                            SetControlAbsolutePos(Vklop2, tr1, lc1, widthdd);
+                            SetControlAbsolutePos(Izklop1, tr1, lc2, widthdd);
+                            SetControlAbsolutePos(Izklop2, tr1, lc2, widthdd);
+
+                            VklopUrnika1.button.Click += VklopUrnika1_Button_Click;
+                            VklopUrnika2.button.Click += VklopUrnika2Button_Click;
+                            Groupbox1.Controls.Add(Vklop1);
+                            Groupbox1.Controls.Add(CreateLabelTitle_OnLeft("Start:", Vklop1, topOffsetLabel, 5F, 10, 1.1F, true, Settings.LightBlackColor));
+                            Groupbox1.Controls.Add(Izklop1);
+                            Groupbox1.Controls.Add(CreateLabelTitle_OnLeft("Stop:", Izklop1, topOffsetLabel, 5F, 10, 1.1F, true, Settings.LightBlackColor));
+                            Groupbox1.Controls.Add(VklopUrnika1);                            
+
+                            Groupbox2.Controls.Add(Vklop2);
+                            Groupbox2.Controls.Add(CreateLabelTitle_OnLeft("Start:", Vklop2, topOffsetLabel, 5F, 10, 1.1F, true, Settings.LightBlackColor));
+                            Groupbox2.Controls.Add(Izklop2);
+                            Groupbox2.Controls.Add(CreateLabelTitle_OnLeft("Stop:", Izklop2, topOffsetLabel, 5F, 10, 1.1F, true, Settings.LightBlackColor));
+                            Groupbox2.Controls.Add(VklopUrnika2);                    
+
+                            SetControlAbsolutePos(VklopUrnika1);
+                            SetControlAbsolutePos(VklopUrnika2);
+
+                            Vklop1.SaveClicked += Vklop1_SaveClicked;
+                            Vklop2.SaveClicked += Vklop2_SaveClicked;
+                            Izklop1.SaveClicked += Izklop1_SaveClicked;
+                            Izklop2.SaveClicked += Izklop2_SaveClicked;
                         }
 
+                        
+                        Controls.Add(IzklopKoJeDan);
+                        IzklopKoJeDan.button.Click += (sender, e) => IzklopKoJeDan_Click(sender, e, myID);   
 
                         TagName = "div";
 
-                        SetControlAbsolutePos(Cona, tr1, tr1, widthdd);
-                        SetControlAbsolutePos(Vklop1, tr1, lc1, widthdd);
-                        SetControlAbsolutePos(Vklop2, tr1, lc1, widthdd);
-                        SetControlAbsolutePos(Izklop1, tr1, lc2, widthdd);
-                        SetControlAbsolutePos(Izklop2, tr1, lc2, widthdd);
-
-                        VklopUrnika1.button.Click += VklopUrnika1_Button_Click;
-                        VklopUrnika2.button.Click += VklopUrnika2Button_Click;
-
-                        SetControlAbsolutePos(VklopUrnika1);
-                        SetControlAbsolutePos(VklopUrnika2);
-
-                        SetControlAbsolutePos(DimmerDop, tr2, lc1, widthbtn);
-                        SetControlAbsolutePos(DimmerPop, tr2, lc1, widthbtn);
-
+                        SetControlAbsolutePos(Cona, tr1, tr1, widthdd);                        
+                       
                         Controls.Add(Cona);
-
-                        var topOffsetLabel = 10;
-
-                        Groupbox1.Controls.Add(Vklop1);
-                        Groupbox1.Controls.Add(CreateLabelTitle_OnLeft("Start:", Vklop1, topOffsetLabel, 5F, 10, 1.1F, true, Settings.LightBlackColor));
-                        Groupbox1.Controls.Add(Izklop1);
-                        Groupbox1.Controls.Add(CreateLabelTitle_OnLeft("Stop:", Izklop1, topOffsetLabel, 5F, 10, 1.1F, true, Settings.LightBlackColor));
-                        Groupbox1.Controls.Add(VklopUrnika1);
-                        Groupbox1.Controls.Add(Dopoldne);
-                        Groupbox1.Controls.Add(DimmerDop);
-                        Groupbox1.Controls.Add(CreateLabelTitle_OnLeft("Svetilnost:", DimmerDop, topOffsetLabel, 9.5F, 10, 1.1F, true, Settings.LightBlackColor));
-
-
-                        Groupbox2.Controls.Add(Vklop2);
-                        Groupbox2.Controls.Add(CreateLabelTitle_OnLeft("Start:", Vklop2, topOffsetLabel, 5F, 10, 1.1F, true, Settings.LightBlackColor));
-                        Groupbox2.Controls.Add(Izklop2);
-                        Groupbox2.Controls.Add(CreateLabelTitle_OnLeft("Stop:", Izklop2, topOffsetLabel, 5F, 10, 1.1F, true, Settings.LightBlackColor));
-                        Groupbox2.Controls.Add(VklopUrnika2);
-                        Groupbox2.Controls.Add(Popoldne);
-                        Groupbox2.Controls.Add(DimmerPop);
-                        Groupbox2.Controls.Add(CreateLabelTitle_OnLeft("Svetilnost:", DimmerPop, topOffsetLabel, 9.5F, 10, 1.1F, true, Settings.LightBlackColor));
-
+                        
                         Controls.Add(Groupbox1);
                         Controls.Add(Groupbox2);
 
-
-                        Vklop1.SaveClicked += Vklop1_SaveClicked;
-                        Vklop2.SaveClicked += Vklop2_SaveClicked;
-                        Izklop1.SaveClicked += Izklop1_SaveClicked;
-                        Izklop2.SaveClicked += Izklop2_SaveClicked;
+                        Groupbox1.Controls.Add(Dopoldne);
+                        Groupbox2.Controls.Add(Popoldne);
 
                     }
                     catch (Exception ex)
                     {
-
                         throw new Exception("Error inside LuciSubmenuContent(int id) construstor. Error info:" + ex.Message);
                     }
-                    
 
                 }
-                             
+
+                private void IzklopKoJeDan_Click(object sender, ImageClickEventArgs e, int id)
+                {
+                    var prop = Val.logocontroler.Prop1;
+                    prop.SetIzklopKoJeDan(id, !prop.GetIzklopiKoJeDan(id)); // toggle value
+                }
+
+                bool GetIzklopiKoJeDan(int id)
+                {
+                    return Val.logocontroler.Prop1.GetIzklopiKoJeDan(id);
+                }
+
+                bool GetVklopUrnika_Dop(int id)
+                {
+                    bool buff;
+                    bool null1;
+                    Val.logocontroler.Prop1.GetVklopUrnika(out buff, out null1, id);
+                    return buff;
+                }
+                bool GetVklopUrnika_Pop(int id)
+                {
+                    bool buff;
+                    bool null1;
+                    Val.logocontroler.Prop1.GetVklopUrnika(out null1, out buff, id);
+                    return buff;
+                }
+
+                    void saveClickedTmr(ListItem selectedItem)
+                {
+                    var buff = selectedItem.Text;
+                    Val.logocontroler.Prop1.IzklopConapop[myID].Value_WeektimerForSiemensLogoFormat = buff;
+                }
 
                 private void Izklop2_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop1.IzklopConapop[myID].SyncWithPC(selectedItem.Value, 1);
+                    saveClickedTmr(selectedItem);
                 }
 
                 private void Izklop1_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop1.IzklopConadop[myID].SyncWithPC(selectedItem.Value, 1);
+                    saveClickedTmr(selectedItem);
                 }
 
                 private void Vklop2_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop1.VklopConapop[myID].SyncWithPC(selectedItem.Value, 1);
+                    saveClickedTmr(selectedItem);
                 }
 
                 private void Vklop1_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop1.VklopConadop[myID].SyncWithPC(selectedItem.Value, 1);
+                    saveClickedTmr(selectedItem);
                 }
 
                 private void DimmerPop_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop1.DimmerPop[myID].SyncWithPC(selectedItem.Value);
+                    var buff = Helper.Datasource.GetValueFromText_short(selectedItem.Text);
+                    Val.logocontroler.Prop1.DimmerPop[myID].Value = buff;
                 }
 
                 private void DimmerDop_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop1.DimmerDop[myID].Value = Convert.ToInt16(selectedItem.Text);
+                    var buff = Helper.Datasource.GetValueFromText_short(selectedItem.Text);
+                    Val.logocontroler.Prop1.DimmerDop[myID].Value = buff;
                 }
 
                 private void VklopUrnika1_Button_Click(object sender, ImageClickEventArgs e)
                 {
-                    Val.logocontroler.Prop1.VklopUrnika1[myID].ToggleValue();
+                    var prop = Val.logocontroler.Prop1;
+                    bool dop;
+                    bool pop;
+
+                    prop.GetVklopUrnika(out dop, out pop, myID);
+                    prop.SetVklopUrnika(myID, !dop, pop); // reverse current value
                 }
 
                 private void VklopUrnika2Button_Click(object sender, ImageClickEventArgs e)
                 {
-                    Val.logocontroler.Prop1.VklopUrnika2[myID].ToggleValue();
+                    var prop = Val.logocontroler.Prop1;
+                    bool dop;
+                    bool pop;
+
+                    prop.GetVklopUrnika(out dop, out pop, myID);
+                    prop.SetVklopUrnika(myID, dop, !pop); // reverse current value
                 }
-
-            
-
             }
-
         }
     }
 }

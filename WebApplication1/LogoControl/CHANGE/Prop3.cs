@@ -12,7 +12,7 @@ namespace WebApplication1
         // Vrata / zavese
 
         Misc.LoopTiming timing = new Misc.LoopTiming(Settings.UpdateValuesPCms, Settings.defultCheckTimingInterval);
-        public Sharp7.S7Client Client { get; set; }
+        public static Sharp7.S7Client Client;
         PlcVars.Word watchdog3;
 
         public PlcVars.Bit VrataGorPulse1;
@@ -38,7 +38,7 @@ namespace WebApplication1
 
 
 
-        public Prop3(Sharp7.S7Client client, LogoControler logoControler)
+        public Prop3(Sharp7.S7Client client)
         {
             Client = client;
             watchdog3 = new PlcVars.Word(Client, "", "", "", false); // TODO adress

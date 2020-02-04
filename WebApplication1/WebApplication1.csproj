@@ -175,6 +175,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Pictures\stop.png" />
+    <Content Include="Pictures\sun.png" />
+    <Content Include="Pictures\sunRise.png" />
+    <Content Include="Pictures\sunSet.png" />
     <Content Include="Pictures\TemplateImage.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -310,13 +313,14 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="GuiController - PageEditor.cs" />
-    <Compile Include="GuiController - Positioning.cs" />
-    <Compile Include="GuiController - PageVreme.cs" />
-    <Compile Include="GuiController - CustomControls.cs" />
-    <Compile Include="GuiController - Page Vrata_Zavese.cs" />
-    <Compile Include="GuiController - Page Ventilacija.cs" />
-    <Compile Include="GuiController - Page Razsvetljava.cs" />
+    <Compile Include="GlobalManagement.cs" />
+    <Compile Include="GUI\GuiController - PageEditor.cs" />
+    <Compile Include="GUI\GuiController - Positioning.cs" />
+    <Compile Include="GUI\GuiController - PageVreme.cs" />
+    <Compile Include="GUI\GuiController - CustomControls.cs" />
+    <Compile Include="GUI\GuiController - Page Vrata_Zavese.cs" />
+    <Compile Include="GUI\GuiController - Page Ventilacija.cs" />
+    <Compile Include="GUI\GuiController - Page Razsvetljava.cs" />
     <Compile Include="Pages\Editor.aspx.cs">
       <DependentUpon>Editor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -331,11 +335,11 @@
     <Compile Include="Pages\MasterMenu.aspx.designer.cs">
       <DependentUpon>MasterMenu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GuiController - PageAdvanced.cs" />
-    <Compile Include="GuiController - PageMasterMenu.cs" />
-    <Compile Include="GuiController - PageDefault.cs" />
-    <Compile Include="GuiController - Template.cs" />
-    <Compile Include="GuiController.cs" />
+    <Compile Include="GUI\GuiController - PageAdvanced.cs" />
+    <Compile Include="GUI\GuiController - PageMasterMenu.cs" />
+    <Compile Include="GUI\GuiController - PageDefault.cs" />
+    <Compile Include="GUI\GuiController - Template.cs" />
+    <Compile Include="GUI\GuiController.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Pages\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -392,7 +396,7 @@
     <Compile Include="LogoControl\LogoControl.cs" />
     <Compile Include="LogoControl\MiscMethods.cs" />
     <Compile Include="LogoControl\Sharp7.cs" />
-    <Compile Include="LogoControl\XmlController.cs" />
+    <Compile Include="XmlController.cs" />
     <Compile Include="Pages\Razsvetljava.aspx.cs">
       <DependentUpon>Razsvetljava.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
