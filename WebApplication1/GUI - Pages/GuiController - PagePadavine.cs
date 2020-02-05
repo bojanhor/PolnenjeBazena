@@ -41,6 +41,8 @@ namespace WebApplication1
                 MainDiv = DIV.CreateDivAbsolute(0, 0, 1, 1, "%");
 
                 ChartTweaker ct = new ChartTweaker(thisPage, "Chart1");
+
+                
                
             }
 
@@ -52,15 +54,19 @@ namespace WebApplication1
             class ChartTweaker
             {
                 // Set Chart Properties
-                const int top = 10;
-                const int left = 10;
-                const int width = 80;
+                const int top = 20;
+                const int left = 5;
+                const int width = 90;
                 const int height = 70;
 
                 // 
 
+                public List<DataPoint> Points = new List<DataPoint>();
+                Series series = new Series();
+
+
                 Control Chart_control;
-                Chart ChartGraph;
+                public Chart ChartGraph;
                 Page page;
                 string chartID;
 
@@ -70,9 +76,29 @@ namespace WebApplication1
                     this.chartID = chartID;
 
                     FindChart();
-
+                    Tweak();
                     Resize();
                                         
+                }
+
+                void Tweak()
+                {
+                    Points.Add(new DataPoint(1,5)); Points.Add(new DataPoint(2, 6)); Points.Add(new DataPoint(3, 7)); Points.Add(new DataPoint(4, 8)); Points.Add(new DataPoint(5, 6));
+                    Points.Add(new DataPoint(6, 4)); Points.Add(new DataPoint(7, 1)); Points.Add(new DataPoint(8, 3)); Points.Add(new DataPoint(9, 10)); Points.Add(new DataPoint(10, 8));
+
+                    series.ChartType = SeriesChartType.Line;
+                    series.AxisLabel = "axisLable1";
+                    series.Name = "Series1";
+                    AddPoints();
+                    ChartGraph.Series.Add(series);
+                }
+
+                void AddPoints()
+                {
+                    foreach (var item in Points)
+                    {
+                        series.Points.Add(item);
+                    }                                      
                 }
 
                 void FindChart()

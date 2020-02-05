@@ -20,9 +20,9 @@
         <div id="TemplateClassID" class="TemplateClass" runat="server">
 
                         
-            <asp:Chart ID="Chart1" runat="server">
+            <asp:Chart ID="Chart1" runat="server" Width="2000px" Height="700px">
                 <Series>
-                    <asp:Series Name="Series1" ChartType="Spline"></asp:Series>
+                    
                 </Series>
                 <ChartAreas>
                     <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
