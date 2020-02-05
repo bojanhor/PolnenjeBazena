@@ -52,6 +52,7 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
@@ -123,6 +124,7 @@
     <EmbeddedResource Include="CustomScripts\ScrollToBottom.js" />
     <Content Include="Index.html" />
     <Content Include="Pages\Editor.aspx" />
+    <Content Include="Pages\Padavine.aspx" />
     <Content Include="Pages\MasterMenu.aspx" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="favicon.ico" />
@@ -314,19 +316,27 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="GlobalManagement.cs" />
-    <Compile Include="GUI\GuiController - PageEditor.cs" />
-    <Compile Include="GUI\GuiController - Positioning.cs" />
-    <Compile Include="GUI\GuiController - PageVreme.cs" />
-    <Compile Include="GUI\GuiController - CustomControls.cs" />
-    <Compile Include="GUI\GuiController - Page Vrata_Zavese.cs" />
-    <Compile Include="GUI\GuiController - Page Ventilacija.cs" />
-    <Compile Include="GUI\GuiController - Page Razsvetljava.cs" />
+    <Compile Include="GUI - Pages\GuiController - PageEditor.cs" />
+    <Compile Include="GUI - Pages\GuiController - PagePadavine.cs" />
+    <Compile Include="GUI - Controls\GuiController - Positioning.cs" />
+    <Compile Include="GUI - Pages\GuiController - PageVreme.cs" />
+    <Compile Include="GUI - Controls\GuiController - CustomControls.cs" />
+    <Compile Include="GUI - Pages\GuiController - Page Vrata_Zavese.cs" />
+    <Compile Include="GUI - Pages\GuiController - Page Ventilacija.cs" />
+    <Compile Include="GUI - Pages\GuiController - Page Razsvetljava.cs" />
     <Compile Include="Pages\Editor.aspx.cs">
       <DependentUpon>Editor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Editor.aspx.designer.cs">
       <DependentUpon>Editor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Padavine.aspx.cs">
+      <DependentUpon>Padavine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Padavine.aspx.designer.cs">
+      <DependentUpon>Padavine.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\MasterMenu.aspx.cs">
       <DependentUpon>MasterMenu.aspx</DependentUpon>
@@ -335,11 +345,11 @@
     <Compile Include="Pages\MasterMenu.aspx.designer.cs">
       <DependentUpon>MasterMenu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GuiController - PageAdvanced.cs" />
-    <Compile Include="GUI\GuiController - PageMasterMenu.cs" />
-    <Compile Include="GUI\GuiController - PageDefault.cs" />
-    <Compile Include="GUI\GuiController - Template.cs" />
-    <Compile Include="GUI\GuiController.cs" />
+    <Compile Include="GUI - Pages\GuiController - PageAdvanced.cs" />
+    <Compile Include="GUI - Pages\GuiController - PageMasterMenu.cs" />
+    <Compile Include="GUI - Pages\GuiController - PageDefault.cs" />
+    <Compile Include="GUI - Controls\GuiController - Template.cs" />
+    <Compile Include="GUI - Pages\GuiController.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Pages\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -505,13 +515,14 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
-  <Target Name="CopyRoslynFiles" AfterTargets="AfterBuild" Condition="!$(Disable_CopyWebApplication) And '$(OutDir)' != '$(OutputPath)'"> <!-- Bugfix for error: "Could not find a part of the path 'C:\Project\Application\bin\roslyn\csc.exe'.-->
+  <Target Name="CopyRoslynFiles" AfterTargets="AfterBuild" Condition="!$(Disable_CopyWebApplication) And '$(OutDir)' != '$(OutputPath)'">
+    <!-- Bugfix for error: "Could not find a part of the path 'C:\Project\Application\bin\roslyn\csc.exe'.-->
     <ItemGroup>
       <RoslynFiles Include="$(CscToolPath)\*" />
     </ItemGroup>
     <MakeDir Directories="$(WebProjectOutputDir)\bin\roslyn" />
     <Copy SourceFiles="@(RoslynFiles)" DestinationFolder="$(WebProjectOutputDir)\bin\roslyn" SkipUnchangedFiles="true" Retries="$(CopyRetryCount)" RetryDelayMilliseconds="$(CopyRetryDelayMilliseconds)" />
-</Target>
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

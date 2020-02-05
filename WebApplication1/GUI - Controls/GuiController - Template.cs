@@ -72,7 +72,7 @@ namespace WebApplication1
             {
                 try
                 {
-                    var div = DIV.CreateDiv("0.5%", "75%", "3.5%", "auto", "10");
+                    var div = DIV.CreateDivAbsolute("0.5%", "75%", "3.5%", "auto", "10");
                     HomeBtn.Attributes.Add("id", "HomeBtnID");
                     HomeBtn.ImageUrl = "~/Pictures/domov.png";
                     HomeBtn.Style.Add(HtmlTextWriterStyle.Position, "absolute");
@@ -123,11 +123,11 @@ namespace WebApplication1
                 HtmlGenericControl divPagename;
                 if (hasLogo)
                 {
-                    divPagename = DIV.CreateDiv("1.2%", "33%", "30%", "5%");
+                    divPagename = DIV.CreateDivAbsolute("1.2%", "33%", "30%", "5%");
                 }
                 else
                 {
-                    divPagename = DIV.CreateDiv("1.2%", "7%", "30%", "5%");
+                    divPagename = DIV.CreateDivAbsolute("1.2%", "7%", "30%", "5%");
                 }
                 
 
@@ -179,7 +179,7 @@ namespace WebApplication1
 
                 //
 
-                var MenuBtnMaster = DIV.CreateDiv("0.5%", "80%", "9%", "6%", "10");
+                var MenuBtnMaster = DIV.CreateDivAbsolute("0.5%", "80%", "9%", "6%", "10");
                 MenuBtnMaster.ID = "MenuBtnMaster";
 
                 MenuBtnMaster.Style.Add(HtmlTextWriterStyle.Position, "absolute");
@@ -191,7 +191,7 @@ namespace WebApplication1
                 }
                 //
 
-                var MenuContent = DIV.CreateDiv("6.5%", "79%", "18%", "70%", "11");
+                var MenuContent = DIV.CreateDivAbsolute("6.5%", "79%", "18%", "70%", "11");
                 MenuContent.ID = "MenuContent";
 
                 if (Settings.EnableHoveronMenu)

@@ -12,7 +12,7 @@ namespace WebApplication1.Pages
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            Val.guiController.PageVrataZavese = new GuiController.Vrata_Zavese(this, Session);
+            Val.guiController.PageVrataZavese_ = new GuiController.PageVrataZavese(this, Session);
 
             Helper.EveryPageProtocol("Vrata", this, Session, TemplateClassID);
             Initialise();
@@ -22,7 +22,7 @@ namespace WebApplication1.Pages
         
         void Initialise()
         {
-            TemplateClassID.Controls.Add(Val.guiController.PageVrataZavese.subMenu);            
+            TemplateClassID.Controls.Add(Val.guiController.PageVrataZavese_.subMenu);            
         }
     }
 }

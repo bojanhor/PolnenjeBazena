@@ -18,11 +18,12 @@ namespace WebApplication1
         public PageDefault PageDefault_ { get; set; }
         public PageAdvanced PageAdvanced_ { get; set; }
         public PageMasterMenu PageMastermenu_ { get; set; }
-        public Razsvetljava PageRazsvetljava_ { get; set; }
+        public PageRazsvetljava PageRazsvetljava_ { get; set; }
         public PageVreme PageVreme_ { get; set; }
         public PageEditor PageEditor_ { get; set; }
-        public Ventilacija PageVentilacija_ { get; set; }
-        public Vrata_Zavese PageVrataZavese { get; set; }
+        public PageVentilacija PageVentilacija_ { get; set; }
+        public PageVrataZavese PageVrataZavese_ { get; set; }
+        public PagePadavine PagePadavine_ { get; set; }
 
         public GuiController()  
         {
@@ -80,7 +81,7 @@ namespace WebApplication1
                 return div;
             }
 
-            public static HtmlGenericControl CreateDiv(string top)
+            public static HtmlGenericControl CreateDivAbsolute(string top)
             {
                 var div = new HtmlGenericControl("div");
                 div.Style.Add(HtmlTextWriterStyle.Position, "absolute");
@@ -92,9 +93,43 @@ namespace WebApplication1
                 return div;
             }
 
-            public static HtmlGenericControl CreateDiv(string top, string left)
+            public static HtmlGenericControl CreateDivAbsolute(float top, string unit)
             {
-                var div = CreateDiv(top);
+                return CreateDivAbsolute(Helper.FloatToStringWeb(top, unit));
+            }
+
+            public static HtmlGenericControl CreateDivAbsolute(float top, float left, string unit)
+            {
+                return CreateDivAbsolute(
+                    Helper.FloatToStringWeb(top, unit),
+                    Helper.FloatToStringWeb(left, unit)
+                    );
+            }
+
+            public static HtmlGenericControl CreateDivAbsolute(float top, float left, float width, float height, string unit)
+            {
+                return CreateDivAbsolute(
+                    Helper.FloatToStringWeb(top, unit),
+                    Helper.FloatToStringWeb(left, unit),
+                    Helper.FloatToStringWeb(width, unit),
+                    Helper.FloatToStringWeb(height, unit)
+                    );
+            }
+
+            public static HtmlGenericControl CreateDivAbsolute(float top, float left, float width, float height, string zindex, string unit)
+            {
+                return CreateDivAbsolute(
+                    Helper.FloatToStringWeb(top, unit),
+                    Helper.FloatToStringWeb(left, unit),
+                    Helper.FloatToStringWeb(width, unit),
+                    Helper.FloatToStringWeb(height, unit),
+                    zindex
+                    );
+            }
+
+            public static HtmlGenericControl CreateDivAbsolute(string top, string left)
+            {
+                var div = CreateDivAbsolute(top);
 
                 if (left != null)
                 {
@@ -103,9 +138,9 @@ namespace WebApplication1
                 return div;
             }
 
-            public static HtmlGenericControl CreateDiv(string top, string left, string width, string height)
+            public static HtmlGenericControl CreateDivAbsolute(string top, string left, string width, string height)
             {
-                var div = CreateDiv(top, left);
+                var div = CreateDivAbsolute(top, left);
 
                 if (width != null)
                 {
@@ -118,9 +153,9 @@ namespace WebApplication1
                 return div;
             }
 
-            public static HtmlGenericControl CreateDiv(string top, string left, string width, string height, string zindex)
+            public static HtmlGenericControl CreateDivAbsolute(string top, string left, string width, string height, string zindex)
             {
-                var div = CreateDiv(top, left, width, height);
+                var div = CreateDivAbsolute(top, left, width, height);
                 div.Style.Add(HtmlTextWriterStyle.ZIndex, zindex);
                 return div;
 

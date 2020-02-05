@@ -420,28 +420,28 @@ namespace WebApplication1
 
                         if (type == Type.Shadowed)
                         {
-                            div = DIV.CreateDiv("0%", "0%", "100%", "100%");
+                            div = DIV.CreateDivAbsolute("0%", "0%", "100%", "100%");
                             deactivatedPicture = "~\\Pictures\\gumb-off.png";
                             activatedPicture = "~\\Pictures\\gumb-on.png";
                         }
 
                         else if (type == Type.NotShadowed)
                         {
-                            div = DIV.CreateDiv("0%", "0%", "100%", "100%");
+                            div = DIV.CreateDivAbsolute("0%", "0%", "100%", "100%");
                             deactivatedPicture = "~\\Pictures\\gumb-off-noshadow.png";
                             activatedPicture = "~\\Pictures\\gumb-on-noshadow.png";
                         }
 
                         else if (type == Type.Padded)
                         {
-                            div = DIV.CreateDiv("0%", "0%", "100%", "100%");
+                            div = DIV.CreateDivAbsolute("0%", "0%", "100%", "100%");
                             deactivatedPicture = "~\\Pictures\\gumb-off-padded.png";
                             activatedPicture = "~\\Pictures\\gumb-on-padded.png";
 
                         }
                         else if (type == Type.WithText)
                         {
-                            div = DIV.CreateDiv("0%", "0%", "13.8vw", "13.8vw");
+                            div = DIV.CreateDivAbsolute("0%", "0%", "13.8vw", "13.8vw");
                             deactivatedPicture = "~\\Pictures\\gumb-off-padded-text.png";
                             activatedPicture = "~\\Pictures\\gumb-on-padded-text.png";
 
@@ -751,7 +751,7 @@ namespace WebApplication1
                 public ImageButton exitButton;
                 public ImageButton nextButton;
                 public ImageButton PrevButton;
-                HtmlGenericControl NameDiv = DIV.CreateDiv("5.2%", "5%", "30%", "8%");
+                HtmlGenericControl NameDiv = DIV.CreateDivAbsolute("5.2%", "5%", "30%", "8%");
                 Label Name = new Label();
 
                 Label Clock = new Label();

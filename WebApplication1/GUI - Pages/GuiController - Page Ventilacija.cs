@@ -12,12 +12,12 @@ namespace WebApplication1
 
     public partial class GuiController
     {
-        public class Ventilacija
+        public class PageVentilacija
         {
             public VentSettingsSubmenu subMenu;
             public VentSettingsContent SettingsContent = new VentSettingsContent();
 
-            public Ventilacija()
+            public PageVentilacija()
             {
                 try
                 {

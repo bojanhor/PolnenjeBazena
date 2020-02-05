@@ -14,7 +14,7 @@ namespace WebApplication1.Pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Val.guiController.PageRazsvetljava_ = new GuiController.Razsvetljava(this, Session);
+            Val.guiController.PageRazsvetljava_ = new GuiController.PageRazsvetljava(this, Session);
             
             Helper.EveryPageProtocol("Razsvetljava", this, Session, TemplateClassID);
             Initialise();            

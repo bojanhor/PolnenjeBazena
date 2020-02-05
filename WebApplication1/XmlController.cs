@@ -161,8 +161,16 @@ namespace WebApplication1
                 {
                     dt1 = DateTime.Now;
 
+                    try
+                    {
+                        newXml = LoadXML();
+                    }
+                    catch (Exception ex)
+                    {
+                        throw new Exception("Error loading XML file: " + ex.Message);
+                    }
+                   
 
-                    newXml = LoadXML();
                     if (newXml.Element("root").Value != XmlFile.Element("root").Value)
                     {
                         RefreshCache(newXml); // refresh if different
@@ -228,9 +236,9 @@ namespace WebApplication1
                 XmlStat = XmlFile.Element("root").Element("STATS");
             }
 
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
 

@@ -84,7 +84,7 @@ namespace WebApplication1
                 }
 
 
-                var divfortitles = DIV.CreateDiv("0%","0%","100%","100%");
+                var divfortitles = DIV.CreateDivAbsolute("0%","0%","100%","100%");
 
 
                 //horizontal positioning
@@ -114,7 +114,7 @@ namespace WebApplication1
                 currentPos = initialPos;
 
                 // 1st line div
-                divMasterButtons = DIV.CreateDiv("0%");
+                divMasterButtons = DIV.CreateDivAbsolute("0%");
                 divMasterButtons.ID = imageButtons[1].ID + "_div";
                 prepareDivForRow(divMasterButtons);
 

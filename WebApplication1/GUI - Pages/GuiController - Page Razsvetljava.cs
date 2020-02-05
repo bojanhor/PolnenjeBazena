@@ -12,7 +12,7 @@ namespace WebApplication1
     
     public partial class GuiController
     {
-        public class Razsvetljava
+        public class PageRazsvetljava
         {
             public Page ThisPage;
             public System.Web.SessionState.HttpSessionState Session;
@@ -36,7 +36,7 @@ namespace WebApplication1
             string UpdatePanelId_Luci = "LuciPanel";
 
 
-            public Razsvetljava(Page thisPage, System.Web.SessionState.HttpSessionState session)
+            public PageRazsvetljava(Page thisPage, System.Web.SessionState.HttpSessionState session)
             {                
                 try
                 {
@@ -229,7 +229,7 @@ namespace WebApplication1
             {
                 try
                 {
-                    divBtns = DIV.CreateDiv("10%", "80%", "14%", "83%");
+                    divBtns = DIV.CreateDivAbsolute("10%", "80%", "14%", "83%");
                     ugasniVseLuci = new ImageButton
                     {
                         ImageUrl = "~/Pictures/UgasniVseLuci.png",

@@ -33,7 +33,7 @@ namespace WebApplication1
             ImageButton SunRise;
             ImageButton SunSet;
 
-            ImageButton[] guiSepare = new ImageButton[5];           
+            Image[] guiSepare = new Image[5];           
             
             public HtmlGenericControl divStala;
             Image Stala;
@@ -104,7 +104,7 @@ namespace WebApplication1
             {
                 try
                 {
-                    divWeather = DIV.CreateDiv("80%", "51%", "40%", "12%");
+                    divWeather = DIV.CreateDivAbsolute("80%", "51%", "40%", "12%");
                     divWeather.Style.Add(HtmlTextWriterStyle.ZIndex, "10");
 
                     inTemp = new ImageButton()
@@ -145,12 +145,11 @@ namespace WebApplication1
 
 
                     for (int i = 0; i < guiSepare.Length; i++)
-                    {
-                        guiSepare[i] = new ImageButton()
+                    {                 
+                        guiSepare[i] = new Image()
                         {
                             ImageUrl = "~/Pictures/gui_separator.png",
                             Width = Unit.Percentage(3.5F)
-
                         };
                     }
                    
@@ -158,9 +157,9 @@ namespace WebApplication1
                     var spacingLeft = 14.5F;
 
                     var t = inTemp.Width.ToString();
-                    var inTempD = DIV.CreateDiv(t);
-                    var outTempD = DIV.CreateDiv(t);
-                    var rainSenseD = DIV.CreateDiv(t);
+                    var inTempD = DIV.CreateDivAbsolute(t);
+                    var outTempD = DIV.CreateDivAbsolute(t);
+                    var rainSenseD = DIV.CreateDivAbsolute(t);
 
                     var prop = Val.logocontroler.Prop2; // Change temperature source here
 
@@ -195,7 +194,7 @@ namespace WebApplication1
 
             void WeatherLabelFormater(string LableText, double width, float topOffset, float spacingLeft)
             {               
-                var div = DIV.CreateDiv(Helper.FloatToStringWeb(width, "%"));
+                var div = DIV.CreateDivAbsolute(Helper.FloatToStringWeb(width, "%"));
                 var l = new Label();
                 div.Style.Add(HtmlTextWriterStyle.Width, width + "%");
                 l.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
@@ -252,16 +251,38 @@ namespace WebApplication1
                 }          
 
                 inTemp.Click += InTemp_Click;
-                outTemp.Click += InTemp_Click;
-                rainSense.Click += InTemp_Click;
+                outTemp.Click += OutTemp_Click;
+                rainSense.Click += RainSense_Click;
+                dayNight.Click += DayNight_Click;
+                SunRise.Click += SunRise_Click;
+                SunSet.Click += SunSet_Click;
 
             }
 
             private void InTemp_Click(object sender, ImageClickEventArgs e)
             {
-                Helper.Redirect("vreme", thisPage);
-            }                        
-
+                Helper.Redirect("Padavine", thisPage);
+            }
+            private void OutTemp_Click(object sender, ImageClickEventArgs e)
+            {
+                Helper.Redirect("Padavine", thisPage);
+            }
+            private void RainSense_Click(object sender, ImageClickEventArgs e)
+            {
+                Helper.Redirect("Padavine", thisPage);
+            }
+            private void DayNight_Click(object sender, ImageClickEventArgs e)
+            {
+                Helper.Redirect("Padavine", thisPage);
+            }
+            private void SunRise_Click(object sender, ImageClickEventArgs e)
+            {
+                Helper.Redirect("Padavine", thisPage);
+            }
+            private void SunSet_Click(object sender, ImageClickEventArgs e)
+            {
+                Helper.Redirect("Padavine", thisPage);
+            }            
             private void BtnMasterMenuClick(object sender, ImageClickEventArgs e, Page thisPage)
             {
                 var me = (GControls.MasterMenuButton)sender;
@@ -313,7 +334,7 @@ namespace WebApplication1
                 {
                     for (int i = 0; i < imagebuttons.Length; i++)
                     {
-                        divMasterButtons = DIV.CreateDiv(Helper.FloatToStringWeb(initialPos, "%"));
+                        divMasterButtons = DIV.CreateDivAbsolute(Helper.FloatToStringWeb(initialPos, "%"));
                         initialPos += spacing;
                         imagebuttons[i] = new GControls.MasterMenuButton(i + 1);
                         divMasterButtons.ID = imagebuttons[i].ID + "_div";

@@ -12,7 +12,7 @@ namespace WebApplication1
 
     public partial class GuiController
     {
-        public class Vrata_Zavese
+        public class PageVrataZavese
         {
 
             public static string ViewStateElement_MenuShown = "MenuShown";
@@ -22,7 +22,7 @@ namespace WebApplication1
             public VrataSettingsSubmenu subMenu;
             public VrazaZaveseContent SettingsContent = new VrazaZaveseContent();
 
-            public Vrata_Zavese(Page _thisPage, System.Web.SessionState.HttpSessionState session)
+            public PageVrataZavese(Page _thisPage, System.Web.SessionState.HttpSessionState session)
             {
                 thisPage = _thisPage;
                 Session = session;
