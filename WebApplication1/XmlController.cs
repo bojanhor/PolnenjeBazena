@@ -18,6 +18,8 @@ namespace WebApplication1
         
         static bool forceRefresh = false;
 
+        public static bool XmlControllerInitialized = false;
+
         // xml file
         private static XDocument _XmlFile;
         public static XDocument XmlFile
@@ -187,6 +189,7 @@ namespace WebApplication1
                             break;
                         }
                     }
+                    XmlControllerInitialized = true;
 
                 }
                 catch (Exception ex)

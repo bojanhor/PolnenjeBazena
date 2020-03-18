@@ -21,7 +21,8 @@ namespace WebApplication1
         public static void InitialiseClass()
         {
             getScrolDownTextboxScript();
-           
+            ChartValues.ChartValuesLogger CVL = new ChartValues.ChartValuesLogger();
+
         }
 
         public static void InitializeWDTable(int device)

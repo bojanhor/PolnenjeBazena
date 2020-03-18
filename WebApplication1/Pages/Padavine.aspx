@@ -24,9 +24,12 @@
                 <Series>
                     
                 </Series>
+
                 <ChartAreas>
-                    <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
+                    <asp:ChartArea Name="ChartArea1">                       
+                    </asp:ChartArea>
                 </ChartAreas>
+
             </asp:Chart>
 
         </div>

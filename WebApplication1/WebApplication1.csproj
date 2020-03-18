@@ -46,6 +46,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -315,6 +316,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ChartValues\ChartValuesLogger.cs" />
     <Compile Include="GlobalManagement.cs" />
     <Compile Include="GUI - Pages\GuiController - PageEditor.cs" />
     <Compile Include="GUI - Pages\GuiController - PagePadavine.cs" />

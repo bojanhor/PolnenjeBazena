@@ -13,11 +13,11 @@ namespace WebApplication1
         // importatnt settings (will reflect significant changes)
 
         public static readonly byte autoRefreshPageEvery_s = 0;       // refreshes page automatically every __ seconds ( use 0 to disable )
-               
+
         public static readonly int UpdateValuesPCms = 1000;          // Frekvenca osveževanja vrednosti
 
         public static readonly int Devices = 5;                      // how many devices supported (do not change)        
-                
+
         public static readonly int XmlRefreshrate = 5000;                                // scans for changes in xml file (should be very high number - 60000)
 
         public static readonly bool EnableHoveronMenu = false;                           // enables hover on functionality on MENU icon
@@ -31,6 +31,8 @@ namespace WebApplication1
         public static readonly string XmlDeclaration = "<?xml version=\"1.0\" encoding=\"utf-8\"?>"; // used to recreate xml config file
 
         public static readonly string pathToCustomJS = HttpRuntime.AppDomainAppPath + "CustomScripts\\"; // path to scripts folder
+
+
 
         // less important (not very significant)
 
