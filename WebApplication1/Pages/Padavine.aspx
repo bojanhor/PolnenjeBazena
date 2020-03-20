@@ -11,6 +11,8 @@
     <style>
      
     </style>
+   
+
 
 </head>
 
@@ -19,8 +21,30 @@
         <asp:ScriptManager ID="Scriptmanager" runat="server"></asp:ScriptManager>
         <div id="TemplateClassID" class="TemplateClass" runat="server">
 
-                        
-            <asp:Chart ID="Chart1" runat="server" Width="2000px" Height="700px">
+            <asp:UpdatePanel ID="UpdatePanel1" UpdateMode="Conditional" runat="server">
+                <ContentTemplate>
+                     <asp:Chart ID="Chart1" runat="server" Width="2000px" Height="700px">
+                <Series>
+                    
+                </Series>
+
+                <ChartAreas>
+                    <asp:ChartArea Name="ChartArea1">                       
+                    </asp:ChartArea>
+                    
+                </ChartAreas>
+
+            </asp:Chart>
+                </ContentTemplate>
+                <Triggers>
+                    <asp:AsyncPostBackTrigger ControlID ="TimerUpdtPnl1" /> 
+                </Triggers>
+            </asp:UpdatePanel>
+            <asp:Timer ID="TimerUpdtPnl1" Interval="5000" runat="server"></asp:Timer>
+           
+            <asp:UpdatePanel ID="UpdatePanel2" UpdateMode="Conditional" runat="server">
+                <ContentTemplate>
+                     <asp:Chart ID="Chart2" runat="server" Width="2000px" Height="700px">
                 <Series>
                     
                 </Series>
@@ -31,7 +55,13 @@
                 </ChartAreas>
 
             </asp:Chart>
-
+                </ContentTemplate>
+                <Triggers>
+                    <asp:AsyncPostBackTrigger ControlID ="TimerUpdtPnl2" /> 
+                </Triggers>
+            </asp:UpdatePanel>
+            <asp:Timer ID="TimerUpdtPnl2" Interval="4900" runat="server"></asp:Timer>
+            
         </div>
 
 

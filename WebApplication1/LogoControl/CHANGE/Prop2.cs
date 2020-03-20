@@ -11,7 +11,7 @@ namespace WebApplication1
     {
         // Ventilacija 
 
-        Misc.LoopTiming timing = new Misc.LoopTiming(Settings.UpdateValuesPCms, Settings.defultCheckTimingInterval);
+        Misc.LoopTiming timing = new Misc.LoopTiming(Settings.UpdateValuesPCms, Settings.defaultCheckTimingInterval);
         public static Sharp7.S7Client Client;
         PlcVars.Word watchdog2;
 
@@ -40,7 +40,7 @@ namespace WebApplication1
         public PlcVars.TemperatureShow TempZunaj;
         public PlcVars.TemperatureShow TempZnotraj;
 
-
+        public PlcVars.Word PadavineZadnjaUra;
 
         public Prop2(Sharp7.S7Client client)
         {
@@ -73,6 +73,8 @@ namespace WebApplication1
 
             TempZunaj = new PlcVars.TemperatureShow(Client, "VW110", "", "°C", 0, 0.1F, 1, true);
             TempZnotraj = new PlcVars.TemperatureShow(Client, "VW114", "", "°C", 0, 0.1F, 1, true);
+
+            PadavineZadnjaUra = new PlcVars.Word(Client, "VW120", "", "mm/h", false);
 
 
         }

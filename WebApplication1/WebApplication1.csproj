@@ -142,6 +142,7 @@
     <Content Include="Pages\Advanced.aspx" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Pages\test.aspx" />
     <Content Include="Pages\Vrata_Zavese.aspx" />
     <Content Include="Pages\Ventilacija.aspx" />
     <Content Include="Pictures\alert.png">
@@ -408,6 +409,13 @@
     <Compile Include="LogoControl\LogoControl.cs" />
     <Compile Include="LogoControl\MiscMethods.cs" />
     <Compile Include="LogoControl\Sharp7.cs" />
+    <Compile Include="Pages\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
     <Compile Include="XmlController.cs" />
     <Compile Include="Pages\Razsvetljava.aspx.cs">
       <DependentUpon>Razsvetljava.aspx</DependentUpon>

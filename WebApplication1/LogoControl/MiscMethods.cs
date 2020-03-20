@@ -256,10 +256,11 @@ namespace WebApplication1
 
         public class LoopTiming
         {
-            readonly DateTime Time1_fixed;
+            DateTime Time1_fixed;
             DateTime Time2_chk;
             readonly int WaitFor;
             readonly int CheckInterval;
+            double buff;
 
             public LoopTiming(int waitfor, int checkInterval)
             {
@@ -271,11 +272,13 @@ namespace WebApplication1
             private bool CheckNow()
             {
                 Time2_chk = DateTime.Now;
+                buff= (Time2_chk - Time1_fixed).TotalMilliseconds;
 
-                if ((Time2_chk - Time1_fixed).TotalMilliseconds >= WaitFor)
+                if (buff < WaitFor)
                 {
                     return true;
                 }
+                Time1_fixed = DateTime.Now.AddMilliseconds(-(buff - WaitFor));
                 return false;
             }
 

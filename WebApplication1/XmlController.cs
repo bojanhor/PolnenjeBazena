@@ -182,7 +182,7 @@ namespace WebApplication1
 
                     while (DateTime.Now < (dt1 + TimeSpan.FromMilliseconds(Settings.XmlRefreshrate))) // wait for some time
                     {
-                        System.Threading.Thread.Sleep(Settings.defultCheckTimingInterval);
+                        System.Threading.Thread.Sleep(Settings.defaultCheckTimingInterval);
 
                         if (forceRefresh)  // periodically check for force refresh flag
                         {                           
@@ -223,7 +223,7 @@ namespace WebApplication1
 
             while (forceRefresh)
             {
-                System.Threading.Thread.Sleep(Settings.defultCheckTimingInterval);
+                System.Threading.Thread.Sleep(Settings.defaultCheckTimingInterval);
             }
         }      
 
@@ -790,5 +790,143 @@ namespace WebApplication1
 
 
         }
+
+        public static bool GetEnableCharts_Svetlost()
+        {
+            var searchValue = "EnableChart_Svetlost";
+
+            try
+            {                
+                return Convert.ToBoolean(XmlGUI.Element(searchValue).Value);
+            }
+            catch (Exception)
+            {
+                throw new Exception(
+                    searchValue + " value in config file is not valid " + searchValue + " value. " +
+                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "value must be \"true\" or \"false\"");
+            }
+        }
+
+        public static bool GetEnableCharts_Padavine()
+        {
+            var searchValue = "EnableChart_Padavine";
+
+            try
+            {
+                return Convert.ToBoolean(XmlGUI.Element(searchValue).Value);
+            }
+            catch (Exception)
+            {
+                throw new Exception(
+                    searchValue + " value in config file is not valid " + searchValue + " value. " +
+                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "value must be \"true\" or \"false\"");
+            }
+        }
+
+        public static bool GetEnableCharts_Tzunanja()
+        {
+            var searchValue = "EnableChart_Tzunanja";
+
+            try
+            {
+                return Convert.ToBoolean(XmlGUI.Element(searchValue).Value);
+            }
+            catch (Exception)
+            {
+                throw new Exception(
+                    searchValue + " value in config file is not valid " + searchValue + " value. " +
+                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "value must be \"true\" or \"false\"");
+            }
+        }
+
+        public static bool GetEnableCharts_Tnotranja()
+        {
+            var searchValue = "EnableChart_Tnotranja";
+
+            try
+            {
+                return Convert.ToBoolean(XmlGUI.Element(searchValue).Value);
+            }
+            catch (Exception)
+            {
+                throw new Exception(
+                    searchValue + " value in config file is not valid " + searchValue + " value. " +
+                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "value must be \"true\" or \"false\"");
+            }
+        }
+
+        public static void SetEnableCharts_Svetlost(bool value) 
+        {
+            var searchValue = "EnableChart_Svetlost";
+
+            try
+            {
+                XmlFile.Element("root").Element("GUI").Element(searchValue).Value = value.ToString();
+                SaveCurrentTB(XmlFile.ToString());
+            }
+
+            catch (Exception)
+            {
+
+            }
+           
+        }
+
+        public static void SetEnableCharts_Padavine(bool value) 
+        {
+            var searchValue = "EnableChart_Padavine";
+
+            try
+            {
+                XmlFile.Element("root").Element("GUI").Element(searchValue).Value = value.ToString();
+                SaveCurrentTB(XmlFile.ToString());
+            }
+
+            catch (Exception)
+            {
+
+            }
+
+        }
+
+        public static void SetEnableCharts_Tzunanja(bool value) 
+        {
+            var searchValue = "EnableChart_Tzunanja";
+
+            try
+            {
+                XmlFile.Element("root").Element("GUI").Element(searchValue).Value = value.ToString();
+                SaveCurrentTB(XmlFile.ToString());
+            }
+
+            catch (Exception)
+            {
+
+            }
+
+        }
+
+        public static void SetEnableCharts_Tnotranja(bool value) 
+        {
+            var searchValue = "EnableChart_Tnotranja";
+
+            try
+            {
+                XmlFile.Element("root").Element("GUI").Element(searchValue).Value = value.ToString();
+                SaveCurrentTB(XmlFile.ToString());
+            }
+
+            catch (Exception)
+            {
+
+            }
+
+        }
+
+
     }
 }

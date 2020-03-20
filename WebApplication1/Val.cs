@@ -17,11 +17,13 @@ namespace WebApplication1
         public static GuiController guiController = new GuiController();
         public static string ScrolToBottomTextboxScript = null;
         public static string RetainPositionTextboxScript = null;
-        
+        public static ChartValues.ChartValuesLogger ChartValues;
+
+
         public static void InitialiseClass()
         {
             getScrolDownTextboxScript();
-            ChartValues.ChartValuesLogger CVL = new ChartValues.ChartValuesLogger();
+            ChartValues = new ChartValues.ChartValuesLogger();
 
         }
 

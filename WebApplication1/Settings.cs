@@ -20,6 +20,8 @@ namespace WebApplication1
 
         public static readonly int XmlRefreshrate = 5000;                                // scans for changes in xml file (should be very high number - 60000)
 
+        public static int ChartUpdateRefreshRate = 60000;                           // updates chart every X[ms] specified (1000 - 60000)
+
         public static readonly bool EnableHoveronMenu = false;                           // enables hover on functionality on MENU icon
 
         public static readonly string DefaultFont = Helper.WebSafeFonts.Arial;         // Select default font for all pages
@@ -36,7 +38,11 @@ namespace WebApplication1
 
         // less important (not very significant)
 
-        public static int defultCheckTimingInterval = 40;      // used for loops checking - lower value means higher precision timing
+        public static int defaultCheckTimingInterval = 40;      // used for loops checking - lower value means higher precision timing
+
+        public static string defaultDateFormat = "dd.MM";
+        public static string defaultTimeFormat = "hh:mm";
+        public static string defaultDateTimeFormat = defaultDateFormat + "  " + defaultTimeFormat;
 
         // colors
         public static readonly string RedColorHtmlHumar = "#C61720";

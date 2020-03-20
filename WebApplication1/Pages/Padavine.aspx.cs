@@ -9,6 +9,7 @@ namespace WebApplication1
 {
     public partial class Padavine : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             Val.guiController.PagePadavine_ = new GuiController.PagePadavine(this);
@@ -24,6 +25,7 @@ namespace WebApplication1
             TemplateClassID.Controls.Add(Val.guiController.PagePadavine_.MainDiv);
 
         }
+                
     }
 }
 

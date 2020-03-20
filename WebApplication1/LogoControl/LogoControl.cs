@@ -267,7 +267,7 @@ namespace WebApplication1
                             // prevent to many reconnection attempts
                             while (time2 > DateTime.Now)
                             {
-                                Thread.Sleep(Settings.defultCheckTimingInterval);
+                                Thread.Sleep(Settings.defaultCheckTimingInterval);
                                 if (IfDisconnectProcedure(device)) { return; }
 
                             }
@@ -298,7 +298,7 @@ namespace WebApplication1
                                 while (DateTime.Now < time1.AddMilliseconds(RWcyc))
                                 {
                                     if (IfDisconnectProcedure(device)) { return; }
-                                    Thread.Sleep(Settings.defultCheckTimingInterval);
+                                    Thread.Sleep(Settings.defaultCheckTimingInterval);
                                     if (forceRefresh[device] > 0)
                                     {
                                         break;

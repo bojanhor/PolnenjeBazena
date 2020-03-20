@@ -370,18 +370,21 @@ namespace WebApplication1
                     }
                 }
 
-                private string width;
-                public string Width
+                private string size;
+                public string Size
                 {
                     get
                     {
-                        return width;
+                        return size;
                     }
                     set
                     {
-                        width = value;
+                        size = value;
                         Style.Remove(HtmlTextWriterStyle.Width);
                         Style.Add(HtmlTextWriterStyle.Width, value + "%");
+
+                        Style.Remove(HtmlTextWriterStyle.Height);
+                        Style.Add(HtmlTextWriterStyle.Height, value + "%");
                     }
                 }
 
@@ -411,8 +414,8 @@ namespace WebApplication1
 
                         Top = position.top.ToString().Replace(",", ".");
                         Left = position.left.ToString().Replace(",", ".");
-                        Width = position.width.ToString().Replace(",", ".");
-                        Style.Add(HtmlTextWriterStyle.Height, Width+"%");
+                        Size = position.width.ToString().Replace(",", ".");
+                        Style.Add(HtmlTextWriterStyle.Height, Size+"%");
 
                         Style.Add(HtmlTextWriterStyle.Position, "absolute");
 
@@ -441,7 +444,7 @@ namespace WebApplication1
                         }
                         else if (type == Type.WithText)
                         {
-                            div = DIV.CreateDivAbsolute("0%", "0%", "13.8vw", "13.8vw");
+                            div = DIV.CreateDivAbsolute("0%", "0%", "12.8vw", "12.8vw");
                             deactivatedPicture = "~\\Pictures\\gumb-off-padded-text.png";
                             activatedPicture = "~\\Pictures\\gumb-on-padded-text.png";
 
@@ -1364,7 +1367,6 @@ namespace WebApplication1
             }
                 //
                
-
             public class DropDownListForDimmer : DropDown
             {
                 static Helper.DimmerSelectorDatasource datasource = new Helper.DimmerSelectorDatasource();
