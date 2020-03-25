@@ -23,6 +23,7 @@ namespace WebApplication1
             GControls.OnOffButton EnableTzunanja;
             GControls.OnOffButton EnableTnotranja;
 
+            GControls.DropDownListChartViewSelector chartViewSelector;
 
             public PagePadavine(Page _thisPage)
             {
@@ -46,28 +47,34 @@ namespace WebApplication1
             void Initialize()
             {
                 MainDiv = DIV.CreateDivAbsolute(0, 0, 100, 100, "%");
-                ChartTweaker ct1 = new ChartTweaker(thisPage, "Chart1");
+                ChartTweaker ct1 = new ChartTweaker(thisPage, "Chart1"); // Create 2 overlaying charts to prevent flicker
                 ChartTweaker ct2 = new ChartTweaker(thisPage, "Chart2");
-
             }
 
             void AddControls()
             {
+                
                 EnableSvetlost = new GControls.OnOffButton("Svetlost", 1, XmlController.GetEnableCharts_Svetlost(), GControls.OnOffButton.Type.WithText);
                 EnablePadavine = new GControls.OnOffButton("Padavine", 2, XmlController.GetEnableCharts_Padavine(), GControls.OnOffButton.Type.WithText);
                 EnableTzunanja = new GControls.OnOffButton("T zunanja", 3, XmlController.GetEnableCharts_Tzunanja(), GControls.OnOffButton.Type.WithText);
                 EnableTnotranja = new GControls.OnOffButton("T notranja", 4, XmlController.GetEnableCharts_Tnotranja(), GControls.OnOffButton.Type.WithText);
+                var chartgraphShowVal =GControls.DropDownListChartViewSelector.GetReplacementTextFromEnum(XmlController.GetShowChartMode());
+                chartViewSelector = new GControls.DropDownListChartViewSelector("chartViewSelector", chartgraphShowVal, 7, 15, false);
 
                 var topoffset = 7;
                 var leftOffsetOrg = 30;
                 var leftStp = 12;
-                var w = 5;
-
+                var size = 10;
                
                 EnableSvetlost.Top = topoffset + "";
                 EnablePadavine.Top = topoffset + "";
                 EnableTzunanja.Top = topoffset + "";
                 EnableTnotranja.Top = topoffset + "";
+
+                EnableSvetlost.Size = size + "";
+                EnablePadavine.Size = size + "";
+                EnableTzunanja.Size = size + "";
+                EnableTnotranja.Size = size + "";
 
                 EnableSvetlost.Left = leftOffsetOrg + ""; leftOffsetOrg += leftStp;
                 EnablePadavine.Left = leftOffsetOrg + ""; leftOffsetOrg += leftStp;
@@ -79,11 +86,23 @@ namespace WebApplication1
                 EnableTzunanja.button.Click += EnableTzunanja_Click;
                 EnableTnotranja.button.Click += EnableTnotranja_Click;
 
+                SetControlAbsolutePos(chartViewSelector, 8, 78, 20);
+
                 MainDiv.Controls.Add(EnableSvetlost);
                 MainDiv.Controls.Add(EnablePadavine);
                 MainDiv.Controls.Add(EnableTzunanja);
                 MainDiv.Controls.Add(EnableTnotranja);
+                MainDiv.Controls.Add(chartViewSelector);
 
+                chartViewSelector.SaveClicked += ChartViewSelector_SaveClicked;
+
+            }
+
+            private void ChartViewSelector_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
+            {
+                var buff = chartViewSelector.GetSelectedValue();
+                XmlController.SetShowChart(Convert.ToInt32(buff));
+                Helper.Refresh();
             }
 
             private void EnableTnotranja_Click(object sender, ImageClickEventArgs e)
@@ -155,6 +174,7 @@ namespace WebApplication1
                     this.chartID = chartID;
 
                     FindChart();
+                    AddDataPoints();
                     Tweak();
                     Resize();
                     CreateLegend();
@@ -166,8 +186,8 @@ namespace WebApplication1
                 {
                     var legend = new Legend("Legenda");
                     LegendItem legenditem_Svetlost = new LegendItem(name_Svetlost, color_Svetlost, null);
-                    LegendItem legenditem_Padavine = new LegendItem(name_Padavine, color_Svetlost, null);
-                    LegendItem legenditem_TZunanja = new LegendItem(name_TZunanja, color_Svetlost, null);
+                    LegendItem legenditem_Padavine = new LegendItem(name_Padavine, color_Padavine, null);
+                    LegendItem legenditem_TZunanja = new LegendItem(name_TZunanja, color_TZunanja, null);
                     LegendItem legenditem_TNotranja = new LegendItem(name_TNotranja, color_TNotranja, null);
 
                     legend.Font = new Font(Settings.DefaultFont, 17, FontStyle.Bold);
@@ -178,9 +198,7 @@ namespace WebApplication1
                 }
 
                 void Tweak()
-                {                    
-                                                            
-                    AddPoints();
+                {       
 
                     ChartFont = new Font(Settings.DefaultFont, 15);                    
 
@@ -202,7 +220,8 @@ namespace WebApplication1
                         series.IsXValueIndexed = true;
                         series.BorderWidth = 4;
                         series.Name = name_Svetlost; series_Svetlost.Color = color_Svetlost;
-                        series.ChartType = SeriesChartType.Line;                       
+                        series.ChartType = SeriesChartType.Spline;
+                        series.SetCustomProperty("LineTension", "0.1");
                         series.ChartArea = chartarea.Name;
                         series.YAxisType = AxisType.Primary;
                         chartarea.AxisY.LabelStyle.Font = ChartFont;
@@ -238,7 +257,8 @@ namespace WebApplication1
                         series.IsXValueIndexed = true;
                         series.BorderWidth = 8;
                         series.Name = name_TZunanja; series_TZunanja.Color = color_TZunanja;
-                        series.ChartType = SeriesChartType.Line;                    
+                        series.ChartType = SeriesChartType.Spline;
+                        series.SetCustomProperty("LineTension", "0.3");
                         series.ChartArea = chartarea.Name;
                         chartarea.AxisY2.LabelStyle.Font = ChartFont;
                         series.YAxisType = AxisType.Secondary; // skala na desni strani
@@ -256,7 +276,8 @@ namespace WebApplication1
                         series.IsXValueIndexed = true;
                         series.BorderWidth = 8;
                         series.Name = name_TNotranja; series_TNotranja.Color = color_TNotranja;
-                        series.ChartType = SeriesChartType.Line;   
+                        series.ChartType = SeriesChartType.Spline;
+                        series.SetCustomProperty("LineTension", "0.3");
                         series.ChartArea = chartarea.Name;
                         chartarea.AxisY2.LabelStyle.Font = ChartFont;
                         series.YAxisType = AxisType.Secondary; // skala na desni strani
@@ -335,7 +356,7 @@ namespace WebApplication1
                     return interval;
                 }
 
-                void AddPoints()
+                void AddDataPoints()
                 {
                     var buff = Val.ChartValues.GetDataForChart();
 

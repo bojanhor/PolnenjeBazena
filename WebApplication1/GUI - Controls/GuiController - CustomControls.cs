@@ -558,13 +558,13 @@ namespace WebApplication1
                 string menuID; 
 
 
-                public ButtonWithLabel_SelectMenu(string Name, Helper.Datasource dataSource, string ID, string text, float FontSize, Timer updateTimer)
+                public ButtonWithLabel_SelectMenu(string Name, Helper.Datasource dataSource, string ID, string text, float FontSize, Timer updateTimer, bool wideMode)
                 {
-                    ctor(Name, dataSource, ID, text, FontSize, updateTimer);
+                    ctor(Name, dataSource, ID, text, FontSize, updateTimer, wideMode);
                 }
 
                 
-                void ctor(string Name, Helper.Datasource dataSource, string ID, string text, float FontSize, Timer updateTimer)
+                void ctor(string Name, Helper.Datasource dataSource, string ID, string text, float FontSize, Timer updateTimer, bool wideMode)
                 {
 
                     _text = text;
@@ -578,11 +578,11 @@ namespace WebApplication1
 
                     if (Name != null)
                     {
-                        submenu = new SubMenuSelect(menuID + "_submenu", Name, dataSource, text, updateTimer);
+                        submenu = new SubMenuSelect(menuID + "_submenu", Name, dataSource, text, updateTimer, wideMode);
                     }
                     else
                     {
-                        submenu = new SubMenuSelect(menuID + "_submenu", dataSource, text, updateTimer);
+                        submenu = new SubMenuSelect(menuID + "_submenu", dataSource, text, updateTimer, wideMode);
                     }
 
 
@@ -640,7 +640,7 @@ namespace WebApplication1
 
                     Label TitleNameLabel;
 
-                    void ctor(string ID, List<ListItem> DataSource, string text, Timer updateTimer)
+                    void ctor(string ID, List<ListItem> DataSource, string text, Timer updateTimer, bool wideMode)
                     {
                                                
                         this.ID = ID;
@@ -677,7 +677,15 @@ namespace WebApplication1
                         DropDown.Style.Add("border-style", "solid");
                         DropDown.Style.Add("border-width", "0.1vw");
                         DropDown.Style.Add("border-color", "#ededed");
-                        SetControlAbsolutePos(DropDown, 30, 39, 23, 23);
+                        if (wideMode)
+                        {
+                            SetControlAbsolutePos(DropDown, 30, 30, 42, 23);
+                        }
+                        else
+                        {
+                            SetControlAbsolutePos(DropDown, 30, 39, 23, 23);
+                        }
+                        
 
                         ManageSelectedItem(text, DataSource);
 
@@ -722,16 +730,16 @@ namespace WebApplication1
                         Helper.Refresh(); // loads inital page (with closed/invisible menu and restarts updatepanel timer)
                     }
 
-                    public SubMenuSelect(string ID, List<ListItem> list, string text, Timer updateTimer) 
+                    public SubMenuSelect(string ID, List<ListItem> list, string text, Timer updateTimer, bool wideMode) 
                         : base(top, left, width, height)
                     {
-                        ctor(ID, list, text, updateTimer);
+                        ctor(ID, list, text, updateTimer, wideMode);
                     }
 
-                    public SubMenuSelect(string ID, string NameLable, List<ListItem> list, string text, Timer updateTimer)
+                    public SubMenuSelect(string ID, string NameLable, List<ListItem> list, string text, Timer updateTimer, bool wideMode)
                         : base(top, left, width, height)
                     {
-                        ctor(ID, list, text, updateTimer);
+                        ctor(ID, list, text, updateTimer, wideMode);
 
                         addLabel(NameLable);
                     }
@@ -745,7 +753,8 @@ namespace WebApplication1
 
                         SetControlAbsolutePos(TitleNameLabel, 5, 3, 50, 15);
                         Controls.Add(TitleNameLabel);
-                    }                                        
+                    }
+                                        
                 }
             }
 
@@ -1205,7 +1214,7 @@ namespace WebApplication1
                 public float Left { get; private set; }
                 public float Width { get; private set; }
                 public float Height { get; private set; }
-
+                
                 private int _ZIndex;
                 public int ZIndex
                 {
@@ -1250,7 +1259,7 @@ namespace WebApplication1
                 public DropDown(Helper.Datasource dataSource, string ID, string PlcTextValue, float size, float fontSize, bool selfUpdatable)
                 {
                     DataSource = dataSource;
-                    setDropdown(ID, PlcTextValue, size, 0.3F, 1, fontSize, selfUpdatable);
+                    setDropdown(ID, PlcTextValue, size, 0.3F, 1, fontSize, selfUpdatable, false);
                 }
 
                 public DropDown(Helper.Datasource dataSource, string ID, string PlcTextValue, float top, float left, double size, float fontSize, bool selfUpdatable)
@@ -1258,9 +1267,23 @@ namespace WebApplication1
                     DataSource = dataSource;
                     Style.Add("top", Helper.FloatToStringWeb(top, "%"));
                     Style.Add("left", Helper.FloatToStringWeb(left, "%"));
-                    setDropdown(ID, PlcTextValue, (float)size, 0.3F, 1, fontSize, selfUpdatable);
+                    setDropdown(ID, PlcTextValue, (float)size, 0.3F, 1, fontSize, selfUpdatable, false);
                 }
-                              
+
+                public DropDown(Helper.Datasource dataSource, string ID, string PlcTextValue, float size, float fontSize, bool selfUpdatable, bool wideMode)
+                {
+                    DataSource = dataSource;
+                    setDropdown(ID, PlcTextValue, size, 0.3F, 1, fontSize, selfUpdatable, wideMode);
+                }
+
+                public DropDown(Helper.Datasource dataSource, string ID, string PlcTextValue, float top, float left, double size, float fontSize, bool selfUpdatable, bool wideMode)
+                {
+                    DataSource = dataSource;
+                    Style.Add("top", Helper.FloatToStringWeb(top, "%"));
+                    Style.Add("left", Helper.FloatToStringWeb(left, "%"));
+                    setDropdown(ID, PlcTextValue, (float)size, 0.3F, 1, fontSize, selfUpdatable, wideMode);
+                }
+
 
                 string ManageSelectedItem(string PlcTextValue)
                 {
@@ -1292,7 +1315,7 @@ namespace WebApplication1
                     return PlcTextValue;
                 }
 
-                void setDropdown(string ID, string PlcTextValue, float size, float shadowsize, float borderradius, float fontSize, bool selfUpdatable)
+                void setDropdown(string ID, string PlcTextValue, float size, float shadowsize, float borderradius, float fontSize, bool selfUpdatable, bool wideMode)
                 {
 
                     this.ID = ID;
@@ -1307,7 +1330,7 @@ namespace WebApplication1
                     
                     try
                     {
-                        dropdown = new ButtonWithLabel_SelectMenu(Name, DataSource, ID + "_s", ManageSelectedItem(PlcTextValue), 1.5F, UpdateTimer)
+                        dropdown = new ButtonWithLabel_SelectMenu(Name, DataSource, ID + "_s", ManageSelectedItem(PlcTextValue), 1.5F, UpdateTimer, wideMode)
                         {
                             ID = ID + "_dd"
                         };
@@ -1363,10 +1386,60 @@ namespace WebApplication1
                 {                    
                     //triggers.Add(trigger); // TODO delete
                 }
-                
+
+                public string GetSelectedValue()
+                {
+                    foreach (var item in DataSource)
+                    {
+                        if (item.Text == selectedItem.Text)
+                        {
+                            return item.Value;
+                        }
+                    }
+
+                    return null;
+                }
+
+                public string GetSelectedText()
+                {
+                    return selectedItem.Text;
+                }
+
             }
-                //
-               
+            //
+
+            public class DropDownListChartViewSelector : DropDown
+            {
+                static Helper.ChartViewSelectorDatasource datasource = new Helper.ChartViewSelectorDatasource();
+                               
+                public DropDownListChartViewSelector(string ID, string PlcTextValue, float size, float fontSize, bool selfUpdatable)
+                    : base(datasource, ID, PlcTextValue, size, fontSize, selfUpdatable, true)
+                {
+                   
+                    ctor();
+                }
+
+                void ctor()
+                {
+                    DataSource = datasource;
+                    dropdown.DataBind();
+                }
+
+                public static string GetReplacementTextFromEnum(int enum_)
+                {
+                    try
+                    {
+                       
+                        return datasource[enum_].Text;
+                    }
+                    catch (Exception)
+                    {
+                        return datasource[0].Value;
+                    }
+                    
+                }
+            }
+
             public class DropDownListForDimmer : DropDown
             {
                 static Helper.DimmerSelectorDatasource datasource = new Helper.DimmerSelectorDatasource();
@@ -1387,18 +1460,6 @@ namespace WebApplication1
                     : base(datasource, ID, PlcTextValue, size, shadowsize, bordreradius, fontSize, selfUpdatable)
                 {
                     ctor();
-                }
-
-
-
-                public string GetSelectedValue()
-                {
-                    return selectedItem.Value;
-                }
-
-                public string GetSelectedText()
-                {
-                    return selectedItem.Text;
                 }
 
                 void ctor()
@@ -1430,18 +1491,6 @@ namespace WebApplication1
                     ctor();
                 }
 
-
-
-                public string GetSelectedValue()
-                {
-                    return selectedItem.Value;
-                }
-
-                public string GetSelectedText()
-                {
-                    return selectedItem.Text;
-                }
-
                 void ctor()
                 {
                     DataSource = datasource;
@@ -1470,19 +1519,7 @@ namespace WebApplication1
                 {
                     ctor();
                 }
-
-
-
-                public string GetSelectedValue()
-                {
-                    return selectedItem.Value;
-                }
-
-                public string GetSelectedText()
-                {
-                    return selectedItem.Text;
-                }
-
+                
                 void ctor()
                 {
                     DataSource = datasource;
@@ -1511,17 +1548,7 @@ namespace WebApplication1
                 {
                     ctor();
                 }
-
-                public string GetSelectedValue()
-                {
-                    return selectedItem.Value;
-                }
-
-                public string GetSelectedText()
-                {
-                    return selectedItem.Text;
-                }
-
+                
                 void ctor()
                 {
                     DataSource = datasource;
@@ -1550,18 +1577,7 @@ namespace WebApplication1
                 {
                     ctor();
                 }
-
-
-                public string GetSelectedValue()
-                {
-                    return selectedItem.Value;
-                }
-
-                public string GetSelectedText()
-                {
-                    return selectedItem.Text;
-                }
-
+                
                 void ctor()
                 {                   
                     DataSource = datasource;
@@ -1589,17 +1605,6 @@ namespace WebApplication1
                     : base(datasource, ID, PlcTextValue.ToString(), size, shadowsize, bordreradius, fontSize, selfUpdatable)
                 {
                     ctor();
-                }
-
-
-                public string GetSelectedValue()
-                {
-                    return selectedItem.Value;
-                }
-
-                public string GetSelectedText()
-                {
-                    return selectedItem.Text;
                 }
 
                 void ctor()

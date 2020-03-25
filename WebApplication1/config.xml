@@ -117,6 +117,7 @@
 	<EnableChart_Padavine>True</EnableChart_Padavine>									// Enables chart in ChartGraph (Količina padavin)
 	<EnableChart_Tzunanja>True</EnableChart_Tzunanja>									// Enables chart in ChartGraph (Temperatura zunaj)
 	<EnableChart_Tnotranja>True</EnableChart_Tnotranja>									// Enables chart in ChartGraph (Temperatura znotraj)
+	<ShowChartMode>4</ShowChartMode>													// Chart mode selector (1 - displays today; 2 - displays yesterday...)
 		</GUI>//
 		//
 	<CONNECTION>//			

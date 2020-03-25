@@ -14,7 +14,7 @@ namespace WebApplication1
 
         public static readonly byte autoRefreshPageEvery_s = 0;       // refreshes page automatically every __ seconds ( use 0 to disable )
 
-        public static readonly int UpdateValuesPCms = 1000;          // Frekvenca osveževanja vrednosti
+        public static readonly int UpdateValuesPCms = 2000;          // Frekvenca osveževanja vrednosti
 
         public static readonly int Devices = 5;                      // how many devices supported (do not change)        
 
@@ -41,8 +41,8 @@ namespace WebApplication1
         public static int defaultCheckTimingInterval = 40;      // used for loops checking - lower value means higher precision timing
 
         public static string defaultDateFormat = "dd.MM";
-        public static string defaultTimeFormat = "hh:mm";
-        public static string defaultDateTimeFormat = defaultDateFormat + "  " + defaultTimeFormat;
+        public static string defaultTimeFormat = "hh:mm:ss";
+        public static string defaultDateTimeFormat = defaultDateFormat + "  " + defaultTimeFormat + " ";
 
         // colors
         public static readonly string RedColorHtmlHumar = "#C61720";

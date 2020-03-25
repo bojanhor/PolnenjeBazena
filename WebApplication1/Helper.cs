@@ -289,6 +289,43 @@ namespace WebApplication1
                        
         }
 
+        public class ChartViewSelectorDatasource : Datasource
+        {
+            static string[] values;
+
+            public ChartViewSelectorDatasource()
+            {
+                GetDatasource();
+            }
+
+            public void GetDatasource()
+            {
+                GetDatasource(10);
+            }
+
+            public void GetDatasource(int increment)
+            {
+
+                values = new string[] {"Zadnjih 24ur", "1 Dan nazaj", "2 Dneva nazaj", "3 dni nazaj", "Tedenski pogled" };
+
+
+                for (int i = 0; i < values.Length; i++)
+                {
+                    CreateRow(values[i], i+""); // Please make sure values are synchronised With enum: ChartData.ShowChartEnum
+                }
+                               
+            }
+
+            ListItem CreateRow(string text, string value)
+            {
+                ListItem r = new ListItem();
+                r.Text = text;
+                r.Value = value;
+                Add(r); // adds to base class
+                return r;
+            }
+        }
+
         public class DimmerSelectorDatasource : Datasource
         {
             static string[] percents;
@@ -325,7 +362,7 @@ namespace WebApplication1
                 ListItem r = new ListItem();
                 r.Text = text;
                 r.Value = value;
-                Add(r);
+                Add(r);// adds to base class
                 return r;
             }
         }
@@ -368,7 +405,7 @@ namespace WebApplication1
             ListItem CreateRow(string text, string value)
             {
                 ListItem r = new ListItem(text, value);
-                Add(r);
+                Add(r);// adds to base class
                 return r;
             }
         }

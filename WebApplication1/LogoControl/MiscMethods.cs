@@ -215,6 +215,18 @@ namespace WebApplication1
             return Convert.ToInt32(Math.Round(double_, 0));
         }
 
+        // Returns rounded int number from float
+        public static short ToShort(float float_)
+        {
+            return Convert.ToInt16(Math.Round(float_, 0));
+        }
+
+        // Returns rounded int number from double
+        public static short ToShort(double double_)
+        {
+            return Convert.ToInt16(Math.Round(double_, 0));
+        }
+
         // scale bitmap image
         public static Bitmap Scale(Bitmap bitmap, float height)
         {

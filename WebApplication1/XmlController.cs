@@ -869,11 +869,12 @@ namespace WebApplication1
                 SaveCurrentTB(XmlFile.ToString());
             }
 
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                throw new Exception(
+                   "Error while setting value: " + searchValue + ". Error info: " + ex.Message);
             }
-           
+
         }
 
         public static void SetEnableCharts_Padavine(bool value) 
@@ -886,9 +887,10 @@ namespace WebApplication1
                 SaveCurrentTB(XmlFile.ToString());
             }
 
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                throw new Exception(
+                   "Error while setting value: " + searchValue + ". Error info: " + ex.Message);
             }
 
         }
@@ -903,9 +905,10 @@ namespace WebApplication1
                 SaveCurrentTB(XmlFile.ToString());
             }
 
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                throw new Exception(
+                   "Error while setting value: " + searchValue + ". Error info: " + ex.Message);
             }
 
         }
@@ -920,13 +923,51 @@ namespace WebApplication1
                 SaveCurrentTB(XmlFile.ToString());
             }
 
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                throw new Exception(
+                    "Error while setting value: "+ searchValue + ". Error info: " + ex.Message);
             }
 
         }
+                
+        public static int GetShowChartMode()
+        {
+            var searchValue = "ShowChartMode";
 
+            try
+            {
+                var buff = Convert.ToInt32(XmlGUI.Element(searchValue).Value);
+                if (buff >10 || buff < 0)
+                {
+                    throw new Exception();
+                }
+                return buff;
+            }
+            catch (Exception)
+            {
+                throw new Exception(
+                    searchValue + " value in config file is not valid " + searchValue + " value. " +
+                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "value must be between 0 and 10");
+            }
+        }
 
+        public static void SetShowChart(int value)
+        {
+            var searchValue = "ShowChartMode";
+
+            try
+            {
+                XmlFile.Element("root").Element("GUI").Element(searchValue).Value = value.ToString();
+                SaveCurrentTB(XmlFile.ToString());
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception(
+                   "Error while setting value: " + searchValue + ". Error info: " + ex.Message);
+            }
+        }
     }
 }

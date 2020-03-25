@@ -113,10 +113,11 @@
    	<AddressLuc_WriteToPLC11>bit at 110.0</AddressLuc_WriteToPLC11>					//
    	<AddressLuc_WriteToPLC12>bit at 120.0</AddressLuc_WriteToPLC12>					//
     //
-	<EnabeChart_Svetlost>true</EnabeChart_Svetlost>									// Enables chart in ChartGraph (Zunanja osvetljenost)
-	<EnabeChart_Padavine>true</EnabeChart_Padavine>									// Enables chart in ChartGraph (Količina padavin)
-	<EnabeChart_Tzunanja>true</EnabeChart_Tzunanja>									// Enables chart in ChartGraph (Temperatura zunaj)
-	<EnabeChart_Tnotranja>true</EnabeChart_Tnotranja>									// Enables chart in ChartGraph (Temperatura znotraj)
+	<EnableChart_Svetlost>True</EnableChart_Svetlost>									// Enables chart in ChartGraph (Zunanja osvetljenost)
+	<EnableChart_Padavine>True</EnableChart_Padavine>									// Enables chart in ChartGraph (Količina padavin)
+	<EnableChart_Tzunanja>True</EnableChart_Tzunanja>									// Enables chart in ChartGraph (Temperatura zunaj)
+	<EnableChart_Tnotranja>True</EnableChart_Tnotranja>									// Enables chart in ChartGraph (Temperatura znotraj)
+	<ShowChartMode>1</ShowChartMode>													// Chart mode selector (1 - displays today; 2 - displays yesterday...)
 		</GUI>//
 		//
 	<CONNECTION>//			
