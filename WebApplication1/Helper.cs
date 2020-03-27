@@ -305,15 +305,23 @@ namespace WebApplication1
 
             public void GetDatasource(int increment)
             {
+                values = new string[]
+                {
+                    ChartValues.ChartData.GetTextFromEnum(ChartValues.ChartData.ShowChartEnum._Today),
+                    ChartValues.ChartData.GetTextFromEnum(ChartValues.ChartData.ShowChartEnum._1DayAgo),
+                    ChartValues.ChartData.GetTextFromEnum(ChartValues.ChartData.ShowChartEnum._2DaysAgo),
+                    ChartValues.ChartData.GetTextFromEnum(ChartValues.ChartData.ShowChartEnum._3DaysAgo),
+                    ChartValues.ChartData.GetTextFromEnum(ChartValues.ChartData.ShowChartEnum._ThisWeek),
+                    ChartValues.ChartData.GetTextFromEnum(ChartValues.ChartData.ShowChartEnum._ThisMonth)
 
-                values = new string[] {"Zadnjih 24ur", "1 Dan nazaj", "2 Dneva nazaj", "3 dni nazaj", "Tedenski pogled" };
+                };
 
 
                 for (int i = 0; i < values.Length; i++)
                 {
-                    CreateRow(values[i], i+""); // Please make sure values are synchronised With enum: ChartData.ShowChartEnum
+                    CreateRow(values[i], i + ""); // Please make sure values are synchronised With enum: ChartData.ShowChartEnum
                 }
-                               
+
             }
 
             ListItem CreateRow(string text, string value)

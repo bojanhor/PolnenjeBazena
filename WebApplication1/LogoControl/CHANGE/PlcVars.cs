@@ -11,7 +11,7 @@ namespace WebApplication1
     {
         public static void ReportComunicatoonMessage(string message)
         {
-            Val.Message.Setmessage(message);
+            SysLog.Message.SetMessage(message);
         }
 
         public class Word

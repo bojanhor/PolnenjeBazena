@@ -12,8 +12,7 @@ namespace WebApplication1
     {        
         public static Helper.Initialiser Initialiser = new Helper.Initialiser();
         public static LogoControler logocontroler = new LogoControler();
-        public static string[] watchdog = new string[Settings.Devices + 1];
-        public static MessageToWeb Message = new MessageToWeb();
+        public static string[] watchdog = new string[Settings.Devices + 1];        
         public static GuiController guiController = new GuiController();
         public static string ScrolToBottomTextboxScript = null;
         public static string RetainPositionTextboxScript = null;
@@ -41,27 +40,7 @@ namespace WebApplication1
                 }
             }
         }
-
-        public class MessageToWeb
-        {
-            string Message = "";
-
-            public MessageToWeb()
-            {
-
-            }
-
-            public void Setmessage(string message)
-            {
-                Message += message + Environment.NewLine;
-            }
-
-            public string GetMessage()
-            {
-                return Message;
-            }
-        }
-                
+                                
         static void getScrolDownTextboxScript()
         {
             ScrolToBottomTextboxScript = GetScript("ScrollToBottom.js");

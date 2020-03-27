@@ -455,7 +455,7 @@ namespace WebApplication1
 
                             TextLabel.Style.Add(HtmlTextWriterStyle.Position, "absolute");
                             TextLabel.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
-                            TextLabel.Style.Add(HtmlTextWriterStyle.FontSize, "1.1vw");
+                            TextLabel.Style.Add(HtmlTextWriterStyle.FontSize, "1.0vw");
                             TextLabel.Style.Add(HtmlTextWriterStyle.FontWeight, "bold");
                             TextLabel.Style.Add(HtmlTextWriterStyle.ZIndex, "20");
 
@@ -1428,8 +1428,7 @@ namespace WebApplication1
                 public static string GetReplacementTextFromEnum(int enum_)
                 {
                     try
-                    {
-                       
+                    {                       
                         return datasource[enum_].Text;
                     }
                     catch (Exception)

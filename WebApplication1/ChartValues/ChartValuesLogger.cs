@@ -21,33 +21,40 @@ namespace WebApplication1.ChartValues
         static readonly string FileName2DaysAgo = "ChartValues_2DaysAgo.csv";
         static readonly string FileName3DaysAgo = "ChartValues_3DaysAgo.csv";
         static readonly string FileNameWeek = "ChartValues_Week.csv";
+        static readonly string FileNameMonth = "ChartValues_Month.csv";
 
         public static string CsvFileToday = DirectoryPath + "\\" + FileNameToday;
         public static string CsvFile_1DayAgo = DirectoryPath + "\\" + FileName1DayAgo;
         public static string CsvFile_2DaysAgo = DirectoryPath + "\\" + FileName2DaysAgo;
         public static string CsvFile_3DaysAgo = DirectoryPath + "\\" + FileName3DaysAgo;
         public static string CsvFileWeek = DirectoryPath + "\\" + FileNameWeek;
-               
+        public static string CsvFileMonth = DirectoryPath + "\\" + FileNameMonth;
+
         DateTime DateTimeNow;
         short? danNoc;
         short? padavineH;
         short? Tzunanja;
         short? Tnotranja;
 
-        List<DateTime> DateTimeNow_lst = new List<DateTime>();
-        List<short?> danNoc_lst = new List<short?>();
-        List<short?> padavineH_lst = new List<short?>();
-        List<short?> Tzunanja_lst = new List<short?>();
-        List<short?> Tnotranja_lst = new List<short?>();
+        List<DateTime> DateTimeNow_week_lst = new List<DateTime>();
+        List<short?> danNoc_week_lst = new List<short?>();
+        List<short?> padavineH_week_lst = new List<short?>();
+        List<short?> Tzunanja_week_lst = new List<short?>();
+        List<short?> Tnotranja_week_lst = new List<short?>();
 
-        string oldDataLine;
+        List<DateTime> DateTimeNow_mnth_lst = new List<DateTime>();
+        List<short?> danNoc_mnth_lst = new List<short?>();
+        List<short?> padavineH_mnth_lst = new List<short?>();
+        List<short?> Tzunanja_mnth_lst = new List<short?>();
+        List<short?> Tnotranja_mnth_lst = new List<short?>();
 
-        float calcMax1day = 60 * 60 / (Settings.ChartUpdateRefreshRate / 1000F) * 24; // sets max number of lines to match 1 day (60sec per minure   *   60minutes per hour   ...   * 24hours per day)
-        float calcMax1week = 60 * 60 / (Settings.ChartUpdateRefreshRate / 1000F) * 24; // sets max number of lines to match 1 week (hardcoded 7 times less resolution   and 7 times more data  .. number is the same)
+        List<string> oldDataLine = new List<string>();
 
+        float MaxEntries = 60 * 60 / (Settings.ChartUpdateRefreshRate / 1000F) * 24; // sets max number of lines to match 1 day (60sec per minure   *   60minutes per hour   ...   * 24hours per day)
+        
         public ChartData.ShowChartEnum ShowChart { get; set; }
 
-        ChartDataWriter CDataWrt = new ChartDataWriter(CsvFileToday, CsvFile_1DayAgo, CsvFile_2DaysAgo, CsvFile_3DaysAgo, CsvFileWeek);
+        ChartDataWriter CDataWrt = new ChartDataWriter();
 
         public ChartValuesLogger()
         {
@@ -95,8 +102,8 @@ namespace WebApplication1.ChartValues
                 return ChartData1;
             }
             catch (Exception ex)
-            {
-                Val.Message.Setmessage("Preparing data for writing to csv failed. " + ex.Message);
+            {                
+                SysLog.Message.SetMessage("Preparing data for writing to csv failed. " + ex.Message);
                 return null;
             }
            
@@ -111,19 +118,20 @@ namespace WebApplication1.ChartValues
             }
             catch (Exception ex)
             {
-                Val.Message.Setmessage("Timer interval failed to complete. Timer will try next period. " + ex.Message);
+                SysLog.Message.SetMessage("Timer interval failed to complete. Timer will try next period. " + ex.Message);
             }
             
         }
 
         void timing()
         {
-            var loopTimer = new Misc.LoopTiming(Settings.ChartUpdateRefreshRate, Settings.defaultCheckTimingInterval);
+            var loopTimer = new Misc.LoopTiming(Settings.ChartUpdateRefreshRate, Settings.defaultCheckTimingInterval*2);
 
             while (true)
             {
                 loopTimer.WaitForIt();
-                timerDoStuf();                
+                timerDoStuf();
+                Thread.Sleep(100); // prevent too fast looping in case of process freezing
             }
         }
 
@@ -150,70 +158,100 @@ namespace WebApplication1.ChartValues
             Tzunanja = Val.logocontroler.Prop1.DanNoc_Vrednost_An.Value;
             Tnotranja = Val.logocontroler.Prop1.DanNoc_Vrednost_An.Value;
                        
-            DateTimeNow_lst.Add(DateTime.Now);
-            danNoc_lst.Add(Val.logocontroler.Prop1.DanNoc_Vrednost_An.Value);
-            padavineH_lst.Add(Val.logocontroler.Prop2.PadavineZadnjaUra.Value);
-            Tzunanja_lst.Add(Val.logocontroler.Prop1.DanNoc_Vrednost_An.Value);
-            Tnotranja_lst.Add(Val.logocontroler.Prop1.DanNoc_Vrednost_An.Value);
+            DateTimeNow_week_lst.Add(DateTime.Now);
+            danNoc_week_lst.Add(Val.logocontroler.Prop1.DanNoc_Vrednost_An.Value);
+            padavineH_week_lst.Add(Val.logocontroler.Prop2.PadavineZadnjaUra.Value);
+            Tzunanja_week_lst.Add(Val.logocontroler.Prop1.DanNoc_Vrednost_An.Value);
+            Tnotranja_week_lst.Add(Val.logocontroler.Prop1.DanNoc_Vrednost_An.Value);            
 
             //
             string concat_ = concat(DateTimeNow, danNoc, padavineH, Tzunanja, Tnotranja, delimeter_); // data to string - csv
             //
 
+           
             try
             {         
-                // write todays file
-                oldDataLine = LimitData(Convert.ToInt32(calcMax1day), CsvFileToday); // removes oldest line from csv file if there are too many lines - returns lines that were removed
+                // write todays file                
                 CDataWrt.Write(concat_, CsvFileToday);
+                oldDataLine = LimitData(Convert.ToInt32(MaxEntries), CsvFileToday, CsvFile_1DayAgo); // removes oldest line from csv file if there are too many lines - returns lines that were removed
 
-                
-                if (oldDataLine != "")
-                {// write yesterdays file
-                    oldDataLine = LimitData(Convert.ToInt32(calcMax1day), CsvFile_1DayAgo);
-                    CDataWrt.Write(concat_, CsvFile_1DayAgo);
 
-                    if (oldDataLine != "")
-                    {// write 2 days ago file
-                        oldDataLine = LimitData(Convert.ToInt32(calcMax1day), CsvFile_2DaysAgo);
-                        CDataWrt.Write(concat_, CsvFile_2DaysAgo);
+                if (oldDataLine.Count > 0)
+                {// write yesterdays file                    
+                    CDataWrt.Write(oldDataLine, CsvFile_1DayAgo);
+                    oldDataLine = LimitData(Convert.ToInt32(MaxEntries), CsvFile_1DayAgo, CsvFile_2DaysAgo);
 
-                        if (oldDataLine != "")
-                        {// write 3 days ago file
-                            oldDataLine = LimitData(Convert.ToInt32(calcMax1day), CsvFile_3DaysAgo);
-                            CDataWrt.Write(concat_, CsvFile_3DaysAgo);
+                    if (oldDataLine.Count > 0)
+                    {// write 2 days ago file                        
+                        CDataWrt.Write(oldDataLine, CsvFile_2DaysAgo);
+                        oldDataLine = LimitData(Convert.ToInt32(MaxEntries), CsvFile_2DaysAgo, CsvFile_3DaysAgo);
+
+                        if (oldDataLine.Count > 0)
+                        {// write 3 days ago file                            
+                            CDataWrt.Write(oldDataLine, CsvFile_3DaysAgo);
+                            oldDataLine = LimitData(Convert.ToInt32(MaxEntries), CsvFile_3DaysAgo, null);
                         }
                     }
                 }
 
 
                 // averages for 1week
-                if (DateTimeNow_lst.Count >= 7) // prepares data for one week
+                if (DateTimeNow_week_lst.Count >= 7) // prepares data for one week
                 {
-                    // calc averages
-                    DateTimeNow = DateTimeNow_lst.Last(); // reused buffer
-                    danNoc = Average(danNoc_lst);// reused buffer
-                    padavineH = Average(padavineH_lst);// reused buffer
-                    Tzunanja = Average(Tzunanja_lst);// reused buffer
-                    Tnotranja = Average(Tnotranja_lst);// reused buffer
+                    // calc averages for week representation
+                    DateTimeNow = DateTimeNow_week_lst.Last(); // reused buffer
+                    danNoc = Average(danNoc_week_lst);// reused buffer
+                    padavineH = Average(padavineH_week_lst);// reused buffer
+                    Tzunanja = Average(Tzunanja_week_lst);// reused buffer
+                    Tnotranja = Average(Tnotranja_week_lst);// reused buffer
 
                     concat_ = concat(DateTimeNow, danNoc, padavineH, Tzunanja, Tnotranja, delimeter_); // data to string - csv
 
-                    // write
-                    oldDataLine = LimitData(Convert.ToInt32(calcMax1week), CsvFileToday); // removes oldest line from csv file if there are too many lines - returns lines that were removed
+                    // write                    
                     CDataWrt.Write(concat_, CsvFileWeek);
+                    oldDataLine = LimitData(Convert.ToInt32(MaxEntries), CsvFileWeek, null); // removes oldest line from csv file if there are too many lines - returns lines that were removed
 
-                    //clear lists
-                    DateTimeNow_lst.Clear();
-                    danNoc_lst.Clear();
-                    padavineH_lst.Clear();
-                    Tzunanja_lst.Clear();
-                    Tnotranja_lst.Clear();
+                    // monthly values add
+                    DateTimeNow_mnth_lst.Add(DateTimeNow);
+                    danNoc_mnth_lst.Add(danNoc);
+                    padavineH_mnth_lst.Add(padavineH);
+                    Tzunanja_mnth_lst.Add(Tzunanja);
+                    Tnotranja_mnth_lst.Add(Tnotranja);
+
+                    //clear lists week
+                    DateTimeNow_week_lst.Clear();
+                    danNoc_week_lst.Clear();
+                    padavineH_week_lst.Clear();
+                    Tzunanja_week_lst.Clear();
+                    Tnotranja_week_lst.Clear();
+
+
+                    if (DateTimeNow_mnth_lst.Count >= 4)
+                    {// calc averages for month representation
+                        DateTimeNow = DateTimeNow_mnth_lst.Last(); // reused buffer
+                        danNoc = Average(danNoc_mnth_lst);// reused buffer
+                        padavineH = Average(padavineH_mnth_lst);// reused buffer
+                        Tzunanja = Average(Tzunanja_mnth_lst);// reused buffer
+                        Tnotranja = Average(Tnotranja_mnth_lst);// reused buffer
+
+                        concat_ = concat(DateTimeNow, danNoc, padavineH, Tzunanja, Tnotranja, delimeter_); // data to string - csv
+                                                                                                           // write                    
+                        CDataWrt.Write(concat_, CsvFileMonth);
+                        oldDataLine = LimitData(Convert.ToInt32(MaxEntries), CsvFileWeek, null); // removes oldest line from csv file if there are too many lines - returns lines that were removed
+                                                                                             
+                        //clear lists week
+                        DateTimeNow_mnth_lst.Clear();
+                        danNoc_mnth_lst.Clear();
+                        padavineH_mnth_lst.Clear();
+                        Tzunanja_mnth_lst.Clear();
+                        Tnotranja_mnth_lst.Clear();
+                    }
                 }
                 
             }
             catch (Exception ex)
             {
-                Val.Message.Setmessage("Write to csv file failed. " + ex.Message);
+                SysLog.Message.SetMessage("Write to csv file failed. " + ex.Message);
             }
            
         }
@@ -269,15 +307,15 @@ namespace WebApplication1.ChartValues
             }
             catch (Exception ex)
             {
-                Val.Message.Setmessage("Error reading csv file: " + ex.Message);
+                SysLog.Message.SetMessage("Error reading csv file: " + ex.Message);
             }            
             return null;
             
         }
 
-        string LimitData(int MaxLines, string FilePath)
+        List<string> LimitData(int MaxLines, string FilePath, string FilePathTOWriteRemains)
         {
-            string[] overflowText = new string[1] {""}; // new empty table
+            List<string> overflowText = new List<string>();
 
             try
             {
@@ -285,25 +323,24 @@ namespace WebApplication1.ChartValues
 
                 if (lines != null)
                 {
-                    if (lines.Count >= MaxLines)
+                    if (lines.Count > MaxLines)
                     {
-                        var overflow = lines.Count - MaxLines + 1;
-                        overflowText = new string[overflow];
-                        overflowText = lines.Skip(overflow).ToArray();
+                        var overflow = lines.Count - MaxLines ; // calculating overflow                       
+                        overflowText = lines.Skip(overflow).ToList(); // stores all overflowed values
 
                         foreach (var item in overflowText)
                         {
-                            CDataWrt.Write(item, FilePath);
+                            CDataWrt.Write(item, FilePathTOWriteRemains); // writes all overflowed values to different file
                         }
                     }
                 }                
             }
             catch (Exception ex)
             {
-                Val.Message.Setmessage("Limiting data for csv file failed (method name: LimitData(int MaxLines)). " + ex.Message); 
+                SysLog.Message.SetMessage("Limiting data for csv file failed (method name: LimitData(int MaxLines)). " + ex.Message); 
             }
 
-            return overflowText[0];
+            return overflowText;
         }
 
         void LimitPeriod()
@@ -365,6 +402,11 @@ namespace WebApplication1.ChartValues
                     CreateFile(CsvFileWeek);
                 }
 
+                if (!ifFileExists(CsvFileMonth))
+                {
+                    CreateFile(CsvFileMonth);
+                }
+
                 // try file
                 LoadFile(CsvFileToday);
                 LoadFile(CsvFile_1DayAgo);
@@ -374,7 +416,7 @@ namespace WebApplication1.ChartValues
             }
             catch (Exception ex)
             {
-                Val.Message.Setmessage("Error with file: *.csv. " + ex.Message);                
+                SysLog.Message.SetMessage("Error with file: *.csv. " + ex.Message);                
             }
         }
 
@@ -391,7 +433,7 @@ namespace WebApplication1.ChartValues
             }
             catch (Exception ex)
             {
-                throw new Exception("File " + FilePath + " can not be opened, Program will create new file. Error: " + ex.Message);
+                throw new Exception("File " + FilePath + " can not be opened. Error: " + ex.Message);
             }
                    
         }
@@ -430,61 +472,71 @@ namespace WebApplication1.ChartValues
         public readonly string CsvFile_2DaysAgo;
         public readonly string CsvFile_3DaysAgo;
         public readonly string CsvFileWeek;
+        public readonly string CsvFileMonth;
 
         List<string> line_Pending = new List<string>(); // pending writes
         List<string> PathCsvFile_Pending = new List<string>(); //pending writes;
 
-        public ChartDataWriter(string CsvFileToday, string CsvFile_1DayAgo, string CsvFile_2DaysAgo, string CsvFile_3DaysAgo, string CsvFileWeek)
+        public ChartDataWriter()
         {
             Misc.SmartThread t = new Misc.SmartThread( () => writer() );
             t.Start("ChartDataWriter", ApartmentState.MTA, false);
-
-            this.CsvFileToday = CsvFileToday;
-            this.CsvFile_1DayAgo = CsvFile_1DayAgo;
-            this.CsvFile_2DaysAgo = CsvFile_2DaysAgo;
-            this.CsvFile_3DaysAgo = CsvFile_3DaysAgo;
-            this.CsvFileWeek = CsvFileWeek;
-    }
+                        
+        }
 
         void writer()
         {
+            int returnCodeWriteSuccess = -1;
             while (true)
             {
-                Thread.Sleep(Settings.defaultCheckTimingInterval);
+                Thread.Sleep(500); // write permitted every 500ms to prevent overload
                 if (line_Pending.Count > 0)
                 {
-                    Write_Thread(line_Pending[0], PathCsvFile_Pending[0]);
-                    line_Pending.RemoveAt(0);
-                    PathCsvFile_Pending.RemoveAt(0);
+                    returnCodeWriteSuccess = Write_Thread(line_Pending[0], PathCsvFile_Pending[0]); // writes pending data to file and returns 0 if successfull
+
+                    if (returnCodeWriteSuccess == 0)
+                    {// if successfully written removes pending data from buffer
+                        line_Pending.RemoveAt(0);
+                        PathCsvFile_Pending.RemoveAt(0);
+                    }                    
                 }
             }
         }
         
-        public void Write(string line, string PathCsvFile)
-        {
-            line_Pending.Add(line);
+        public void Write(List<string> lines, string PathCsvFile)
+        {// adds to pending data (for writing) - multiple lines
+            line_Pending.AddRange(lines);
             PathCsvFile_Pending.Add(PathCsvFile);
 
         }
+        public void Write(string line, string PathCsvFile)
+        {// adds to pending data (for writing) - only one line
+            List<string> s = new List<string>();
+            s.Add(line);
+            Write(s, PathCsvFile);
 
-        void Write_Thread(string line, string PathCsvFile)
+        }
+
+        int Write_Thread(string line, string PathCsvFile)
         {
-            if (line == null) { return; }
-            if (line == "" || line == " ") { return; }
+            // if no data to write return
+            if (line == null) { return 0; }
+            if (line == "" || line == " ") { return 0; }
 
             try
             {               
                 using (StreamWriter s = new StreamWriter(PathCsvFile, true))
-                {
+                {// write data
                     s.WriteLine(line);
                     s.Flush();
                     s.Close();
+                    return 0;
                 }               
             }
             catch (Exception ex)
             {
-                Val.Message.Setmessage("Writing values to csv file failed (" + PathCsvFile + "). " + ex.Message);
-                
+                SysLog.Message.SetMessage("Writing values to csv file failed (" + PathCsvFile + "). " + ex.Message);
+                return -1;
             }
         }
         
@@ -515,7 +567,7 @@ namespace WebApplication1.ChartValues
             }
             catch (Exception ex)
             {
-                Val.Message.Setmessage("Reading chart data from file failed ("+ FilePath + "): " + ex.Message);
+                SysLog.Message.SetMessage("Reading chart data from file failed ("+ FilePath + "): " + ex.Message);
             }
              
         }
@@ -526,11 +578,13 @@ namespace WebApplication1.ChartValues
            _1DayAgo,
            _2DaysAgo,
            _3DaysAgo,
-           _ThisWeek
+           _ThisWeek,
+           _ThisMonth
         }
 
         public static string GetPathShowchart(ShowChartEnum showchartEnum)
         {
+            
             if (showchartEnum == ShowChartEnum._Today)
             {
                 return ChartValuesLogger.CsvFileToday;
@@ -551,12 +605,52 @@ namespace WebApplication1.ChartValues
             {
                 return ChartValuesLogger.CsvFileWeek;
             }
+            else if (showchartEnum == ShowChartEnum._ThisMonth)
+            {
+                return ChartValuesLogger.CsvFileMonth;
+            }
+
             else
             {
                 return ChartValuesLogger.CsvFileToday;
             }
 
         }
+
+        public static string GetTextFromEnum(ShowChartEnum showchartEnum)
+        {           
+            if (showchartEnum == ShowChartEnum._Today)
+            {
+                return "Zadnjih 24ur";
+            }
+            else if (showchartEnum == ShowChartEnum._1DayAgo)
+            {
+                return "1 Dan nazaj";
+            }
+            else if (showchartEnum == ShowChartEnum._2DaysAgo)
+            {
+                return "2 Dneva nazaj";
+            }
+            else if (showchartEnum == ShowChartEnum._3DaysAgo)
+            {
+                return "3 dni nazaj";
+            }
+            else if (showchartEnum == ShowChartEnum._ThisWeek)
+            {
+                return "Tedenski pogled";
+            }
+            else if (showchartEnum == ShowChartEnum._ThisMonth)
+            {
+                return "Mesečni pogled";
+            }
+
+            else
+            {
+                return "Zadnjih 24ur";
+            }
+        }
+
+        
         
     }
 }

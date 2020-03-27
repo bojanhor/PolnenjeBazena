@@ -246,7 +246,7 @@ namespace WebApplication1
         }
 
         // PUBLIC
-
+                
         public static IPAddress GetLogoIP(int n)
         {
             if (n < 0 || n > Settings.Devices)

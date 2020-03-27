@@ -47,8 +47,8 @@ namespace WebApplication1
             void Initialize()
             {
                 MainDiv = DIV.CreateDivAbsolute(0, 0, 100, 100, "%");
-                ChartTweaker ct1 = new ChartTweaker(thisPage, "Chart1"); // Create 2 overlaying charts to prevent flicker
-                ChartTweaker ct2 = new ChartTweaker(thisPage, "Chart2");
+                ChartTweaker ct1 = new ChartTweaker(thisPage, "Chart1", MainDiv); // Create 2 overlaying charts to prevent flicker
+                ChartTweaker ct2 = new ChartTweaker(thisPage, "Chart2", MainDiv);
             }
 
             void AddControls()
@@ -164,22 +164,54 @@ namespace WebApplication1
                 public Chart ChartGraph;
                 Page page;
                 string chartID;
+                HtmlGenericControl MainDiv;
 
-            
-                              
 
-                public ChartTweaker(Page page, string chartID)
+
+
+                public ChartTweaker(Page page, string chartID, HtmlGenericControl MainDiv)
                 {
                     this.page = page;
                     this.chartID = chartID;
+                    this.MainDiv = MainDiv;
 
                     FindChart();
                     AddDataPoints();
                     Tweak();
                     Resize();
                     CreateLegend();
+                    CreateUnitLabels();
+                }
 
+                void CreateUnitLabels()
+                {
+                    var h = 23.2F;
+                    var font = "1.2vw";
 
+                    if (XmlController.GetEnableCharts_Svetlost())
+                    {
+                        Label Unit_Svetlost = new Label() { Text = "[%]", ForeColor = color_Svetlost};
+                        Unit_Svetlost.Style.Add(HtmlTextWriterStyle.FontSize, font);
+                        MainDiv.Controls.Add(Unit_Svetlost);
+                        SetControlAbsolutePos(Unit_Svetlost, h, 5);
+                    }
+
+                    if (XmlController.GetEnableCharts_Padavine())
+                    {
+                        Label Unit_Padavine = new Label() { Text = "[mm/h]", ForeColor = color_Padavine };
+                        Unit_Padavine.Style.Add(HtmlTextWriterStyle.FontSize, font);
+                        MainDiv.Controls.Add(Unit_Padavine);
+                        SetControlAbsolutePos(Unit_Padavine, h, 0);
+                    }
+
+                    if (XmlController.GetEnableCharts_Tnotranja() || XmlController.GetEnableCharts_Tzunanja())
+                    {
+                        Label Unit_T = new Label() { Text = "[°C]", ForeColor = color_TZunanja };
+                        Unit_T.Style.Add(HtmlTextWriterStyle.FontSize, font);
+                        MainDiv.Controls.Add(Unit_T);
+                        SetControlAbsolutePos(Unit_T, h, 94);
+                    }
+                    
                 }
 
                 void CreateLegend()
@@ -358,7 +390,13 @@ namespace WebApplication1
 
                 void AddDataPoints()
                 {
-                    var buff = Val.ChartValues.GetDataForChart();
+                    ChartValues.ChartData buff = null;
+
+                    if (Val.ChartValues != null)
+                    {
+                        buff = Val.ChartValues.GetDataForChart();
+                    }
+                    
 
                     if (buff!=null)
                     {
@@ -371,7 +409,7 @@ namespace WebApplication1
                         }
                         catch (Exception ex)
                         {
-                            Val.Message.Setmessage("Creating points in chart failed (databind failed in method: AddPoints()). Error info: " + ex.Message);
+                            SysLog.Message.SetMessage("Creating points in chart failed (databind failed in method: AddPoints()). Error info: " + ex.Message);
                         }
                         
                     }

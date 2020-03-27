@@ -191,23 +191,27 @@ namespace WebApplication1
                         if (IfDisconnectProcedure(device)) { return; }
 
 
-
-                        switch (device)
+                        if (LOGOConnection[device].connectionStatusLOGO == (int)Connection.Status.Connected ||
+                            LOGOConnection[device].connectionStatusLOGO == (int)Connection.Status.Warning)
                         {
-                            case 1: PROGRAM1(Prop1); break;
-                            case 2: PROGRAM2(Prop2); break;
-                            case 3: PROGRAM3(Prop3); break;
-                            case 4: PROGRAM4(Prop4); break;
-                            case 5: PROGRAM5(Prop5); break;
-                            case 6: PROGRAM6(Prop6); break;
-                            case 7: PROGRAM7(Prop7); break;
-                            case 8: PROGRAM8(Prop8); break;
+                            switch (device)
+                            {
+                                case 1: PROGRAM1(Prop1); break;
+                                case 2: PROGRAM2(Prop2); break;
+                                case 3: PROGRAM3(Prop3); break;
+                                case 4: PROGRAM4(Prop4); break;
+                                case 5: PROGRAM5(Prop5); break;
+                                case 6: PROGRAM6(Prop6); break;
+                                case 7: PROGRAM7(Prop7); break;
+                                case 8: PROGRAM8(Prop8); break;
 
 
-                            default:
-                                WL("Internal Error: Switch statement does not support this device", -2); LOGOConnection[device].connectionStatusLOGO = (int)Connection.Status.Error; break;
+                                default:
+                                    WL("Internal Error: Switch statement does not support this device", -2); LOGOConnection[device].connectionStatusLOGO = (int)Connection.Status.Error; break;
 
+                            }
                         }
+                        
                     }
                     catch (Exception ex)
                     {
@@ -462,7 +466,7 @@ namespace WebApplication1
 
             LOGOConnection[Client.deviceID].connectionStatusLOGO = (int)Connection.Status.Connecting;
             err = Client.Disconnect();
-            System.Threading.Thread.Sleep(100);
+            Thread.Sleep(100);
             err = Client.Connect();
             if ((err) == 0)
             {
@@ -478,9 +482,9 @@ namespace WebApplication1
         }
 
         public void ConnectAsync(int device)
-        {            
+        {
             if (!BackgroundWorker[device].IsBusy)
-            {               
+            {
                 BackgroundWorker[device].RunWorkerAsync();
             }
         }
@@ -491,8 +495,6 @@ namespace WebApplication1
             WL("Disconected by the user", device);
             BackgroundWorker[device].CancelAsync();
             LOGO[device].Disconnect();
-
-
 
         }
 
@@ -551,12 +553,12 @@ namespace WebApplication1
                     System.Diagnostics.Debug.WriteLine(msg);
                 }
 
-                Val.Message.Setmessage(msg); // post to website
+                SysLog.Message.SetMessage(msg); // post to website
             }
             catch (Exception ex)
             {
                 var i = ex.InnerException;
-                throw new Exception("Internal error inside WL() method (used for loging and error postiing).  " + ex.Message + "// Innner exception message: " + i);
+                throw new Exception("Internal error inside WL() method (used for loging and error posting).  " + ex.Message + "// Innner exception message: " + i);
             }
 
 

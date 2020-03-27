@@ -66,7 +66,7 @@ namespace WebApplication1.Pages
             }
             else
             {
-                Val.logocontroler.ConnectAsync(1);
+                Val.logocontroler.ConnectAsync(id);
             }
         }
 
@@ -163,7 +163,7 @@ namespace WebApplication1.Pages
 
         private void WritelineDebug()
         {            
-            Val.guiController.PageAdvanced_.TextBoxDebug.Text = Val.Message.GetMessage(); 
+            Val.guiController.PageAdvanced_.TextBoxDebug.Text = SysLog.Message.GetMessage(); 
         }
                
     }

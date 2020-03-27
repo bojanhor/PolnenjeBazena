@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root> // Please close program before editing this document! In other case changes might be overwritten
-	<GENERAL>//
-		<logFilePath>C:\VS Projekti v delu\WebApplication1\WebApplication1\</logFilePath> // TXT Log
+	<GENERAL>//		
 		<UserActionsFilePath>C:\VS Projekti v delu\WebApplication1\WebApplication1\</UserActionsFilePath> // CSV Log of user actions		
 		<WatchdogRetries>3</WatchdogRetries>				// how many times watchdog retries to get value from PLC before error is shown and reconection is invoked
 		<AutoConnect>True</AutoConnect>           			// autoconnect at startup		
@@ -117,7 +116,7 @@
 	<EnableChart_Padavine>True</EnableChart_Padavine>									// Enables chart in ChartGraph (Količina padavin)
 	<EnableChart_Tzunanja>True</EnableChart_Tzunanja>									// Enables chart in ChartGraph (Temperatura zunaj)
 	<EnableChart_Tnotranja>True</EnableChart_Tnotranja>									// Enables chart in ChartGraph (Temperatura znotraj)
-	<ShowChartMode>4</ShowChartMode>													// Chart mode selector (1 - displays today; 2 - displays yesterday...)
+	<ShowChartMode>0</ShowChartMode>													// Chart mode selector (1 - displays today; 2 - displays yesterday...)
 		</GUI>//
 		//
 	<CONNECTION>//			

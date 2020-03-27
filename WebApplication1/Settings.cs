@@ -41,8 +41,10 @@ namespace WebApplication1
         public static int defaultCheckTimingInterval = 40;      // used for loops checking - lower value means higher precision timing
 
         public static string defaultDateFormat = "dd.MM";
-        public static string defaultTimeFormat = "hh:mm:ss";
+        public static string defaultDateFormatY = "dd.MM.yyyy";
+        public static string defaultTimeFormat = "HH:mm:ss";
         public static string defaultDateTimeFormat = defaultDateFormat + "  " + defaultTimeFormat + " ";
+        public static string defaultDateTimeFormatY = defaultDateFormatY + "  " + defaultTimeFormat + " ";
 
         // colors
         public static readonly string RedColorHtmlHumar = "#C61720";

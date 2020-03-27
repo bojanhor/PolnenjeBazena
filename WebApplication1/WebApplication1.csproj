@@ -416,6 +416,7 @@
     <Compile Include="Pages\test.aspx.designer.cs">
       <DependentUpon>test.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SysLog.cs" />
     <Compile Include="XmlController.cs" />
     <Compile Include="Pages\Razsvetljava.aspx.cs">
       <DependentUpon>Razsvetljava.aspx</DependentUpon>
