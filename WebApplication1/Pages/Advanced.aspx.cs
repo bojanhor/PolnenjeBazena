@@ -21,13 +21,14 @@ namespace WebApplication1.Pages
             AddDebug();
             AddTable();
             AddTimer();     
-            AddEditorBtn();          
+            AddButtonsAux();          
                                     
         }
         
-        void AddEditorBtn()
+        void AddButtonsAux()
         {
             TemplateClassID.Controls.Add(Val.guiController.PageAdvanced_.BtnEditor);
+            TemplateClassID.Controls.Add(Val.guiController.PageAdvanced_.BtnLogView);
         }
 
         void AddConnectSwitch()

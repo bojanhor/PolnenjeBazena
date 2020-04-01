@@ -20,6 +20,7 @@ namespace WebApplication1
         public PageRazsvetljava PageRazsvetljava_ { get; set; }
         public PageVreme PageVreme_ { get; set; }
         public PageEditor PageEditor_ { get; set; }
+        public PageLogView PageLogView_ { get; set; }
         public PageVentilacija PageVentilacija_ { get; set; }
         public PageVrataZavese PageVrataZavese_ { get; set; }
         public PagePadavine PagePadavine_ { get; set; }

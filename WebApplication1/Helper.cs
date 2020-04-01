@@ -16,6 +16,7 @@ namespace WebApplication1
         public static string ViewStateElement_ScriptLoader = "ScriptLoader";
         public static string ViewStateElement_Response = "Response";
         public static string ViewStateElement_PageHistory = "PageHistory";
+        static bool messagePending;
 
 
         public static void Redirect(string site, Page _thisPage)
@@ -46,6 +47,7 @@ namespace WebApplication1
 
         }
 
+        
         public static Page GetCurrentPage()
         {
             return (Page)HttpContext.Current.Handler;
@@ -567,7 +569,7 @@ namespace WebApplication1
         {
             return f.ToString("0.##").Replace(",", ".") + postFix;
         }
-
+        
         public class Initialiser
         {
             Misc.SmartThread InitialiseClass;
@@ -610,6 +612,41 @@ namespace WebApplication1
                     Keys.Clear();
                 }
             }
-        }       
+
+            public static ScriptLoader GetScriptLoaderInstance()
+            {
+                try
+                {
+                   return(ScriptLoader)HttpContext.Current.Session[ViewStateElement_ScriptLoader];                    
+                }
+                catch 
+                {
+                    return null;
+                }
+                
+            }
+
+            
+        }
+
+        public static void MessageBox(string message)
+        {
+            if (!messagePending)
+            {
+                var scriptLoader = ScriptLoader.GetScriptLoaderInstance();
+                if (scriptLoader != null)
+                {
+                    var script = "alert('" + message + "');";
+                    scriptLoader.RegisterScriptOnPageLoad("Info", script);
+                    Helper.Refresh();
+                }
+                messagePending = true;
+                Helper.Refresh();
+            }
+            else
+            {
+                messagePending = false;
+            }
+        }
     }
 }

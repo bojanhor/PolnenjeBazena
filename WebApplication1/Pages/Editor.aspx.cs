@@ -14,11 +14,11 @@ namespace WebApplication1.Pages
             Val.guiController.PageEditor_ = new GuiController.PageEditor();
             Helper.EveryPageProtocol("Zahtevne Nastavitve", this, Session, TemplateClassID, true, false);
                        
-            Initialise();
-            RegisterOnClick();
+            InitialiseEditor();
+            RegisterOnClickEditor();
         }
                 
-        void Initialise()
+        void InitialiseEditor()
         {            
            
             
@@ -32,22 +32,22 @@ namespace WebApplication1.Pages
 
         }
 
-        public void RegisterOnClick()
+        public void RegisterOnClickEditor()
         {
-            Val.guiController.PageEditor_.save.button.Click += Save_Click;
-            Val.guiController.PageEditor_.refresh.button.Click += Refresh_Click1;
+            Val.guiController.PageEditor_.save.button.Click += Save_ClickEditor;
+            Val.guiController.PageEditor_.refresh.button.Click += Refresh_ClickEditor;
         }
 
-        private void Refresh_Click1(object sender, System.Web.UI.ImageClickEventArgs e)
+        private void Refresh_ClickEditor(object sender, System.Web.UI.ImageClickEventArgs e)
         {
             XmlController.RefreshFile_readAgain();
             Helper.Refresh();
         }
 
-        private void Save_Click(object sender, System.Web.UI.ImageClickEventArgs e)
+        private void Save_ClickEditor(object sender, System.Web.UI.ImageClickEventArgs e)
         {
             XmlController.SaveCurrentTB(Editor.InnerText);
-            Refresh_Click1(null, null);
+            Refresh_ClickEditor(null, null);
         }
 
     }

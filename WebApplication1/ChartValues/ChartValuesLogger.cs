@@ -433,7 +433,9 @@ namespace WebApplication1.ChartValues
             }
             catch (Exception ex)
             {
-                throw new Exception("File " + FilePath + " can not be opened. Error: " + ex.Message);
+                var message = "File " + FilePath + " can not be opened. Error: " + ex.Message;
+                Helper.MessageBox(message);
+                throw new Exception(message);
             }
                    
         }
@@ -447,8 +449,9 @@ namespace WebApplication1.ChartValues
             }
             catch (Exception ex)
             {
-
-                throw new Exception("File creation failed: " + ex.Message);
+                var message = "File creation failed: " + ex.Message;
+                Helper.MessageBox(message);
+                throw new Exception(message);
             }
             
         }

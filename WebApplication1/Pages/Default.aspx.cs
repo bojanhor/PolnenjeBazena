@@ -19,8 +19,7 @@ namespace WebApplication1.Pages
             Helper.EveryPageProtocol("Dobrodošli", this, Session, TemplateClassID);
 
 
-            Initialise();
-                                    
+            Initialise();           
         }
                       
         private void Initialise()

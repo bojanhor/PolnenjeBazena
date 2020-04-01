@@ -1,0 +1,286 @@
+01.04.2020  15:00:07 : Logo1 (01.04.2020 - 15:00): Connecting...
+01.04.2020  15:00:07 : Logo2 (01.04.2020 - 15:00): Connecting...
+01.04.2020  15:00:09 : Logo1 (01.04.2020 - 15:00): TCP : Connection Error
+01.04.2020  15:00:09 : Logo2 (01.04.2020 - 15:00): TCP : Connection Error
+01.04.2020  15:00:09 : Logo2 (01.04.2020 - 15:00): CLI : Client not connected
+01.04.2020  15:00:09 : Logo1 (01.04.2020 - 15:00): CLI : Client not connected
+01.04.2020  15:00:09 : Logo2 (01.04.2020 - 15:00): Connection error
+01.04.2020  15:00:09 : Logo1 (01.04.2020 - 15:00): Connection error
+01.04.2020  15:00:14 : Logo2 (01.04.2020 - 15:00): Connection failed. Trying to reconnect
+01.04.2020  15:00:14 : Logo1 (01.04.2020 - 15:00): Connection failed. Trying to reconnect
+01.04.2020  15:00:14 : Logo1 (01.04.2020 - 15:00): Watchdog started successfully - Period (Frequency) is 250ms
+01.04.2020  15:00:14 : Logo1 (01.04.2020 - 15:00): Connection error
+01.04.2020  15:00:14 : Logo2 (01.04.2020 - 15:00): Watchdog started successfully - Period (Frequency) is 250ms
+01.04.2020  15:00:14 : Logo2 (01.04.2020 - 15:00): Connection error
+01.04.2020  15:00:29 : Logo1 (01.04.2020 - 15:00): Connecting...
+01.04.2020  15:00:29 : Logo2 (01.04.2020 - 15:00): Connecting...
+01.04.2020  15:00:33 : Logo1 (01.04.2020 - 15:00): TCP : Connection Error
+01.04.2020  15:00:33 : Logo2 (01.04.2020 - 15:00): TCP : Connection Error
+01.04.2020  15:00:40 : Logo1 (01.04.2020 - 15:00): CLI : Client not connected
+01.04.2020  15:00:40 : Logo2 (01.04.2020 - 15:00): CLI : Client not connected
+01.04.2020  15:00:41 : Logo1 (01.04.2020 - 15:00): Connection error
+01.04.2020  15:00:41 : Logo2 (01.04.2020 - 15:00): Connection error
+01.04.2020  15:00:47 : Logo1 (01.04.2020 - 15:00): Connection failed. Trying to reconnect
+01.04.2020  15:00:47 : Logo1 (01.04.2020 - 15:00): Watchdog started successfully - Period (Frequency) is 250ms
+01.04.2020  15:00:47 : Logo1 (01.04.2020 - 15:00): Connection error
+01.04.2020  15:00:47 : Logo2 (01.04.2020 - 15:00): Connection failed. Trying to reconnect
+01.04.2020  15:00:47 : Logo2 (01.04.2020 - 15:00): Watchdog started successfully - Period (Frequency) is 250ms
+01.04.2020  15:00:47 : Logo2 (01.04.2020 - 15:00): Connection error
+01.04.2020  15:00:53 : Logo1 (01.04.2020 - 15:00): Connection failed. Trying to reconnect
+01.04.2020  15:00:53 : Logo2 (01.04.2020 - 15:00): Connection failed. Trying to reconnect
+01.04.2020  15:00:53 : Logo2 (01.04.2020 - 15:00): Connection error
+01.04.2020  15:00:53 : Logo1 (01.04.2020 - 15:00): Connection error
+01.04.2020  15:00:58 : Logo1 (01.04.2020 - 15:00): Connection failed. Trying to reconnect
+01.04.2020  15:00:58 : Logo1 (01.04.2020 - 15:00): Connection error
+01.04.2020  15:00:58 : Logo2 (01.04.2020 - 15:00): Connection failed. Trying to reconnect
+01.04.2020  15:00:58 : Logo2 (01.04.2020 - 15:00): Connection error
+01.04.2020  15:01:03 : Logo1 (01.04.2020 - 15:01): Connection failed. Trying to reconnect
+01.04.2020  15:01:03 : Logo1 (01.04.2020 - 15:01): Connection error
+01.04.2020  15:01:03 : Logo2 (01.04.2020 - 15:01): Connection failed. Trying to reconnect
+01.04.2020  15:01:03 : Logo2 (01.04.2020 - 15:01): Connection error
+01.04.2020  15:01:23 : Logo1 (01.04.2020 - 15:01): Connecting...
+01.04.2020  15:01:23 : Logo2 (01.04.2020 - 15:01): Connecting...
+01.04.2020  15:01:25 : Logo1 (01.04.2020 - 15:01): TCP : Connection Error
+01.04.2020  15:01:25 : Logo2 (01.04.2020 - 15:01): TCP : Connection Error
+01.04.2020  15:01:25 : Logo1 (01.04.2020 - 15:01): CLI : Client not connected
+01.04.2020  15:01:25 : Logo2 (01.04.2020 - 15:01): CLI : Client not connected
+01.04.2020  15:01:25 : Logo1 (01.04.2020 - 15:01): Connection error
+01.04.2020  15:01:25 : Logo2 (01.04.2020 - 15:01): Connection error
+01.04.2020  15:04:49 : Logo1 (01.04.2020 - 15:04): Connecting...
+01.04.2020  15:04:49 : Logo2 (01.04.2020 - 15:04): Connecting...
+01.04.2020  15:04:51 : Logo1 (01.04.2020 - 15:04): TCP : Connection Error
+01.04.2020  15:04:51 : Logo2 (01.04.2020 - 15:04): TCP : Connection Error
+01.04.2020  15:04:51 : Logo1 (01.04.2020 - 15:04): CLI : Client not connected
+01.04.2020  15:04:51 : Logo2 (01.04.2020 - 15:04): CLI : Client not connected
+01.04.2020  15:04:51 : Logo1 (01.04.2020 - 15:04): Connection error
+01.04.2020  15:04:51 : Logo2 (01.04.2020 - 15:04): Connection error
+01.04.2020  15:04:56 : Logo2 (01.04.2020 - 15:04): Connection failed. Trying to reconnect
+01.04.2020  15:04:56 : Logo1 (01.04.2020 - 15:04): Connection failed. Trying to reconnect
+01.04.2020  15:04:56 : Logo2 (01.04.2020 - 15:04): Watchdog started successfully - Period (Frequency) is 250ms
+01.04.2020  15:04:56 : Logo1 (01.04.2020 - 15:04): Watchdog started successfully - Period (Frequency) is 250ms
+01.04.2020  15:04:56 : Logo1 (01.04.2020 - 15:04): Connection error
+01.04.2020  15:04:56 : Logo2 (01.04.2020 - 15:04): Connection error
+01.04.2020  15:05:01 : Logo1 (01.04.2020 - 15:05): Connection failed. Trying to reconnect
+01.04.2020  15:05:01 : Logo2 (01.04.2020 - 15:05): Connection failed. Trying to reconnect
+01.04.2020  15:05:01 : Logo1 (01.04.2020 - 15:05): Connection error
+01.04.2020  15:05:01 : Logo2 (01.04.2020 - 15:05): Connection error
+01.04.2020  15:06:18 : Logo1 (01.04.2020 - 15:06): Connecting...
+01.04.2020  15:06:18 : Logo2 (01.04.2020 - 15:06): Connecting...
+01.04.2020  15:06:20 : Logo1 (01.04.2020 - 15:06): TCP : Connection Error
+01.04.2020  15:06:20 : Logo2 (01.04.2020 - 15:06): TCP : Connection Error
+01.04.2020  15:06:20 : Logo1 (01.04.2020 - 15:06): CLI : Client not connected
+01.04.2020  15:06:20 : Logo2 (01.04.2020 - 15:06): CLI : Client not connected
+01.04.2020  15:06:20 : Logo1 (01.04.2020 - 15:06): Connection error
+01.04.2020  15:06:20 : Logo2 (01.04.2020 - 15:06): Connection error
+01.04.2020  15:06:26 : Logo2 (01.04.2020 - 15:06): Connection failed. Trying to reconnect
+01.04.2020  15:06:26 : Logo1 (01.04.2020 - 15:06): Connection failed. Trying to reconnect
+01.04.2020  15:06:26 : Logo1 (01.04.2020 - 15:06): Watchdog started successfully - Period (Frequency) is 250ms
+01.04.2020  15:06:26 : Logo2 (01.04.2020 - 15:06): Watchdog started successfully - Period (Frequency) is 250ms
+01.04.2020  15:06:26 : Logo1 (01.04.2020 - 15:06): Connection error
+01.04.2020  15:06:26 : Logo2 (01.04.2020 - 15:06): Connection error
+01.04.2020  15:06:31 : Logo1 (01.04.2020 - 15:06): Connection failed. Trying to reconnect
+01.04.2020  15:06:31 : Logo1 (01.04.2020 - 15:06): Connection error
+01.04.2020  15:06:31 : Logo2 (01.04.2020 - 15:06): Connection failed. Trying to reconnect
+01.04.2020  15:06:31 : Logo2 (01.04.2020 - 15:06): Connection error
+01.04.2020  15:06:36 : Logo1 (01.04.2020 - 15:06): Connection failed. Trying to reconnect
+01.04.2020  15:06:36 : Logo1 (01.04.2020 - 15:06): Connection error
+01.04.2020  15:06:36 : Logo2 (01.04.2020 - 15:06): Connection failed. Trying to reconnect
+01.04.2020  15:06:36 : Logo2 (01.04.2020 - 15:06): Connection error
+01.04.2020  15:15:30 : Logo1 (01.04.2020 - 15:15): Connecting...
+01.04.2020  15:15:30 : Logo2 (01.04.2020 - 15:15): Connecting...
+01.04.2020  15:15:32 : Logo1 (01.04.2020 - 15:15): TCP : Connection Error
+01.04.2020  15:15:32 : Logo2 (01.04.2020 - 15:15): TCP : Connection Error
+01.04.2020  15:15:32 : Logo1 (01.04.2020 - 15:15): CLI : Client not connected
+01.04.2020  15:15:32 : Logo2 (01.04.2020 - 15:15): CLI : Client not connected
+01.04.2020  15:15:32 : Logo1 (01.04.2020 - 15:15): Connection error
+01.04.2020  15:15:32 : Logo2 (01.04.2020 - 15:15): Connection error
+01.04.2020  15:15:37 : Logo1 (01.04.2020 - 15:15): Connection failed. Trying to reconnect
+01.04.2020  15:15:37 : Logo1 (01.04.2020 - 15:15): Watchdog started successfully - Period (Frequency) is 250ms
+01.04.2020  15:15:37 : Logo1 (01.04.2020 - 15:15): Connection error
+01.04.2020  15:15:37 : Logo2 (01.04.2020 - 15:15): Connection failed. Trying to reconnect
+01.04.2020  15:15:37 : Logo2 (01.04.2020 - 15:15): Watchdog started successfully - Period (Frequency) is 250ms
+01.04.2020  15:15:37 : Logo2 (01.04.2020 - 15:15): Connection error
+01.04.2020  15:29:23 : Logo1 (01.04.2020 - 15:29): Connecting...
+01.04.2020  15:29:23 : Logo2 (01.04.2020 - 15:29): Connecting...
+01.04.2020  15:29:25 : Logo1 (01.04.2020 - 15:29): TCP : Connection Error
+01.04.2020  15:29:25 : Logo2 (01.04.2020 - 15:29): TCP : Connection Error
+01.04.2020  15:29:25 : Logo2 (01.04.2020 - 15:29): CLI : Client not connected
+01.04.2020  15:29:25 : Logo1 (01.04.2020 - 15:29): CLI : Client not connected
+01.04.2020  15:29:25 : Logo2 (01.04.2020 - 15:29): Connection error
+01.04.2020  15:29:25 : Logo1 (01.04.2020 - 15:29): Connection error
+01.04.2020  15:29:30 : Logo2 (01.04.2020 - 15:29): Connection failed. Trying to reconnect
+01.04.2020  15:29:30 : Logo2 (01.04.2020 - 15:29): Watchdog started successfully - Period (Frequency) is 250ms
+01.04.2020  15:29:30 : Logo1 (01.04.2020 - 15:29): Connection failed. Trying to reconnect
+01.04.2020  15:29:30 : Logo2 (01.04.2020 - 15:29): Connection error
+01.04.2020  15:29:30 : Logo1 (01.04.2020 - 15:29): Watchdog started successfully - Period (Frequency) is 250ms
+01.04.2020  15:29:30 : Logo1 (01.04.2020 - 15:29): Connection error
+01.04.2020  15:29:35 : Logo2 (01.04.2020 - 15:29): Connection failed. Trying to reconnect
+01.04.2020  15:29:35 : Logo2 (01.04.2020 - 15:29): Connection error
+01.04.2020  15:29:35 : Logo1 (01.04.2020 - 15:29): Connection failed. Trying to reconnect
+01.04.2020  15:29:35 : Logo1 (01.04.2020 - 15:29): Connection error
+01.04.2020  15:32:11 : Logo1 (01.04.2020 - 15:32): Connecting...
+01.04.2020  15:32:11 : Logo2 (01.04.2020 - 15:32): Connecting...
+01.04.2020  15:32:13 : Logo2 (01.04.2020 - 15:32): TCP : Connection Error
+01.04.2020  15:32:13 : Logo1 (01.04.2020 - 15:32): TCP : Connection Error
+01.04.2020  15:32:13 : Logo2 (01.04.2020 - 15:32): CLI : Client not connected
+01.04.2020  15:32:13 : Logo2 (01.04.2020 - 15:32): Connection error
+01.04.2020  15:32:13 : Logo1 (01.04.2020 - 15:32): CLI : Client not connected
+01.04.2020  15:32:13 : Logo1 (01.04.2020 - 15:32): Connection error
+01.04.2020  15:32:18 : Logo1 (01.04.2020 - 15:32): Connection failed. Trying to reconnect
+01.04.2020  15:32:18 : Logo1 (01.04.2020 - 15:32): Watchdog started successfully - Period (Frequency) is 250ms
+01.04.2020  15:32:18 : Logo1 (01.04.2020 - 15:32): Connection error
+01.04.2020  15:32:18 : Logo2 (01.04.2020 - 15:32): Connection failed. Trying to reconnect
+01.04.2020  15:32:18 : Logo2 (01.04.2020 - 15:32): Watchdog started successfully - Period (Frequency) is 250ms
+01.04.2020  15:32:18 : Logo2 (01.04.2020 - 15:32): Connection error
+01.04.2020  15:32:23 : Logo1 (01.04.2020 - 15:32): Connection failed. Trying to reconnect
+01.04.2020  15:32:23 : Logo1 (01.04.2020 - 15:32): Connection error
+01.04.2020  15:32:23 : Logo2 (01.04.2020 - 15:32): Connection failed. Trying to reconnect
+01.04.2020  15:32:23 : Logo2 (01.04.2020 - 15:32): Connection error
+01.04.2020  15:32:33 : Logo1 (01.04.2020 - 15:32): Connection failed. Trying to reconnect
+01.04.2020  15:32:33 : Logo1 (01.04.2020 - 15:32): Connection error
+01.04.2020  15:32:33 : Logo2 (01.04.2020 - 15:32): Connection failed. Trying to reconnect
+01.04.2020  15:32:33 : Logo2 (01.04.2020 - 15:32): Connection error
+01.04.2020  15:32:38 : Logo1 (01.04.2020 - 15:32): Connection failed. Trying to reconnect
+01.04.2020  15:32:38 : Logo1 (01.04.2020 - 15:32): Connection error
+01.04.2020  15:32:38 : Logo2 (01.04.2020 - 15:32): Connection failed. Trying to reconnect
+01.04.2020  15:32:38 : Logo2 (01.04.2020 - 15:32): Connection error
+01.04.2020  15:32:43 : Logo1 (01.04.2020 - 15:32): Connection failed. Trying to reconnect
+01.04.2020  15:32:43 : Logo1 (01.04.2020 - 15:32): Connection error
+01.04.2020  15:32:43 : Logo2 (01.04.2020 - 15:32): Connection failed. Trying to reconnect
+01.04.2020  15:32:43 : Logo2 (01.04.2020 - 15:32): Connection error
+01.04.2020  15:38:27 : Logo1 (01.04.2020 - 15:38): Connecting...
+01.04.2020  15:38:27 : Logo2 (01.04.2020 - 15:38): Connecting...
+01.04.2020  15:38:29 : Logo1 (01.04.2020 - 15:38): TCP : Connection Error
+01.04.2020  15:38:29 : Logo2 (01.04.2020 - 15:38): TCP : Connection Error
+01.04.2020  15:38:29 : Logo1 (01.04.2020 - 15:38): CLI : Client not connected
+01.04.2020  15:38:29 : Logo2 (01.04.2020 - 15:38): CLI : Client not connected
+01.04.2020  15:38:29 : Logo1 (01.04.2020 - 15:38): Connection error
+01.04.2020  15:38:29 : Logo2 (01.04.2020 - 15:38): Connection error
+01.04.2020  15:38:34 : Logo1 (01.04.2020 - 15:38): Connection failed. Trying to reconnect
+01.04.2020  15:38:34 : Logo1 (01.04.2020 - 15:38): Watchdog started successfully - Period (Frequency) is 250ms
+01.04.2020  15:38:34 : Logo1 (01.04.2020 - 15:38): Connection error
+01.04.2020  15:38:34 : Logo2 (01.04.2020 - 15:38): Connection failed. Trying to reconnect
+01.04.2020  15:38:34 : Logo2 (01.04.2020 - 15:38): Watchdog started successfully - Period (Frequency) is 250ms
+01.04.2020  15:38:34 : Logo2 (01.04.2020 - 15:38): Connection error
+01.04.2020  15:38:39 : Logo2 (01.04.2020 - 15:38): Connection failed. Trying to reconnect
+01.04.2020  15:38:39 : Logo1 (01.04.2020 - 15:38): Connection failed. Trying to reconnect
+01.04.2020  15:38:39 : Logo2 (01.04.2020 - 15:38): Connection error
+01.04.2020  15:38:39 : Logo1 (01.04.2020 - 15:38): Connection error
+01.04.2020  15:38:44 : Logo2 (01.04.2020 - 15:38): Connection failed. Trying to reconnect
+01.04.2020  15:38:44 : Logo2 (01.04.2020 - 15:38): Connection error
+01.04.2020  15:38:44 : Logo1 (01.04.2020 - 15:38): Connection failed. Trying to reconnect
+01.04.2020  15:38:44 : Logo1 (01.04.2020 - 15:38): Connection error
+01.04.2020  15:38:49 : Logo1 (01.04.2020 - 15:38): Connection failed. Trying to reconnect
+01.04.2020  15:38:49 : Logo1 (01.04.2020 - 15:38): Connection error
+01.04.2020  15:38:49 : Logo2 (01.04.2020 - 15:38): Connection failed. Trying to reconnect
+01.04.2020  15:38:49 : Logo2 (01.04.2020 - 15:38): Connection error
+01.04.2020  15:38:54 : Logo1 (01.04.2020 - 15:38): Connection failed. Trying to reconnect
+01.04.2020  15:38:54 : Logo2 (01.04.2020 - 15:38): Connection failed. Trying to reconnect
+01.04.2020  15:38:54 : Logo2 (01.04.2020 - 15:38): Connection error
+01.04.2020  15:38:54 : Logo1 (01.04.2020 - 15:38): Connection error
+01.04.2020  15:39:00 : Logo1 (01.04.2020 - 15:39): Connection failed. Trying to reconnect
+01.04.2020  15:39:00 : Logo1 (01.04.2020 - 15:39): Connection error
+01.04.2020  15:39:00 : Logo2 (01.04.2020 - 15:39): Connection failed. Trying to reconnect
+01.04.2020  15:39:00 : Logo2 (01.04.2020 - 15:39): Connection error
+01.04.2020  15:39:05 : Logo2 (01.04.2020 - 15:39): Connection failed. Trying to reconnect
+01.04.2020  15:39:05 : Logo1 (01.04.2020 - 15:39): Connection failed. Trying to reconnect
+01.04.2020  15:39:05 : Logo2 (01.04.2020 - 15:39): Connection error
+01.04.2020  15:39:05 : Logo1 (01.04.2020 - 15:39): Connection error
+01.04.2020  15:39:10 : Logo2 (01.04.2020 - 15:39): Connection failed. Trying to reconnect
+01.04.2020  15:39:10 : Logo2 (01.04.2020 - 15:39): Connection error
+01.04.2020  15:39:10 : Logo1 (01.04.2020 - 15:39): Connection failed. Trying to reconnect
+01.04.2020  15:39:10 : Logo1 (01.04.2020 - 15:39): Connection error
+01.04.2020  15:39:15 : Logo2 (01.04.2020 - 15:39): Connection failed. Trying to reconnect
+01.04.2020  15:39:15 : Logo2 (01.04.2020 - 15:39): Connection error
+01.04.2020  15:39:15 : Logo1 (01.04.2020 - 15:39): Connection failed. Trying to reconnect
+01.04.2020  15:39:15 : Logo1 (01.04.2020 - 15:39): Connection error
+01.04.2020  15:39:20 : Logo2 (01.04.2020 - 15:39): Connection failed. Trying to reconnect
+01.04.2020  15:39:20 : Logo2 (01.04.2020 - 15:39): Connection error
+01.04.2020  15:39:20 : Logo1 (01.04.2020 - 15:39): Connection failed. Trying to reconnect
+01.04.2020  15:39:20 : Logo1 (01.04.2020 - 15:39): Connection error
+01.04.2020  15:39:25 : Logo2 (01.04.2020 - 15:39): Connection failed. Trying to reconnect
+01.04.2020  15:39:25 : Logo2 (01.04.2020 - 15:39): Connection error
+01.04.2020  15:39:25 : Logo1 (01.04.2020 - 15:39): Connection failed. Trying to reconnect
+01.04.2020  15:39:25 : Logo1 (01.04.2020 - 15:39): Connection error
+01.04.2020  15:43:03 : Logo1 (01.04.2020 - 15:43): Connecting...
+01.04.2020  15:43:03 : Logo2 (01.04.2020 - 15:43): Connecting...
+01.04.2020  15:43:05 : Logo1 (01.04.2020 - 15:43): TCP : Connection Error
+01.04.2020  15:43:05 : Logo2 (01.04.2020 - 15:43): TCP : Connection Error
+01.04.2020  15:43:05 : Logo1 (01.04.2020 - 15:43): CLI : Client not connected
+01.04.2020  15:43:05 : Logo2 (01.04.2020 - 15:43): CLI : Client not connected
+01.04.2020  15:43:05 : Logo1 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:05 : Logo2 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:10 : Logo2 (01.04.2020 - 15:43): Connection failed. Trying to reconnect
+01.04.2020  15:43:10 : Logo1 (01.04.2020 - 15:43): Connection failed. Trying to reconnect
+01.04.2020  15:43:10 : Logo1 (01.04.2020 - 15:43): Watchdog started successfully - Period (Frequency) is 250ms
+01.04.2020  15:43:10 : Logo1 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:10 : Logo2 (01.04.2020 - 15:43): Watchdog started successfully - Period (Frequency) is 250ms
+01.04.2020  15:43:10 : Logo2 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:15 : Logo2 (01.04.2020 - 15:43): Connection failed. Trying to reconnect
+01.04.2020  15:43:15 : Logo2 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:15 : Logo1 (01.04.2020 - 15:43): Connection failed. Trying to reconnect
+01.04.2020  15:43:15 : Logo1 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:20 : Logo1 (01.04.2020 - 15:43): Connection failed. Trying to reconnect
+01.04.2020  15:43:20 : Logo2 (01.04.2020 - 15:43): Connection failed. Trying to reconnect
+01.04.2020  15:43:20 : Logo1 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:20 : Logo2 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:25 : Logo2 (01.04.2020 - 15:43): Connection failed. Trying to reconnect
+01.04.2020  15:43:25 : Logo1 (01.04.2020 - 15:43): Connection failed. Trying to reconnect
+01.04.2020  15:43:25 : Logo1 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:25 : Logo2 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:31 : Logo2 (01.04.2020 - 15:43): Connection failed. Trying to reconnect
+01.04.2020  15:43:31 : Logo2 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:31 : Logo1 (01.04.2020 - 15:43): Connection failed. Trying to reconnect
+01.04.2020  15:43:31 : Logo1 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:36 : Logo2 (01.04.2020 - 15:43): Connection failed. Trying to reconnect
+01.04.2020  15:43:36 : Logo2 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:36 : Logo1 (01.04.2020 - 15:43): Connection failed. Trying to reconnect
+01.04.2020  15:43:36 : Logo1 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:41 : Logo1 (01.04.2020 - 15:43): Connection failed. Trying to reconnect
+01.04.2020  15:43:41 : Logo1 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:41 : Logo2 (01.04.2020 - 15:43): Connection failed. Trying to reconnect
+01.04.2020  15:43:41 : Logo2 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:46 : Logo1 (01.04.2020 - 15:43): Connection failed. Trying to reconnect
+01.04.2020  15:43:46 : Logo1 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:46 : Logo2 (01.04.2020 - 15:43): Connection failed. Trying to reconnect
+01.04.2020  15:43:46 : Logo2 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:51 : Logo1 (01.04.2020 - 15:43): Connection failed. Trying to reconnect
+01.04.2020  15:43:51 : Logo1 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:51 : Logo2 (01.04.2020 - 15:43): Connection failed. Trying to reconnect
+01.04.2020  15:43:51 : Logo2 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:56 : Logo1 (01.04.2020 - 15:43): Connection failed. Trying to reconnect
+01.04.2020  15:43:56 : Logo1 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:43:56 : Logo2 (01.04.2020 - 15:43): Connection failed. Trying to reconnect
+01.04.2020  15:43:56 : Logo2 (01.04.2020 - 15:43): Connection error
+01.04.2020  15:44:01 : Logo1 (01.04.2020 - 15:44): Connection failed. Trying to reconnect
+01.04.2020  15:44:01 : Logo1 (01.04.2020 - 15:44): Connection error
+01.04.2020  15:44:01 : Logo2 (01.04.2020 - 15:44): Connection failed. Trying to reconnect
+01.04.2020  15:44:01 : Logo2 (01.04.2020 - 15:44): Connection error
+01.04.2020  15:44:06 : Logo1 (01.04.2020 - 15:44): Connection failed. Trying to reconnect
+01.04.2020  15:44:06 : Logo1 (01.04.2020 - 15:44): Connection error
+01.04.2020  15:44:06 : Logo2 (01.04.2020 - 15:44): Connection failed. Trying to reconnect
+01.04.2020  15:44:06 : Logo2 (01.04.2020 - 15:44): Connection error
+01.04.2020  15:44:11 : Logo1 (01.04.2020 - 15:44): Connection failed. Trying to reconnect
+01.04.2020  15:44:11 : Logo1 (01.04.2020 - 15:44): Connection error
+01.04.2020  15:44:12 : Logo2 (01.04.2020 - 15:44): Connection failed. Trying to reconnect
+01.04.2020  15:44:12 : Logo2 (01.04.2020 - 15:44): Connection error
+01.04.2020  15:44:17 : Logo1 (01.04.2020 - 15:44): Connection failed. Trying to reconnect
+01.04.2020  15:44:17 : Logo1 (01.04.2020 - 15:44): Connection error
+01.04.2020  15:44:17 : Logo2 (01.04.2020 - 15:44): Connection failed. Trying to reconnect
+01.04.2020  15:44:17 : Logo2 (01.04.2020 - 15:44): Connection error
+01.04.2020  15:44:22 : Logo1 (01.04.2020 - 15:44): Connection failed. Trying to reconnect
+01.04.2020  15:44:22 : Logo1 (01.04.2020 - 15:44): Connection error
+01.04.2020  15:44:22 : Logo2 (01.04.2020 - 15:44): Connection failed. Trying to reconnect
+01.04.2020  15:44:22 : Logo2 (01.04.2020 - 15:44): Connection error
+01.04.2020  15:44:27 : Logo1 (01.04.2020 - 15:44): Connection failed. Trying to reconnect
+01.04.2020  15:44:27 : Logo1 (01.04.2020 - 15:44): Connection error
+01.04.2020  15:44:27 : Logo2 (01.04.2020 - 15:44): Connection failed. Trying to reconnect
+01.04.2020  15:44:27 : Logo2 (01.04.2020 - 15:44): Connection error
+01.04.2020  15:44:32 : Logo1 (01.04.2020 - 15:44): Connection failed. Trying to reconnect
+01.04.2020  15:44:32 : Logo1 (01.04.2020 - 15:44): Connection error
+01.04.2020  15:44:32 : Logo2 (01.04.2020 - 15:44): Connection failed. Trying to reconnect
+01.04.2020  15:44:32 : Logo2 (01.04.2020 - 15:44): Connection error
+01.04.2020  15:44:37 : Logo1 (01.04.2020 - 15:44): Connection failed. Trying to reconnect
+01.04.2020  15:44:37 : Logo1 (01.04.2020 - 15:44): Connection error
+01.04.2020  15:44:37 : Logo2 (01.04.2020 - 15:44): Connection failed. Trying to reconnect
+01.04.2020  15:44:37 : Logo2 (01.04.2020 - 15:44): Connection error

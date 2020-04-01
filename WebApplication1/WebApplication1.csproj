@@ -121,9 +121,14 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <EmbeddedResource Include="CustomScripts\RetainScrollPosition.js" />
-    <EmbeddedResource Include="CustomScripts\ScrollToBottom.js" />
+    <Content Include="CustomScripts\RetainScrollPosition.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CustomScripts\ScrollToBottom.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Index.html" />
+    <Content Include="Pages\LogView.aspx" />
     <Content Include="Pages\Editor.aspx" />
     <Content Include="Pages\Padavine.aspx" />
     <Content Include="Pages\MasterMenu.aspx" />
@@ -323,6 +328,7 @@
     <Compile Include="ChartValues\ChartValuesLogger.cs" />
     <Compile Include="GlobalManagement.cs" />
     <Compile Include="GUI - Controls\Dispose.cs" />
+    <Compile Include="GUI - Pages\GuiController - PageLogView.cs" />
     <Compile Include="GUI - Pages\GuiController - PageEditor.cs" />
     <Compile Include="GUI - Pages\GuiController - PagePadavine.cs" />
     <Compile Include="GUI - Controls\GuiController - Positioning.cs" />
@@ -331,6 +337,13 @@
     <Compile Include="GUI - Pages\GuiController - Page Vrata_Zavese.cs" />
     <Compile Include="GUI - Pages\GuiController - Page Ventilacija.cs" />
     <Compile Include="GUI - Pages\GuiController - Page Razsvetljava.cs" />
+    <Compile Include="Pages\LogView.aspx.cs">
+      <DependentUpon>LogView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\LogView.aspx.designer.cs">
+      <DependentUpon>LogView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Editor.aspx.cs">
       <DependentUpon>Editor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -33,7 +33,7 @@ namespace WebApplication1
         public static readonly string XmlDeclaration = "<?xml version=\"1.0\" encoding=\"utf-8\"?>"; // used to recreate xml config file
 
         public static readonly string pathToCustomJS = HttpRuntime.AppDomainAppPath + "CustomScripts\\"; // path to scripts folder
-
+        
         // less important (not very significant)
 
         public static int defaultCheckTimingInterval = 40;      // used for loops checking - lower value means higher precision timing

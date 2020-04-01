@@ -22,6 +22,7 @@ namespace WebApplication1
             HtmlGenericControl divDebug_1;
             HtmlGenericControl divDebug_2;
             public GControls.ButtonWithLabel BtnEditor = new GControls.ButtonWithLabel("XMLSettings", 10, 1.2F);
+            public GControls.ButtonWithLabel BtnLogView = new GControls.ButtonWithLabel("LogView", 10, 1.2F);
             public GControls.NotShadowedOnOffButton Spremljaj;
             GControls.ImageButtonWithID EditBtn = new GControls.ImageButtonWithID(0);
 
@@ -43,6 +44,7 @@ namespace WebApplication1
                 AppDomainInitializerTables();
                 AddLabelDebug();                
                 PositionEdit();
+                PositionLogView();
                 AddSpremljajFunctionality();
             }
 
@@ -86,6 +88,18 @@ namespace WebApplication1
                 SetControlAbsolutePos(BtnEditor,15, 68);
                 BtnEditor.button.Click += Button_Click1;
                 
+            }
+
+            void PositionLogView()
+            {
+                SetControlAbsolutePos(BtnLogView, 25, 68);
+                BtnLogView.button.Click += Button_Click2; ;
+
+            }
+
+            private void Button_Click2(object sender, ImageClickEventArgs e)
+            {
+                Helper.Redirect("LogView", thisPage);
             }
 
             private void Button_Click1(object sender, ImageClickEventArgs e)

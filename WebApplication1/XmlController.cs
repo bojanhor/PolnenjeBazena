@@ -121,11 +121,21 @@ namespace WebApplication1
         }
 
         public static void SaveXML(string newContent)
-        {     
-            StreamWriter s = new StreamWriter(XML,false, Encoding.UTF8);            
-            s.Write(Settings.XmlDeclaration + Environment.NewLine + newContent);            
-            s.Flush();
-            s.Dispose();
+        {
+            try
+            {
+                StreamWriter s = new StreamWriter(XML, false, Encoding.UTF8);
+                s.Write(Settings.XmlDeclaration + Environment.NewLine + newContent);
+                s.Flush();
+                s.Dispose();
+            }
+            catch (Exception ex)
+            {
+                var message = "Problem saving XML File." + ex.Message;
+                Helper.MessageBox(message);
+                throw new Exception(message);
+            }
+            
         }        
 
         public static void XmlControllerInitialize()
@@ -144,8 +154,10 @@ namespace WebApplication1
             }
             catch (Exception e)
             {
-                throw new Exception("Method XmlController() encountered an error with configuration file. " +
-                    "Please copy proper xml file inside application folder and name it: config.xml. Error description:" + e.Message);
+                var message = "Method XmlController() encountered an error with configuration file. " +
+                    "Please copy proper xml file inside application folder and name it: config.xml. Error description:" + e.Message;
+                Helper.MessageBox(message);
+                throw new Exception(message);
             }
 
         }
