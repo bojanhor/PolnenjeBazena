@@ -14,16 +14,14 @@ namespace WebApplication1
         public static LogoControler logocontroler = new LogoControler();
         public static string[] watchdog = new string[Settings.Devices + 1];        
         public static GuiController guiController = new GuiController();
-        public static string ScrolToBottomTextboxScript = null;
-        public static string RetainPositionTextboxScript = null;
+        public static string ScrolToBottomTextboxScript = GetScript("ScrollToBottom.js");
+        public static string RetainPositionTextboxScript = GetScript("RetainScrollPosition.js");
         public static ChartValues.ChartValuesLogger ChartValues;
 
 
         public static void InitialiseClass()
-        {
-            getScrolDownTextboxScript();
+        {        
             ChartValues = new ChartValues.ChartValuesLogger();
-
         }
 
         public static void InitializeWDTable(int device)
@@ -40,15 +38,10 @@ namespace WebApplication1
                 }
             }
         }
-                                
-        static void getScrolDownTextboxScript()
-        {
-            ScrolToBottomTextboxScript = GetScript("ScrollToBottom.js");
-            RetainPositionTextboxScript = GetScript("RetainScrollPosition.js");
-        }
-
+                               
+      
         static string GetScript(string scriptName)
-        {
+        {// Scripts must be registered as soon as posible after page load event
             try
             {
                 StreamReader s;
@@ -56,10 +49,9 @@ namespace WebApplication1
                 s = new StreamReader(path);
                 return s.ReadToEnd();
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-
-                throw ex;
+                throw ;
             }
             
         }

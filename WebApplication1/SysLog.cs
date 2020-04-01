@@ -10,7 +10,7 @@ namespace WebApplication1
     {
         public static MessageManager Message = new MessageManager();
 
-        public class MessageManager
+        public class MessageManager :Dsps
         {            
             static string LogFilePath = XmlController.BaseDirectoryPath + "\\" + "Log.txt";
             static string tempLogFilePath = XmlController.BaseDirectoryPath + "\\" + "Log_tmp.txt";
@@ -147,9 +147,9 @@ namespace WebApplication1
                     File.Move(tempLogFilePath, LogFilePath); // replaces file
                     
                 }
-                catch (Exception ex)
+                catch (Exception )
                 {                    
-                    throw ex;
+                    throw ;
                 }                
             }
         }

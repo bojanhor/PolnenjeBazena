@@ -12,16 +12,16 @@ namespace WebApplication1
 {
     public partial class GuiController
     {
-        public class PagePadavine
+        public class PagePadavine : Dsps
         {
             Page thisPage;
 
             public HtmlGenericControl MainDiv;
 
-            GControls.OnOffButton EnableSvetlost;
-            GControls.OnOffButton EnablePadavine;
-            GControls.OnOffButton EnableTzunanja;
-            GControls.OnOffButton EnableTnotranja;
+            GControls.OnOffButton EnableSvetlost; GControls.SuperLabel EnableSvetlost_lbl;
+            GControls.OnOffButton EnablePadavine; GControls.SuperLabel EnablePadavine_lbl;
+            GControls.OnOffButton EnableTzunanja; GControls.SuperLabel EnableTzunanja_lbl;
+            GControls.OnOffButton EnableTnotranja; GControls.SuperLabel EnableTnotranja_lbl;
 
             GControls.DropDownListChartViewSelector chartViewSelector;
 
@@ -53,19 +53,31 @@ namespace WebApplication1
 
             void AddControls()
             {
-                
-                EnableSvetlost = new GControls.OnOffButton("Svetlost", 1, XmlController.GetEnableCharts_Svetlost(), GControls.OnOffButton.Type.WithText);
-                EnablePadavine = new GControls.OnOffButton("Padavine", 2, XmlController.GetEnableCharts_Padavine(), GControls.OnOffButton.Type.WithText);
-                EnableTzunanja = new GControls.OnOffButton("T zunanja", 3, XmlController.GetEnableCharts_Tzunanja(), GControls.OnOffButton.Type.WithText);
-                EnableTnotranja = new GControls.OnOffButton("T notranja", 4, XmlController.GetEnableCharts_Tnotranja(), GControls.OnOffButton.Type.WithText);
-                var chartgraphShowVal =GControls.DropDownListChartViewSelector.GetReplacementTextFromEnum(XmlController.GetShowChartMode());
-                chartViewSelector = new GControls.DropDownListChartViewSelector("chartViewSelector", chartgraphShowVal, 7, 15, false);
+                var btnType = GControls.OnOffButton.Type.Padded;
 
-                var topoffset = 7;
-                var leftOffsetOrg = 30;
-                var leftStp = 12;
+
+                EnableSvetlost = new GControls.OnOffButton("Svetlost", 1, XmlController.GetEnableCharts_Svetlost(), btnType);
+                EnablePadavine = new GControls.OnOffButton("Padavine", 2, XmlController.GetEnableCharts_Padavine(), btnType);
+                EnableTzunanja = new GControls.OnOffButton("T zunanja", 3, XmlController.GetEnableCharts_Tzunanja(), btnType);
+                EnableTnotranja = new GControls.OnOffButton("T notranja", 4, XmlController.GetEnableCharts_Tnotranja(), btnType);
+                var chartgraphShowVal = GControls.DropDownListChartViewSelector.GetReplacementTextFromEnum(XmlController.GetShowChartMode());
+                chartViewSelector = new GControls.DropDownListChartViewSelector("chartViewSelector", chartgraphShowVal, 9.2F, 78, 4, 1.2F, false);
+
+                var topoffset = 9;                
+                var leftOffsetOrg = 8;
+                var leftStp = 19;
                 var size = 10;
-               
+
+                var topoffset_lbl = topoffset + 3;
+                var leftOffsetOrg_lbl = leftOffsetOrg -6F;
+                var leftStp_lbl = leftStp-0.4F;
+                var fontsize = 1.3F;
+
+                EnableSvetlost_lbl = new GControls.SuperLabel("Svetlost:", topoffset_lbl, leftOffsetOrg_lbl, 10, 6) { FontSize = fontsize, FontWeightBold = true  };
+                EnablePadavine_lbl = new GControls.SuperLabel("Padavine:", topoffset_lbl , leftOffsetOrg_lbl += leftStp_lbl, 10, 6) { FontSize = fontsize, FontWeightBold = true };
+                EnableTzunanja_lbl = new GControls.SuperLabel("T zunanja:", topoffset_lbl , leftOffsetOrg_lbl += leftStp_lbl, 10, 6) { FontSize = fontsize, FontWeightBold = true };
+                EnableTnotranja_lbl = new GControls.SuperLabel("T notranja:", topoffset_lbl, leftOffsetOrg_lbl += leftStp_lbl, 10, 6) { FontSize = fontsize, FontWeightBold = true };
+
                 EnableSvetlost.Top = topoffset + "";
                 EnablePadavine.Top = topoffset + "";
                 EnableTzunanja.Top = topoffset + "";
@@ -85,13 +97,17 @@ namespace WebApplication1
                 EnablePadavine.button.Click += EnablePadavine_Click;
                 EnableTzunanja.button.Click += EnableTzunanja_Click;
                 EnableTnotranja.button.Click += EnableTnotranja_Click;
-
-                SetControlAbsolutePos(chartViewSelector, 8, 78, 20);
-
+                                
                 MainDiv.Controls.Add(EnableSvetlost);
                 MainDiv.Controls.Add(EnablePadavine);
                 MainDiv.Controls.Add(EnableTzunanja);
                 MainDiv.Controls.Add(EnableTnotranja);
+                MainDiv.Controls.Add(chartViewSelector);
+
+                MainDiv.Controls.Add(EnableSvetlost_lbl);
+                MainDiv.Controls.Add(EnablePadavine_lbl);
+                MainDiv.Controls.Add(EnableTzunanja_lbl);
+                MainDiv.Controls.Add(EnableTnotranja_lbl);
                 MainDiv.Controls.Add(chartViewSelector);
 
                 chartViewSelector.SaveClicked += ChartViewSelector_SaveClicked;
@@ -129,16 +145,16 @@ namespace WebApplication1
                 Helper.Refresh();
             }
 
-            class ChartTweaker
+            class ChartTweaker :Dsps
             {
                 // Set Chart Properties
-                int top = 21;
-                int left = 0;
-                int width = 100;
-                int height = 76;
+                readonly int top = 16;
+                readonly int left = 0;
+                readonly int width = 99;
+                readonly int height = 81;
 
                 Font ChartFont;
-                int leftSideChart_Steps = 10;
+                readonly int leftSideChart_Steps = 10;
 
                 // 
 
@@ -163,7 +179,7 @@ namespace WebApplication1
                 Control Chart_control;
                 public Chart ChartGraph;
                 Page page;
-                string chartID;
+                readonly string chartID;
                 HtmlGenericControl MainDiv;
 
 
@@ -185,7 +201,7 @@ namespace WebApplication1
 
                 void CreateUnitLabels()
                 {
-                    var h = 23.2F;
+                    var h = 18.8F;
                     var font = "1.2vw";
 
                     if (XmlController.GetEnableCharts_Svetlost())
@@ -209,7 +225,7 @@ namespace WebApplication1
                         Label Unit_T = new Label() { Text = "[°C]", ForeColor = color_TZunanja };
                         Unit_T.Style.Add(HtmlTextWriterStyle.FontSize, font);
                         MainDiv.Controls.Add(Unit_T);
-                        SetControlAbsolutePos(Unit_T, h, 94);
+                        SetControlAbsolutePos(Unit_T, h, 93);
                     }
                     
                 }
@@ -224,7 +240,7 @@ namespace WebApplication1
 
                     legend.Font = new Font(Settings.DefaultFont, 17, FontStyle.Bold);
                     legend.Position = new ElementPosition(30,2,40,8);
-                    legend.BackColor = Color.FromArgb(0, Color.White);
+                    legend.BackColor = Color.FromArgb(0, Color.White);                    
                     ChartGraph.Legends.Add(legend);
                     
                 }
@@ -239,6 +255,7 @@ namespace WebApplication1
                     ChartGraph.ChartAreas[chartarea.Name].InnerPlotPosition.Auto = true;
 
                     ChartGraph.BackColor = Color.Transparent;
+                    
                     chartarea.Position = new ElementPosition(5, 5, 95, 90);
                     chartarea.InnerPlotPosition = new ElementPosition(3, 5, 90, 90);
                     chartarea.AxisX.LabelStyle.Font = ChartFont;
@@ -259,10 +276,10 @@ namespace WebApplication1
                         chartarea.AxisY.LabelStyle.Font = ChartFont;
                         chartarea.AxisY.Minimum = 0;
                         chartarea.AxisY.Maximum = 100;
-                        chartarea.AxisY.Interval = calculateInterval(chartarea.AxisY.Minimum, chartarea.AxisY.Maximum, leftSideChart_Steps);
+                        chartarea.AxisY.Interval = CalculateInterval(chartarea.AxisY.Minimum, chartarea.AxisY.Maximum, leftSideChart_Steps);
                         chartarea.AxisY.IntervalAutoMode = IntervalAutoMode.FixedCount;
                         chartarea.BackColor = Color.Transparent;
-                        chartarea.AxisY.LabelStyle.ForeColor = darkenColor(color_Svetlost, 50);
+                        chartarea.AxisY.LabelStyle.ForeColor = DarkenColor(color_Svetlost, 50);
 
 
                     }
@@ -296,7 +313,7 @@ namespace WebApplication1
                         series.YAxisType = AxisType.Secondary; // skala na desni strani
                         chartarea.AxisY2.Minimum = -20;
                         chartarea.AxisY2.Maximum = 30;
-                        chartarea.AxisY2.Interval = calculateInterval(chartarea.AxisY2.Minimum, chartarea.AxisY2.Maximum, leftSideChart_Steps);
+                        chartarea.AxisY2.Interval = CalculateInterval(chartarea.AxisY2.Minimum, chartarea.AxisY2.Maximum, leftSideChart_Steps);
                         chartarea.AxisY2.IntervalAutoMode = IntervalAutoMode.FixedCount;
                         chartarea.BackColor = Color.Transparent;
                     }
@@ -315,7 +332,7 @@ namespace WebApplication1
                         series.YAxisType = AxisType.Secondary; // skala na desni strani
                         chartarea.AxisY2.Minimum = -20;
                         chartarea.AxisY2.Maximum = 30;
-                        chartarea.AxisY2.Interval = calculateInterval(chartarea.AxisY2.Minimum, chartarea.AxisY2.Maximum, leftSideChart_Steps);
+                        chartarea.AxisY2.Interval = CalculateInterval(chartarea.AxisY2.Minimum, chartarea.AxisY2.Maximum, leftSideChart_Steps);
                         chartarea.AxisY2.IntervalAutoMode = IntervalAutoMode.FixedCount;
                         chartarea.BackColor = Color.Transparent;
 
@@ -373,15 +390,15 @@ namespace WebApplication1
                     areaAxis.AxisY.Interval = 10;
                     areaAxis.AxisY.Minimum = 0;
                     areaAxis.AxisY.Maximum = 160;
-                    areaAxis.AxisY.Interval = calculateInterval(areaAxis.AxisY.Minimum, areaAxis.AxisY.Maximum, leftSideChart_Steps);
-                    areaAxis.AxisY.LabelStyle.ForeColor = darkenColor(color_Padavine, 20);
+                    areaAxis.AxisY.Interval = CalculateInterval(areaAxis.AxisY.Minimum, areaAxis.AxisY.Maximum, leftSideChart_Steps);
+                    areaAxis.AxisY.LabelStyle.ForeColor = DarkenColor(color_Padavine, 20);
 
                     // Adjust area position
                     areaAxis.Position.X -= axisOffset;
                     areaAxis.InnerPlotPosition.X += labelsSize;
                 }
 
-                int calculateInterval(double min, double max, int steps)
+                int CalculateInterval(double min, double max, int steps)
                 {
                     var dif = max - min;
                     var interval = Misc.ToInt( dif / steps);
@@ -471,7 +488,7 @@ namespace WebApplication1
                     
                 }
 
-                Color darkenColor(Color c, int darkenFor)
+                Color DarkenColor(Color c, int darkenFor)
                 {
                     int r, g, b;
 

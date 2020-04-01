@@ -157,6 +157,9 @@
     <Content Include="Pictures\dwn.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Pictures\EmptyBtnWide.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Pictures\EmptyBtn.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -319,6 +322,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="ChartValues\ChartValuesLogger.cs" />
     <Compile Include="GlobalManagement.cs" />
+    <Compile Include="GUI - Controls\Dispose.cs" />
     <Compile Include="GUI - Pages\GuiController - PageEditor.cs" />
     <Compile Include="GUI - Pages\GuiController - PagePadavine.cs" />
     <Compile Include="GUI - Controls\GuiController - Positioning.cs" />

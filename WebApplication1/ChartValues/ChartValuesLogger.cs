@@ -529,9 +529,9 @@ namespace WebApplication1.ChartValues
                 {// write data
                     s.WriteLine(line);
                     s.Flush();
-                    s.Close();
-                    return 0;
-                }               
+                    s.Close();                    
+                }
+                return 0;
             }
             catch (Exception ex)
             {

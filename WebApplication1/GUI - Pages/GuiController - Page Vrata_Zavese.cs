@@ -12,7 +12,7 @@ namespace WebApplication1
 
     public partial class GuiController
     {
-        public class PageVrataZavese
+        public class PageVrataZavese : Dsps
         {
 
             public static string ViewStateElement_MenuShown = "MenuShown";
@@ -95,16 +95,16 @@ namespace WebApplication1
                 Timer tmrPnl2 = new Timer();
                 AsyncPostBackTrigger apbt2 = new AsyncPostBackTrigger();
 
-                void manageSettingsContent()
+                void ManageSettingsContent()
                 {
                     
-                    if (getMenuShown_Left())
+                    if (GetMenuShown_Left())
                     {
                         Ventilacija_ZaveseSettingsContent settings = new Ventilacija_ZaveseSettingsContent();
-                        settings.exitButton.Click += (sender, e) => { setMenuShown_None(); Helper.Refresh(); }; // closes menu and refresh starts updatepanel
+                        settings.exitButton.Click += (sender, e) => { SetMenuShown_None(); Helper.Refresh(); }; // closes menu and refresh starts updatepanel
                         Controls.Add(settings);
                     }
-                    else if (getMenuShown_Right())
+                    else if (GetMenuShown_Right())
                     {
                         Ventilacija_ZaveseSettingsContent settings = new Ventilacija_ZaveseSettingsContent();
                         Controls.Add(settings);
@@ -115,13 +115,13 @@ namespace WebApplication1
                 public VrazaZaveseContent()
                 {
                     // menu
-                    manageSettingsContent();                    
+                    ManageSettingsContent();                    
                     
                     // left gb
                     UpdtPnlCtrl();
-                    initializeValues();
-                    positionControls();
-                    styleControls();
+                    InitializeValues();
+                    PositionControls();
+                    StyleControls();
 
                     gb.Controls.Add(updtPnl);
                     Controls.Add(tmrPnl);
@@ -192,7 +192,7 @@ namespace WebApplication1
                     return SetControlAbsolutePos(EncapsulateIntoDIV_TLW(l), 2, 0, 100, 10);
                 }
 
-                void initializeValues()
+                void InitializeValues()
                 {
                     var fontSize = 5;
                     var size = 10;
@@ -212,7 +212,7 @@ namespace WebApplication1
 
                     gb = new GControls.GroupBox(19, 5, 43, 70);
                                         
-                    timerUpDn = new GControls.DropDownListForTimer_1_30s("timeToUpPos",prop.CasPotovanja1.Value_string, 20,10,size, fontSize, true);
+                    timerUpDn = new GControls.DropDownListForTimer_1_30s("timeToUpPos",prop.CasPotovanja1.Value_string, 20,10,size, fontSize, true, false);
                     positionUp = new Image();
                     positionDn = new Image();
 
@@ -232,18 +232,18 @@ namespace WebApplication1
                     gb2 = new GControls.GroupBox(19, 51, 43, 70);
 
                    
-                    timerUpDn2 = new GControls.DropDownListForTimer_1_30s("timeToUpPos", prop.CasPotovanja2.Value_string, 20, 10, size, fontSize, true);
+                    timerUpDn2 = new GControls.DropDownListForTimer_1_30s("timeToUpPos", prop.CasPotovanja2.Value_string, 20, 10, size, fontSize, true, false);
                     positionUp2 = new Image();
                     positionDn2 = new Image();
 
-                    positionUp2.Visible = Val.logocontroler.Prop4.KoncnoStikaloGor.Value; // visible if true
-                    positionDn2.Visible = Val.logocontroler.Prop4.KoncnoStikaloGor.Value;
+                    positionUp2.Visible = Val.logocontroler.Prop3.KoncnoStikaloGor2.Value; // visible if true
+                    positionDn2.Visible = Val.logocontroler.Prop3.KoncnoStikaloGor2.Value;
 
                     // events
-                    registerEvents();                    
+                    RegisterEvents();                    
                 }
 
-                void registerEvents()
+                void RegisterEvents()
                 {
                     gor.Click += Gor_Click;
                     dol.Click += Dol_Click;
@@ -262,7 +262,7 @@ namespace WebApplication1
                     sett2.Click += Sett2_Click;
                 }
 
-                void positionControls()
+                void PositionControls()
                 {
 
                     var x = 5;
@@ -303,7 +303,7 @@ namespace WebApplication1
 
                 }
 
-                void styleControls()
+                void StyleControls()
                 {
                     
 
@@ -353,9 +353,11 @@ namespace WebApplication1
                     {
                         HtmlGenericControl div = new HtmlGenericControl("div");
                         GControls.GroupBox gbL = new GControls.GroupBox(20,5,30,65);
-                        GControls.PaddedOnOffButton UporabljaKS = new GControls.PaddedOnOffButton("Končna stikala", 0, getStatusUporabljaKS(), new Helper.Position(35,7), GControls.OnOffButton.Type.WithText);
-                        GControls.SuperLabel lblUporabljaKS = new GControls.SuperLabel("Oprema podpira končna stikala:", 25, 10, 20, 15);
-                        lblUporabljaKS.FontSize = 1.2F;
+                        GControls.OnOffButton UporabljaKS = new GControls.OnOffButton("Končna stikala", 0, GetStatusUporabljaKS(), new Helper.Position(35,7), GControls.OnOffButton.Type.WithText);
+                        GControls.SuperLabel lblUporabljaKS = new GControls.SuperLabel("Oprema podpira končna stikala:", 25, 10, 20, 15)
+                        {
+                            FontSize = 1.2F
+                        };
 
                         SetControlAbsolutePos(lblUporabljaKS, 15, 10);
 
@@ -372,7 +374,7 @@ namespace WebApplication1
                         return div;
                     }
 
-                    static bool getStatusUporabljaKS()
+                    static bool GetStatusUporabljaKS()
                     {
                         return Val.logocontroler.Prop3.UporabljaKoncnaStikala1.Value;
                     }
@@ -398,7 +400,7 @@ namespace WebApplication1
 
                 private void Sett_Click(object sender, ImageClickEventArgs e)
                 {
-                    setMenuShown_Left();
+                    SetMenuShown_Left();
                     Helper.Refresh();
                 }
 
@@ -422,7 +424,7 @@ namespace WebApplication1
                
                 private void Sett2_Click(object sender, ImageClickEventArgs e)
                 {
-                    setMenuShown_Right();
+                    SetMenuShown_Right();
                     Helper.Refresh();
                 }
 
@@ -432,7 +434,7 @@ namespace WebApplication1
             // session specific
             #region session specific
 
-            static int getMenuShown() // 0 - no menu is shown  |  1 - left menu is shown  |  2 - right menu is shown
+            static int GetMenuShown() // 0 - no menu is shown  |  1 - left menu is shown  |  2 - right menu is shown
             {
                 try
                 {
@@ -449,35 +451,35 @@ namespace WebApplication1
                 
             }
 
-            static bool getMenuShown_Left()
+            static bool GetMenuShown_Left()
             {
-                if (getMenuShown() == 1) 
+                if (GetMenuShown() == 1) 
                 {
                     return true;
                 }
                 return false;
             }
 
-            static bool getMenuShown_Right()
+            static bool GetMenuShown_Right()
             {
-                if (getMenuShown() == 2)
+                if (GetMenuShown() == 2)
                 {
                     return true;
                 }
                 return false;
             }
 
-            static void setMenuShown_Left()
+            static void SetMenuShown_Left()
             {
                 Session[ViewStateElement_MenuShown] = 1;
             }
 
-            static void setMenuShown_Right()
+            static void SetMenuShown_Right()
             {
                 Session[ViewStateElement_MenuShown] = 2;
             }
 
-            static void setMenuShown_None()
+            static void SetMenuShown_None()
             {
                 Session[ViewStateElement_MenuShown] = 0;
             }

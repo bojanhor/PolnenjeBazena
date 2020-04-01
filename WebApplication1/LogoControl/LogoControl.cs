@@ -337,7 +337,7 @@ namespace WebApplication1
 
         }
 
-        private int Watchdog(S7Client Client, string typeAndAdress, ref string Progress, ref int thisValue, ref int previousValue, int CanFail_timesWithoutError, ref int CanFailCnt)
+        private int Watchdog(S7Client Client, PlcVars.WordAddress typeAndAdress, ref string Progress, ref int thisValue, ref int previousValue, int CanFail_timesWithoutError, ref int CanFailCnt)
         {
             int err = 0;
 
@@ -483,10 +483,14 @@ namespace WebApplication1
 
         public void ConnectAsync(int device)
         {
-            if (!BackgroundWorker[device].IsBusy)
+            if (BackgroundWorker[device] != null)
             {
-                BackgroundWorker[device].RunWorkerAsync();
+                if (!BackgroundWorker[device].IsBusy)
+                {
+                    BackgroundWorker[device].RunWorkerAsync();
+                }
             }
+            
         }
 
         public void DisconnectAsync(int device)

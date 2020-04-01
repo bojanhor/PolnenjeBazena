@@ -11,8 +11,7 @@ namespace WebApplication1
 {
     public partial class GuiController
     {
-
-
+        
         // Template class for every page
         public Template Template_ { get; set; }
         public PageDefault PageDefault_ { get; set; }
@@ -31,11 +30,8 @@ namespace WebApplication1
         }
 
         void ConstructClass()
-        {
-                        
-            Template_ = new Template();            
-            // other guiController classes are loaded on every page postback (load event)
-            
+        {                        
+            Template_ = new Template();          
         }
 
         public void Reconstruct()
@@ -56,7 +52,7 @@ namespace WebApplication1
             TemplateClassID.Style.Add(HtmlTextWriterStyle.Top, "0px");
             TemplateClassID.Style.Add(HtmlTextWriterStyle.Left, "0px");
             TemplateClassID.Style.Add(HtmlTextWriterStyle.Width, XmlController.GetMasterWindowScaleX() + "%");
-            TemplateClassID.Style.Add(HtmlTextWriterStyle.MarginLeft, "1%");
+            TemplateClassID.Style.Add(HtmlTextWriterStyle.MarginLeft, "0.5%");
             TemplateClassID.Style.Add(HtmlTextWriterStyle.PaddingBottom, XmlController.GetMasterWindowScaleY() + "%");
 
         }

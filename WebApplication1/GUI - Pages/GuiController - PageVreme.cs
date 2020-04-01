@@ -10,7 +10,7 @@ namespace WebApplication1
 {
     public partial class GuiController
     {
-        public class PageVreme
+        public class PageVreme : Dsps
         {            
             public PageVreme()
             {

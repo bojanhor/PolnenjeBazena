@@ -409,10 +409,12 @@ namespace WebApplication1
         public static Label CreateLabelTitle_OnTop(string text, HtmlGenericControl TitleAboveThisDiv, float offsetHeight, float offsetLeft, int? width, float FontMultiplyer, bool bold, bool center_h, string htmlColor)
         {
             try
-            {                
-                
-                Label l = new Label();
-                l.Text = text;
+            {
+
+                Label l = new Label
+                {
+                    Text = text
+                };
                 l.Style.Add("position", "absolute");
                 l.Style.Add(HtmlTextWriterStyle.FontSize, Helper.FloatToStringWeb(FontMultiplyer, "vw"));
 
@@ -483,8 +485,10 @@ namespace WebApplication1
         {
             try
             {
-                Label l = new Label();
-                l.Text = text;
+                Label l = new Label
+                {
+                    Text = text
+                };
                 l.Style.Add("position", "absolute");
                 l.Style.Add(HtmlTextWriterStyle.FontSize, Helper.FloatToStringWeb(FontMultiplyer, "vw"));
                 if (center_h)
@@ -521,8 +525,10 @@ namespace WebApplication1
         {
             try
             {
-                Label l = new Label();
-                l.Text = text;
+                Label l = new Label
+                {
+                    Text = text
+                };
                 l.Style.Add("position", "absolute");
                 l.Style.Add(HtmlTextWriterStyle.FontSize, Helper.FloatToStringWeb(FontMultiplyer, "vw"));
 

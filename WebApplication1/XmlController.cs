@@ -30,10 +30,7 @@ namespace WebApplication1
                 {
                     return _XmlFile;
                 }
-                else
-                {
-                    throw new Exception("Configuration file was not found. please copy proper xml file inside application folder and name it: config.xml");
-                }
+                return null;
             }
 
             private set
@@ -239,9 +236,9 @@ namespace WebApplication1
                 XmlStat = XmlFile.Element("root").Element("STATS");
             }
 
-            catch (Exception ex)
+            catch (Exception )
             {
-                throw ex;
+                throw ;
             }
         }
 
@@ -296,9 +293,9 @@ namespace WebApplication1
                 return LocalTSAP;
 
             }
-            catch (Exception e)
+            catch (Exception )
             {
-                throw e;
+                throw ;
             }
         }
 
@@ -322,9 +319,9 @@ namespace WebApplication1
                 return RemoteTSAP;
 
             }
-            catch (Exception e)
+            catch (Exception )
             {
-                throw e;
+                throw ;
             }
         }
 
@@ -349,7 +346,7 @@ namespace WebApplication1
 
         }
 
-        public static string GetWDAddress(int device)
+        public static PlcVars.WordAddress GetWDAddress(int device)
         {
             if (device < 0 || device > Settings.Devices)
             {
@@ -358,14 +355,15 @@ namespace WebApplication1
 
             try
             {
-                return XmlConn.Element("LOGO" + device).Element("watchdogAddress").Value;
+                var xmlVal = XmlConn.Element("LOGO" + device).Element("watchdogAddress").Value;
+                return new PlcVars.WordAddress(ushort.Parse(xmlVal));
             }
             catch (Exception)
             {
                 throw new Exception(
                     "watchdogAddress value in config file is not valid watchdogAddress. " +
                     "Correct the watchdogAddress value in config.xml file at LOGO" + device + " entry. " +
-                    "format must be DW 300.");
+                    "format must be 300.");
             }
         }
 
@@ -603,7 +601,7 @@ namespace WebApplication1
             return pos;
         }
 
-        public static string GetLucAddress_ReadToPC(int ID)
+        public static PlcVars.BitAddress GetLucAddress_ReadToPC(int ID)
         {
             var searchValue = "AddressLuc_ReadToPC" + ID;
 
@@ -614,7 +612,8 @@ namespace WebApplication1
                     throw new Exception();
                 }
 
-                return XmlGUI.Element(searchValue).Value;
+                var xmlVal = XmlGUI.Element(searchValue).Value.Split('.');
+                return new PlcVars.BitAddress(ushort.Parse(xmlVal[0]), ushort.Parse(xmlVal[1]));
             }
             catch (Exception)
             {
@@ -622,12 +621,12 @@ namespace WebApplication1
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
                     "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
-                    "format must be profinet adress (example: VW 10) - min value 1, max value 800.");
+                    "format must be profinet bit adress (example: 10.0) - min value 1, max value 800.");
             }
 
         }
 
-        public static string GetLucAddress_WriteToPLC(int ID)
+        public static PlcVars.BitAddress GetLucAddress_WriteToPLC(int ID)
         {
             var searchValue = "AddressLuc_WriteToPLC" + ID;
 
@@ -637,15 +636,15 @@ namespace WebApplication1
                 {
                     throw new Exception();
                 }
-
-                return XmlGUI.Element(searchValue).Value;
+                var xmlVal = XmlGUI.Element(searchValue).Value.Split('.');
+                return new PlcVars.BitAddress(ushort.Parse(xmlVal[0]), ushort.Parse(xmlVal[1]));
             }
             catch (Exception)
             {
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
                     "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
-                    "format must be profinet adress (example: VW 10) - min value 1, max value 800.");
+                    "format must be profinet bit adress (example: 10.0) - min value 1, max value 800.");
             }
 
         }

@@ -28,6 +28,7 @@ namespace WebApplication1
         public PlcVars.TimeSet[] IzklopConapop = new PlcVars.TimeSet[LucIconsTableLength];
         public PlcVars.Word[] DimmerDop = new PlcVars.Word[LucIconsTableLength];
         public PlcVars.Word[] DimmerPop = new PlcVars.Word[LucIconsTableLength];
+        public PlcVars.Word[] DimmerActual = new PlcVars.Word[LucIconsTableLength];
 
         public PlcVars.TimeSet LogoClock;
 
@@ -43,56 +44,57 @@ namespace WebApplication1
         public Prop1(Sharp7.S7Client client)
         {
             Client = client;
+            
+            LogoClock = new PlcVars.TimeSet(Client, new PlcVars.WordAddress(4), false);
 
-            LogoClock = new PlcVars.TimeSet(Client, "VW4", false);
+            const ushort inc = 10;
+            ushort vklopUrnikabuff = 210;
 
-            const int inc = 10;
-            int vklopUrnikabuff = 210;
-
-            IzklopKoJeDan = new PlcVars.Word(Client, "VW744", "", "", true);
+            IzklopKoJeDan = new PlcVars.Word(Client, new PlcVars.WordAddress(744), "", "", true);
 
             for (int i = 1; i < LucIconsTableLength; i++)
             {
                 LucStatus_ReadToPC[i] = new PlcVars.Bit(Client, XmlController.GetLucAddress_ReadToPC(i),"", "", false);
                 LucStatus_WriteToPLC[i] = new PlcVars.Bit(Client, XmlController.GetLucAddress_WriteToPLC(i), "", "", true);
                      
-                VklopUrnika[i] = new PlcVars.Word(Client, "VW" + (vklopUrnikabuff), "", "", true);
+                VklopUrnika[i] = new PlcVars.Word(Client, new PlcVars.WordAddress(vklopUrnikabuff), "", "", true);
                 vklopUrnikabuff += inc;
 
             }
 
-            var buffCona = 16;
-            var buffConaIzkInc = 2;
-            var buffConaPopInc = 100;
+            ushort buffCona = 16;
+            ushort buffConaIzkInc = 2;
+            ushort buffConaPopInc = 100;
             for (int i = 1; i < LucStatus_ReadToPC.Length; i++)
             {
-                VklopConadop[i] = new PlcVars.TimeSet(Client, "VW" + buffCona, true); 
-                IzklopConadop[i] = new PlcVars.TimeSet(Client, "VW" + (buffCona + buffConaIzkInc), true); 
+                VklopConadop[i] = new PlcVars.TimeSet(Client, new PlcVars.WordAddress(buffCona), true); 
+                IzklopConadop[i] = new PlcVars.TimeSet(Client, new PlcVars.WordAddress((ushort)(buffCona + buffConaIzkInc)), true); 
 
-                VklopConapop[i] = new PlcVars.TimeSet(Client, "VW" + (buffCona + buffConaPopInc), true); 
-                IzklopConapop[i] = new PlcVars.TimeSet(Client, "VW" + (buffCona + buffConaPopInc + buffConaIzkInc), true);
+                VklopConapop[i] = new PlcVars.TimeSet(Client, new PlcVars.WordAddress((ushort)(buffCona + buffConaPopInc)), true); 
+                IzklopConapop[i] = new PlcVars.TimeSet(Client, new PlcVars.WordAddress((ushort)(buffCona + buffConaPopInc + buffConaIzkInc)), true);
 
                 buffCona += 10;
             }
 
-            int buffDimmD = 310, buffDimmP = 314;
-            for (int i = 1; i < 4+1; i++)
+            ushort buffDimmD = 310, buffDimmP = 314, buffDimmActual = 410;
+            for (int i = 1; i <= 4; i++)
             {
-                DimmerDop[i] = new PlcVars.Word(Client, "VW" + buffDimmD, "", "", true);
-                DimmerPop[i] = new PlcVars.Word(Client, "VW" + buffDimmP, "", "", true);
-                buffDimmD += inc; buffDimmP += inc;
+                DimmerDop[i] = new PlcVars.Word(Client, new PlcVars.WordAddress(buffDimmD), "", "", true); 
+                DimmerPop[i] = new PlcVars.Word(Client, new PlcVars.WordAddress(buffDimmP), "", "", true); 
+                DimmerActual[i] = new PlcVars.Word(Client, new PlcVars.WordAddress(buffDimmActual), "", "%", false); 
+                buffDimmD += inc; buffDimmP += inc; buffDimmActual += inc;
             }
 
-            UgasniVseLuci = new PlcVars.Bit(Client, "bit at 700.0", "", "", true);
+            UgasniVseLuci = new PlcVars.Bit(Client, new PlcVars.BitAddress(700,0), "", "", true);
 
-            Vzhod_Read = new PlcVars.TimeSet(Client, "VW712", false);
-            Zahod_Read = new PlcVars.TimeSet(Client, "VW714", false);
-            VzhodOffset_Write = new PlcVars.TimeSet(Client, "VW716", false);
-            ZahodOffset_Write = new PlcVars.TimeSet(Client, "VW718", false);
-            DanNoc_Vrednost_An = new PlcVars.Word(Client, "VW736", "", "%", false);
-            DanNoc_Vrednost_Dig = new PlcVars.Bit(Client, "bit at 740", "Dan", "Noč", false);
-            DayLightPercentOn = new PlcVars.Word(Client, "VW724", "", "%", true);
-            DayLightPercentOff = new PlcVars.Word(Client, "VW728", "", "%", true);
+            Vzhod_Read = new PlcVars.TimeSet(Client, new PlcVars.WordAddress(712), false);
+            Zahod_Read = new PlcVars.TimeSet(Client, new PlcVars.WordAddress(714), false);
+            VzhodOffset_Write = new PlcVars.TimeSet(Client, new PlcVars.WordAddress(716), false);
+            ZahodOffset_Write = new PlcVars.TimeSet(Client, new PlcVars.WordAddress(718), false);
+            DanNoc_Vrednost_An = new PlcVars.Word(Client, new PlcVars.WordAddress(736), "", "%", false);
+            DanNoc_Vrednost_Dig = new PlcVars.Bit(Client, new PlcVars.BitAddress(740,0), "Dan", "Noč", false);
+            DayLightPercentOn = new PlcVars.Word(Client, new PlcVars.WordAddress(724), "", "%", true);
+            DayLightPercentOff = new PlcVars.Word(Client, new PlcVars.WordAddress(728), "", "%", true);
 
         }
 

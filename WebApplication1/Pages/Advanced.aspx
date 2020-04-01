@@ -62,8 +62,6 @@
     <form id="form1" runat="server">
 
         <asp:ScriptManager ID="Scriptmanager" runat="server"></asp:ScriptManager>
-
-
         <asp:UpdatePanel ID="UpdatablePanel" UpdateMode="Conditional" runat="server">
 
             <Triggers>

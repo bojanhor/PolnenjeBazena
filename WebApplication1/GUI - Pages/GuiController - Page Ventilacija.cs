@@ -12,7 +12,7 @@ namespace WebApplication1
 
     public partial class GuiController
     {
-        public class PageVentilacija
+        public class PageVentilacija : Dsps
         {
             public VentSettingsSubmenu subMenu;
             public VentSettingsContent SettingsContent = new VentSettingsContent();
@@ -42,22 +42,21 @@ namespace WebApplication1
             public class VentSettingsContent : HtmlGenericControl
             {
                 // Declarations Left Groupbox
-                float FontSize = 1.2F;
-                int btnHeight = 12;
-
-                int row1 = 23;
-                float btnOffset = 4.5F;
+                readonly float FontSize = 1.2F;
+                readonly int btnHeight = 12;
+                readonly int row1 = 23;
+                readonly float btnOffset = 4.5F;
 
                 float rowbuff;
-                int rowspacing = 15;
+                readonly int rowspacing = 15;
 
                 Label TitleLeft = new Label();
 
-                static int col1 = 8;
-                static int col2 = col1 + 31;
-                static int col3 = col2 + 6;
-                static int col4 = col3 + 17;
-                static int col5 = col4 + 4;
+                static readonly int col1 = 8;
+                static readonly int col2 = col1 + 31;
+                static readonly int col3 = col2 + 6;
+                static readonly int col4 = col3 + 17;
+                static readonly int col5 = col4 + 4;
 
 
                 Label lbl_tn1 = new Label(); // temperaturni nivo 1
@@ -138,10 +137,10 @@ namespace WebApplication1
                     TagName = "div";
                     SetControlAbsolutePos(this, 0, 0, 100, 100);
 
-                    initializeValues();
-                    positionControls();
-                    styleControls(FontSize);
-                    addControls();
+                    InitializeValues();
+                    PositionControls();
+                    StyleControls(FontSize);
+                    AddControls();
                     Controls.Add(up);
                 }
 
@@ -159,22 +158,22 @@ namespace WebApplication1
                     return SetControlAbsolutePos(EncapsulateIntoDIV_TLW(l), 2, 0, 100, 10);
                 }
 
-                void initializeValues()
+                void InitializeValues()
                 {
                     InitializeValues_Top();
-                    initializeValues_Left();
-                    initializeValues_Right();
+                    InitializeValues_Left();
+                    InitializeValues_Right();
                 }
 
-                void positionControls()
+                void PositionControls()
                 {
-                    positionControls_Left();
+                    PositionControls_Left();
                 }
 
-                void styleControls(float fontSize)
+                void StyleControls(float fontSize)
                 {
-                    styleControls_Left(FontSize);
-                    styleControls_Right(FontSize);
+                    StyleControls_Left(FontSize);
+                    StyleControls_Right(FontSize);
                 }
 
                 // Top group
@@ -185,18 +184,16 @@ namespace WebApplication1
                     var top = 7.1F;
                     var fontsize = 1;
 
-                    VklopRocniNacin= new GControls.SuperLabel("Ročni Način:", top+2, 50);
-                    VklopRocniNacin_DD = new GControls.DropDownListForYesNoSelect("VklopRocniNacin", prop.Vklop_RocniNacin.Value, sizeBtn, 1, false);
+                    VklopRocniNacin= new GControls.SuperLabel("Ročni Način:", top+2, 50, 7, 5);
+                    VklopRocniNacin_DD = new GControls.DropDownListForYesNoSelect("VklopRocniNacin", prop.Vklop_RocniNacin.Value, top, 54, sizeBtn, 1, false, false);
                     VrednostRocniNacin = new GControls.SuperLabel("Nastavi obrate na:", top+2, 66, 7, 5);
-                    VrednostRocniNacin_DD = new GControls.DropDownListForDimmer("VrednostRocniNacin", prop.Obrati_RocniNacin.Value_string, sizeBtn, 1, false);
+                    VrednostRocniNacin_DD = new GControls.DropDownListForDimmer("VrednostRocniNacin", prop.Obrati_RocniNacin.Value_string, top, 72, sizeBtn, 1, false, false);
 
-                    VklopRocniNacin.FontSize = fontsize;
-                    SetControlAbsolutePos(VklopRocniNacin_DD, top, 54);
-                    VrednostRocniNacin.FontSize = fontsize;
-                    SetControlAbsolutePos(VrednostRocniNacin_DD, top, 72);
+                    VklopRocniNacin.FontSize = fontsize;                  
+                    VrednostRocniNacin.FontSize = fontsize;             
                 }
 
-                void addAndPositionControlsTop()
+                void AddAndPositionControlsTop()
                 {
                     Controls.Add(VklopRocniNacin);                    
                     up.Controls_Add(VklopRocniNacin_DD);
@@ -206,7 +203,7 @@ namespace WebApplication1
 
                 // Left Group
 
-                void initializeValues_Left()
+                void InitializeValues_Left()
                 {
                     var tn = "Temperaturni nivo ";
 
@@ -277,7 +274,7 @@ namespace WebApplication1
                     Val.logocontroler.Prop2.TempNivo1.SyncWithPC(selectedItem.Value);
                 }
 
-                void positionControls_Left()
+                void PositionControls_Left()
                 {
                     
                     rowbuff = row1;
@@ -308,26 +305,26 @@ namespace WebApplication1
                     SetControlAbsolutePos(btnNastaviObr3, rowbuff, col5, btnHeight * ratio, btnHeight); rowbuff += rowspacing;
                                        
 
-                    positionSeparators_Left();
+                    PositionSeparators_Left();
                 }
 
-                void styleControls_Left(float fontSize)
+                void StyleControls_Left(float fontSize)
                 {
-                    style(lbl_tn1, fontSize);
-                    style(lbl_tn2, fontSize);
-                    style(lbl_tn3, fontSize);
-                    style(lbl_OmejevalnikObratov, fontSize);
+                    Stylize(lbl_tn1, fontSize);
+                    Stylize(lbl_tn2, fontSize);
+                    Stylize(lbl_tn3, fontSize);
+                    Stylize(lbl_OmejevalnikObratov, fontSize);
 
 
-                    style(obr_vent, fontSize);
+                    Stylize(obr_vent, fontSize);
 
-                    style(lbl_na1, fontSize);
-                    style(lbl_na2, fontSize);
-                    style(lbl_na3, fontSize);
+                    Stylize(lbl_na1, fontSize);
+                    Stylize(lbl_na2, fontSize);
+                    Stylize(lbl_na3, fontSize);
 
                 }
 
-                void positionSeparators_Left()
+                void PositionSeparators_Left()
                 {
 
                     float gs_top = row1 + 8.5F;
@@ -351,14 +348,14 @@ namespace WebApplication1
 
                 // Right Group
 
-                void initializeValues_Right()
+                void InitializeValues_Right()
                 {
 
                     float leftBorder = 5;
                     float nextH = 17;
                     int spacing = 4;
                     float guiSepH = 0.3F;
-                    double sizeBtn = 4F;
+                    float sizeBtn = 4F;
 
                     gs0 = new GControls.GuiSeparator(nextH, leftBorder, 90, guiSepH); nextH += gs0.Height + spacing - 2;
 
@@ -366,7 +363,7 @@ namespace WebApplication1
 
                     var prop = Val.logocontroler.Prop2;
 
-                    DropD_OmObratov = new GControls.DropDownListForYesNoSelect("DD_OmObr_yesno", prop.Nocn_Nacin.Value, nextH, 50, sizeBtn, FontSize, false); nextH += DropD_OmObratov.Height + spacing * 3.5F;
+                    DropD_OmObratov = new GControls.DropDownListForYesNoSelect("DD_OmObr_yesno", prop.Nocn_Nacin.Value, nextH, 50, sizeBtn, FontSize, false, false); nextH += DropD_OmObratov.Height + spacing * 3.5F;
                     DropD_OmObratov.SaveClicked += DropD_OmObratov_SaveClicked;
 
                     //
@@ -378,17 +375,17 @@ namespace WebApplication1
                     var tmp = Lbl_OmejiObrate.Left + Lbl_OmejiObrate.Width + 2;
                     var tmp1 = tmp;
 
-                    DropD_OmejiObrate = new GControls.DropDownListForDimmer("DD_OmObr_prc", prop.OmejiObrateNa.Value_string, nextH, tmp, sizeBtn, FontSize, false); nextH += DropD_OmejiObrate.Height + spacing + 7;
+                    DropD_OmejiObrate = new GControls.DropDownListForDimmer("DD_OmObr_prc", prop.OmejiObrateNa.Value_string, nextH, tmp, sizeBtn, FontSize, false, false); nextH += DropD_OmejiObrate.Height + spacing + 7;
                     DropD_OmejiObrate.SaveClicked += DropD_OmejiObrate_SaveClicked;
 
                     Lbl_Med = new GControls.SuperLabel("med", nextH + 4, leftBorder + 25, 20, 10);
 
-                    DropD_Start = new GControls.DropDownListForHourSelect("DD_start", prop.OmObrMedA.Value_WeektimerForSiemensLogoFormat, nextH, tmp, sizeBtn, FontSize, false); tmp += 24;
+                    DropD_Start = new GControls.DropDownListForHourSelect("DD_start", prop.OmObrMedA.Value_WeektimerForSiemensLogoFormat, nextH, tmp, sizeBtn, FontSize, false, false); tmp += 24;
                     DropD_Start.SaveClicked += DropD_Start_SaveClicked;
 
                     Lbl_In = new GControls.SuperLabel("in", nextH + 4, tmp, 20, 10); tmp += 5;
 
-                    DropD_Stop = new GControls.DropDownListForHourSelect("DD_stop", prop.OmObrMedB.Value_WeektimerForSiemensLogoFormat, nextH, tmp, sizeBtn, FontSize, false); nextH += DropD_Stop.Height + spacing * 3.5F;
+                    DropD_Stop = new GControls.DropDownListForHourSelect("DD_stop", prop.OmObrMedB.Value_WeektimerForSiemensLogoFormat, nextH, tmp, sizeBtn, FontSize, false, false); nextH += DropD_Stop.Height + spacing * 3.5F;
                     DropD_Stop.SaveClicked += DropD_Stop_SaveClicked;
 
                     //
@@ -397,7 +394,7 @@ namespace WebApplication1
 
                     Lbl_UpostevajZT = new GControls.SuperLabel("UPOŠTEVAJ ZUNANJO TEMPERATURO:", nextH + 2, leftBorder, 22, 10);
 
-                    DropD_UpostevajZT = new GControls.DropDownListForYesNoSelect("DD_OutTempReg", prop.UpostevajZT.Value, nextH + 2, tmp1, sizeBtn, FontSize, false); nextH += DropD_UpostevajZT.Height + spacing * 4;
+                    DropD_UpostevajZT = new GControls.DropDownListForYesNoSelect("DD_OutTempReg", prop.UpostevajZT.Value, nextH + 2, tmp1, sizeBtn, FontSize, false, false); nextH += DropD_UpostevajZT.Height + spacing * 4;
                     DropD_UpostevajZT.SaveClicked += DropD_UpostevajZT_SaveClicked;
 
                     //
@@ -433,7 +430,7 @@ namespace WebApplication1
                    
                 }
 
-                void styleControls_Right(float FontSize)
+                void StyleControls_Right(float FontSize)
                 {
                     Lbl_OmObratov.FontSize = FontSize;
                     Lbl_OmejiObrate.FontSize = FontSize;
@@ -444,15 +441,15 @@ namespace WebApplication1
 
                 // Both Groups
 
-                void style(WebControl c, float fontSize)
+                void Stylize(WebControl c, float fontSize)
                 {
                     c.Style.Add(HtmlTextWriterStyle.FontSize, Helper.FloatToStringWeb(fontSize, "vw"));
                     c.Style.Add(HtmlTextWriterStyle.Height, rowspacing - 1 + "%");
                 }
 
-                void addControls()
+                void AddControls()
                 {
-                    addAndPositionControlsTop();
+                    AddAndPositionControlsTop();
 
                     //
                     gb_L.Controls.Add(FormatTitle(TitleLeft));

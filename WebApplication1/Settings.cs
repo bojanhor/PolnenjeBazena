@@ -34,8 +34,6 @@ namespace WebApplication1
 
         public static readonly string pathToCustomJS = HttpRuntime.AppDomainAppPath + "CustomScripts\\"; // path to scripts folder
 
-
-
         // less important (not very significant)
 
         public static int defaultCheckTimingInterval = 40;      // used for loops checking - lower value means higher precision timing

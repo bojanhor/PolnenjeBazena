@@ -14,6 +14,64 @@ namespace WebApplication1
             SysLog.Message.SetMessage(message);
         }
 
+        public class PlcAddress
+        {
+            public static ushort Address;
+
+            public int GetAddress()
+            {
+                return Address;
+            }                       
+        }
+
+        public class BitAddress : PlcAddress
+        {
+            public static ushort SubAddress;
+
+            public BitAddress(ushort address, ushort subAddress)
+            {
+                SubAddress = subAddress;
+                Address = address;
+            }
+            public int GetSubAddress()
+            {
+                return SubAddress;
+            }
+
+            public string GetStringRepresentation()
+            {
+                return "bit at " + GetAddress() + GetSubAddress();
+            }
+
+        }
+
+        public class WordAddress : PlcAddress
+        {
+            public WordAddress(ushort address)
+            {
+                Address = address;
+            }
+
+            public string GetStringRepresentation()
+            {
+                return "VW" + GetAddress();
+            }
+        }
+
+        public class DoubleWordAddress : PlcAddress
+        {
+            public DoubleWordAddress(ushort address)
+            {
+                Address = address;
+            }
+
+            public string GetStringRepresentation()
+            {
+                return "DW" + GetAddress();
+            }
+
+        }
+        
         public class Word
         {
             public short? Value
@@ -49,7 +107,7 @@ namespace WebApplication1
             private short? PLCval;
             private short? PCval;
             private bool directionToPLC = false;
-            private string _TypeAndAdress;
+            private WordAddress _TypeAndAdress;
             private Sharp7.S7Client _Client;
             int ErrRead;
             int ErrWrite;
@@ -60,7 +118,7 @@ namespace WebApplication1
             bool _IsWritable = false;
             bool datacorrupted = false;
 
-            public Word(Sharp7.S7Client Client, string TypeAndAdress, string prefixToShow, string postFixToShow, bool IsWritable)
+            public Word(Sharp7.S7Client Client, WordAddress TypeAndAdress, string prefixToShow, string postFixToShow, bool IsWritable)
             {
                 PLCval = null;
                 PCval = null;
@@ -213,7 +271,7 @@ namespace WebApplication1
             }
             public void ReportError_throwException(string Message, bool? forceSet_FlagToReport, bool? forceRead_FlagToReport)
             {               
-                string Address = _TypeAndAdress;
+                string Address = _TypeAndAdress.GetStringRepresentation();
                 string ErrTyp_Read = _Client.ErrorText(ErrRead);
                 string ErrTyp_Write = _Client.ErrorText(ErrWrite);
                 string Client = "Logo" + _Client.deviceID;
@@ -241,7 +299,7 @@ namespace WebApplication1
                     "Write Error type: " + ErrTyp_Write + ", " +
                     "Client: " + Client + ". " +
                     "Flags: " + Flags);
-            }
+            }            
         }
 
 
@@ -305,7 +363,7 @@ namespace WebApplication1
             private short? PLCval;
             private short? PCval;
             private bool directionToPLC = false;
-            private string _TypeAndAdress;
+            private WordAddress _TypeAndAdress;
             private Sharp7.S7Client _Client;
             int ErrRead;
             int ErrWrite;
@@ -314,7 +372,7 @@ namespace WebApplication1
             bool _IsWritable = false;
             bool datacorrupted = false;
 
-            public TimeSet(Sharp7.S7Client Client, string TypeAndAdress, bool IsWritable)
+            public TimeSet(Sharp7.S7Client Client, WordAddress TypeAndAdress, bool IsWritable)
             {
                 PLCval = null;
                 PCval = null;
@@ -470,7 +528,7 @@ namespace WebApplication1
             }
             public void ReportError_throwException(string Message, bool? forceSet_FlagToReport, bool? forceRead_FlagToReport)
             {
-                string Address = _TypeAndAdress;
+                string Address = _TypeAndAdress.GetStringRepresentation();
                 string ErrTyp_Read = _Client.ErrorText(ErrRead);
                 string ErrTyp_Write = _Client.ErrorText(ErrWrite);
                 string Client = "Logo" + _Client.deviceID;
@@ -568,7 +626,7 @@ namespace WebApplication1
             private short? PLCval;
             private short? PCval;
             private bool directionToPLC = false;
-            private string _TypeAndAdress;
+            private WordAddress _TypeAndAdress;
             private Sharp7.S7Client _Client;
             int ErrRead;
             int ErrWrite;
@@ -597,7 +655,7 @@ namespace WebApplication1
                 
             }
 
-            public WordForCheckBox(Sharp7.S7Client Client, string TypeAndAdress, bool IsWritable)
+            public WordForCheckBox(Sharp7.S7Client Client, WordAddress TypeAndAdress, bool IsWritable)
             {
                 PLCval = null;
                 PCval = null;
@@ -783,7 +841,7 @@ namespace WebApplication1
             }
             public void ReportError_throwException(string Message, bool? forceSet_FlagToReport, bool? forceRead_FlagToReport)
             {
-                string Address = _TypeAndAdress;
+                string Address = _TypeAndAdress.GetStringRepresentation();
                 string ErrTyp_Read = _Client.ErrorText(ErrRead);
                 string ErrTyp_Write = _Client.ErrorText(ErrWrite);
                 string Client = "Logo" + _Client.deviceID;
@@ -838,7 +896,7 @@ namespace WebApplication1
             private bool? PLCval;
             private bool? PCval;
             private bool directionToPLC = false;
-            private string _TypeAndAdress;
+            private BitAddress _TypeAndAdress;
             private Sharp7.S7Client _Client;
             int ErrRead;
             int ErrWrite;
@@ -850,7 +908,7 @@ namespace WebApplication1
             bool datacorrupted = false;
             byte sendpulseState = 0;
 
-            public Bit(Sharp7.S7Client Client, string TypeAndAdress, string replacementTextIfTrue, string replacementTextIfFalse, bool IsWritable)
+            public Bit(Sharp7.S7Client Client, BitAddress TypeAndAdress, string replacementTextIfTrue, string replacementTextIfFalse, bool IsWritable)
             {
                 PLCval = null;
                 PCval = null;
@@ -1117,7 +1175,7 @@ namespace WebApplication1
             }
             public void ReportError_throwException(string Message, bool? forceSet_FlagToReport, bool? forceRead_FlagToReport)
             {
-                string Address = _TypeAndAdress;
+                string Address = _TypeAndAdress.GetStringRepresentation();
                 string ErrTyp_Read = _Client.ErrorText(ErrRead);
                 string ErrTyp_Write = _Client.ErrorText(ErrWrite);
                 string Client = "Logo" + _Client.deviceID;
@@ -1163,7 +1221,7 @@ namespace WebApplication1
             private short? PLCval;
             private short? PCval;
             private bool directionToPLC = false;
-            private string _TypeAndAdress;
+            private WordAddress _TypeAndAdress;
             private Sharp7.S7Client _Client;
             int ErrRead;
             int ErrWrite;
@@ -1194,7 +1252,7 @@ namespace WebApplication1
 
 
 
-            public TemperatureShow(Sharp7.S7Client Client, string TypeAndAdress, string prefixToShow, string postFixToShow, float calibOffset, float calibMultiply, int decimals, bool IsWritable)
+            public TemperatureShow(Sharp7.S7Client Client, WordAddress TypeAndAdress, string prefixToShow, string postFixToShow, float calibOffset, float calibMultiply, int decimals, bool IsWritable)
             {
                 PLCval = null;
                 PCval = null;
@@ -1377,7 +1435,7 @@ namespace WebApplication1
             }
             public void ReportError_throwException(string Message, bool? forceSet_FlagToReport, bool? forceRead_FlagToReport)
             {
-                string Address = _TypeAndAdress;
+                string Address = _TypeAndAdress.GetStringRepresentation();
                 string ErrTyp_Read = _Client.ErrorText(ErrRead);
                 string ErrTyp_Write = _Client.ErrorText(ErrWrite);
                 string Client = "Logo" + _Client.deviceID;

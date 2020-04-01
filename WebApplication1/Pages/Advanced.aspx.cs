@@ -13,7 +13,7 @@ namespace WebApplication1.Pages
         
         
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {           
             Val.guiController.PageAdvanced_ = new GuiController.PageAdvanced(this, Session);
             Helper.EveryPageProtocol("Nastavitve", this, Session, TemplateClassID);
 
@@ -21,25 +21,10 @@ namespace WebApplication1.Pages
             AddDebug();
             AddTable();
             AddTimer();     
-            AddEditorBtn();
-            addSpremljajFunctionality();
+            AddEditorBtn();          
                                     
         }
-
-        void addSpremljajFunctionality()
-        {
-            var scriptloader = (Helper.ScriptLoader)Session[Helper.ViewStateElement_ScriptLoader];
-
-            if (Val.guiController.PageAdvanced_.Spremljaj.active)
-            {                
-                scriptloader.RegisterScriptOnPageLoad("scrollTo", Val.ScrolToBottomTextboxScript);                
-            }
-            else
-            {
-                scriptloader.RegisterScriptOnPageLoad("scrollTo", Val.RetainPositionTextboxScript);                
-            }
-        }
-
+        
         void AddEditorBtn()
         {
             TemplateClassID.Controls.Add(Val.guiController.PageAdvanced_.BtnEditor);

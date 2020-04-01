@@ -12,7 +12,7 @@ namespace WebApplication1
     
     public partial class GuiController
     {
-        public class PageRazsvetljava
+        public class PageRazsvetljava : Dsps
         {
             public Page ThisPage;
             public System.Web.SessionState.HttpSessionState Session;
@@ -32,8 +32,7 @@ namespace WebApplication1
             ImageButton ugasniVseLuci;
           
             public LuciSettingsMenu LuciSettings;
-
-            string UpdatePanelId_Luci = "LuciPanel";
+            readonly string UpdatePanelId_Luci = "LuciPanel";
 
 
             public PageRazsvetljava(Page thisPage, System.Web.SessionState.HttpSessionState session)
@@ -49,12 +48,14 @@ namespace WebApplication1
 
                     Stala = new Image();
 
-                    divLuciSettings = new HtmlGenericControl("div");
-                    divLuciSettings.ID = "divLuciSettings";
+                    divLuciSettings = new HtmlGenericControl("div")
+                    {
+                        ID = "divLuciSettings"
+                    };
 
                     InitializeLuci();
                     AddStala();
-                    initializeLuciSettings();
+                    InitializeLuciSettings();
                     AddBtns();
 
                               
@@ -69,7 +70,7 @@ namespace WebApplication1
                 }
             }
 
-            int getCurrentLuciSettingsShown()
+            int GetCurrentLuciSettingsShown()
             {
                 // save value over session
                 var buff = Session[ViewStateElement_CurrentLuciSettingsShown];
@@ -82,29 +83,29 @@ namespace WebApplication1
 
             }
 
-            void setCurrentLuciSettingsShown(int value)
+            void SetCurrentLuciSettingsShown(int value)
             {
                 // save value over session
                 Session[ViewStateElement_CurrentLuciSettingsShown] = value;
                 
             }
 
-            void incrementCurrentLuciSettingsShown(int incrementBy)
+            void IncrementCurrentLuciSettingsShown(int incrementBy)
             {
-                setCurrentLuciSettingsShown(
-                    getCurrentLuciSettingsShown() + incrementBy);
+                SetCurrentLuciSettingsShown(
+                    GetCurrentLuciSettingsShown() + incrementBy);
             }
 
             public void HidePanel()
             {
-                if (getCurrentLuciSettingsShown() == 0)
+                if (GetCurrentLuciSettingsShown() == 0)
                 {   
                     divLuciSettings.Style.Add(HtmlTextWriterStyle.Visibility, "hidden");                   
                 }                
 
             }
 
-            void initializeLuciSettings()
+            void InitializeLuciSettings()
             {
                 try
                 {
@@ -113,7 +114,7 @@ namespace WebApplication1
                     bool hasPrevious = true;
                     bool hasNext = true;
                     int lucIconsCnt = XmlController.GetHowManyLucIcons();
-                    int currentShown = getCurrentLuciSettingsShown();
+                    int currentShown = GetCurrentLuciSettingsShown();
                     string Showname = "Cona" + currentShown + "/" + lucIconsCnt; // Custom name for user
 
                     if (currentShown <= 1)
@@ -154,33 +155,41 @@ namespace WebApplication1
 
             private void ExitButton_Click(object sender, ImageClickEventArgs e)
             {               
-                setCurrentLuciSettingsShown(0); // hideDiv
+                SetCurrentLuciSettingsShown(0); // hideDiv
                 Helper.Refresh();
             }
 
             void PrevButton_Click(object sender, ImageClickEventArgs e)
             {
-                incrementCurrentLuciSettingsShown(-1);
+                IncrementCurrentLuciSettingsShown(-1);
                 Helper.Refresh();
             }
 
             void NextButton_Click(object sender, ImageClickEventArgs e)
             {
-                incrementCurrentLuciSettingsShown(1);
+                IncrementCurrentLuciSettingsShown(1);
                 Helper.Refresh();
             }
 
             private void InitializeLuci()
             {
+                var up = (UpdatePanel)ThisPage.FindControl(UpdatePanelId_Luci); // finds common updatepanel for LucSet controls
+                var prop =  Val.logocontroler.Prop1;
+                var dimmPercent = prop.DimmerActual; // gets analog value if device supports it
+                string dimmPercentVal; // buffer used to switch between "dimmPercent" (if supported) or "0%" / "100%" representation text from digital value
+               
                 try
                 {
                     for (int i = 1; i <= XmlController.GetHowManyLucIcons(); i++)
                     {
-                        Luc[i] = new GControls.LucSet(i, (UpdatePanel)ThisPage.FindControl(UpdatePanelId_Luci));
+                        Luc[i] = new GControls.LucSet(i, up);
                         AboveLucLableDimmer[i] = new Label();
 
+                        // GET  dimmPercentVal FROM dimmer if supported   -   if not supported get digital value and convert to 0 or 100 % representation text
+                        dimmPercentVal = GetRepresentationDimmerValue(dimmPercent[i], prop.LucStatus_ReadToPC[i]);
+
                         AboveLucLableDimmer[i] = CreateLabelTitle_OnTop(
-                            "100%", Luc[i], 2.5F, 0, Convert.ToInt32(Luc[i].Width), 1, false, true, "black"); // TODO PLC Value 100%
+                            dimmPercentVal, Luc[i], 2.5F, 0, Convert.ToInt32(Luc[i].Width), 1, false, true, "black"); 
 
                         AboveLucLableDimmer[i].Style.Add(HtmlTextWriterStyle.BackgroundColor, "white");
 
@@ -198,6 +207,21 @@ namespace WebApplication1
 
             }
 
+            string GetRepresentationDimmerValue(PlcVars.Word dimmPercent, PlcVars.Bit bit)
+            {
+                if (dimmPercent != null)
+                {
+                    return dimmPercent.Value_string;
+                }
+
+                if (bit.Value)
+                {
+                    return "100%";
+                }
+
+                return "0%";
+            }
+
             public void RegisterOnClick()
             {                
                 for (int i = 1; i < Luc.Length; i++)
@@ -212,7 +236,7 @@ namespace WebApplication1
             private void Zarnica_Click(object sender, EventArgs e)
             {
                 var luc = (GControls.LucBtn)sender;                
-                setCurrentLuciSettingsShown(luc.btnID);
+                SetCurrentLuciSettingsShown(luc.btnID);
 
                 var panel = (HtmlGenericControl)ThisPage.FindControl("divLuciSettings");
                 panel.Style.Add(HtmlTextWriterStyle.Visibility, "visible");
@@ -272,12 +296,12 @@ namespace WebApplication1
                 public static LuciSubmenuContent content;
 
                 public LuciSettingsMenu(int id, string Name_, bool hasNext, bool hasPreious, bool hasExit, Timer UpdateTimer) 
-                    :base(id, Name_, hasNext, hasPreious, hasExit, getContent(id))
+                    :base(id, Name_, hasNext, hasPreious, hasExit, GetContent(id))
                 {
                     
                 }
 
-                static LuciSubmenuContent getContent(int id)
+                static LuciSubmenuContent GetContent(int id)
                 {
                     content = new LuciSubmenuContent(id);                    
                     return content;
@@ -293,9 +317,7 @@ namespace WebApplication1
                 readonly int lc1 = 15; // left attribute column 1
                 readonly int lc2 = 40;
                 readonly int lc3 = 60;
-                               
-
-                bool hasDimmer = false;
+                readonly bool hasDimmer = false;
 
 
                 readonly int widthbtn = 4;
@@ -318,8 +340,8 @@ namespace WebApplication1
                 public GControls.DropDownListForHourSelect Vklop2;
                 public GControls.DropDownListForHourSelect Izklop1;
                 public GControls.DropDownListForHourSelect Izklop2;
-                public GControls.PaddedOnOffButton VklopUrnika1;
-                public GControls.PaddedOnOffButton VklopUrnika2;
+                public GControls.OnOffButton VklopUrnika1;
+                public GControls.OnOffButton VklopUrnika2;
 
                 public GControls.DropDownListForDimmer DimmerDop;
                 public GControls.DropDownListForDimmer DimmerPop;
@@ -412,10 +434,10 @@ namespace WebApplication1
                         if (hasWeekTmr)
                         {
 
-                            VklopUrnika1 = new GControls.PaddedOnOffButton(
+                            VklopUrnika1 = new GControls.OnOffButton(
                            "Vklop Urnika Dop", myID + 10, GetVklopUrnika_Dop(id), new Helper.Position(tr1 - 9, lc3, widthbtn*6), GControls.OnOffButton.Type.WithText);
 
-                            VklopUrnika2 = new GControls.PaddedOnOffButton(
+                            VklopUrnika2 = new GControls.OnOffButton(
                            "Vklop Urnika Pop", myID + 10, GetVklopUrnika_Pop(id), new Helper.Position(tr1 - 9, lc3, widthbtn * 6), GControls.OnOffButton.Type.WithText);
 
                             SetControlAbsolutePos(Vklop1, tr1, lc1, widthdd);
@@ -483,20 +505,16 @@ namespace WebApplication1
 
                 bool GetVklopUrnika_Dop(int id)
                 {
-                    bool buff;
-                    bool null1;
-                    Val.logocontroler.Prop1.GetVklopUrnika(out buff, out null1, id);
+                    Val.logocontroler.Prop1.GetVklopUrnika(out bool buff, out bool null1, id);
                     return buff;
                 }
                 bool GetVklopUrnika_Pop(int id)
                 {
-                    bool buff;
-                    bool null1;
-                    Val.logocontroler.Prop1.GetVklopUrnika(out null1, out buff, id);
+                    Val.logocontroler.Prop1.GetVklopUrnika(out bool null1, out bool buff, id);
                     return buff;
                 }
 
-                    void saveClickedTmr(ListItem selectedItem)
+                    void SaveClickedTmr(ListItem selectedItem)
                 {
                     var buff = selectedItem.Text;
                     Val.logocontroler.Prop1.IzklopConapop[myID].Value_WeektimerForSiemensLogoFormat = buff;
@@ -504,22 +522,22 @@ namespace WebApplication1
 
                 private void Izklop2_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    saveClickedTmr(selectedItem);
+                    SaveClickedTmr(selectedItem);
                 }
 
                 private void Izklop1_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    saveClickedTmr(selectedItem);
+                    SaveClickedTmr(selectedItem);
                 }
 
                 private void Vklop2_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    saveClickedTmr(selectedItem);
+                    SaveClickedTmr(selectedItem);
                 }
 
                 private void Vklop1_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    saveClickedTmr(selectedItem);
+                    SaveClickedTmr(selectedItem);
                 }
 
                 private void DimmerPop_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
@@ -537,23 +555,19 @@ namespace WebApplication1
                 private void VklopUrnika1_Button_Click(object sender, ImageClickEventArgs e)
                 {
                     var prop = Val.logocontroler.Prop1;
-                    bool dop;
-                    bool pop;
 
-                    prop.GetVklopUrnika(out dop, out pop, myID);
+                    prop.GetVklopUrnika(out bool dop, out bool pop, myID);
                     prop.SetVklopUrnika(myID, !dop, pop); // reverse current value
                 }
 
                 private void VklopUrnika2Button_Click(object sender, ImageClickEventArgs e)
                 {
                     var prop = Val.logocontroler.Prop1;
-                    bool dop;
-                    bool pop;
 
-                    prop.GetVklopUrnika(out dop, out pop, myID);
+                    prop.GetVklopUrnika(out bool dop, out bool pop, myID);
                     prop.SetVklopUrnika(myID, dop, !pop); // reverse current value
                 }
-            }
+            }            
         }
     }
 }

@@ -10,7 +10,7 @@ namespace WebApplication1
 {
     public partial class GuiController
     {
-        public class PageMasterMenu
+        public class PageMasterMenu : Dsps
         {
             Page thisPage;
             public Panel MasterbtnPannel;
@@ -23,9 +23,9 @@ namespace WebApplication1
                 try
                 {
                     thisPage = _thisPage;
-                    initialisePanel();
-                    initializeTables();
-                    addBtns();
+                    InitialisePanel();
+                    InitializeTables();
+                    AddBtns();
 
 
 
@@ -40,7 +40,7 @@ namespace WebApplication1
 
             }
 
-            void initialisePanel()
+            void InitialisePanel()
             {
                 MasterbtnPannel = new Panel();
 
@@ -53,7 +53,7 @@ namespace WebApplication1
 
             }
 
-            void addBtns()
+            void AddBtns()
             {
                 int elements = XmlController.GetHowManyMenuDDItems();
 
@@ -116,7 +116,7 @@ namespace WebApplication1
                 // 1st line div
                 divMasterButtons = DIV.CreateDivAbsolute("0%");
                 divMasterButtons.ID = imageButtons[1].ID + "_div";
-                prepareDivForRow(divMasterButtons);
+                PrepareDivForRow(divMasterButtons);
 
 
                 // 1st line elements
@@ -146,7 +146,7 @@ namespace WebApplication1
 
                     currentPos += spacing;
                     divMasterButtons.Controls.Add(imageButtons[i]);
-                    divfortitles.Controls.Add(addTitles(imageButtons[i]));
+                    divfortitles.Controls.Add(AddTitles(imageButtons[i]));
                 }
 
 
@@ -156,7 +156,7 @@ namespace WebApplication1
                     currentPos = initialPos;
                     
                     // 2nd line div                                        
-                    prepareDivForRow(divMasterButtons);
+                    PrepareDivForRow(divMasterButtons);
 
 
                     // positioning
@@ -177,7 +177,7 @@ namespace WebApplication1
 
                         currentPos += spacing;
                         divMasterButtons.Controls.Add(imageButtons[i]);
-                        divfortitles.Controls.Add(addTitles(imageButtons[i]));
+                        divfortitles.Controls.Add(AddTitles(imageButtons[i]));
                     }                    
                 }
 
@@ -187,7 +187,7 @@ namespace WebApplication1
                 
             }
 
-            void prepareDivForRow(HtmlGenericControl div)
+            void PrepareDivForRow(HtmlGenericControl div)
             {
                 div.Style.Add(HtmlTextWriterStyle.Position, "absolute");
                 div.Style.Add(HtmlTextWriterStyle.Top, "0%");
@@ -197,7 +197,7 @@ namespace WebApplication1
                 div.Style.Add(HtmlTextWriterStyle.ZIndex, "5");
             }
 
-            private HtmlGenericControl addTitles(GControls.MasterMenuButton imageBtn)
+            private HtmlGenericControl AddTitles(GControls.MasterMenuButton imageBtn)
             {                
                 var title = TitleUnder[imageBtn.btnID];
                 title.Text = XmlController.GetMenuDDItemName((short)imageBtn.btnID).ToUpper();
@@ -211,7 +211,7 @@ namespace WebApplication1
                 return div;
             }
 
-            void initializeTables()
+            void InitializeTables()
             {
                 for (int i = 1; i < imageButtons.Length; i++)
                 {

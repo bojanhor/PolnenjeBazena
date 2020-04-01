@@ -12,7 +12,7 @@ namespace WebApplication1
     
     public partial class GuiController
     {
-        public class PageAdvanced
+        public class PageAdvanced : Dsps
         {
             Page thisPage;
             public System.Web.SessionState.HttpSessionState Session;
@@ -38,14 +38,29 @@ namespace WebApplication1
                 thisPage = _thisPage;
                 Session = session;
 
-                Spremljaj = new GControls.NotShadowedOnOffButton("Spremljaj", 1, getSpremljajChecked(), new Helper.Position(0, 0, 20));
+                Spremljaj = new GControls.NotShadowedOnOffButton("Spremljaj", 1, GetSpremljajChecked(), new Helper.Position(0, 0, 20));
 
                 AppDomainInitializerTables();
                 AddLabelDebug();                
                 PositionEdit();
+                AddSpremljajFunctionality();
             }
 
-            bool getSpremljajChecked()
+            void AddSpremljajFunctionality()
+            {
+                var scriptloader = (Helper.ScriptLoader)Session[Helper.ViewStateElement_ScriptLoader];
+
+                if (Spremljaj.active)
+                {
+                    scriptloader.RegisterScriptOnPageLoad("scrollTo", Val.ScrolToBottomTextboxScript);
+                }
+                else
+                {
+                    scriptloader.RegisterScriptOnPageLoad("scrollTo", Val.RetainPositionTextboxScript);
+                }
+            }
+
+            bool GetSpremljajChecked()
             {
                 // get value over session
                 var buff = Session[ViewStateElement_SpremljajChecked];
@@ -58,7 +73,7 @@ namespace WebApplication1
 
             }
 
-            void setSpremljajChecked(bool value)
+            void SetSpremljajChecked(bool value)
             {
                 // set value over session
                 Session[ViewStateElement_SpremljajChecked] = value;                
@@ -191,7 +206,7 @@ namespace WebApplication1
             {
                 // button value changes from Val.SpremljajChecked on postback
 
-                setSpremljajChecked(Spremljaj.active);
+                SetSpremljajChecked(!GetSpremljajChecked());
                 Helper.Refresh();
 
             }

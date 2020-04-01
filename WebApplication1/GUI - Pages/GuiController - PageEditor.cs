@@ -10,7 +10,7 @@ namespace WebApplication1
     public partial class GuiController
     {
 
-        public class PageEditor
+        public class PageEditor : Dsps
         {           
             public GControls.ButtonWithLabel save = new GControls.ButtonWithLabel("Save", 7, 1.2F);
             public GControls.ButtonWithLabel refresh = new GControls.ButtonWithLabel("Refresh", 7, 1.2F);

@@ -9,7 +9,7 @@
 		</GENERAL>//
 		
 		<GUI>//
-		<scaleGuiFactorX>98</scaleGuiFactorX>					// Gui Scaling Factor (size of user interface) (example 99)
+		<scaleGuiFactorX>99</scaleGuiFactorX>					// Gui Scaling Factor (size of user interface) (example 99)
 		<scaleGuiFactorY>47</scaleGuiFactorY>					// Gui Scaling Factor (size of user interface) (example 47)
 		//
 		<HowManyDDMenuItems>3</HowManyDDMenuItems>			// How many Menu items is showed in DROPDOWN menu
@@ -55,10 +55,10 @@
 		<PositionLuc6>20;42;5;</PositionLuc6>							//
 		<PositionLuc7>12;50;5;</PositionLuc7>							//
 		<PositionLuc8>12;60;5;</PositionLuc8>							//
-		<PositionLuc9>40;50;5;</PositionLuc9>							//
-		<PositionLuc10>50;50;5;</PositionLuc10>							//
-		<PositionLuc11>60;50;5;</PositionLuc11>							//
-		<PositionLuc12>70;50;5;</PositionLuc12>							//
+		<PositionLuc9>40;50;0;</PositionLuc9>							//
+		<PositionLuc10>50;50;0;</PositionLuc10>							//
+		<PositionLuc11>60;50;0;</PositionLuc11>							//
+		<PositionLuc12>70;50;0;</PositionLuc12>							//
 		//				
 		<HasDimmer1>true</HasDimmer1>							// Equipment used has dimmer, if avalue is "true" control is added to gui for adjusting brightness
 		<HasDimmer2>true</HasDimmer2>							//
@@ -86,31 +86,31 @@
     <HasWeekTimer11>false</HasWeekTimer11>						//
     <HasWeekTimer12>false</HasWeekTimer12>						//
     //
-    <AddressLuc_ReadToPC1>bit at 12.0</AddressLuc_ReadToPC1>				// Set Address for LOGO communication example "bit at 11.0" (used to read value from plc)
-		<AddressLuc_ReadToPC2>bit at 22.0</AddressLuc_ReadToPC2>						//
-		<AddressLuc_ReadToPC3>bit at 32.0</AddressLuc_ReadToPC3>						//
-		<AddressLuc_ReadToPC4>bit at 42.0</AddressLuc_ReadToPC4>						//
-		<AddressLuc_ReadToPC5>bit at 52.0</AddressLuc_ReadToPC5>						//
-		<AddressLuc_ReadToPC6>bit at 62.0</AddressLuc_ReadToPC6>						//
-		<AddressLuc_ReadToPC7>bit at 72.0</AddressLuc_ReadToPC7>						//
-		<AddressLuc_ReadToPC8>bit at 82.0</AddressLuc_ReadToPC8>						//
-		<AddressLuc_ReadToPC9>bit at 92.0</AddressLuc_ReadToPC9>						//
-		<AddressLuc_ReadToPC10>bit at 102.0</AddressLuc_ReadToPC10>						//
-  		<AddressLuc_ReadToPC11>bit at 112.0</AddressLuc_ReadToPC11>						//
-   		<AddressLuc_ReadToPC12>bit at 122.0</AddressLuc_ReadToPC12>						//
+    <AddressLuc_ReadToPC1>12.0</AddressLuc_ReadToPC1>				// Set Address for LOGO communication example "11.0" (used to read value from plc)
+		<AddressLuc_ReadToPC2>22.0</AddressLuc_ReadToPC2>						//
+		<AddressLuc_ReadToPC3>32.0</AddressLuc_ReadToPC3>						//
+		<AddressLuc_ReadToPC4>42.0</AddressLuc_ReadToPC4>						//
+		<AddressLuc_ReadToPC5>52.0</AddressLuc_ReadToPC5>						//
+		<AddressLuc_ReadToPC6>62.0</AddressLuc_ReadToPC6>						//
+		<AddressLuc_ReadToPC7>72.0</AddressLuc_ReadToPC7>						//
+		<AddressLuc_ReadToPC8>82.0</AddressLuc_ReadToPC8>						//
+		<AddressLuc_ReadToPC9>92.0</AddressLuc_ReadToPC9>						//
+		<AddressLuc_ReadToPC10>102.0</AddressLuc_ReadToPC10>						//
+  		<AddressLuc_ReadToPC11>112.0</AddressLuc_ReadToPC11>						//
+   		<AddressLuc_ReadToPC12>122.0</AddressLuc_ReadToPC12>						//
 		//
-		<AddressLuc_WriteToPLC1>bit at 10.0</AddressLuc_WriteToPLC1>				// Set Address for LOGO communication example "bit at 11.0" (used to write value to plc)
-		<AddressLuc_WriteToPLC2>bit at 20.0</AddressLuc_WriteToPLC2>					//
-		<AddressLuc_WriteToPLC3>bit at 30.0</AddressLuc_WriteToPLC3>					//
-		<AddressLuc_WriteToPLC4>bit at 40.0</AddressLuc_WriteToPLC4>					//
-		<AddressLuc_WriteToPLC5>bit at 50.0</AddressLuc_WriteToPLC5>					//
-		<AddressLuc_WriteToPLC6>bit at 60.0</AddressLuc_WriteToPLC6>					//
-		<AddressLuc_WriteToPLC7>bit at 70.0</AddressLuc_WriteToPLC7>					//
-		<AddressLuc_WriteToPLC8>bit at 80.0</AddressLuc_WriteToPLC8>					//
-		<AddressLuc_WriteToPLC9>bit at 90.0</AddressLuc_WriteToPLC9>					//
-		<AddressLuc_WriteToPLC10>bit at 100.0</AddressLuc_WriteToPLC10>					//
-   	<AddressLuc_WriteToPLC11>bit at 110.0</AddressLuc_WriteToPLC11>					//
-   	<AddressLuc_WriteToPLC12>bit at 120.0</AddressLuc_WriteToPLC12>					//
+		<AddressLuc_WriteToPLC1>10.0</AddressLuc_WriteToPLC1>				// Set Address for LOGO communication example "bit at 11.0" (used to write value to plc)
+		<AddressLuc_WriteToPLC2>20.0</AddressLuc_WriteToPLC2>					//
+		<AddressLuc_WriteToPLC3>30.0</AddressLuc_WriteToPLC3>					//
+		<AddressLuc_WriteToPLC4>40.0</AddressLuc_WriteToPLC4>					//
+		<AddressLuc_WriteToPLC5>50.0</AddressLuc_WriteToPLC5>					//
+		<AddressLuc_WriteToPLC6>60.0</AddressLuc_WriteToPLC6>					//
+		<AddressLuc_WriteToPLC7>70.0</AddressLuc_WriteToPLC7>					//
+		<AddressLuc_WriteToPLC8>80.0</AddressLuc_WriteToPLC8>					//
+		<AddressLuc_WriteToPLC9>90.0</AddressLuc_WriteToPLC9>					//
+		<AddressLuc_WriteToPLC10>100.0</AddressLuc_WriteToPLC10>					//
+   	<AddressLuc_WriteToPLC11>110.0</AddressLuc_WriteToPLC11>					//
+   	<AddressLuc_WriteToPLC12>120.0</AddressLuc_WriteToPLC12>					//
     //
 	<EnableChart_Svetlost>True</EnableChart_Svetlost>									// Enables chart in ChartGraph (Zunanja osvetljenost)
 	<EnableChart_Padavine>True</EnableChart_Padavine>									// Enables chart in ChartGraph (Količina padavin)
@@ -122,12 +122,12 @@
 	<CONNECTION>//			
 	  <LOGO1>//
 		<show>true</show>							// indicates if tabpage is shown on GUI
-		<enabled>false</enabled>						// indicates if device is enabled - (gui, communication ...)
+		<enabled>true</enabled>						// indicates if device is enabled - (gui, communication ...)
 		<devicename>LOGO1</devicename>		// Showname
 		<showname>Razsvetljava</showname><serverIP>192.168.1.201</serverIP>		// format must be ###.###.###.### (192.168.0.1) IP of PLC
 		<localTSAP>"03.00"</localTSAP>				// format must be ##.## (00.03) TSAP is used for comunication between PLCs 
 		<remoteTSAP>"02.00"</remoteTSAP>			// format must be ##.## (00.03) TSAP is used for comunication between PLCs			
-		<watchdogAddress>DW 800</watchdogAddress>   // value must be string between valid PLC adress range .. watchdog is used for detecting comunication problems (example DW 100 if watchdog value is Double Word on address 100)
+		<watchdogAddress>800</watchdogAddress>   // value must be string between valid PLC adress range .. watchdog is used for detecting comunication problems (example 100 if watchdog value is Word on address 100)
 		<ReadWriteCycle>250</ReadWriteCycle>		// value in miliseconds - frequency at which data aquisition is preformed - read, action, write, delay. (watchdog is also bound at this frequency)
 	  </LOGO1>//
 	  //
@@ -138,7 +138,7 @@
 		<showname>Ventilacija</showname><serverIP>192.168.1.202</serverIP>//
 		<localTSAP>"03.00"</localTSAP>//
 		<remoteTSAP>"02.00"</remoteTSAP>//		
-		<watchdogAddress>DW 5</watchdogAddress>//
+		<watchdogAddress>5</watchdogAddress>//
 		<ReadWriteCycle>250</ReadWriteCycle>//
 		</LOGO2>//
 	  //
@@ -149,7 +149,7 @@
 		<showname>Vrata</showname><serverIP>192.168.1.203</serverIP>//
 		<localTSAP>"03.00"</localTSAP>//
 		<remoteTSAP>"02.00"</remoteTSAP>//		
-		<watchdogAddress>DW 12</watchdogAddress>//
+		<watchdogAddress>12</watchdogAddress>//
 		<ReadWriteCycle>150</ReadWriteCycle>//
 		</LOGO3>//
 	  //
@@ -160,7 +160,7 @@
 		<showname>LOGO1</showname><serverIP>192.168.1.204</serverIP>//
 		<localTSAP>"03.00"</localTSAP>//
 		<remoteTSAP>"02.00"</remoteTSAP>//		
-		<watchdogAddress>DW 16</watchdogAddress>//
+		<watchdogAddress>16</watchdogAddress>//
 		<ReadWriteCycle>150</ReadWriteCycle>//
 		</LOGO4>//
 	  //
@@ -172,7 +172,7 @@
 		<localTSAP>"03.00"</localTSAP>//
 		<remoteTSAP>"02.00"</remoteTSAP>//
 		<watchdogEN>true</watchdogEN>//
-		<watchdogAddress>DW 20</watchdogAddress>//
+		<watchdogAddress>20</watchdogAddress>//
 		<ReadWriteCycle>150</ReadWriteCycle>//
 		</LOGO5>//
 	  </CONNECTION>//

@@ -86,49 +86,40 @@ namespace WebApplication1
 
 
         // Write to PLC
-        public static void PLCwrite(S7Client Client, string typeAndAdress, short value, out int errCode)
+        public static void PLCwrite(S7Client Client, PlcVars.PlcAddress typeAndAdress, short value, out int errCode)
         {
             try
-            {
-                int address = 0;
+            {                
                 byte[] b = new byte[6];  // temporary array for writing
 
                 // In case if you want to write bit value
-                if (typeAndAdress.Contains("bit"))
-                {
-                    typeAndAdress = CleanAddressText(typeAndAdress);
-
+                if (typeAndAdress is PlcVars.BitAddress)
+                {                    
                     bool boolval = false;
                     boolval = Convert.ToBoolean(value);
-
-
-                    address = int.Parse(typeAndAdress.Split('.')[0]);
-                    errCode = Client.DBRead(1, address, S7Consts.S7WLByte, b); // read whole byte as late as possible
+                    var bitAddres = (PlcVars.BitAddress)typeAndAdress;
+                    
+                    errCode = Client.DBRead(1, bitAddres.GetAddress(), S7Consts.S7WLByte, b); // read whole byte as late as possible
 
                     if (errCode == S7Consts.err_OK)
                     {
-                        S7.SetBitAt(ref b, 0, int.Parse(typeAndAdress.Split('.')[1]), boolval);
-                        errCode = Client.DBWrite(1, address, 1, b); // write whole byte as soon as possible
+                        S7.SetBitAt(ref b, 0, bitAddres.GetSubAddress(), boolval);
+                        errCode = Client.DBWrite(1, bitAddres.GetSubAddress(), 1, b); // write whole byte as soon as possible
                     }
                 }
 
                 // In case if you want to write DWORD value
-                else if (typeAndAdress.Contains("DW"))
-                {
-                    typeAndAdress = CleanAddressText(typeAndAdress);
-                    address = int.Parse(typeAndAdress);
+                else if (typeAndAdress is PlcVars.DoubleWordAddress)
+                {   
                     S7.SetDWordAt(b, 0, (uint)value);
-                    errCode = Client.DBWrite(1, address, 4, b);
-
+                    errCode = Client.DBWrite(1, typeAndAdress.GetAddress(), 4, b);
                 }
 
                 // In case if you want to write Word value
-                else if (typeAndAdress.Contains("W"))
-                {
-                    typeAndAdress = CleanAddressText(typeAndAdress);
-                    address = int.Parse(typeAndAdress);
+                else if (typeAndAdress is PlcVars.WordAddress)
+                { 
                     S7.SetWordAt(b, 0, (ushort)value);
-                    errCode = Client.DBWrite(1, address, 2, b);
+                    errCode = Client.DBWrite(1, typeAndAdress.GetAddress(), 2, b);
                 }
 
                 else
@@ -143,36 +134,27 @@ namespace WebApplication1
             }
                         
         }
-
-        static string CleanAddressText(string typeAndAdress)
-        {
-            return  typeAndAdress.Replace("V", "").Replace(" ", "").Replace("D", "").Replace("W", "").Replace("bit", "").Replace("at", "");
-        }
-
-
+                
 
         // Read from PLC
-        public static short PLCread(S7Client Client, string typeAndAdress, out int errCode)
+        public static short PLCread(S7Client Client, PlcVars.PlcAddress typeAndAdress, out int errCode)
         {            
             short value = 0;
             try
-            {
-                int address = 0;                           
+            {                                         
                 byte[] b = new byte[6];  // temporary array for writing
 
                 // In case if you want to read bit value
-                if (typeAndAdress.Contains("bit at"))
+                if (typeAndAdress is PlcVars.BitAddress)
                 {
                     bool boolval = false;
+                    var bitAdress = (PlcVars.BitAddress)typeAndAdress;
 
-                    typeAndAdress = typeAndAdress.Replace("bit at", "");
-                    typeAndAdress = typeAndAdress.Replace(" ", "");
 
                     try
-                    {
-                        address = int.Parse(typeAndAdress.Split('.')[0]);
-                        errCode = Client.DBRead(1, address, 1, b);                        
-                        boolval = S7.GetBitAt(b, 0, int.Parse(typeAndAdress.Split('.')[1]));
+                    {                        
+                        errCode = Client.DBRead(1, bitAdress.GetAddress(), 1, b);                        
+                        boolval = S7.GetBitAt(b, 0, bitAdress.GetSubAddress());
                         if (boolval) { return 1; } return 0;
                     }
                     catch (Exception)
@@ -183,14 +165,11 @@ namespace WebApplication1
                 }
 
                 // In case if you want to read DWORD value
-                else if (typeAndAdress.Contains("DW"))
-                {
-                    typeAndAdress = typeAndAdress.Replace("DW", "");
-                    typeAndAdress = typeAndAdress.Replace("V", "");
+                else if (typeAndAdress is PlcVars.DoubleWordAddress)
+                {                    
                     try
-                    {
-                        address = int.Parse(typeAndAdress);
-                        errCode = Client.DBRead(1, address, 4, b);
+                    {                       
+                        errCode = Client.DBRead(1, typeAndAdress.GetAddress(), 4, b);
                         value = (short)Convert.ToInt32(S7.GetDWordAt(b, 0));
                     }
                     catch
@@ -202,15 +181,11 @@ namespace WebApplication1
                 
 
                 // In case if you want to read WORD value
-                else if (typeAndAdress.Contains("W"))
-                {
-                    typeAndAdress = typeAndAdress.Replace("W", "");
-                    typeAndAdress = typeAndAdress.Replace("V", "");
-
+                else if (typeAndAdress is PlcVars.WordAddress)
+                {                   
                     try
-                    {
-                        address = int.Parse(typeAndAdress);
-                        errCode = Client.DBRead(1, address, 2, b);
+                    {                        
+                        errCode = Client.DBRead(1, typeAndAdress.GetAddress(), 2, b);
                         value = (short)(S7.GetWordAt(b, 0));
                     }
                     catch 

@@ -10,7 +10,7 @@ namespace WebApplication1
 {
     public partial class GuiController
     {
-        public class PageDefault
+        public class PageDefault : Dsps
         {
             public static string ViewStateElement_LucActiveOnGui = "LucActiveOnGui";
                         
@@ -80,16 +80,22 @@ namespace WebApplication1
             {
                 try
                 {
-                    LuciUpdatePanel = new UpdatePanel();
-                    LuciUpdatePanel.UpdateMode = UpdatePanelUpdateMode.Conditional;
-                    LuciUpdatePanel.ID = "LuciUpdatePanel";
+                    LuciUpdatePanel = new UpdatePanel
+                    {
+                        UpdateMode = UpdatePanelUpdateMode.Conditional,
+                        ID = "LuciUpdatePanel"
+                    };
 
-                    Tmr_LuciUpdatePanel = new Timer();
-                    Tmr_LuciUpdatePanel.Interval = Settings.UpdateValuesPCms;
-                    Tmr_LuciUpdatePanel.ID = "Tmr_LuciUpdatePanel";
+                    Tmr_LuciUpdatePanel = new Timer
+                    {
+                        Interval = Settings.UpdateValuesPCms,
+                        ID = "Tmr_LuciUpdatePanel"
+                    };
 
-                    Ap_LuciUpdatePanel = new AsyncPostBackTrigger();
-                    Ap_LuciUpdatePanel.ControlID = "Tmr_LuciUpdatePanel";
+                    Ap_LuciUpdatePanel = new AsyncPostBackTrigger
+                    {
+                        ControlID = "Tmr_LuciUpdatePanel"
+                    };
 
                     LuciUpdatePanel.Triggers.Add(Ap_LuciUpdatePanel);
                 }

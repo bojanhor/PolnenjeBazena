@@ -11,7 +11,7 @@ namespace WebApplication1
     public partial class GuiController
     {
 
-        public class Template
+        public class Template : Dsps
         {
             List<GControls.MenuItem> DDMenuItems = new List<GControls.MenuItem>();              // dropdown items
 
@@ -35,12 +35,10 @@ namespace WebApplication1
                 }
                 catch (Exception ex)
                 {
-
                     throw new Exception("Error ocurded inside Template class constructor: " + ex.Message);
                 }
 
             }
-
             
             private void GetDDMenuItemsFromXML()
             {
@@ -106,28 +104,28 @@ namespace WebApplication1
 
                     TemplateClassID.Controls.Add(TemplateImage);
                 }
-                catch (Exception ex )
+                catch (Exception )
                 {
-                    throw ex;
+                    throw ;
                 }
                 
 
             }
 
-            public void createTitleLabel(Page page, HtmlGenericControl TemplateClassID, bool hasLogo, string FriendlyPageName)
+            public void CreateTitleLabel(Page page, HtmlGenericControl TemplateClassID, bool hasLogo, string FriendlyPageName)
             {
                 var LabelPagename = Val.guiController.Template_.PageName;                
-                SetControlAbsolutePos(LabelPagename, 0, 0, 100, 100);
+                SetControlAbsolutePos(LabelPagename, 17, 0, 100, 83);
                 LabelPagename.Text = FriendlyPageName;
 
                 HtmlGenericControl divPagename;
                 if (hasLogo)
                 {
-                    divPagename = DIV.CreateDivAbsolute("1.2%", "33%", "30%", "5%");
+                    divPagename = DIV.CreateDivAbsolute("0%", "33%", "30%", "5%");
                 }
                 else
                 {
-                    divPagename = DIV.CreateDivAbsolute("1.2%", "7%", "30%", "5%");
+                    divPagename = DIV.CreateDivAbsolute("0%", "7%", "30%", "5%");
                 }
                 
 
@@ -139,7 +137,7 @@ namespace WebApplication1
                 page.Controls.Add(divPagename);
             }
 
-            public void createBackButton(Page page, System.Web.SessionState.HttpSessionState session, HtmlGenericControl TemplateClassID, bool hasLogo)
+            public void CreateBackButton(Page page, System.Web.SessionState.HttpSessionState session, HtmlGenericControl TemplateClassID, bool hasLogo)
             {
                 PrevButton = new ImageButton()
                 {

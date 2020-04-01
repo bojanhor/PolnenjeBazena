@@ -55,12 +55,7 @@ namespace WebApplication1
         {
             EveryPageProtocol(FriendlyPageNamePage, _thisPage, session, TemplateClassID, true, true);
         }
-
-        public static void EveryPageProtocol(string FriendlyPageNamePage, Page _thisPage, System.Web.SessionState.HttpSessionState session, HtmlGenericControl TemplateClassID, bool hasMenuBtn)
-        {
-            EveryPageProtocol(FriendlyPageNamePage, _thisPage, session, TemplateClassID, true, true);
-        }
-
+         
         public static void EveryPageProtocol(string FriendlyPageNamePage, Page _thisPage, System.Web.SessionState.HttpSessionState session, HtmlGenericControl TemplateClassID, bool hasMenuBtn, bool hasLogo)
         {
 
@@ -79,10 +74,10 @@ namespace WebApplication1
             GuiController.Template.CreateBackground(_thisPage, TemplateClassID, hasLogo);
 
             // Lable for page name
-            Val.guiController.Template_.createTitleLabel(_thisPage, TemplateClassID, hasLogo, FriendlyPageNamePage);        
+            Val.guiController.Template_.CreateTitleLabel(_thisPage, TemplateClassID, hasLogo, FriendlyPageNamePage);        
 
             // back button - navigate
-            Val.guiController.Template_.createBackButton(_thisPage, session, TemplateClassID, hasLogo);
+            Val.guiController.Template_.CreateBackButton(_thisPage, session, TemplateClassID, hasLogo);
 
             // menu button - navigate
             if (hasMenuBtn)
@@ -111,7 +106,8 @@ namespace WebApplication1
             else
             {
                 scriptLoader = (ScriptLoader)session[ViewStateElement_ScriptLoader];
-            }            
+            }          
+            
             scriptLoader.RegisterAllScriptsNow(_thisPage, TemplateClassID);
 
             session[ViewStateElement_ScriptLoader] = scriptLoader;
@@ -326,9 +322,11 @@ namespace WebApplication1
 
             ListItem CreateRow(string text, string value)
             {
-                ListItem r = new ListItem();
-                r.Text = text;
-                r.Value = value;
+                ListItem r = new ListItem
+                {
+                    Text = text,
+                    Value = value
+                };
                 Add(r); // adds to base class
                 return r;
             }
@@ -367,9 +365,11 @@ namespace WebApplication1
 
             ListItem CreateRow(string text, string value)
             {
-                ListItem r = new ListItem();
-                r.Text = text;
-                r.Value = value;
+                ListItem r = new ListItem
+                {
+                    Text = text,
+                    Value = value
+                };
                 Add(r);// adds to base class
                 return r;
             }
@@ -580,10 +580,9 @@ namespace WebApplication1
 
             }
         }
-
-        [Serializable] // TODO a je treba da je serializable
+                
         public class ScriptLoader
-        {
+        {// add scripts before RegisterScriptOnPageLoad()
             List<string> Scripts = new List<string>();
             List<string> Keys = new List<string>();
                         
@@ -593,7 +592,7 @@ namespace WebApplication1
             }
 
             public void RegisterScriptOnPageLoad(string key, string script)
-            {
+            { // Register scripts any time in Page Load (currently in EveryPageProtocol() )
                 Scripts.Add(script);
                 Keys.Add(key);
             }
@@ -604,7 +603,7 @@ namespace WebApplication1
                 {                   
                     for (int i = 0; i < Scripts.Count; i++)
                     {  
-                        page.ClientScript.RegisterClientScriptBlock(divForScript.GetType(), Keys[i], Scripts[i], true);
+                        page.ClientScript.RegisterStartupScript(typeof(Page), Keys[i], Scripts[i], true);
                     }
 
                     Scripts.Clear();

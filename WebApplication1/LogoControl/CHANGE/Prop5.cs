@@ -16,7 +16,7 @@ namespace WebApplication1
         public Prop5(Sharp7.S7Client client)
         {
             Client = client;
-            watchdog5 = new PlcVars.Word(Client, "DW 5", "", "", false);
+            watchdog5 = new PlcVars.Word(Client, new PlcVars.WordAddress(5), "", "", false);
         }
 
         public string GetWatchdog()
