@@ -26,10 +26,18 @@ namespace WebApplication1
             
             public MessageManager()
             {
+                AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
                 manageFiles();
                 LogWriter = new Misc.SmartThread(() => WriteLogAsync());
                 LogWriter.Start("LogWriter", ApartmentState.MTA, false);
             }
+
+            private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+            {
+                var message = "Fatal error:" + e.ExceptionObject.ToString();
+                Message.SetMessage(message);
+            }
+
 
             // Creates new line in Log file and in text box on GUI
             void SetMessage(string message, bool skippWritingToFile)

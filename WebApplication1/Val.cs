@@ -4,12 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Runtime.ExceptionServices;
 
 namespace WebApplication1
 {
 
     public static class Val // used to hold values that are same for all instances / users
-    {        
+    {               
         public static Helper.Initialiser Initialiser = new Helper.Initialiser();
         public static LogoControler logocontroler = new LogoControler();
         public static string[] watchdog = new string[Settings.Devices + 1];        

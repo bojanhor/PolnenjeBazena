@@ -84,7 +84,9 @@ namespace Sharp7
 
         public void Close()
         {
-            if (Reader != null)
+    try 
+	{	        
+		if (Reader != null)
             {
                 Reader.Dispose();
                 Reader = null;
@@ -100,6 +102,11 @@ namespace Sharp7
                 TCPSocket = null;
             }
             _Connected = false;
+	}
+	catch 
+	{
+	}
+            
         }
 
         private async Task AsConnect(string Host, string port, CancellationTokenSource cts)
@@ -379,9 +386,23 @@ namespace Sharp7
                 LastError = S7Consts.errTCPConnectionFailed;
             };
 #if CORE_CLR
-            PingSocket.Dispose();
+            try 
+	            {	        
+		            PingSocket.Dispose();
+	            }
+	            catch 
+	            {		
+	            }
+           
 #else
-            PingSocket.Close();
+            try
+            {
+                PingSocket.Close();
+            }
+            catch
+            {               
+            }
+            
 #endif
         }
 
@@ -2130,27 +2151,36 @@ namespace Sharp7
 
         public int Connect()
         {
-            _LastError = 0;
-            Time_ms = 0;
-            int Elapsed = Environment.TickCount;
-            if (!Connected)
+            try
             {
-                TCPConnect(); // First stage : TCP Connection
-                if (_LastError == 0)
+                _LastError = 0;
+                Time_ms = 0;
+                int Elapsed = Environment.TickCount;
+                if (!Connected)
                 {
-                    ISOConnect(); // Second stage : ISOTCP (ISO 8073) Connection
+                    TCPConnect(); // First stage : TCP Connection
                     if (_LastError == 0)
                     {
-                        _LastError = NegotiatePduLength(); // Third stage : S7 PDU negotiation
+                        ISOConnect(); // Second stage : ISOTCP (ISO 8073) Connection
+                        if (_LastError == 0)
+                        {
+                            _LastError = NegotiatePduLength(); // Third stage : S7 PDU negotiation
+                        }
                     }
                 }
-            }
-            if (_LastError != 0)
-                Disconnect();
-            else
-                Time_ms = Environment.TickCount - Elapsed;
+                if (_LastError != 0)
+                    Disconnect();
+                else
+                    Time_ms = Environment.TickCount - Elapsed;
 
-            return _LastError;
+                return _LastError;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
 
         public int ConnectTo(string Address, int Rack, int Slot)
@@ -2180,8 +2210,16 @@ namespace Sharp7
 
         public int Disconnect()
         {
-            Socket.Close();
-            return 0;
+            try
+            {
+                Socket.Close();
+                return 0;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            
         }
 
         public int GetParam(Int32 ParamNumber, ref int Value)

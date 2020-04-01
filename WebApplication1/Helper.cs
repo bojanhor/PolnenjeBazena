@@ -574,7 +574,7 @@ namespace WebApplication1
         {
             Misc.SmartThread InitialiseClass;
             public Initialiser()
-            {
+            {                
                 InitialiseClass = new Misc.SmartThread(
                     new System.Threading.ThreadStart(
                         () => Val.InitialiseClass()));
