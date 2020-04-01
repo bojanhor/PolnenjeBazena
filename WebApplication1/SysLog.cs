@@ -16,8 +16,8 @@ namespace WebApplication1
         {
             List<string> PendingMessages = new List<string>();
             Misc.SmartThread LogWriter;
-
-            static string LogFolderPath = XmlController.BaseDirectoryPath + "\\" + "Logs";
+                       
+            static string LogFolderPath = Directory.GetParent(XmlController.BaseDirectoryPath).ToString() + "\\" + "Logs";
             static string LogFilePath;
             static string tempLogFilePath;
 
