@@ -25,6 +25,9 @@ namespace WebApplication1
 
             GControls.DropDownListChartViewSelector chartViewSelector;
 
+            Helper.UpdatePanelFull updatePanel = new Helper.UpdatePanelFull("chartUpdtPnl", Settings.ChartUpdateRefreshRate);
+
+
             public PagePadavine(Page _thisPage)
             {
                 try
@@ -47,8 +50,8 @@ namespace WebApplication1
             void Initialize()
             {
                 MainDiv = DIV.CreateDivAbsolute(0, 0, 100, 100, "%");
-                ChartTweaker ct1 = new ChartTweaker(thisPage, "Chart1", MainDiv); // Create 2 overlaying charts to prevent flicker
-                ChartTweaker ct2 = new ChartTweaker(thisPage, "Chart2", MainDiv);
+                ChartTweaker ct1 = new ChartTweaker(thisPage, "Chart1", MainDiv, updatePanel); // Create 2 overlaying charts to prevent flicker
+                ChartTweaker ct2 = new ChartTweaker(thisPage, "Chart2", MainDiv, updatePanel);
             }
 
             void AddControls()
@@ -176,27 +179,27 @@ namespace WebApplication1
                 Color color_TNotranja = Color.FromArgb(220, 90, 90, 90);
                 const string name_TNotranja = "TNotranja";
 
-                Control Chart_control;
-                public Chart ChartGraph;
+                Chart ChartGraph = new Chart();
+                Helper.UpdatePanelFull UpdatePanel;
+                
                 Page page;
-                readonly string chartID;
+                
                 HtmlGenericControl MainDiv;
 
 
 
 
-                public ChartTweaker(Page page, string chartID, HtmlGenericControl MainDiv)
+                public ChartTweaker(Page page, string chartID, HtmlGenericControl MainDiv, Helper.UpdatePanelFull UpdatePanel)
                 {
-                    this.page = page;
-                    this.chartID = chartID;
+                    this.page = page;                    
                     this.MainDiv = MainDiv;
-
-                    FindChart();
+                    this.UpdatePanel = UpdatePanel;         
                     AddDataPoints();
                     Tweak();
                     Resize();
                     CreateLegend();
                     CreateUnitLabels();
+                    
                 }
 
                 void CreateUnitLabels()
@@ -238,7 +241,7 @@ namespace WebApplication1
                     LegendItem legenditem_TZunanja = new LegendItem(name_TZunanja, color_TZunanja, null);
                     LegendItem legenditem_TNotranja = new LegendItem(name_TNotranja, color_TNotranja, null);
 
-                    legend.Font = new Font(Settings.DefaultFont, 17, FontStyle.Bold);
+                    legend.Font = new Font(Settings.DefaultFont, 30);
                     legend.Position = new ElementPosition(30,2,40,8);
                     legend.BackColor = Color.FromArgb(0, Color.White);                    
                     ChartGraph.Legends.Add(legend);
@@ -246,16 +249,21 @@ namespace WebApplication1
                 }
 
                 void Tweak()
-                {       
+                {
 
-                    ChartFont = new Font(Settings.DefaultFont, 15);                    
+                    ChartGraph.Width = 4000;
+                    ChartGraph.Height = 1500;
+
+                    ChartGraph.AntiAliasing = AntiAliasingStyles.None;
+
+                    ChartFont = new Font(Settings.DefaultFont, 30);                    
 
                     var chartarea = ChartGraph.ChartAreas.Add("ChartArea");
                     ChartGraph.ChartAreas[chartarea.Name].Position.Auto = true;
                     ChartGraph.ChartAreas[chartarea.Name].InnerPlotPosition.Auto = true;
 
                     ChartGraph.BackColor = Color.Transparent;
-                    
+
                     chartarea.Position = new ElementPosition(5, 5, 95, 90);
                     chartarea.InnerPlotPosition = new ElementPosition(3, 5, 90, 90);
                     chartarea.AxisX.LabelStyle.Font = ChartFont;
@@ -337,6 +345,9 @@ namespace WebApplication1
                         chartarea.BackColor = Color.Transparent;
 
                     }
+
+                    UpdatePanel.Controls_Add(ChartGraph);
+                    MainDiv.Controls.Add(UpdatePanel);
                     
                 }
 
@@ -418,7 +429,7 @@ namespace WebApplication1
                     if (buff!=null)
                     {
                         try
-                        {
+                        {                          
                             series_Svetlost.Points.DataBindXY(buff.datetimes, buff.Svetlost);
                             series_Padavine.Points.DataBindXY(buff.datetimes, buff.padavineH);
                             series_TZunanja.Points.DataBindXY(buff.datetimes, buff.Tzunanja);
@@ -431,28 +442,7 @@ namespace WebApplication1
                         
                     }
                     
-                }
-
-                void FindChart()
-                {
-                    try
-                    {
-                        Chart_control = page.FindControl(chartID);
-                    }
-                    catch (Exception ex)
-                    {
-                        throw new Exception("ChartTweaker could not find chart with ID: " + chartID + " on your page. Please provide valid ID. Error Info: " + ex.Message);
-                    }
-
-                    try
-                    {
-                        ChartGraph = (Chart)Chart_control;
-                    }
-                    catch (Exception ex)
-                    {
-                        throw new Exception("Control with ID: " + chartID + " was found, but is not of type Chart. Please provide valid Control of type Chart. Error Info: " + ex.Message);
-                    }
-                }
+                }                
 
                 void Resize()
                 {

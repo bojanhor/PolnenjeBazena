@@ -85,17 +85,18 @@ namespace WebApplication1.ChartValues
             try
             {
                 var buff = ChartData1.lines;
-                var splitted = new string[5];
+                var splitted = new List<string>();
                 for (int i = 0; i < buff.Count; i++)
                 {
-                    splitted = buff[i].Split(delimeter_);
+                    splitted = buff[i].Split(delimeter_).ToList();
+
                     if (splitted[0] != "")
                     {
-                        ChartData1.datetimes[i] = splitted[0]; // 1st column - datetime
-                        ChartData1.Svetlost[i] = Convert.ToSingle(splitted[1]); // 2nd column - datetime
-                        ChartData1.padavineH[i] = Convert.ToSingle(splitted[2]); // 3rd column - datetime
-                        ChartData1.Tzunanja[i] = Convert.ToSingle(splitted[3]); // 4th column - datetime
-                        ChartData1.Tnotranja[i] = Convert.ToSingle(splitted[4]); // 5th column - datetime
+                        ChartData1.datetimes.Add(splitted[0]); // 1st column - datetime
+                        ChartData1.Svetlost.Add(Convert.ToSingle(splitted[1])); // 2nd column - datetime
+                        ChartData1.padavineH.Add(Convert.ToSingle(splitted[2])); // 3rd column - datetime
+                        ChartData1.Tzunanja.Add(Convert.ToSingle(splitted[3])); // 4th column - datetime
+                        ChartData1.Tnotranja.Add(Convert.ToSingle(splitted[4])); // 5th column - datetime
                     }                    
                 }
 
@@ -549,11 +550,11 @@ namespace WebApplication1.ChartValues
     public class ChartData
     {
         public List<string> lines;
-        public string[] datetimes;
-        public float[] Svetlost;
-        public float[] padavineH;
-        public float[] Tzunanja;
-        public float[] Tnotranja;
+        public List<string> datetimes;
+        public List<float> Svetlost;
+        public List<float> padavineH;
+        public List<float> Tzunanja;
+        public List<float> Tnotranja;
 
         public ChartData(ShowChartEnum showchartEnum)
         {
@@ -562,11 +563,11 @@ namespace WebApplication1.ChartValues
             try
             {                
                 lines = ChartValuesLogger.FileToarray(FilePath);
-                datetimes = new string[lines.Count];
-                Svetlost = new float[lines.Count];
-                padavineH = new float[lines.Count];
-                Tzunanja = new float[lines.Count];
-                Tnotranja = new float[lines.Count];
+                datetimes = new List<string>();
+                Svetlost = new List<float>();
+                padavineH = new List<float>();
+                Tzunanja = new List<float>();
+                Tnotranja = new List<float>();
             }
             catch (Exception ex)
             {

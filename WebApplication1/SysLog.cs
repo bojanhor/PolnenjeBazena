@@ -34,7 +34,8 @@ namespace WebApplication1
 
             private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
             {
-                var message = "Fatal error:" + e.ExceptionObject.ToString();
+                var message = "Fatal error" +
+                    ":" + e.ExceptionObject.ToString();
                 Message.SetMessage(message);
             }
 

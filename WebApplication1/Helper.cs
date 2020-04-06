@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
@@ -16,8 +17,9 @@ namespace WebApplication1
         public static string ViewStateElement_ScriptLoader = "ScriptLoader";
         public static string ViewStateElement_Response = "Response";
         public static string ViewStateElement_PageHistory = "PageHistory";
+        public static string ViewStateElement_LoggedIn = "##_LoggedIn_##";
         static bool messagePending;
-
+                        
 
         public static void Redirect(string site, Page _thisPage)
         {
@@ -60,10 +62,11 @@ namespace WebApplication1
          
         public static void EveryPageProtocol(string FriendlyPageNamePage, Page _thisPage, System.Web.SessionState.HttpSessionState session, HtmlGenericControl TemplateClassID, bool hasMenuBtn, bool hasLogo)
         {
-
+            
             // Save response  
             session[ViewStateElement_Response] = _thisPage.Response;
-            
+
+            LoginChk(_thisPage, session);
 
             // Reconstruct whole page if button is clicked or timer is refreshing page
             if (_thisPage.IsPostBack)
@@ -133,7 +136,40 @@ namespace WebApplication1
             session[ViewStateElement_PageHistory] = pageHistory;
 
         }
-        
+
+        static void LoginChk(Page _thisPage, System.Web.SessionState.HttpSessionState session)
+        {
+            // Login determine
+            var loginBuff = session[ViewStateElement_LoggedIn]; // gets login state from current session            
+                        
+
+            if (loginBuff != null) // if there is no login state in session state
+            {
+                if (loginBuff.Equals(Val.LoggedIn))
+                {
+                    return; // if logged in continue 
+                }
+                else if (loginBuff.Equals(Val.LoggingIn)) // if value from sessionState is corect you can proceed on default page - if not than loginForm must be shown
+                {
+                    if (_thisPage.GetType().BaseType != typeof(Pages.PageDefault))
+                    {
+                        Redirect("Default", _thisPage); // value from sessionState was correct
+                        session[ViewStateElement_LoggedIn] = Val.LoggedIn;
+                    }                    
+                    return;
+                }
+
+            }
+
+            if (_thisPage.GetType().BaseType == typeof(Pages.test)) // if login form is (to be) shown proceed
+            {
+                return; // can proceed because login form will be shown
+            }
+                        
+            Redirect("test", _thisPage); // todo rename  // Conditions are not met for login
+
+        }
+
         public static HtmlGenericControl PositionUnderTitle(WebControl element, Label Undertitle)
         {
             double offset = Convert.ToDouble(element.Style["width"].Replace("%", "")) * 2.6D; // set top offset for undertitle, to position it under image
@@ -646,6 +682,69 @@ namespace WebApplication1
             else
             {
                 messagePending = false;
+            }
+        }
+        
+        public class UserData
+        {
+            string Username;
+            string Password;
+
+            public string GetUsername()
+            {
+                return Username;
+            }
+
+            public string GetPassword()
+            {
+                return Password;
+            }
+            
+            public UserData(string U, string P)
+            {
+                Username = U;
+                Password = P;                
+            }
+                        
+            public enum UserCheckStatus
+            {
+                OK,
+                InvalidUserName,
+                InvalidPassword
+            }
+
+            public static bool ConfirmUsername(out UserCheckStatus chk, string UserName, string pwd)
+            {
+                var usrsBuff = XmlController.GetUserData();
+                var usr = UserName;
+                var pswrd = pwd;
+                bool validUsername = false;
+
+                foreach (var item in usrsBuff)
+                {
+                    if (item.GetUsername() == usr)
+                    {
+                        validUsername = true;
+                        //
+                        if (item.GetPassword().Equals(pswrd))
+                        {
+                            chk =  UserCheckStatus.OK;
+                            return true;
+                        }                        
+                    }
+                }
+
+                if (validUsername)
+                {
+                    chk = UserCheckStatus.InvalidPassword;
+                }
+                else
+                {
+                    chk = UserCheckStatus.InvalidUserName;
+                }
+
+                return false;
+                                
             }
         }
     }

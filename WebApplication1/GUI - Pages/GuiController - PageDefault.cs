@@ -26,15 +26,18 @@ namespace WebApplication1
             public GControls.Luc[] Luc;
 
             public HtmlGenericControl divWeather;
+            public HtmlGenericControl divVremeLevo;
             ImageButton inTemp;
             ImageButton outTemp;
             ImageButton rainSense;
             ImageButton dayNight;
             ImageButton SunRise;
             ImageButton SunSet;
+            ImageButton Vreme;
 
-            Image[] guiSepare = new Image[5];           
-            
+            Image[] guiSepare = new Image[7];
+            Image[] guiSepareVreme = new Image[2];
+
             public HtmlGenericControl divStala;
             Image Stala;
 
@@ -110,8 +113,11 @@ namespace WebApplication1
             {
                 try
                 {
-                    divWeather = DIV.CreateDivAbsolute("80%", "51%", "40%", "12%");
+                    divWeather = DIV.CreateDivAbsolute("80%", "48%", "40%", "12%");
                     divWeather.Style.Add(HtmlTextWriterStyle.ZIndex, "10");
+
+                    divVremeLevo = DIV.CreateDivAbsolute("80%", "5%", "40%", "12%");
+                    divVremeLevo.Style.Add(HtmlTextWriterStyle.ZIndex, "10");
 
                     inTemp = new ImageButton()
                     {
@@ -145,7 +151,14 @@ namespace WebApplication1
 
                     SunSet = new ImageButton()
                     {
-                        ImageUrl = "~/Pictures/sunSet.png",
+                        ImageUrl = "~/Pictures/sun.png",
+                        Width = inTemp.Width,
+                    };
+
+                    //
+                    Vreme = new ImageButton()
+                    {
+                        ImageUrl = "~/Pictures/sun.png",
                         Width = inTemp.Width,
                     };
 
@@ -158,7 +171,16 @@ namespace WebApplication1
                             Width = Unit.Percentage(3.5F)
                         };
                     }
-                   
+
+                    for (int i = 0; i < guiSepareVreme.Length; i++)
+                    {
+                        guiSepareVreme[i] = new Image()
+                        {
+                            ImageUrl = "~/Pictures/gui_separator.png",
+                            Width = Unit.Percentage(3.5F)
+                        };
+                    }
+
                     var topOffset = 90;
                     var spacingLeft = 14.5F;
 
@@ -176,25 +198,51 @@ namespace WebApplication1
                     WeatherLabelFormater(prop.TempZunaj.Value, inTemp.Width.Value, topOffset, spacingLeft * 4);
                     WeatherLabelFormater("25L/dan", inTemp.Width.Value, topOffset, spacingLeft * 5);
 
-                    divWeather.Controls.Add(dayNight);
+                    VremeIconFormat("Vreme", inTemp.Width.Value, topOffset,4);
+
+
                     divWeather.Controls.Add(guiSepare[0]);
-                    divWeather.Controls.Add(SunRise);
+                    divWeather.Controls.Add(dayNight);
                     divWeather.Controls.Add(guiSepare[1]);
-                    divWeather.Controls.Add(SunSet);
+                    divWeather.Controls.Add(SunRise);
                     divWeather.Controls.Add(guiSepare[2]);
+                    divWeather.Controls.Add(SunSet);
+                    divWeather.Controls.Add(guiSepare[3]);
 
                     divWeather.Controls.Add(inTemp);
-                    divWeather.Controls.Add(guiSepare[3]);
-                    divWeather.Controls.Add(outTemp);
                     divWeather.Controls.Add(guiSepare[4]);
+                    divWeather.Controls.Add(outTemp);
+                    divWeather.Controls.Add(guiSepare[5]);                   
                     divWeather.Controls.Add(rainSense);
-                  
+                    divWeather.Controls.Add(guiSepare[6]);
+
+                    divVremeLevo.Controls.Add(guiSepareVreme[0]);
+                    divVremeLevo.Controls.Add(Vreme);
+                    divVremeLevo.Controls.Add(guiSepareVreme[1]);
+
                 }
                 catch (Exception ex)
                 {
                     throw new Exception("Error iside AddWeather() method. Error info: "+ex.Message);
                 }
                 
+
+            }
+
+            void VremeIconFormat(string LableText, double width, float topOffset, float spacingLeft)
+            {                
+                var div = DIV.CreateDivAbsolute(Helper.FloatToStringWeb(width, "%"));
+                var l = new Label();
+                div.Style.Add(HtmlTextWriterStyle.Width, width + "%");
+                l.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
+                l.Style.Add(HtmlTextWriterStyle.FontSize, "1.2vw");
+                div.Style.Add(HtmlTextWriterStyle.Top, Helper.FloatToStringWeb(topOffset, "%"));
+                div.Style.Add(HtmlTextWriterStyle.Left, Helper.FloatToStringWeb(spacingLeft, "%"));
+                l.Width = Unit.Percentage(100);
+                l.Text = LableText;
+                div.Controls.Add(l);
+
+                divVremeLevo.Controls.Add(div);
 
             }
 
@@ -206,7 +254,7 @@ namespace WebApplication1
                 l.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
                 l.Style.Add(HtmlTextWriterStyle.FontSize, "1.2vw");
                 div.Style.Add(HtmlTextWriterStyle.Top, Helper.FloatToStringWeb(topOffset, "%"));
-                div.Style.Add(HtmlTextWriterStyle.Left, Helper.FloatToStringWeb(spacingLeft, "%"));
+                div.Style.Add(HtmlTextWriterStyle.Left, Helper.FloatToStringWeb(spacingLeft + 3, "%"));
                 l.Width = Unit.Percentage(100);
                 l.Text = LableText;
                 div.Controls.Add(l);
@@ -262,7 +310,13 @@ namespace WebApplication1
                 dayNight.Click += DayNight_Click;
                 SunRise.Click += SunRise_Click;
                 SunSet.Click += SunSet_Click;
+                Vreme.Click += Vreme_Click;
 
+            }
+
+            private void Vreme_Click(object sender, ImageClickEventArgs e)
+            {
+                Helper.Redirect("Vreme", thisPage);
             }
 
             private void InTemp_Click(object sender, ImageClickEventArgs e)

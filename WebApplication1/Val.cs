@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Runtime.ExceptionServices;
+using System.Security;
 
 namespace WebApplication1
 {
@@ -17,12 +18,16 @@ namespace WebApplication1
         public static GuiController guiController = new GuiController();
         public static string ScrolToBottomTextboxScript = GetScript("ScrollToBottom.js");
         public static string RetainPositionTextboxScript = GetScript("RetainScrollPosition.js");
+        public static string FocusNextIfEnterKeyPressedScript = GetScript("FocusNextIfEnterKeyPressed.js");
         public static ChartValues.ChartValuesLogger ChartValues;
+        public static string LoggedIn = "!#LoggedIn#!";
+        public static string LoggingIn = "!#LoggingIn#!";
 
 
         public static void InitialiseClass()
         {        
             ChartValues = new ChartValues.ChartValuesLogger();
+            
         }
 
         public static void InitializeWDTable(int device)
@@ -56,5 +61,6 @@ namespace WebApplication1
             }
             
         }
+                
     }
 }

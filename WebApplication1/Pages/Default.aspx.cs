@@ -39,6 +39,8 @@ namespace WebApplication1.Pages
             Timer2.Interval = Settings.UpdateValuesPCms * 5;
             TemperaturePanel.ContentTemplateContainer.Controls.Add(
             Val.guiController.PageDefault_.divWeather);
+
+            TemplateClassID.Controls.Add(Val.guiController.PageDefault_.divVremeLevo);
         }
 
         protected void Timer1_Tick(object sender, EventArgs e)

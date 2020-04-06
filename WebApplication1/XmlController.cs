@@ -6,6 +6,7 @@ using System.Xml.Linq;
 using System.Net;
 using System.IO;
 using System.Text;
+using System.Security;
 
 namespace WebApplication1
 {
@@ -978,6 +979,87 @@ namespace WebApplication1
             {
                 throw new Exception(
                    "Error while setting value: " + searchValue + ". Error info: " + ex.Message);
+            }
+        }
+
+        public static int GetPageVremeWidth()
+        {
+            var searchValue = "VremeWidth";
+
+            try
+            {
+                var buff = Convert.ToInt32(XmlGUI.Element(searchValue).Value);
+                if (buff > 100 || buff < 20)
+                {
+                    throw new Exception();
+                }
+                return buff;
+            }
+            catch (Exception)
+            {
+                throw new Exception(
+                    searchValue + " value in config file is not valid " + searchValue + " value. " +
+                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "value must be between 20 and 100");
+            }
+        }
+
+        public static string GetPageVremeLink()
+        {
+            var searchValue = "VremeLink";
+
+            try
+            {
+                var buff = XmlGUI.Element(searchValue).Value;
+
+                Uri uriResult;
+                bool result = Uri.TryCreate(buff, UriKind.Absolute, out uriResult)
+                    && (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
+
+                if (!result)
+                {
+                    throw new Exception();
+                }
+
+                return buff;
+            }
+            catch (Exception)
+            {
+                throw new Exception(
+                    searchValue + " value in config file is not valid " + searchValue + " value. " +
+                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "value must be valid link to internet page");
+            }
+        }
+
+        public static List<Helper.UserData> GetUserData()
+        {
+            var searchValue = "User";
+            List<Helper.UserData> de = new List<Helper.UserData>();
+            Helper.UserData buff;
+
+
+            try
+            {
+                string buffName;
+                string buffPwd;
+
+                for (int i = 1; i <= 30; i++)
+                {
+                    buffName = XmlUsr.Element(searchValue + i).Element("Name").Value;
+                    buffPwd = XmlUsr.Element(searchValue + i).Element("Pwd").Value;
+                    buff = new Helper.UserData(buffName, buffPwd);
+                    de.Add(buff);
+                }
+
+                return de;
+               
+            }
+            catch (Exception)
+            {
+                throw new Exception(
+                    searchValue + " value in config file is not valid " + searchValue + " value. " +
+                    "Correct the " + searchValue + " value in config or call your support administrator. ");
             }
         }
     }

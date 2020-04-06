@@ -13,7 +13,7 @@ namespace WebApplication1.Pages
         {
             Val.guiController.PageVreme_ = new GuiController.PageVreme();
 
-            Helper.EveryPageProtocol("Vreme", this, Session, TemplateClassID);
+            Helper.EveryPageProtocol("Vreme", this, Session, TemplateClassID, true, false);
             Set();
             Initialise();
             
@@ -27,18 +27,17 @@ namespace WebApplication1.Pages
         void Set()
         {
 
-            string link = "https://vreme.arso.gov.si/napoved/Letali%C5%A1%C4%8De%20Jo%C5%BEeta%20Pu%C4%8Dnika%20Ljubljana/graf/0";
+            string link = XmlController.GetPageVremeLink();
+
             vreme.Attributes.Add("Src", link);
 
+            var vremewidth = XmlController.GetPageVremeWidth();
+
             vreme.Style.Add(HtmlTextWriterStyle.Position, "absolute");
-            vreme.Style.Add(HtmlTextWriterStyle.Width, "50%");
-            vreme.Style.Add(HtmlTextWriterStyle.Height, "84%");
-            vreme.Style.Add(HtmlTextWriterStyle.Top, "10%");
-            vreme.Style.Add(HtmlTextWriterStyle.Left, "28%");
-
-                        
-
-            
+            vreme.Style.Add(HtmlTextWriterStyle.Width, vremewidth + "%");
+            vreme.Style.Add(HtmlTextWriterStyle.Height, "88%");
+            vreme.Style.Add(HtmlTextWriterStyle.Top, "8%");
+            vreme.Style.Add(HtmlTextWriterStyle.Left, 100 - vremewidth + "%");
 
 
         }

@@ -29,8 +29,8 @@ namespace WebApplication1
             }
 
             public class Luc : HtmlGenericControl
-            {     
-                              
+            {
+
                 public LucBtn button;
                 public ImageButton Zarnica1;
                 public ImageButton Zarnica0;
@@ -38,11 +38,11 @@ namespace WebApplication1
                 public Label Number0;
                 public int btnID;
                 public Helper.Position position;
-                public bool active = false;               
+                public bool active = false;
                 public string address;
                 public readonly string deactivatedPicture = "~\\Pictures\\Zarnica.png";
                 public readonly string activatedPicture = "~\\Pictures\\Zarnica1.png";
-               
+
                 public string Top
                 {
                     set
@@ -80,14 +80,14 @@ namespace WebApplication1
 
                 public Luc(int _btnID)
                 {
-                    
+
                     try
-                    {                        
+                    {
                         button = new LucBtn(this, _btnID);
                         btnID = _btnID;
                         ID = "Luc" + btnID;
                         Style.Add(HtmlTextWriterStyle.Position, "absolute");
-                                                
+
                         position = XmlController.GetPositionLucForDefaultScreen(btnID);
 
                         Top = position.top.ToString().Replace(",", ".");
@@ -98,7 +98,7 @@ namespace WebApplication1
                         AddImageButton();
                         AddNumber();
                         AddButtonOverlay();
-                                        
+
 
                     }
                     catch (Exception)
@@ -112,13 +112,13 @@ namespace WebApplication1
 
                 void GetZarnicaValue()
                 {
-                   active = Val.logocontroler.Prop1.LucStatus_ReadToPC[btnID].Value;                                                                              
+                    active = Val.logocontroler.Prop1.LucStatus_ReadToPC[btnID].Value;
                 }
 
                 private void Button_Click(object sender, ImageClickEventArgs e)
                 {
                     var l = Val.logocontroler.Prop1.LucStatus_ReadToPC[btnID].Value;
-                    
+
                     var writeVal = Val.logocontroler.Prop1.LucStatus_WriteToPLC[btnID];
                     writeVal.SendPulse();
 
@@ -137,7 +137,7 @@ namespace WebApplication1
 
                     Val.logocontroler.ForceRefreshValuesFromPLC(1);
                     Val.guiController.PageDefault_.ForceRefreshPanel();
-                                                          
+
                 }
 
                 void AddNumber()
@@ -155,7 +155,7 @@ namespace WebApplication1
                     Number1.Style.Add(HtmlTextWriterStyle.Height, size + "%");
                     Number1.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
                     Number1.Style.Add(HtmlTextWriterStyle.VerticalAlign, "middle");
-                    Number1.Style.Add(HtmlTextWriterStyle.FontSize, Helper.FloatToStringWeb((position.width / 3.5F), "vw")); 
+                    Number1.Style.Add(HtmlTextWriterStyle.FontSize, Helper.FloatToStringWeb((position.width / 3.5F), "vw"));
                     Number1.Style.Add(HtmlTextWriterStyle.Color, "black");
                     Number1.Style.Add(HtmlTextWriterStyle.ZIndex, "9");
 
@@ -166,7 +166,7 @@ namespace WebApplication1
                     Number0.Style.Add(HtmlTextWriterStyle.Width, size + "%");
                     Number0.Style.Add(HtmlTextWriterStyle.Height, size + "%");
                     Number0.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
-                    Number0.Style.Add(HtmlTextWriterStyle.VerticalAlign, "middle");                    
+                    Number0.Style.Add(HtmlTextWriterStyle.VerticalAlign, "middle");
                     Number0.Style.Add(HtmlTextWriterStyle.FontSize, Helper.FloatToStringWeb((position.width / 3.5F), "vw"));
                     Number0.Style.Add(HtmlTextWriterStyle.Color, "white");
                     Number0.Style.Add(HtmlTextWriterStyle.ZIndex, "9");
@@ -179,7 +179,7 @@ namespace WebApplication1
                     {
                         Controls.Add(Number0);
                     }
-                    
+
                 }
 
                 void AddImageButton()
@@ -215,7 +215,7 @@ namespace WebApplication1
                     else
                     {
                         Controls.Add(Zarnica0);
-                    }                    
+                    }
                 }
 
                 void AddButtonOverlay()
@@ -231,17 +231,17 @@ namespace WebApplication1
                     button.Style.Add(HtmlTextWriterStyle.ZIndex, "10");
                     button.Style.Add(HtmlTextWriterStyle.BackgroundColor, "transparent");
                     Controls.Add(button);
-                }               
+                }
             }
-                        
+
             public class LucSet : Luc
-            {   
-                              
-                public LucSet(int _btnID, UpdatePanel Parent) 
+            {
+
+                public LucSet(int _btnID, UpdatePanel Parent)
                     : base(_btnID)
-                {                      
-                        
-                }                       
+                {
+
+                }
             }
 
             public class LucBtn : TransparentButton
@@ -261,10 +261,10 @@ namespace WebApplication1
                 public TransparentButton()
                 {
                     this.ImageUrl = "~/Pictures/TransparentPixel.png";
-                   
+
                 }
-            }               
-            
+            }
+
             public class ImageButtonWithID : ImageButton
             {
                 public int btnID;
@@ -275,7 +275,7 @@ namespace WebApplication1
                 }
             }
 
-            
+
             public class ShadowedOnOffButton : OnOffButton
             {
                 public ShadowedOnOffButton(string description, int _btnID, bool status, Helper.Position position)
@@ -394,7 +394,7 @@ namespace WebApplication1
                         Top = position.top.ToString().Replace(",", ".");
                         Left = position.left.ToString().Replace(",", ".");
                         Size = position.width.ToString().Replace(",", ".");
-                        Style.Add(HtmlTextWriterStyle.Height, Size+"%");
+                        Style.Add(HtmlTextWriterStyle.Height, Size + "%");
 
                         Style.Add(HtmlTextWriterStyle.Position, "absolute");
 
@@ -534,7 +534,7 @@ namespace WebApplication1
                 public Image Image = new Image();
                 public Label l = new Label();
                 string _text;
-                string menuID; 
+                string menuID;
 
 
                 public ButtonWithLabel_SelectMenu(string Name, Helper.Datasource dataSource, string ID, string text, float FontSize, Timer updateTimer, bool wideMode)
@@ -542,14 +542,14 @@ namespace WebApplication1
                     Ctor(Name, dataSource, ID, text, FontSize, updateTimer, wideMode);
                 }
 
-                
+
                 void Ctor(string Name, Helper.Datasource dataSource, string ID, string text, float FontSize, Timer updateTimer, bool wideMode)
                 {
 
                     _text = text;
                     menuID = ID;
 
-                    
+
                     Image.ImageUrl = wideMode ? "~/Pictures/EmptyBtnWide.png" : "~/Pictures/EmptyBtn.png";
                     SetControlAbsolutePos(Image, 0, 0, 100, 100);
                     SetControlAbsolutePos(button, 0, 0, 100, 100);
@@ -578,18 +578,18 @@ namespace WebApplication1
                 }
 
                 private void Button_Click(object sender, ImageClickEventArgs e, Timer updateTimer)
-                {                  
+                {
                     submenu.Style.Remove(HtmlTextWriterStyle.Display);
                     submenu.Style.Add(HtmlTextWriterStyle.Display, "block");
 
                     if (updateTimer != null)
                     {
                         updateTimer.Enabled = false;
-                        
+
                     }
 
                     GlobalManagement.DisableAllTimersOnPage();
-                    
+
                 }
 
                 class SubMenuSelect : GroupBox
@@ -617,13 +617,13 @@ namespace WebApplication1
 
                     ButtonWithLabel saveBtn;
 
-                    public DropDownList DropDown;                    
+                    public DropDownList DropDown;
 
                     Label TitleNameLabel;
 
                     void Ctor(string ID, List<ListItem> DataSource, string text, Timer updateTimer, bool wideMode)
                     {
-                                               
+
                         this.ID = ID;
                         Style.Add("display", "none");
 
@@ -635,14 +635,14 @@ namespace WebApplication1
                             Width = Unit.Percentage(5)
                         };
 
-                        SetControlAbsolutePos(exitButton, 5, 87, 10);                        
+                        SetControlAbsolutePos(exitButton, 5, 87, 10);
                         exitButton.Click += ExitButton_Click;
 
                         Controls.Add(exitButton);
 
                         // Save btn
                         saveBtn = new ButtonWithLabel("Shrani", 30, 1.5F);
-                        SetControlAbsolutePos(saveBtn, 65, 36);                       
+                        SetControlAbsolutePos(saveBtn, 65, 36);
 
                         Controls.Add(saveBtn);
 
@@ -668,18 +668,18 @@ namespace WebApplication1
                         {
                             SetControlAbsolutePos(DropDown, 30, 39, 23, 23);
                         }
-                        
+
 
                         ManageSelectedItem(text, DataSource);
 
                         saveBtn.button.Click += (sender, e) => SaveBtn_Click1(sender, e, updateTimer);
 
                         Controls.Add(DropDown);
-                                              
+
                     }
 
                     void ManageSelectedItem(string PlcTextValue, List<ListItem> DataSource)
-                    {                       
+                    {
                         string buffSelectedItem = PlcTextValue ?? PropComm.NA;
 
                         for (int i = 0; i < DataSource.Count; i++)
@@ -705,7 +705,7 @@ namespace WebApplication1
                         if (updateTimer != null)
                         {
                             updateTimer.Enabled = true;
-                        }                        
+                        }
                     }
 
                     private void ExitButton_Click(object sender, ImageClickEventArgs e)
@@ -713,7 +713,7 @@ namespace WebApplication1
                         Helper.Refresh(); // loads inital page (with closed/invisible menu and restarts updatepanel timer)
                     }
 
-                    public SubMenuSelect(string ID, List<ListItem> list, string text, Timer updateTimer, bool wideMode) 
+                    public SubMenuSelect(string ID, List<ListItem> list, string text, Timer updateTimer, bool wideMode)
                         : base(top, left, width, height)
                     {
                         Ctor(ID, list, text, updateTimer, wideMode);
@@ -737,7 +737,7 @@ namespace WebApplication1
                         SetControlAbsolutePos(TitleNameLabel, 5, 3, 50, 15);
                         Controls.Add(TitleNameLabel);
                     }
-                                        
+
                 }
             }
 
@@ -837,15 +837,15 @@ namespace WebApplication1
                     }
                     catch (Exception ex)
                     {
-                        throw new Exception("Error constructing object SettingsSubMenu. Error message: " +ex.Message);
+                        throw new Exception("Error constructing object SettingsSubMenu. Error message: " + ex.Message);
                     }
-                   
+
                 }
 
                 void AddClock()
                 {
                     Clock.Text = "TRENUTEN ČAS: " + Val.logocontroler.Prop1.LogoClock.Value_ClockForSiemensLogoFormat;
-                    SetControlAbsolutePos(Clock, 10, 45, 30,5);
+                    SetControlAbsolutePos(Clock, 10, 45, 30, 5);
                     Clock.Style.Add(HtmlTextWriterStyle.FontSize, "1.4vw");
                     Clock.Style.Add(HtmlTextWriterStyle.Color, Settings.LightBlackColor);
 
@@ -901,18 +901,18 @@ namespace WebApplication1
                 public GroupBox(int top, int left, int width, int height)
                 {
                     SubPanelFitGroupbox(this, top, left, width, height);
-                    
+
                 }
 
                 public GroupBox(string top, string left, string width, string height)
-                {                    
-                    Style.Add("position","fixed");
+                {
+                    Style.Add("position", "fixed");
                     Style.Add(HtmlTextWriterStyle.Top, "15vw");
                     Style.Add(HtmlTextWriterStyle.Left, "30vw");
-                    Style.Add(HtmlTextWriterStyle.Width, XmlController.GetMasterWindowScaleX()/3 + "%");                    
-                    Style.Add(HtmlTextWriterStyle.PaddingBottom, XmlController.GetMasterWindowScaleY()/3 + "%");
+                    Style.Add(HtmlTextWriterStyle.Width, XmlController.GetMasterWindowScaleX() / 3 + "%");
+                    Style.Add(HtmlTextWriterStyle.PaddingBottom, XmlController.GetMasterWindowScaleY() / 3 + "%");
                     Style.Add(HtmlTextWriterStyle.ZIndex, "99");
-                                       
+
 
                     Style.Add("border-radius", 1 + "vw");
                     Style.Add("background-color", "#f7f7f7");
@@ -920,10 +920,10 @@ namespace WebApplication1
                     Style.Add("border-width", "0.1vw");
                     Style.Add("border-color", "#ededed");
                     Style.Add("box-shadow", "0.5vw 0.5vw 0.5vw #BBB");
-                   
+
                 }
 
-               
+
                 private void SubPanelFitGroupbox(HtmlGenericControl Groupbox, int top, int left, int width, int height)
                 {
                     SetControlAbsolutePos(Groupbox, top, left, width, height);
@@ -966,16 +966,16 @@ namespace WebApplication1
                     float seps = 0;
                     try
                     {
-                        seps = (howMayDots * 2)-1;
-                        w = (width / seps) ;
-                        w = w + (w / seps)*2;
+                        seps = (howMayDots * 2) - 1;
+                        w = (width / seps);
+                        w = w + (w / seps) * 2;
                     }
                     catch (Exception)
                     {
                         seps = 1;
                         w = width;
                     }
-                                         
+
 
                     if (howMayDots < 2)
                     {
@@ -989,11 +989,11 @@ namespace WebApplication1
                     {
                         subdiv[i] = new HtmlGenericControl("div");
                         SubPanelFitGroupbox(subdiv[i], top, tmpl, w, height);
-                        tmpl += w * 2 ;
+                        tmpl += w * 2;
                         Controls.Add(subdiv[i]);
                     }
-                    
-                    SubPanelFit(this, top, left, width, height*1.0F);
+
+                    SubPanelFit(this, top, left, width, height * 1.0F);
                 }
 
                 private void SubPanelFitGroupbox(HtmlGenericControl Groupbox, float top, float left, float width, float height)
@@ -1133,7 +1133,7 @@ namespace WebApplication1
                         _ZIndex = value;
                     }
                 }
-                
+
                 public SuperLabel(string text, float top, float left, float width, float height)
                 {
                     lable.Text = text;
@@ -1141,7 +1141,7 @@ namespace WebApplication1
                     Left = left;
                     Width = width;
                     Height = height;
-                    
+
                     lable.Style.Add("top", "0");
                     lable.Style.Add("left", "0");
                     lable.Width = Unit.Percentage(100);
@@ -1172,7 +1172,7 @@ namespace WebApplication1
                 public float Left { get; private set; }
                 public float Width { get; private set; }
                 public float Height { get; private set; }
-                
+
                 private int _ZIndex;
                 public int ZIndex
                 {
@@ -1219,7 +1219,7 @@ namespace WebApplication1
                     DataSource = dataSource;
                     SetDropdown(ID, PlcTextValue, size, fontSize, selfUpdatable, false);
                 }
-                                                                
+
                 public DropDown(Helper.Datasource dataSource, string ID, string PlcTextValue, float top, float left, double size, float fontSize, bool selfUpdatable, bool wideMode)
                 {
                     DataSource = dataSource;
@@ -1227,7 +1227,7 @@ namespace WebApplication1
                     Style.Add("left", Helper.FloatToStringWeb(left, "%"));
                     SetDropdown(ID, PlcTextValue, (float)size, fontSize, selfUpdatable, wideMode);
                 }
-                                                
+
                 void SetDropdown(string ID, string PlcTextValue, float size, float fontSize, bool selfUpdatable, bool wideMode)
                 {
 
@@ -1242,7 +1242,7 @@ namespace WebApplication1
                             ID = ID + "_tmr"
                         };
                     }
-                    
+
                     try
                     {
                         Button_Outside = new ButtonWithLabel_SelectMenu(Name, DataSource, ID + "_s", ManageSelectedItem(PlcTextValue), fontSize, UpdateTimer, wideMode)
@@ -1254,7 +1254,7 @@ namespace WebApplication1
                     {
                         throw new Exception("Error initialising Submenu. Error info: " + ex.Message);
                     }
-                    
+
 
                     SaveClicked += DropDown_SaveClicked;
 
@@ -1274,13 +1274,13 @@ namespace WebApplication1
                             ControlID = UpdateTimer.ID
                         };
                         triggers.Add(trigger);
-                        
+
                     }
-                                      
+
                     Controls.Add(updatePanel);
 
                     var sizeW = wideMode ? size * 3 : size * 2;
-                    Style.Add(HtmlTextWriterStyle.Width, Helper.FloatToStringWeb(sizeW , "vw"));
+                    Style.Add(HtmlTextWriterStyle.Width, Helper.FloatToStringWeb(sizeW, "vw"));
                     Style.Add(HtmlTextWriterStyle.Height, Helper.FloatToStringWeb(size, "vw"));
 
                 }
@@ -1317,11 +1317,11 @@ namespace WebApplication1
 
                 private void DropDown_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    this.selectedItem = selectedItem;               
+                    this.selectedItem = selectedItem;
                     Helper.Refresh();
                 }
 
-               
+
                 private void UpdateTimer_Tick1(object sender, EventArgs e)
                 {
                     // Implicit update
@@ -1329,7 +1329,7 @@ namespace WebApplication1
 
 
                 void SetUpdateInterval()
-                {                    
+                {
                     //triggers.Add(trigger); // TODO delete
                 }
 
@@ -1357,10 +1357,10 @@ namespace WebApplication1
             public class DropDownListChartViewSelector : DropDown
             {
                 static Helper.ChartViewSelectorDatasource datasource = new Helper.ChartViewSelectorDatasource();
-                               
+
                 public DropDownListChartViewSelector(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable)
                     : base(datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, true)
-                {                   
+                {
                     Ctor();
                 }
 
@@ -1373,14 +1373,14 @@ namespace WebApplication1
                 public static string GetReplacementTextFromEnum(int enum_)
                 {
                     try
-                    {                       
+                    {
                         return datasource[enum_].Text;
                     }
                     catch (Exception)
                     {
                         return datasource[0].Value;
                     }
-                    
+
                 }
             }
 
@@ -1393,7 +1393,7 @@ namespace WebApplication1
                 {
                     Ctor();
                 }
-                               
+
                 public DropDownListForDimmer(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
                     : base(datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, wideMode)
                 {
@@ -1410,7 +1410,7 @@ namespace WebApplication1
             public class DropDownListForHisteresis : DropDown
             {
                 static Helper.HisteresisSelectorDatasource datasource = new Helper.HisteresisSelectorDatasource();
-                              
+
                 public DropDownListForHisteresis(string ID, string PlcTextValue, float top, float left, double size, float fontSize, bool selfUpdatable, bool widemode)
                     : base(datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
                 {
@@ -1427,14 +1427,14 @@ namespace WebApplication1
             public class DropDownListForTimer_1_30s : DropDown
             {
                 static Helper.TimerSelectorDatasource datasource = new Helper.TimerSelectorDatasource(1, 30, 1, "s");
-                                
+
                 public DropDownListForTimer_1_30s(string ID, string PlcTextValue, float top, float left, double size, float fontSize, bool selfUpdatable, bool widemode)
                     : base(datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
                 {
                     Ctor();
                 }
 
-                                
+
                 void Ctor()
                 {
                     DataSource = datasource;
@@ -1458,7 +1458,7 @@ namespace WebApplication1
                     Ctor();
                 }
 
-                                
+
                 void Ctor()
                 {
                     DataSource = datasource;
@@ -1468,7 +1468,7 @@ namespace WebApplication1
 
             public class DropDownListForHourSelect : DropDown
             {
-                static Helper.TimeSelectorDatasource datasource = new Helper.TimeSelectorDatasource();                
+                static Helper.TimeSelectorDatasource datasource = new Helper.TimeSelectorDatasource();
 
                 public DropDownListForHourSelect(string ID, string PlcTextValue, float size, float fontSize, bool selfUpdatable)
                    : base(datasource, ID, PlcTextValue, size, fontSize, selfUpdatable)
@@ -1481,9 +1481,9 @@ namespace WebApplication1
                 {
                     Ctor();
                 }
-                                                
+
                 void Ctor()
-                {                   
+                {
                     DataSource = datasource;
                     Button_Outside.DataBind();
                 }
@@ -1492,13 +1492,13 @@ namespace WebApplication1
             public class DropDownListForYesNoSelect : DropDown
             {
                 static Helper.YesNoSelectorDatasource datasource = new Helper.YesNoSelectorDatasource();
-                                
+
                 public DropDownListForYesNoSelect(string ID, bool PlcTextValue, float top, float left, double size, float fontSize, bool selfUpdatable, bool widemode)
                     : base(datasource, ID, PlcTextValue.ToString(), top, left, size, fontSize, selfUpdatable, widemode)
                 {
                     Ctor();
                 }
-                               
+
                 void Ctor()
                 {
                     DataSource = datasource;
@@ -1506,7 +1506,169 @@ namespace WebApplication1
                 }
             }
 
-           
+            public class LogMeIn : HtmlGenericControl
+            {
+
+                Label Title;
+                Label Usrnmlbl;
+                Label pwdlbl;
+                TextBox username;
+                TextBox password;
+                ButtonWithLabel OK;
+
+                Page page;
+                HttpSessionState session;
+
+                float fontSize;
+
+                GroupBox g = new GroupBox(0, 0, 100, 100);
+
+                List<WebControl> l = new List<WebControl>();
+
+                float top, left, width, height;
+
+                public LogMeIn(Page _thisPage, HttpSessionState session )
+                {
+                    top = 20;
+                    left = 27;
+
+                    this.session = session;
+                    this.page = _thisPage;
+
+                    fontSize = (top + left) / 40F;
+
+                    float lblLeft = 5;
+                    float lbltopoff = 12;
+
+                    float tbLeft = 18;
+                    float tbw = 40;
+                    float tbh = 8;
+
+                    float lblrow1 = 14;
+                    float lblrow2 = 22;
+                    float lbloffset = 2;
+
+
+                    this.ID = "LogInForm";
+
+                    width = 100 - (left * 2) - 10;
+                    height = 100 - top * 3;
+
+                    lblrow1 += lbltopoff;
+                    lblrow2 += tbh + lbltopoff;
+                    tbLeft += fontSize * 10 + lblLeft;
+
+                    SetControlAbsolutePos(this, top, left, width, height);
+
+                    //
+                    Title = new Label()
+                    {
+                        Text = "Za nadaljevanje se vpišite:"
+
+                    };
+                    l.Add(Title);
+                    SetControlAbsolutePos(l.Last(), lbltopoff, tbLeft - 2);
+                    l.Last().Style.Add(HtmlTextWriterStyle.FontWeight, "bold");
+
+                    //
+                    Usrnmlbl = new Label()
+                    {
+                        Text = "Uporabniško ime:"
+                    };
+                    l.Add(Usrnmlbl);
+                    SetControlAbsolutePos(l.Last(), lblrow1 + lbloffset, lblLeft);
+                    l.Last().Attributes.Add("autocomplete", "on");
+
+                    //
+                    pwdlbl = new Label()
+                    {
+                        Text = "Geslo:"
+                    };
+                    l.Add(pwdlbl);
+                    SetControlAbsolutePos(l.Last(), lblrow2 + lbloffset, lblLeft + fontSize * 10 + 2);
+
+                    //
+                    username = new TextBox()
+                    {
+                        ID = "usrField",
+                        TextMode = TextBoxMode.SingleLine
+                    };
+                    l.Add(username);
+                    SetControlAbsolutePos(l.Last(), lblrow1, tbLeft, tbw, tbh);
+
+                    //
+                    password = new TextBox()
+                    {
+                        ID = "pwdField",
+                        TextMode = TextBoxMode.Password
+                    };
+                    l.Add(password);
+                    SetControlAbsolutePos(l.Last(), lblrow2, tbLeft, tbw, tbh);
+
+
+                    //
+                    addToPage();
+                    Controls.Add(g);
+
+                    // scriptloader
+                    var sl = Helper.ScriptLoader.GetScriptLoaderInstance();
+                    if (sl != null)
+                    {
+                        sl.RegisterScriptOnPageLoad("FocusNextIfEnterKeyPressed", Val.FocusNextIfEnterKeyPressedScript); // MoveNext('TextBox1',event.keyCode) is defined here
+                    }
+
+                    // javascript on keypress - enter
+                    username.Attributes.Add("onkeydown", "return MoveNext('pwdField',event.keyCode);"); // method defined in FocusNextIfEnterKeyPressed.js file
+
+                }
+
+                void addToPage()
+                {
+                    foreach (var item in l)
+                    {
+                        item.Style.Add(HtmlTextWriterStyle.FontSize, Helper.FloatToStringWeb(fontSize, "vw"));
+                        g.Controls.Add(item);
+                    }
+
+
+                    // OK button
+                    OK = new ButtonWithLabel("Vpis", 20, fontSize);
+
+                    OK.button.Click += Button_Click;
+                    SetControlAbsolutePos(OK, 60, 40);
+                    g.Controls.Add(OK);
+                }
+
+                private void Button_Click(object sender, ImageClickEventArgs e)
+                {
+                    SysLog.Message.SetMessage("Login try:"); // todo log ip and other data
+
+                    try
+                    {
+                        Helper.UserData.UserCheckStatus valid;
+
+                        var ok = Helper.UserData.ConfirmUsername(
+                            out valid,
+                            ((TextBox)FindControl("usrField")).Text,
+                            ((TextBox)FindControl("pwdField")).Text);
+
+                        if (ok)
+                        {
+                            session[Helper.ViewStateElement_LoggedIn] = Val.LoggingIn;
+                            Helper.Redirect("default", page);
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        SysLog.Message.SetMessage("Authentication error - General. " + ex.Message);
+                    }
+
+                }
+
+
+            }
+
         }
     }
 }

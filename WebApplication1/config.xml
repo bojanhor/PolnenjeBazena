@@ -114,10 +114,13 @@
     //
 	<EnableChart_Svetlost>True</EnableChart_Svetlost>									// Enables chart in ChartGraph (Zunanja osvetljenost)
 	<EnableChart_Padavine>True</EnableChart_Padavine>									// Enables chart in ChartGraph (Količina padavin)
-	<EnableChart_Tzunanja>False</EnableChart_Tzunanja>									// Enables chart in ChartGraph (Temperatura zunaj)
-	<EnableChart_Tnotranja>False</EnableChart_Tnotranja>									// Enables chart in ChartGraph (Temperatura znotraj)
+	<EnableChart_Tzunanja>True</EnableChart_Tzunanja>									// Enables chart in ChartGraph (Temperatura zunaj)
+	<EnableChart_Tnotranja>True</EnableChart_Tnotranja>									// Enables chart in ChartGraph (Temperatura znotraj)
 	<ShowChartMode>0</ShowChartMode>													// Chart mode selector (1 - displays today; 2 - displays yesterday...)
-		</GUI>//
+      //
+      <VremeWidth>100</VremeWidth>                          // On page "Vreme" sets the default width off iframe limits 20-100%
+      <VremeLink>https://vreme.arso.gov.si/napoved/Letali%C5%A1%C4%8De%20Jo%C5%BEeta%20Pu%C4%8Dnika%20Ljubljana/graf/0</VremeLink> // On page "Vreme" sets the source of iframe
+    </GUI>//
 		//
 	<CONNECTION>//			
 	  <LOGO1>//
