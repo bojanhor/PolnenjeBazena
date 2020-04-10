@@ -49,7 +49,7 @@ namespace WebApplication1
 
             void Initialize()
             {
-                MainDiv = DIV.CreateDivAbsolute(0, 0, 100, 100, "%");
+                MainDiv = DIV.CreateDivAbsolute(0, 0, 100, 100, "%"); MainDiv.ID = "MainDiv1";
                 ChartTweaker ct1 = new ChartTweaker(thisPage, "Chart1", MainDiv, updatePanel); // Create 2 overlaying charts to prevent flicker
                 ChartTweaker ct2 = new ChartTweaker(thisPage, "Chart2", MainDiv, updatePanel);
             }
@@ -158,6 +158,7 @@ namespace WebApplication1
 
                 Font ChartFont;
                 readonly int leftSideChart_Steps = 10;
+                string ID;
 
                 // 
 
@@ -193,7 +194,8 @@ namespace WebApplication1
                 {
                     this.page = page;                    
                     this.MainDiv = MainDiv;
-                    this.UpdatePanel = UpdatePanel;         
+                    this.UpdatePanel = UpdatePanel;
+                    this.ID = chartID;
                     AddDataPoints();
                     Tweak();
                     Resize();
@@ -250,6 +252,7 @@ namespace WebApplication1
 
                 void Tweak()
                 {
+                    ChartGraph.ID = ID;
 
                     ChartGraph.Width = 4000;
                     ChartGraph.Height = 1500;

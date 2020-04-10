@@ -11,8 +11,8 @@ namespace WebApplication1.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Val.guiController.PageTest_ = new GuiController.PageTest(this, Session, TemplateClassID);
-            Helper.EveryPageProtocol("Testing Page", this, Session, TemplateClassID, false, false);
+            Val.guiController.PageLogin_ = new GuiController.PageLogin(this, Session, TemplateClassID);
+            Helper.EveryPageProtocol("Vpis", this, Session, TemplateClassID, false, true, false, false);
         }
     }
 }

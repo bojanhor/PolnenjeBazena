@@ -14,7 +14,7 @@ namespace WebApplication1
 
         public static readonly byte autoRefreshPageEvery_s = 0;       // refreshes page automatically every __ seconds ( use 0 to disable )
 
-        public static readonly int UpdateValuesPCms = 2000;          // Frekvenca osveževanja vrednosti
+        public static readonly int UpdateValuesPCms = 15000;          // Frekvenca osveževanja vrednosti
 
         public static readonly int Devices = 5;                      // how many devices supported (do not change)        
 
@@ -34,6 +34,12 @@ namespace WebApplication1
 
         public static readonly string pathToCustomJS = HttpRuntime.AppDomainAppPath + "CustomScripts\\"; // path to scripts folder
         
+        public static readonly string pathToConfigFileEncripted = "App_Data\\config.encripted";
+
+        public static readonly string pathToConfigFile = "App_Data\\config.cnfg";
+
+        public static readonly uint logFileMaxSizeKB = 4000;
+
         // less important (not very significant)
 
         public static int defaultCheckTimingInterval = 40;      // used for loops checking - lower value means higher precision timing

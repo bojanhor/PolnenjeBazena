@@ -59,7 +59,7 @@ namespace WebApplication1
             public class VrazaZaveseContent : HtmlGenericControl
             {
                 // left gb
-                GControls.ImageButtonWithID sett = new GControls.ImageButtonWithID(0);
+                GControls.ImageButtonWithID sett = new GControls.ImageButtonWithID("L_", 0);
                 GControls.ImageButtonWithID gor;
                 GControls.ImageButtonWithID dol;
                 GControls.ImageButtonWithID gorarw;
@@ -78,7 +78,7 @@ namespace WebApplication1
                 AsyncPostBackTrigger apbt = new AsyncPostBackTrigger();
                 
                 // right gb
-                GControls.ImageButtonWithID sett2 = new GControls.ImageButtonWithID(0);
+                GControls.ImageButtonWithID sett2 = new GControls.ImageButtonWithID("R_", 0);
                 GControls.ImageButtonWithID gor2;
                 GControls.ImageButtonWithID dol2;
                 GControls.ImageButtonWithID gorarw2;
@@ -201,12 +201,12 @@ namespace WebApplication1
                     var prop = Val.logocontroler.Prop3;
 
                     // left gb
-                    gor = new GControls.ImageButtonWithID(1);
-                    dol = new GControls.ImageButtonWithID(2);
-                    gorarw = new GControls.ImageButtonWithID(11);
-                    dolarw = new GControls.ImageButtonWithID(12);
-                    stop = new GControls.ImageButtonWithID(3);
-                    stoparw = new GControls.ImageButtonWithID(13);
+                    gor = new GControls.ImageButtonWithID(11);
+                    dol = new GControls.ImageButtonWithID(12);
+                    gorarw = new GControls.ImageButtonWithID(111);
+                    dolarw = new GControls.ImageButtonWithID(112);
+                    stop = new GControls.ImageButtonWithID(13);
+                    stoparw = new GControls.ImageButtonWithID(113);
 
 
 
@@ -222,12 +222,12 @@ namespace WebApplication1
 
 
                     // right gb
-                    gor2 = new GControls.ImageButtonWithID(1);
-                    dol2 = new GControls.ImageButtonWithID(2);
-                    gorarw2 = new GControls.ImageButtonWithID(11);
-                    dolarw2 = new GControls.ImageButtonWithID(12);
-                    stop2 = new GControls.ImageButtonWithID(3);
-                    stoparw2 = new GControls.ImageButtonWithID(13);
+                    gor2 = new GControls.ImageButtonWithID(21);
+                    dol2 = new GControls.ImageButtonWithID(22);
+                    gorarw2 = new GControls.ImageButtonWithID(211);
+                    dolarw2 = new GControls.ImageButtonWithID(212);
+                    stop2 = new GControls.ImageButtonWithID(23);
+                    stoparw2 = new GControls.ImageButtonWithID(213);
 
                     gb2 = new GControls.GroupBox(19, 51, 43, 70);
 

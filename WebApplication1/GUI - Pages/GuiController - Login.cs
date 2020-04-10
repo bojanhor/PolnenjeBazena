@@ -11,13 +11,13 @@ namespace WebApplication1
     public partial class GuiController
     {
 
-        public class PageTest : Dsps
+        public class PageLogin : Dsps
         {
             HtmlGenericControl TemplateClassID;
             Page thisPage;
             System.Web.SessionState.HttpSessionState session;
 
-            public PageTest(Page _thisPage, System.Web.SessionState.HttpSessionState session, HtmlGenericControl TemplateClass)
+            public PageLogin(Page _thisPage, System.Web.SessionState.HttpSessionState session, HtmlGenericControl TemplateClass)
             {
                 this.thisPage = _thisPage;
                 this.session = session;

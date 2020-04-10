@@ -66,25 +66,27 @@ namespace WebApplication1
                     Environment.NewLine;
             }
 
-            public static void CreateBackground(Page thisPage, HtmlGenericControl TemplateClassID, bool hasLogo)
+            public static void CreateBackground(Page thisPage, HtmlGenericControl TemplateClassID, bool hasLogo, bool hasHomeBtn)
             {
                 try
                 {
-                    var div = DIV.CreateDivAbsolute("0.5%", "75%", "3.5%", "auto", "10");
-                    HomeBtn.Attributes.Add("id", "HomeBtnID");
-                    HomeBtn.ImageUrl = "~/Pictures/domov.png";
-                    HomeBtn.Style.Add(HtmlTextWriterStyle.Position, "absolute");
-                    HomeBtn.Style.Add(HtmlTextWriterStyle.Width, "100%");
-                    HomeBtn.Style.Add(HtmlTextWriterStyle.Height, "auto");
-                    HomeBtn.Click += (sender, e) => HomeBtn_Click(sender, e, thisPage);
+                    if (hasHomeBtn)
+                    {
+                        var div = DIV.CreateDivAbsolute("0.5%", "75%", "3.5%", "auto", "10");
+                        HomeBtn.Attributes.Add("id", "HomeBtnID");
+                        HomeBtn.ImageUrl = "~/Pictures/domov.png";
+                        HomeBtn.Style.Add(HtmlTextWriterStyle.Position, "absolute");
+                        HomeBtn.Style.Add(HtmlTextWriterStyle.Width, "100%");
+                        HomeBtn.Style.Add(HtmlTextWriterStyle.Height, "auto");
+                        HomeBtn.Click += (sender, e) => HomeBtn_Click(sender, e, thisPage);
 
-                    div.Controls.Add(HomeBtn);
-                    TemplateClassID.Controls.Add(div);
+                        div.Controls.Add(HomeBtn);
+                        TemplateClassID.Controls.Add(div);
+                    }                   
+                    
                     TemplateImage.Attributes.Add("id", "BackGroundPic");
 
-                    MenuBtn.Click += (sender, e) => MenuBtn_Click(sender, e, thisPage);
                     
-
                     if (hasLogo)
                     {
                         TemplateImage.ImageUrl = "~/Pictures/TemplateImage.png";
@@ -164,7 +166,7 @@ namespace WebApplication1
 
             private void PrevButton_Click(object sender, ImageClickEventArgs e, System.Web.SessionState.HttpSessionState session, Page thisPage)
             {                
-                Helper.RedirectBack(session, thisPage);
+                Helper.RedirectBack();
             }
 
             public void CreateMenu(Page _thispage, HtmlGenericControl TemplateClassID)
@@ -220,14 +222,12 @@ namespace WebApplication1
                 MenuBtn.Style.Add("position", "absolute");
                 MenuBtn.Style.Add("width", "100%");
                 MenuBtn.Style.Add("height", "100%");
-
+                MenuBtn.Click += (sender, e) => MenuBtn_Click(sender, e, _thispage);
                 //
-
-
+                
 
                 TemplateClassID.Controls.Add(MenuBtnMaster);
-                MenuBtnMaster.Controls.Add(MenuBtn);
-
+                MenuBtnMaster.Controls.Add(MenuBtn);               
 
                 TemplateClassID.Controls.Add(MenuContent);
 

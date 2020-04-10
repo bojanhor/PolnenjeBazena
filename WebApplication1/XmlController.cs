@@ -7,6 +7,7 @@ using System.Net;
 using System.IO;
 using System.Text;
 using System.Security;
+using System.Xml;
 
 namespace WebApplication1
 {
@@ -14,9 +15,8 @@ namespace WebApplication1
     {
 
         public static string BaseDirectoryPath = "";
-        private static string XML;
         static int? howManyLucIconsBuff = null;
-        
+        static string XmlEncriptedPath;
         static bool forceRefresh = false;
 
         public static bool XmlControllerInitialized = false;
@@ -115,38 +115,156 @@ namespace WebApplication1
             }
         }
 
-        private static XDocument LoadXML()
-        {            
-            var doc = XDocument.Load(XML, LoadOptions.None);            
-            return doc;
+
+        private static XDocument LoadNotEncriptedXML(string XmlPath)
+        {
+            try
+            {
+                string read;
+
+                using (StreamReader s = new StreamReader(XmlPath))
+                {
+                    read = s.ReadToEnd();
+                }
+
+                return XDocument.Parse(read);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error loading xml from file (before encription): " + ex.Message);
+            }
+        }
+
+        public static string DownloadConfigFile()
+        {
+            try
+            {
+                string read;
+
+                using (StreamReader s = new StreamReader(XmlEncriptedPath))
+                {
+                    read = s.ReadToEnd();
+                }
+
+                return XmlEncription.Decrypt(read);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error loading xml from encripted file: " + ex.Message);
+            }
+        }
+
+        public static void UploadConfigFile()
+        {
+
+        }
+
+        private static XDocument LoadAndDecriptXml()
+        {
+            try
+            {
+                string read;
+
+                using (StreamReader s = new StreamReader(XmlEncriptedPath))
+                {
+                    read = s.ReadToEnd();
+                }
+
+                var decripted = XmlEncription.Decrypt(read);
+
+                return XDocument.Parse(decripted, LoadOptions.PreserveWhitespace);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error loading xml from encripted file: " + ex.Message);
+            }
+
         }
 
         public static void SaveXML(string newContent)
         {
             try
             {
-                StreamWriter s = new StreamWriter(XML, false, Encoding.UTF8);
-                s.Write(Settings.XmlDeclaration + Environment.NewLine + newContent);
+                var encriptedText = XmlEncription.Encrypt(Settings.XmlDeclaration + newContent);
+                StreamWriter s = new StreamWriter(XmlEncriptedPath, false, Encoding.UTF8);
+                s.Write(Environment.NewLine + encriptedText);
                 s.Flush();
                 s.Dispose();
             }
             catch (Exception ex)
             {
-                var message = "Problem saving XML File." + ex.Message;
+                var message = "Problem saving excripted XML File." + ex.Message;
                 Helper.MessageBox(message);
                 throw new Exception(message);
             }
-            
-        }        
+
+        }
+
+        static string encriptXML(string text)
+        {
+            return XmlEncription.Encrypt(text);
+        }
+
+        static string decriptXML(string text)
+        {
+            return XmlEncription.Decrypt(text);
+        }
+
+        static void FindFileAndEncript()
+        {
+            XmlEncriptedPath = BaseDirectoryPath + Settings.pathToConfigFileEncripted;
+            string XmlPath;
+
+            if (!File.Exists(XmlEncriptedPath)) // If encripted config file exists program will use it directly
+            {
+                // Encripted config file is not found, try finding raw file in published folder
+                XmlPath = BaseDirectoryPath + Settings.pathToConfigFile;
+                if (!File.Exists(XmlPath))
+                {
+                    throw new Exception("Config file was not found.");
+                }
+
+                FileEncript(XmlPath);
+            }
+                        
+
+        }
+
+        static void FileEncript(string XmlPath)
+        {
+            string xmlText;
+            string encriptedText;
+
+            try
+            {
+                xmlText = LoadNotEncriptedXML(XmlPath).ToString();
+                encriptedText = encriptXML(xmlText);
+
+                using (StreamWriter s = new StreamWriter(XmlEncriptedPath))
+                {
+                    s.Write(encriptedText);
+                    s.Flush();
+                    s.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Config file encription failed: " + ex.Message);
+            }
+
+
+        }
 
         public static void XmlControllerInitialize()
         {
             try
             {
-                BaseDirectoryPath = AppDomain.CurrentDomain.BaseDirectory; // get XML path
-                XML = BaseDirectoryPath + "config.xml";
+                BaseDirectoryPath = AppDomain.CurrentDomain.BaseDirectory; // get XML path                
 
-                XmlFile = LoadXML();
+                FindFileAndEncript();
+
+                XmlFile = LoadAndDecriptXml();
                 SetClass();
 
                 Misc.SmartThread refresher = new Misc.SmartThread(() => Refresher_Thread());
@@ -156,7 +274,7 @@ namespace WebApplication1
             catch (Exception e)
             {
                 var message = "Method XmlController() encountered an error with configuration file. " +
-                    "Please copy proper xml file inside application folder and name it: config.xml. Error description:" + e.Message;
+                    "Please copy proper xml file inside Config folder and name it: config.cnfg. Error description:" + e.Message;
                 Helper.MessageBox(message);
                 throw new Exception(message);
             }
@@ -167,6 +285,8 @@ namespace WebApplication1
         {
             DateTime dt1;
             XDocument newXml;
+
+
             while (true)
             {
                 try
@@ -175,13 +295,13 @@ namespace WebApplication1
 
                     try
                     {
-                        newXml = LoadXML();
+                        newXml = LoadAndDecriptXml();
                     }
                     catch (Exception ex)
                     {
                         throw new Exception("Error loading XML file: " + ex.Message);
                     }
-                   
+
 
                     if (newXml.Element("root").Value != XmlFile.Element("root").Value)
                     {
@@ -195,7 +315,7 @@ namespace WebApplication1
                         System.Threading.Thread.Sleep(Settings.defaultCheckTimingInterval);
 
                         if (forceRefresh)  // periodically check for force refresh flag
-                        {                           
+                        {
                             break;
                         }
                     }
@@ -209,6 +329,8 @@ namespace WebApplication1
 
             }
         }
+
+
 
         static void RefreshCache(XDocument FreshLoadedXML)
         {
@@ -235,13 +357,13 @@ namespace WebApplication1
             {
                 System.Threading.Thread.Sleep(Settings.defaultCheckTimingInterval);
             }
-        }      
+        }
 
         private static void SetClass()
         {
             try
             {
-                
+
                 XmlGeneral = XmlFile.Element("root").Element("GENERAL");
                 XmlGUI = XmlFile.Element("root").Element("GUI");
                 XmlConn = XmlFile.Element("root").Element("CONNECTION");
@@ -249,14 +371,14 @@ namespace WebApplication1
                 XmlStat = XmlFile.Element("root").Element("STATS");
             }
 
-            catch (Exception )
+            catch (Exception)
             {
-                throw ;
+                throw;
             }
         }
 
         // PUBLIC
-                
+
         public static IPAddress GetLogoIP(int n)
         {
             if (n < 0 || n > Settings.Devices)
@@ -276,7 +398,7 @@ namespace WebApplication1
                 else
                 {
                     throw new Exception("IP addres in config file is not valid IP. " +
-                        "Correct the IP address in config.xml file at LOGO" + n + " entry");
+                        "Correct the IP address in config.cnfg file at LOGO" + n + " entry");
                 }
             }
             catch (Exception)
@@ -300,15 +422,15 @@ namespace WebApplication1
                 if (LocalTSAP.Length != 5 && !LocalTSAP.Contains("."))
                 {
                     throw new Exception("LocalTSAP addres in config file is not valid LocalTSAP. " +
-                        "Correct the LocalTSAP address in config.xml file at LOGO" + n + " entry. format must be ##.## (03.00).");
+                        "Correct the LocalTSAP address in config.cnfg file at LOGO" + n + " entry. format must be ##.## (03.00).");
                 }
 
                 return LocalTSAP;
 
             }
-            catch (Exception )
+            catch (Exception)
             {
-                throw ;
+                throw;
             }
         }
 
@@ -326,15 +448,15 @@ namespace WebApplication1
                 if (RemoteTSAP.Length != 5 && !RemoteTSAP.Contains("."))
                 {
                     throw new Exception("remoteTSAP addres in config file is not valid remoteTSAP. " +
-                        "Correct the remoteTSAP address in config.xml file at LOGO" + n + " entry. format must be ##.## (02.00).");
+                        "Correct the remoteTSAP address in config.cnfg file at LOGO" + n + " entry. format must be ##.## (02.00).");
                 }
 
                 return RemoteTSAP;
 
             }
-            catch (Exception )
+            catch (Exception)
             {
-                throw ;
+                throw;
             }
         }
 
@@ -375,7 +497,7 @@ namespace WebApplication1
             {
                 throw new Exception(
                     "watchdogAddress value in config file is not valid watchdogAddress. " +
-                    "Correct the watchdogAddress value in config.xml file at LOGO" + device + " entry. " +
+                    "Correct the watchdogAddress value in config.cnfg file at LOGO" + device + " entry. " +
                     "format must be 300.");
             }
         }
@@ -400,7 +522,7 @@ namespace WebApplication1
 
                 throw new Exception(
                     "enabled value in config file is not valid enabled value. " +
-                    "Correct the enabled value in config.xml file: at LOGO" + device + " entry. " +
+                    "Correct the enabled value in config.cnfg file: at LOGO" + device + " entry. " +
                     "format must be true ore false.");
             }
 
@@ -424,7 +546,7 @@ namespace WebApplication1
 
                 throw new Exception(
                     "ReadWriteCycle value in config file is not valid ReadWriteCycle value. " +
-                    "Correct the ReadWriteCycle value in config.xml file at LOGO" + device + " entry. " +
+                    "Correct the ReadWriteCycle value in config.cnfg file at LOGO" + device + " entry. " +
                     "format must be number (example: 500).");
             }
 
@@ -443,7 +565,7 @@ namespace WebApplication1
 
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                     "format must be number (example: 3).");
             }
 
@@ -467,7 +589,7 @@ namespace WebApplication1
 
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                     "format must be number (example: 3) - min value 1, max value 25.");
             }
 
@@ -491,7 +613,7 @@ namespace WebApplication1
 
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                     "format must be number (example: 3) - min value 1, max value 25.");
             }
 
@@ -510,7 +632,7 @@ namespace WebApplication1
 
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                     "format must be number (example: 3).");
             }
 
@@ -534,7 +656,7 @@ namespace WebApplication1
 
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                     "format must be number (example: 3) - min value 1, max value 25.");
             }
 
@@ -553,7 +675,7 @@ namespace WebApplication1
 
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                     "format must be number (example: 3) - min value 1, max value 25.");
             }
 
@@ -572,7 +694,7 @@ namespace WebApplication1
 
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                     "format must be number (example: 3) - min value 1, max value 25.");
             }
 
@@ -607,7 +729,7 @@ namespace WebApplication1
 
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                 "format must be #;#;#; .  Example: 50;50;5;");
             }
 
@@ -633,7 +755,7 @@ namespace WebApplication1
 
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                     "format must be profinet bit adress (example: 10.0) - min value 1, max value 800.");
             }
 
@@ -656,7 +778,7 @@ namespace WebApplication1
             {
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                     "format must be profinet bit adress (example: 10.0) - min value 1, max value 800.");
             }
 
@@ -664,13 +786,13 @@ namespace WebApplication1
 
         public static int GetHowManyLucIcons()
         {
-            int cnt = 0;          
+            int cnt = 0;
             var prefix = "PositionLuc";
             string buff;
             var searchValue = "";
             var arr = new string[3];
             Helper.Position pos = new Helper.Position();
-                       
+
             try
             {
                 if (howManyLucIconsBuff != null)
@@ -678,9 +800,9 @@ namespace WebApplication1
                     if (howManyLucIconsBuff > 0)
                     {
                         return (int)howManyLucIconsBuff; // get value from buffer
-                    }                    
+                    }
                 }
-                
+
                 for (int i = 1; i <= 12; i++) // scan 12 items
                 {
                     searchValue = prefix + i;
@@ -703,12 +825,12 @@ namespace WebApplication1
 
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                 "format must be #;#;#; .  Example: 50;50;5;");
             }
 
             return cnt; // returns number of items that have size greater than 0
-                        
+
         }
 
         public static string GetDeviceName(int index)
@@ -727,7 +849,7 @@ namespace WebApplication1
             {
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                     "format must be number (example: 3) - min value 1, max value  " + Settings.Devices + ". " + "Exception message: " + ex.Message);
             }
         }
@@ -748,7 +870,7 @@ namespace WebApplication1
             {
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                     "format must be number (example: 3) - min value 1, max value " + Settings.Devices + ". " + "Exception message: " + ex.Message);
             }
         }
@@ -771,7 +893,7 @@ namespace WebApplication1
 
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                     "value must be \"true\" or \"false\"");
             }
 
@@ -796,7 +918,7 @@ namespace WebApplication1
 
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                     "value must be \"true\" or \"false\"");
             }
 
@@ -808,14 +930,14 @@ namespace WebApplication1
             var searchValue = "EnableChart_Svetlost";
 
             try
-            {                
+            {
                 return Convert.ToBoolean(XmlGUI.Element(searchValue).Value);
             }
             catch (Exception)
             {
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                     "value must be \"true\" or \"false\"");
             }
         }
@@ -832,7 +954,7 @@ namespace WebApplication1
             {
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                     "value must be \"true\" or \"false\"");
             }
         }
@@ -849,7 +971,7 @@ namespace WebApplication1
             {
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                     "value must be \"true\" or \"false\"");
             }
         }
@@ -866,12 +988,12 @@ namespace WebApplication1
             {
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                     "value must be \"true\" or \"false\"");
             }
         }
 
-        public static void SetEnableCharts_Svetlost(bool value) 
+        public static void SetEnableCharts_Svetlost(bool value)
         {
             var searchValue = "EnableChart_Svetlost";
 
@@ -889,7 +1011,7 @@ namespace WebApplication1
 
         }
 
-        public static void SetEnableCharts_Padavine(bool value) 
+        public static void SetEnableCharts_Padavine(bool value)
         {
             var searchValue = "EnableChart_Padavine";
 
@@ -907,7 +1029,7 @@ namespace WebApplication1
 
         }
 
-        public static void SetEnableCharts_Tzunanja(bool value) 
+        public static void SetEnableCharts_Tzunanja(bool value)
         {
             var searchValue = "EnableChart_Tzunanja";
 
@@ -925,7 +1047,7 @@ namespace WebApplication1
 
         }
 
-        public static void SetEnableCharts_Tnotranja(bool value) 
+        public static void SetEnableCharts_Tnotranja(bool value)
         {
             var searchValue = "EnableChart_Tnotranja";
 
@@ -938,11 +1060,11 @@ namespace WebApplication1
             catch (Exception ex)
             {
                 throw new Exception(
-                    "Error while setting value: "+ searchValue + ". Error info: " + ex.Message);
+                    "Error while setting value: " + searchValue + ". Error info: " + ex.Message);
             }
 
         }
-                
+
         public static int GetShowChartMode()
         {
             var searchValue = "ShowChartMode";
@@ -950,7 +1072,7 @@ namespace WebApplication1
             try
             {
                 var buff = Convert.ToInt32(XmlGUI.Element(searchValue).Value);
-                if (buff >10 || buff < 0)
+                if (buff > 10 || buff < 0)
                 {
                     throw new Exception();
                 }
@@ -960,7 +1082,7 @@ namespace WebApplication1
             {
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                     "value must be between 0 and 10");
             }
         }
@@ -999,7 +1121,7 @@ namespace WebApplication1
             {
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                     "value must be between 20 and 100");
             }
         }
@@ -1027,7 +1149,7 @@ namespace WebApplication1
             {
                 throw new Exception(
                     searchValue + " value in config file is not valid " + searchValue + " value. " +
-                    "Correct the " + searchValue + " value in config.xml file at GUI entry. " +
+                    "Correct the " + searchValue + " value in config.cnfg file at GUI entry. " +
                     "value must be valid link to internet page");
             }
         }
@@ -1053,7 +1175,7 @@ namespace WebApplication1
                 }
 
                 return de;
-               
+
             }
             catch (Exception)
             {

@@ -24,6 +24,17 @@ namespace WebApplication1
 
            
         }
-        
+
+        // Handle all application errors
+        void Application_Error(object sender, EventArgs e)
+        {
+            Exception exc = Server.GetLastError();
+
+            SysLog.Message.SetMessage(exc.Message + " " + exc.InnerException.Message + " " + exc.StackTrace);
+
+            Helper.RedirectBack();
+
+        }
+
     }
 }

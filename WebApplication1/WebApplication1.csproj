@@ -126,9 +126,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="config.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -158,8 +155,9 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="App_Data\config.cnfg" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
-    <Content Include="Pages\test.aspx" />
+    <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\Vrata_Zavese.aspx" />
     <Content Include="Pages\Ventilacija.aspx" />
     <Content Include="Pictures\alert.png">
@@ -443,7 +441,6 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
-    <Content Include="TemplateImage.png" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -453,6 +450,7 @@
     </None>
     <None Include="web.Release.config">
       <DependentUpon>web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -461,7 +459,7 @@
     <Compile Include="ChartValues\ChartValuesLogger.cs" />
     <Compile Include="GlobalManagement.cs" />
     <Compile Include="GUI - Controls\Dispose.cs" />
-    <Compile Include="GUI - Pages\GuiController - Test.cs" />
+    <Compile Include="GUI - Pages\GuiController - Login.cs" />
     <Compile Include="GUI - Pages\GuiController - PageLogView.cs" />
     <Compile Include="GUI - Pages\GuiController - PageEditor.cs" />
     <Compile Include="GUI - Pages\GuiController - PagePadavine.cs" />
@@ -560,12 +558,12 @@
     <Compile Include="LogoControl\LogoControl.cs" />
     <Compile Include="LogoControl\MiscMethods.cs" />
     <Compile Include="LogoControl\Sharp7.cs" />
-    <Compile Include="Pages\test.aspx.cs">
-      <DependentUpon>test.aspx</DependentUpon>
+    <Compile Include="Pages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\test.aspx.designer.cs">
-      <DependentUpon>test.aspx</DependentUpon>
+    <Compile Include="Pages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="SysLog.cs" />
     <Compile Include="XmlController.cs" />
@@ -629,9 +627,9 @@
     <Compile Include="Pages\Advanced.aspx.designer.cs">
       <DependentUpon>Advanced.aspx</DependentUpon>
     </Compile>
+    <Compile Include="XmlEncription.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="App_LocalResources\" />
     <Folder Include="App_Start\App_LocalResources\" />
   </ItemGroup>

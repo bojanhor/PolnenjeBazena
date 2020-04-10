@@ -80,7 +80,6 @@ namespace WebApplication1
 
                 public Luc(int _btnID)
                 {
-
                     try
                     {
                         button = new LucBtn(this, _btnID);
@@ -250,6 +249,7 @@ namespace WebApplication1
                 public int btnID;
 
                 public LucBtn(HtmlGenericControl ParentControl_, int btnID_)
+                    : base("btnt_" + btnID_)
                 {
                     ParentControl = ParentControl_;
                     btnID = btnID_;
@@ -258,9 +258,10 @@ namespace WebApplication1
 
             public class TransparentButton : ImageButton
             {
-                public TransparentButton()
+                public TransparentButton(string ID)
                 {
                     this.ImageUrl = "~/Pictures/TransparentPixel.png";
+                    this.ID = ID;
 
                 }
             }
@@ -269,9 +270,20 @@ namespace WebApplication1
             {
                 public int btnID;
 
-                public ImageButtonWithID(int btnID_)
+                public ImageButtonWithID( int btnID_)
+                {
+                    ctor("", btnID_);
+                }
+
+                public ImageButtonWithID(string ID_prefix, int btnID_)
+                {
+                    ctor(ID_prefix, btnID_);
+                }
+
+                void ctor(string ID_prefix, int btnID_)
                 {
                     btnID = btnID_;
+                    this.ID = ID_prefix + btnID;
                 }
             }
 
@@ -377,7 +389,7 @@ namespace WebApplication1
                 {
                     try
                     {
-                        button = new ImageButtonWithID(_btnID);
+                        button = new ImageButtonWithID(description.Replace(" ", ""), _btnID);
 
                         TagName = "div";
                         button.Style.Add(HtmlTextWriterStyle.Position, "absolute");
@@ -389,7 +401,7 @@ namespace WebApplication1
                         position = position_;
 
                         btnID = _btnID;
-                        ID = description.Replace(" ", "") + btnID;
+                        this.ID = description.Replace(" ", "") + "_btn" +btnID;                        
 
                         Top = position.top.ToString().Replace(",", ".");
                         Left = position.left.ToString().Replace(",", ".");
@@ -491,13 +503,24 @@ namespace WebApplication1
 
             public class ButtonWithLabel : HtmlGenericControl
             {
-                public TransparentButton button = new TransparentButton();
+                public TransparentButton button;
                 public Image Image = new Image();
                 public Label l = new Label();
-                readonly string _text;
+                string _text;
+
+                public ButtonWithLabel(string ID_prefix, string text, float size, float FontSize)
+                {
+                    ctor(ID_prefix,  text,  size, FontSize);
+                }
 
                 public ButtonWithLabel(string text, float size, float FontSize)
                 {
+                    ctor("", text, size, FontSize);
+                }
+
+                void ctor(string ID_prefix, string text, float size, float FontSize)
+                {
+                    button = new TransparentButton(ID_prefix + text.Replace(" ", ""));
                     _text = text;
                     Image.ImageUrl = "~/Pictures/EmptyBtn.png";
                     SetControlAbsolutePos(Image, 0, 0, 100, 100);
@@ -529,7 +552,7 @@ namespace WebApplication1
                     }
                 }
 
-                public TransparentButton button = new TransparentButton();
+                public TransparentButton button;
                 SubMenuSelect submenu;
                 public Image Image = new Image();
                 public Label l = new Label();
@@ -539,6 +562,7 @@ namespace WebApplication1
 
                 public ButtonWithLabel_SelectMenu(string Name, Helper.Datasource dataSource, string ID, string text, float FontSize, Timer updateTimer, bool wideMode)
                 {
+                    button = new TransparentButton("menu_" + Name.Replace(" ", "") + "_" + ID);
                     Ctor(Name, dataSource, ID, text, FontSize, updateTimer, wideMode);
                 }
 
@@ -631,6 +655,7 @@ namespace WebApplication1
 
                         exitButton = new ImageButton()
                         {
+                            ID = "btnExit_s_" + ID,
                             ImageUrl = "~/Pictures/exit.png",
                             Width = Unit.Percentage(5)
                         };
@@ -641,7 +666,7 @@ namespace WebApplication1
                         Controls.Add(exitButton);
 
                         // Save btn
-                        saveBtn = new ButtonWithLabel("Shrani", 30, 1.5F);
+                        saveBtn = new ButtonWithLabel("btnSave" + ID, "Shrani", 30, 1.5F);
                         SetControlAbsolutePos(saveBtn, 65, 36);
 
                         Controls.Add(saveBtn);
@@ -731,10 +756,13 @@ namespace WebApplication1
                     {
                         TitleNameLabel = new Label()
                         {
-                            Text = NameLable
+                            Text = NameLable                            
                         };
 
-                        SetControlAbsolutePos(TitleNameLabel, 5, 3, 50, 15);
+                        TitleNameLabel.Style.Add(HtmlTextWriterStyle.FontSize, "1vw");
+                        TitleNameLabel.Style.Add(HtmlTextWriterStyle.FontWeight, "bold");
+
+                        SetControlAbsolutePos(TitleNameLabel, 7, 5, 50, 15);
                         Controls.Add(TitleNameLabel);
                     }
 
@@ -897,11 +925,15 @@ namespace WebApplication1
 
             public class GroupBox : HtmlGenericControl
             {
+                public GroupBox(string ID, int top, int left, int width, int height)
+                {
+                    this.ID = ID;
+                    SubPanelFitGroupbox(this, top, left, width, height);
+                }
 
                 public GroupBox(int top, int left, int width, int height)
                 {
                     SubPanelFitGroupbox(this, top, left, width, height);
-
                 }
 
                 public GroupBox(string top, string left, string width, string height)
@@ -1073,7 +1105,7 @@ namespace WebApplication1
 
             public class SuperLabel : HtmlGenericControl
             {
-                public Label lable = new Label();
+                public Label label = new Label();
 
                 public float Top { get; private set; }
                 public float Left { get; private set; }
@@ -1090,8 +1122,8 @@ namespace WebApplication1
 
                     set
                     {
-                        lable.Style.Remove(HtmlTextWriterStyle.FontSize);
-                        lable.Style.Add(HtmlTextWriterStyle.FontSize, Helper.FloatToStringWeb(value, "vw"));
+                        label.Style.Remove(HtmlTextWriterStyle.FontSize);
+                        label.Style.Add(HtmlTextWriterStyle.FontSize, Helper.FloatToStringWeb(value, "vw"));
                         fontSize = value;
                     }
 
@@ -1110,11 +1142,11 @@ namespace WebApplication1
                         fontWeightBold = value;
                         if (value)
                         {
-                            lable.Style.Add(HtmlTextWriterStyle.FontWeight, "bold");
+                            label.Style.Add(HtmlTextWriterStyle.FontWeight, "bold");
                         }
                         else
                         {
-                            lable.Style.Remove(HtmlTextWriterStyle.FontWeight);
+                            label.Style.Remove(HtmlTextWriterStyle.FontWeight);
                         }
                     }
 
@@ -1136,17 +1168,18 @@ namespace WebApplication1
 
                 public SuperLabel(string text, float top, float left, float width, float height)
                 {
-                    lable.Text = text;
+                    
+                    label.Text = text;
                     Top = top;
                     Left = left;
                     Width = width;
                     Height = height;
 
-                    lable.Style.Add("top", "0");
-                    lable.Style.Add("left", "0");
-                    lable.Width = Unit.Percentage(100);
-                    lable.Height = Unit.Percentage(100);
-                    lable.Style.Add(HtmlTextWriterStyle.Position, "absolute");
+                    label.Style.Add("top", "0");
+                    label.Style.Add("left", "0");
+                    label.Width = Unit.Percentage(100);
+                    label.Height = Unit.Percentage(100);
+                    label.Style.Add(HtmlTextWriterStyle.Position, "absolute");
 
                     Style.Add(HtmlTextWriterStyle.Position, "absolute");
                     Style.Add(HtmlTextWriterStyle.Top, Helper.FloatToStringWeb(top, "%"));
@@ -1154,14 +1187,14 @@ namespace WebApplication1
                     Style.Add(HtmlTextWriterStyle.Width, Helper.FloatToStringWeb(width, "%"));
                     Style.Add(HtmlTextWriterStyle.Height, Helper.FloatToStringWeb(height, "%"));
 
-                    Controls.Add(lable);
+                    Controls.Add(label);
                 }
 
                 public void CenterLabel()
                 {
-                    lable.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
+                    label.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
                 }
-
+                                
             }
 
             public class DropDown : HtmlGenericControl
@@ -1212,26 +1245,25 @@ namespace WebApplication1
                 UpdatePanelTriggerCollection triggers;
                 AsyncPostBackTrigger trigger;
                 Timer UpdateTimer;
-
-
-                public DropDown(Helper.Datasource dataSource, string ID, string PlcTextValue, float size, float fontSize, bool selfUpdatable)
+                               
+                public DropDown(string LableTitle, Helper.Datasource dataSource, string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
                 {
-                    DataSource = dataSource;
-                    SetDropdown(ID, PlcTextValue, size, fontSize, selfUpdatable, false);
+                    SetDropdown(LableTitle, dataSource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, wideMode);
                 }
 
-                public DropDown(Helper.Datasource dataSource, string ID, string PlcTextValue, float top, float left, double size, float fontSize, bool selfUpdatable, bool wideMode)
+                public DropDown(Helper.Datasource dataSource, string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
                 {
-                    DataSource = dataSource;
-                    Style.Add("top", Helper.FloatToStringWeb(top, "%"));
-                    Style.Add("left", Helper.FloatToStringWeb(left, "%"));
-                    SetDropdown(ID, PlcTextValue, (float)size, fontSize, selfUpdatable, wideMode);
+                    SetDropdown("", dataSource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, wideMode);
                 }
 
-                void SetDropdown(string ID, string PlcTextValue, float size, float fontSize, bool selfUpdatable, bool wideMode)
+                void SetDropdown(string LableTitle, Helper.Datasource dataSource, string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
                 {
 
                     this.ID = ID;
+
+                    DataSource = dataSource;
+                    Style.Add("top", Helper.FloatToStringWeb(top, "%"));
+                    Style.Add("left", Helper.FloatToStringWeb(left, "%"));                    
                     Style.Add("position", "absolute");
 
                     if (selfUpdatable)
@@ -1245,7 +1277,7 @@ namespace WebApplication1
 
                     try
                     {
-                        Button_Outside = new ButtonWithLabel_SelectMenu(Name, DataSource, ID + "_s", ManageSelectedItem(PlcTextValue), fontSize, UpdateTimer, wideMode)
+                        Button_Outside = new ButtonWithLabel_SelectMenu(LableTitle, DataSource, ID + "_s", ManageSelectedItem(PlcTextValue), fontSize, UpdateTimer, wideMode)
                         {
                             ID = ID + "_dd"
                         };
@@ -1359,7 +1391,7 @@ namespace WebApplication1
                 static Helper.ChartViewSelectorDatasource datasource = new Helper.ChartViewSelectorDatasource();
 
                 public DropDownListChartViewSelector(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable)
-                    : base(datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, true)
+                    : base("Izbor pogleda:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, true)
                 {
                     Ctor();
                 }
@@ -1384,18 +1416,31 @@ namespace WebApplication1
                 }
             }
 
-            public class DropDownListForDimmer : DropDown
+            public class DropDownListForDimmerLUX : DropDown
             {
                 static Helper.DimmerSelectorDatasource datasource = new Helper.DimmerSelectorDatasource();
 
-                public DropDownListForDimmer(string ID, string PlcTextValue, float size, float fontSize, bool selfUpdatable)
-                    : base(datasource, ID, PlcTextValue, size, fontSize, selfUpdatable)
+               
+                public DropDownListForDimmerLUX(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
+                    : base("Izberite Svetilnost:", datasource, ID,  PlcTextValue, top, left, size, fontSize, selfUpdatable, wideMode)
                 {
                     Ctor();
                 }
 
-                public DropDownListForDimmer(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
-                    : base(datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, wideMode)
+                void Ctor()
+                {
+                    DataSource = datasource;
+                    Button_Outside.DataBind();
+                }
+            }
+
+            public class DropDownListForDimmerRPM : DropDown
+            {
+                static Helper.DimmerSelectorDatasource datasource = new Helper.DimmerSelectorDatasource();
+
+                
+                public DropDownListForDimmerRPM(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
+                    : base("Izberite obrate:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, wideMode)
                 {
                     Ctor();
                 }
@@ -1411,8 +1456,8 @@ namespace WebApplication1
             {
                 static Helper.HisteresisSelectorDatasource datasource = new Helper.HisteresisSelectorDatasource();
 
-                public DropDownListForHisteresis(string ID, string PlcTextValue, float top, float left, double size, float fontSize, bool selfUpdatable, bool widemode)
-                    : base(datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
+                public DropDownListForHisteresis(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
+                    : base("Izberite histerezo:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
                 {
                     Ctor();
                 }
@@ -1428,7 +1473,7 @@ namespace WebApplication1
             {
                 static Helper.TimerSelectorDatasource datasource = new Helper.TimerSelectorDatasource(1, 30, 1, "s");
 
-                public DropDownListForTimer_1_30s(string ID, string PlcTextValue, float top, float left, double size, float fontSize, bool selfUpdatable, bool widemode)
+                public DropDownListForTimer_1_30s(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
                     : base(datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
                 {
                     Ctor();
@@ -1447,13 +1492,13 @@ namespace WebApplication1
                 static Helper.Temperature_10_30_SelectorDatasource datasource = new Helper.Temperature_10_30_SelectorDatasource();
 
                 public DropDownListForTemperatureSelect_10_30(string ID, string PlcTextValue, float size, float fontSize, bool selfUpdatable)
-                    : base(datasource, ID, PlcTextValue, size, fontSize, selfUpdatable)
+                    : base("Izberite željeno temperaturo:", datasource, ID, PlcTextValue, 0, 0, size, fontSize, selfUpdatable, false)
                 {
                     Ctor();
                 }
 
-                public DropDownListForTemperatureSelect_10_30(string ID, string PlcTextValue, float top, float left, double size, float fontSize, bool selfUpdatable, bool widemode)
-                    : base(datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
+                public DropDownListForTemperatureSelect_10_30(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
+                    : base("Izberite željeno temperaturo:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
                 {
                     Ctor();
                 }
@@ -1471,13 +1516,13 @@ namespace WebApplication1
                 static Helper.TimeSelectorDatasource datasource = new Helper.TimeSelectorDatasource();
 
                 public DropDownListForHourSelect(string ID, string PlcTextValue, float size, float fontSize, bool selfUpdatable)
-                   : base(datasource, ID, PlcTextValue, size, fontSize, selfUpdatable)
+                   : base("Izberite čas:", datasource, ID, PlcTextValue, 0, 0, size, fontSize, selfUpdatable, false)
                 {
                     Ctor();
                 }
 
-                public DropDownListForHourSelect(string ID, string PlcTextValue, float top, float left, double size, float fontSize, bool selfUpdatable, bool widemode)
-                   : base(datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
+                public DropDownListForHourSelect(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
+                   : base("Izberite čas:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
                 {
                     Ctor();
                 }
@@ -1493,7 +1538,7 @@ namespace WebApplication1
             {
                 static Helper.YesNoSelectorDatasource datasource = new Helper.YesNoSelectorDatasource();
 
-                public DropDownListForYesNoSelect(string ID, bool PlcTextValue, float top, float left, double size, float fontSize, bool selfUpdatable, bool widemode)
+                public DropDownListForYesNoSelect(string ID, bool PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
                     : base(datasource, ID, PlcTextValue.ToString(), top, left, size, fontSize, selfUpdatable, widemode)
                 {
                     Ctor();

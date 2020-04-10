@@ -343,8 +343,8 @@ namespace WebApplication1
                 public GControls.OnOffButton VklopUrnika1;
                 public GControls.OnOffButton VklopUrnika2;
 
-                public GControls.DropDownListForDimmer DimmerDop;
-                public GControls.DropDownListForDimmer DimmerPop;
+                public GControls.DropDownListForDimmerLUX DimmerDop;
+                public GControls.DropDownListForDimmerLUX DimmerPop;
                                
                 public LuciSubmenuContent(int id)
                 {
@@ -364,8 +364,8 @@ namespace WebApplication1
 
                         if (hasDimmer && prop.DimmerDop[id] != null)
                         {
-                            DimmerDop = new GControls.DropDownListForDimmer("DD_dimAm", prop.DimmerDop[id].Value_string, widthbtn, fontSize, false);
-                            DimmerPop = new GControls.DropDownListForDimmer("DD_dimPm", prop.DimmerPop[id].Value_string, widthbtn, fontSize, false);
+                            DimmerDop = new GControls.DropDownListForDimmerLUX("DD_dimAm", prop.DimmerDop[id].Value_string,0,0, widthbtn, fontSize, true, false);
+                            DimmerPop = new GControls.DropDownListForDimmerLUX("DD_dimPm", prop.DimmerPop[id].Value_string, 0, 0, widthbtn, fontSize, true, false);
 
                             SetControlAbsolutePos(DimmerDop, tr2, lc1, widthbtn);
                             SetControlAbsolutePos(DimmerPop, tr2, lc1, widthbtn);

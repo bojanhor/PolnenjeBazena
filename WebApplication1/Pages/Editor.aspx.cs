@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -29,6 +30,7 @@ namespace WebApplication1.Pages
 
             TemplateClassID.Controls.Add(Val.guiController.PageEditor_.save);
             TemplateClassID.Controls.Add(Val.guiController.PageEditor_.refresh);
+            TemplateClassID.Controls.Add(Val.guiController.PageEditor_.downloadConfig);
 
         }
 
@@ -36,6 +38,39 @@ namespace WebApplication1.Pages
         {
             Val.guiController.PageEditor_.save.button.Click += Save_ClickEditor;
             Val.guiController.PageEditor_.refresh.button.Click += Refresh_ClickEditor;
+            Val.guiController.PageEditor_.downloadConfig.button.Click += Download_Click;
+        }
+
+        private void Download_Click(object sender, ImageClickEventArgs e)
+        {
+            var sw = XmlController.DownloadConfigFile();
+
+            if (sw != null)
+            {
+                try
+                {   
+                    Response.Clear();
+                    Response.AddHeader("Content-Disposition", "attachment; filename=" + "config_downloaded.xml");
+                    Response.AddHeader("Content-Length", sw.Length.ToString());
+                    Response.ContentType = "text/xml"; 
+
+                    using (var streamWriter = new StreamWriter(Response.OutputStream))
+                    {
+                        streamWriter.Write(sw);
+
+                        streamWriter.Flush();
+                        streamWriter.Close();
+                    }
+                                    
+                    Response.End();
+                    
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Can not prepare download file: " + ex.Message);
+                }
+                
+            }
         }
 
         private void Refresh_ClickEditor(object sender, System.Web.UI.ImageClickEventArgs e)

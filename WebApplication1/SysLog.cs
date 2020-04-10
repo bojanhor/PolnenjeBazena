@@ -10,7 +10,6 @@ namespace WebApplication1
     public static class SysLog
     {
         public static MessageManager Message = new MessageManager();
-        
 
         public class MessageManager :Dsps
         {
@@ -157,7 +156,7 @@ namespace WebApplication1
                 try
                 {                    
                     FileInfo fi = new FileInfo(LogFilePath);
-                    if (fi.Length > 104875600) // file size limit cca 100MB
+                    if (fi.Length > Settings.logFileMaxSizeKB*1024) // file size limit cca 100MB
                     {
                         limitFileSize();                        
                     }                    
@@ -175,7 +174,7 @@ namespace WebApplication1
                 {// removes 20 lines from log file
                     
                     var linesTmp = File.ReadLines(LogFilePath).ToList(); // reads lines to list
-                    linesTmp.RemoveRange(0, 20);    // removes oldest 10 lines
+                    linesTmp.RemoveRange(0, 20);    // removes oldest 20 lines
 
                     File.WriteAllLines(tempLogFilePath, linesTmp); // writes to temporary file
 

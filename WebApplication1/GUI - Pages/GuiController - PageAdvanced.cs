@@ -24,7 +24,7 @@ namespace WebApplication1
             public GControls.ButtonWithLabel BtnEditor = new GControls.ButtonWithLabel("XMLSettings", 10, 1.2F);
             public GControls.ButtonWithLabel BtnLogView = new GControls.ButtonWithLabel("LogView", 10, 1.2F);
             public GControls.NotShadowedOnOffButton Spremljaj;
-            GControls.ImageButtonWithID EditBtn = new GControls.ImageButtonWithID(0);
+            GControls.ImageButtonWithID EditBtn = new GControls.ImageButtonWithID("Edit", 0);
 
             
             public GControls.NotShadowedOnOffButton[] connectSwitch = new GControls.NotShadowedOnOffButton[Settings.Devices];

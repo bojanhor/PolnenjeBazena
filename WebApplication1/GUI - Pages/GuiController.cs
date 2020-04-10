@@ -25,7 +25,7 @@ namespace WebApplication1
         public PageVrataZavese PageVrataZavese_ { get; set; }
         public PagePadavine PagePadavine_ { get; set; }
 
-        public PageTest PageTest_ { get; set; }
+        public PageLogin PageLogin_ { get; set; }
 
         public GuiController()  
         {

@@ -14,6 +14,7 @@ namespace WebApplication1
         {           
             public GControls.ButtonWithLabel save = new GControls.ButtonWithLabel("Save", 7, 1.2F);
             public GControls.ButtonWithLabel refresh = new GControls.ButtonWithLabel("Refresh", 7, 1.2F);
+            public GControls.ButtonWithLabel downloadConfig = new GControls.ButtonWithLabel("Download", 7, 1.1F);
 
             public PageEditor()
             {
@@ -22,9 +23,10 @@ namespace WebApplication1
 
             void CreateControlBtns()
             {
-                var size = 7;
+                var size = 8;
                 SetControlAbsolutePos(save, 0, 35, size, size);
-                SetControlAbsolutePos(refresh, 0, 45, size, size);                
+                SetControlAbsolutePos(refresh, 0, 45, size, size);
+                SetControlAbsolutePos(downloadConfig, 0, 55, size, size);
 
             }
         }
