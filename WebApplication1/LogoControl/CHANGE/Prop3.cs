@@ -36,8 +36,6 @@ namespace WebApplication1
 
         public PlcVars.Word CasPotovanja2;
 
-
-
         public Prop3(Sharp7.S7Client client)
         {
             Client = client;
@@ -67,18 +65,6 @@ namespace WebApplication1
 
         }
 
-        public string GetWatchdog()
-        {
-            if (Client != null)
-            {
-                if (watchdog3 != null)
-                {
-                    return watchdog3.Value.ToString();
-                }
-            }
-            return PropComm.NA;
-        }
-
-
+       
     }
 }

@@ -111,7 +111,7 @@ namespace WebApplication1
 
                 void GetZarnicaValue()
                 {
-                    active = Val.logocontroler.Prop1.LucStatus_ReadToPC[btnID].Value;
+                    active = Val.logocontroler.Prop1.LucStatus_ReadToPC[btnID].Value_bool;
                 }
 
                 private void Button_Click(object sender, ImageClickEventArgs e)
@@ -1245,15 +1245,20 @@ namespace WebApplication1
                 UpdatePanelTriggerCollection triggers;
                 AsyncPostBackTrigger trigger;
                 Timer UpdateTimer;
-                               
+
                 public DropDown(string LableTitle, Helper.Datasource dataSource, string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
                 {
                     SetDropdown(LableTitle, dataSource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, wideMode);
                 }
 
-                public DropDown(Helper.Datasource dataSource, string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
+                public DropDown(string LableTitle, Helper.Datasource dataSource, string ID, bool? PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
                 {
-                    SetDropdown("", dataSource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, wideMode);
+                    string buff = null;
+                    if (PlcTextValue != null)
+                    {
+                        buff = PlcTextValue.ToString();
+                    }
+                    SetDropdown(LableTitle, dataSource, ID, buff, top, left, size, fontSize, selfUpdatable, wideMode);
                 }
 
                 void SetDropdown(string LableTitle, Helper.Datasource dataSource, string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
@@ -1324,7 +1329,7 @@ namespace WebApplication1
                     {
                         if (item != null)
                         {
-                            if (item.Text == PlcTextValue)
+                            if (item.Text == buffSelectedItem)
                             {
                                 selectedItem = item;
                                 return selectedItem.Text;
@@ -1474,7 +1479,7 @@ namespace WebApplication1
                 static Helper.TimerSelectorDatasource datasource = new Helper.TimerSelectorDatasource(1, 30, 1, "s");
 
                 public DropDownListForTimer_1_30s(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
-                    : base(datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
+                    : base("", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
                 {
                     Ctor();
                 }
@@ -1499,6 +1504,24 @@ namespace WebApplication1
 
                 public DropDownListForTemperatureSelect_10_30(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
                     : base("Izberite željeno temperaturo:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
+                {
+                    Ctor();
+                }
+
+
+                void Ctor()
+                {
+                    DataSource = datasource;
+                    Button_Outside.DataBind();
+                }
+            }
+
+            public class DropDownListForWeekDaySelect : DropDown
+            {
+                static Helper.WeekDaySelectorDatasource datasource = new Helper.WeekDaySelectorDatasource();
+                                
+                public DropDownListForWeekDaySelect(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
+                    : base("Izberite željeni dan:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
                 {
                     Ctor();
                 }
@@ -1538,8 +1561,42 @@ namespace WebApplication1
             {
                 static Helper.YesNoSelectorDatasource datasource = new Helper.YesNoSelectorDatasource();
 
-                public DropDownListForYesNoSelect(string ID, bool PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
-                    : base(datasource, ID, PlcTextValue.ToString(), top, left, size, fontSize, selfUpdatable, widemode)
+                public DropDownListForYesNoSelect(string ID, bool? PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
+                    : base("", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
+                {
+                    Ctor();
+                }
+
+                void Ctor()
+                {
+                    DataSource = datasource;
+                    Button_Outside.DataBind();
+                }
+            }
+
+            public class DropDownListForRocnoAvtoSelect : DropDown
+            {
+                static Helper.RocnoAvtoSelectorDatasource datasource = new Helper.RocnoAvtoSelectorDatasource();
+
+                public DropDownListForRocnoAvtoSelect(string ID, bool? PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
+                    : base("Izberite režim delovanja:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
+                {
+                    Ctor();
+                }
+
+                void Ctor()
+                {
+                    DataSource = datasource;
+                    Button_Outside.DataBind();
+                }
+            }
+
+            public class DropDownListForOnOffSelect : DropDown
+            {
+                static Helper.OnOffSelectorDatasource datasource = new Helper.OnOffSelectorDatasource();
+
+                public DropDownListForOnOffSelect(string ID, bool? PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
+                    : base("", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
                 {
                     Ctor();
                 }
@@ -1686,7 +1743,9 @@ namespace WebApplication1
 
                 private void Button_Click(object sender, ImageClickEventArgs e)
                 {
-                    SysLog.Message.SetMessage("Login try:"); // todo log ip and other data
+                    var ip = Helper.GetClientIP(page);
+
+                    SysLog.SetMessage("Login try: " + ip); 
 
                     try
                     {
@@ -1706,14 +1765,36 @@ namespace WebApplication1
                     }
                     catch (Exception ex)
                     {
-                        SysLog.Message.SetMessage("Authentication error - General. " + ex.Message);
+                        SysLog.SetMessage("Authentication error - General. " + ex.Message);
                     }
 
                 }
 
-
             }
 
+            public class UpdatePanelFull : UpdatePanel
+            {
+                public Timer Timer;
+                AsyncPostBackTrigger ap;
+
+                public UpdatePanelFull(string ID, int intervalUpdate)
+                {
+                    Timer = new Timer();
+                    ap = new AsyncPostBackTrigger();
+                    this.ID = ID;
+                    Timer.Interval = intervalUpdate;
+                    Timer.ID = ID + "tmr";
+                    ap.ControlID = Timer.ID;
+                    ContentTemplateContainer.Controls.Add(Timer);
+                    Triggers.Add(ap);
+                }
+
+                public void Controls_Add(Control c)
+                {
+                    this.ContentTemplateContainer.Controls.Add(c);
+                }
+
+            }
         }
     }
 }

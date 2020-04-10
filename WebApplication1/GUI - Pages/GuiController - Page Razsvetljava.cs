@@ -18,7 +18,7 @@ namespace WebApplication1
             public System.Web.SessionState.HttpSessionState Session;
             public static string ViewStateElement_CurrentLuciSettingsShown = "CurrentLuciSettingsShown";
 
-            public Helper.UpdatePanelFull updatePanel;
+            public GControls.UpdatePanelFull updatePanel;
 
             public HtmlGenericControl divStala;
             Image Stala;           
@@ -109,7 +109,7 @@ namespace WebApplication1
             {
                 try
                 {
-                    updatePanel = new Helper.UpdatePanelFull("RazsvetljavaUP", Settings.UpdateValuesPCms);
+                    updatePanel = new GControls.UpdatePanelFull("RazsvetljavaUP", Settings.UpdateValuesPCms);
                     
                     bool hasPrevious = true;
                     bool hasNext = true;
@@ -214,12 +214,16 @@ namespace WebApplication1
                     return dimmPercent.Value_string;
                 }
 
-                if (bit.Value)
+                if (bit.Value == true)
                 {
                     return "100%";
                 }
+                else if (bit.Value == false)
+                {
+                    return "0%";
+                }
 
-                return "0%";
+                return PropComm.NA;
             }
 
             public void RegisterOnClick()

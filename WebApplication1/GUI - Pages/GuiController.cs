@@ -24,6 +24,7 @@ namespace WebApplication1
         public PageVentilacija PageVentilacija_ { get; set; }
         public PageVrataZavese PageVrataZavese_ { get; set; }
         public PagePadavine PagePadavine_ { get; set; }
+        public PageMesalaPehala PageMesalaPehala_ { get; set; }
 
         public PageLogin PageLogin_ { get; set; }
 

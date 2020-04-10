@@ -75,13 +75,13 @@ namespace WebApplication1
 
 
             StartBackgroundTasks(); //
-           
+
         }
 
-         void StartBackgroundTasks()
+        void StartBackgroundTasks()
         {
             Watchdog_PC = new Thread(() => { Watchdog_PC_DoWork(null, null); });
-            
+
 
 
             for (int i = 1; i < BackgroundWorker.Length - 1; i++)
@@ -184,7 +184,7 @@ namespace WebApplication1
                     if (forceRefresh[device] > 0) // force refresh values with minimum delay - int value represents how many cycles value will be forced to refresh
                     {
                         forceRefresh[device] -= 1;
-                    }                    
+                    }
 
                     try
                     {
@@ -211,7 +211,7 @@ namespace WebApplication1
 
                             }
                         }
-                        
+
                     }
                     catch (Exception ex)
                     {
@@ -307,7 +307,7 @@ namespace WebApplication1
                                     {
                                         break;
                                     }
-                                    
+
                                 }
                                 failCntr = 0;
                             }
@@ -490,7 +490,7 @@ namespace WebApplication1
                     BackgroundWorker[device].RunWorkerAsync();
                 }
             }
-            
+
         }
 
         public void DisconnectAsync(int device)
@@ -519,35 +519,22 @@ namespace WebApplication1
 
             if (device > 0)
             {
-                msg =
-                "Logo" +
-                device +
-                " (" + d + "): "
-                + message;
+                msg = "Logo" + device + ": " + message;
             }
 
             else if (device == 0)
             {
-                msg =
-                "Info" +
-                " (" + d + "): "
-                + message;
+                msg = "Info" + ": " + message;
             }
 
             else if (device == -1)
             {
-                msg =
-                "Warning" +
-                " (" + d + "): "
-                + message;
+                msg = "Warning" + ": " + message;
             }
 
             else if (device == -2)
             {
-                msg =
-                "Error" +
-                " (" + d + "): "
-                + message;
+                msg = "Error" + ": " + message;
             }
 
             try
@@ -557,7 +544,7 @@ namespace WebApplication1
                     System.Diagnostics.Debug.WriteLine(msg);
                 }
 
-                SysLog.Message.SetMessage(msg); // post to website
+                SysLog.SetMessage(msg); // post to website
             }
             catch (Exception ex)
             {

@@ -104,7 +104,7 @@ namespace WebApplication1.ChartValues
             }
             catch (Exception ex)
             {                
-                SysLog.Message.SetMessage("Preparing data for writing to csv failed. " + ex.Message);
+                SysLog.SetMessage("Preparing data for writing to csv failed. " + ex.Message);
                 return null;
             }
            
@@ -119,7 +119,7 @@ namespace WebApplication1.ChartValues
             }
             catch (Exception ex)
             {
-                SysLog.Message.SetMessage("Timer interval failed to complete. Timer will try next period. " + ex.Message);
+                SysLog.SetMessage("Timer interval failed to complete. Timer will try next period. " + ex.Message);
             }
             
         }
@@ -252,7 +252,7 @@ namespace WebApplication1.ChartValues
             }
             catch (Exception ex)
             {
-                SysLog.Message.SetMessage("Write to csv file failed. " + ex.Message);
+                SysLog.SetMessage("Write to csv file failed. " + ex.Message);
             }
            
         }
@@ -308,7 +308,7 @@ namespace WebApplication1.ChartValues
             }
             catch (Exception ex)
             {
-                SysLog.Message.SetMessage("Error reading csv file: " + ex.Message);
+                SysLog.SetMessage("Error reading csv file: " + ex.Message);
             }            
             return null;
             
@@ -338,7 +338,7 @@ namespace WebApplication1.ChartValues
             }
             catch (Exception ex)
             {
-                SysLog.Message.SetMessage("Limiting data for csv file failed (method name: LimitData(int MaxLines)). " + ex.Message); 
+                SysLog.SetMessage("Limiting data for csv file failed (method name: LimitData(int MaxLines)). " + ex.Message); 
             }
 
             return overflowText;
@@ -417,7 +417,7 @@ namespace WebApplication1.ChartValues
             }
             catch (Exception ex)
             {
-                SysLog.Message.SetMessage("Error with file: *.csv. " + ex.Message);                
+                SysLog.SetMessage("Error with file: *.csv. " + ex.Message);                
             }
         }
 
@@ -539,7 +539,7 @@ namespace WebApplication1.ChartValues
             }
             catch (Exception ex)
             {
-                SysLog.Message.SetMessage("Writing values to csv file failed (" + PathCsvFile + "). " + ex.Message);
+                SysLog.SetMessage("Writing values to csv file failed (" + PathCsvFile + "). " + ex.Message);
                 return -1;
             }
         }
@@ -571,7 +571,7 @@ namespace WebApplication1.ChartValues
             }
             catch (Exception ex)
             {
-                SysLog.Message.SetMessage("Reading chart data from file failed ("+ FilePath + "): " + ex.Message);
+                SysLog.SetMessage("Reading chart data from file failed ("+ FilePath + "): " + ex.Message);
             }
              
         }

@@ -9,6 +9,8 @@ namespace WebApplication1
 {
     public class Prop4
     {
+        // Vrata / zavese
+
         Misc.LoopTiming timing = new Misc.LoopTiming(Settings.UpdateValuesPCms, Settings.defaultCheckTimingInterval);
         public static Sharp7.S7Client Client;
         PlcVars.Word watchdog4;
@@ -61,17 +63,6 @@ namespace WebApplication1
 
             CasPotovanja2 = new PlcVars.Word(Client, new PlcVars.WordAddress(125), "", "", true);
         }
-
-        public string GetWatchdog()
-        {
-            if (Client != null)
-            {
-                if (watchdog4 != null)
-                {
-                    return watchdog4.Value.ToString();
-                }
-            }
-            return PropComm.NA;
-        }
+                
     }
 }

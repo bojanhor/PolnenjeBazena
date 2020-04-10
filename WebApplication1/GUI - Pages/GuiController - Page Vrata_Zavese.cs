@@ -216,8 +216,8 @@ namespace WebApplication1
                     positionUp = new Image();
                     positionDn = new Image();
 
-                    positionUp.Visible = Val.logocontroler.Prop3.KoncnoStikaloGor1.Value; // visible if true
-                    positionDn.Visible = Val.logocontroler.Prop3.KoncnoStikaloGor1.Value;
+                    positionUp.Visible = Val.logocontroler.Prop3.KoncnoStikaloGor1.Value_bool; // visible if true
+                    positionDn.Visible = Val.logocontroler.Prop3.KoncnoStikaloGor1.Value_bool;
 
 
 
@@ -236,8 +236,8 @@ namespace WebApplication1
                     positionUp2 = new Image();
                     positionDn2 = new Image();
 
-                    positionUp2.Visible = Val.logocontroler.Prop3.KoncnoStikaloGor2.Value; // visible if true
-                    positionDn2.Visible = Val.logocontroler.Prop3.KoncnoStikaloGor2.Value;
+                    positionUp2.Visible = Val.logocontroler.Prop3.KoncnoStikaloGor2.Value_bool; // visible if true
+                    positionDn2.Visible = Val.logocontroler.Prop3.KoncnoStikaloGor2.Value_bool;
 
                     // events
                     RegisterEvents();                    
@@ -368,7 +368,7 @@ namespace WebApplication1
                         UporabljaKS.button.Click += (sender, e) => // OnClick Event
                         {
                             var val = Val.logocontroler.Prop3.UporabljaKoncnaStikala1;
-                            val.SyncWithPC(!val.Value); // toggle state                            
+                            val.SyncWithPC(!val.Value_bool); // toggle state                            
                         };
 
                         return div;
@@ -376,7 +376,7 @@ namespace WebApplication1
 
                     static bool GetStatusUporabljaKS()
                     {
-                        return Val.logocontroler.Prop3.UporabljaKoncnaStikala1.Value;
+                        return Val.logocontroler.Prop3.UporabljaKoncnaStikala1.Value_bool;
                     }
                 }
 

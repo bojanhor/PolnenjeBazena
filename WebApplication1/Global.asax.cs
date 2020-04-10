@@ -30,7 +30,7 @@ namespace WebApplication1
         {
             Exception exc = Server.GetLastError();
 
-            SysLog.Message.SetMessage(exc.Message + " " + exc.InnerException.Message + " " + exc.StackTrace);
+            SysLog.SetMessage(exc.Message + " " + exc.InnerException.Message + " " + exc.StackTrace);
 
             Helper.RedirectBack();
 

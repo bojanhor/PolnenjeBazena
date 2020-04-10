@@ -25,7 +25,7 @@ namespace WebApplication1
 
             GControls.DropDownListChartViewSelector chartViewSelector;
 
-            Helper.UpdatePanelFull updatePanel = new Helper.UpdatePanelFull("chartUpdtPnl", Settings.ChartUpdateRefreshRate);
+            GControls.UpdatePanelFull updatePanel = new GControls.UpdatePanelFull("chartUpdtPnl", Settings.ChartUpdateRefreshRate);
 
 
             public PagePadavine(Page _thisPage)
@@ -181,7 +181,7 @@ namespace WebApplication1
                 const string name_TNotranja = "TNotranja";
 
                 Chart ChartGraph = new Chart();
-                Helper.UpdatePanelFull UpdatePanel;
+                GControls.UpdatePanelFull UpdatePanel;
                 
                 Page page;
                 
@@ -190,7 +190,7 @@ namespace WebApplication1
 
 
 
-                public ChartTweaker(Page page, string chartID, HtmlGenericControl MainDiv, Helper.UpdatePanelFull UpdatePanel)
+                public ChartTweaker(Page page, string chartID, HtmlGenericControl MainDiv, GControls.UpdatePanelFull UpdatePanel)
                 {
                     this.page = page;                    
                     this.MainDiv = MainDiv;
@@ -440,7 +440,7 @@ namespace WebApplication1
                         }
                         catch (Exception ex)
                         {
-                            SysLog.Message.SetMessage("Creating points in chart failed (databind failed in method: AddPoints()). Error info: " + ex.Message);
+                            SysLog.SetMessage("Creating points in chart failed (databind failed in method: AddPoints()). Error info: " + ex.Message);
                         }
                         
                     }

@@ -31,7 +31,7 @@ namespace WebApplication1
             }
             catch (Exception ex)
             {
-                SysLog.Message.SetMessage("Error inside method Redirect(). " + ex.Message);
+                SysLog.SetMessage("Error inside method Redirect(). " + ex.Message);
                 var pageHistory = GetPageHistoryFromSession();
                 if (pageHistory != null)
                 {
@@ -75,7 +75,7 @@ namespace WebApplication1
             }
             catch (Exception ex)
             {
-                SysLog.Message.SetMessage("Error inside method RedirectBack(). " + ex.Message);
+                SysLog.SetMessage("Error inside method RedirectBack(). " + ex.Message);
             }
 
         }
@@ -651,28 +651,100 @@ namespace WebApplication1
             }
         }
 
-        public class UpdatePanelFull : UpdatePanel
+        public class RocnoAvtoSelectorDatasource : Datasource
         {
-            public Timer Timer;
-            AsyncPostBackTrigger ap;
-
-            public UpdatePanelFull(string ID, int intervalUpdate)
+            public RocnoAvtoSelectorDatasource()
             {
-                Timer = new Timer();
-                ap = new AsyncPostBackTrigger();
-                this.ID = ID;
-                Timer.Interval = intervalUpdate;
-                Timer.ID = ID + "tmr";
-                ap.ControlID = Timer.ID;
-                ContentTemplateContainer.Controls.Add(Timer);
-                Triggers.Add(ap);
+                GetDataSource();
+            }
+            public void GetDataSource()
+            {
+                CreateRow(PropComm.NA, false);
+                CreateRow("Ročno", true);
+                CreateRow("Avtomatsko", false);
+
             }
 
-            public void Controls_Add(Control c)
+            ListItem CreateRow(string text, bool value)
             {
-                this.ContentTemplateContainer.Controls.Add(c);
+                ListItem r = new ListItem(text, value.ToString());
+                Add(r);
+                return r;
+            }
+        }
+
+        public class OnOffSelectorDatasource : Datasource
+        {
+            public OnOffSelectorDatasource()
+            {
+                GetDataSource();
+            }
+            public void GetDataSource()
+            {
+                CreateRow(PropComm.NA, false);
+                CreateRow("VKLOP", true);
+                CreateRow("IZKLOP", false);
+
             }
 
+            ListItem CreateRow(string text, bool value)
+            {
+                ListItem r = new ListItem(text, value.ToString());
+                Add(r);
+                return r;
+            }
+        }
+
+        public class WeekDaySelectorDatasource : Datasource
+        {
+            public WeekDaySelectorDatasource()
+            {
+                GetDataSource();
+            }
+            public void GetDataSource()
+            {
+                CreateRow(PropComm.NA, 0);
+                CreateRow("IZKLOP", 0);
+                CreateRow("Ponedeljek", 512);
+                CreateRow("Torek", 1024);
+                CreateRow("Sreda", 2048);
+                CreateRow("Četrtek", 4096);
+                CreateRow("Petek", 8192);
+                CreateRow("Sobota", 16384);
+                CreateRow("Nedelja", 256);               
+
+            }
+
+            ListItem CreateRow(string text, ushort value)
+            {
+                ListItem r = new ListItem(text, value.ToString());
+                Add(r);
+                return r;
+            }
+        }        
+
+        public static string GetClientIP(Page page)
+        {
+            string ip;
+            try
+            {
+                ip = page.Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
+                if (string.IsNullOrEmpty(ip))
+                {
+                    ip = page.Request.ServerVariables["REMOTE_ADDR"];
+                }
+
+                if (ip == "::1" || ip.Contains("127.0.0.1"))
+                {
+                    ip = "Local";
+                }
+            }
+            catch
+            {
+                ip = "UNKNOWN IP";
+            }
+
+            return ip;
         }
 
         public static string FloatToStringWeb(float f, string postFix)
@@ -824,6 +896,32 @@ namespace WebApplication1
 
                 return false;
 
+            }            
+        }
+
+        public static void DownloadFile(Page thispage, string type, string content)
+        {
+            try
+            {
+                thispage.Response.Clear();
+                thispage.Response.AddHeader("Content-Disposition", "attachment; filename=" + "config_downloaded." + type);
+                thispage.Response.AddHeader("Content-Length", content.Length.ToString());
+                thispage.Response.ContentType = "text/" + type;
+
+                using (var streamWriter = new StreamWriter(thispage.Response.OutputStream))
+                {
+                    streamWriter.Write(content);
+
+                    streamWriter.Flush();
+                    streamWriter.Close();
+                }
+
+                thispage.Response.End();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not prepare download file: " + ex.Message);
             }
         }
     }

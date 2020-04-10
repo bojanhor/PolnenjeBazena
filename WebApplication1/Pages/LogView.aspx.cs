@@ -19,21 +19,31 @@ namespace WebApplication1.Pages
         }
                 
         void Initialise()
-        {            
-           
-            
+        {                 
             if (!IsPostBack)
             {
-                Editor.InnerText = SysLog.MessageManager.GetLogFileContent();
+                Editor.InnerText = SysLog.GetMessagesTB();
             }
             
             TemplateClassID.Controls.Add(Val.guiController.PageLogView_.refresh);
-
+            TemplateClassID.Controls.Add(Val.guiController.PageLogView_.download);
         }
 
         public void RegisterOnClick()
         {            
             Val.guiController.PageLogView_.refresh.button.Click += Refresh_Click1;
+            Val.guiController.PageLogView_.download.button.Click += Button_Click;
+
+        }
+
+        private void Button_Click(object sender, ImageClickEventArgs e)
+        {
+            var content = XmlController.DownloadLogFile();
+
+            if (content != null)
+            {
+                Helper.DownloadFile(this, "txt", content);
+            }
         }
 
         private void Refresh_Click1(object sender, System.Web.UI.ImageClickEventArgs e)

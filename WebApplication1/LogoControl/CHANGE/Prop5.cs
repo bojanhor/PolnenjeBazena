@@ -9,26 +9,38 @@ namespace WebApplication1
 {
     public class Prop5
     {
+
+        static int rows = 3;
         Misc.LoopTiming timing = new Misc.LoopTiming(Settings.UpdateValuesPCms, Settings.defaultCheckTimingInterval);
         public static Sharp7.S7Client Client;
         PlcVars.Word watchdog5;
+
+        public PlcVars.Word[] weekday = new PlcVars.Word[rows];
+        public PlcVars.Word[] start = new PlcVars.Word[rows];
+        public PlcVars.Word[] stop = new PlcVars.Word[rows];
+
+        public PlcVars.Bit rezim;
+        public PlcVars.Bit rocno;
+
+        readonly ushort startAddrs = 10;
 
         public Prop5(Sharp7.S7Client client)
         {
             Client = client;
             watchdog5 = new PlcVars.Word(Client, new PlcVars.WordAddress(5), "", "", false);
-        }
 
-        public string GetWatchdog()
-        {
-            if (Client != null)
+            for (int i = 0; i < rows; i++)
             {
-                if (watchdog5 != null)
-                {
-                    return watchdog5.Value.ToString();
-                }
+                weekday[i] = new PlcVars.Word(Client, new PlcVars.WordAddress(startAddrs), "", "", true); 
+                start[i] = new PlcVars.Word(Client, new PlcVars.WordAddress(startAddrs + 2), "", "", true);
+                stop[i] = new PlcVars.Word(Client, new PlcVars.WordAddress(startAddrs + 4), "", "", true);
+                startAddrs += 10;
             }
-            return PropComm.NA;
+
+
+            rezim = new PlcVars.Bit(Client, new PlcVars.BitAddress(40,0), "", "", true);
+            rocno = new PlcVars.Bit(Client, new PlcVars.BitAddress(50,0), "", "", true);
         }
+               
     }
 }

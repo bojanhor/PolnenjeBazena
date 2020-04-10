@@ -158,6 +158,7 @@
     <Content Include="App_Data\config.cnfg" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="Pages\Login.aspx" />
+    <Content Include="Pages\MesalaPehala.aspx" />
     <Content Include="Pages\Vrata_Zavese.aspx" />
     <Content Include="Pages\Ventilacija.aspx" />
     <Content Include="Pictures\alert.png">
@@ -460,6 +461,7 @@
     <Compile Include="GlobalManagement.cs" />
     <Compile Include="GUI - Controls\Dispose.cs" />
     <Compile Include="GUI - Pages\GuiController - Login.cs" />
+    <Compile Include="GUI - Pages\GuiController - Page MesalaPehala.cs" />
     <Compile Include="GUI - Pages\GuiController - PageLogView.cs" />
     <Compile Include="GUI - Pages\GuiController - PageEditor.cs" />
     <Compile Include="GUI - Pages\GuiController - PagePadavine.cs" />
@@ -564,6 +566,13 @@
     </Compile>
     <Compile Include="Pages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MesalaPehala.aspx.cs">
+      <DependentUpon>MesalaPehala.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MesalaPehala.aspx.designer.cs">
+      <DependentUpon>MesalaPehala.aspx</DependentUpon>
     </Compile>
     <Compile Include="SysLog.cs" />
     <Compile Include="XmlController.cs" />

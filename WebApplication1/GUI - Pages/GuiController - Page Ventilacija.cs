@@ -112,7 +112,7 @@ namespace WebApplication1
                 GControls.SuperLabel VrednostRocniNacin;
                 GControls.DropDownListForDimmerRPM VrednostRocniNacin_DD;
 
-                Helper.UpdatePanelFull up = new Helper.UpdatePanelFull("VentilacijaUPanel", Settings.UpdateValuesPCms);
+                GControls.UpdatePanelFull up = new GControls.UpdatePanelFull("VentilacijaUPanel", Settings.UpdateValuesPCms);
                                              
 
                 public VentSettingsContent()

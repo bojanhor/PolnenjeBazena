@@ -9,20 +9,21 @@ namespace WebApplication1
 {
     public static class SysLog
     {
+      
         public static MessageManager Message = new MessageManager();
 
-        public class MessageManager :Dsps
+        public class MessageManager : Dsps
         {
             List<string> PendingMessages = new List<string>();
             Misc.SmartThread LogWriter;
-                       
+
 
             static string LogFolderPath = Directory.GetParent(XmlController.BaseDirectoryPath).ToString() + "\\" + "Logs";
-            static string LogFilePath;
+            public static string LogFilePath;
             static string tempLogFilePath;
 
-            string Message_ = "";
-            
+            List<string> messageList = new List<string>();
+                       
             public MessageManager()
             {
                 AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
@@ -43,14 +44,12 @@ namespace WebApplication1
             void SetMessage(string message, bool skippWritingToFile)
             {
                 var LogMsg = DateTime.Now.ToString(Settings.defaultDateTimeFormatY) + ": " + message;
-                Message_ += message + Environment.NewLine;
-                               
+                messageList.Add(LogMsg);
+
                 if (!skippWritingToFile)
                 {
                     PendingMessages.Add(LogMsg);
                 }
-
-
             }
 
             public void SetMessage(string message)
@@ -59,9 +58,25 @@ namespace WebApplication1
             }
 
             // gets textbox string to post on webpage
-            public string GetMessage()
+            public string GetMessageForTB()
             {
-                return Message_;
+                var lastIndex = messageList.Count - 1;
+                var len = 4500; // TB is limited to 4500 lines to prevent long page loading time
+                
+                if (len > lastIndex)
+                {
+                    len = lastIndex ;
+                }
+
+                var tbMessages = messageList.GetRange(lastIndex - len, len); // gets last # messages
+                string buff = "";
+
+                foreach (var item in tbMessages) // converts to string suitable for textbox
+                {
+                    buff += item + Environment.NewLine;
+                }
+
+                return buff;
             }
 
             public static string GetLogFileContent()
@@ -72,7 +87,6 @@ namespace WebApplication1
             // File management
             void manageFiles()
             {
-
                 try
                 {
                     if (!Directory.Exists(LogFolderPath))
@@ -80,8 +94,8 @@ namespace WebApplication1
                         Directory.CreateDirectory(LogFolderPath);
                     }
 
-                     LogFilePath = LogFolderPath + "\\" + "Log.txt";
-                     tempLogFilePath = LogFolderPath + "\\" + "Log_tmp.txt";
+                    LogFilePath = LogFolderPath + "\\" + "Log.txt";
+                    tempLogFilePath = LogFolderPath + "\\" + "Log_tmp.txt";
 
                     if (!ifFileExists(tempLogFilePath))
                     {
@@ -97,12 +111,12 @@ namespace WebApplication1
                         else
                         {
                             CreateFile(LogFilePath);
-                        }                        
+                        }
                     }
-                    
+
                     // try file
                     LoadFile(LogFilePath);
-                    
+
                 }
                 catch (Exception ex)
                 {
@@ -116,15 +130,13 @@ namespace WebApplication1
             {
                 return File.Exists(FilePath);
             }
-                        
+
             void LoadFile(string FilePath)
-            {
+            {               
                 try
                 {
-                    using ( Microsoft.VisualBasic.FileIO.TextFieldParser parser = new Microsoft.VisualBasic.FileIO.TextFieldParser(FilePath))
-                    {
-                        parser.Close();
-                    }
+                    messageList = File.ReadLines(LogFilePath).ToList(); // reads lines to list
+
                 }
                 catch (Exception ex)
                 {
@@ -150,29 +162,29 @@ namespace WebApplication1
                 }
 
             }
-            
+
             void checkFileSize()
             {
                 try
-                {                    
+                {
                     FileInfo fi = new FileInfo(LogFilePath);
-                    if (fi.Length > Settings.logFileMaxSizeKB*1024) // file size limit cca 100MB
+                    if (fi.Length > Settings.logFileMaxSizeKB * 1024) // file size limit cca 100MB
                     {
-                        limitFileSize();                        
-                    }                    
+                        limitFileSize();
+                    }
                 }
                 catch (Exception ex)
                 {
-                    SetMessage("Cant check or limit file size: " + LogFilePath + ". "+ ex.Message);
+                    SetMessage("Cant check or limit file size: " + LogFilePath + ". " + ex.Message);
                 }
-               
+
             }
 
             void limitFileSize()
             {
                 try
                 {// removes 20 lines from log file
-                    
+
                     var linesTmp = File.ReadLines(LogFilePath).ToList(); // reads lines to list
                     linesTmp.RemoveRange(0, 20);    // removes oldest 20 lines
 
@@ -180,18 +192,18 @@ namespace WebApplication1
 
                     File.Delete(LogFilePath);
                     File.Move(tempLogFilePath, LogFilePath); // replaces file
-                    
+
                 }
-                catch (Exception )
-                {                    
-                    throw ;
-                }                
+                catch (Exception)
+                {
+                    throw;
+                }
             }
 
             void WriteLogAsync()
             {
-                Thread.Sleep(500); // delayed start
-               
+                Thread.Sleep(5000); // delayed start
+
                 while (true)
                 {
                     try
@@ -211,7 +223,7 @@ namespace WebApplication1
                             s.Flush();
                             s.Close();
                         }
-                        Thread.Sleep(500); // check every half second cca
+
                     }
                     catch (Exception ex)
                     {
@@ -220,10 +232,20 @@ namespace WebApplication1
                         Message.SetMessage(message, true);
                         throw new Exception(message);
                     }
-                    
+
+                    Thread.Sleep(500); // check every half second cca
                 }
             }
-                        
+        }
+
+        public static void SetMessage(string message)
+        {
+            Message.SetMessage(message);
+        }
+
+        public static string GetMessagesTB()
+        {
+            return Message.GetMessageForTB();
         }
     }
 }

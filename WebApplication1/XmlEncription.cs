@@ -36,8 +36,7 @@ namespace WebApplication1
                     using (MemoryStream memoryStream = new MemoryStream(encryptedTextBytes))
                     {
                         using (CryptoStream cryptoStream = new CryptoStream(memoryStream, decryptor, CryptoStreamMode.Read))
-                        {
-                            //TODO: Need to look into this more. Assuming encrypted text is longer than plain but there is probably a better way
+                        {                            
                             byte[] plainTextBytes = new byte[encryptedTextBytes.Length];
 
                             int decryptedByteCount = cryptoStream.Read(plainTextBytes, 0, plainTextBytes.Length);
@@ -50,7 +49,7 @@ namespace WebApplication1
             {
                 plainText = string.Empty; // Assume the error is caused by an invalid password
                 var message = "Xml file decription error: " + ex.Message;
-                SysLog.Message.SetMessage(message);
+                SysLog.SetMessage(message);
                 throw new Exception(message);
             }
 

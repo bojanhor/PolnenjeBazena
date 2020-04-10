@@ -16,6 +16,7 @@ namespace WebApplication1
 
         public static string BaseDirectoryPath = "";
         static int? howManyLucIconsBuff = null;
+        static string XmlNotEncriptedPath;
         static string XmlEncriptedPath;
         static bool forceRefresh = false;
 
@@ -155,6 +156,25 @@ namespace WebApplication1
             }
         }
 
+        public static string DownloadLogFile()
+        {
+            try
+            {
+                string read;
+
+                using (StreamReader s = new StreamReader(SysLog.MessageManager.LogFilePath))
+                {
+                    read = s.ReadToEnd();
+                }
+
+                return read;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error loading log file: " + ex.Message);
+            }
+        }
         public static void UploadConfigFile()
         {
 
@@ -186,11 +206,26 @@ namespace WebApplication1
         {
             try
             {
-                var encriptedText = XmlEncription.Encrypt(Settings.XmlDeclaration + newContent);
-                StreamWriter s = new StreamWriter(XmlEncriptedPath, false, Encoding.UTF8);
-                s.Write(Environment.NewLine + encriptedText);
-                s.Flush();
-                s.Dispose();
+                var text = Settings.XmlDeclaration + newContent;
+                var encriptedText = XmlEncription.Encrypt(text);
+                using (StreamWriter s = new StreamWriter(XmlEncriptedPath, false, Encoding.UTF8))
+                {
+                    s.Write(Environment.NewLine + encriptedText);
+                    s.Flush();
+                    s.Dispose();
+                }
+
+                if (File.Exists(XmlNotEncriptedPath))
+                {
+                    using (StreamWriter s = new StreamWriter(XmlNotEncriptedPath, false, Encoding.UTF8))
+                    {
+                        s.Write(text);
+                        s.Flush();
+                        s.Dispose();
+                    }
+                }
+
+                SysLog.SetMessage("ConfigFile was changed, by user.");
             }
             catch (Exception ex)
             {
@@ -213,21 +248,31 @@ namespace WebApplication1
 
         static void FindFileAndEncript()
         {
+            XmlNotEncriptedPath = BaseDirectoryPath + Settings.pathToConfigFile;
             XmlEncriptedPath = BaseDirectoryPath + Settings.pathToConfigFileEncripted;
-            string XmlPath;
+            
+            var ii = "\"";
 
-            if (!File.Exists(XmlEncriptedPath)) // If encripted config file exists program will use it directly
+            // if there is Not encripted config file (will be deleted automatically after publish)
+
+            if (File.Exists(XmlNotEncriptedPath))
             {
-                // Encripted config file is not found, try finding raw file in published folder
-                XmlPath = BaseDirectoryPath + Settings.pathToConfigFile;
-                if (!File.Exists(XmlPath))
+                if (File.Exists(XmlEncriptedPath))
                 {
-                    throw new Exception("Config file was not found.");
+                    File.Delete(XmlEncriptedPath);
                 }
 
-                FileEncript(XmlPath);
+                FileEncript(XmlNotEncriptedPath);
             }
-                        
+            else
+            {
+                if (!File.Exists(XmlEncriptedPath))
+                {
+                    throw new Exception("Config file could not be found. Search was performed at locations: " + ii + XmlEncriptedPath + ii +" and " + ii + XmlNotEncriptedPath + ii + ".");
+                }
+
+                FileEncript(XmlEncriptedPath);
+            }
 
         }
 
@@ -252,7 +297,6 @@ namespace WebApplication1
             {
                 throw new Exception("Config file encription failed: " + ex.Message);
             }
-
 
         }
 
@@ -363,7 +407,6 @@ namespace WebApplication1
         {
             try
             {
-
                 XmlGeneral = XmlFile.Element("root").Element("GENERAL");
                 XmlGUI = XmlFile.Element("root").Element("GUI");
                 XmlConn = XmlFile.Element("root").Element("CONNECTION");

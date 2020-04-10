@@ -43,33 +43,11 @@ namespace WebApplication1.Pages
 
         private void Download_Click(object sender, ImageClickEventArgs e)
         {
-            var sw = XmlController.DownloadConfigFile();
+            var content = XmlController.DownloadConfigFile();
 
-            if (sw != null)
+            if (content != null)
             {
-                try
-                {   
-                    Response.Clear();
-                    Response.AddHeader("Content-Disposition", "attachment; filename=" + "config_downloaded.xml");
-                    Response.AddHeader("Content-Length", sw.Length.ToString());
-                    Response.ContentType = "text/xml"; 
-
-                    using (var streamWriter = new StreamWriter(Response.OutputStream))
-                    {
-                        streamWriter.Write(sw);
-
-                        streamWriter.Flush();
-                        streamWriter.Close();
-                    }
-                                    
-                    Response.End();
-                    
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception("Can not prepare download file: " + ex.Message);
-                }
-                
+                Helper.DownloadFile(this, "xml", content);                
             }
         }
 
