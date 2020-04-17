@@ -47071,3 +47071,1512 @@ Parameter name: index    at System.Web.UI.Page.HandleError(Exception e)
 16.04.2020  10:27:48 : Logo2: Connection error
 16.04.2020  10:27:53 : Logo2: Connection failed. Trying to reconnect
 16.04.2020  10:27:53 : Logo2: Connection error
+17.04.2020  13:13:09 : Logo1: Connecting...
+17.04.2020  13:13:09 : Logo2: Connecting...
+17.04.2020  13:13:09 : Logo1: Connected
+17.04.2020  13:13:09 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  13:13:11 : Logo2: TCP : Connection Error
+17.04.2020  13:13:11 : Logo2: CLI : Client not connected
+17.04.2020  13:13:11 : Logo2: Connection error
+17.04.2020  13:13:12 : Login try: Local
+17.04.2020  13:13:16 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:13:16 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  13:13:16 : Logo2: Connection error
+17.04.2020  13:13:21 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:13:21 : Logo2: Connection error
+17.04.2020  13:13:26 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:13:26 : Logo2: Connection error
+17.04.2020  13:13:31 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:13:31 : Logo2: Connection error
+17.04.2020  13:13:37 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:13:37 : Logo2: Connection error
+17.04.2020  13:13:42 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:13:42 : Logo2: Connection error
+17.04.2020  13:13:47 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:13:47 : Logo2: Connection error
+17.04.2020  13:13:52 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:13:52 : Logo2: Connection error
+17.04.2020  13:13:57 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:13:57 : Logo2: Connection error
+17.04.2020  13:14:03 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:14:04 : Logo2: Connection error
+17.04.2020  13:14:09 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:14:09 : Logo2: Connection error
+17.04.2020  13:14:14 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:14:14 : Logo2: Connection error
+17.04.2020  13:14:19 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:14:19 : Logo2: Connection error
+17.04.2020  13:14:24 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:14:24 : Logo2: Connection error
+17.04.2020  13:14:29 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:14:29 : Logo2: Connection error
+17.04.2020  13:14:34 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:14:34 : Logo2: Connection error
+17.04.2020  13:14:39 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:14:39 : Logo2: Connection error
+17.04.2020  13:14:45 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:14:45 : Logo2: Connection error
+17.04.2020  13:14:50 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:14:50 : Logo2: Connection error
+17.04.2020  13:14:55 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:14:55 : Logo2: Connection error
+17.04.2020  13:15:00 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:15:00 : Logo2: Connection error
+17.04.2020  13:15:05 : Logo1: Watchdog error - Watchdog does not change
+17.04.2020  13:15:05 : Logo1: Connection error
+17.04.2020  13:15:05 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:15:05 : Logo2: Connection error
+17.04.2020  13:15:08 : Logo1: Connected again
+17.04.2020  13:15:08 : Logo1: Connection error
+17.04.2020  13:15:10 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  13:15:10 : Logo2: Connection error
+17.04.2020  13:15:13 : Logo2: Connected again
+17.04.2020  13:15:13 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:15:13 : Logo1: CLI : Client not connected
+17.04.2020  13:15:13 : Logo1: Connection error
+17.04.2020  13:15:13 : Logo2: Watchdog error - Watchdog does not change
+17.04.2020  13:15:13 : Logo2: Connection error
+17.04.2020  13:15:17 : Logo2: Connected again
+17.04.2020  13:15:17 : Logo2: Connection error
+17.04.2020  13:15:18 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:15:18 : Logo1: Connection error
+17.04.2020  13:15:20 : Logo2: Connected again
+17.04.2020  13:15:20 : Logo2: Connection error
+17.04.2020  13:15:23 : Logo2: Connected again
+17.04.2020  13:15:24 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:15:24 : Logo1: Connection error
+17.04.2020  13:15:29 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:15:29 : Logo1: Connection error
+17.04.2020  13:15:34 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:15:34 : Logo1: Connection error
+17.04.2020  13:15:39 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:15:39 : Logo1: Connection error
+17.04.2020  13:15:44 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:15:44 : Logo1: Connection error
+17.04.2020  13:15:49 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:15:49 : Logo1: Connection error
+17.04.2020  13:15:55 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:15:55 : Logo1: Connection error
+17.04.2020  13:16:00 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:16:00 : Logo1: Connection error
+17.04.2020  13:16:05 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:16:05 : Logo1: Connection error
+17.04.2020  13:16:10 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:16:10 : Logo1: Connection error
+17.04.2020  13:16:15 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:16:15 : Logo1: Connection error
+17.04.2020  13:16:20 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:16:20 : Logo1: Connection error
+17.04.2020  13:16:25 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:16:25 : Logo1: Connection error
+17.04.2020  13:16:30 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:16:30 : Logo1: Connection error
+17.04.2020  13:16:35 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:16:35 : Logo1: Connection error
+17.04.2020  13:16:41 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:16:41 : Logo1: Connection error
+17.04.2020  13:16:46 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:16:46 : Logo1: Connection error
+17.04.2020  13:16:51 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:16:51 : Logo1: Connection error
+17.04.2020  13:16:56 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:16:56 : Logo1: Connection error
+17.04.2020  13:17:01 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:17:01 : Logo1: Connection error
+17.04.2020  13:17:06 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:17:06 : Logo1: Connection error
+17.04.2020  13:17:11 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:17:11 : Logo1: Connection error
+17.04.2020  13:17:16 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:17:16 : Logo1: Connection error
+17.04.2020  13:17:22 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:17:22 : Logo1: Connection error
+17.04.2020  13:17:27 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:17:27 : Logo1: Connection error
+17.04.2020  13:17:32 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:17:32 : Logo1: Connection error
+17.04.2020  13:17:37 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:17:37 : Logo1: Connection error
+17.04.2020  13:17:42 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:17:42 : Logo1: Connection error
+17.04.2020  13:17:47 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:17:47 : Logo1: Connection error
+17.04.2020  13:17:52 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:17:52 : Logo1: Connection error
+17.04.2020  13:17:57 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:17:57 : Logo1: Connection error
+17.04.2020  13:18:02 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:18:02 : Logo1: Connection error
+17.04.2020  13:18:08 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:18:08 : Logo1: Connection error
+17.04.2020  13:18:13 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:18:13 : Logo1: Connection error
+17.04.2020  13:18:18 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:18:18 : Logo1: Connection error
+17.04.2020  13:18:23 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:18:23 : Logo1: Connection error
+17.04.2020  13:18:28 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:18:28 : Logo1: Connection error
+17.04.2020  13:18:33 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:18:33 : Logo1: Connection error
+17.04.2020  13:18:38 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:18:38 : Logo1: Connection error
+17.04.2020  13:18:43 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:18:43 : Logo1: Connection error
+17.04.2020  13:18:49 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:18:49 : Logo1: Connection error
+17.04.2020  13:18:54 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:18:54 : Logo1: Connection error
+17.04.2020  13:18:59 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:18:59 : Logo1: Connection error
+17.04.2020  13:28:35 : Logo1: Connecting...
+17.04.2020  13:28:35 : Logo2: Connecting...
+17.04.2020  13:28:35 : Logo2: Connected
+17.04.2020  13:28:35 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  13:28:37 : Logo1: TCP : Connection Error
+17.04.2020  13:28:37 : Logo1: CLI : Client not connected
+17.04.2020  13:28:37 : Logo1: Connection error
+17.04.2020  13:28:37 : Login try: Local
+17.04.2020  13:28:42 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:28:42 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  13:28:42 : Logo1: Connection error
+17.04.2020  13:28:47 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:28:47 : Logo1: Connection error
+17.04.2020  13:28:52 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:28:52 : Logo1: Connection error
+17.04.2020  13:28:57 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:28:57 : Logo1: Connection error
+17.04.2020  13:30:25 : Logo1: Connecting...
+17.04.2020  13:30:25 : Logo2: Connecting...
+17.04.2020  13:30:25 : Logo2: Connected
+17.04.2020  13:30:25 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  13:30:27 : Logo1: TCP : Connection Error
+17.04.2020  13:30:27 : Logo1: CLI : Client not connected
+17.04.2020  13:30:27 : Logo1: Connection error
+17.04.2020  13:30:32 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:30:32 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  13:30:32 : Logo1: Connection error
+17.04.2020  13:30:33 : Login try: Local
+17.04.2020  13:30:37 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:30:37 : Logo1: Connection error
+17.04.2020  13:30:42 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:30:42 : Logo1: Connection error
+17.04.2020  13:30:47 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:30:47 : Logo1: Connection error
+17.04.2020  13:30:52 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:30:52 : Logo1: Connection error
+17.04.2020  13:30:58 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:30:58 : Logo1: Connection error
+17.04.2020  13:31:03 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:31:03 : Logo1: Connection error
+17.04.2020  13:31:08 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:31:08 : Logo1: Connection error
+17.04.2020  13:31:13 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:31:13 : Logo1: Connection error
+17.04.2020  13:31:18 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:31:18 : Logo1: Connection error
+17.04.2020  13:31:23 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:31:23 : Logo1: Connection error
+17.04.2020  13:31:28 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:31:28 : Logo1: Connection error
+17.04.2020  13:31:33 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:31:33 : Logo1: Connection error
+17.04.2020  13:31:38 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:31:38 : Logo1: Connection error
+17.04.2020  13:31:44 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:31:44 : Logo1: Connection error
+17.04.2020  13:31:49 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:31:49 : Logo1: Connection error
+17.04.2020  13:31:54 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:31:54 : Logo1: Connection error
+17.04.2020  13:31:59 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:31:59 : Logo1: Connection error
+17.04.2020  13:32:04 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:32:04 : Logo1: Connection error
+17.04.2020  13:32:09 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:32:09 : Logo1: Connection error
+17.04.2020  13:32:14 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:32:14 : Logo1: Connection error
+17.04.2020  13:32:19 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:32:19 : Logo1: Connection error
+17.04.2020  13:32:25 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:32:25 : Logo1: Connection error
+17.04.2020  13:32:30 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:32:30 : Logo1: Connection error
+17.04.2020  13:32:35 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:32:35 : Logo1: Connection error
+17.04.2020  13:32:40 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:32:40 : Logo1: Connection error
+17.04.2020  13:32:45 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:32:45 : Logo1: Connection error
+17.04.2020  13:32:50 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:32:50 : Logo1: Connection error
+17.04.2020  13:32:55 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:32:55 : Logo1: Connection error
+17.04.2020  13:33:00 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:33:00 : Logo1: Connection error
+17.04.2020  13:33:05 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:33:05 : Logo1: Connection error
+17.04.2020  13:33:11 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:33:11 : Logo1: Connection error
+17.04.2020  13:33:16 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:33:16 : Logo1: Connection error
+17.04.2020  13:33:21 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:33:21 : Logo1: Connection error
+17.04.2020  13:33:26 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:33:26 : Logo1: Connection error
+17.04.2020  13:33:31 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:33:31 : Logo1: Connection error
+17.04.2020  13:33:36 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:33:36 : Logo1: Connection error
+17.04.2020  13:33:41 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:33:41 : Logo1: Connection error
+17.04.2020  13:33:46 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:33:46 : Logo1: Connection error
+17.04.2020  13:33:51 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:33:51 : Logo1: Connection error
+17.04.2020  13:33:57 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:33:57 : Logo1: Connection error
+17.04.2020  13:34:02 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:34:02 : Logo1: Connection error
+17.04.2020  13:42:28 : Logo1: Connecting...
+17.04.2020  13:42:28 : Logo2: Connecting...
+17.04.2020  13:42:28 : Logo2: Connected
+17.04.2020  13:42:28 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  13:42:30 : Logo1: TCP : Connection Error
+17.04.2020  13:42:30 : Logo1: CLI : Client not connected
+17.04.2020  13:42:30 : Logo1: Connection error
+17.04.2020  13:42:33 : Login try: Local
+17.04.2020  13:42:35 : Logo2: Watchdog error - Watchdog does not change
+17.04.2020  13:42:35 : Logo2: Connection error
+17.04.2020  13:42:35 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:42:35 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  13:42:35 : Logo1: Connection error
+17.04.2020  13:42:38 : Logo2: Connected again
+17.04.2020  13:42:40 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:42:40 : Logo1: Connection error
+17.04.2020  13:42:45 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:42:45 : Logo1: Connection error
+17.04.2020  13:42:50 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:42:50 : Logo1: Connection error
+17.04.2020  13:42:55 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:42:55 : Logo1: Connection error
+17.04.2020  13:43:00 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:43:00 : Logo1: Connection error
+17.04.2020  13:43:05 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:43:05 : Logo1: Connection error
+17.04.2020  13:43:14 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:43:16 : Logo1: Connection error
+17.04.2020  13:43:23 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:43:23 : Logo1: Connection error
+17.04.2020  13:43:31 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:43:31 : Logo1: Connection error
+17.04.2020  13:43:41 : Writing values to csv file failed (C:\Users\Bojan Horvat.DESKTOP-SCGNVGJ\Source\Repos\Marko-Humar-Hlev-Velesovo-ASP\WebApplication1\\ChartValues\ChartValues_Today.csv). The process cannot access the file 'C:\Users\Bojan Horvat.DESKTOP-SCGNVGJ\Source\Repos\Marko-Humar-Hlev-Velesovo-ASP\WebApplication1\ChartValues\ChartValues_Today.csv' because it is being used by another process.
+17.04.2020  13:43:41 : Read from PLC failed. Address: bit at 900, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  13:43:44 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:43:44 : Read from PLC failed. Address: VW110, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ;
+17.04.2020  13:43:44 : Logo1: Connection error
+17.04.2020  13:43:51 : Read from PLC failed. Address: VW80, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  13:43:55 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:44:10 : Logo1: Connecting...
+17.04.2020  13:44:10 : Logo2: Connecting...
+17.04.2020  13:44:10 : Logo2: Connected
+17.04.2020  13:44:10 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  13:44:12 : Logo1: TCP : Connection Error
+17.04.2020  13:44:12 : Logo1: CLI : Client not connected
+17.04.2020  13:44:12 : Logo1: Connection error
+17.04.2020  13:44:12 : Login try: Local
+17.04.2020  13:44:23 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:44:23 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  13:44:23 : Logo1: Connection error
+17.04.2020  13:44:23 : Read from PLC failed. Address: VW86, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+17.04.2020  13:44:36 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:44:36 : Logo1: Connection error
+17.04.2020  13:54:20 : Logo1: Connecting...
+17.04.2020  13:54:20 : Logo2: Connecting...
+17.04.2020  13:54:21 : Logo2: Connected
+17.04.2020  13:54:21 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  13:54:22 : Login try: Local
+17.04.2020  13:54:23 : Logo1: TCP : Connection Error
+17.04.2020  13:54:23 : Logo1: CLI : Client not connected
+17.04.2020  13:54:23 : Logo1: Connection error
+17.04.2020  13:54:31 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:54:31 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  13:54:31 : Logo1: Connection error
+17.04.2020  13:54:36 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:54:36 : Logo1: Connection error
+17.04.2020  13:54:41 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:54:41 : Logo1: Connection error
+17.04.2020  13:54:46 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:54:46 : Logo1: Connection error
+17.04.2020  13:54:52 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:54:52 : Logo1: Connection error
+17.04.2020  13:55:56 : Logo1: Connecting...
+17.04.2020  13:55:56 : Logo2: Connecting...
+17.04.2020  13:55:56 : Logo2: Connected
+17.04.2020  13:55:56 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  13:55:58 : Logo1: TCP : Connection Error
+17.04.2020  13:55:58 : Logo1: CLI : Client not connected
+17.04.2020  13:55:58 : Logo1: Connection error
+17.04.2020  13:56:03 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:56:03 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  13:56:03 : Logo1: Connection error
+17.04.2020  13:56:03 : Login try: Local
+17.04.2020  13:56:08 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:56:08 : Logo1: Connection error
+17.04.2020  13:56:13 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:56:13 : Logo1: Connection error
+17.04.2020  13:56:18 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:56:18 : Logo1: Connection error
+17.04.2020  13:56:23 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:56:23 : Logo1: Connection error
+17.04.2020  13:56:28 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:56:28 : Logo1: Connection error
+17.04.2020  13:57:03 : Logo1: Connecting...
+17.04.2020  13:57:03 : Logo2: Connecting...
+17.04.2020  13:57:03 : Logo2: Connected
+17.04.2020  13:57:03 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  13:57:04 : Login try: Local
+17.04.2020  13:57:05 : Logo1: TCP : Connection Error
+17.04.2020  13:57:05 : Logo1: CLI : Client not connected
+17.04.2020  13:57:05 : Logo1: Connection error
+17.04.2020  13:57:10 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:57:10 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  13:57:10 : Logo1: Connection error
+17.04.2020  13:57:15 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:57:15 : Logo1: Connection error
+17.04.2020  13:57:20 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:57:20 : Logo1: Connection error
+17.04.2020  13:57:25 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:57:25 : Logo1: Connection error
+17.04.2020  13:57:30 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:57:30 : Logo1: Connection error
+17.04.2020  13:57:36 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:57:36 : Logo1: Connection error
+17.04.2020  13:57:41 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:57:41 : Logo1: Connection error
+17.04.2020  13:57:46 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:57:46 : Logo1: Connection error
+17.04.2020  13:57:51 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:57:51 : Logo1: Connection error
+17.04.2020  13:57:56 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:57:56 : Logo1: Connection error
+17.04.2020  13:58:01 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:58:01 : Logo1: Connection error
+17.04.2020  13:58:06 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:58:06 : Logo1: Connection error
+17.04.2020  13:58:11 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:58:11 : Logo1: Connection error
+17.04.2020  13:58:16 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:58:16 : Logo1: Connection error
+17.04.2020  13:58:22 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:58:22 : Logo1: Connection error
+17.04.2020  13:58:27 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:58:27 : Logo1: Connection error
+17.04.2020  13:58:32 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:58:32 : Logo1: Connection error
+17.04.2020  13:58:37 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:58:37 : Logo1: Connection error
+17.04.2020  13:58:42 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:58:42 : Logo1: Connection error
+17.04.2020  13:58:47 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  13:58:47 : Logo1: Connection error
+17.04.2020  14:00:11 : Logo1: Connecting...
+17.04.2020  14:00:11 : Logo2: Connecting...
+17.04.2020  14:00:11 : Logo2: Connected
+17.04.2020  14:00:11 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:00:12 : Login try: Local
+17.04.2020  14:00:13 : Logo1: TCP : Connection Error
+17.04.2020  14:00:13 : Logo1: CLI : Client not connected
+17.04.2020  14:00:13 : Logo1: Connection error
+17.04.2020  14:00:18 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:00:18 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:00:18 : Logo1: Connection error
+17.04.2020  14:00:23 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:00:23 : Logo1: Connection error
+17.04.2020  14:00:28 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:00:28 : Logo1: Connection error
+17.04.2020  14:00:34 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:00:34 : Logo1: Connection error
+17.04.2020  14:00:39 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:00:39 : Logo1: Connection error
+17.04.2020  14:00:43 : Logo2: Watchdog error - Watchdog does not change
+17.04.2020  14:00:43 : Logo2: Connection error
+17.04.2020  14:00:44 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:00:44 : Logo1: Connection error
+17.04.2020  14:00:47 : Logo2: Connected again
+17.04.2020  14:00:49 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:00:49 : Logo1: Connection error
+17.04.2020  14:00:54 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:00:54 : Logo1: Connection error
+17.04.2020  14:00:59 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:00:59 : Logo1: Connection error
+17.04.2020  14:01:04 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:01:04 : Logo1: Connection error
+17.04.2020  14:01:09 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:01:09 : Logo1: Connection error
+17.04.2020  14:01:15 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:01:15 : Logo1: Connection error
+17.04.2020  14:01:20 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:01:20 : Logo1: Connection error
+17.04.2020  14:01:25 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:01:25 : Logo1: Connection error
+17.04.2020  14:01:30 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:01:30 : Logo1: Connection error
+17.04.2020  14:01:35 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:01:35 : Logo1: Connection error
+17.04.2020  14:01:40 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:01:40 : Logo1: Connection error
+17.04.2020  14:03:00 : Logo1: Connecting...
+17.04.2020  14:03:00 : Logo2: Connecting...
+17.04.2020  14:03:01 : Logo2: Connected
+17.04.2020  14:03:01 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:03:03 : Logo1: TCP : Connection Error
+17.04.2020  14:03:03 : Logo1: CLI : Client not connected
+17.04.2020  14:03:03 : Logo1: Connection error
+17.04.2020  14:03:08 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:03:08 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:03:08 : Logo1: Connection error
+17.04.2020  14:03:09 : Login try: Local
+17.04.2020  14:03:13 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:03:13 : Logo1: Connection error
+17.04.2020  14:03:18 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:03:18 : Logo1: Connection error
+17.04.2020  14:03:23 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:03:23 : Logo1: Connection error
+17.04.2020  14:03:23 : Logo2: Watchdog error - Watchdog does not change
+17.04.2020  14:03:23 : Logo2: Connection error
+17.04.2020  14:03:26 : Logo2: Connected again
+17.04.2020  14:03:28 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:03:28 : Logo1: Connection error
+17.04.2020  14:03:33 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:03:33 : Logo1: Connection error
+17.04.2020  14:03:38 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:03:38 : Logo1: Connection error
+17.04.2020  14:03:44 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:03:44 : Logo1: Connection error
+17.04.2020  14:03:49 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:03:49 : Logo1: Connection error
+17.04.2020  14:03:54 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:03:54 : Logo1: Connection error
+17.04.2020  14:03:59 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:03:59 : Logo1: Connection error
+17.04.2020  14:04:04 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:04:04 : Logo1: Connection error
+17.04.2020  14:04:09 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:04:09 : Logo1: Connection error
+17.04.2020  14:04:14 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:04:14 : Logo1: Connection error
+17.04.2020  14:04:19 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:04:19 : Logo1: Connection error
+17.04.2020  14:04:46 : Logo1: Connecting...
+17.04.2020  14:04:47 : Logo2: Connecting...
+17.04.2020  14:04:47 : Logo2: Connected
+17.04.2020  14:04:47 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:04:48 : Login try: Local
+17.04.2020  14:04:49 : Logo1: TCP : Connection Error
+17.04.2020  14:04:49 : Logo1: CLI : Client not connected
+17.04.2020  14:04:49 : Logo1: Connection error
+17.04.2020  14:04:54 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:04:54 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:04:54 : Logo1: Connection error
+17.04.2020  14:04:59 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:04:59 : Logo1: Connection error
+17.04.2020  14:05:04 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:05:04 : Logo1: Connection error
+17.04.2020  14:05:09 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:05:09 : Logo1: Connection error
+17.04.2020  14:05:14 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:05:14 : Logo1: Connection error
+17.04.2020  14:05:19 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:05:19 : Logo1: Connection error
+17.04.2020  14:05:24 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:05:24 : Logo1: Connection error
+17.04.2020  14:05:30 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:05:30 : Logo1: Connection error
+17.04.2020  14:05:35 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:05:35 : Logo1: Connection error
+17.04.2020  14:05:40 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:05:40 : Logo1: Connection error
+17.04.2020  14:05:45 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:05:45 : Logo1: Connection error
+17.04.2020  14:05:50 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:05:50 : Logo1: Connection error
+17.04.2020  14:05:55 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:05:55 : Logo1: Connection error
+17.04.2020  14:06:00 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:06:00 : Logo1: Connection error
+17.04.2020  14:06:05 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:06:05 : Logo1: Connection error
+17.04.2020  14:06:10 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:06:10 : Logo1: Connection error
+17.04.2020  14:06:16 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:06:16 : Logo1: Connection error
+17.04.2020  14:06:21 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:06:21 : Logo1: Connection error
+17.04.2020  14:06:26 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:06:26 : Logo1: Connection error
+17.04.2020  14:06:31 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:06:31 : Logo1: Connection error
+17.04.2020  14:06:36 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:06:36 : Logo1: Connection error
+17.04.2020  14:06:41 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:06:41 : Logo1: Connection error
+17.04.2020  14:06:46 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:06:46 : Logo1: Connection error
+17.04.2020  14:06:51 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:06:51 : Logo1: Connection error
+17.04.2020  14:06:57 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:06:57 : Logo1: Connection error
+17.04.2020  14:07:02 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:07:02 : Logo1: Connection error
+17.04.2020  14:07:07 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:07:07 : Logo1: Connection error
+17.04.2020  14:07:12 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:07:12 : Logo1: Connection error
+17.04.2020  14:07:17 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:07:17 : Logo1: Connection error
+17.04.2020  14:07:22 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:07:22 : Logo1: Connection error
+17.04.2020  14:07:27 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:07:27 : Logo1: Connection error
+17.04.2020  14:07:32 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:07:32 : Logo1: Connection error
+17.04.2020  14:07:38 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:07:38 : Logo1: Connection error
+17.04.2020  14:07:43 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:07:43 : Logo1: Connection error
+17.04.2020  14:07:48 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:07:48 : Logo1: Connection error
+17.04.2020  14:07:53 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:07:53 : Logo1: Connection error
+17.04.2020  14:07:58 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:07:58 : Logo1: Connection error
+17.04.2020  14:08:03 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:08:03 : Logo1: Connection error
+17.04.2020  14:08:08 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:08:08 : Logo1: Connection error
+17.04.2020  14:08:13 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:08:13 : Logo1: Connection error
+17.04.2020  14:08:19 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:08:19 : Logo1: Connection error
+17.04.2020  14:08:24 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:08:24 : Logo1: Connection error
+17.04.2020  14:08:29 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:08:29 : Logo1: Connection error
+17.04.2020  14:08:34 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:08:34 : Logo1: Connection error
+17.04.2020  14:08:39 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:08:39 : Logo1: Connection error
+17.04.2020  14:08:44 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:08:44 : Logo1: Connection error
+17.04.2020  14:08:49 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:08:49 : Logo1: Connection error
+17.04.2020  14:08:54 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:08:54 : Logo1: Connection error
+17.04.2020  14:09:00 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:09:00 : Logo1: Connection error
+17.04.2020  14:09:05 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:09:05 : Logo1: Connection error
+17.04.2020  14:09:10 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:09:10 : Logo1: Connection error
+17.04.2020  14:09:15 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:09:15 : Logo1: Connection error
+17.04.2020  14:09:20 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:09:20 : Logo1: Connection error
+17.04.2020  14:09:25 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:09:25 : Logo1: Connection error
+17.04.2020  14:09:30 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:09:30 : Logo1: Connection error
+17.04.2020  14:09:35 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:09:35 : Logo1: Connection error
+17.04.2020  14:09:40 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:09:40 : Logo1: Connection error
+17.04.2020  14:09:46 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:09:46 : Logo1: Connection error
+17.04.2020  14:09:51 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:09:51 : Logo1: Connection error
+17.04.2020  14:09:56 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:09:56 : Logo1: Connection error
+17.04.2020  14:10:01 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:10:01 : Logo1: Connection error
+17.04.2020  14:10:06 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:10:06 : Logo1: Connection error
+17.04.2020  14:10:55 : Logo1: Connecting...
+17.04.2020  14:10:55 : Logo2: Connecting...
+17.04.2020  14:10:55 : Logo2: Connected
+17.04.2020  14:10:55 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:10:57 : Login try: Local
+17.04.2020  14:10:57 : Logo1: TCP : Connection Error
+17.04.2020  14:10:57 : Logo1: CLI : Client not connected
+17.04.2020  14:10:57 : Logo1: Connection error
+17.04.2020  14:11:02 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:11:02 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:11:02 : Logo1: Connection error
+17.04.2020  14:11:07 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:11:07 : Logo1: Connection error
+17.04.2020  14:11:08 : Logo2: Watchdog error - Watchdog does not change
+17.04.2020  14:11:08 : Logo2: Connection error
+17.04.2020  14:11:12 : Logo2: Connected again
+17.04.2020  14:11:12 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:11:12 : Logo1: Connection error
+17.04.2020  14:11:18 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:11:18 : Logo1: Connection error
+17.04.2020  14:11:23 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:11:23 : Logo1: Connection error
+17.04.2020  14:11:28 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:11:28 : Logo1: Connection error
+17.04.2020  14:11:33 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:11:33 : Logo1: Connection error
+17.04.2020  14:11:38 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:11:38 : Logo1: Connection error
+17.04.2020  14:11:43 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:11:43 : Logo1: Connection error
+17.04.2020  14:11:48 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:11:48 : Logo1: Connection error
+17.04.2020  14:11:53 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:11:53 : Logo1: Connection error
+17.04.2020  14:11:59 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:11:59 : Logo1: Connection error
+17.04.2020  14:12:04 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:12:04 : Logo1: Connection error
+17.04.2020  14:12:09 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:12:09 : Logo1: Connection error
+17.04.2020  14:12:14 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:12:14 : Logo1: Connection error
+17.04.2020  14:12:19 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:12:19 : Logo1: Connection error
+17.04.2020  14:12:24 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:12:24 : Logo1: Connection error
+17.04.2020  14:12:29 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:12:29 : Logo1: Connection error
+17.04.2020  14:12:34 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:12:34 : Logo1: Connection error
+17.04.2020  14:12:52 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:12:52 : Read from PLC failed. Address: VW84, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  14:12:53 : Logo1: Connection error
+17.04.2020  14:12:58 : Read from PLC failed. Address: VW80, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  14:13:07 : Read from PLC failed. Address: VW86, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+17.04.2020  14:13:09 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:13:09 : Logo1: Connection error
+17.04.2020  14:13:09 : Read from PLC failed. Address: VW50, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ;
+17.04.2020  14:13:11 : Read from PLC failed. Address: VW54, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ;
+17.04.2020  14:13:13 : Read from PLC failed. Address: VW58, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ;
+17.04.2020  14:13:14 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:13:14 : Logo1: Connection error
+17.04.2020  14:13:15 : Read from PLC failed. Address: bit at 700, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  14:13:17 : Read from PLC failed. Address: VW62, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  14:13:26 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:13:26 : Logo1: Connection error
+17.04.2020  14:13:26 : Read from PLC failed. Address: VW64, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  14:13:26 : Read from PLC failed. Address: VW66, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  14:13:26 : Read from PLC failed. Address: bit at 900, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  14:13:26 : Read from PLC failed. Address: VW104, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  14:13:26 : Logo2: CLI : Client not connected
+17.04.2020  14:13:26 : Logo2: Connection error
+17.04.2020  14:13:30 : Logo2: Connected again
+17.04.2020  14:14:19 : Logo1: Connecting...
+17.04.2020  14:14:19 : Logo2: Connecting...
+17.04.2020  14:14:19 : Logo2: Connected
+17.04.2020  14:14:19 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:14:21 : Logo1: TCP : Connection Error
+17.04.2020  14:14:21 : Logo1: CLI : Client not connected
+17.04.2020  14:14:21 : Logo1: Connection error
+17.04.2020  14:14:25 : Login try: Local
+17.04.2020  14:14:26 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:14:26 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:14:26 : Logo1: Connection error
+17.04.2020  14:14:31 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:14:31 : Logo1: Connection error
+17.04.2020  14:14:36 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:14:36 : Logo1: Connection error
+17.04.2020  14:14:41 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:14:41 : Logo1: Connection error
+17.04.2020  14:14:46 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:14:46 : Logo1: Connection error
+17.04.2020  14:14:51 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:14:51 : Logo1: Connection error
+17.04.2020  14:14:56 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:14:56 : Logo1: Connection error
+17.04.2020  14:15:02 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:15:02 : Logo1: Connection error
+17.04.2020  14:15:07 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:15:07 : Logo1: Connection error
+17.04.2020  14:15:12 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:15:12 : Logo1: Connection error
+17.04.2020  14:15:17 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:15:17 : Logo1: Connection error
+17.04.2020  14:17:45 : Logo1: Connecting...
+17.04.2020  14:17:45 : Logo2: Connecting...
+17.04.2020  14:17:45 : Logo2: Connected
+17.04.2020  14:17:45 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:17:47 : Login try: Local
+17.04.2020  14:17:47 : Logo1: TCP : Connection Error
+17.04.2020  14:17:47 : Logo1: CLI : Client not connected
+17.04.2020  14:17:47 : Logo1: Connection error
+17.04.2020  14:17:59 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:18:01 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:18:01 : Logo1: Connection error
+17.04.2020  14:18:08 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:18:08 : Logo1: Connection error
+17.04.2020  14:18:15 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:18:15 : Logo1: Connection error
+17.04.2020  14:18:20 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:18:20 : Logo1: Connection error
+17.04.2020  14:18:25 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:18:25 : Logo1: Connection error
+17.04.2020  14:18:30 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:18:30 : Logo1: Connection error
+17.04.2020  14:18:35 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:18:35 : Logo1: Connection error
+17.04.2020  14:18:40 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:18:40 : Logo1: Connection error
+17.04.2020  14:18:46 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:18:46 : Logo1: Connection error
+17.04.2020  14:18:51 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:18:51 : Logo1: Connection error
+17.04.2020  14:18:56 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:18:56 : Logo1: Connection error
+17.04.2020  14:19:01 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:19:01 : Logo1: Connection error
+17.04.2020  14:19:06 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:19:06 : Logo1: Connection error
+17.04.2020  14:19:11 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:19:11 : Logo1: Connection error
+17.04.2020  14:19:16 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:19:16 : Logo1: Connection error
+17.04.2020  14:19:21 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:19:21 : Logo1: Connection error
+17.04.2020  14:19:26 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:19:26 : Logo1: Connection error
+17.04.2020  14:19:32 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:19:32 : Logo1: Connection error
+17.04.2020  14:19:37 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:19:37 : Logo1: Connection error
+17.04.2020  14:19:42 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:19:42 : Logo1: Connection error
+17.04.2020  14:19:47 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:19:47 : Logo1: Connection error
+17.04.2020  14:19:52 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:19:52 : Logo1: Connection error
+17.04.2020  14:19:57 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:19:57 : Logo1: Connection error
+17.04.2020  14:20:02 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:20:02 : Logo1: Connection error
+17.04.2020  14:20:18 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:20:18 : Logo1: Connection error
+17.04.2020  14:20:27 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:20:27 : Logo1: Connection error
+17.04.2020  14:20:35 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:20:38 : Logo1: Connection error
+17.04.2020  14:20:38 : Read from PLC failed. Address: VW84, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  14:20:56 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:20:56 : Read from PLC failed. Address: VW86, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+17.04.2020  14:20:56 : Logo1: Connection error
+17.04.2020  14:21:02 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:21:03 : Logo1: Connection error
+17.04.2020  14:21:09 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:21:09 : Logo1: Connection error
+17.04.2020  14:21:15 : Read from PLC failed. Address: VW50, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ;
+17.04.2020  14:21:17 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:21:17 : Logo1: Connection error
+17.04.2020  14:21:23 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:21:23 : Logo1: Connection error
+17.04.2020  14:21:33 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:21:33 : Logo1: Connection error
+17.04.2020  14:21:46 : Logo2: TCP : Error receiving Data
+17.04.2020  14:21:48 : Logo2: Connection error
+17.04.2020  14:21:48 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:21:48 : Logo1: Connection error
+17.04.2020  14:21:56 : Writing values to csv file failed (C:\Users\Bojan Horvat.DESKTOP-SCGNVGJ\Source\Repos\Marko-Humar-Hlev-Velesovo-ASP\WebApplication1\\ChartValues\ChartValues_Today.csv). The process cannot access the file 'C:\Users\Bojan Horvat.DESKTOP-SCGNVGJ\Source\Repos\Marko-Humar-Hlev-Velesovo-ASP\WebApplication1\ChartValues\ChartValues_Today.csv' because it is being used by another process.
+17.04.2020  14:21:56 : Logo2: Connection failed. Trying to reconnect
+17.04.2020  14:21:58 : Logo2: CLI : Client not connected
+17.04.2020  14:21:58 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:21:58 : Logo2: Connection error
+17.04.2020  14:21:58 : Logo1: Connection error
+17.04.2020  14:22:07 : Logo2: Connected again
+17.04.2020  14:22:09 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:22:09 : Logo1: Connection error
+17.04.2020  14:22:22 : Read from PLC failed. Address: VW64, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  14:22:22 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:22:22 : Logo1: Connection error
+17.04.2020  14:22:33 : Read from PLC failed. Address: VW84, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  14:22:35 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:22:35 : Logo1: Connection error
+17.04.2020  14:22:41 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:22:41 : Logo1: Connection error
+17.04.2020  14:22:46 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:22:46 : Logo1: Connection error
+17.04.2020  14:22:51 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:22:51 : Logo1: Connection error
+17.04.2020  14:22:56 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:22:56 : Logo1: Connection error
+17.04.2020  14:23:01 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:23:01 : Logo1: Connection error
+17.04.2020  14:23:06 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:23:06 : Logo1: Connection error
+17.04.2020  14:23:11 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:23:11 : Logo1: Connection error
+17.04.2020  14:23:24 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:23:25 : Logo1: Connection error
+17.04.2020  14:23:29 : Read from PLC failed. Address: VW62, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  14:23:33 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:23:34 : Logo1: Connection error
+17.04.2020  14:23:37 : Read from PLC failed. Address: VW80, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  14:23:44 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:23:45 : Logo1: Connection error
+17.04.2020  14:23:45 : Read from PLC failed. Address: VW50, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ;
+17.04.2020  14:24:07 : Logo1: Connecting...
+17.04.2020  14:24:07 : Logo2: Connecting...
+17.04.2020  14:24:07 : Logo2: Connected
+17.04.2020  14:24:07 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:24:08 : Login try: Local
+17.04.2020  14:24:09 : Logo1: TCP : Connection Error
+17.04.2020  14:24:09 : Logo1: CLI : Client not connected
+17.04.2020  14:24:09 : Logo1: Connection error
+17.04.2020  14:24:19 : Read from PLC failed. Address: VW50, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ;
+17.04.2020  14:24:23 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:24:23 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:24:23 : Logo1: Connection error
+17.04.2020  14:24:30 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:24:30 : Logo1: Connection error
+17.04.2020  14:24:36 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:24:36 : Logo1: Connection error
+17.04.2020  14:24:41 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:24:41 : Logo1: Connection error
+17.04.2020  14:24:46 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:24:46 : Logo1: Connection error
+17.04.2020  14:24:51 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:24:51 : Logo1: Connection error
+17.04.2020  14:24:56 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:24:56 : Logo1: Connection error
+17.04.2020  14:25:01 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:25:01 : Logo1: Connection error
+17.04.2020  14:25:06 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:25:06 : Logo1: Connection error
+17.04.2020  14:25:11 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:25:11 : Logo1: Connection error
+17.04.2020  14:25:17 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:25:17 : Logo1: Connection error
+17.04.2020  14:25:22 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:25:22 : Logo1: Connection error
+17.04.2020  14:25:27 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:25:27 : Logo1: Connection error
+17.04.2020  14:25:34 : Logo1: Connecting...
+17.04.2020  14:25:34 : Logo2: Connecting...
+17.04.2020  14:25:34 : Logo2: Connected
+17.04.2020  14:25:34 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:25:36 : Logo1: TCP : Connection Error
+17.04.2020  14:25:36 : Logo1: CLI : Client not connected
+17.04.2020  14:25:36 : Logo1: Connection error
+17.04.2020  14:25:37 : Login try: Local
+17.04.2020  14:25:41 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:25:41 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:25:41 : Logo1: Connection error
+17.04.2020  14:25:59 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:26:01 : Logo1: Connection error
+17.04.2020  14:26:01 : Read from PLC failed. Address: VW80, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  14:26:06 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:26:06 : Logo1: Connection error
+17.04.2020  14:26:15 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:26:15 : Logo1: Connection error
+17.04.2020  14:26:20 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:26:20 : Logo1: Connection error
+17.04.2020  14:26:26 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:26:26 : Logo1: Connection error
+17.04.2020  14:26:31 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:26:31 : Logo1: Connection error
+17.04.2020  14:26:36 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:26:36 : Logo1: Connection error
+17.04.2020  14:26:41 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:26:41 : Logo1: Connection error
+17.04.2020  14:26:46 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:26:46 : Logo1: Connection error
+17.04.2020  14:26:51 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:26:51 : Logo1: Connection error
+17.04.2020  14:26:56 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:26:56 : Logo1: Connection error
+17.04.2020  14:27:01 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:27:01 : Logo1: Connection error
+17.04.2020  14:27:07 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:27:07 : Logo1: Connection error
+17.04.2020  14:27:12 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:27:12 : Logo1: Connection error
+17.04.2020  14:27:17 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:27:17 : Logo1: Connection error
+17.04.2020  14:35:25 : Logo1: Connecting...
+17.04.2020  14:35:25 : Logo2: Connecting...
+17.04.2020  14:35:25 : Logo2: Connected
+17.04.2020  14:35:25 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:35:27 : Logo1: TCP : Connection Error
+17.04.2020  14:35:27 : Logo1: CLI : Client not connected
+17.04.2020  14:35:27 : Logo1: Connection error
+17.04.2020  14:35:32 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:35:32 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:35:32 : Logo1: Connection error
+17.04.2020  14:35:33 : Login try: Local
+17.04.2020  14:35:37 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:35:37 : Logo1: Connection error
+17.04.2020  14:35:42 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:35:42 : Logo1: Connection error
+17.04.2020  14:35:47 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:35:47 : Logo1: Connection error
+17.04.2020  14:35:52 : Exception of type 'System.Web.HttpUnhandledException' was thrown. Read from PC failed.Input string was not in a correct format. Address: VW80, Read Error type: OK, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False isWritable: True;    at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_ventilacija_aspx.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
+   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
+   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
+   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
+   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+17.04.2020  14:35:52 : Error inside method Redirect(). Response is not available in this context.
+17.04.2020  14:35:52 : Error inside method RedirectBack(). Error executing child request for defaultaspx.
+17.04.2020  14:35:53 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:35:53 : Logo1: Connection error
+17.04.2020  14:35:56 : Exception of type 'System.Web.HttpUnhandledException' was thrown. Read from PC failed.Input string was not in a correct format. Address: VW80, Read Error type: OK, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False isWritable: True;    at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_ventilacija_aspx.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
+   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
+   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
+   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
+   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+17.04.2020  14:35:56 : Error inside method Redirect(). Response is not available in this context.
+17.04.2020  14:35:56 : Error inside method RedirectBack(). Error executing child request for Loginaspx.
+17.04.2020  14:35:58 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:35:58 : Logo1: Connection error
+17.04.2020  14:36:02 : Exception of type 'System.Web.HttpUnhandledException' was thrown. Read from PC failed.Input string was not in a correct format. Address: VW80, Read Error type: OK, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False isWritable: True;    at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_ventilacija_aspx.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
+   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
+   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
+   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
+   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+17.04.2020  14:36:02 : Error inside method Redirect(). Response is not available in this context.
+17.04.2020  14:36:02 : Error inside method RedirectBack(). Error executing child request for Defaultaspx.
+17.04.2020  14:36:03 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:36:03 : Logo1: Connection error
+17.04.2020  14:36:08 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:36:08 : Logo1: Connection error
+17.04.2020  14:36:13 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:36:13 : Logo1: Connection error
+17.04.2020  14:36:26 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:36:26 : Logo1: Connection error
+17.04.2020  14:36:34 : Writing values to csv file failed (C:\Users\Bojan Horvat.DESKTOP-SCGNVGJ\Source\Repos\Marko-Humar-Hlev-Velesovo-ASP\WebApplication1\\ChartValues\ChartValues_Today.csv). The process cannot access the file 'C:\Users\Bojan Horvat.DESKTOP-SCGNVGJ\Source\Repos\Marko-Humar-Hlev-Velesovo-ASP\WebApplication1\ChartValues\ChartValues_Today.csv' because it is being used by another process.
+17.04.2020  14:36:38 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:36:38 : Read from PLC failed. Address: VW64, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  14:36:39 : Logo1: Connection error
+17.04.2020  14:36:47 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:36:48 : Logo1: Connection error
+17.04.2020  14:36:48 : Read from PLC failed. Address: VW66, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  14:37:05 : Read from PLC failed. Address: VW104, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  14:39:08 : Logo1: Connecting...
+17.04.2020  14:39:08 : Logo2: Connecting...
+17.04.2020  14:39:08 : Logo2: Connected
+17.04.2020  14:39:08 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:39:09 : Login try: Local
+17.04.2020  14:39:10 : Logo1: TCP : Connection Error
+17.04.2020  14:39:10 : Logo1: CLI : Client not connected
+17.04.2020  14:39:10 : Logo1: Connection error
+17.04.2020  14:39:15 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:39:15 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:39:15 : Logo1: Connection error
+17.04.2020  14:39:23 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:39:23 : Logo1: Connection error
+17.04.2020  14:39:50 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:39:50 : Logo1: Connection error
+17.04.2020  14:40:07 : Logo1: Connecting...
+17.04.2020  14:40:07 : Logo2: Connecting...
+17.04.2020  14:40:07 : Logo2: Connected
+17.04.2020  14:40:07 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:40:08 : Login try: Local
+17.04.2020  14:40:09 : Logo1: TCP : Connection Error
+17.04.2020  14:40:09 : Logo1: CLI : Client not connected
+17.04.2020  14:40:09 : Logo1: Connection error
+17.04.2020  14:40:25 : Logo1: Connecting...
+17.04.2020  14:40:26 : Logo2: Connecting...
+17.04.2020  14:40:26 : Logo2: Connected
+17.04.2020  14:40:26 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:40:28 : Logo1: TCP : Connection Error
+17.04.2020  14:40:28 : Logo1: CLI : Client not connected
+17.04.2020  14:40:28 : Logo1: Connection error
+17.04.2020  14:40:28 : Login try: Local
+17.04.2020  14:40:33 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:40:33 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:40:33 : Logo1: Connection error
+17.04.2020  14:40:38 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:40:38 : Logo1: Connection error
+17.04.2020  14:40:43 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:40:43 : Logo1: Connection error
+17.04.2020  14:40:48 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:40:48 : Logo1: Connection error
+17.04.2020  14:40:53 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:40:53 : Logo1: Connection error
+17.04.2020  14:42:38 : Logo1: Connecting...
+17.04.2020  14:42:38 : Logo2: Connecting...
+17.04.2020  14:42:38 : Logo2: Connected
+17.04.2020  14:42:38 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:42:40 : Logo1: TCP : Connection Error
+17.04.2020  14:42:40 : Logo1: CLI : Client not connected
+17.04.2020  14:42:40 : Logo1: Connection error
+17.04.2020  14:42:45 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:42:45 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:42:45 : Logo1: Connection error
+17.04.2020  14:42:46 : Login try: Local
+17.04.2020  14:42:50 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:42:50 : Logo1: Connection error
+17.04.2020  14:42:58 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:42:59 : Logo1: Connection error
+17.04.2020  14:43:07 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:43:11 : Logo1: Connection error
+17.04.2020  14:43:11 : Read from PLC failed. Address: VW114, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ;
+17.04.2020  14:43:19 : Read from PLC failed. Address: VW86, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+17.04.2020  14:43:22 : Read from PLC failed. Address: VW54, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ;
+17.04.2020  14:43:26 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:43:27 : Logo1: Connection error
+17.04.2020  14:43:30 : Read from PLC failed. Address: bit at 900, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  14:43:34 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:43:34 : Logo1: Connection error
+17.04.2020  14:44:24 : Read from PLC failed. Address: VW58, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ;
+17.04.2020  14:44:24 : Exception of type 'System.Web.HttpUnhandledException' was thrown. Read from PC failed.Input string was not in a correct format. Address: VW80, Read Error type: OK, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False isWritable: True;    at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_ventilacija_aspx.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
+   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
+   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
+   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
+   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+17.04.2020  14:44:24 : Error inside method Redirect(). Response is not available in this context.
+17.04.2020  14:44:24 : Error inside method RedirectBack(). Error executing child request for defaultaspx.
+17.04.2020  14:44:26 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:44:26 : Logo1: Connection error
+17.04.2020  14:44:34 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:44:34 : Logo1: Connection error
+17.04.2020  14:44:43 : Read from PLC failed. Address: VW104, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: True;
+17.04.2020  14:44:48 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:44:48 : Logo1: Connection error
+17.04.2020  14:45:11 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:45:11 : Read from PLC failed. Address: VW58, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ;
+17.04.2020  14:45:12 : Logo1: Connection error
+17.04.2020  14:56:36 : Logo1: Connecting...
+17.04.2020  14:56:36 : Logo2: Connecting...
+17.04.2020  14:56:36 : Logo2: Connected
+17.04.2020  14:56:36 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:56:38 : Login try: Local
+17.04.2020  14:56:38 : Logo1: TCP : Connection Error
+17.04.2020  14:56:38 : Logo1: CLI : Client not connected
+17.04.2020  14:56:38 : Logo1: Connection error
+17.04.2020  14:57:04 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:57:13 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:57:13 : Logo1: Connection error
+17.04.2020  14:57:23 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:57:23 : Logo1: Connection error
+17.04.2020  14:57:28 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:57:28 : Logo1: Connection error
+17.04.2020  14:57:46 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:57:46 : Logo1: Connection error
+17.04.2020  14:57:51 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:57:51 : Logo1: Connection error
+17.04.2020  14:58:35 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:58:35 : Logo1: Connection error
+17.04.2020  14:58:40 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:58:40 : Logo1: Connection error
+17.04.2020  14:58:46 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:58:46 : Logo1: Connection error
+17.04.2020  14:59:49 : Logo1: Connecting...
+17.04.2020  14:59:49 : Logo2: Connecting...
+17.04.2020  14:59:49 : Logo2: Connected
+17.04.2020  14:59:49 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:59:50 : Login try: Local
+17.04.2020  14:59:51 : Logo1: TCP : Connection Error
+17.04.2020  14:59:51 : Logo1: CLI : Client not connected
+17.04.2020  14:59:51 : Logo1: Connection error
+17.04.2020  14:59:57 : Read from PLC failed. Address: VW86, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+17.04.2020  14:59:59 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  14:59:59 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  14:59:59 : Logo1: Connection error
+17.04.2020  15:00:04 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:00:04 : Logo1: Connection error
+17.04.2020  15:00:53 : Logo1: Connecting...
+17.04.2020  15:00:53 : Logo2: Connecting...
+17.04.2020  15:00:53 : Logo2: Connected
+17.04.2020  15:00:53 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:00:54 : Login try: Local
+17.04.2020  15:00:55 : Logo1: TCP : Connection Error
+17.04.2020  15:00:55 : Logo1: CLI : Client not connected
+17.04.2020  15:00:55 : Logo1: Connection error
+17.04.2020  15:01:00 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:01:00 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:01:00 : Logo1: Connection error
+17.04.2020  15:01:05 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:01:05 : Logo1: Connection error
+17.04.2020  15:01:11 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:01:11 : Logo1: Connection error
+17.04.2020  15:03:45 : Logo1: Connecting...
+17.04.2020  15:03:45 : Logo2: Connecting...
+17.04.2020  15:03:45 : Logo2: Connected
+17.04.2020  15:03:45 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:03:47 : Login try: Local
+17.04.2020  15:03:47 : Logo1: TCP : Connection Error
+17.04.2020  15:03:47 : Logo1: CLI : Client not connected
+17.04.2020  15:03:47 : Logo1: Connection error
+17.04.2020  15:03:52 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:03:52 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:03:52 : Logo1: Connection error
+17.04.2020  15:03:58 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:03:58 : Logo1: Connection error
+17.04.2020  15:18:25 : Logo1: Connecting...
+17.04.2020  15:18:25 : Logo2: Connecting...
+17.04.2020  15:18:25 : Logo2: Connected
+17.04.2020  15:18:25 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:18:27 : Logo1: TCP : Connection Error
+17.04.2020  15:18:27 : Logo1: CLI : Client not connected
+17.04.2020  15:18:27 : Logo1: Connection error
+17.04.2020  15:18:32 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:18:32 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:18:32 : Logo1: Connection error
+17.04.2020  15:18:37 : Login try: Local
+17.04.2020  15:18:37 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:18:37 : Logo1: Connection error
+17.04.2020  15:18:44 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:18:44 : Logo1: Connection error
+17.04.2020  15:18:51 : Read from PLC failed. Address: VW50, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ;
+17.04.2020  15:18:54 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:18:54 : Logo1: Connection error
+17.04.2020  15:19:22 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:19:22 : Logo1: Connection error
+17.04.2020  15:21:42 : Logo1: Connecting...
+17.04.2020  15:21:42 : Logo2: Connecting...
+17.04.2020  15:21:42 : Logo2: Connected
+17.04.2020  15:21:42 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:21:44 : Login try: Local
+17.04.2020  15:21:44 : Logo1: TCP : Connection Error
+17.04.2020  15:21:44 : Logo1: CLI : Client not connected
+17.04.2020  15:21:44 : Logo1: Connection error
+17.04.2020  15:21:49 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:21:49 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:21:49 : Logo1: Connection error
+17.04.2020  15:21:54 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:21:54 : Logo1: Connection error
+17.04.2020  15:21:59 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:21:59 : Logo1: Connection error
+17.04.2020  15:22:04 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:22:04 : Logo1: Connection error
+17.04.2020  15:22:09 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:22:09 : Logo1: Connection error
+17.04.2020  15:22:14 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:22:14 : Logo1: Connection error
+17.04.2020  15:22:23 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:22:35 : Logo1: Connection error
+17.04.2020  15:22:46 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:22:46 : Logo1: Connection error
+17.04.2020  15:22:51 : Read from PLC failed. Address: VW58, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ;
+17.04.2020  15:22:51 : Writing values to csv file failed (C:\Users\Bojan Horvat.DESKTOP-SCGNVGJ\Source\Repos\Marko-Humar-Hlev-Velesovo-ASP\WebApplication1\\ChartValues\ChartValues_Today.csv). The process cannot access the file 'C:\Users\Bojan Horvat.DESKTOP-SCGNVGJ\Source\Repos\Marko-Humar-Hlev-Velesovo-ASP\WebApplication1\ChartValues\ChartValues_Today.csv' because it is being used by another process.
+17.04.2020  15:25:55 : Logo1: Connecting...
+17.04.2020  15:25:55 : Logo2: Connecting...
+17.04.2020  15:25:55 : Logo2: Connected
+17.04.2020  15:25:55 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:25:57 : Login try: Local
+17.04.2020  15:25:57 : Logo1: TCP : Connection Error
+17.04.2020  15:25:57 : Logo1: CLI : Client not connected
+17.04.2020  15:25:57 : Logo1: Connection error
+17.04.2020  15:26:02 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:26:02 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:26:02 : Logo1: Connection error
+17.04.2020  15:26:07 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:26:07 : Logo1: Connection error
+17.04.2020  15:26:12 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:26:12 : Logo1: Connection error
+17.04.2020  15:26:18 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:26:18 : Logo1: Connection error
+17.04.2020  15:26:23 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:26:23 : Logo1: Connection error
+17.04.2020  15:26:28 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:26:28 : Logo1: Connection error
+17.04.2020  15:26:33 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:26:33 : Logo1: Connection error
+17.04.2020  15:26:38 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:26:38 : Logo1: Connection error
+17.04.2020  15:26:43 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:26:43 : Logo1: Connection error
+17.04.2020  15:26:48 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:26:48 : Logo1: Connection error
+17.04.2020  15:26:53 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:26:53 : Logo1: Connection error
+17.04.2020  15:26:58 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:26:58 : Logo1: Connection error
+17.04.2020  15:27:04 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:27:04 : Logo1: Connection error
+17.04.2020  15:27:09 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:27:09 : Logo1: Connection error
+17.04.2020  15:27:14 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:27:14 : Logo1: Connection error
+17.04.2020  15:27:19 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:27:19 : Logo1: Connection error
+17.04.2020  15:27:24 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:27:24 : Logo1: Connection error
+17.04.2020  15:27:29 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:27:29 : Logo1: Connection error
+17.04.2020  15:27:34 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:27:34 : Logo1: Connection error
+17.04.2020  15:27:39 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:27:39 : Logo1: Connection error
+17.04.2020  15:27:44 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:27:44 : Logo1: Connection error
+17.04.2020  15:27:50 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:27:50 : Logo1: Connection error
+17.04.2020  15:27:55 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:27:55 : Logo1: Connection error
+17.04.2020  15:28:00 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:28:00 : Logo1: Connection error
+17.04.2020  15:28:05 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:28:05 : Logo1: Connection error
+17.04.2020  15:28:10 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:28:10 : Logo1: Connection error
+17.04.2020  15:28:15 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:28:15 : Logo1: Connection error
+17.04.2020  15:28:20 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:28:20 : Logo1: Connection error
+17.04.2020  15:28:25 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:28:25 : Logo1: Connection error
+17.04.2020  15:28:31 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:28:31 : Logo1: Connection error
+17.04.2020  15:28:36 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:28:36 : Logo1: Connection error
+17.04.2020  15:28:41 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:28:41 : Logo1: Connection error
+17.04.2020  15:28:46 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:28:46 : Logo1: Connection error
+17.04.2020  15:28:51 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:28:51 : Logo1: Connection error
+17.04.2020  15:28:56 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:28:56 : Logo1: Connection error
+17.04.2020  15:29:01 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:29:01 : Logo1: Connection error
+17.04.2020  15:32:02 : Logo1: Connecting...
+17.04.2020  15:32:02 : Logo2: Connecting...
+17.04.2020  15:32:03 : Logo2: Connected
+17.04.2020  15:32:03 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:32:04 : Login try: Local
+17.04.2020  15:32:05 : Logo1: TCP : Connection Error
+17.04.2020  15:32:05 : Logo1: CLI : Client not connected
+17.04.2020  15:32:05 : Logo1: Connection error
+17.04.2020  15:32:10 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:32:10 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:32:10 : Logo1: Connection error
+17.04.2020  15:32:15 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:32:15 : Logo1: Connection error
+17.04.2020  15:32:20 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:32:20 : Logo1: Connection error
+17.04.2020  15:32:27 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:32:27 : Logo1: Connection error
+17.04.2020  15:32:37 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:32:37 : Logo1: Connection error
+17.04.2020  15:32:43 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:32:43 : Logo1: Connection error
+17.04.2020  15:32:51 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:32:51 : Logo1: Connection error
+17.04.2020  15:33:01 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:33:01 : Logo1: Connection error
+17.04.2020  15:33:06 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:33:06 : Logo1: Connection error
+17.04.2020  15:35:48 : Logo1: Connecting...
+17.04.2020  15:35:48 : Logo2: Connecting...
+17.04.2020  15:35:48 : Logo2: Connected
+17.04.2020  15:35:48 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:35:50 : Login try: Local
+17.04.2020  15:35:50 : Logo1: TCP : Connection Error
+17.04.2020  15:35:50 : Logo1: CLI : Client not connected
+17.04.2020  15:35:50 : Logo1: Connection error
+17.04.2020  15:35:55 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:35:55 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:35:55 : Logo1: Connection error
+17.04.2020  15:36:00 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:36:00 : Logo1: Connection error
+17.04.2020  15:36:04 : Logo2: Watchdog error - Watchdog does not change
+17.04.2020  15:36:04 : Logo2: Connection error
+17.04.2020  15:36:05 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:36:05 : Logo1: Connection error
+17.04.2020  15:36:07 : Logo2: Connected again
+17.04.2020  15:36:11 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:36:11 : Logo1: Connection error
+17.04.2020  15:36:16 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:36:16 : Logo1: Connection error
+17.04.2020  15:36:21 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:36:21 : Logo1: Connection error
+17.04.2020  15:36:26 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:36:26 : Logo1: Connection error
+17.04.2020  15:36:31 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:36:31 : Logo1: Connection error
+17.04.2020  15:36:36 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:36:36 : Logo1: Connection error
+17.04.2020  15:36:41 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:36:41 : Logo1: Connection error
+17.04.2020  15:36:46 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:36:46 : Logo1: Connection error
+17.04.2020  15:36:51 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:36:51 : Logo1: Connection error
+17.04.2020  15:37:17 : Logo1: Connecting...
+17.04.2020  15:37:17 : Logo2: Connecting...
+17.04.2020  15:37:17 : Logo2: Connected
+17.04.2020  15:37:17 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:37:18 : Login try: Local
+17.04.2020  15:37:19 : Logo1: TCP : Connection Error
+17.04.2020  15:37:19 : Logo1: CLI : Client not connected
+17.04.2020  15:37:19 : Logo1: Connection error
+17.04.2020  15:37:24 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:37:24 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:37:24 : Logo1: Connection error
+17.04.2020  15:38:35 : Logo1: Connecting...
+17.04.2020  15:38:35 : Logo2: Connecting...
+17.04.2020  15:38:35 : Logo2: Connected
+17.04.2020  15:38:35 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:38:37 : Login try: Local
+17.04.2020  15:38:37 : Logo1: TCP : Connection Error
+17.04.2020  15:38:37 : Logo1: CLI : Client not connected
+17.04.2020  15:38:37 : Logo1: Connection error
+17.04.2020  15:38:42 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:38:42 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:38:42 : Logo1: Connection error
+17.04.2020  15:38:47 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:38:47 : Logo1: Connection error
+17.04.2020  15:39:58 : Logo1: Connecting...
+17.04.2020  15:39:58 : Logo2: Connecting...
+17.04.2020  15:39:58 : Logo2: Connected
+17.04.2020  15:39:58 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:40:00 : Login try: Local
+17.04.2020  15:40:00 : Logo1: TCP : Connection Error
+17.04.2020  15:40:00 : Logo1: CLI : Client not connected
+17.04.2020  15:40:00 : Logo1: Connection error
+17.04.2020  15:40:44 : Logo1: Connecting...
+17.04.2020  15:40:44 : Logo2: Connecting...
+17.04.2020  15:40:44 : Logo2: Connected
+17.04.2020  15:40:44 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:40:46 : Logo1: TCP : Connection Error
+17.04.2020  15:40:46 : Logo1: CLI : Client not connected
+17.04.2020  15:40:46 : Logo1: Connection error
+17.04.2020  15:40:46 : Login try: Local
+17.04.2020  15:40:51 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:40:51 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:40:51 : Logo1: Connection error
+17.04.2020  15:40:56 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:40:56 : Logo1: Connection error
+17.04.2020  15:41:09 : Logo1: Connecting...
+17.04.2020  15:41:09 : Logo2: Connecting...
+17.04.2020  15:41:09 : Logo2: Connected
+17.04.2020  15:41:09 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:41:10 : Login try: Local
+17.04.2020  15:41:11 : Logo1: TCP : Connection Error
+17.04.2020  15:41:11 : Logo1: CLI : Client not connected
+17.04.2020  15:41:11 : Logo1: Connection error
+17.04.2020  15:41:16 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:41:16 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:41:16 : Logo1: Connection error
+17.04.2020  15:41:21 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:41:21 : Logo1: Connection error
+17.04.2020  15:41:26 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:41:26 : Logo1: Connection error
+17.04.2020  15:41:31 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:41:31 : Logo1: Connection error
+17.04.2020  15:41:36 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:41:36 : Logo1: Connection error
+17.04.2020  15:41:41 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:41:41 : Logo1: Connection error
+17.04.2020  15:41:54 : Logo1: Connecting...
+17.04.2020  15:41:54 : Logo2: Connecting...
+17.04.2020  15:41:54 : Logo2: Connected
+17.04.2020  15:41:54 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:41:55 : Login try: Local
+17.04.2020  15:41:56 : Logo1: TCP : Connection Error
+17.04.2020  15:41:56 : Logo1: CLI : Client not connected
+17.04.2020  15:41:56 : Logo1: Connection error
+17.04.2020  15:42:14 : Logo1: Connecting...
+17.04.2020  15:42:14 : Logo2: Connecting...
+17.04.2020  15:42:14 : Logo2: Connected
+17.04.2020  15:42:14 : Logo2: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:42:15 : Login try: Local
+17.04.2020  15:42:16 : Logo1: TCP : Connection Error
+17.04.2020  15:42:16 : Logo1: CLI : Client not connected
+17.04.2020  15:42:16 : Logo1: Connection error
+17.04.2020  15:42:21 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:42:21 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+17.04.2020  15:42:21 : Logo1: Connection error
+17.04.2020  15:42:26 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:42:26 : Logo1: Connection error
+17.04.2020  15:42:31 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:42:31 : Logo1: Connection error
+17.04.2020  15:42:36 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:42:36 : Logo1: Connection error
+17.04.2020  15:42:41 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:42:41 : Logo1: Connection error
+17.04.2020  15:42:47 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:42:47 : Logo1: Connection error
+17.04.2020  15:42:52 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:42:52 : Logo1: Connection error
+17.04.2020  15:42:57 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:42:57 : Logo1: Connection error
+17.04.2020  15:43:02 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:43:02 : Logo1: Connection error
+17.04.2020  15:43:07 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:43:07 : Logo1: Connection error
+17.04.2020  15:43:12 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:43:12 : Logo1: Connection error
+17.04.2020  15:43:17 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:43:17 : Logo1: Connection error
+17.04.2020  15:43:22 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:43:22 : Logo1: Connection error
+17.04.2020  15:43:27 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:43:27 : Logo1: Connection error
+17.04.2020  15:43:33 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:43:33 : Logo1: Connection error
+17.04.2020  15:43:38 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:43:38 : Logo1: Connection error
+17.04.2020  15:43:43 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:43:43 : Logo1: Connection error
+17.04.2020  15:43:48 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:43:48 : Logo1: Connection error
+17.04.2020  15:43:53 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:43:53 : Logo1: Connection error
+17.04.2020  15:43:58 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:43:58 : Logo1: Connection error
+17.04.2020  15:44:03 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:44:03 : Logo1: Connection error
+17.04.2020  15:44:08 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:44:08 : Logo1: Connection error
+17.04.2020  15:44:14 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:44:14 : Logo1: Connection error
+17.04.2020  15:44:19 : Logo1: Connection failed. Trying to reconnect
+17.04.2020  15:44:19 : Logo1: Connection error

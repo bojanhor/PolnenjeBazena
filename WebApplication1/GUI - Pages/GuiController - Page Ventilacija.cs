@@ -62,9 +62,7 @@ namespace WebApplication1
                 Label lbl_tn1 = new Label(); // temperaturni nivo 1
                 Label lbl_tn2 = new Label(); // temperaturni nivo 2
                 Label lbl_tn3 = new Label(); // temperaturni nivo 3
-
-                Label lbl_OmejevalnikObratov = new Label(); // OmejevalnikObratov 
-
+                                
                 Label obr_vent = new Label(); // Vrednost [obratov] za omejevalec
 
                 GControls.DropDownListForTemperatureSelect_10_30 btnNastavi1;
@@ -91,7 +89,7 @@ namespace WebApplication1
 
                 GControls.GuiSeparator gs0;
                 GControls.SuperLabel Lbl_OmObratov; // Label Omejevalnik obratov
-                GControls.DropDown DropD_OmObratov;
+                GControls.DropDownListForYesNoSelect DropD_OmObratov;
                 GControls.GuiSeparator_DottedLine gs1;
 
                 GControls.SuperLabel Lbl_OmejiObrate;
@@ -106,11 +104,15 @@ namespace WebApplication1
                 GControls.DropDown DropD_UpostevajZT;
                 GControls.GuiSeparator gs3;
 
+                // Zgoraj
                 GControls.SuperLabel VklopRocniNacin;
-                GControls.DropDownListForYesNoSelect VklopRocniNacin_DD;
+                GControls.DropDownListForRocnoAvtoSelect VklopRocniNacin_DD;
 
                 GControls.SuperLabel VrednostRocniNacin;
                 GControls.DropDownListForDimmerRPM VrednostRocniNacin_DD;
+
+                GControls.SuperLabel DejanskiVrtljaji_lbl;
+                GControls.SuperLabel DejanskiVrtljaji_val;
 
                 GControls.UpdatePanelFull up = new GControls.UpdatePanelFull("VentilacijaUPanel", Settings.UpdateValuesPCms);
                                              
@@ -182,15 +184,31 @@ namespace WebApplication1
                     var prop = Val.logocontroler.Prop2;
                     var sizeBtn = 4;
                     var top = 7.1F;
-                    var fontsize = 1;
+                    var fs = 1; // fontsize
 
-                    VklopRocniNacin= new GControls.SuperLabel("Ročni Način:", top+2, 50, 7, 5);
-                    VklopRocniNacin_DD = new GControls.DropDownListForYesNoSelect("VklopRocniNacin", prop.Vklop_RocniNacin.Value, top, 54, sizeBtn, 1, false, false);
-                    VrednostRocniNacin = new GControls.SuperLabel("Nastavi obrate na:", top+2, 66, 7, 5);
-                    VrednostRocniNacin_DD = new GControls.DropDownListForDimmerRPM("VrednostRocniNacin", prop.Obrati_RocniNacin.Value_string, top, 72, sizeBtn, 1, false, false);
+                    VklopRocniNacin= new GControls.SuperLabel("Ročni Način:", top+2, 45, 7, 5);
+                    VklopRocniNacin_DD = new GControls.DropDownListForRocnoAvtoSelect("VklopRocniNacin", prop.Vklop_RocniNacin.Value_short, top, 49, sizeBtn, 1, false, false);
+                    VrednostRocniNacin = new GControls.SuperLabel("Nastavi obrate na:", top+2, 61, 7, 5);
+                    VrednostRocniNacin_DD = new GControls.DropDownListForDimmerRPM("VrednostRocniNacin", prop.Obrati_RocniNacin.Value_string, top, 67, sizeBtn, 1, false, false);
 
-                    VklopRocniNacin.FontSize = fontsize;                  
-                    VrednostRocniNacin.FontSize = fontsize;             
+                    DejanskiVrtljaji_lbl = new GControls.SuperLabel("Dejanski vrtljaji:", top + 2, 82, 7, 5);
+                    DejanskiVrtljaji_val = new GControls.SuperLabel(prop.DejanskiRPM.Value_string, top + 3, 89, 7, 5);
+
+                    VklopRocniNacin.FontSize = fs; VrednostRocniNacin.FontSize = fs; DejanskiVrtljaji_lbl.FontSize = fs; DejanskiVrtljaji_val.FontSize = fs*1.2F;
+
+                    VklopRocniNacin_DD.SaveClicked += VklopRocniNacin_DD_SaveClicked;
+                    VrednostRocniNacin_DD.SaveClicked += VrednostRocniNacin_DD_SaveClicked;
+
+                }
+
+                private void VrednostRocniNacin_DD_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
+                {
+                    Val.logocontroler.Prop2.Obrati_RocniNacin.Value = VrednostRocniNacin_DD.GetSelectedValue();
+                }
+
+                private void VklopRocniNacin_DD_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
+                {
+                    Val.logocontroler.Prop2.Vklop_RocniNacin.Value = VklopRocniNacin_DD.GetSelectedValue();
                 }
 
                 void AddAndPositionControlsTop()
@@ -199,6 +217,8 @@ namespace WebApplication1
                     up.Controls_Add(VklopRocniNacin_DD);
                     Controls.Add(VrednostRocniNacin);
                     up.Controls_Add(VrednostRocniNacin_DD);
+                    up.Controls_Add(DejanskiVrtljaji_lbl);
+                    up.Controls_Add(DejanskiVrtljaji_val);
                 }
 
                 // Left Group
@@ -210,8 +230,7 @@ namespace WebApplication1
                     lbl_tn1.Text = tn + "1:";
                     lbl_tn2.Text = tn + "2:";
                     lbl_tn3.Text = tn + "3:";
-                    lbl_OmejevalnikObratov.Text = "Omejevalnik obratov";
-
+                    
                     lbl_na1.Text = "na";
                     lbl_na2.Text = "na";
                     lbl_na3.Text = "na";
@@ -282,9 +301,7 @@ namespace WebApplication1
                     SetControlAbsolutePos(lbl_tn1, rowbuff, col1); rowbuff += rowspacing;
                     SetControlAbsolutePos(lbl_tn2, rowbuff, col1); rowbuff += rowspacing;
                     SetControlAbsolutePos(lbl_tn3, rowbuff, col1); rowbuff += rowspacing;
-                    SetControlAbsolutePos(lbl_OmejevalnikObratov, rowbuff, col1); rowbuff = row1;
-
-
+                   
                     SetControlAbsolutePos(obr_vent, rowbuff, col3); rowbuff = row1;
 
                     SetControlAbsolutePos(lbl_na1, rowbuff, col4); rowbuff += rowspacing;
@@ -313,9 +330,7 @@ namespace WebApplication1
                     Stylize(lbl_tn1, fontSize);
                     Stylize(lbl_tn2, fontSize);
                     Stylize(lbl_tn3, fontSize);
-                    Stylize(lbl_OmejevalnikObratov, fontSize);
-
-
+                   
                     Stylize(obr_vent, fontSize);
 
                     Stylize(lbl_na1, fontSize);
@@ -427,7 +442,7 @@ namespace WebApplication1
 
                 private void DropD_OmObratov_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                   
+                    Val.logocontroler.Prop2.Nocn_Nacin.Value = DropD_OmObratov.GetSelectedValue();
                 }
 
                 void StyleControls_Right(float FontSize)
@@ -457,9 +472,7 @@ namespace WebApplication1
                     gb_L.Controls.Add(lbl_tn1);
                     gb_L.Controls.Add(lbl_tn2);
                     gb_L.Controls.Add(lbl_tn3); 
-                    gb_L.Controls.Add(lbl_OmejevalnikObratov);
-
-                    
+                                       
                     gb_L.Controls.Add(obr_vent);
                    
                     gb_L.Controls.Add(lbl_na1);

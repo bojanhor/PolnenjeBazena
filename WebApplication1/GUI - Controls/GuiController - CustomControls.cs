@@ -274,23 +274,6 @@ namespace WebApplication1
                 }
             }
 
-
-            public class ShadowedOnOffButton : OnOffButton
-            {
-                public ShadowedOnOffButton(string description, int _btnID, bool status, Helper.Position position)
-                    : base(description, _btnID, status, position, Type.Shadowed)
-                {
-
-                }
-
-                public ShadowedOnOffButton(string description, int _btnID, bool status, Type type)
-                    : base(description, _btnID, status, type)
-                {
-
-                }
-
-            }
-
             public class NotShadowedOnOffButton : OnOffButton
             {
                 public NotShadowedOnOffButton(string description, int _btnID, bool status, Helper.Position position)
@@ -556,7 +539,7 @@ namespace WebApplication1
 
                 void Ctor(string Name, Helper.Datasource dataSource, string ID, string text, float FontSize, Timer updateTimer, bool wideMode)
                 {
-
+                    
                     _text = text;
                     menuID = ID;
 
@@ -691,7 +674,8 @@ namespace WebApplication1
                     }
 
                     void ManageSelectedItem(string PlcTextValue, List<ListItem> DataSource)
-                    {
+                    {                       
+
                         string buffSelectedItem = PlcTextValue ?? PropComm.NA;
 
                         for (int i = 0; i < DataSource.Count; i++)
@@ -1442,6 +1426,11 @@ namespace WebApplication1
                     DataSource = datasource;
                     Button_Outside.DataBind();
                 }
+
+                new public short GetSelectedValue()
+                {
+                    return Convert.ToInt16(base.GetSelectedValue());
+                }
             }
 
             public class DropDownListForHisteresis : DropDown
@@ -1559,14 +1548,19 @@ namespace WebApplication1
                     DataSource = datasource;
                     Button_Outside.DataBind();
                 }
+
+                new public short GetSelectedValue()
+                {
+                    return Convert.ToInt16(base.GetSelectedValue());
+                }
             }
 
             public class DropDownListForRocnoAvtoSelect : DropDown
             {
                 static Helper.RocnoAvtoSelectorDatasource datasource = new Helper.RocnoAvtoSelectorDatasource();
 
-                public DropDownListForRocnoAvtoSelect(string ID, bool? PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
-                    : base("Izberite režim delovanja:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
+                public DropDownListForRocnoAvtoSelect(string ID, short? PlcValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
+                    : base("Izberite režim delovanja:", datasource, ID, selectVal(PlcValue), top, left, size, fontSize, selfUpdatable, widemode)
                 {
                     Ctor();
                 }
@@ -1575,6 +1569,19 @@ namespace WebApplication1
                 {
                     DataSource = datasource;
                     Button_Outside.DataBind();
+                }
+
+                static string selectVal(short? val)
+                {
+                    if (val != null)
+                    {
+                        if (val == 0)
+                        {
+                            return datasource[2].Text; // Avtom.
+                        }
+                        return datasource[1].Text; // Rocno
+                    }
+                    return null;
                 }
             }
 

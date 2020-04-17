@@ -19,6 +19,7 @@ namespace WebApplication1
         {
             prop.Obrati_RocniNacin.SyncWithPLC();
             prop.Vklop_RocniNacin.SyncWithPLC();
+            prop.DejanskiRPM.SyncWithPLC();
             prop.TempNivo1.SyncWithPLC();
             prop.TempNivo2.SyncWithPLC();
             prop.TempNivo3.SyncWithPLC();

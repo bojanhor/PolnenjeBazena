@@ -17,7 +17,8 @@ namespace WebApplication1
 
         // Top
         public PlcVars.Word Obrati_RocniNacin;
-        public PlcVars.Bit Vklop_RocniNacin;
+        public PlcVars.Word Vklop_RocniNacin;
+        public PlcVars.Word DejanskiRPM;
 
         // Left side menu
         public PlcVars.TemperatureShow TempNivo1;
@@ -48,8 +49,9 @@ namespace WebApplication1
             watchdog2 = new PlcVars.Word(Client, new PlcVars.WordAddress(5), "", "", false);
 
             // Top
-            Obrati_RocniNacin = new PlcVars.Word(Client, new PlcVars.WordAddress(80), "", "%", true);
-            Vklop_RocniNacin = new PlcVars.Bit(Client, new PlcVars.BitAddress(84,0), "Vklop", "Izklop", true);
+            Vklop_RocniNacin = new PlcVars.Word(Client, new PlcVars.WordAddress(80), "", "", true);
+            Obrati_RocniNacin = new PlcVars.Word(Client, new PlcVars.WordAddress(84), "", "%", true);            
+            DejanskiRPM = new PlcVars.Word(Client, new PlcVars.WordAddress(86), "", "%", false);
 
             // Left side menu
             TempNivo1 = new PlcVars.TemperatureShow(Client, new PlcVars.WordAddress(50), "", "°C", 0, 1, 0, true);

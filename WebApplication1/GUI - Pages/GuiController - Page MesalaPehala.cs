@@ -86,7 +86,7 @@ namespace WebApplication1
                     var prop = Val.logocontroler.Prop5;
 
                     rezim = new GControls.SuperLabel("Režim:", top + lblxtra, 10, 15, lblH ) { FontWeightBold = true };
-                     Rezim = new GControls.DropDownListForRocnoAvtoSelect("rezimSel", prop.rocno.Value, top, 22, ctrlH, fontSize, false, false);
+                     Rezim = new GControls.DropDownListForRocnoAvtoSelect("rezimSel", prop.rezim.Value, top, 22, ctrlH, fontSize, false, false);
                     rocnaNastavitev = new GControls.DropDownListForOnOffSelect("rnval", prop.rocno.Value, top, 44, ctrlH, fontSize, false, false);
 
                     for (int i = 0; i < rows; i++)

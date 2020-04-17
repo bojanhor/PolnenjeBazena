@@ -660,13 +660,13 @@ namespace WebApplication1
             }
             public void GetDataSource()
             {
-                CreateRow(PropComm.NA, false);
-                CreateRow("Ročno", true);
-                CreateRow("Avtomatsko", false);
+                CreateRow(PropComm.NA, 0);
+                CreateRow("Ročno", 1);
+                CreateRow("Avtomatsko", 0);
 
             }
 
-            ListItem CreateRow(string text, bool value)
+            ListItem CreateRow(string text, short value)
             {
                 ListItem r = new ListItem(text, value.ToString());
                 Add(r);

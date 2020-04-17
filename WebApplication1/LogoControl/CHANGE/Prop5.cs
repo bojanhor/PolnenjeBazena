@@ -19,7 +19,7 @@ namespace WebApplication1
         public PlcVars.Word[] start = new PlcVars.Word[rows];
         public PlcVars.Word[] stop = new PlcVars.Word[rows];
 
-        public PlcVars.Bit rezim;
+        public PlcVars.Word rezim;
         public PlcVars.Bit rocno;
 
         readonly ushort startAddrs = 10;
@@ -38,7 +38,7 @@ namespace WebApplication1
             }
 
 
-            rezim = new PlcVars.Bit(Client, new PlcVars.BitAddress(40,0), "", "", true);
+            rezim = new PlcVars.Word(Client, new PlcVars.WordAddress(40), "", "", true);
             rocno = new PlcVars.Bit(Client, new PlcVars.BitAddress(50,0), "", "", true);
         }
                

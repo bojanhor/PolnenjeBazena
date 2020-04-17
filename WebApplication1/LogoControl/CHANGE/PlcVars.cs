@@ -322,6 +322,256 @@ namespace WebApplication1
             }            
         }
 
+        public class DWord
+        {
+            public short? Value
+            {
+                get
+                {
+                    return PLCval;
+                }
+                set
+                {
+                    if (value != null)
+                    {
+                        ReadFromPCtoBuffer(value, true);
+                    }
+                }
+            }
+
+            public short? Value_short
+            {
+                get
+                {
+                    if (PLCval != null)
+                    {
+                        return (short)PLCval;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+                set
+                {
+                    if (value != null)
+                    {
+                        ReadFromPCtoBuffer(value, true);
+                    }
+                }
+            }
+
+            public string Value_string
+            {
+                get
+                {
+                    var buff = Value;
+                    if (buff != null)
+                    {
+                        return _prefixToShow + Value.ToString() + _postFixToShow;
+                    }
+                    return PropComm.NA;
+                }
+            }
+
+            private short? PLCval;
+            private short? PCval;
+            private bool directionToPLC = false;
+            private DoubleWordAddress _TypeAndAdress;
+            private Sharp7.S7Client _Client;
+            int ErrRead;
+            int ErrWrite;
+            short? buffRead;
+            short? buffWrite;
+            string _prefixToShow;
+            string _postFixToShow;
+            bool _IsWritable = false;
+            bool datacorrupted = false;
+
+            public DWord(Sharp7.S7Client Client, DoubleWordAddress TypeAndAdress, string prefixToShow, string postFixToShow, bool IsWritable)
+            {
+                PLCval = null;
+                PCval = null;
+
+                _Client = Client;
+                _TypeAndAdress = TypeAndAdress;
+                _prefixToShow = prefixToShow;
+                _postFixToShow = postFixToShow;
+                _IsWritable = IsWritable;
+            }
+
+            public void SyncWithPLC()
+            {
+                try
+                {
+                    ReadFromPLCtoBuffer(false);
+                    WriteToPLCFromBuffer();
+                }
+                catch (Exception ex)
+                {
+                    ReportComunicatoonMessage(ex.Message);
+                }
+
+            }
+
+            private void ReadFromPLCtoBuffer(bool forceRead)
+            {
+                if (directionToPLC == false || forceRead)
+                {
+                    if (_Client != null)
+                    {
+                        buffRead = Connection.PLCread(_Client, _TypeAndAdress, out ErrRead);
+                        if (ErrRead == 0 && buffRead != null)
+                        {
+                            PLCval = buffRead; buffRead = null;
+                        }
+                        else
+                        {
+                            ReportError_throwException("Read from PLC failed.", null, forceRead);
+                        }
+                    }
+                }
+            }
+
+            private void WriteToPLCFromBuffer()
+            {
+                if (PLCval == null)
+                {
+                    directionToPLC = false;
+                }
+                if (directionToPLC == true)
+                {
+                    if (PCval != null && PLCval != null)
+                    {
+                        if (PCval != PLCval)
+                        {
+                            buffWrite = PCval;
+
+                            if (_Client != null)
+                            {
+                                if (_IsWritable)
+                                {
+                                    Connection.PLCwrite(_Client, _TypeAndAdress, (short)buffWrite, out ErrWrite);
+                                    if (ErrWrite == 0)
+                                    {
+                                        PLCval = buffWrite;
+                                    }
+                                    else
+                                    {
+                                        ReportError_throwException("Write to PLC failed.");
+                                    }
+                                }
+                                else
+                                {
+                                    ReportError_throwException("Write to PLC failed IsWritable flag must be true for writing to PLC.");
+                                }
+                            }
+                        }
+                        directionToPLC = false;
+                    }
+                }
+            }
+
+            public void SyncWithPC(string value)
+            {
+                try
+                {
+                    WriteToPCFromBuffer(value);
+                }
+                catch (Exception ex)
+                {
+                    ReportError_throwException("Write To PC failed." + ex.Message);
+                }
+
+                try
+                {
+                    if (value != PropComm.NA)
+                    {
+                        if (value != null)
+                        {
+                            ReadFromPCtoBuffer(Convert.ToInt16(
+                                RemoveFromBegining(
+                                    RemoveFromEnd(
+                                        value, _postFixToShow), _prefixToShow)), false);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ReportError_throwException("Read from PC failed." + ex.Message);
+                }
+
+            }
+
+            private void ReadFromPCtoBuffer(short? value, bool forceSet)
+            {
+                if (value != null)
+                {
+                    if (value != PCval || forceSet)
+                    {
+                        directionToPLC = true;
+                        PCval = value;
+                    }
+                }
+            }
+
+
+            private void WriteToPCFromBuffer(string value)
+            {
+                if (directionToPLC == false)
+                {
+                    if (PLCval != null)
+                    {
+                        if (PLCval != PCval || datacorrupted == true)
+                        {
+                            value = (_prefixToShow + PLCval + _postFixToShow).ToString();
+                            datacorrupted = false;
+                        }
+                        if (value != (_prefixToShow + PLCval + _postFixToShow).ToString())
+                        {
+                            datacorrupted = true; // if displayed data is not as it should be they are overwriten next loop
+                        }
+                    }
+                }
+            }
+
+            public void ReportError_throwException(string Message)
+            {
+                ReportError_throwException(Message, null, null);
+            }
+            public void ReportError_throwException(string Message, bool? forceSet_FlagToReport, bool? forceRead_FlagToReport)
+            {
+                string Address = _TypeAndAdress.GetStringRepresentation();
+                string ErrTyp_Read = _Client.ErrorText(ErrRead);
+                string ErrTyp_Write = _Client.ErrorText(ErrWrite);
+                string Client = "Logo" + _Client.deviceID;
+                string Flags;
+
+                Flags = "directionToPLC: " + directionToPLC;
+
+                if (forceSet_FlagToReport != null)
+                {
+                    Flags += " forceSet: " + forceSet_FlagToReport.ToString() + ";";
+                }
+
+                if (forceRead_FlagToReport != null)
+                {
+                    Flags += " forceRead: " + forceSet_FlagToReport.ToString() + ";";
+                }
+
+                Flags += " isWritable: " + _IsWritable.ToString() + ";";
+
+
+                throw new Exception(
+                    Message + " " +
+                    "Address: " + Address + ", " +
+                    "Read Error type: " + ErrTyp_Read + ", " +
+                    "Write Error type: " + ErrTyp_Write + ", " +
+                    "Client: " + Client + ". " +
+                    "Flags: " + Flags);
+            }
+        }
+
 
         public class TimeSet
         {
