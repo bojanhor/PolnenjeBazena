@@ -16,7 +16,7 @@ namespace WebApplication1
 
         public class PlcAddress
         {
-            public static int Address;
+            public int Address;
 
             public int GetAddress()
             {
@@ -26,7 +26,7 @@ namespace WebApplication1
 
         public class BitAddress : PlcAddress
         {
-            public static ushort SubAddress;
+            public ushort SubAddress;
 
             public BitAddress(int address, ushort subAddress)
             {
@@ -772,7 +772,9 @@ namespace WebApplication1
                     {
                         if (PCval != PLCval || forceWrite)
                         {
-                            if ((bool)PCval) { buffWrite = 1; } else { buffWrite = 0; }
+                            if ((bool)PCval)
+                            { buffWrite = 1; }
+                            else { buffWrite = 0; }
 
                             if (_Client != null)
                             {

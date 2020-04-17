@@ -18,7 +18,10 @@ namespace WebApplication1
         static int? howManyLucIconsBuff = null;
         static string XmlNotEncriptedPath;
         static string XmlEncriptedPath;
+        static string XmlEncriptedPath_tmp;
         static bool forceRefresh = false;
+        public static bool encriptedMode = false;
+        static bool savingFilePleaseWait = false;
 
         public static bool XmlControllerInitialized = false;
 
@@ -204,76 +207,118 @@ namespace WebApplication1
 
         public static void SaveXML(string newContent)
         {
+            string text;
+
+            savingFilePleaseWait = true;
+
             try
             {
-                var text = Settings.XmlDeclaration + newContent;
+                text = Settings.XmlDeclaration + newContent;
                 var encriptedText = XmlEncription.Encrypt(text);
-                using (StreamWriter s = new StreamWriter(XmlEncriptedPath, false, Encoding.UTF8))
+
+                using (StreamWriter s = new StreamWriter(XmlEncriptedPath_tmp, false, Encoding.UTF8))
                 {
                     s.Write(Environment.NewLine + encriptedText);
                     s.Flush();
                     s.Dispose();
                 }
 
-                if (File.Exists(XmlNotEncriptedPath))
-                {
-                    using (StreamWriter s = new StreamWriter(XmlNotEncriptedPath, false, Encoding.UTF8))
-                    {
-                        s.Write(text);
-                        s.Flush();
-                        s.Dispose();
-                    }
-                }
-
                 SysLog.SetMessage("ConfigFile was changed, by user.");
             }
             catch (Exception ex)
             {
-                var message = "Problem saving excripted XML File." + ex.Message;
+                savingFilePleaseWait = false;
+                var message = "Problem saving encripted config File." + ex.Message;
                 Helper.MessageBox(message);
                 throw new Exception(message);
             }
 
+            try
+            {
+                if (!encriptedMode)
+                {
+                    if (File.Exists(XmlNotEncriptedPath))
+                    {
+                        using (StreamWriter s = new StreamWriter(XmlNotEncriptedPath, false, Encoding.UTF8))
+                        {
+                            s.Write(text);
+                            s.Flush();
+                            s.Dispose();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                savingFilePleaseWait = false;
+                var message = "Problem saving unecripted config File." + ex.Message;
+                Helper.MessageBox(message);
+                throw new Exception(message);
+            }
+
+            TmpToFile();
+            savingFilePleaseWait = false;
         }
 
-        static string encriptXML(string text)
+        static void TmpToFile()
         {
-            return XmlEncription.Encrypt(text);
-        }
-
-        static string decriptXML(string text)
-        {
-            return XmlEncription.Decrypt(text);
+            try
+            {
+                if (File.Exists(XmlEncriptedPath_tmp))
+                {
+                    File.Copy(XmlEncriptedPath_tmp, XmlEncriptedPath,true);
+                    File.Delete(XmlEncriptedPath_tmp);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Problem replacing tmp config file: " + ex.Message);
+            }
         }
 
         static void FindFileAndEncript()
         {
             XmlNotEncriptedPath = BaseDirectoryPath + Settings.pathToConfigFile;
             XmlEncriptedPath = BaseDirectoryPath + Settings.pathToConfigFileEncripted;
-            
+            XmlEncriptedPath_tmp = BaseDirectoryPath + Settings.pathToConfigFileEncripted + "_tmp";
+
             var ii = "\"";
 
             // if there is Not encripted config file (will be deleted automatically after publish)
 
-            if (File.Exists(XmlNotEncriptedPath))
+            try
             {
-                if (File.Exists(XmlEncriptedPath))
+                if (File.Exists(XmlNotEncriptedPath))
                 {
-                    File.Delete(XmlEncriptedPath);
-                }
+                    if (File.Exists(XmlEncriptedPath))
+                    {
+                        try
+                        {
+                            File.Delete(XmlEncriptedPath);
+                        }
+                        catch (Exception ex)
+                        {
+                            throw new Exception("Error deleting encripted config file: " + ex.Message);
+                        }
+                        
+                    }
 
-                FileEncript(XmlNotEncriptedPath);
+                    FileEncript(XmlNotEncriptedPath);
+                }
+                else
+                {
+                    if (!File.Exists(XmlEncriptedPath))
+                    {
+                        throw new Exception("Config file could not be found. Search was performed at locations: " + ii + XmlEncriptedPath + ii + " and " + ii + XmlNotEncriptedPath + ii + ".");
+                    }
+
+                    FileEncript(XmlEncriptedPath);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                if (!File.Exists(XmlEncriptedPath))
-                {
-                    throw new Exception("Config file could not be found. Search was performed at locations: " + ii + XmlEncriptedPath + ii +" and " + ii + XmlNotEncriptedPath + ii + ".");
-                }
-
-                FileEncript(XmlEncriptedPath);
+                throw new Exception("Procedure failed: " + ex.Message);
             }
-
         }
 
         static void FileEncript(string XmlPath)
@@ -284,7 +329,7 @@ namespace WebApplication1
             try
             {
                 xmlText = LoadNotEncriptedXML(XmlPath).ToString();
-                encriptedText = encriptXML(xmlText);
+                encriptedText = XmlEncription.Encrypt(xmlText);
 
                 using (StreamWriter s = new StreamWriter(XmlEncriptedPath))
                 {
@@ -337,22 +382,26 @@ namespace WebApplication1
                 {
                     dt1 = DateTime.Now;
 
-                    try
+                    if (!savingFilePleaseWait)
                     {
-                        newXml = LoadAndDecriptXml();
-                    }
-                    catch (Exception ex)
-                    {
-                        throw new Exception("Error loading XML file: " + ex.Message);
-                    }
+                        try
+                        {
+                            newXml = LoadAndDecriptXml();
+                        }
+                        catch (Exception ex)
+                        {
+                            throw new Exception("Error loading XML file: " + ex.Message);
+                        }
 
 
-                    if (newXml.Element("root").Value != XmlFile.Element("root").Value)
-                    {
-                        RefreshCache(newXml); // refresh if different
-                    }
+                        if (newXml.Element("root").Value != XmlFile.Element("root").Value)
+                        {
+                            RefreshCache(newXml); // refresh if different
+                        }
 
-                    forceRefresh = false;  // reset flag (notifies other methods that fresh copy was aquired)
+                        forceRefresh = false;  // reset flag (notifies other methods that fresh copy was aquired)
+                    }                    
+
 
                     while (DateTime.Now < (dt1 + TimeSpan.FromMilliseconds(Settings.XmlRefreshrate))) // wait for some time
                     {
@@ -363,8 +412,9 @@ namespace WebApplication1
                             break;
                         }
                     }
-                    XmlControllerInitialized = true;
 
+                    XmlControllerInitialized = true;
+                    System.Threading.Thread.Sleep(1); // mandatory wait
                 }
                 catch (Exception ex)
                 {
@@ -373,8 +423,6 @@ namespace WebApplication1
 
             }
         }
-
-
 
         static void RefreshCache(XDocument FreshLoadedXML)
         {
@@ -524,7 +572,7 @@ namespace WebApplication1
 
         }
 
-        public static PlcVars.WordAddress GetWDAddress(int device)
+        public static PlcVars.DoubleWordAddress GetWDAddress(int device)
         {
             if (device < 0 || device > Settings.Devices)
             {
@@ -534,7 +582,7 @@ namespace WebApplication1
             try
             {
                 var xmlVal = XmlConn.Element("LOGO" + device).Element("watchdogAddress").Value;
-                return new PlcVars.WordAddress(ushort.Parse(xmlVal));
+                return new PlcVars.DoubleWordAddress(ushort.Parse(xmlVal));
             }
             catch (Exception)
             {
@@ -1043,7 +1091,7 @@ namespace WebApplication1
             try
             {
                 XmlFile.Element("root").Element("GUI").Element(searchValue).Value = value.ToString();
-                SaveCurrentTB(XmlFile.ToString());
+                SaveXML(XmlFile.ToString());
             }
 
             catch (Exception ex)
@@ -1061,7 +1109,7 @@ namespace WebApplication1
             try
             {
                 XmlFile.Element("root").Element("GUI").Element(searchValue).Value = value.ToString();
-                SaveCurrentTB(XmlFile.ToString());
+                SaveXML(XmlFile.ToString());
             }
 
             catch (Exception ex)
@@ -1079,7 +1127,7 @@ namespace WebApplication1
             try
             {
                 XmlFile.Element("root").Element("GUI").Element(searchValue).Value = value.ToString();
-                SaveCurrentTB(XmlFile.ToString());
+                SaveXML(XmlFile.ToString());
             }
 
             catch (Exception ex)
@@ -1097,7 +1145,7 @@ namespace WebApplication1
             try
             {
                 XmlFile.Element("root").Element("GUI").Element(searchValue).Value = value.ToString();
-                SaveCurrentTB(XmlFile.ToString());
+                SaveXML(XmlFile.ToString());
             }
 
             catch (Exception ex)
@@ -1137,7 +1185,7 @@ namespace WebApplication1
             try
             {
                 XmlFile.Element("root").Element("GUI").Element(searchValue).Value = value.ToString();
-                SaveCurrentTB(XmlFile.ToString());
+                SaveXML(XmlFile.ToString());
             }
 
             catch (Exception ex)

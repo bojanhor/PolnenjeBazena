@@ -121,19 +121,6 @@ namespace WebApplication1
                     var writeVal = Val.logocontroler.Prop1.LucStatus_WriteToPLC[btnID];
                     writeVal.SendPulse();
 
-
-                    // temporary set values (until next refresh)
-                    //if (active)
-                    //{
-                    //    Controls.Add(Zarnica0);
-                    //    Controls.Add(Number0);
-                    //}
-                    //else
-                    //{
-                    //    Controls.Add(Zarnica1);
-                    //    Controls.Add(Number1);
-                    //}
-
                     Val.logocontroler.ForceRefreshValuesFromPLC(1);
                     Val.guiController.PageDefault_.ForceRefreshPanel();
 

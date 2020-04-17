@@ -86,10 +86,7 @@ namespace WebApplication1
 
             return encryptedText;
         }
-
-        public void SetPass(string pass)
-        {
-            passPhrase = pass;
-        }
+        
+        
     }
 }

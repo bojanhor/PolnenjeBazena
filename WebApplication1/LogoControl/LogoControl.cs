@@ -222,6 +222,7 @@ namespace WebApplication1
                     {
                         if (IfDisconnectProcedure(device)) { return; }
 
+                        // Watchdog
                         errCode = Watchdog(LOGO[device], XmlController.GetWDAddress(device), ref progress, ref thisVal, ref prevVal, WatchdogRetries, ref FailCnt);
 
                         if (IfDisconnectProcedure(device)) { return; }
@@ -337,7 +338,7 @@ namespace WebApplication1
 
         }
 
-        private int Watchdog(S7Client Client, PlcVars.WordAddress typeAndAdress, ref string Progress, ref int thisValue, ref int previousValue, int CanFail_timesWithoutError, ref int CanFailCnt)
+        private int Watchdog(S7Client Client, PlcVars.DoubleWordAddress typeAndAdress, ref string Progress, ref int thisValue, ref int previousValue, int CanFail_timesWithoutError, ref int CanFailCnt)
         {
             int err = 0;
 

@@ -104,7 +104,7 @@ namespace WebApplication1
                     if (errCode == S7Consts.err_OK)
                     {
                         S7.SetBitAt(ref b, 0, bitAddres.GetSubAddress(), boolval);
-                        errCode = Client.DBWrite(1, bitAddres.GetSubAddress(), 1, b); // write whole byte as soon as possible
+                        errCode = Client.DBWrite(1, bitAddres.GetAddress(), 1, b); // write whole byte as soon as possible
                     }
                 }
 

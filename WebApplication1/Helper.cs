@@ -213,6 +213,7 @@ namespace WebApplication1
                 if (File.Exists(p))
                 {
                     File.Delete(p);
+                    XmlController.encriptedMode = true;
                 }
             }
             catch (Exception) {  }
