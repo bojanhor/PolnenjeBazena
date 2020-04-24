@@ -14,7 +14,7 @@ namespace WebApplication1
         {
             Val.guiController.PagePadavine_ = new GuiController.PagePadavine(this);
 
-            Helper.EveryPageProtocol("Padavine", this, Session, TemplateClassID, true, false);
+            Navigator.EveryPageProtocol("Padavine", this, Session, TemplateClassID, true, false);
 
             Initialise();
         }

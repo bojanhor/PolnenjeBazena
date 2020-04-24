@@ -12,7 +12,7 @@ namespace WebApplication1.Pages
         protected void Page_Load(object sender, EventArgs e)
         {
             Val.guiController.PageLogView_ = new GuiController.PageLogView();
-            Helper.EveryPageProtocol("Pogled dnevnika", this, Session, TemplateClassID, true, false);
+            Navigator.EveryPageProtocol("Pogled dnevnika", this, Session, TemplateClassID, true, false);
                        
             Initialise();
             RegisterOnClick();
@@ -49,7 +49,7 @@ namespace WebApplication1.Pages
         private void Refresh_Click1(object sender, System.Web.UI.ImageClickEventArgs e)
         {
             XmlController.RefreshFile_readAgain();
-            Helper.Refresh();
+            Navigator.Refresh();
         }
                 
 

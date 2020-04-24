@@ -15,7 +15,7 @@ namespace WebApplication1.Pages
         protected void Page_Load(object sender, EventArgs e)
         {           
             Val.guiController.PageAdvanced_ = new GuiController.PageAdvanced(this, Session);
-            Helper.EveryPageProtocol("Nastavitve", this, Session, TemplateClassID);
+            Navigator.EveryPageProtocol("Nastavitve", this, Session, TemplateClassID);
 
             AddConnectSwitch();
             AddDebug();

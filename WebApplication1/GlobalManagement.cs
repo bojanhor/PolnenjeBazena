@@ -27,12 +27,12 @@ namespace WebApplication1
 
         public static List<Timer> GetTimers()
         {
-            return (List<Timer>)GetAllControlsOfType<Timer>(Helper.GetCurrentPage().Form);
+            return (List<Timer>)GetAllControlsOfType<Timer>(Navigator.GetCurrentPage().Form);
         }
 
         public static void DisableAllTimersOnPage()
         {
-            var page = Helper.GetCurrentPage();
+            var page = Navigator.GetCurrentPage();
             var timers = GetTimers();
 
             foreach (var item in timers)

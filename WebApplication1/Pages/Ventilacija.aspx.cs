@@ -14,7 +14,7 @@ namespace WebApplication1.Pages
         {
             Val.guiController.PageVentilacija_ = new GuiController.PageVentilacija();
 
-            Helper.EveryPageProtocol("Ventilacija", this, Session, TemplateClassID);
+            Navigator.EveryPageProtocol("Ventilacija", this, Session, TemplateClassID);
             Initialise();
            
         }

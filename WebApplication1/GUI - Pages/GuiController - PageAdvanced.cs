@@ -50,7 +50,7 @@ namespace WebApplication1
 
             void AddSpremljajFunctionality()
             {
-                var scriptloader = (Helper.ScriptLoader)Session[Helper.ViewStateElement_ScriptLoader];
+                var scriptloader = (Navigator.ScriptLoader)Session[Navigator.ViewStateElement_ScriptLoader];
 
                 if (Spremljaj.active)
                 {
@@ -99,12 +99,12 @@ namespace WebApplication1
 
             private void Button_Click2(object sender, ImageClickEventArgs e)
             {
-                Helper.Redirect("LogView", thisPage);
+                Navigator.Redirect("LogView", thisPage);
             }
 
             private void Button_Click1(object sender, ImageClickEventArgs e)
             {
-                Helper.Redirect("Editor", thisPage);
+                Navigator.Redirect("Editor", thisPage);
             }
                         
 
@@ -221,7 +221,7 @@ namespace WebApplication1
                 // button value changes from Val.SpremljajChecked on postback
 
                 SetSpremljajChecked(!GetSpremljajChecked());
-                Helper.Refresh();
+                Navigator.Refresh();
 
             }
             

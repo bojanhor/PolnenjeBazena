@@ -101,7 +101,7 @@ namespace WebApplication1
                     if (GetMenuShown_Left())
                     {
                         Ventilacija_ZaveseSettingsContent settings = new Ventilacija_ZaveseSettingsContent();
-                        settings.exitButton.Click += (sender, e) => { SetMenuShown_None(); Helper.Refresh(); }; // closes menu and refresh starts updatepanel
+                        settings.exitButton.Click += (sender, e) => { SetMenuShown_None(); Navigator.Refresh(); }; // closes menu and refresh starts updatepanel
                         Controls.Add(settings);
                     }
                     else if (GetMenuShown_Right())
@@ -368,7 +368,7 @@ namespace WebApplication1
                         UporabljaKS.button.Click += (sender, e) => // OnClick Event
                         {
                             var val = Val.logocontroler.Prop3.UporabljaKoncnaStikala1;
-                            val.SyncWithPC(!val.Value_bool); // toggle state                            
+                            val.Value_bool = !val.Value_bool; // toggle state                            
                         };
 
                         return div;
@@ -401,7 +401,7 @@ namespace WebApplication1
                 private void Sett_Click(object sender, ImageClickEventArgs e)
                 {
                     SetMenuShown_Left();
-                    Helper.Refresh();
+                    Navigator.Refresh();
                 }
 
 
@@ -425,7 +425,7 @@ namespace WebApplication1
                 private void Sett2_Click(object sender, ImageClickEventArgs e)
                 {
                     SetMenuShown_Right();
-                    Helper.Refresh();
+                    Navigator.Refresh();
                 }
 
                 #endregion

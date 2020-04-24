@@ -10,6 +10,7 @@
     <form id="form1" runat="server">
         <div>
             
+            <asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
             <div id="TemplateClassID" class="TemplateClass" runat="server">
                 
                  </div>

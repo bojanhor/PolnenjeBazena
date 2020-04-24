@@ -166,7 +166,7 @@ namespace WebApplication1
 
             private void PrevButton_Click(object sender, ImageClickEventArgs e, System.Web.SessionState.HttpSessionState session, Page thisPage)
             {                
-                Helper.RedirectBack();
+                Navigator.RedirectBack();
             }
 
             public void CreateMenu(Page _thispage, HtmlGenericControl TemplateClassID)
@@ -262,13 +262,13 @@ namespace WebApplication1
 
             public static void HomeBtn_Click(object sender, ImageClickEventArgs e, Page thisPage)
             {
-                Helper.Redirect(Settings.DefaultPage, thisPage);                
+                Navigator.Redirect(Settings.DefaultPage, thisPage);                
 
             }
 
             private static void MenuBtn_Click(object sender, ImageClickEventArgs e, Page thisPage)
             {
-                Helper.Redirect("MasterMenu", thisPage);
+                Navigator.Redirect("MasterMenu", thisPage);
             }
 
         }

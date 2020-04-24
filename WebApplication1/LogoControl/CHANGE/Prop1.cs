@@ -30,7 +30,7 @@ namespace WebApplication1
         public PlcVars.Word[] DimmerPop = new PlcVars.Word[LucIconsTableLength];
         public PlcVars.Word[] DimmerActual = new PlcVars.Word[LucIconsTableLength];
 
-        public PlcVars.TimeSet LogoClock;
+        public PlcVars.LogoClock LogoClock;
 
         public PlcVars.TimeSet Vzhod_Read;
         public PlcVars.TimeSet Zahod_Read;
@@ -45,7 +45,7 @@ namespace WebApplication1
         {
             Client = client;
             
-            LogoClock = new PlcVars.TimeSet(Client, new PlcVars.WordAddress(4), false);
+            LogoClock = new PlcVars.LogoClock(Client);
 
             const ushort inc = 10;
             ushort vklopUrnikabuff = 210;

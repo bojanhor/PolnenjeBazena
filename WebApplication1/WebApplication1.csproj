@@ -458,6 +458,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="ChartValues\ChartValuesLogger.cs" />
+    <Compile Include="DataSourcer.cs" />
     <Compile Include="GlobalManagement.cs" />
     <Compile Include="GUI - Controls\Dispose.cs" />
     <Compile Include="GUI - Pages\GuiController - Login.cs" />
@@ -471,6 +472,7 @@
     <Compile Include="GUI - Pages\GuiController - Page Vrata_Zavese.cs" />
     <Compile Include="GUI - Pages\GuiController - Page Ventilacija.cs" />
     <Compile Include="GUI - Pages\GuiController - Page Razsvetljava.cs" />
+    <Compile Include="Navigator.cs" />
     <Compile Include="Pages\LogView.aspx.cs">
       <DependentUpon>LogView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

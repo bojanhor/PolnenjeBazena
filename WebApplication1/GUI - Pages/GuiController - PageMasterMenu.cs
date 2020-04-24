@@ -239,7 +239,7 @@ namespace WebApplication1
 
                     var link = XmlController.GetMenuDDItemLink((short)id);
 
-                    Helper.Redirect(link, thisPage);
+                    Navigator.Redirect(link, thisPage);
 
                 }
                 catch (Exception ex)

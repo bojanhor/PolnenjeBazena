@@ -16,12 +16,15 @@ namespace WebApplication1
         int cnt_prop1_1 = 0;
         int cnt_prop1_2 = 0;
         int cnt_prop1_3 = 0;
+        int clksync1 = 5;
 
         public void PROGRAM1(Prop1 prop)
         {
             // This program is for LOGO1
 
-            // GET/SET with plc    
+            // GET/SET with plc            
+                        
+            prop.UgasniVseLuci.SyncWithPLC();
 
             foreach (var item in prop.LucStatus_ReadToPC)
             {
@@ -39,10 +42,7 @@ namespace WebApplication1
                 }
                 
             }
-
-            prop.UgasniVseLuci.SyncWithPLC();
-            
-            
+                       
 
             switch (cnt_prop1_3)
             {
@@ -166,11 +166,18 @@ namespace WebApplication1
                 default:
                     cnt_prop1_1 = 0;
                     break;
-            }   
-            
+            }
+
+            if (clksync1 >= 5)
+            {
+                prop.LogoClock.SyncWithPLC();
+                clksync1 = 0;
+            }
+
             cnt_prop1_1++;
             cnt_prop1_2++;
             cnt_prop1_3++;
+            clksync1++;
 
         }
     }

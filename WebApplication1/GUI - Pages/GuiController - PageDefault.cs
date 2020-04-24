@@ -194,8 +194,8 @@ namespace WebApplication1
                     WeatherLabelFormater("Dan/Noč", inTemp.Width.Value, topOffset, 0);
                     WeatherLabelFormater("Vzhod", inTemp.Width.Value, topOffset, spacingLeft);
                     WeatherLabelFormater("Zahod", inTemp.Width.Value, topOffset, spacingLeft * 2);
-                    WeatherLabelFormater(prop.TempZnotraj.Value, inTemp.Width.Value, topOffset, spacingLeft * 3);
-                    WeatherLabelFormater(prop.TempZunaj.Value, inTemp.Width.Value, topOffset, spacingLeft * 4);
+                    WeatherLabelFormater(prop.TempZnotraj.Value_string_formatted, inTemp.Width.Value, topOffset, spacingLeft * 3);
+                    WeatherLabelFormater(prop.TempZunaj.Value_string_formatted, inTemp.Width.Value, topOffset, spacingLeft * 4);
                     WeatherLabelFormater("25L/dan", inTemp.Width.Value, topOffset, spacingLeft * 5);
 
                     VremeIconFormat("Vreme", inTemp.Width.Value, topOffset,4);
@@ -316,32 +316,32 @@ namespace WebApplication1
 
             private void Vreme_Click(object sender, ImageClickEventArgs e)
             {
-                Helper.Redirect("Vreme", thisPage);
+                Navigator.Redirect("Vreme", thisPage);
             }
 
             private void InTemp_Click(object sender, ImageClickEventArgs e)
             {
-                Helper.Redirect("Padavine", thisPage);
+                Navigator.Redirect("Padavine", thisPage);
             }
             private void OutTemp_Click(object sender, ImageClickEventArgs e)
             {
-                Helper.Redirect("Padavine", thisPage);
+                Navigator.Redirect("Padavine", thisPage);
             }
             private void RainSense_Click(object sender, ImageClickEventArgs e)
             {
-                Helper.Redirect("Padavine", thisPage);
+                Navigator.Redirect("Padavine", thisPage);
             }
             private void DayNight_Click(object sender, ImageClickEventArgs e)
             {
-                Helper.Redirect("Padavine", thisPage);
+                Navigator.Redirect("Padavine", thisPage);
             }
             private void SunRise_Click(object sender, ImageClickEventArgs e)
             {
-                Helper.Redirect("Padavine", thisPage);
+                Navigator.Redirect("Padavine", thisPage);
             }
             private void SunSet_Click(object sender, ImageClickEventArgs e)
             {
-                Helper.Redirect("Padavine", thisPage);
+                Navigator.Redirect("Padavine", thisPage);
             }            
             private void BtnMasterMenuClick(object sender, ImageClickEventArgs e, Page thisPage)
             {

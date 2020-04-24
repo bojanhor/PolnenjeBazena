@@ -32,7 +32,7 @@ namespace WebApplication1
 
             SysLog.SetMessage(exc.Message + " " + exc.InnerException.Message + " " + exc.StackTrace);
 
-            Helper.RedirectBack();
+            Navigator.RedirectBack();
 
         }        
     }

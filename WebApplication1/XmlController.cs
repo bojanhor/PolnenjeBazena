@@ -229,7 +229,7 @@ namespace WebApplication1
             {
                 savingFilePleaseWait = false;
                 var message = "Problem saving encripted config File." + ex.Message;
-                Helper.MessageBox(message);
+                Navigator.MessageBox(message);
                 throw new Exception(message);
             }
 
@@ -252,7 +252,7 @@ namespace WebApplication1
             {
                 savingFilePleaseWait = false;
                 var message = "Problem saving unecripted config File." + ex.Message;
-                Helper.MessageBox(message);
+                Navigator.MessageBox(message);
                 throw new Exception(message);
             }
 
@@ -364,7 +364,7 @@ namespace WebApplication1
             {
                 var message = "Method XmlController() encountered an error with configuration file. " +
                     "Please copy proper xml file inside Config folder and name it: config.cnfg. Error description:" + e.Message;
-                Helper.MessageBox(message);
+                Navigator.MessageBox(message);
                 throw new Exception(message);
             }
 

@@ -530,14 +530,14 @@ namespace WebApplication1
                 string menuID;
 
 
-                public ButtonWithLabel_SelectMenu(string Name, Helper.Datasource dataSource, string ID, string text, float FontSize, Timer updateTimer, bool wideMode)
+                public ButtonWithLabel_SelectMenu(string Name, Datasourcer.Datasource dataSource, string ID, string text, float FontSize, Timer updateTimer, bool wideMode)
                 {
                     button = new TransparentButton("menu_" + Name.Replace(" ", "") + "_" + ID);
                     Ctor(Name, dataSource, ID, text, FontSize, updateTimer, wideMode);
                 }
 
 
-                void Ctor(string Name, Helper.Datasource dataSource, string ID, string text, float FontSize, Timer updateTimer, bool wideMode)
+                void Ctor(string Name, Datasourcer.Datasource dataSource, string ID, string text, float FontSize, Timer updateTimer, bool wideMode)
                 {
                     
                     _text = text;
@@ -706,7 +706,7 @@ namespace WebApplication1
 
                     private void ExitButton_Click(object sender, ImageClickEventArgs e)
                     {
-                        Helper.Refresh(); // loads inital page (with closed/invisible menu and restarts updatepanel timer)
+                        Navigator.Refresh(); // loads inital page (with closed/invisible menu and restarts updatepanel timer)
                     }
 
                     public SubMenuSelect(string ID, List<ListItem> list, string text, Timer updateTimer, bool wideMode)
@@ -759,11 +759,7 @@ namespace WebApplication1
                 {
                     Ctor_(id, Name_, hasNext, hasPreious, hasExit, false, content);
                 }
-
-                public SettingsSubMenu(int id, string Name_, bool hasNext, bool hasPreious, bool hasExit, bool hasPLCTimeShow, HtmlGenericControl content)
-                {
-                    Ctor_(id, Name_, hasNext, hasPreious, hasExit, hasPLCTimeShow, content);
-                }
+                               
 
                 public void Ctor_(int id, string Name_, bool hasNext, bool hasPreious, bool hasExit, bool hasPLCTimeShow, HtmlGenericControl content)
                 {
@@ -823,12 +819,7 @@ namespace WebApplication1
                         {
                             Style.Add(HtmlTextWriterStyle.BackgroundImage, "/Pictures/alertNoExitBtn.png");
                         }
-
-                        if (hasPLCTimeShow)
-                        {
-                            AddClock();
-                        }
-
+                        
                         Controls.Add(Clock);
                         Controls.Add(content);
 
@@ -840,16 +831,7 @@ namespace WebApplication1
                     }
 
                 }
-
-                void AddClock()
-                {
-                    Clock.Text = "TRENUTEN ČAS: " + Val.logocontroler.Prop1.LogoClock.Value_ClockForSiemensLogoFormat;
-                    SetControlAbsolutePos(Clock, 10, 45, 30, 5);
-                    Clock.Style.Add(HtmlTextWriterStyle.FontSize, "1.4vw");
-                    Clock.Style.Add(HtmlTextWriterStyle.Color, Settings.LightBlackColor);
-
-                }
-
+                                
 
                 void AddSettingsPanelContent()
                 {
@@ -1208,7 +1190,7 @@ namespace WebApplication1
 
 
                 public ListItem selectedItem;
-                public Helper.Datasource DataSource = new Helper.Datasource();
+                public Datasourcer.Datasource DataSource = new Datasourcer.Datasource();
 
                 // updatable
                 public UpdatePanel updatePanel = new UpdatePanel();
@@ -1217,12 +1199,12 @@ namespace WebApplication1
                 AsyncPostBackTrigger trigger;
                 Timer UpdateTimer;
 
-                public DropDown(string LableTitle, Helper.Datasource dataSource, string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
+                public DropDown(string LableTitle, Datasourcer.Datasource dataSource, string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
                 {
                     SetDropdown(LableTitle, dataSource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, wideMode);
                 }
 
-                public DropDown(string LableTitle, Helper.Datasource dataSource, string ID, bool? PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
+                public DropDown(string LableTitle, Datasourcer.Datasource dataSource, string ID, bool? PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
                 {
                     string buff = null;
                     if (PlcTextValue != null)
@@ -1232,7 +1214,7 @@ namespace WebApplication1
                     SetDropdown(LableTitle, dataSource, ID, buff, top, left, size, fontSize, selfUpdatable, wideMode);
                 }
 
-                void SetDropdown(string LableTitle, Helper.Datasource dataSource, string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
+                void SetDropdown(string LableTitle, Datasourcer.Datasource dataSource, string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
                 {
 
                     this.ID = ID;
@@ -1326,7 +1308,7 @@ namespace WebApplication1
                 private void DropDown_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
                     this.selectedItem = selectedItem;
-                    Helper.Refresh();
+                    Navigator.Refresh();
                 }
 
 
@@ -1364,7 +1346,7 @@ namespace WebApplication1
 
             public class DropDownListChartViewSelector : DropDown
             {
-                static Helper.ChartViewSelectorDatasource datasource = new Helper.ChartViewSelectorDatasource();
+                static Datasourcer.ChartViewSelectorDatasource datasource = new Datasourcer.ChartViewSelectorDatasource();
 
                 public DropDownListChartViewSelector(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable)
                     : base("Izbor pogleda:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, true)
@@ -1394,7 +1376,7 @@ namespace WebApplication1
 
             public class DropDownListForDimmerLUX : DropDown
             {
-                static Helper.DimmerSelectorDatasource datasource = new Helper.DimmerSelectorDatasource();
+                static Datasourcer.DimmerSelectorDatasource datasource = new Datasourcer.DimmerSelectorDatasource();
 
                
                 public DropDownListForDimmerLUX(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
@@ -1412,7 +1394,7 @@ namespace WebApplication1
 
             public class DropDownListForDimmerRPM : DropDown
             {
-                static Helper.DimmerSelectorDatasource datasource = new Helper.DimmerSelectorDatasource();
+                static Datasourcer.DimmerSelectorDatasource datasource = new Datasourcer.DimmerSelectorDatasource();
 
                 
                 public DropDownListForDimmerRPM(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
@@ -1435,7 +1417,7 @@ namespace WebApplication1
 
             public class DropDownListForHisteresis : DropDown
             {
-                static Helper.HisteresisSelectorDatasource datasource = new Helper.HisteresisSelectorDatasource();
+                static Datasourcer.HisteresisSelectorDatasource datasource = new Datasourcer.HisteresisSelectorDatasource();
 
                 public DropDownListForHisteresis(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
                     : base("Izberite histerezo:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
@@ -1452,7 +1434,7 @@ namespace WebApplication1
 
             public class DropDownListForTimer_1_30s : DropDown
             {
-                static Helper.TimerSelectorDatasource datasource = new Helper.TimerSelectorDatasource(1, 30, 1, "s");
+                static Datasourcer.TimerSelectorDatasource datasource = new Datasourcer.TimerSelectorDatasource(1, 30, 1, "s");
 
                 public DropDownListForTimer_1_30s(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
                     : base("", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
@@ -1470,7 +1452,7 @@ namespace WebApplication1
 
             public class DropDownListForTemperatureSelect_10_30 : DropDown
             {
-                static Helper.Temperature_10_30_SelectorDatasource datasource = new Helper.Temperature_10_30_SelectorDatasource();
+                static Datasourcer.Temperature_10_30_SelectorDatasource datasource = new Datasourcer.Temperature_10_30_SelectorDatasource();
 
                 public DropDownListForTemperatureSelect_10_30(string ID, string PlcTextValue, float size, float fontSize, bool selfUpdatable)
                     : base("Izberite željeno temperaturo:", datasource, ID, PlcTextValue, 0, 0, size, fontSize, selfUpdatable, false)
@@ -1490,11 +1472,16 @@ namespace WebApplication1
                     DataSource = datasource;
                     Button_Outside.DataBind();
                 }
+
+                new public short GetSelectedValue()
+                {
+                    return Convert.ToInt16(base.GetSelectedValue());
+                }
             }
 
             public class DropDownListForWeekDaySelect : DropDown
             {
-                static Helper.WeekDaySelectorDatasource datasource = new Helper.WeekDaySelectorDatasource();
+                static Datasourcer.WeekDaySelectorDatasource datasource = new Datasourcer.WeekDaySelectorDatasource();
                                 
                 public DropDownListForWeekDaySelect(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
                     : base("Izberite željeni dan:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
@@ -1512,7 +1499,7 @@ namespace WebApplication1
 
             public class DropDownListForHourSelect : DropDown
             {
-                static Helper.TimeSelectorDatasource datasource = new Helper.TimeSelectorDatasource();
+                static Datasourcer.TimeSelectorDatasource datasource = new Datasourcer.TimeSelectorDatasource();
 
                 public DropDownListForHourSelect(string ID, string PlcTextValue, float size, float fontSize, bool selfUpdatable)
                    : base("Izberite čas:", datasource, ID, PlcTextValue, 0, 0, size, fontSize, selfUpdatable, false)
@@ -1535,10 +1522,10 @@ namespace WebApplication1
 
             public class DropDownListForYesNoSelect : DropDown
             {
-                static Helper.YesNoSelectorDatasource datasource = new Helper.YesNoSelectorDatasource();
+                static Datasourcer.YesNoSelectorDatasource datasource = new Datasourcer.YesNoSelectorDatasource();
 
-                public DropDownListForYesNoSelect(string ID, bool? PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
-                    : base("", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
+                public DropDownListForYesNoSelect(string ID, short? PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
+                    : base("", datasource, ID, selectVal(PlcTextValue), top, left, size, fontSize, selfUpdatable, widemode)
                 {
                     Ctor();
                 }
@@ -1549,15 +1536,33 @@ namespace WebApplication1
                     Button_Outside.DataBind();
                 }
 
+                static string selectVal(short? val)
+                {
+                    if (val != null)
+                    {
+                        if (val == 0)
+                        {
+                            return datasource[2].Text; // Avtom.
+                        }
+                        return datasource[1].Text; // Rocno
+                    }
+                    return null;
+                }
+
                 new public short GetSelectedValue()
                 {
-                    return Convert.ToInt16(base.GetSelectedValue());
+                    var buff = base.GetSelectedValue();
+                    if (buff == true.ToString())
+                    {
+                        return 1;
+                    }
+                    return 0;
                 }
             }
 
             public class DropDownListForRocnoAvtoSelect : DropDown
             {
-                static Helper.RocnoAvtoSelectorDatasource datasource = new Helper.RocnoAvtoSelectorDatasource();
+                static Datasourcer.RocnoAvtoSelectorDatasource datasource = new Datasourcer.RocnoAvtoSelectorDatasource();
 
                 public DropDownListForRocnoAvtoSelect(string ID, short? PlcValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
                     : base("Izberite režim delovanja:", datasource, ID, selectVal(PlcValue), top, left, size, fontSize, selfUpdatable, widemode)
@@ -1583,11 +1588,16 @@ namespace WebApplication1
                     }
                     return null;
                 }
+
+                new public short GetSelectedValue()
+                {
+                   return Convert.ToInt16(base.GetSelectedValue());
+                }
             }
 
             public class DropDownListForOnOffSelect : DropDown
             {
-                static Helper.OnOffSelectorDatasource datasource = new Helper.OnOffSelectorDatasource();
+                static Datasourcer.OnOffSelectorDatasource datasource = new Datasourcer.OnOffSelectorDatasource();
 
                 public DropDownListForOnOffSelect(string ID, bool? PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
                     : base("", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
@@ -1707,7 +1717,7 @@ namespace WebApplication1
                     Controls.Add(g);
 
                     // scriptloader
-                    var sl = Helper.ScriptLoader.GetScriptLoaderInstance();
+                    var sl = Navigator.ScriptLoader.GetScriptLoaderInstance();
                     if (sl != null)
                     {
                         sl.RegisterScriptOnPageLoad("FocusNextIfEnterKeyPressed", Val.FocusNextIfEnterKeyPressedScript); // MoveNext('TextBox1',event.keyCode) is defined here
@@ -1752,8 +1762,8 @@ namespace WebApplication1
 
                         if (ok)
                         {
-                            session[Helper.ViewStateElement_LoggedIn] = Val.LoggingIn;
-                            Helper.Redirect("default", page);
+                            session[Navigator.ViewStateElement_LoggedIn] = Val.LoggingIn;
+                            Navigator.Redirect("default", page);
                         }
 
                     }

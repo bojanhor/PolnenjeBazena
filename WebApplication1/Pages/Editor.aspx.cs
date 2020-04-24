@@ -13,7 +13,7 @@ namespace WebApplication1.Pages
         protected void Page_Load(object sender, EventArgs e)
         {
             Val.guiController.PageEditor_ = new GuiController.PageEditor();
-            Helper.EveryPageProtocol("Zahtevne Nastavitve", this, Session, TemplateClassID, true, false);
+            Navigator.EveryPageProtocol("Zahtevne Nastavitve", this, Session, TemplateClassID, true, false);
                        
             InitialiseEditor();
             RegisterOnClickEditor();
@@ -54,7 +54,7 @@ namespace WebApplication1.Pages
         private void Refresh_ClickEditor(object sender, System.Web.UI.ImageClickEventArgs e)
         {
             XmlController.RefreshFile_readAgain();
-            Helper.Refresh();
+            Navigator.Refresh();
         }
 
         private void Save_ClickEditor(object sender, System.Web.UI.ImageClickEventArgs e)

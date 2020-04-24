@@ -121,7 +121,7 @@ namespace WebApplication1
                 catch (Exception ex)
                 {
                     var message = "Log file problem: " + ex.Message;
-                    Helper.MessageBox(message);
+                    Navigator.MessageBox(message);
                     throw new Exception(message);
                 }
             }
@@ -141,7 +141,7 @@ namespace WebApplication1
                 catch (Exception ex)
                 {
                     var message = "File " + FilePath + " can not be opened. Error: " + ex.Message;
-                    Helper.MessageBox(message);
+                    Navigator.MessageBox(message);
                     throw new Exception(message);
                 }
 
@@ -157,7 +157,7 @@ namespace WebApplication1
                 catch (Exception ex)
                 {
                     var message = "File creation failed: " + ex.Message;
-                    Helper.MessageBox(message);
+                    Navigator.MessageBox(message);
                     throw new Exception(message);
                 }
 
@@ -228,7 +228,7 @@ namespace WebApplication1
                     catch (Exception ex)
                     {
                         var message = "ERROR WRITING TO FILE! " + ex.Message;
-                        Helper.MessageBox(message);
+                        Navigator.MessageBox(message);
                         Message.SetMessage(message, true);
                         throw new Exception(message);
                     }

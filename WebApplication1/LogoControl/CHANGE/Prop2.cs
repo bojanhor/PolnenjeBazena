@@ -14,6 +14,7 @@ namespace WebApplication1
         Misc.LoopTiming timing = new Misc.LoopTiming(Settings.UpdateValuesPCms, Settings.defaultCheckTimingInterval);
         public static Sharp7.S7Client Client;
         PlcVars.Word watchdog2;
+        public PlcVars.LogoClock LogoClock;
 
         // Top
         public PlcVars.Word Obrati_RocniNacin;
@@ -24,7 +25,7 @@ namespace WebApplication1
         public PlcVars.TemperatureShow TempNivo1;
         public PlcVars.TemperatureShow TempNivo2;
         public PlcVars.TemperatureShow TempNivo3;
-        public PlcVars.Bit UpostevajZT;
+        public PlcVars.Word UpostevajZT;
 
 
         public PlcVars.Word ObratiTemperatura1;
@@ -33,7 +34,7 @@ namespace WebApplication1
 
 
         // Right side menu
-        public PlcVars.Bit Nocn_Nacin;
+        public PlcVars.Word Nocn_Nacin;
         public PlcVars.Word OmejiObrateNa;
         public PlcVars.TimeSet OmObrMedA;
         public PlcVars.TimeSet OmObrMedB;
@@ -47,6 +48,7 @@ namespace WebApplication1
         {
             Client = client;
             watchdog2 = new PlcVars.Word(Client, new PlcVars.WordAddress(5), "", "", false);
+            LogoClock = new PlcVars.LogoClock(Client);
 
             // Top
             Vklop_RocniNacin = new PlcVars.Word(Client, new PlcVars.WordAddress(80), "", "", true);
@@ -54,10 +56,10 @@ namespace WebApplication1
             DejanskiRPM = new PlcVars.Word(Client, new PlcVars.WordAddress(86), "", "%", false);
 
             // Left side menu
-            TempNivo1 = new PlcVars.TemperatureShow(Client, new PlcVars.WordAddress(50), "", "°C", 0, 1, 0, true);
-            TempNivo2 = new PlcVars.TemperatureShow(Client, new PlcVars.WordAddress(54), "", "°C", 0, 1, 0, true);
-            TempNivo3 = new PlcVars.TemperatureShow(Client, new PlcVars.WordAddress(58), "", "°C", 0, 1, 0, true);
-            UpostevajZT = new PlcVars.Bit(Client, new PlcVars.BitAddress(70,0), "DA", "NE", true);
+            TempNivo1 = new PlcVars.TemperatureShow(Client, new PlcVars.WordAddress(50), "", "°C", 0, 0.1F, 0, true);
+            TempNivo2 = new PlcVars.TemperatureShow(Client, new PlcVars.WordAddress(54), "", "°C", 0, 0.1F, 0, true);
+            TempNivo3 = new PlcVars.TemperatureShow(Client, new PlcVars.WordAddress(58), "", "°C", 0, 0.1F, 0, true);
+            UpostevajZT = new PlcVars.Word(Client, new PlcVars.WordAddress(70), "DA", "NE", true);
 
 
             ObratiTemperatura1 = new PlcVars.Word(Client, new PlcVars.WordAddress(62), "", "%", true);
@@ -66,7 +68,7 @@ namespace WebApplication1
 
 
             // Right side menu
-            Nocn_Nacin = new PlcVars.Bit(Client, new PlcVars.BitAddress(90,0), "", "", true);
+            Nocn_Nacin = new PlcVars.Word(Client, new PlcVars.WordAddress(90), "", "", true);
             OmejiObrateNa = new PlcVars.Word(Client, new PlcVars.WordAddress(104), "", "%", true);
             OmObrMedA = new PlcVars.TimeSet(Client, new PlcVars.WordAddress(94), true);
             OmObrMedB = new PlcVars.TimeSet(Client, new PlcVars.WordAddress(98), true);

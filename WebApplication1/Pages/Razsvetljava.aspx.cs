@@ -16,7 +16,7 @@ namespace WebApplication1.Pages
         {
             Val.guiController.PageRazsvetljava_ = new GuiController.PageRazsvetljava(this, Session);
             
-            Helper.EveryPageProtocol("Razsvetljava", this, Session, TemplateClassID);
+            Navigator.EveryPageProtocol("Razsvetljava", this, Session, TemplateClassID);
             Initialise();            
            
         }   

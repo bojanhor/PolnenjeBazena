@@ -22,7 +22,6 @@ namespace WebApplication1
                 try
                 {
                     subMenu = new VentSettingsSubmenu(SettingsContent);
-
                 }
                 catch (Exception ex)
                 {
@@ -34,9 +33,7 @@ namespace WebApplication1
             {
                 public VentSettingsSubmenu(VentSettingsContent SettingsContent)
                     : base(1, "Ventilacija", false, SettingsContent)
-                {
-
-                }
+                { }
             }
 
             public class VentSettingsContent : HtmlGenericControl
@@ -80,7 +77,10 @@ namespace WebApplication1
                 GControls.GroupBox gb_L;
                 GControls.GuiSeparator gs;
 
-
+                ImageButton inTemp;
+                Image guiSepare;
+                ImageButton outTemp;
+                HtmlGenericControl weather;
 
                 // Declarations Right GroupBox
 
@@ -101,7 +101,7 @@ namespace WebApplication1
                 GControls.GuiSeparator gs2;
 
                 GControls.SuperLabel Lbl_UpostevajZT;
-                GControls.DropDown DropD_UpostevajZT;
+                GControls.DropDownListForYesNoSelect DropD_UpostevajZT;
                 GControls.GuiSeparator gs3;
 
                 // Zgoraj
@@ -239,13 +239,13 @@ namespace WebApplication1
 
                     var prop = Val.logocontroler.Prop2;
 
-                    btnNastavi1 = new GControls.DropDownListForTemperatureSelect_10_30("btnNastavi1", prop.TempNivo1.Value, s, FontSize, false);
+                    btnNastavi1 = new GControls.DropDownListForTemperatureSelect_10_30("btnNastavi1", prop.TempNivo1.Value_string, s, FontSize, false);
                     btnNastavi1.SaveClicked += BtnNastavi1_SaveClicked;
 
-                    btnNastavi2 = new GControls.DropDownListForTemperatureSelect_10_30("btnNastavi2", prop.TempNivo2.Value, s, FontSize, false);
+                    btnNastavi2 = new GControls.DropDownListForTemperatureSelect_10_30("btnNastavi2", prop.TempNivo2.Value_string, s, FontSize, false);
                     btnNastavi2.SaveClicked += BtnNastavi2_SaveClicked;
 
-                    btnNastavi3 = new GControls.DropDownListForTemperatureSelect_10_30("btnNastavi3", prop.TempNivo3.Value, s, FontSize, false);
+                    btnNastavi3 = new GControls.DropDownListForTemperatureSelect_10_30("btnNastavi3", prop.TempNivo3.Value_string, s, FontSize, false);
                     btnNastavi3.SaveClicked += BtnNastavi3_SaveClicked;
                                        
                     btnNastaviObr1 = new GControls.DropDownListForDimmerRPM("btnNastaviObr1", prop.ObratiTemperatura1.Value_string, 0, 0, s, FontSize, true, false);
@@ -257,40 +257,69 @@ namespace WebApplication1
                     btnNastaviObr3 = new GControls.DropDownListForDimmerRPM("btnNastaviObr3", prop.ObratiTemperatura3.Value_string, 0, 0, s, FontSize, true, false);
                     btnNastaviObr3.SaveClicked += BtnNastaviObr3_SaveClicked;
 
+                    inTemp = new ImageButton()
+                    {
+                        ImageUrl = "~/Pictures/temp-in.png",
+                        Width = Unit.Percentage(21),
+                    };
+
+                    guiSepare = new Image()
+                    {
+                        ImageUrl = "~/Pictures/gui_separator.png",
+                        Width = Unit.Percentage(5.5F)
+                    };
+
+                    outTemp = new ImageButton()
+                    {
+                        ImageUrl = "~/Pictures/temp-out.png",
+                        Width = inTemp.Width,
+                    };
+
+                    weather = DIV.CreateDivAbsolute();
+                    weather.Controls.Add(inTemp);
+                    weather.Controls.Add(guiSepare);
+                    weather.Controls.Add(outTemp);
+
+                    int topOffWthr = 80, lftOffWthr = 15;
+                    SetControlAbsolutePos(weather, topOffWthr, lftOffWthr, 45, 15);
 
                     gb_L = new GControls.GroupBox("gb_L", 17, 4, 45, 76);
-
+                    gb_L.Controls.Add(weather);
+                    
                     up.Controls_Add(gb_L);
+
+                    WeatherLabelFormater(prop.TempZnotraj.Value_string_formatted, inTemp.Width.Value, topOffWthr +5, lftOffWthr -23);
+                    WeatherLabelFormater(prop.TempZunaj.Value_string_formatted, inTemp.Width.Value, topOffWthr + 5, lftOffWthr + 8);
                 }
 
                 private void BtnNastaviObr3_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop2.ObratiTemperatura3.SyncWithPC(selectedItem.Value);
+                    Val.logocontroler.Prop2.ObratiTemperatura3.Value = btnNastaviObr3.GetSelectedValue();
                 }
 
                 private void BtnNastaviObr2_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop2.ObratiTemperatura2.SyncWithPC(selectedItem.Value);
+                    Val.logocontroler.Prop2.ObratiTemperatura2.Value = btnNastaviObr2.GetSelectedValue();
                 }
 
                 private void BtnNastaviObr1_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop2.ObratiTemperatura1.SyncWithPC(selectedItem.Value);
+                    Val.logocontroler.Prop2.ObratiTemperatura1.Value = btnNastaviObr1.GetSelectedValue();
                 }
                                 
                 private void BtnNastavi3_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop2.TempNivo3.SyncWithPC(selectedItem.Value);
+                    Val.logocontroler.Prop2.TempNivo3.Value = btnNastavi3.GetSelectedValue();
                 }
 
                 private void BtnNastavi2_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop2.TempNivo2.SyncWithPC(selectedItem.Value);
+                    Val.logocontroler.Prop2.TempNivo2.Value = btnNastavi2.GetSelectedValue();
                 }
 
                 private void BtnNastavi1_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop2.TempNivo1.SyncWithPC(selectedItem.Value);
+                    Val.logocontroler.Prop2.TempNivo1.Value = btnNastavi1.GetSelectedValue();
                 }
 
                 void PositionControls_Left()
@@ -395,12 +424,12 @@ namespace WebApplication1
 
                     Lbl_Med = new GControls.SuperLabel("med", nextH + 4, leftBorder + 25, 20, 10);
 
-                    DropD_Start = new GControls.DropDownListForHourSelect("DD_start", prop.OmObrMedA.Value_WeektimerForSiemensLogoFormat, nextH, tmp, sizeBtn, FontSize, false, false); tmp += 24;
+                    DropD_Start = new GControls.DropDownListForHourSelect("DD_start", prop.OmObrMedA.Value, nextH, tmp, sizeBtn, FontSize, false, false); tmp += 24;
                     DropD_Start.SaveClicked += DropD_Start_SaveClicked;
 
                     Lbl_In = new GControls.SuperLabel("in", nextH + 4, tmp, 20, 10); tmp += 5;
 
-                    DropD_Stop = new GControls.DropDownListForHourSelect("DD_stop", prop.OmObrMedB.Value_WeektimerForSiemensLogoFormat, nextH, tmp, sizeBtn, FontSize, false, false); nextH += DropD_Stop.Height + spacing * 3.5F;
+                    DropD_Stop = new GControls.DropDownListForHourSelect("DD_stop", prop.OmObrMedB.Value, nextH, tmp, sizeBtn, FontSize, false, false); nextH += DropD_Stop.Height + spacing * 3.5F;
                     DropD_Stop.SaveClicked += DropD_Stop_SaveClicked;
 
                     //
@@ -422,22 +451,22 @@ namespace WebApplication1
                                 
                 private void DropD_UpostevajZT_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop2.UpostevajZT.SyncWithPC(selectedItem.Value);
+                    Val.logocontroler.Prop2.UpostevajZT.Value = DropD_UpostevajZT.GetSelectedValue();
                 }
 
                 private void DropD_Stop_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop2.OmObrMedB.SyncWithPC(selectedItem.Value, 1);
+                    Val.logocontroler.Prop2.OmObrMedB.Value = DropD_Stop.GetSelectedValue();
                 }
 
                 private void DropD_Start_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop2.OmObrMedA.SyncWithPC(selectedItem.Value, 1);
+                    Val.logocontroler.Prop2.OmObrMedA.Value = DropD_Start.GetSelectedValue();
                 }
 
                 private void DropD_OmejiObrate_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop2.OmejiObrateNa.SyncWithPC(selectedItem.Value);
+                    Val.logocontroler.Prop2.OmejiObrateNa.Value = DropD_OmejiObrate.GetSelectedValue();
                 }
 
                 private void DropD_OmObratov_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
@@ -509,6 +538,23 @@ namespace WebApplication1
                     gb_R.Controls.Add(DropD_UpostevajZT);
                     gb_R.Controls.Add(gs3);
                                                            
+                }
+
+                void WeatherLabelFormater(string LableText, double width, float topOffset, float spacingLeft)
+                {
+                    var div = DIV.CreateDivAbsolute(Helper.FloatToStringWeb(width, "%"));
+                    var l = new Label();
+                    div.Style.Add(HtmlTextWriterStyle.Width, width + "%");
+                    l.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
+                    l.Style.Add(HtmlTextWriterStyle.FontSize, "1.2vw");
+                    div.Style.Add(HtmlTextWriterStyle.Top, Helper.FloatToStringWeb(topOffset, "%"));
+                    div.Style.Add(HtmlTextWriterStyle.Left, Helper.FloatToStringWeb(spacingLeft + 3, "%"));
+                    l.Width = Unit.Percentage(100);
+                    l.Text = LableText;
+                    div.Controls.Add(l);
+
+                    weather.Controls.Add(div);
+
                 }
 
             }

@@ -14,7 +14,7 @@ namespace WebApplication1.Pages
         {
             Val.guiController.PageVrataZavese_ = new GuiController.PageVrataZavese(this, Session);
 
-            Helper.EveryPageProtocol("Vrata", this, Session, TemplateClassID);
+            Navigator.EveryPageProtocol("Vrata", this, Session, TemplateClassID);
             Initialise();
            
         }

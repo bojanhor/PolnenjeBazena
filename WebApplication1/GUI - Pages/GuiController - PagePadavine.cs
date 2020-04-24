@@ -121,31 +121,31 @@ namespace WebApplication1
             {
                 var buff = chartViewSelector.GetSelectedValue();
                 XmlController.SetShowChart(Convert.ToInt32(buff));
-                Helper.Refresh();
+                Navigator.Refresh();
             }
 
             private void EnableTnotranja_Click(object sender, ImageClickEventArgs e)
             {
                 XmlController.SetEnableCharts_Tnotranja(!XmlController.GetEnableCharts_Tnotranja());
-                Helper.Refresh();
+                Navigator.Refresh();
             }
 
             private void EnableTzunanja_Click(object sender, ImageClickEventArgs e)
             {
                 XmlController.SetEnableCharts_Tzunanja(!XmlController.GetEnableCharts_Tzunanja());
-                Helper.Refresh();
+                Navigator.Refresh();
             }
 
             private void EnablePadavine_Click(object sender, ImageClickEventArgs e)
             {
                 XmlController.SetEnableCharts_Padavine(!XmlController.GetEnableCharts_Padavine());
-                Helper.Refresh();
+                Navigator.Refresh();
             }
 
             private void EnableSvetlost_Click(object sender, ImageClickEventArgs e)
             {
                 XmlController.SetEnableCharts_Svetlost(!XmlController.GetEnableCharts_Svetlost());
-                Helper.Refresh();
+                Navigator.Refresh();
             }
 
             class ChartTweaker :Dsps

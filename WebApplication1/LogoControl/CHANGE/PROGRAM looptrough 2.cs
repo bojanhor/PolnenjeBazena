@@ -13,7 +13,8 @@ namespace WebApplication1
 {
     public partial class LogoControler
     {
-        int cnt_prop2 = 0 ;        
+        int cnt_prop2 = 0 ;
+        int clksync2 = 5;
 
         public void PROGRAM2(Prop2 prop)
         {
@@ -55,7 +56,14 @@ namespace WebApplication1
                     cnt_prop2 = 0;
                     break;
             }
-                       
+
+            if (clksync2 >= 5)
+            {
+                prop.LogoClock.SyncWithPLC();
+                clksync1 = 0;
+            }
+         
+            clksync2++;
             cnt_prop2++;
         }
     }

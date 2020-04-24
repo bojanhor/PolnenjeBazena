@@ -46,7 +46,7 @@ namespace WebApplication1
         public void RedirectToPageOnButtonClick(Page thisPage, int buttonId)
         {
             var link = XmlController.GetMenuItemLink(buttonId);
-            Helper.Redirect(link, thisPage);
+            Navigator.Redirect(link, thisPage);
         }
 
                 

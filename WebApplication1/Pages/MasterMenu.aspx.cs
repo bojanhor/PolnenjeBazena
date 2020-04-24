@@ -16,7 +16,7 @@ namespace WebApplication1
 
             Val.guiController.PageMastermenu_ = new GuiController.PageMasterMenu(this);
 
-            Helper.EveryPageProtocol("Meni", this, Session, TemplateClassID);
+            Navigator.EveryPageProtocol("Meni", this, Session, TemplateClassID);
             Initialise();
 
         }

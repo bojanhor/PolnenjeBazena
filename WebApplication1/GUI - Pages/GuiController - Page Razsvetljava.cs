@@ -156,19 +156,19 @@ namespace WebApplication1
             private void ExitButton_Click(object sender, ImageClickEventArgs e)
             {               
                 SetCurrentLuciSettingsShown(0); // hideDiv
-                Helper.Refresh();
+                Navigator.Refresh();
             }
 
             void PrevButton_Click(object sender, ImageClickEventArgs e)
             {
                 IncrementCurrentLuciSettingsShown(-1);
-                Helper.Refresh();
+                Navigator.Refresh();
             }
 
             void NextButton_Click(object sender, ImageClickEventArgs e)
             {
                 IncrementCurrentLuciSettingsShown(1);
-                Helper.Refresh();
+                Navigator.Refresh();
             }
 
             private void InitializeLuci()
@@ -245,7 +245,7 @@ namespace WebApplication1
                 var panel = (HtmlGenericControl)ThisPage.FindControl("divLuciSettings");
                 panel.Style.Add(HtmlTextWriterStyle.Visibility, "visible");
 
-                Helper.Refresh();
+                Navigator.Refresh();
             }
 
             private void UgasniVseLuci_Click(object sender, EventArgs e)
@@ -399,7 +399,7 @@ namespace WebApplication1
 
                         myID = id;                        
 
-                        var rce = new Helper.TimeSelectorDatasource();
+                        var rce = new Datasourcer.TimeSelectorDatasource();
                         bool hasWeekTmr;
 
                         try
@@ -408,22 +408,22 @@ namespace WebApplication1
 
                             if (hasWeekTmr)
                             {
-                                Vklop1 = new GControls.DropDownListForHourSelect("DD_on1", prop.VklopConadop[id].Value_WeektimerForSiemensLogoFormat, widthbtn, fontSize, false)
+                                Vklop1 = new GControls.DropDownListForHourSelect("DD_on1", prop.VklopConadop[id].Value, widthbtn, fontSize, false)
                                 {
                                     Name = "VKLOP DOPOLDNE"
                                 };
 
-                                Vklop2 = new GControls.DropDownListForHourSelect("DD_on2", prop.VklopConapop[id].Value_WeektimerForSiemensLogoFormat, widthbtn, fontSize, false)
+                                Vklop2 = new GControls.DropDownListForHourSelect("DD_on2", prop.VklopConapop[id].Value, widthbtn, fontSize, false)
                                 {
                                     Name = "VKLOP POPOLDNE"
                                 };
 
-                                Izklop1 = new GControls.DropDownListForHourSelect("DD_off1", prop.IzklopConadop[id].Value_WeektimerForSiemensLogoFormat, widthbtn, fontSize, false)
+                                Izklop1 = new GControls.DropDownListForHourSelect("DD_off1", prop.IzklopConadop[id].Value, widthbtn, fontSize, false)
                                 {
                                     Name = "IZKLOP DOPOLDNE"
                                 };
 
-                                Izklop2 = new GControls.DropDownListForHourSelect("DD_off2", prop.IzklopConapop[id].Value_WeektimerForSiemensLogoFormat, widthbtn, fontSize, false)
+                                Izklop2 = new GControls.DropDownListForHourSelect("DD_off2", prop.IzklopConapop[id].Value, widthbtn, fontSize, false)
                                 {
                                     Name = "IZKLOP POPOLDNE"
                                 };
@@ -521,7 +521,7 @@ namespace WebApplication1
                     void SaveClickedTmr(ListItem selectedItem)
                 {
                     var buff = selectedItem.Text;
-                    Val.logocontroler.Prop1.IzklopConapop[myID].Value_WeektimerForSiemensLogoFormat = buff;
+                    Val.logocontroler.Prop1.IzklopConapop[myID].Value = buff;
                 }
 
                 private void Izklop2_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
@@ -546,13 +546,13 @@ namespace WebApplication1
 
                 private void DimmerPop_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    var buff = Helper.Datasource.GetValueFromText_short(selectedItem.Text);
+                    var buff = Datasourcer.Datasource.GetValueFromText_short(selectedItem.Text);
                     Val.logocontroler.Prop1.DimmerPop[myID].Value = buff;
                 }
 
                 private void DimmerDop_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    var buff = Helper.Datasource.GetValueFromText_short(selectedItem.Text);
+                    var buff = Datasourcer.Datasource.GetValueFromText_short(selectedItem.Text);
                     Val.logocontroler.Prop1.DimmerDop[myID].Value = buff;
                 }
 

@@ -13,7 +13,7 @@ namespace WebApplication1.Pages
         {
             Val.guiController.PageVreme_ = new GuiController.PageVreme();
 
-            Helper.EveryPageProtocol("Vreme", this, Session, TemplateClassID, true, false);
+            Navigator.EveryPageProtocol("Vreme", this, Session, TemplateClassID, true, false);
             Set();
             Initialise();
             

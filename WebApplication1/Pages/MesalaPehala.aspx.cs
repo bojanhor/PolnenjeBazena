@@ -14,7 +14,7 @@ namespace WebApplication1.Pages
         {
             Val.guiController.PageMesalaPehala_ = new GuiController.PageMesalaPehala();
 
-            Helper.EveryPageProtocol("Mesala / Pehala", this, Session, TemplateClassID);
+            Navigator.EveryPageProtocol("Mesala / Pehala", this, Session, TemplateClassID);
             Initialise();
            
         }
