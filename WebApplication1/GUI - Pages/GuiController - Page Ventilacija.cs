@@ -105,8 +105,8 @@ namespace WebApplication1
                 GControls.GuiSeparator gs3;
 
                 // Zgoraj
-                GControls.SuperLabel VklopRocniNacin;
-                GControls.DropDownListForRocnoAvtoSelect VklopRocniNacin_DD;
+                GControls.SuperLabel Rezimprikaz_lbl;
+                GControls.DropDownListForRocno0Rocno1AvtoSelect RezimPrikaz_dd;
 
                 GControls.SuperLabel VrednostRocniNacin;
                 GControls.DropDownListForDimmerRPM VrednostRocniNacin_DD;
@@ -186,17 +186,18 @@ namespace WebApplication1
                     var top = 7.1F;
                     var fs = 1; // fontsize
 
-                    VklopRocniNacin= new GControls.SuperLabel("Ročni Način:", top+2, 45, 7, 5);
-                    VklopRocniNacin_DD = new GControls.DropDownListForRocnoAvtoSelect("VklopRocniNacin", prop.Vklop_RocniNacin.Value_short, top, 49, sizeBtn, 1, false, false);
-                    VrednostRocniNacin = new GControls.SuperLabel("Nastavi obrate na:", top+2, 61, 7, 5);
+                    Rezimprikaz_lbl= new GControls.SuperLabel("Ročni Način:", top+2, 45, 7, 5);
+                    RezimPrikaz_dd = new GControls.DropDownListForRocno0Rocno1AvtoSelect("VklopRocniNacin", prop.Rezim_Prikaz.Value_short, top, 49, sizeBtn, 1, false, false);
+
+                    VrednostRocniNacin = new GControls.SuperLabel("Nastavi obrate na:", top + 2, 61, 7, 5);
                     VrednostRocniNacin_DD = new GControls.DropDownListForDimmerRPM("VrednostRocniNacin", prop.Obrati_RocniNacin.Value_string, top, 67, sizeBtn, 1, false, false);
 
                     DejanskiVrtljaji_lbl = new GControls.SuperLabel("Dejanski vrtljaji:", top + 2, 82, 7, 5);
                     DejanskiVrtljaji_val = new GControls.SuperLabel(prop.DejanskiRPM.Value_string, top + 3, 89, 7, 5);
 
-                    VklopRocniNacin.FontSize = fs; VrednostRocniNacin.FontSize = fs; DejanskiVrtljaji_lbl.FontSize = fs; DejanskiVrtljaji_val.FontSize = fs*1.2F;
+                    Rezimprikaz_lbl.FontSize = fs; DejanskiVrtljaji_lbl.FontSize = fs; DejanskiVrtljaji_val.FontSize = fs*1.2F;
 
-                    VklopRocniNacin_DD.SaveClicked += VklopRocniNacin_DD_SaveClicked;
+                    RezimPrikaz_dd.SaveClicked += RezimPrikaz_dd_SaveClicked;
                     VrednostRocniNacin_DD.SaveClicked += VrednostRocniNacin_DD_SaveClicked;
 
                 }
@@ -206,17 +207,27 @@ namespace WebApplication1
                     Val.logocontroler.Prop2.Obrati_RocniNacin.Value = VrednostRocniNacin_DD.GetSelectedValue();
                 }
 
-                private void VklopRocniNacin_DD_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
+                private void RezimPrikaz_dd_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    Val.logocontroler.Prop2.Vklop_RocniNacin.Value = VklopRocniNacin_DD.GetSelectedValue();
+                    var prop = Val.logocontroler.Prop2;
+                    var buff = RezimPrikaz_dd.GetSelectedValue();
+
+                    if (buff == 0) // AUTO
+                     prop.Rezim_Set_Auto.SendPulse(); 
+
+                    else if (buff == 1) // Man0
+                     prop.Rezim_Set_Man0.SendPulse(); 
+
+                    else if (buff == 2) // Man1
+                     prop.Rezim_Set_Man1.SendPulse(); 
                 }
 
                 void AddAndPositionControlsTop()
                 {
-                    Controls.Add(VklopRocniNacin);
-                    up.Controls_Add(VklopRocniNacin_DD);
-                    Controls.Add(VrednostRocniNacin);
+                    up.Controls_Add(VrednostRocniNacin);
                     up.Controls_Add(VrednostRocniNacin_DD);
+                    up.Controls_Add(Rezimprikaz_lbl);
+                    up.Controls_Add(RezimPrikaz_dd);       
                     up.Controls_Add(DejanskiVrtljaji_lbl);
                     up.Controls_Add(DejanskiVrtljaji_val);
                 }

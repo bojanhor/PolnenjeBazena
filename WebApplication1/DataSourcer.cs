@@ -358,6 +358,29 @@ namespace WebApplication1
             }
         }
 
+        public class Rocno0Rocno1AvtoDatasource : Datasource
+        {
+            public Rocno0Rocno1AvtoDatasource()
+            {
+                GetDataSource();
+            }
+            public void GetDataSource()
+            {
+                CreateRow(PropComm.NA, 0);
+                CreateRow("Avtomatsko", 0);
+                CreateRow("IZKLOP", 1);
+                CreateRow("VKLOP", 2);
+
+            }
+
+            ListItem CreateRow(string text, ushort value)
+            {
+                ListItem r = new ListItem(text, value.ToString());
+                Add(r);
+                return r;
+            }
+        }
+
         public class WeekDaySelectorDatasource : Datasource
         {
             public WeekDaySelectorDatasource()

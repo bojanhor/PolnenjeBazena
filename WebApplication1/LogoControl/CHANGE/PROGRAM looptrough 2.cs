@@ -18,8 +18,11 @@ namespace WebApplication1
 
         public void PROGRAM2(Prop2 prop)
         {
+            prop.Rezim_Prikaz.SyncWithPLC();
+            prop.Rezim_Set_Auto.SyncWithPLC();
+            prop.Rezim_Set_Man0.SyncWithPLC();
+            prop.Rezim_Set_Man1.SyncWithPLC();
             prop.Obrati_RocniNacin.SyncWithPLC();
-            prop.Vklop_RocniNacin.SyncWithPLC();
             prop.DejanskiRPM.SyncWithPLC();
             prop.TempNivo1.SyncWithPLC();
             prop.TempNivo2.SyncWithPLC();

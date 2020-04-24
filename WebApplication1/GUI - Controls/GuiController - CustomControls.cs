@@ -1595,6 +1595,47 @@ namespace WebApplication1
                 }
             }
 
+            public class DropDownListForRocno0Rocno1AvtoSelect : DropDown
+            {
+                static Datasourcer.Rocno0Rocno1AvtoDatasource datasource = new Datasourcer.Rocno0Rocno1AvtoDatasource();
+
+                public DropDownListForRocno0Rocno1AvtoSelect(string ID, short? PlcValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
+                    : base("Izberite režim delovanja:", datasource, ID, selectVal(PlcValue), top, left, size, fontSize, selfUpdatable, widemode)
+                {
+                    Ctor();
+                }
+
+                void Ctor()
+                {
+                    DataSource = datasource;
+                    Button_Outside.DataBind();
+                }
+
+                static string selectVal(short? val)
+                {
+                    if (val != null)
+                    {
+                        if (val == 1)
+                        {
+                            return datasource[2].Text; // Rocno izklop
+                        }
+                        if (val == 2)
+                        {
+                            return datasource[3].Text; // Rocno vklop
+                        }
+
+                        return datasource[1].Text; // Avtom.
+                        
+                    }
+                    return null;
+                }
+
+                new public short GetSelectedValue()
+                {
+                    return Convert.ToInt16(base.GetSelectedValue());
+                }
+            }
+
             public class DropDownListForOnOffSelect : DropDown
             {
                 static Datasourcer.OnOffSelectorDatasource datasource = new Datasourcer.OnOffSelectorDatasource();

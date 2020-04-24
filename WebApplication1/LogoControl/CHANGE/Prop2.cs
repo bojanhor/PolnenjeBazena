@@ -17,8 +17,12 @@ namespace WebApplication1
         public PlcVars.LogoClock LogoClock;
 
         // Top
+        public PlcVars.Word Rezim_Prikaz;
+        public PlcVars.Bit Rezim_Set_Auto;
+        public PlcVars.Bit Rezim_Set_Man0;
+        public PlcVars.Bit Rezim_Set_Man1;
         public PlcVars.Word Obrati_RocniNacin;
-        public PlcVars.Word Vklop_RocniNacin;
+
         public PlcVars.Word DejanskiRPM;
 
         // Left side menu
@@ -50,9 +54,12 @@ namespace WebApplication1
             watchdog2 = new PlcVars.Word(Client, new PlcVars.WordAddress(5), "", "", false);
             LogoClock = new PlcVars.LogoClock(Client);
 
-            // Top
-            Vklop_RocniNacin = new PlcVars.Word(Client, new PlcVars.WordAddress(80), "", "", true);
-            Obrati_RocniNacin = new PlcVars.Word(Client, new PlcVars.WordAddress(84), "", "%", true);            
+            // Top            
+            Rezim_Prikaz = new PlcVars.Word(Client, new PlcVars.WordAddress(180), "", "%", false);
+            Rezim_Set_Auto = new PlcVars.Bit(Client, new PlcVars.BitAddress(184,0), "", "", true);
+            Rezim_Set_Man0 = new PlcVars.Bit(Client, new PlcVars.BitAddress(186,0), "", "", true); 
+            Rezim_Set_Man1 = new PlcVars.Bit(Client, new PlcVars.BitAddress(188,0), "", "", true);
+            Obrati_RocniNacin = new PlcVars.Word(Client, new PlcVars.WordAddress(84), "", "%", true);
             DejanskiRPM = new PlcVars.Word(Client, new PlcVars.WordAddress(86), "", "%", false);
 
             // Left side menu
@@ -79,7 +86,6 @@ namespace WebApplication1
             TempZnotraj = new PlcVars.TemperatureShow(Client, new PlcVars.WordAddress(114), "", "°C", 0, 0.1F, 1, true);
 
             PadavineZadnjaUra = new PlcVars.Word(Client, new PlcVars.WordAddress(120), "", "mm/h", false);
-
 
         }
 
