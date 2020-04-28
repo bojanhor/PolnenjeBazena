@@ -1417,18 +1417,29 @@ namespace WebApplication1
 
             public class DropDownListForHisteresis : DropDown
             {
-                static Datasourcer.HisteresisSelectorDatasource datasource = new Datasourcer.HisteresisSelectorDatasource();
+                static Datasourcer.HisteresisSelectorDatasource datasource;
 
-                public DropDownListForHisteresis(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
-                    : base("Izberite histerezo:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
-                {
+                public DropDownListForHisteresis(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode, bool hasZero)
+                    : base("Izberite histerezo:", GetDatasource(hasZero), ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
+                {                    
                     Ctor();
+                }
+
+                static Datasourcer.HisteresisSelectorDatasource GetDatasource(bool hasZero)
+                {
+                    datasource = new Datasourcer.HisteresisSelectorDatasource(hasZero);
+                    return datasource;
                 }
 
                 void Ctor()
                 {
                     DataSource = datasource;
                     Button_Outside.DataBind();
+                }
+
+                new public short GetSelectedValue()
+                {
+                    return Convert.ToInt16(base.GetSelectedValue());
                 }
             }
 

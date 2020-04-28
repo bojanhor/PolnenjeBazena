@@ -202,31 +202,32 @@ namespace WebApplication1
         {
             static string[] units;
 
-            public HisteresisSelectorDatasource()
+            public HisteresisSelectorDatasource(bool HasZero)
             {
-                GetDatasource();
+                GetDatasource(1, HasZero);
             }
-
-            public void GetDatasource()
+                        
+            public void GetDatasource(int increment, bool HasZero)
             {
-                GetDatasource(1);
-            }
-
-            public void GetDatasource(int increment)
-            {
+                int from = 1;
+                if (HasZero)
+                {
+                    from = 0;
+                }
+                var to = 5;
 
                 try
                 {
-                    units = new string[5 / increment];
+                    units = new string[to / increment];
                 }
                 catch (Exception)
                 {
-                    units = new string[5 / increment];
+                    units = new string[to / increment];
                 }
 
                 CreateRow(PropComm.NA, "0");
 
-                var buff = 1;
+                var buff = from;
 
                 for (int i = 0; i < units.Length; i++)
                 {

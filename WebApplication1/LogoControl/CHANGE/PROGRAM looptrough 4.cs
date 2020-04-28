@@ -15,7 +15,20 @@ namespace WebApplication1
     {
         public void PROGRAM4(Prop4 prop)
         {
-           
+            for (int i = 0; i < prop.weekday.Length; i++)
+            {
+                prop.weekday[i].SyncWithPLC();
+                prop.start[i].SyncWithPLC();               
+                prop.stop[i].SyncWithPLC();
+                
+            }
+
+            prop.rezim.SyncWithPLC();
+            prop.rocno.SyncWithPLC();
+            prop.aktivenMotor.SyncWithPLC();
+            prop.Zvezda.SyncWithPLC();
+            prop.Trikot.SyncWithPLC();
+            prop.SmerNaprej.SyncWithPLC();
 
         }
     }

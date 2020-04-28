@@ -104,6 +104,9 @@ namespace WebApplication1
                 GControls.DropDownListForYesNoSelect DropD_UpostevajZT;
                 GControls.GuiSeparator gs3;
 
+                GControls.SuperLabel Lbl_PresezekZT;
+                GControls.DropDownListForHisteresis DropD_PresezekZT;
+
                 // Zgoraj
                 GControls.SuperLabel Rezimprikaz_lbl;
                 GControls.DropDownListForRocno0Rocno1AvtoSelect RezimPrikaz_dd;
@@ -190,7 +193,7 @@ namespace WebApplication1
                     RezimPrikaz_dd = new GControls.DropDownListForRocno0Rocno1AvtoSelect("VklopRocniNacin", prop.Rezim_Prikaz.Value_short, top, 49, sizeBtn, 1, false, false);
 
                     VrednostRocniNacin = new GControls.SuperLabel("Nastavi obrate na:", top + 2, 61, 7, 5);
-                    VrednostRocniNacin_DD = new GControls.DropDownListForDimmerRPM("VrednostRocniNacin", prop.Obrati_RocniNacin.Value_string, top, 67, sizeBtn, 1, false, false);
+                    VrednostRocniNacin_DD = new GControls.DropDownListForDimmerRPM("VrednostRocniNacin", prop.Obrati_RocniNacin.Value_string, top, 68, sizeBtn, 1, false, false);
 
                     DejanskiVrtljaji_lbl = new GControls.SuperLabel("Dejanski vrtljaji:", top + 2, 82, 7, 5);
                     DejanskiVrtljaji_val = new GControls.SuperLabel(prop.DejanskiRPM.Value_string, top + 3, 89, 7, 5);
@@ -448,18 +451,27 @@ namespace WebApplication1
                     //
 
                     Lbl_UpostevajZT = new GControls.SuperLabel("UPOŠTEVAJ ZUNANJO TEMPERATURO:", nextH + 2, leftBorder, 22, 10);
-
                     DropD_UpostevajZT = new GControls.DropDownListForYesNoSelect("DD_OutTempReg", prop.UpostevajZT.Value, nextH + 2, tmp1, sizeBtn, FontSize, false, false); nextH += DropD_UpostevajZT.Height + spacing * 4;
-                    DropD_UpostevajZT.SaveClicked += DropD_UpostevajZT_SaveClicked;
 
                     //
                     gs3 = new GControls.GuiSeparator(nextH, leftBorder, 90, guiSepH); nextH += gs3.Height + spacing - 2;
                     //
+
+                    Lbl_PresezekZT = new GControls.SuperLabel("IZKLOP OB PRESEŽKU ZUNANJE T", nextH, leftBorder, 20, 10);
+                    DropD_PresezekZT = new GControls.DropDownListForHisteresis("DD_Hist", prop.PresezekZT.Value_string, nextH + 2, tmp1, sizeBtn, FontSize, false, false, true);
                     
+                    DropD_UpostevajZT.SaveClicked += DropD_UpostevajZT_SaveClicked;
+                    DropD_PresezekZT.SaveClicked += DropD_PresezekZT_SaveClicked;
+                                                            
                     gb_R = new GControls.GroupBox("gb_R", 17, 51, 45, 76);
                     up.Controls_Add(gb_R);
                 }
-                                
+
+                private void DropD_PresezekZT_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
+                {
+                    Val.logocontroler.Prop2.PresezekZT.Value = DropD_PresezekZT.GetSelectedValue();
+                }
+
                 private void DropD_UpostevajZT_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
                     Val.logocontroler.Prop2.UpostevajZT.Value = DropD_UpostevajZT.GetSelectedValue();
@@ -487,11 +499,10 @@ namespace WebApplication1
 
                 void StyleControls_Right(float FontSize)
                 {
-                    Lbl_OmObratov.FontSize = FontSize;
-                    Lbl_OmejiObrate.FontSize = FontSize;
-                    Lbl_Med.FontSize = FontSize;
-                    Lbl_In.FontSize = FontSize;
-                    Lbl_UpostevajZT.FontSize = FontSize;                    
+                    VrednostRocniNacin.FontSize = FontSize; Lbl_OmObratov.FontSize = FontSize;
+                    Lbl_OmejiObrate.FontSize = FontSize; Lbl_Med.FontSize = FontSize;
+                    Lbl_In.FontSize = FontSize; Lbl_UpostevajZT.FontSize = FontSize;
+                    Lbl_PresezekZT.FontSize = FontSize;
                 }
 
                 // Both Groups
@@ -548,7 +559,8 @@ namespace WebApplication1
                     gb_R.Controls.Add(Lbl_UpostevajZT);
                     gb_R.Controls.Add(DropD_UpostevajZT);
                     gb_R.Controls.Add(gs3);
-                                                           
+                    gb_R.Controls.Add(Lbl_PresezekZT);
+                    gb_R.Controls.Add(DropD_PresezekZT);                                                           
                 }
 
                 void WeatherLabelFormater(string LableText, double width, float topOffset, float spacingLeft)

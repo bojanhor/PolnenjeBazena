@@ -27,8 +27,8 @@
 		<DDMenuItemLink0>Default</DDMenuItemLink0>					// LinkName for Page in Dropdown Menu
 		<DDMenuItemLink1>Razsvetljava</DDMenuItemLink1>					// LinkName for Page in Dropdown Menu
 		<DDMenuItemLink2>Ventilacija</DDMenuItemLink2>					// LinkName for Page in Dropdown Menu
-		<DDMenuItemLink3>Vrata/Zavese</DDMenuItemLink3>					// LinkName for Page in Dropdown Menu
-		<DDMenuItemLink4>Mešalo</DDMenuItemLink4>					// LinkName for Page in Dropdown Menu
+		<DDMenuItemLink3>Vrata_Zavese</DDMenuItemLink3>					// LinkName for Page in Dropdown Menu
+		<DDMenuItemLink4>MesalaPehala</DDMenuItemLink4>					// LinkName for Page in Dropdown Menu
 		<DDMenuItemLink5>asdf</DDMenuItemLink5>						// LinkName for Page in Dropdown Menu
 		<DDMenuItemLink6>asdf</DDMenuItemLink6>						// LinkName for Page in Dropdown Menu
 		<DDMenuItemLink7>asdf</DDMenuItemLink7>						// LinkName for Page in Dropdown Menu

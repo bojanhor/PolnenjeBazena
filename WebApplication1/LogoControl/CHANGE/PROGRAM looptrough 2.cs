@@ -35,6 +35,7 @@ namespace WebApplication1
             prop.OmejiObrateNa.SyncWithPLC();
             prop.OmObrMedA.SyncWithPLC();
             prop.OmObrMedB.SyncWithPLC();
+            prop.PresezekZT.SyncWithPLC();
 
 
             switch (cnt_prop2)

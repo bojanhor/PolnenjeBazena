@@ -67,7 +67,7 @@ namespace WebApplication1
                 // Režim
 
                 GControls.GuiSeparator gs; GControls.GuiSeparator_DottedLine gs1; GControls.GuiSeparator_DottedLine gs2;
-                GControls.SuperLabel rezim;
+                GControls.SuperLabel lbl_rezim;
                 GControls.DropDownListForRocnoAvtoSelect Rezim;
                 GControls.DropDownListForOnOffSelect rocnaNastavitev;
 
@@ -83,9 +83,9 @@ namespace WebApplication1
                     gb = new GControls.GroupBox("gb1", 17, 4, 83, 76);
                     gs = new GControls.GuiSeparator(topOffset - 5, 9, 82, 0.5F);
 
-                    var prop = Val.logocontroler.Prop5;
+                    var prop = Val.logocontroler.Prop4;
 
-                    rezim = new GControls.SuperLabel("Režim:", top + lblxtra, 10, 15, lblH ) { FontWeightBold = true };
+                    lbl_rezim = new GControls.SuperLabel("Režim:", top + lblxtra, 10, 15, lblH ) { FontWeightBold = true };
                      Rezim = new GControls.DropDownListForRocnoAvtoSelect("rezimSel", prop.rezim.Value, top, 22, ctrlH, fontSize, false, false);
                     rocnaNastavitev = new GControls.DropDownListForOnOffSelect("rnval", prop.rocno.Value, top, 44, ctrlH, fontSize, false, false);
 
@@ -120,7 +120,7 @@ namespace WebApplication1
                     gb.Controls.Add(gs1);
                     gb.Controls.Add(gs2);
 
-                    gb.Controls.Add(rezim);
+                    gb.Controls.Add(lbl_rezim);
                     gb.Controls.Add(Rezim);
                     gb.Controls.Add(rocnaNastavitev);
 

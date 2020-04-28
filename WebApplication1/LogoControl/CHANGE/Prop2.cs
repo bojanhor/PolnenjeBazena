@@ -29,7 +29,7 @@ namespace WebApplication1
         public PlcVars.TemperatureShow TempNivo1;
         public PlcVars.TemperatureShow TempNivo2;
         public PlcVars.TemperatureShow TempNivo3;
-        public PlcVars.Word UpostevajZT;
+        
 
 
         public PlcVars.Word ObratiTemperatura1;
@@ -45,6 +45,8 @@ namespace WebApplication1
 
         public PlcVars.TemperatureShow TempZunaj;
         public PlcVars.TemperatureShow TempZnotraj;
+        public PlcVars.Word UpostevajZT;
+        public PlcVars.Word PresezekZT;
 
         public PlcVars.Word PadavineZadnjaUra;
 
@@ -66,7 +68,7 @@ namespace WebApplication1
             TempNivo1 = new PlcVars.TemperatureShow(Client, new PlcVars.WordAddress(50), "", "°C", 0, 0.1F, 0, true);
             TempNivo2 = new PlcVars.TemperatureShow(Client, new PlcVars.WordAddress(54), "", "°C", 0, 0.1F, 0, true);
             TempNivo3 = new PlcVars.TemperatureShow(Client, new PlcVars.WordAddress(58), "", "°C", 0, 0.1F, 0, true);
-            UpostevajZT = new PlcVars.Word(Client, new PlcVars.WordAddress(70), "DA", "NE", true);
+            
 
 
             ObratiTemperatura1 = new PlcVars.Word(Client, new PlcVars.WordAddress(62), "", "%", true);
@@ -79,6 +81,8 @@ namespace WebApplication1
             OmejiObrateNa = new PlcVars.Word(Client, new PlcVars.WordAddress(104), "", "%", true);
             OmObrMedA = new PlcVars.TimeSet(Client, new PlcVars.WordAddress(94), true);
             OmObrMedB = new PlcVars.TimeSet(Client, new PlcVars.WordAddress(98), true);
+            UpostevajZT = new PlcVars.Word(Client, new PlcVars.WordAddress(70), "", "", true);
+            PresezekZT = new PlcVars.Word(Client, new PlcVars.WordAddress(74), "", "°C", true);
 
             //
 
