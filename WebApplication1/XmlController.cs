@@ -310,9 +310,7 @@ namespace WebApplication1
                     if (!File.Exists(XmlEncriptedPath))
                     {
                         throw new Exception("Config file could not be found. Search was performed at locations: " + ii + XmlEncriptedPath + ii + " and " + ii + XmlNotEncriptedPath + ii + ".");
-                    }
-
-                    FileEncript(XmlEncriptedPath);
+                    }                    
                 }
             }
             catch (Exception ex)
