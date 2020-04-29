@@ -316,32 +316,32 @@ namespace WebApplication1
 
             private void Vreme_Click(object sender, ImageClickEventArgs e)
             {
-                Navigator.Redirect("Vreme", thisPage);
+                Navigator.Redirect("Vreme");
             }
 
             private void InTemp_Click(object sender, ImageClickEventArgs e)
             {
-                Navigator.Redirect("Padavine", thisPage);
+                Navigator.Redirect("Padavine");
             }
             private void OutTemp_Click(object sender, ImageClickEventArgs e)
             {
-                Navigator.Redirect("Padavine", thisPage);
+                Navigator.Redirect("Padavine");
             }
             private void RainSense_Click(object sender, ImageClickEventArgs e)
             {
-                Navigator.Redirect("Padavine", thisPage);
+                Navigator.Redirect("Padavine");
             }
             private void DayNight_Click(object sender, ImageClickEventArgs e)
             {
-                Navigator.Redirect("Padavine", thisPage);
+                Navigator.Redirect("Padavine");
             }
             private void SunRise_Click(object sender, ImageClickEventArgs e)
             {
-                Navigator.Redirect("Padavine", thisPage);
+                Navigator.Redirect("Padavine");
             }
             private void SunSet_Click(object sender, ImageClickEventArgs e)
             {
-                Navigator.Redirect("Padavine", thisPage);
+                Navigator.Redirect("Padavine");
             }            
             private void BtnMasterMenuClick(object sender, ImageClickEventArgs e, Page thisPage)
             {

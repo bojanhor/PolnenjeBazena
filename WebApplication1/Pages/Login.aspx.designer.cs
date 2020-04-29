@@ -10,7 +10,7 @@
 namespace WebApplication1.Pages {
     
     
-    public partial class test {
+    public partial class PageLogin {
         
         /// <summary>
         /// form1 control.

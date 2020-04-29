@@ -141,6 +141,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Index.html" />
+    <Content Include="Pages\Blocked.aspx" />
     <Content Include="Pages\LogView.aspx" />
     <Content Include="Pages\Editor.aspx" />
     <Content Include="Pages\Padavine.aspx" />
@@ -473,6 +474,13 @@
     <Compile Include="GUI - Pages\GuiController - Page Ventilacija.cs" />
     <Compile Include="GUI - Pages\GuiController - Page Razsvetljava.cs" />
     <Compile Include="Navigator.cs" />
+    <Compile Include="Pages\Blocked.aspx.cs">
+      <DependentUpon>Blocked.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Blocked.aspx.designer.cs">
+      <DependentUpon>Blocked.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\LogView.aspx.cs">
       <DependentUpon>LogView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

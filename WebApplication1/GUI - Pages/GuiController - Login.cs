@@ -22,12 +22,12 @@ namespace WebApplication1
                 this.thisPage = _thisPage;
                 this.session = session;
                 TemplateClassID = TemplateClass;
-                TestLogin();
+                Login();
             }
 
-            void TestLogin()
+            void Login()
             {
-                var l = new GControls.LogMeIn(thisPage, session);
+                var l = new GControls.LogMeIn(thisPage, session);                
                 TemplateClassID.Controls.Add(l);
             }
         }

@@ -7,6 +7,7 @@ using System.Web.UI.HtmlControls;
 using System;
 using System.Web.SessionState;
 
+
 namespace WebApplication1
 {
     public partial class GuiController
@@ -1670,6 +1671,10 @@ namespace WebApplication1
                 Label Title;
                 Label Usrnmlbl;
                 Label pwdlbl;
+
+                Label UsrnmlblERR;
+                Label pwdlblERR;
+
                 TextBox username;
                 TextBox password;
                 ButtonWithLabel OK;
@@ -1693,7 +1698,7 @@ namespace WebApplication1
                     this.session = session;
                     this.page = _thisPage;
 
-                    fontSize = (top + left) / 40F;
+                    fontSize = (top + left) / 35F;
 
                     float lblLeft = 5;
                     float lbltopoff = 12;
@@ -1758,11 +1763,13 @@ namespace WebApplication1
                     password = new TextBox()
                     {
                         ID = "pwdField",
-                        TextMode = TextBoxMode.Password
+                        TextMode = TextBoxMode.Password                        
                     };
                     l.Add(password);
                     SetControlAbsolutePos(l.Last(), lblrow2, tbLeft, tbw, tbh);
-
+                                        
+                    UsrnmlblERR = new Label(); ErrLblFormat(UsrnmlblERR); UsrnmlblERR.Style.Add("top", "27%");
+                    pwdlblERR = new Label(); ErrLblFormat(pwdlblERR); pwdlblERR.Style.Add("top", "43%");
 
                     //
                     addToPage();
@@ -1778,6 +1785,52 @@ namespace WebApplication1
                     // javascript on keypress - enter
                     username.Attributes.Add("onkeydown", "return MoveNext('pwdField',event.keyCode);"); // method defined in FocusNextIfEnterKeyPressed.js file
 
+                    ErrorLoginManage();
+                }
+
+                void ErrLblFormat(Label lbl)
+                {
+                    lbl.Style.Add("position", "absolute");
+                    lbl.Text = "X"; lbl.ForeColor = System.Drawing.Color.Red;                 
+                    lbl.Style.Add(HtmlTextWriterStyle.FontWeight, "bold");
+                    lbl.Style.Add(HtmlTextWriterStyle.Visibility, "hidden");
+                    lbl.Style.Add(HtmlTextWriterStyle.Left, "78%");
+                    l.Add(lbl);
+                }
+
+                // just shows error on page
+                public void ErrorLoginManage()
+                {
+                    var sess = Navigator.GetSession(); // get session
+
+                    if (sess != null)
+                    {
+                        var lauth = sess[Navigator.ViewStateElement_LoginAuth]; // get auth info - just for graphics
+
+                        if (lauth != null)
+                        {
+                            var ucs = (Helper.UserDataManager.UserCheckStatus)lauth; // cast type
+
+
+                            if (ucs == Helper.UserDataManager.UserCheckStatus.InvalidUserName) // invalid username flag
+                            {
+                                UsrnmlblERR.Style.Remove(HtmlTextWriterStyle.Visibility); // removes hidden atribute
+                                return;
+                            }
+                            else
+                            {
+                                UsrnmlblERR.Style.Remove(HtmlTextWriterStyle.Visibility);
+                                UsrnmlblERR.Style.Add(HtmlTextWriterStyle.Visibility, "hidden"); // adds hidden atribute
+                            }
+
+
+                            if (ucs == Helper.UserDataManager.UserCheckStatus.InvalidPassword) // invalid password flag
+                            {                                
+                               pwdlblERR.Style.Remove(HtmlTextWriterStyle.Visibility); // removes hidden atribute
+                            }
+                                                        
+                        }
+                    }
                 }
 
                 void addToPage()
@@ -1799,33 +1852,41 @@ namespace WebApplication1
 
                 private void Button_Click(object sender, ImageClickEventArgs e)
                 {
-                    var ip = Helper.GetClientIP(page);
+                    var ip = Helper.GetClientIP();
 
                     SysLog.SetMessage("Login try: " + ip); 
 
                     try
                     {
-                        Helper.UserData.UserCheckStatus valid;
+                        Helper.UserDataManager.UserCheckStatus valid;
 
-                        var ok = Helper.UserData.ConfirmUsername(
+                        if (!Navigator.LoginTryData.LoginTryIP(ip)) // checks if too many retries to login were performed
+                        {
+                            var ok = Helper.UserDataManager.ConfirmUsername(
                             out valid,
                             ((TextBox)FindControl("usrField")).Text,
-                            ((TextBox)FindControl("pwdField")).Text);
+                            ((TextBox)FindControl("pwdField")).Text,
+                            Navigator.GetSession());
 
-                        if (ok)
-                        {
-                            session[Navigator.ViewStateElement_LoggedIn] = Val.LoggingIn;
-                            Navigator.Redirect("default", page);
-                        }
+                            if (ok)
+                            {
+                                session[Navigator.ViewStateElement_LoggedIn] = Val.LoggingIn; 
+                            }
+                            else
+                            {
+                                session[Navigator.ViewStateElement_LoggedIn] = "AUTH_False";
+                            }
 
+                            session[Navigator.ViewStateElement_LoginAuth] = valid;                            
+                            
+                            Navigator.Refresh();
+                        }                        
                     }
                     catch (Exception ex)
                     {
                         SysLog.SetMessage("Authentication error - General. " + ex.Message);
                     }
-
                 }
-
             }
 
             public class UpdatePanelFull : UpdatePanel

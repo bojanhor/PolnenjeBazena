@@ -40,6 +40,9 @@ namespace WebApplication1
 
         public static readonly uint logFileMaxSizeKB = 4000;
 
+        public static readonly uint MaxLoginTriesIP = 10;            // IP address is blocked after x failed attempts
+        public static readonly uint MaxLoginTriesUser = 5;            // User is blocked after x failed attempts
+
         // less important (not very significant)
 
         public static int defaultCheckTimingInterval = 40;      // used for loops checking - lower value means higher precision timing

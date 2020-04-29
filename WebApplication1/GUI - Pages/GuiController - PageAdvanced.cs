@@ -50,16 +50,22 @@ namespace WebApplication1
 
             void AddSpremljajFunctionality()
             {
-                var scriptloader = (Navigator.ScriptLoader)Session[Navigator.ViewStateElement_ScriptLoader];
+                var session = Session[Navigator.ViewStateElement_ScriptLoader];
 
-                if (Spremljaj.active)
+                if (session != null)
                 {
-                    scriptloader.RegisterScriptOnPageLoad("scrollTo", Val.ScrolToBottomTextboxScript);
+                    var scriptloader = (Navigator.ScriptLoader)session;
+
+                    if (Spremljaj.active)
+                    {
+                        scriptloader.RegisterScriptOnPageLoad("scrollTo", Val.ScrolToBottomTextboxScript);
+                    }
+                    else
+                    {
+                        scriptloader.RegisterScriptOnPageLoad("scrollTo", Val.RetainPositionTextboxScript);
+                    }
                 }
-                else
-                {
-                    scriptloader.RegisterScriptOnPageLoad("scrollTo", Val.RetainPositionTextboxScript);
-                }
+                
             }
 
             bool GetSpremljajChecked()
@@ -99,12 +105,12 @@ namespace WebApplication1
 
             private void Button_Click2(object sender, ImageClickEventArgs e)
             {
-                Navigator.Redirect("LogView", thisPage);
+                Navigator.Redirect("LogView");
             }
 
             private void Button_Click1(object sender, ImageClickEventArgs e)
             {
-                Navigator.Redirect("Editor", thisPage);
+                Navigator.Redirect("Editor");
             }
                         
 

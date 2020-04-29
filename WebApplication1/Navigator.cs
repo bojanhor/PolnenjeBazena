@@ -15,15 +15,18 @@ namespace WebApplication1
         public static string ViewStateElement_Response = "Response";
         public static string ViewStateElement_PageHistory = "PageHistory";
         public static string ViewStateElement_LoggedIn = "##_LoggedIn_##";
-        static bool messagePending;
+        public static string ViewStateElement_LoginAuth = "##_LogInAuth_##";
 
+        static bool messagePending;
+        public static List<LoginTryData> LoginTryDataList = new List<LoginTryData>();
+        
         static bool firstRequestover = false; // flag indicates if site is runned one cycle
 
-        public static void Redirect(string site, Page _thisPage)
+        public static void Redirect(string site)
         {
             try
             {
-                _thisPage.Response.Redirect(site, false);
+                GetCurrentPage().Response.Redirect(site, false);
             }
             catch (Exception ex)
             {
@@ -32,7 +35,7 @@ namespace WebApplication1
                 if (pageHistory != null)
                 {
                     var page = pageHistory.getPreviousPage();
-                    _thisPage.Server.Transfer(page + "aspx");
+                    GetCurrentPage().Server.Transfer(page + "aspx");
                 }
 
             }
@@ -46,26 +49,26 @@ namespace WebApplication1
                 var pageHistory = GetPageHistoryFromSession();
                 var lastPage = pageHistory.getLastPage();
 
-                Redirect(lastPage, thisPage);
+                Redirect(lastPage);
             }
         }
 
         public static void Refresh()
         {
-            Refresh(HttpContext.Current.Session, GetCurrentPage());
+            Refresh(GetSession(), GetCurrentPage());
         }
 
         public static void RedirectBack()
         {
             try
             {
-                var session = HttpContext.Current.Session;
+                var session = GetSession();
 
                 if (session != null)
                 {
                     var pageHistory = GetPageHistoryFromSession();
                     var lastPage = pageHistory.getLastPage();
-                    Redirect(pageHistory.getPreviousPage(), GetCurrentPage());
+                    Redirect(pageHistory.getPreviousPage());
                 }
 
             }
@@ -78,7 +81,7 @@ namespace WebApplication1
 
         static PageHistory GetPageHistoryFromSession()
         {
-            var session = HttpContext.Current.Session;
+            var session = GetSession();
 
             if (session != null)
             {
@@ -104,10 +107,10 @@ namespace WebApplication1
         {
             EveryPageProtocol(FriendlyPageNamePage, _thisPage, session, TemplateClassID, hasMenuBtn, hasLogo, true, true, true);
         }
-
+                
         public static void EveryPageProtocol(string FriendlyPageNamePage, Page _thisPage, HttpSessionState session, HtmlGenericControl TemplateClass, bool hasMenuBtn, bool hasLogo, bool hasBackBtn, bool hasHomeBtn, bool hasClock)
         {
-
+                       
             // Save response  
             session[ViewStateElement_Response] = _thisPage.Response;
 
@@ -203,12 +206,13 @@ namespace WebApplication1
                 }
             }
         }
-
+                
         static void LoginChk(Page _thisPage, HttpSessionState session)
         {
-            // Login determine
-            var loginBuff = session[ViewStateElement_LoggedIn]; // gets login state from current session            
+            var ip = Helper.GetClientIP();
 
+            // Login determine
+            var loginBuff = session[ViewStateElement_LoggedIn]; // gets login state from current session    
 
             if (loginBuff != null) // if there is no login state in session state
             {
@@ -218,20 +222,36 @@ namespace WebApplication1
                 }
                 else if (loginBuff.Equals(Val.LoggingIn)) // if value from sessionState is corect you can proceed on default page - if not than loginForm must be shown
                 {
-                    Redirect("Default", _thisPage); // value from sessionState was correct
+                    Redirect("Default"); // value from sessionState was correct
                     session[ViewStateElement_LoggedIn] = Val.LoggedIn;
-
+                    LoginTryData.IPCleared(ip); // clears login failed tries
                     return;
-                }
+                }                
             }
-
-            if (_thisPage.GetType().BaseType == typeof(Pages.test)) // if login form is (to be) shown proceed
+                        
+            if (LoginTryData.isBlockedIPOrUser(ip, session))
+            {
+                if (_thisPage.GetType().BaseType == typeof(Pages.PageBlocked)) // if blocked form is (to be) shown proceed
+                {
+                    return; // can proceed because blocked form will be shown
+                }
+                                
+                Redirect("Blocked"); // Ip is blocked
+                return;
+            }
+            
+            if (_thisPage.GetType().BaseType == typeof(Pages.PageLogin)) // if login form is (to be) shown proceed
             {
                 return; // can proceed because login form will be shown
             }
 
-            Redirect("Login", _thisPage);  // Conditions are not met for login
+            Redirect("Login");  // Conditions are not met for login
 
+        }
+
+        public static HttpSessionState GetSession()
+        {
+            return HttpContext.Current.Session;
         }
 
         static void Clock(HtmlGenericControl TemplateClass)
@@ -282,7 +302,7 @@ namespace WebApplication1
             {
                 try
                 {
-                    return (ScriptLoader)HttpContext.Current.Session[ViewStateElement_ScriptLoader];
+                    return (ScriptLoader)GetSession()[ViewStateElement_ScriptLoader];
                 }
                 catch
                 {
@@ -290,6 +310,100 @@ namespace WebApplication1
                 }
 
             }            
+        }
+
+        public class LoginTryData
+        {
+            string ip;
+            uint attempts = 1;
+            DateTime dt;
+            
+            public static bool LoginTryIP(string ip)
+            {
+                foreach (var item in LoginTryDataList)
+                {
+                    if (item.ip == ip)
+                    {
+                        item.attempts++;
+                        item.dt = DateTime.Now;
+
+                        if (item.attempts > Settings.MaxLoginTriesIP)
+                        {
+                            return true;
+                        }
+                        return false;
+                    }
+                }
+
+                var buff = new LoginTryData();
+                buff.dt = DateTime.Now;
+                buff.ip = ip;                
+                LoginTryDataList.Add(buff);
+                return false;
+            }
+
+            public static bool isBlockedIPOrUser(string ip, HttpSessionState session)
+            {
+                // IP blockage
+                UnblockIPAfter(ip);
+
+                foreach (var item in LoginTryDataList)
+                {
+                    if (item.ip == ip)
+                    {                        
+                        if (item.attempts >= Settings.MaxLoginTriesIP) // max login failed tries exceeded
+                        {
+                            return true;
+                        }
+                    }
+                }
+
+                // User Blockage
+
+                var luserobj = session[Helper.UserDataManager.ViewStateElement_LogingInUserTry];
+
+                if (luserobj != null)
+                {
+                    var luser = (string)luserobj;
+
+                    foreach(var item in Helper.UserDataManager.ActiveUsers)
+                    {
+                        if (item.GetUsername() == luser)
+                        {
+                            return item.Blocked();                            
+                        }
+                    }
+                }
+
+                return false;
+            }
+
+            public static void UnblockIPAfter(string ip)
+            {
+                foreach (var item in LoginTryDataList)
+                {
+                    if (item.ip == ip)
+                    {
+                        if (item.dt < DateTime.Now.AddSeconds(-20))
+                        {
+                            IPCleared(ip);
+                            return;
+                        }
+                    }
+                }
+            }
+
+            public static void IPCleared(string ip)
+            {
+                foreach (var item in LoginTryDataList)
+                {
+                    if (item.ip == ip)
+                    {
+                        LoginTryDataList.Remove(item);
+                        return;
+                    }
+                }
+            }
         }
 
         public static void MessageBox(string message)

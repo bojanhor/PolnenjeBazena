@@ -262,13 +262,13 @@ namespace WebApplication1
 
             public static void HomeBtn_Click(object sender, ImageClickEventArgs e, Page thisPage)
             {
-                Navigator.Redirect(Settings.DefaultPage, thisPage);                
+                Navigator.Redirect(Settings.DefaultPage);                
 
             }
 
             private static void MenuBtn_Click(object sender, ImageClickEventArgs e, Page thisPage)
             {
-                Navigator.Redirect("MasterMenu", thisPage);
+                Navigator.Redirect("MasterMenu");
             }
 
         }

@@ -139,15 +139,17 @@ namespace WebApplication1
             public static readonly string Impact = "Impact";
         }
 
-        public static string GetClientIP(Page page)
+        public static string GetClientIP()
         {
             string ip;
+            var thispage = Navigator.GetCurrentPage();
+
             try
             {
-                ip = page.Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
+                ip = thispage.Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
                 if (string.IsNullOrEmpty(ip))
                 {
-                    ip = page.Request.ServerVariables["REMOTE_ADDR"];
+                    ip = thispage.Request.ServerVariables["REMOTE_ADDR"];
                 }
 
                 if (ip == "::1" || ip.Contains("127.0.0.1"))
@@ -187,9 +189,13 @@ namespace WebApplication1
         }
         
         public class UserData
-        {
+        {                 
             string Username;
             string Password;
+            uint tries = 1;
+
+            bool blocked = false;
+            DateTime blocked_dt = new DateTime();
 
             public string GetUsername()
             {
@@ -201,52 +207,147 @@ namespace WebApplication1
                 return Password;
             }
 
+            public uint GetTries()
+            {
+                return tries;
+            }
+
+            public void AddTry()
+            {
+                if (tries >= Settings.MaxLoginTriesUser)
+                {
+                    blocked = true;
+                    blocked_dt = DateTime.Now;                    
+                }
+                else
+                {
+                    tries++;
+                }                
+            }
+
+            public void ResetTry()
+            {
+                tries = 1;
+                blocked = false;
+                blocked_dt = new DateTime();
+            }
+            
             public UserData(string U, string P)
             {
                 Username = U;
                 Password = P;
+                tries = 1;
+            }
+
+            public bool Blocked()
+            {
+                if (blocked)
+                {
+                    if (blocked_dt < DateTime.Now.AddSeconds(-20))
+                    {
+                        unblock();
+                    }
+                }
+
+                return blocked;
+            }
+
+            void unblock()
+            {
+                blocked = false;
+                blocked_dt = new DateTime();
+            }
+        }
+
+        public class UserDataManager
+        {
+            public static string ViewStateElement_LogingInUserTry = "##_LoggedInUser_##";
+            public static List<UserData> ActiveUsers = new List<UserData>();
+
+            public static bool ConfirmUsername(out UserCheckStatus chk, string UserName, string pwd, HttpSessionState session)
+            {
+                var usrsBuff = XmlController.GetUserData();
+                UserData userBuff;
+                var usr = UserName;
+                var pswrd = pwd;
+
+                session[ViewStateElement_LogingInUserTry] = UserName;
+
+                foreach (var item in usrsBuff)
+                {
+                    if (item.GetUsername() == usr)
+                    {
+                        userBuff = ActiveUsersAdd(item);
+
+                        if (userBuff.Blocked())
+                        {
+                            chk = UserCheckStatus.BlockedUser;                            
+                            return false;
+                        }
+                        //
+                        if (userBuff.GetPassword().Equals(pswrd))
+                        {
+                            ActiveUserResetTry(userBuff);
+                            chk = UserCheckStatus.OK;                            
+                            return true;
+                        }
+                        else
+                        {
+                            ActiveUserAddTry(userBuff);
+                            chk = UserCheckStatus.InvalidPassword;
+                            return false;
+                        }
+                    }
+                }
+
+                chk = UserCheckStatus.InvalidUserName;
+                return false;
             }
 
             public enum UserCheckStatus
             {
                 OK,
                 InvalidUserName,
-                InvalidPassword
+                InvalidPassword,
+                BlockedUser
             }
 
-            public static bool ConfirmUsername(out UserCheckStatus chk, string UserName, string pwd)
+            static UserData ActiveUsersAdd(UserData user)
             {
-                var usrsBuff = XmlController.GetUserData();
-                var usr = UserName;
-                var pswrd = pwd;
-                bool validUsername = false;
-
-                foreach (var item in usrsBuff)
+                foreach (var item in ActiveUsers)
                 {
-                    if (item.GetUsername() == usr)
+                    if (item.GetUsername() == user.GetUsername())
                     {
-                        validUsername = true;
-                        //
-                        if (item.GetPassword().Equals(pswrd))
-                        {
-                            chk = UserCheckStatus.OK;
-                            return true;
-                        }
+                        return item;
                     }
                 }
 
-                if (validUsername)
-                {
-                    chk = UserCheckStatus.InvalidPassword;
-                }
-                else
-                {
-                    chk = UserCheckStatus.InvalidUserName;
-                }
+                ActiveUsers.Add(user);
+                return user;
+            }
 
-                return false;
+            static void ActiveUserAddTry(UserData user)
+            {
+                foreach (var item in ActiveUsers)
+                {
+                    if (item.GetUsername() == user.GetUsername())
+                    {
+                        item.AddTry();
+                    }
+                }
+            }
 
-            }            
+            static void ActiveUserResetTry(UserData user)
+            {
+                foreach (var item in ActiveUsers)
+                {
+                    if (item.GetUsername() == user.GetUsername())
+                    {
+                        item.ResetTry();
+                    }
+                }
+            }
+            
         }
 
         public static void DownloadFile(Page thispage, string type, string content)
