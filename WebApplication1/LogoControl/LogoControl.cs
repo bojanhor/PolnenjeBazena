@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Threading;
 using Sharp7;
+using System.Net.NetworkInformation;
 
 namespace WebApplication1
 {
@@ -58,7 +59,7 @@ namespace WebApplication1
                     LocalTSAP = XmlController.GetLogoLocalTsap(i),
                     RemoteTSAP = XmlController.GetLogoRemoteTsap(i),
                     errcodeLOGO = 0,
-                    connectionStatusLOGO = (int)Connection.Status.NotInitialised
+                    connectionStatusLOGO = Connection.Status.NotInitialised
                 };
 
                 LOGO[i].SetConnectionParams(LOGOConnection[i].IpAddress.ToString(), LOGOConnection[i].LocalTSAP_asushort, LOGOConnection[i].RemoteTSAP_asushort);
@@ -113,9 +114,9 @@ namespace WebApplication1
 
 
             WL("Connecting...", device);
-            LOGOConnection[device].connectionStatusLOGO = (int)Connection.Status.Connecting;
+            LOGOConnection[device].connectionStatusLOGO = Connection.Status.Connecting;
 
-            Thread.Sleep(10);
+            Thread.Sleep(1000 * device); // startup delay - not all at once
 
             DateTime time1;
             DateTime time2;
@@ -141,15 +142,6 @@ namespace WebApplication1
 
             try
             {
-                //switch (device)
-                //{
-                //case 1: watchdogAddr = FormControl.Form_settings.TextBoxWatchdogAddressLOGO1.Text; break;
-                //.....
-                //    default:
-                //        WL("Internal Error Switch statement does not support this device", -2); LOGOConnection[device].connectionStatusLOGO = (int)Connection.Status.Error; break;
-
-                //}
-
                 if (IfDisconnectProcedure(device)) { return; }
 
                 errCode = LOGO[device].Connect();
@@ -159,22 +151,20 @@ namespace WebApplication1
                 if ((errCode) == 0)
                 {
                     WL("Connected", LOGO[device].deviceID);
-                    LOGOConnection[device].connectionStatusLOGO = (int)Connection.Status.Connected;
+                    LOGOConnection[device].connectionStatusLOGO = Connection.Status.Connected;
                 }
                 else
                 {
                     WL(LOGO[device].ErrorText(errCode), LOGO[device].deviceID);
-                    LOGOConnection[device].connectionStatusLOGO = (int)Connection.Status.Error;
+                    LOGOConnection[device].connectionStatusLOGO = Connection.Status.Error;
                 }
             }
             catch (Exception ex)
             {
                 WL("Internal fatal error on first connection attempt: " + ex.Message, device);
-                LOGOConnection[device].connectionStatusLOGO = (int)Connection.Status.Error;
+                LOGOConnection[device].connectionStatusLOGO = Connection.Status.Error;
             }
-
-
-
+                        
             try
             {
                 time1 = DateTime.Now;
@@ -191,8 +181,8 @@ namespace WebApplication1
                         if (IfDisconnectProcedure(device)) { return; }
 
 
-                        if (LOGOConnection[device].connectionStatusLOGO == (int)Connection.Status.Connected ||
-                            LOGOConnection[device].connectionStatusLOGO == (int)Connection.Status.Warning)
+                        if (LOGOConnection[device].connectionStatusLOGO == Connection.Status.Connected ||
+                            LOGOConnection[device].connectionStatusLOGO == Connection.Status.Warning)
                         {
                             switch (device)
                             {
@@ -207,9 +197,13 @@ namespace WebApplication1
 
 
                                 default:
-                                    WL("Internal Error: Switch statement does not support this device", -2); LOGOConnection[device].connectionStatusLOGO = (int)Connection.Status.Error; break;
+                                    WL("Internal Error: Switch statement does not support this device", -2); LOGOConnection[device].connectionStatusLOGO = Connection.Status.Error; break;
 
                             }
+                        }
+                        else
+                        {
+                            RunDiagnostics(device);
                         }
 
                     }
@@ -230,7 +224,7 @@ namespace WebApplication1
                         if (errCode != 0 && olderr != errCode)
                         {
                             WL(LOGO[device].ErrorText(errCode), device);
-                            LOGOConnection[device].connectionStatusLOGO = (int)Connection.Status.Warning;
+                            LOGOConnection[device].connectionStatusLOGO = Connection.Status.Warning;
                         }
                         else
                         {
@@ -248,7 +242,7 @@ namespace WebApplication1
 
                         if (errCode == (int)Connection.Status.Connected && olderr == errCode)
                         {
-                            LOGOConnection[device].connectionStatusLOGO = (int)Connection.Status.Connected;
+                            LOGOConnection[device].connectionStatusLOGO = Connection.Status.Connected;
                         }
 
                         RWcyc_old = RWcyc;
@@ -265,9 +259,9 @@ namespace WebApplication1
                     {
                         if (olderr != 0)
                         {
-                            WL("Connection error", device);
+                            WL("Connection error: " + LOGO[device].ErrorText(olderr), device);                            
                             time2 = DateTime.Now.AddMilliseconds(3000);
-                            LOGOConnection[device].connectionStatusLOGO = (int)Connection.Status.Connecting;
+                            LOGOConnection[device].connectionStatusLOGO = Connection.Status.Connecting;
 
                             // prevent to many reconnection attempts
                             while (time2 > DateTime.Now)
@@ -277,7 +271,8 @@ namespace WebApplication1
 
                             }
 
-                            Reconnect(LOGO[device]);
+                            RunDiagnostics(device);                            
+
                             if (IfDisconnectProcedure(device)) { return; }
 
                         }
@@ -290,7 +285,7 @@ namespace WebApplication1
                                 if (failCntr >= 10)
                                 {
                                     WL("Read-Write cycle is taking " + (int)(time2 - time1).TotalMilliseconds + "ms to complete (Cycle is set to be " + RWcyc + "ms ). Please extend Read-Write cycle", device);
-                                    LOGOConnection[device].connectionStatusLOGO = (int)Connection.Status.Warning;
+                                    LOGOConnection[device].connectionStatusLOGO = Connection.Status.Warning;
                                     failCntr = 0;
                                 }
                                 else
@@ -332,7 +327,7 @@ namespace WebApplication1
             catch (Exception ex)
             {
                 WL("Internal fatal error in background worker thread, Connection will be terminated: " + ex.Message, device);
-                LOGOConnection[device].connectionStatusLOGO = (int)Connection.Status.Error;
+                LOGOConnection[device].connectionStatusLOGO = Connection.Status.Error;
                 return;
             }
 
@@ -405,11 +400,19 @@ namespace WebApplication1
             }
             if (BackgroundWorker[device].CanelationPending)
             {
-                LOGOConnection[device].connectionStatusLOGO = (int)Connection.Status.Error;
-                //watchdogLabel[device].Text = "";
+                LOGOConnection[device].connectionStatusLOGO = Connection.Status.Error;                
                 return true;
             }
             else { return false; }
+        }
+
+        private void RunDiagnostics(int device)
+        {
+            WL("Running connection diagnostics...",1);
+
+            ping(device);
+            
+            Reconnect(LOGO[device]);
         }
 
         void Watchdog_PC_DoWork(object sender, EventArgs e)
@@ -465,20 +468,62 @@ namespace WebApplication1
             int id = Client.deviceID;
             int err;
 
-            LOGOConnection[Client.deviceID].connectionStatusLOGO = (int)Connection.Status.Connecting;
-            err = Client.Disconnect();
-            Thread.Sleep(100);
+            LOGOConnection[Client.deviceID].connectionStatusLOGO = Connection.Status.Connecting;
+            Client.Disconnect();
+            Thread.Sleep(500);
             err = Client.Connect();
             if ((err) == 0)
             {
                 WL("Connected again", Client.deviceID);
-                LOGOConnection[Client.deviceID].connectionStatusLOGO = (int)Connection.Status.Connected;
+                LOGOConnection[Client.deviceID].connectionStatusLOGO = Connection.Status.Connected;
+
             }
             else
             {
                 WL("Connection failed. Trying to reconnect", Client.deviceID);
+                LOGOConnection[Client.deviceID].connectionStatusLOGO = Connection.Status.Error;
             }
 
+
+        }
+
+        void ping(int device)
+        {
+            var pingTries = 5; // ping retries
+            var ip = LOGOConnection[device].IpAddress; // ip to ping
+            Ping ping = new Ping();
+            PingReply pingr = null;
+            var timeout = 100; // initial timeout for ping
+
+            int successfullPings = 0; // counter of sucessful pings
+
+            for (int i = 0; i < pingTries; i++)
+            {
+                // PING     
+                pingr = ping.Send(ip, timeout);
+
+                if (pingr.Status == IPStatus.Success)
+                {                    
+                    successfullPings++; // if ping successfull add cntr
+                }
+                else
+                {
+                    timeout = timeout * 2; // if ping not successfull increase timeout
+                }
+            }
+
+            if (successfullPings == pingTries)
+            {
+                WL("  -Ping successful at: " + ip, device);
+            }
+            else if(successfullPings > 0)
+            {
+                WL("  -Ping successful but connection is poor: " + ip, device);
+            }
+            else
+            {
+                WL("  -Ping ERROR at: " + ip + " (" + pingr.Status.ToString() + ")", device);
+            }
 
         }
 

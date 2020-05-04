@@ -15,7 +15,7 @@ namespace WebApplication1
 {
     public class Connection
     {
-        public enum Status : int
+        public enum Status
         {
             NotInitialised = -4,
             Error = -3,
@@ -30,12 +30,12 @@ namespace WebApplication1
         private ushort _RemoteTSAP_asushort;
 
         public int errcodeLOGO;
-        public int connectionStatusLOGO;
+        public Status connectionStatusLOGO;
         public bool IsLogoConnected
         {
             get
             {
-                if (connectionStatusLOGO == (int)Connection.Status.Connected)
+                if (connectionStatusLOGO == Status.Connected)
                 {
                     return true;
                 }
@@ -45,7 +45,7 @@ namespace WebApplication1
 
         public Connection()
         {
-            connectionStatusLOGO = (int)Status.NotInitialised;
+            connectionStatusLOGO = Status.NotInitialised;
         }
 
         public IPAddress IpAddress { get; set; }

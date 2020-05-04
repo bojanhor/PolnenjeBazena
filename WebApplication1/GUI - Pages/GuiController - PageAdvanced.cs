@@ -162,9 +162,7 @@ namespace WebApplication1
                 LabelDebug.Style.Add(HtmlTextWriterStyle.PaddingLeft, "3%");
                 LabelDebug.Style.Add(HtmlTextWriterStyle.Color, "white");
                 LabelDebug.Style.Add(HtmlTextWriterStyle.FontSize, "1.0vw");
-                LabelDebug.Style.Add(HtmlTextWriterStyle.BorderStyle, "none");
-                //LabelDebug.Style.Add("border-left", Settings.RedColorHtmlHumar + " " + "0.2vw");
-                //LabelDebug.Style.Add("border-right", Settings.RedColorHtmlHumar + " " + "0.2vw");
+                LabelDebug.Style.Add(HtmlTextWriterStyle.BorderStyle, "none");                
                 LabelDebug.Style.Add("border-top", "0.0vw");
                 LabelDebug.Style.Add("border-bottom", "0.0vw");
 
@@ -200,11 +198,9 @@ namespace WebApplication1
                 SpremljajLable.Style.Add(HtmlTextWriterStyle.Color, "white");
                 SpremljajLable.Style.Add(HtmlTextWriterStyle.FontWeight, "bold");
                 SpremljajLable.Text = "Spremljaj:";
-
-                //Spremljaj.CheckedChanged += Spremljaj_CheckedChanged;
-                Spremljaj.button.Click += Button_Click;                
-
-
+                                
+                Spremljaj.button.Click += Spremljaj_Button_Click;                
+                
                 divDebug_2.Style.Add("width", "100%");
                 divDebug_2.Style.Add("height", "95%");
 
@@ -216,13 +212,10 @@ namespace WebApplication1
 
                 divDebug.Controls.Add(divDebug_1);
                 divDebug.Controls.Add(divDebug_2);
-
-
-
-
+                
             }
 
-            private void Button_Click(object sender, ImageClickEventArgs e)
+            private void Spremljaj_Button_Click(object sender, ImageClickEventArgs e)
             {
                 // button value changes from Val.SpremljajChecked on postback
 
