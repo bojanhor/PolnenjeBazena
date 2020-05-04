@@ -7,19 +7,13 @@ using System.Data;
 
 namespace WebApplication1
 {
-    public class Prop5
+    public class Prop5 : PropComm
     {
-        public static Sharp7.S7Client Client;
-        PlcVars.Word watchdog5;
-
-        
-        public Prop5(Sharp7.S7Client client)
+                
+        public Prop5(Sharp7.S7Client client):base(client)
         {
-            Client = client;
-            watchdog5 = new PlcVars.Word(Client, new PlcVars.WordAddress(5), "", "", false);
-
             
-
+            
         }
 
     }

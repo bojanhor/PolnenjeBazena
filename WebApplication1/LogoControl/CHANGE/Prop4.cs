@@ -7,12 +7,10 @@ using System.Data;
 
 namespace WebApplication1
 {
-    public class Prop4
+    public class Prop4 : PropComm
     {
-        // Mesala pehala    
-        public static Sharp7.S7Client Client;
-        PlcVars.Word watchdog4;
-
+        // Mesala pehala           
+        
         static int rows = 3;
 
         public PlcVars.Word[] weekday = new PlcVars.Word[rows];
@@ -30,28 +28,24 @@ namespace WebApplication1
         readonly ushort startAddrs = 10;
 
 
-        public Prop4(Sharp7.S7Client client)
-        {
-            Client = client;
-            watchdog4 = new PlcVars.Word(Client, new PlcVars.WordAddress(5), "", "", false);
-
+        public Prop4(Sharp7.S7Client client):base(client)
+        {                        
             for (int i = 0; i < rows; i++)
             {
-                weekday[i] = new PlcVars.Word(Client, new PlcVars.WordAddress(startAddrs), "", "", true);
-                start[i] = new PlcVars.Word(Client, new PlcVars.WordAddress(startAddrs + 2), "", "", true);
-                stop[i] = new PlcVars.Word(Client, new PlcVars.WordAddress(startAddrs + 4), "", "", true);
+                weekday[i] = new PlcVars.Word(Client, this, new PlcVars.WordAddress(startAddrs), "", "", true);
+                start[i] = new PlcVars.Word(Client, this, new PlcVars.WordAddress(startAddrs + 2), "", "", true);
+                stop[i] = new PlcVars.Word(Client, this, new PlcVars.WordAddress(startAddrs + 4), "", "", true);
                 startAddrs += 10;
 
                 startAddrs += 100;
             }
-
-
-            rezim = new PlcVars.Word(Client, new PlcVars.WordAddress(40), "", "", true);
-            rocno = new PlcVars.Bit(Client, new PlcVars.BitAddress(50, 0), "", "", true);
-            aktivenMotor = new PlcVars.Bit(Client, new PlcVars.BitAddress(60, 0), "", "", false);
-            Zvezda = new PlcVars.Bit(Client, new PlcVars.BitAddress(62, 0), "", "", false);
-            Trikot = new PlcVars.Bit(Client, new PlcVars.BitAddress(64, 0), "", "", false);
-            SmerNaprej = new PlcVars.Bit(Client, new PlcVars.BitAddress(66, 0), "", "", false);
+            
+            rezim = new PlcVars.Word(Client, this, new PlcVars.WordAddress(40), "", "", true);
+            rocno = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(50, 0), "", "", true);
+            aktivenMotor = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(60, 0), "", "", false);
+            Zvezda = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(62, 0), "", "", false);
+            Trikot = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(64, 0), "", "", false);
+            SmerNaprej = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(66, 0), "", "", false);
         }
     }
 }

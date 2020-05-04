@@ -7,12 +7,10 @@ using System.Threading;
 
 namespace WebApplication1
 {
-    public class Prop1
+    public class Prop1 : PropComm
     {
         // Razsvetljava
-        
-        public static Sharp7.S7Client Client;
-
+                
         static int LucIconsTableLength = XmlController.GetHowManyLucIcons() + 1;
 
         public PlcVars.Bit[] LucStatus_ReadToPC = new PlcVars.Bit[LucIconsTableLength];
@@ -41,23 +39,21 @@ namespace WebApplication1
         public PlcVars.Word DayLightPercentOn;
         public PlcVars.Word DayLightPercentOff;
 
-        public Prop1(Sharp7.S7Client client)
-        {
-            Client = client;
-            
-            LogoClock = new PlcVars.LogoClock(Client);
+        public Prop1(Sharp7.S7Client client):base(client)
+        {                        
+            LogoClock = new PlcVars.LogoClock(Client, this);
 
             const ushort inc = 10;
             ushort vklopUrnikabuff = 210;
 
-            IzklopKoJeDan = new PlcVars.Word(Client, new PlcVars.WordAddress(744), "", "", true);
+            IzklopKoJeDan = new PlcVars.Word(Client, this, new PlcVars.WordAddress(744), "", "", true) { SyncEvery_X_Time = 5 };
 
             for (int i = 1; i < LucIconsTableLength; i++)
             {
-                LucStatus_ReadToPC[i] = new PlcVars.Bit(Client, XmlController.GetLucAddress_ReadToPC(i),"", "", false);
-                LucStatus_WriteToPLC[i] = new PlcVars.Bit(Client, XmlController.GetLucAddress_WriteToPLC(i), "", "", true);
+                LucStatus_ReadToPC[i] = new PlcVars.Bit(Client, this, XmlController.GetLucAddress_ReadToPC(i),"", "", false);
+                LucStatus_WriteToPLC[i] = new PlcVars.Bit(Client, this, XmlController.GetLucAddress_WriteToPLC(i), "", "", true);
                      
-                VklopUrnika[i] = new PlcVars.Word(Client, new PlcVars.WordAddress(vklopUrnikabuff), "", "", true);
+                VklopUrnika[i] = new PlcVars.Word(Client, this, new PlcVars.WordAddress(vklopUrnikabuff), "", "", true);
                 vklopUrnikabuff += inc;
 
             }
@@ -67,11 +63,11 @@ namespace WebApplication1
             ushort buffConaPopInc = 100;
             for (int i = 1; i < LucStatus_ReadToPC.Length; i++)
             {
-                VklopConadop[i] = new PlcVars.TimeSet(Client, new PlcVars.WordAddress(buffCona), true); 
-                IzklopConadop[i] = new PlcVars.TimeSet(Client, new PlcVars.WordAddress((ushort)(buffCona + buffConaIzkInc)), true); 
+                VklopConadop[i] = new PlcVars.TimeSet(Client, this, new PlcVars.WordAddress(buffCona), true) { SyncEvery_X_Time = 5 }; 
+                IzklopConadop[i] = new PlcVars.TimeSet(Client, this, new PlcVars.WordAddress((ushort)(buffCona + buffConaIzkInc)), true) { SyncEvery_X_Time = 5 }; 
 
-                VklopConapop[i] = new PlcVars.TimeSet(Client, new PlcVars.WordAddress((ushort)(buffCona + buffConaPopInc)), true); 
-                IzklopConapop[i] = new PlcVars.TimeSet(Client, new PlcVars.WordAddress((ushort)(buffCona + buffConaPopInc + buffConaIzkInc)), true);
+                VklopConapop[i] = new PlcVars.TimeSet(Client, this, new PlcVars.WordAddress((ushort)(buffCona + buffConaPopInc)), true) { SyncEvery_X_Time = 5 }; 
+                IzklopConapop[i] = new PlcVars.TimeSet(Client, this, new PlcVars.WordAddress((ushort)(buffCona + buffConaPopInc + buffConaIzkInc)), true) { SyncEvery_X_Time = 5 };
 
                 buffCona += 10;
             }
@@ -79,22 +75,22 @@ namespace WebApplication1
             ushort buffDimmD = 310, buffDimmP = 314, buffDimmActual = 410;
             for (int i = 1; i <= 4; i++)
             {
-                DimmerDop[i] = new PlcVars.Word(Client, new PlcVars.WordAddress(buffDimmD), "", "", true); 
-                DimmerPop[i] = new PlcVars.Word(Client, new PlcVars.WordAddress(buffDimmP), "", "", true); 
-                DimmerActual[i] = new PlcVars.Word(Client, new PlcVars.WordAddress(buffDimmActual), "", "%", false); 
+                DimmerDop[i] = new PlcVars.Word(Client, this, new PlcVars.WordAddress(buffDimmD), "", "", true) { SyncEvery_X_Time = 5 }; 
+                DimmerPop[i] = new PlcVars.Word(Client, this, new PlcVars.WordAddress(buffDimmP), "", "", true) { SyncEvery_X_Time = 5 }; 
+                DimmerActual[i] = new PlcVars.Word(Client, this, new PlcVars.WordAddress(buffDimmActual), "", "%", false) { SyncEvery_X_Time = 2 }; 
                 buffDimmD += inc; buffDimmP += inc; buffDimmActual += inc;
             }
 
-            UgasniVseLuci = new PlcVars.Bit(Client, new PlcVars.BitAddress(700,0), "", "", true);
+            UgasniVseLuci = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(700,0), "", "", true);
 
-            Vzhod_Read = new PlcVars.TimeSet(Client, new PlcVars.WordAddress(712), false);
-            Zahod_Read = new PlcVars.TimeSet(Client, new PlcVars.WordAddress(714), false);
-            VzhodOffset_Write = new PlcVars.TimeSet(Client, new PlcVars.WordAddress(716), false);
-            ZahodOffset_Write = new PlcVars.TimeSet(Client, new PlcVars.WordAddress(718), false);
-            DanNoc_Vrednost_An = new PlcVars.Word(Client, new PlcVars.WordAddress(736), "", "%", false);
-            DanNoc_Vrednost_Dig = new PlcVars.Bit(Client, new PlcVars.BitAddress(740,0), "Dan", "Noč", false);
-            DayLightPercentOn = new PlcVars.Word(Client, new PlcVars.WordAddress(724), "", "%", true);
-            DayLightPercentOff = new PlcVars.Word(Client, new PlcVars.WordAddress(728), "", "%", true);
+            Vzhod_Read = new PlcVars.TimeSet(Client, this, new PlcVars.WordAddress(712), false) { SyncEvery_X_Time = 5 };
+            Zahod_Read = new PlcVars.TimeSet(Client, this, new PlcVars.WordAddress(714), false) { SyncEvery_X_Time = 5 };
+            VzhodOffset_Write = new PlcVars.TimeSet(Client, this, new PlcVars.WordAddress(716), false) { SyncEvery_X_Time = 5 };
+            ZahodOffset_Write = new PlcVars.TimeSet(Client, this, new PlcVars.WordAddress(718), false) { SyncEvery_X_Time = 5 };
+            DanNoc_Vrednost_An = new PlcVars.Word(Client, this, new PlcVars.WordAddress(736), "", "%", false) { SyncEvery_X_Time = 5 };
+            DanNoc_Vrednost_Dig = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(740,0), "Dan", "Noč", false) { SyncEvery_X_Time = 5 };
+            DayLightPercentOn = new PlcVars.Word(Client, this, new PlcVars.WordAddress(724), "", "%", true) { SyncEvery_X_Time = 3 };
+            DayLightPercentOff = new PlcVars.Word(Client, this, new PlcVars.WordAddress(728), "", "%", true) { SyncEvery_X_Time = 3 };
 
         }
 

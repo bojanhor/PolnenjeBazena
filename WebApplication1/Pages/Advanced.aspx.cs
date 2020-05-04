@@ -149,7 +149,7 @@ namespace WebApplication1.Pages
 
         private void WritelineDebug()
         {            
-            Val.guiController.PageAdvanced_.TextBoxDebug.Text = SysLog.Message.GetMessageForTB_min(); 
+            Val.guiController.PageAdvanced_.TextBoxDebug.Text = SysLog.Message.GetMessageForTB_min();
         }
                
     }

@@ -8,7 +8,7 @@ using System.Text;
 namespace WebApplication1
 {   
     public class PlcVars
-    {
+    {        
         public static void ReportComunicatoonMessage(string message)
         {
             SysLog.SetMessage(message);
@@ -71,8 +71,53 @@ namespace WebApplication1
             }
 
         }
+
+        // ////////////////////////////////////////////////////////
+
+        public abstract class PlcType
+        {            
+            private ushort _syncEvery_X_Time = 1;
+            public ushort SyncEvery_X_Time // set to 1 for syncing to occur every loop -- 0 = turn sync off -- 2 = every 2nd loop...
+            {
+                get { return _syncEvery_X_Time;  }
+                set { chk_SyncEvery_X_Time_Val(value); }
+            }
+
+            public ushort skipNextLoop = 1; // alghoritem syncs variable only if this value is 1;
+          
+            public PlcType(PropComm this_prop)
+            {
+                // adding base types of all variables to list "sorted" by prop to efficiently call sync procedure
+                this_prop.AutoSync.Add(this); 
+            }
+                        
+            public abstract void SyncWithPLC();            
+
+            void chk_SyncEvery_X_Time_Val(ushort val)
+            {
+                // limit
+                if (val >= 0)
+                {
+                    if (val <= 5)
+                    {
+                        _syncEvery_X_Time = val;                        
+                    }
+                    else
+                    {
+                        _syncEvery_X_Time = 5;
+                    }
+
+                }
+                else
+                {
+                    _syncEvery_X_Time = 1;
+                }               
+
+            }
+        }
         
-        public class Word
+        
+        public class Word : PlcType
         {
             public short? Value
             {
@@ -137,7 +182,7 @@ namespace WebApplication1
             string _postFixToShow;
             bool _IsWritable = false;
             
-            public Word(Sharp7.S7Client Client, WordAddress TypeAndAdress, string prefixToShow, string postFixToShow, bool IsWritable)
+            public Word(Sharp7.S7Client Client, PropComm prop, WordAddress TypeAndAdress, string prefixToShow, string postFixToShow, bool IsWritable):base(prop)
             {
                 PLCval = null;
                 PCval = null;
@@ -149,7 +194,7 @@ namespace WebApplication1
                 _IsWritable = IsWritable;
             }
 
-            public void SyncWithPLC()
+            public override void SyncWithPLC()
             {
                 try
                 {                    
@@ -264,10 +309,11 @@ namespace WebApplication1
                     "Write Error type: " + ErrTyp_Write + ", " +
                     "Client: " + Client + ". " +
                     "Flags: " + Flags);
-            }            
+            }
+            
         }
 
-        public class DWord
+        public class DWord : PlcType
         {
             public short? Value
             {
@@ -332,7 +378,7 @@ namespace WebApplication1
             string _postFixToShow;
             bool _IsWritable = false;
            
-            public DWord(Sharp7.S7Client Client, DoubleWordAddress TypeAndAdress, string prefixToShow, string postFixToShow, bool IsWritable)
+            public DWord(Sharp7.S7Client Client, PropComm prop, DoubleWordAddress TypeAndAdress, string prefixToShow, string postFixToShow, bool IsWritable) : base(prop)
             {
                 PLCval = null;
                 PCval = null;
@@ -344,7 +390,7 @@ namespace WebApplication1
                 _IsWritable = IsWritable;
             }
 
-            public void SyncWithPLC()
+            public override void SyncWithPLC()
             {
                 try
                 {
@@ -462,7 +508,7 @@ namespace WebApplication1
             }
         }
 
-        public class TimeSet
+        public class TimeSet : PlcType
         {            
             public string Value
             {
@@ -510,7 +556,7 @@ namespace WebApplication1
             short? buffWrite;
             bool _IsWritable = false;
             
-            public TimeSet(Sharp7.S7Client Client, WordAddress TypeAndAdress, bool IsWritable)
+            public TimeSet(Sharp7.S7Client Client, PropComm prop, WordAddress TypeAndAdress, bool IsWritable) : base(prop)
             {
                 PLCval = null;
                 PCval = null;
@@ -520,7 +566,7 @@ namespace WebApplication1
                 _IsWritable = IsWritable;
             }
 
-            public void SyncWithPLC()
+            public override void SyncWithPLC()
             {
                 try
                 {
@@ -634,7 +680,7 @@ namespace WebApplication1
             }
         }
 
-        public class TemperatureShow
+        public class TemperatureShow : PlcType
         {
             public float? Value
             {
@@ -715,7 +761,7 @@ namespace WebApplication1
                 }
             }
 
-            public TemperatureShow(Sharp7.S7Client Client, WordAddress TypeAndAdress, string prefixToShow, string postFixToShow, float calibOffset, float calibMultiply, int decimals, bool IsWritable)
+            public TemperatureShow(Sharp7.S7Client Client, PropComm prop, WordAddress TypeAndAdress, string prefixToShow, string postFixToShow, float calibOffset, float calibMultiply, int decimals, bool IsWritable) : base(prop)
             {
                 PLCval = null;
                 PCval = null;
@@ -732,7 +778,7 @@ namespace WebApplication1
 
             }
 
-            public void SyncWithPLC()
+            public override void SyncWithPLC()
             {
                 try
                 {
@@ -896,7 +942,7 @@ namespace WebApplication1
 
         }        
                        
-        public class Bit
+        public class Bit : PlcType
         {
             public bool? Value
             {
@@ -943,7 +989,7 @@ namespace WebApplication1
             bool _IsWritable = false;           
             byte sendpulseState = 0;
 
-            public Bit(Sharp7.S7Client Client, BitAddress TypeAndAdress, string replacementTextIfTrue, string replacementTextIfFalse, bool IsWritable)
+            public Bit(Sharp7.S7Client Client, PropComm prop, BitAddress TypeAndAdress, string replacementTextIfTrue, string replacementTextIfFalse, bool IsWritable) : base(prop)
             {
                 PLCval = null;
                 PCval = null;
@@ -975,7 +1021,7 @@ namespace WebApplication1
                 }
             }
 
-            public void SyncWithPLC()
+            public override void SyncWithPLC()
             {
                 try
                 {
@@ -1106,8 +1152,8 @@ namespace WebApplication1
 
         }        
         
-        public class LogoClock
-        {
+        public class LogoClock : PlcType
+        {            
             public string Value
             {
                 get
@@ -1130,14 +1176,15 @@ namespace WebApplication1
             int ErrRead;           
             short? buffRead;           
             
-            public LogoClock(Sharp7.S7Client Client)
+            public LogoClock(Sharp7.S7Client Client, PropComm prop) : base(prop)
             {
                 PLCval = null;               
                 _Client = Client;
-                _TypeAndAdress = new WordAddress(988);               
+                _TypeAndAdress = new WordAddress(988);
+                base.SyncEvery_X_Time = 5;
             }
 
-            public void SyncWithPLC()
+            public override void SyncWithPLC()
             {
                 try
                 {

@@ -27,19 +27,7 @@ namespace WebApplication1
         public Prop5 Prop5 { get; set; }
         public Prop6 Prop6 { get; set; }
         public Prop7 Prop7 { get; set; }
-        public Prop8 Prop8 { get; set; }
-        public Prop9 Prop9 { get; set; }
-        public Prop10 Prop10 { get; set; }
-        public Prop11 Prop11 { get; set; }
-        public Prop12 Prop12 { get; set; }
-        public Prop13 Prop13 { get; set; }
-        public Prop14 Prop14 { get; set; }
-        public Prop15 Prop15 { get; set; }
-        public Prop16 Prop16 { get; set; }
-        public Prop17 Prop17 { get; set; }
-        public Prop18 Prop18 { get; set; }
-        public Prop19 Prop19 { get; set; }
-        public Prop20 Prop20 { get; set; }
+        public Prop8 Prop8 { get; set; }        
 
         public S7Client[] LOGO = new S7Client[Settings.Devices + 1];
 
@@ -186,14 +174,14 @@ namespace WebApplication1
                         {
                             switch (device)
                             {
-                                case 1: PROGRAM1(Prop1); break;
-                                case 2: PROGRAM2(Prop2); break;
-                                case 3: PROGRAM3(Prop3); break;
-                                case 4: PROGRAM4(Prop4); break;
-                                case 5: PROGRAM5(Prop5); break;
-                                case 6: PROGRAM6(Prop6); break;
-                                case 7: PROGRAM7(Prop7); break;
-                                case 8: PROGRAM8(Prop8); break;
+                                case 1: Prop1.SyncVars(); break;
+                                case 2: Prop2.SyncVars(); break;
+                                case 3: Prop3.SyncVars(); break;
+                                case 4: Prop4.SyncVars(); break;
+                                case 5: Prop5.SyncVars(); break;
+                                case 6: Prop6.SyncVars(); break;
+                                case 7: Prop7.SyncVars(); break;
+                                case 8: Prop8.SyncVars(); break;
 
 
                                 default:
