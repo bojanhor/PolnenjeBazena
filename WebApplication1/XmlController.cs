@@ -284,7 +284,7 @@ namespace WebApplication1
 
             var ii = "\"";
 
-            // if there is Not encripted config file (will be deleted automatically after publish)
+            // if there is Nonencripted config file (will be deleted automatically after publish)
 
             try
             {

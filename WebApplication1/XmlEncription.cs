@@ -10,11 +10,11 @@ namespace WebApplication1
 {
     public class XmlEncription
     {
-        private const string InitVector = "T=A4rAzu94ez-dra";
+        private const string InitVector = "T=A,rAČ u4%z-d a";
         private const int KeySize = 256;
         private const int PasswordIterations = 2; //2;
-        private const string SaltValue = "d=?ustAF=UstenAr3B@pRu8=ner5sW&h59_Xe9P2za-eFr2fa&ePHE@ras!a+uc@";
-        private static string passPhrase = "1234";
+        private const string SaltValue = "W&h59_Xe9P 2za-eFr2fa&@ras! a+uc@$%/&sd fasu=ćščapwe";
+        private static string passPhrase = "793qwegfz' q2394zf174a ĐŠŠ%/(&U7WHRBR4!# %&$5A86";
 
         public static string Decrypt(string encryptedText)
         {
