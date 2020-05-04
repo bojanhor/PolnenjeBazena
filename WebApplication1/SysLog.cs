@@ -58,14 +58,22 @@ namespace WebApplication1
             }
 
             // gets textbox string to post on webpage
-            public string GetMessageForTB()
+            public string GetMessageForTB_large()
+            {                
+                return GetMessageForTB(4500);
+            }
+            public string GetMessageForTB_min()
+            {                
+                return GetMessageForTB(500);
+            }
+            public string GetMessageForTB(int len)
             {
                 var lastIndex = messageList.Count - 1;
-                var len = 4500; // TB is limited to 4500 lines to prevent long page loading time
-                
+               // TB is limited to "len" number of lines to prevent long page loading time
+
                 if (len > lastIndex)
                 {
-                    len = lastIndex ;
+                    len = lastIndex;
                 }
 
                 var tbMessages = messageList.GetRange(lastIndex - len, len); // gets last # messages
@@ -243,9 +251,15 @@ namespace WebApplication1
             Message.SetMessage(message);
         }
 
-        public static string GetMessagesTB()
+        public static string GetMessagesTB_large()
         {
-            return Message.GetMessageForTB();
+            return Message.GetMessageForTB_large();
         }
+
+        public static string GetMessagesTB_min()
+        {
+            return Message.GetMessageForTB_min();
+        }
+
     }
 }

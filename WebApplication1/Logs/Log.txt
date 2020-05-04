@@ -646,3 +646,34 @@
 04.05.2020  13:18:55 : Logo4: Connected
 04.05.2020  13:18:55 : Logo4: Watchdog started successfully - Period (Frequency) is 500ms
 04.05.2020  13:19:17 : Login try: Local
+04.05.2020  13:24:09 : Logo4: Connecting...
+04.05.2020  13:24:13 : Logo4: Connected
+04.05.2020  13:24:13 : Logo4: Watchdog started successfully - Period (Frequency) is 500ms
+04.05.2020  13:24:13 : Login try: Local
+04.05.2020  13:25:12 : Logo4: Connecting...
+04.05.2020  13:25:19 : Logo4: TCP : Error receiving Data
+04.05.2020  13:25:19 : Logo1: Running connection diagnostics...
+04.05.2020  13:25:19 : Logo4:   -Ping successful at: 192.168.1.204
+04.05.2020  13:25:20 : Logo4: Connected again
+04.05.2020  13:25:20 : Logo4: Watchdog started successfully - Period (Frequency) is 500ms
+04.05.2020  13:25:21 : Login try: Local
+04.05.2020  13:33:04 : Logo4: Connecting...
+04.05.2020  13:33:06 : Login try: Local
+04.05.2020  13:33:08 : Logo4: Connected
+04.05.2020  13:33:08 : Logo4: Watchdog started successfully - Period (Frequency) is 500ms
+04.05.2020  13:33:38 : Logo4: Disconected by the user
+04.05.2020  13:33:41 : Logo4: Connecting...
+04.05.2020  13:33:45 : Logo4: Connected
+04.05.2020  13:33:45 : Logo4: Watchdog started successfully - Period (Frequency) is 500ms
+04.05.2020  13:36:15 : Logo4: Connecting...
+04.05.2020  13:36:16 : Login try: Local
+04.05.2020  13:36:19 : Logo4: Connected
+04.05.2020  13:36:19 : Logo4: Watchdog started successfully - Period (Frequency) is 500ms
+04.05.2020  13:36:29 : Logo4: Connecting...
+04.05.2020  13:36:31 : Login try: Local
+04.05.2020  13:36:33 : Logo4: Connected
+04.05.2020  13:36:34 : Logo4: Watchdog started successfully - Period (Frequency) is 500ms
+04.05.2020  13:36:38 : Logo4: Disconected by the user
+04.05.2020  13:36:41 : Logo4: Connecting...
+04.05.2020  13:36:45 : Logo4: Connected
+04.05.2020  13:36:45 : Logo4: Watchdog started successfully - Period (Frequency) is 500ms

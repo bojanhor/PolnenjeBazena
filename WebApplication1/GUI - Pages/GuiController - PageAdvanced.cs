@@ -87,8 +87,6 @@ namespace WebApplication1
                 Session[ViewStateElement_SpremljajChecked] = value;                
             }
 
-
-
             void PositionEdit()
             {                
                 SetControlAbsolutePos(BtnEditor,15, 68);
@@ -198,7 +196,9 @@ namespace WebApplication1
                 SpremljajLable.Style.Add(HtmlTextWriterStyle.Color, "white");
                 SpremljajLable.Style.Add(HtmlTextWriterStyle.FontWeight, "bold");
                 SpremljajLable.Text = "Spremljaj:";
-                                
+
+                TextBoxDebug.Text = SysLog.GetMessagesTB_min();
+
                 Spremljaj.button.Click += Spremljaj_Button_Click;                
                 
                 divDebug_2.Style.Add("width", "100%");

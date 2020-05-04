@@ -22,7 +22,7 @@ namespace WebApplication1.Pages
         {                 
             if (!IsPostBack)
             {
-                Editor.InnerText = SysLog.GetMessagesTB();
+                Editor.InnerText = SysLog.GetMessagesTB_large();
             }
             
             TemplateClassID.Controls.Add(Val.guiController.PageLogView_.refresh);

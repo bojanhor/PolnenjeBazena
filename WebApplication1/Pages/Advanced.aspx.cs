@@ -115,7 +115,7 @@ namespace WebApplication1.Pages
         void AddTimer()
         {            
             Timer.Tick += Timer_Tick_UpdatePanel;
-            Timer.Interval = Settings.UpdateValuesPCms;
+            Timer.Interval = Settings.UpdateValuesPCms/2;
             Timer.Enabled = true;
         }
         
@@ -149,7 +149,7 @@ namespace WebApplication1.Pages
 
         private void WritelineDebug()
         {            
-            //Val.guiController.PageAdvanced_.TextBoxDebug.Text = SysLog.Message.GetMessageForTB(); 
+            Val.guiController.PageAdvanced_.TextBoxDebug.Text = SysLog.Message.GetMessageForTB_min(); 
         }
                
     }
