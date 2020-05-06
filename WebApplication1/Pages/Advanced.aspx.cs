@@ -29,6 +29,7 @@ namespace WebApplication1.Pages
         {
             TemplateClassID.Controls.Add(Val.guiController.PageAdvanced_.BtnEditor);
             TemplateClassID.Controls.Add(Val.guiController.PageAdvanced_.BtnLogView);
+            TemplateClassID.Controls.Add(Val.guiController.PageAdvanced_.BtnRestartServer);
         }
 
         void AddConnectSwitch()

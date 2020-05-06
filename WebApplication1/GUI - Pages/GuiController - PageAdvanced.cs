@@ -23,6 +23,8 @@ namespace WebApplication1
             HtmlGenericControl divDebug_2;
             public GControls.ButtonWithLabel BtnEditor = new GControls.ButtonWithLabel("XMLSettings", 10, 1.2F);
             public GControls.ButtonWithLabel BtnLogView = new GControls.ButtonWithLabel("LogView", 10, 1.2F);
+            public GControls.ButtonWithLabel BtnRestartServer = new GControls.ButtonWithLabel("RestatrtServer", 10, 1.2F);
+
             public GControls.NotShadowedOnOffButton Spremljaj;
             GControls.ImageButtonWithID EditBtn = new GControls.ImageButtonWithID("Edit", 0);
 
@@ -45,6 +47,7 @@ namespace WebApplication1
                 AddLabelDebug();                
                 PositionEdit();
                 PositionLogView();
+                PositionRestartServerBttn();
                 AddSpremljajFunctionality();
             }
 
@@ -99,6 +102,19 @@ namespace WebApplication1
                 SetControlAbsolutePos(BtnLogView, 25, 68);
                 BtnLogView.button.Click += Button_Click2; ;
 
+            }
+
+            void PositionRestartServerBttn()
+            {
+                SetControlAbsolutePos(BtnRestartServer, 35, 68);
+                BtnRestartServer.button.Click += Button_Click;
+
+            }
+
+            private void Button_Click(object sender, ImageClickEventArgs e)
+            {
+                Navigator.Redirect("Default");
+                HttpRuntime.UnloadAppDomain();
             }
 
             private void Button_Click2(object sender, ImageClickEventArgs e)

@@ -7864,3 +7864,142 @@ Parameter name: path
 06.05.2020  14:58:10 : Logo4: Watchdog started successfully - Period (Frequency) is 500ms
 06.05.2020  14:58:16 : ConfigFile was changed, by user.
 06.05.2020  14:58:21 : ConfigFile was changed, by user.
+06.05.2020  15:11:21 : Logo4: Connecting...
+06.05.2020  15:11:22 : Login try: Local
+06.05.2020  15:11:22 : Login Success: Local - User:  admin
+06.05.2020  15:11:25 : Logo4: Connected
+06.05.2020  15:11:26 : Logo4: Watchdog started successfully - Period (Frequency) is 500ms
+06.05.2020  15:14:57 : Logo4: Connecting...
+06.05.2020  15:15:01 : Logo4: Connected
+06.05.2020  15:15:01 : Logo4: Watchdog started successfully - Period (Frequency) is 500ms
+06.05.2020  15:15:10 : Login try: Local
+06.05.2020  15:15:10 : Login Success: Local - User:  admin
+06.05.2020  15:15:12 : Logo4: Watchdog error - Watchdog does not change
+06.05.2020  15:15:12 : Logo4: Connection error: Watchdog error - Watchdog does not change
+06.05.2020  15:15:15 : Logo1: Running connection diagnostics...
+06.05.2020  15:15:15 : Logo4:   -Ping successful at: 192.168.1.204
+06.05.2020  15:15:15 : Logo4: Connected again
+06.05.2020  15:15:15 : Logo4: Connection error: Watchdog error - Watchdog does not change
+06.05.2020  15:15:18 : Logo1: Running connection diagnostics...
+06.05.2020  15:15:22 : Logo4:   -Ping ERROR at: 192.168.1.204 (TimedOut)
+06.05.2020  15:15:24 : Logo4: Connection failed. Trying to reconnect
+06.05.2020  15:15:24 : Logo1: Running connection diagnostics...
+06.05.2020  15:15:28 : Logo4:   -Ping ERROR at: 192.168.1.204 (TimedOut)
+06.05.2020  15:15:30 : Logo4: Connection failed. Trying to reconnect
+06.05.2020  15:15:30 : Logo4: CLI : Client not connected
+06.05.2020  15:15:30 : Logo4: Connection error: CLI : Client not connected
+06.05.2020  15:15:33 : Logo1: Running connection diagnostics...
+06.05.2020  15:15:36 : Logo4:   -Ping ERROR at: 192.168.1.204 (DestinationHostUnreachable)
+06.05.2020  15:15:39 : Logo4: Connection failed. Trying to reconnect
+06.05.2020  15:15:39 : Logo1: Running connection diagnostics...
+06.05.2020  15:15:42 : Logo4:   -Ping ERROR at: 192.168.1.204 (TimedOut)
+06.05.2020  15:15:45 : Logo4: Connection failed. Trying to reconnect
+06.05.2020  15:15:45 : Logo4: Connection error: CLI : Client not connected
+06.05.2020  15:15:48 : Logo1: Running connection diagnostics...
+06.05.2020  15:15:51 : Logo4:   -Ping ERROR at: 192.168.1.204 (TimedOut)
+06.05.2020  15:15:54 : Logo4: Connection failed. Trying to reconnect
+06.05.2020  15:15:54 : Logo1: Running connection diagnostics...
+06.05.2020  15:15:54 : ConfigFile was changed, by user.
+06.05.2020  15:15:57 : Logo4:   -Ping ERROR at: 192.168.1.204 (TimedOut)
+06.05.2020  15:16:00 : Logo4: Connection failed. Trying to reconnect
+06.05.2020  15:16:00 : Logo4: Connection error: CLI : Client not connected
+06.05.2020  15:16:03 : Logo1: Running connection diagnostics...
+06.05.2020  15:16:06 : Logo4:   -Ping ERROR at: 192.168.1.204 (TimedOut)
+06.05.2020  15:16:09 : Logo4: Connection failed. Trying to reconnect
+06.05.2020  15:16:09 : Logo1: Running connection diagnostics...
+06.05.2020  15:26:02 : Logo1: Connecting...
+06.05.2020  15:26:02 : Logo4: Connecting...
+06.05.2020  15:26:03 : Logo1: Connected
+06.05.2020  15:26:04 : Login try: Local
+06.05.2020  15:26:04 : Login Success: Local - User:  admin
+06.05.2020  15:26:05 : Read from PLC failed. Address: VW240, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Sharp7.S7Client. Flags: directionToPLC: False forceRead: ; isWritable: True;
+06.05.2020  15:26:05 : Read from PLC failed. Address: bit at 520, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+06.05.2020  15:26:05 : Read from PLC failed. Address: bit at 500, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+06.05.2020  15:26:05 : Read from PLC failed. Address: VW250, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Sharp7.S7Client. Flags: directionToPLC: False forceRead: ; isWritable: True;
+06.05.2020  15:26:05 : Read from PLC failed. Address: bit at 620, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+06.05.2020  15:26:06 : Read from PLC failed. Address: bit at 600, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+06.05.2020  15:26:06 : Read from PLC failed. Address: VW260, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Sharp7.S7Client. Flags: directionToPLC: False forceRead: ; isWritable: True;
+06.05.2020  15:26:06 : Read from PLC failed. Address: bit at 720, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+06.05.2020  15:26:06 : Read from PLC failed. Address: bit at 700, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+06.05.2020  15:26:06 : Read from PLC failed. Address: VW270, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Sharp7.S7Client. Flags: directionToPLC: False forceRead: ; isWritable: True;
+06.05.2020  15:26:06 : Read from PLC failed. Address: bit at 820, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+06.05.2020  15:26:06 : Read from PLC failed. Address: bit at 800, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+06.05.2020  15:26:06 : Read from PLC failed. Address: VW280, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Sharp7.S7Client. Flags: directionToPLC: False forceRead: ; isWritable: True;
+06.05.2020  15:26:06 : Read from PLC failed. Address: bit at 7000, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+06.05.2020  15:26:06 : Logo1: CLI : Client not connected
+06.05.2020  15:26:06 : Logo1: Connection error: CLI : Client not connected
+06.05.2020  15:26:08 : Logo4: TCP : Connection Error
+06.05.2020  15:26:08 : Logo1: Running connection diagnostics...
+06.05.2020  15:26:09 : Logo1: Running connection diagnostics...
+06.05.2020  15:26:11 : Logo4:   -Ping ERROR at: 192.168.1.204 (TimedOut)
+06.05.2020  15:26:12 : Logo1:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+06.05.2020  15:26:14 : Logo4: Connection failed. Trying to reconnect
+06.05.2020  15:26:14 : Logo4: CLI : Client not connected
+06.05.2020  15:26:14 : Logo4: Connection error: CLI : Client not connected
+06.05.2020  15:26:14 : Logo1: Connection failed. Trying to reconnect
+06.05.2020  15:26:14 : Logo1: Running connection diagnostics...
+06.05.2020  15:26:17 : Logo1: Running connection diagnostics...
+06.05.2020  15:26:18 : Logo1:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+06.05.2020  15:26:42 : Logo1: Connecting...
+06.05.2020  15:26:42 : Logo4: Connecting...
+06.05.2020  15:26:43 : Login try: Local
+06.05.2020  15:26:43 : Login Success: Local - User:  admin
+06.05.2020  15:26:45 : Logo1: TCP : Connection Error
+06.05.2020  15:26:45 : Logo1: Running connection diagnostics...
+06.05.2020  15:26:48 : Logo4: TCP : Connection Error
+06.05.2020  15:26:48 : Logo1: Running connection diagnostics...
+06.05.2020  15:26:48 : Logo1:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+06.05.2020  15:27:56 : Logo1: Connecting...
+06.05.2020  15:27:56 : Logo4: Connecting...
+06.05.2020  15:27:59 : Logo1: TCP : Connection Error
+06.05.2020  15:27:59 : Logo1: Running connection diagnostics...
+06.05.2020  15:28:02 : Logo1:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+06.05.2020  15:28:02 : Logo4: TCP : Connection Error
+06.05.2020  15:28:02 : Logo1: Running connection diagnostics...
+06.05.2020  15:28:04 : Logo1: Connection failed. Trying to reconnect
+06.05.2020  15:28:04 : Logo1: CLI : Client not connected
+06.05.2020  15:28:04 : Logo1: Connection error: CLI : Client not connected
+06.05.2020  15:28:05 : Logo4:   -Ping ERROR at: 192.168.1.204 (TimedOut)
+06.05.2020  15:28:06 : Login try: Local
+06.05.2020  15:28:06 : Login Success: Local - User:  admin
+06.05.2020  15:28:07 : Logo1: Running connection diagnostics...
+06.05.2020  15:28:08 : Logo4: Connection failed. Trying to reconnect
+06.05.2020  15:28:08 : Logo4: CLI : Client not connected
+06.05.2020  15:28:08 : Logo4: Connection error: CLI : Client not connected
+06.05.2020  15:28:11 : Logo1:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+06.05.2020  15:28:11 : Logo1: Running connection diagnostics...
+06.05.2020  15:28:13 : Logo1: Connection failed. Trying to reconnect
+06.05.2020  15:28:13 : Logo1: Running connection diagnostics...
+06.05.2020  15:28:14 : Logo4:   -Ping ERROR at: 192.168.1.204 (TimedOut)
+06.05.2020  15:28:17 : Logo1:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+06.05.2020  15:28:17 : Logo4: Connection failed. Trying to reconnect
+06.05.2020  15:28:17 : Logo1: Running connection diagnostics...
+06.05.2020  15:28:19 : Logo1: Connection failed. Trying to reconnect
+06.05.2020  15:28:19 : Logo1: Watchdog started successfully - Period (Frequency) is 250ms
+06.05.2020  15:28:19 : Logo1: Connection error: CLI : Client not connected
+06.05.2020  15:28:20 : Logo4:   -Ping ERROR at: 192.168.1.204 (TimedOut)
+06.05.2020  15:28:22 : Logo1: Running connection diagnostics...
+06.05.2020  15:28:23 : Logo4: Connection failed. Trying to reconnect
+06.05.2020  15:28:23 : Logo4: Watchdog started successfully - Period (Frequency) is 500ms
+06.05.2020  15:28:23 : Logo4: Connection error: CLI : Client not connected
+06.05.2020  15:28:26 : Logo1:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+06.05.2020  15:28:26 : Logo1: Running connection diagnostics...
+06.05.2020  15:29:14 : Logo1: Connecting...
+06.05.2020  15:29:14 : Logo4: Connecting...
+06.05.2020  15:29:15 : Login try: Local
+06.05.2020  15:29:15 : Login Success: Local - User:  admin
+06.05.2020  15:29:17 : Logo1: TCP : Connection Error
+06.05.2020  15:29:17 : Logo1: Running connection diagnostics...
+06.05.2020  15:29:20 : Logo1:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+06.05.2020  15:29:20 : Logo4: TCP : Connection Error
+06.05.2020  15:29:20 : Logo1: Running connection diagnostics...
+06.05.2020  15:29:22 : Logo1: Connection failed. Trying to reconnect
+06.05.2020  15:29:22 : Logo1: CLI : Client not connected
+06.05.2020  15:29:22 : Logo1: Connection error: CLI : Client not connected
+06.05.2020  15:29:23 : Logo4:   -Ping ERROR at: 192.168.1.204 (TimedOut)
+06.05.2020  15:30:42 : Logo1: Connecting...
+06.05.2020  15:30:42 : Logo4: Connecting...
+06.05.2020  15:30:44 : Login try: Local
+06.05.2020  15:30:44 : Login Success: Local - User:  admin
+06.05.2020  15:30:45 : Logo1: TCP : Connection Error
+06.05.2020  15:30:45 : Logo1: Running connection diagnostics...

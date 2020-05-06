@@ -151,7 +151,7 @@ namespace WebApplication1
 
                     SunSet = new ImageButton()
                     {
-                        ImageUrl = "~/Pictures/sun.png",
+                        ImageUrl = "~/Pictures/sunSet.png",
                         Width = inTemp.Width,
                     };
 
@@ -189,13 +189,14 @@ namespace WebApplication1
                     var outTempD = DIV.CreateDivAbsolute(t);
                     var rainSenseD = DIV.CreateDivAbsolute(t);
 
-                    var prop = Val.logocontroler.Prop2; // Change temperature source here
+                    var prop1 = Val.logocontroler.Prop1;
+                    var prop2 = Val.logocontroler.Prop2; // Change temperature source here
 
                     WeatherLabelFormater("Dan/Noč", inTemp.Width.Value, topOffset, 0);
-                    WeatherLabelFormater("Vzhod", inTemp.Width.Value, topOffset, spacingLeft);
-                    WeatherLabelFormater("Zahod", inTemp.Width.Value, topOffset, spacingLeft * 2);
-                    WeatherLabelFormater(prop.TempZnotraj.Value_string_formatted, inTemp.Width.Value, topOffset, spacingLeft * 3);
-                    WeatherLabelFormater(prop.TempZunaj.Value_string_formatted, inTemp.Width.Value, topOffset, spacingLeft * 4);
+                    WeatherLabelFormater(prop1.Vzhod_Read.Value, inTemp.Width.Value, topOffset, spacingLeft);
+                    WeatherLabelFormater(prop1.Zahod_Read.Value, inTemp.Width.Value, topOffset, spacingLeft * 2);
+                    WeatherLabelFormater(prop2.TempZnotraj.Value_string_formatted, inTemp.Width.Value, topOffset, spacingLeft * 3);
+                    WeatherLabelFormater(prop2.TempZunaj.Value_string_formatted, inTemp.Width.Value, topOffset, spacingLeft * 4);
                     WeatherLabelFormater("25L/dan", inTemp.Width.Value, topOffset, spacingLeft * 5);
 
                     VremeIconFormat("Vreme", inTemp.Width.Value, topOffset,4);

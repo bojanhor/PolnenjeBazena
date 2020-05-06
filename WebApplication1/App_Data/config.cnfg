@@ -123,15 +123,16 @@
 		// On page "Vreme" sets the source of iframe
 		<VremeLink>https://vreme.arso.gov.si/napoved/Letali%C5%A1%C4%8De%20Jo%C5%BEeta%20Pu%C4%8Dnika%20Ljubljana/graf/0</VremeLink></GUI>//
 		//
-	<CONNECTION>//			
+	<CONNECTION>// Server restart required after changing this group
 		<LOGO1>//
-			<show>true</show>			// indicates if tabpage is shown on GUI
-			<enabled>false</enabled>			// indicates if device is enabled - (gui, communication ...)
+			<show>true</show>			// indicates if tabpage is shown on GUI 
+			<enabled>true</enabled>			// indicates if device is enabled - (gui, communication ...) 
 			<devicename>LOGO1</devicename>		// Showname
-			<showname>Razsvetljava</showname><serverIP>192.168.1.201</serverIP>		// format must be ###.###.###.### (192.168.0.1) IP of PLC
+			<showname>Razsvetljava</showname>   //
+			<serverIP>192.168.1.201</serverIP>		// format must be ###.###.###.### (192.168.0.1) IP of PLC
 			<localTSAP>"03.00"</localTSAP>		// format must be ##.## (00.03) TSAP is used for comunication between PLCs 
 			<remoteTSAP>"02.00"</remoteTSAP>	// format must be ##.## (00.03) TSAP is used for comunication between PLCs			
-			<watchdogAddress>500</watchdogAddress>   // value must be string between valid PLC adress range .. watchdog is used for detecting comunication problems (example 100 if watchdog value is Word on address 100)
+			<watchdogAddress>800</watchdogAddress>   // value must be string between valid PLC adress range .. watchdog is used for detecting comunication problems (example 100 if watchdog value is Word on address 100)
 			<ReadWriteCycle>250</ReadWriteCycle>		// value in miliseconds - frequency at which data aquisition is preformed - read, action, write, delay. (watchdog is also bound at this frequency)
 		</LOGO1>//
 	  //
@@ -139,7 +140,8 @@
 			<show>true</show>//
 			<enabled>false</enabled>//
 			<devicename>LOGO2</devicename>//
-			<showname>Ventilacija</showname><serverIP>192.168.1.202</serverIP>//
+			<showname>Ventilacija</showname>//
+			<serverIP>192.168.1.202</serverIP>//
 			<localTSAP>"03.00"</localTSAP>//
 			<remoteTSAP>"02.00"</remoteTSAP>//		
 			<watchdogAddress>5</watchdogAddress>//
@@ -150,7 +152,8 @@
 			<show>true</show>//
 			<enabled>false</enabled>//
 			<devicename>LOGO3</devicename>//
-			<showname>Vrata</showname><serverIP>192.168.1.203</serverIP>//
+			<showname>Vrata</showname>//
+			<serverIP>192.168.1.203</serverIP>//
 			<localTSAP>"03.00"</localTSAP>//
 			<remoteTSAP>"02.00"</remoteTSAP>//		
 			<watchdogAddress>12</watchdogAddress>//
@@ -161,7 +164,8 @@
 			<show>true</show>//
 			<enabled>true</enabled>//
 			<devicename>LOGO4</devicename>//
-			<showname>Mešalo</showname><serverIP>192.168.1.204</serverIP>//
+			<showname>Mešalo</showname>//
+			<serverIP>192.168.1.204</serverIP>//
 			<localTSAP>"03.00"</localTSAP>//
 			<remoteTSAP>"02.00"</remoteTSAP>//		
 			<watchdogAddress>5</watchdogAddress>//
@@ -172,7 +176,8 @@
 			<show>true</show>//
 			<enabled>false</enabled>//
 			<devicename>LOGO5</devicename>//
-			<showname>LOGO1</showname><serverIP>192.168.1.205</serverIP>//
+			<showname>LOGO1</showname>//
+			<serverIP>192.168.1.205</serverIP>//
 			<localTSAP>"03.00"</localTSAP>//
 			<remoteTSAP>"02.00"</remoteTSAP>//
 			<watchdogEN>true</watchdogEN>//
