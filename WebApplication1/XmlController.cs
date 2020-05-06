@@ -205,7 +205,17 @@ namespace WebApplication1
 
         }
 
-        public static void SaveXML(string newContent)
+        public static void SaveXML_User(string newContent)
+        {
+            SaveXML(newContent, true);
+        }
+
+        public static void SaveXML_Auto(string newContent)
+        {
+            SaveXML(newContent, false);
+        }
+
+        static void SaveXML(string newContent, bool ChangesFromUser)
         {
             string text;
 
@@ -223,7 +233,10 @@ namespace WebApplication1
                     s.Dispose();
                 }
 
-                SysLog.SetMessage("ConfigFile was changed, by user.");
+                if (ChangesFromUser)
+                {
+                    SysLog.SetMessage("ConfigFile was changed, by user.");
+                }                
             }
             catch (Exception ex)
             {
@@ -436,7 +449,7 @@ namespace WebApplication1
 
         public static void SaveCurrentTB(string value)
         {
-            SaveXML(value);
+            SaveXML_User(value);
         }
 
         public static void RefreshFile_readAgain()
@@ -1089,7 +1102,7 @@ namespace WebApplication1
             try
             {
                 XmlFile.Element("root").Element("GUI").Element(searchValue).Value = value.ToString();
-                SaveXML(XmlFile.ToString());
+                SaveXML_Auto(XmlFile.ToString());
             }
 
             catch (Exception ex)
@@ -1107,7 +1120,7 @@ namespace WebApplication1
             try
             {
                 XmlFile.Element("root").Element("GUI").Element(searchValue).Value = value.ToString();
-                SaveXML(XmlFile.ToString());
+                SaveXML_Auto(XmlFile.ToString());
             }
 
             catch (Exception ex)
@@ -1125,7 +1138,7 @@ namespace WebApplication1
             try
             {
                 XmlFile.Element("root").Element("GUI").Element(searchValue).Value = value.ToString();
-                SaveXML(XmlFile.ToString());
+                SaveXML_Auto(XmlFile.ToString());
             }
 
             catch (Exception ex)
@@ -1143,7 +1156,7 @@ namespace WebApplication1
             try
             {
                 XmlFile.Element("root").Element("GUI").Element(searchValue).Value = value.ToString();
-                SaveXML(XmlFile.ToString());
+                SaveXML_Auto(XmlFile.ToString());
             }
 
             catch (Exception ex)
@@ -1183,7 +1196,7 @@ namespace WebApplication1
             try
             {
                 XmlFile.Element("root").Element("GUI").Element(searchValue).Value = value.ToString();
-                SaveXML(XmlFile.ToString());
+                SaveXML_Auto(XmlFile.ToString());
             }
 
             catch (Exception ex)

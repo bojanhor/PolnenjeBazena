@@ -85,8 +85,7 @@ namespace WebApplication1.ChartValues
 
             try
             {
-                var buff = ChartData1.lines;
-                string tmp;
+                var buff = ChartData1.lines;                
                 for (int i = 0; i < buff.Count; i++)
                 {
                     splitted = buff[i].Split(delimeter_).ToList();
