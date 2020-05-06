@@ -212,17 +212,18 @@ namespace WebApplication1
 
                 private void RezimPrikaz_dd_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    var prop = Val.logocontroler.Prop2;
-                    var buff = RezimPrikaz_dd.GetSelectedValue();
+                    var prop = Val.logocontroler.Prop2;                    
 
-                    if (buff == 0) // AUTO
+                    if (RezimPrikaz_dd.IsSelectedValueAuto()) // AUTO
                      prop.Rezim_Set_Auto.SendPulse(); 
 
-                    else if (buff == 1) // Man0
+                    else if (RezimPrikaz_dd.IsSelectedValueMan0()) // Man0
                      prop.Rezim_Set_Man0.SendPulse(); 
 
-                    else if (buff == 2) // Man1
+                    else if (RezimPrikaz_dd.IsSelectedValueMan1()) // Man1
                      prop.Rezim_Set_Man1.SendPulse(); 
+
+
                 }
 
                 void AddAndPositionControlsTop()

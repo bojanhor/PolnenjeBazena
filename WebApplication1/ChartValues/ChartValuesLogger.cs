@@ -81,34 +81,59 @@ namespace WebApplication1.ChartValues
         {
             ShowChart = (ChartData.ShowChartEnum)XmlController.GetShowChartMode();
             ChartData1 = new ChartData(ShowChart);
+            var splitted = new List<string>();
 
             try
             {
                 var buff = ChartData1.lines;
-                var splitted = new List<string>();
+                string tmp;
                 for (int i = 0; i < buff.Count; i++)
                 {
                     splitted = buff[i].Split(delimeter_).ToList();
 
                     if (splitted[0] != "")
                     {
-                        ChartData1.datetimes.Add(splitted[0]); // 1st column - datetime
-                        ChartData1.Svetlost.Add(Convert.ToSingle(splitted[1])); // 2nd column - datetime
-                        ChartData1.padavineH.Add(Convert.ToSingle(splitted[2])); // 3rd column - datetime
-                        ChartData1.Tzunanja.Add(Convert.ToSingle(splitted[3])); // 4th column - datetime
-                        ChartData1.Tnotranja.Add(Convert.ToSingle(splitted[4])); // 5th column - datetime
+                        ChartData1.datetimes.Add(splitted[0]);
+                        ManageData(ChartData1.Svetlost, splitted[1]);    
+                        ManageData(ChartData1.padavineH, splitted[2]);  
+                        ManageData(ChartData1.Tzunanja, splitted[3]);   
+                        ManageData(ChartData1.Tnotranja, splitted[4]); 
                     }                    
                 }
 
                 return ChartData1;
             }
             catch (Exception ex)
-            {                
-                SysLog.SetMessage("Preparing data for writing to csv failed. " + ex.Message);
+            {
+                var nl = Environment.NewLine;
+                var messageReport = "Data: " + nl +
+                    "1.) " + splitted[0].ToString() + nl +
+                "2.) " + splitted[1].ToString() + nl +
+                "3.) " + splitted[2].ToString() + nl +
+                "4.) " + splitted[3].ToString() + nl +
+                "5.) " + splitted[4].ToString();
+
+
+                SysLog.SetMessage("Preparing data for writing to csv failed. " + ex.Message + " - " + messageReport);
                 return null;
             }
            
         }
+
+        void ManageData(List<float> ListToAddDataTo, string Data)
+        {
+            float buff = 0;
+            if (Data != null)
+            {
+                if (Data != "")
+                {
+                    buff = Convert.ToSingle(Data);
+                }
+            }
+
+            ListToAddDataTo.Add(buff);
+
+        }       
 
         void timerDoStuf()
         {

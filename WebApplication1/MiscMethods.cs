@@ -257,10 +257,10 @@ namespace WebApplication1
                     }
 
                 }
-                catch (Exception)
-                {
-                    //MessageBox.Show("There is another instance of this application running (possible in background)!" + e.Message);
-
+                catch (Exception e)
+                {                    
+                    var message = ("There is another instance of this application running (possible in background)!" + e.Message);
+                    SysLog.Message.SetMessage(message);
                 }
 
             }

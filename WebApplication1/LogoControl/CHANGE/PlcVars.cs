@@ -58,6 +58,19 @@ namespace WebApplication1
             }
         }
 
+        public class ByteAddress : PlcAddress
+        {
+            public ByteAddress(int address)
+            {
+                Address = address;
+            }
+
+            public string GetStringRepresentation()
+            {
+                return "VW" + GetAddress();
+            }
+        }
+
         public class DoubleWordAddress : PlcAddress
         {
             public DoubleWordAddress(int address)
@@ -76,6 +89,8 @@ namespace WebApplication1
 
         public abstract class PlcType
         {            
+            public Sharp7.S7Client Client;
+
             private ushort _syncEvery_X_Time = 1;
             public ushort SyncEvery_X_Time // set to 1 for syncing to occur every loop -- 0 = turn sync off -- 2 = every 2nd loop...
             {
@@ -88,7 +103,8 @@ namespace WebApplication1
             public PlcType(PropComm this_prop)
             {
                 // adding base types of all variables to list "sorted" by prop to efficiently call sync procedure
-                this_prop.AutoSync.Add(this); 
+                this_prop.AutoSync.Add(this);                
+                Client = this_prop.Client;
             }
                         
             public abstract void SyncWithPLC();            
@@ -172,8 +188,7 @@ namespace WebApplication1
             private short? PLCval;
             private short? PCval;
             private bool directionToPLC = false;
-            private WordAddress _TypeAndAdress;
-            private Sharp7.S7Client _Client;
+            private WordAddress _TypeAndAdress;           
             int ErrRead;
             int ErrWrite;
             short? buffRead;
@@ -181,13 +196,23 @@ namespace WebApplication1
             string _prefixToShow;
             string _postFixToShow;
             bool _IsWritable = false;
-            
-            public Word(Sharp7.S7Client Client, PropComm prop, WordAddress TypeAndAdress, string prefixToShow, string postFixToShow, bool IsWritable):base(prop)
+
+            public Word(PropComm prop, WordAddress TypeAndAdress, string prefixToShow, string postFixToShow, bool IsWritable) : base(prop)
+            {
+                Ctor(TypeAndAdress, prefixToShow, postFixToShow, IsWritable);
+            }
+
+            public Word(PropComm prop, WordAddress TypeAndAdress, bool IsWritable) : base(prop)
+            {
+                Ctor(TypeAndAdress, "", "", IsWritable);
+            }
+
+            void Ctor(WordAddress TypeAndAdress, string prefixToShow, string postFixToShow, bool IsWritable)
             {
                 PLCval = null;
                 PCval = null;
 
-                _Client = Client;
+
                 _TypeAndAdress = TypeAndAdress;
                 _prefixToShow = prefixToShow;
                 _postFixToShow = postFixToShow;
@@ -212,9 +237,9 @@ namespace WebApplication1
             {
                 if (directionToPLC == false || forceRead)
                 {
-                    if (_Client != null)
+                    if (Client != null)
                     {
-                        buffRead = Connection.PLCread(_Client, _TypeAndAdress, out ErrRead);
+                        buffRead = Connection.PLCread(Client, _TypeAndAdress, out ErrRead);
                         if (ErrRead == 0 && buffRead != null)
                         {
                             PLCval = buffRead; buffRead = null;
@@ -241,11 +266,11 @@ namespace WebApplication1
                         {
                             buffWrite = PCval;
 
-                            if (_Client != null)
+                            if (Client != null)
                             {
                                 if (_IsWritable)
                                 {                                    
-                                    Connection.PLCwrite(_Client, _TypeAndAdress, (short)buffWrite, out ErrWrite);
+                                    Connection.PLCwrite(Client, _TypeAndAdress, (short)buffWrite, out ErrWrite);
                                     if (ErrWrite == 0)
                                     {
                                         PLCval = buffWrite; 
@@ -282,9 +307,9 @@ namespace WebApplication1
             public void ReportError_throwException(string Message, bool? forceSet_FlagToReport, bool? forceRead_FlagToReport)
             {               
                 string Address = _TypeAndAdress.GetStringRepresentation();
-                string ErrTyp_Read = _Client.ErrorText(ErrRead);
-                string ErrTyp_Write = _Client.ErrorText(ErrWrite);
-                string Client = "Logo" + _Client.deviceID;
+                string ErrTyp_Read = Client.ErrorText(ErrRead);
+                string ErrTyp_Write = Client.ErrorText(ErrWrite);
+                string ClientName = "Logo" + Client.deviceID;
                 string Flags;
 
                 Flags = "directionToPLC: " + directionToPLC;
@@ -311,6 +336,211 @@ namespace WebApplication1
                     "Flags: " + Flags);
             }
             
+        }
+
+        public class Byte : PlcType
+        {
+            public byte? Value
+            {
+                get
+                {
+                    return PLCval;
+                }
+                set
+                {
+                    if (value != null)
+                    {
+                        ReadFromPCtoBuffer(value);
+                    }
+                }
+            }
+
+            public byte? Value_short
+            {
+                get
+                {
+                    if (PLCval != null)
+                    {
+                        return (byte)PLCval;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+                set
+                {
+                    if (value != null)
+                    {
+                        ReadFromPCtoBuffer(value);
+                    }
+                }
+            }
+
+            public string Value_string
+            {
+                get
+                {
+                    var buff = Value;
+                    if (buff != null)
+                    {
+                        return _prefixToShow + Value.ToString() + _postFixToShow;
+                    }
+                    return PropComm.NA;
+                }
+            }
+
+            private byte? PLCval;
+            private byte? PCval;
+            private bool directionToPLC = false;
+            private ByteAddress _TypeAndAdress;
+            int ErrRead;
+            int ErrWrite;
+            byte? buffRead;
+            byte? buffWrite;
+            string _prefixToShow;
+            string _postFixToShow;
+            bool _IsWritable = false;
+
+            public Byte(PropComm prop, ByteAddress TypeAndAdress, string prefixToShow, string postFixToShow, bool IsWritable) : base(prop)
+            {
+                Ctor(TypeAndAdress, prefixToShow, postFixToShow, IsWritable);
+            }
+
+            public Byte(PropComm prop, ByteAddress TypeAndAdress, bool IsWritable) : base(prop)
+            {
+                Ctor(TypeAndAdress, "", "", IsWritable);
+            }
+
+            void Ctor(ByteAddress TypeAndAdress, string prefixToShow, string postFixToShow, bool IsWritable)
+            {
+                PLCval = null;
+                PCval = null;
+
+
+                _TypeAndAdress = TypeAndAdress;
+                _prefixToShow = prefixToShow;
+                _postFixToShow = postFixToShow;
+                _IsWritable = IsWritable;
+            }
+
+            public override void SyncWithPLC()
+            {
+                try
+                {
+                    ReadFromPLCtoBuffer(false);
+                    WriteToPLCFromBuffer();
+                }
+                catch (Exception ex)
+                {
+                    ReportComunicatoonMessage(ex.Message);
+                }
+
+            }
+
+            private void ReadFromPLCtoBuffer(bool forceRead)
+            {
+                if (directionToPLC == false || forceRead)
+                {
+                    if (Client != null)
+                    {
+                        buffRead = (byte)Connection.PLCread(Client, _TypeAndAdress, out ErrRead);
+                        if (ErrRead == 0 && buffRead != null)
+                        {
+                            PLCval = buffRead; buffRead = null;
+                        }
+                        else
+                        {
+                            ReportError_throwException("Read from PLC failed.", null, forceRead);
+                        }
+                    }
+                }
+            }
+
+            private void WriteToPLCFromBuffer()
+            {
+                if (PLCval == null)
+                {
+                    directionToPLC = false;
+                }
+                if (directionToPLC == true)
+                {
+                    if (PCval != null && PLCval != null)
+                    {
+                        if (PCval != PLCval)
+                        {
+                            buffWrite = PCval;
+
+                            if (Client != null)
+                            {
+                                if (_IsWritable)
+                                {
+                                    Connection.PLCwrite(Client, _TypeAndAdress, (byte)buffWrite, out ErrWrite);
+                                    if (ErrWrite == 0)
+                                    {
+                                        PLCval = buffWrite;
+                                    }
+                                    else
+                                    {
+                                        ReportError_throwException("Write to PLC failed.");
+                                    }
+                                }
+                                else
+                                {
+                                    ReportError_throwException("Write to PLC failed IsWritable flag must be true for writing to PLC.");
+                                }
+                            }
+                        }
+                        directionToPLC = false;
+                    }
+                }
+            }
+
+            private void ReadFromPCtoBuffer(byte? value)
+            {
+                if (value != null)
+                {
+                    directionToPLC = true;
+                    PCval = value;
+                }
+            }
+
+            public void ReportError_throwException(string Message)
+            {
+                ReportError_throwException(Message, null, null);
+            }
+            public void ReportError_throwException(string Message, bool? forceSet_FlagToReport, bool? forceRead_FlagToReport)
+            {
+                string Address = _TypeAndAdress.GetStringRepresentation();
+                string ErrTyp_Read = Client.ErrorText(ErrRead);
+                string ErrTyp_Write = Client.ErrorText(ErrWrite);
+                string ClientName = "Logo" + Client.deviceID;
+                string Flags;
+
+                Flags = "directionToPLC: " + directionToPLC;
+
+                if (forceSet_FlagToReport != null)
+                {
+                    Flags += " forceSet: " + forceSet_FlagToReport.ToString() + ";";
+                }
+
+                if (forceRead_FlagToReport != null)
+                {
+                    Flags += " forceRead: " + forceSet_FlagToReport.ToString() + ";";
+                }
+
+                Flags += " isWritable: " + _IsWritable.ToString() + ";";
+
+
+                throw new Exception(
+                    Message + " " +
+                    "Address: " + Address + ", " +
+                    "Read Error type: " + ErrTyp_Read + ", " +
+                    "Write Error type: " + ErrTyp_Write + ", " +
+                    "Client: " + Client + ". " +
+                    "Flags: " + Flags);
+            }
+
         }
 
         public class DWord : PlcType
@@ -556,7 +786,7 @@ namespace WebApplication1
             short? buffWrite;
             bool _IsWritable = false;
             
-            public TimeSet(Sharp7.S7Client Client, PropComm prop, WordAddress TypeAndAdress, bool IsWritable) : base(prop)
+            public TimeSet(PropComm prop, WordAddress TypeAndAdress, bool IsWritable) : base(prop)
             {
                 PLCval = null;
                 PCval = null;
@@ -761,7 +991,7 @@ namespace WebApplication1
                 }
             }
 
-            public TemperatureShow(Sharp7.S7Client Client, PropComm prop, WordAddress TypeAndAdress, string prefixToShow, string postFixToShow, float calibOffset, float calibMultiply, int decimals, bool IsWritable) : base(prop)
+            public TemperatureShow(PropComm prop, WordAddress TypeAndAdress, string prefixToShow, string postFixToShow, float calibOffset, float calibMultiply, int decimals, bool IsWritable) : base(prop)
             {
                 PLCval = null;
                 PCval = null;
@@ -857,21 +1087,7 @@ namespace WebApplication1
                     }
                 }
             }
-                    
-            // TODO REMOVE if not needed
-            //public virtual string Scalate(short? val)
-            //{
-            //    if (val != null)
-            //    {
-            //        return (_kx * (float)val + _n).ToString("F" + decimalPlaces);
-            //    }
-            //    else
-            //    {
-            //        return PropComm.NA;
-            //    }
-
-            //}
-
+                               
             public virtual float? Scalate(short? val)
             {
                 if (val != null)
@@ -881,23 +1097,7 @@ namespace WebApplication1
                 }
                 return 0;
             }
-
-            //private short? DeScalate(string val)
-            //{
-            //    string b;  //    double c;  //    short d;
-
-            //    if (val != null && val != "")
-            //    {
-            //        b = RemoveFromEnd(val, _postFixToShow);
-            //        b = RemoveFromBegining(b, _prefixToShow);
-            //        c = Convert.ToDouble(b);
-            //        d = (short)Misc.ToInt((c - _n) / _kx);
-
-            //        return d;
-            //    }
-            //    return null;
-            //}
-
+                        
             private short? DeScalate(float? val)
             {  
                 if (val != null)
@@ -983,21 +1183,17 @@ namespace WebApplication1
             int ErrRead;
             int ErrWrite;
             short? buffRead;
-            short? buffWrite;
-            string _replacementTextIfTrue;
-            string _replacementTextIfFalse;
+            short? buffWrite;            
             bool _IsWritable = false;           
             byte sendpulseState = 0;
 
-            public Bit(Sharp7.S7Client Client, PropComm prop, BitAddress TypeAndAdress, string replacementTextIfTrue, string replacementTextIfFalse, bool IsWritable) : base(prop)
+            public Bit(PropComm prop, BitAddress TypeAndAdress, bool IsWritable) : base(prop)
             {
                 PLCval = null;
                 PCval = null;
 
                 _Client = Client;
-                _TypeAndAdress = TypeAndAdress;
-                _replacementTextIfTrue = replacementTextIfTrue;
-                _replacementTextIfFalse = replacementTextIfFalse;
+                _TypeAndAdress = TypeAndAdress;                
                 _IsWritable = IsWritable;
             }
 
@@ -1176,7 +1372,7 @@ namespace WebApplication1
             int ErrRead;           
             short? buffRead;           
             
-            public LogoClock(Sharp7.S7Client Client, PropComm prop) : base(prop)
+            public LogoClock(PropComm prop) : base(prop)
             {
                 PLCval = null;               
                 _Client = Client;

@@ -42,6 +42,7 @@ namespace WebApplication1
             public class MesalaPehalaContent : HtmlGenericControl
             {
 
+                GControls.UpdatePanelFull up = new GControls.UpdatePanelFull("MesalaPehalaUpdatePanel", Settings.UpdateValuesPCms);
                 GControls.GroupBox gb;
 
                 int top = 8;
@@ -68,8 +69,9 @@ namespace WebApplication1
 
                 GControls.GuiSeparator gs; GControls.GuiSeparator_DottedLine gs1; GControls.GuiSeparator_DottedLine gs2;
                 GControls.SuperLabel lbl_rezim;
-                GControls.DropDownListForRocnoAvtoSelect Rezim;
-                GControls.DropDownListForOnOffSelect rocnaNastavitev;
+                GControls.DropDownListForRocno0Rocno1AvtoSelect Rezim;
+                GControls.SuperLabel lbl_Status;
+                GControls.SuperLabel Status;
 
                 public MesalaPehalaContent()
                 {
@@ -86,17 +88,19 @@ namespace WebApplication1
                     var prop = Val.logocontroler.Prop4;
 
                     lbl_rezim = new GControls.SuperLabel("Režim:", top + lblxtra, 10, 15, lblH ) { FontWeightBold = true };
-                     Rezim = new GControls.DropDownListForRocnoAvtoSelect("rezimSel", prop.rezim.Value, top, 22, ctrlH, fontSize, false, false);
-                    rocnaNastavitev = new GControls.DropDownListForOnOffSelect("rnval", prop.rocno.Value, top, 44, ctrlH, fontSize, false, false);
+                    Rezim = new GControls.DropDownListForRocno0Rocno1AvtoSelect("rezimSel", prop.ShowVal_Rezim.Value, top, 22, ctrlH, fontSize, false, false);
 
+                    lbl_Status = new GControls.SuperLabel("Status Motorja:", top + 5, 40, 35, lblH);
+                    Status = new GControls.SuperLabel(StatusLabelShow(), top + 5, 54, 35, lblH) { FontWeightBold = true };
+                    
                     for (int i = 0; i < rows; i++)
                     {
                         lbl_weekdayToStart[i] = new GControls.SuperLabel("Dan:", topOffset + lblxtra, leftOffset, 15, lblH) { FontWeightBold = true};
                         weekdayToStart[i] = new GControls.DropDownListForWeekDaySelect("wkdySel" + i, prop.weekday[i].Value_string, topOffset, leftOffset + 5, ctrlH, fontSize, false, true);
                         lbl_med[i] = new GControls.SuperLabel("med", topOffset + lblxtra, leftOffset + 29, 10, lblH);
-                        med[i] = new GControls.DropDownListForHourSelect("med" + i, prop.start[i].Value_string, topOffset, leftOffset + 34, ctrlH,  fontSize, false, false);
+                        med[i] = new GControls.DropDownListForHourSelect("med" + i, prop.start[i].Value, topOffset, leftOffset + 34, ctrlH,  fontSize, false, false);
                         lbl_in[i] = new GControls.SuperLabel("in", topOffset + lblxtra, leftOffset + 51, 10, lblH);
-                        in_[i] = new GControls.DropDownListForHourSelect("in" + i, prop.stop[i].Value_string, topOffset, leftOffset + 54, ctrlH, fontSize, false, false);
+                        in_[i] = new GControls.DropDownListForHourSelect("in" + i, prop.stop[i].Value, topOffset, leftOffset + 54, ctrlH, fontSize, false, false);
 
                         if (i == 1)
                         {
@@ -109,32 +113,111 @@ namespace WebApplication1
                         }
 
                         topOffset += spacingT;
+
+                        weekdayToStart[i].SaveClicked += MesalaPehalaWeekDay_SaveClicked;
+                        med[i].SaveClicked += MesalaPehalaStartTime_SaveClicked;
+                        in_[i].SaveClicked += MesalaPehalaStopTime_SaveClicked;
                     }
+
+                    Rezim.SaveClicked += Rezim_SaveClicked;
+
+
+                }
+
+                private void Rezim_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
+                {
+                    if (Rezim.IsSelectedValueAuto())
+                    {
+                        Val.logocontroler.Prop4.SetAuto.SendPulse();
+                    }
+                    else if (Rezim.IsSelectedValueMan0())
+                    {
+                        Val.logocontroler.Prop4.SetMan0.SendPulse();
+                    }
+                    else if (Rezim.IsSelectedValueMan1())
+                    {
+                        Val.logocontroler.Prop4.SetMan1.SendPulse();
+                    }
+                }
+
+                private void MesalaPehalaStopTime_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
+                {
+                    try
+                    {
+                        var ID = Helper.GetID_FromBtnObject(sender);
+                        Val.logocontroler.Prop4.stop[ID].Value = in_[ID].GetSelectedValue();
+                    }
+                    catch (Exception)
+                    {
+                        throw new Exception("Internal Error inside event MesalaPehalaStopTime_SaveClicked(,,).");
+                    }
+                }
+
+                private void MesalaPehalaStartTime_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
+                {
+                    try
+                    {
+                        var ID = Helper.GetID_FromBtnObject(sender);
+                        Val.logocontroler.Prop4.start[ID].Value = med[ID].GetSelectedValue();
+                    }
+                    catch (Exception)
+                    {
+                        throw new Exception("Internal Error inside event MesalaPehalaStartTime_SaveClicked(,,).");
+                    }
+
+                }
+
+                private void MesalaPehalaWeekDay_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
+                {
+                    try
+                    {
+                        var ID = Helper.GetID_FromBtnObject(sender);
+                        Val.logocontroler.Prop4.weekday[ID].Value = weekdayToStart[ID].GetSelectedValue();
+                    }
+                    catch (Exception)
+                    {
+                        throw new Exception("Internal Error inside event MesalaPehalaWeekDay_SaveClicked(,,).");
+                    }
+
 
                 }
 
                 void AddControls()
                 {
-                    Controls.Add(gb);
+                    
                     gb.Controls.Add(gs);
                     gb.Controls.Add(gs1);
                     gb.Controls.Add(gs2);
 
                     gb.Controls.Add(lbl_rezim);
                     gb.Controls.Add(Rezim);
-                    gb.Controls.Add(rocnaNastavitev);
+                    gb.Controls.Add(lbl_Status);
+                    gb.Controls.Add(Status);
 
-                    var up = gb;
 
                     for (int i = 0; i < rows; i++)
                     {
-                        up.Controls.Add(lbl_weekdayToStart[i]);
-                        up.Controls.Add(weekdayToStart[i]);
-                        up.Controls.Add(lbl_med[i]);
-                        up.Controls.Add(med[i]);
-                        up.Controls.Add(lbl_in[i]);
-                        up.Controls.Add(in_[i]);
+                        gb.Controls.Add(lbl_weekdayToStart[i]);
+                        gb.Controls.Add(weekdayToStart[i]);
+                        gb.Controls.Add(lbl_med[i]);
+                        gb.Controls.Add(med[i]);
+                        gb.Controls.Add(lbl_in[i]);
+                        gb.Controls.Add(in_[i]);
                     }
+
+                    up.Controls_Add(gb);
+                    Controls.Add(up);
+                }
+
+                string StatusLabelShow()
+                {
+                    var motor = Val.logocontroler.Prop4.aktivenMotor;
+
+                    if (motor.Value_bool)
+                    {
+                        return "Aktiven";
+                    }
+                    return "Neaktiven";
                 }
             }
 

@@ -122,6 +122,13 @@ namespace WebApplication1
                     errCode = Client.DBWrite(1, typeAndAdress.GetAddress(), 2, b);
                 }
 
+                // In case if you want to write Byte value
+                else if (typeAndAdress is PlcVars.ByteAddress)
+                {
+                    S7.SetByteAt(b, 0, (byte)value);
+                    errCode = Client.DBWrite(1, typeAndAdress.GetAddress(), 1, b);
+                }
+
                 else
                 {
                     errCode = S7Consts.err_typeError;
@@ -178,21 +185,37 @@ namespace WebApplication1
                     }
 
                 }
-                
+
 
                 // In case if you want to read WORD value
                 else if (typeAndAdress is PlcVars.WordAddress)
-                {                   
+                {
                     try
-                    {                        
+                    {
                         errCode = Client.DBRead(1, typeAndAdress.GetAddress(), 2, b);
                         value = (short)(S7.GetWordAt(b, 0));
                     }
-                    catch 
+                    catch
                     {
                         errCode = S7Consts.err_Read;
-                    }                   
+                    }
                 }
+                
+                // In case if you want to read BYTE value
+                else if (typeAndAdress is PlcVars.ByteAddress)
+                {
+                    try
+                    {
+                        errCode = Client.DBRead(1, typeAndAdress.GetAddress(), 1, b);
+                        value = S7.GetByteAt(b, 0);
+                    }
+                    catch
+                    {
+                        errCode = S7Consts.err_Read;
+                    }
+                }
+
+                // error type
                 else
                 {
                     errCode = S7Consts.err_typeError;

@@ -1507,6 +1507,11 @@ namespace WebApplication1
                     DataSource = datasource;
                     Button_Outside.DataBind();
                 }
+
+                new public byte GetSelectedValue()
+                {
+                    return Convert.ToByte(base.GetSelectedValue());
+                }
             }
 
             public class DropDownListForHourSelect : DropDown
@@ -1645,6 +1650,36 @@ namespace WebApplication1
                 new public short GetSelectedValue()
                 {
                     return Convert.ToInt16(base.GetSelectedValue());
+                }
+
+                public bool IsSelectedValueAuto()
+                {
+                    if (GetSelectedText() != PropComm.NA)
+                    {
+                        if (GetSelectedValue() == 0)
+                        {
+                            return true;
+                        }
+                    }                    
+                    return false;
+                }
+
+                public bool IsSelectedValueMan1()
+                {
+                    if (GetSelectedValue() == 2)
+                    {
+                        return true;
+                    }
+                    return false;
+                }
+
+                public bool IsSelectedValueMan0()
+                {
+                    if (GetSelectedValue() == 1)
+                    {
+                        return true;
+                    }
+                    return false;
                 }
             }
 
@@ -1870,11 +1905,13 @@ namespace WebApplication1
 
                             if (ok)
                             {
-                                session[Navigator.ViewStateElement_LoggedIn] = Val.LoggingIn; 
+                                session[Navigator.ViewStateElement_LoggedIn] = Val.LoggingIn;
+                                SysLog.SetMessage("Login Success: " + ip + " - User:  " +username.Text);
                             }
                             else
                             {
                                 session[Navigator.ViewStateElement_LoggedIn] = "AUTH_False";
+                                SysLog.SetMessage("Login Denied: " + ip + " - User:  " + username.Text);
                             }
 
                             session[Navigator.ViewStateElement_LoginAuth] = valid;                            

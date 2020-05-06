@@ -25,30 +25,62 @@ namespace WebApplication1
         {
             FirstSync();
 
+            foreach (var item in AutoSync.VarsListPool[1])
+            {
+                if (item!= null)
+                {
+                    item.SyncWithPLC();
+                }
+                
+            }
             AutoSync.VarsListPool[1].ForEach(plcVar => plcVar.SyncWithPLC());
 
             //
             if (IsItsTurn(2))
             {
-                AutoSync.VarsListPool[2].ForEach(plcVar => plcVar.SyncWithPLC());
+                foreach (var item in AutoSync.VarsListPool[2])
+                {
+                    if (item != null)
+                    {
+                        item.SyncWithPLC();
+                    }
+                }                
             }
 
             //
             if (IsItsTurn(3))
             {
-                AutoSync.VarsListPool[3].ForEach(plcVar => plcVar.SyncWithPLC());
+                foreach (var item in AutoSync.VarsListPool[3])
+                {
+                    if (item != null)
+                    {
+                        item.SyncWithPLC();
+                    }
+                }
             }
 
             //
             if (IsItsTurn(4))
             {
-                AutoSync.VarsListPool[4].ForEach(plcVar => plcVar.SyncWithPLC());
+                foreach (var item in AutoSync.VarsListPool[4])
+                {
+                    if (item != null)
+                    {
+                        item.SyncWithPLC();
+                    }
+                }
             }
 
             //
             if (IsItsTurn(5))
             {
-                AutoSync.VarsListPool[5].ForEach(plcVar => plcVar.SyncWithPLC());
+                foreach (var item in AutoSync.VarsListPool[5])
+                {
+                    if (item != null)
+                    {
+                        item.SyncWithPLC();
+                    }
+                }
             }
 
             PoolCnt();
@@ -130,7 +162,7 @@ namespace WebApplication1
         {
             VarsList = new List<PlcVars.PlcType>();
 
-            for (int i = 1; i < 5; i++)
+            for (int i = 1; i <= 5; i++)
             {
                 VarsListPool[i] = new List<PlcVars.PlcType>();
             }

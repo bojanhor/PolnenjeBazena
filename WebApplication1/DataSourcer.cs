@@ -392,13 +392,17 @@ namespace WebApplication1
             {
                 CreateRow(PropComm.NA, 0);
                 CreateRow("IZKLOP", 0);
-                CreateRow("Ponedeljek", 512);
-                CreateRow("Torek", 1024);
-                CreateRow("Sreda", 2048);
-                CreateRow("Četrtek", 4096);
-                CreateRow("Petek", 8192);
-                CreateRow("Sobota", 16384);
-                CreateRow("Nedelja", 256);
+                CreateRow("Ponedeljek", 2);
+                CreateRow("Torek", 4);
+                CreateRow("Sreda", 8);
+                CreateRow("Četrtek", 16);
+                CreateRow("Petek", 32);
+                CreateRow("Sobota", 64);
+                CreateRow("Nedelja", 1);
+                CreateRow("Vsak dan", 127);
+                CreateRow("Pon-Pet", 62);
+                CreateRow("Pon-Sob", 126);
+                CreateRow("Pon,Sre,Pet", 42);
 
             }
 

@@ -281,7 +281,8 @@ namespace WebApplication1
 
                         if (userBuff.Blocked())
                         {
-                            chk = UserCheckStatus.BlockedUser;                            
+                            chk = UserCheckStatus.BlockedUser;
+                            SysLog.SetMessage("Login Failed: User ("+ UserName +") was Blocked ");
                             return false;
                         }
                         //
@@ -295,12 +296,14 @@ namespace WebApplication1
                         {
                             ActiveUserAddTry(userBuff);
                             chk = UserCheckStatus.InvalidPassword;
+                            SysLog.SetMessage("Login Failed: Password was invalid");
                             return false;
                         }
                     }
                 }
 
                 chk = UserCheckStatus.InvalidUserName;
+                SysLog.SetMessage("Login Failed: Username ("+ UserName + ") was invalid");
                 return false;
             }
 
@@ -374,6 +377,13 @@ namespace WebApplication1
             {
                 throw new Exception("Can not prepare download file: " + ex.Message);
             }
+        }
+
+        public static int GetID_FromBtnObject(object ButtonFromSender_Event)
+        {
+            var btn = (GuiController.GControls.TransparentButton)ButtonFromSender_Event;
+            string newID = new string(btn.ID.Where(char.IsDigit).ToArray()); // remove numbers to get ID
+            return Convert.ToInt16(newID);
         }
     }
 }

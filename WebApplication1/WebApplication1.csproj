@@ -537,7 +537,7 @@
     <Compile Include="LogoControl\Change\PropCom.cs" />
     <Compile Include="LogoControl\Connection.cs" />
     <Compile Include="LogoControl\LogoControl.cs" />
-    <Compile Include="LogoControl\MiscMethods.cs" />
+    <Compile Include="MiscMethods.cs" />
     <Compile Include="LogoControl\Sharp7.cs" />
     <Compile Include="Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

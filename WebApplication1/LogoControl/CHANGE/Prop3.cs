@@ -55,44 +55,44 @@ namespace WebApplication1
         {
                        
             //1
-            VrataGorPulse1 = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(12, 0), "", "", true);
-            VrataDolPulse1 = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(13, 0), "", "", true);
-            VrataStopPulse1 = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(14, 0), "", "", true);
+            VrataGorPulse1 = new PlcVars.Bit(this, new PlcVars.BitAddress(12, 0), true);
+            VrataDolPulse1 = new PlcVars.Bit(this, new PlcVars.BitAddress(13, 0), true);
+            VrataStopPulse1 = new PlcVars.Bit(this, new PlcVars.BitAddress(14, 0), true);
 
-            UporabljaKoncnaStikala1 = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(20, 0), "", "", true);
-            KoncnoStikaloGor1 = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(24, 0), "", "", false);
-            KoncnoStikaloDol1 = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(26, 0), "", "", false);
+            UporabljaKoncnaStikala1 = new PlcVars.Bit(this, new PlcVars.BitAddress(20, 0), true);
+            KoncnoStikaloGor1 = new PlcVars.Bit(this, new PlcVars.BitAddress(24, 0), false);
+            KoncnoStikaloDol1 = new PlcVars.Bit(this, new PlcVars.BitAddress(26, 0), false);
 
-            CasPotovanja1 = new PlcVars.Word(Client, this, new PlcVars.WordAddress(30), "", "", true);
+            CasPotovanja1 = new PlcVars.Word(this, new PlcVars.WordAddress(30), true);
 
             // 2
-            VrataGorPulse2 = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(112, 0), "", "", true);
-            VrataDolPulse2 = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(113, 0), "", "", true);
-            VrataStopPulse2 = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(114, 0), "", "", true);
+            VrataGorPulse2 = new PlcVars.Bit(this, new PlcVars.BitAddress(112, 0), true);
+            VrataDolPulse2 = new PlcVars.Bit(this, new PlcVars.BitAddress(113, 0), true);
+            VrataStopPulse2 = new PlcVars.Bit(this, new PlcVars.BitAddress(114, 0), true);
 
-            UporabljaKoncnaStikala2 = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(120, 0), "", "", true);
-            KoncnoStikaloGor2 = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(124, 0), "", "", false);
-            KoncnoStikaloDol2 = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(126, 0), "", "", false);
+            UporabljaKoncnaStikala2 = new PlcVars.Bit(this, new PlcVars.BitAddress(120, 0), true);
+            KoncnoStikaloGor2 = new PlcVars.Bit(this, new PlcVars.BitAddress(124, 0), false);
+            KoncnoStikaloDol2 = new PlcVars.Bit(this, new PlcVars.BitAddress(126, 0), false);
 
-            CasPotovanja2 = new PlcVars.Word(Client, this, new PlcVars.WordAddress(130), "", "", true);
+            CasPotovanja2 = new PlcVars.Word(this, new PlcVars.WordAddress(130), true);
 
             // 3
-            VrataGorPulse3 = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(212, 0), "", "", true);
-            VrataDolPulse3 = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(213, 0), "", "", true);
-            VrataStopPulse3 = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(214, 0), "", "", true);
+            VrataGorPulse3 = new PlcVars.Bit(this, new PlcVars.BitAddress(212, 0), true);
+            VrataDolPulse3 = new PlcVars.Bit(this, new PlcVars.BitAddress(213, 0), true);
+            VrataStopPulse3 = new PlcVars.Bit(this, new PlcVars.BitAddress(214, 0), true);
 
-            UporabljaKoncnaStikala3 = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(220, 0), "", "", true);
-            KoncnoStikaloGor3 = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(224, 0), "", "", false);
-            KoncnoStikaloDol3 = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(226, 0), "", "", false);
+            UporabljaKoncnaStikala3 = new PlcVars.Bit(this, new PlcVars.BitAddress(220, 0), true);
+            KoncnoStikaloGor3 = new PlcVars.Bit(this, new PlcVars.BitAddress(224, 0), false);
+            KoncnoStikaloDol3 = new PlcVars.Bit(this, new PlcVars.BitAddress(226, 0), false);
 
-            CasPotovanja3 = new PlcVars.Word(Client, this, new PlcVars.WordAddress(230), "", "", true);
+            CasPotovanja3 = new PlcVars.Word(this, new PlcVars.WordAddress(230), true);
 
 
             //
-            AktivenMotor = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(60, 0), "", "", false);
-            Zvezda = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(62, 0), "", "", false);
-            Trikot = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(64, 0), "", "", false);
-            SmerNaprej = new PlcVars.Bit(Client, this, new PlcVars.BitAddress(66, 0), "", "", false);
+            AktivenMotor = new PlcVars.Bit(this, new PlcVars.BitAddress(60, 0), false);
+            Zvezda = new PlcVars.Bit(this, new PlcVars.BitAddress(62, 0), false);
+            Trikot = new PlcVars.Bit(this, new PlcVars.BitAddress(64, 0), false);
+            SmerNaprej = new PlcVars.Bit(this, new PlcVars.BitAddress(66, 0), false);
 
         }
 
