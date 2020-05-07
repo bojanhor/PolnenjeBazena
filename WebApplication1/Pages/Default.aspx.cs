@@ -14,9 +14,8 @@ namespace WebApplication1.Pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Val.guiController.PageDefault_ = new GuiController.PageDefault(this, Session);
-
             Navigator.EveryPageProtocol("Dobrodošli", this, Session, TemplateClassID);
+            Val.guiController.PageDefault_ = new GuiController.PageDefault(this, Session);           
 
 
             Initialise();           

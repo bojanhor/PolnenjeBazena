@@ -12,9 +12,10 @@ namespace WebApplication1.Pages
         
         protected void Page_Load(object sender, EventArgs e)
         {
+            Navigator.EveryPageProtocol("Vrata", this, Session, TemplateClassID);
             Val.guiController.PageVrataZavese_ = new GuiController.PageVrataZavese(this, Session);
 
-            Navigator.EveryPageProtocol("Vrata", this, Session, TemplateClassID);
+            
             Initialise();
            
         }

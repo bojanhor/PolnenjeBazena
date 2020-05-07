@@ -238,7 +238,7 @@ namespace WebApplication1
             }
 
             private void Zarnica_Click(object sender, EventArgs e)
-            {
+            {                
                 var luc = (GControls.LucBtn)sender;                
                 SetCurrentLuciSettingsShown(luc.btnID);
 
@@ -517,31 +517,25 @@ namespace WebApplication1
                     Val.logocontroler.Prop1.GetVklopUrnika(out bool null1, out bool buff, id);
                     return buff;
                 }
-
-                    void SaveClickedTmr(ListItem selectedItem)
-                {
-                    var buff = selectedItem.Text;
-                    Val.logocontroler.Prop1.IzklopConapop[myID].Value = buff;
-                }
-
+                               
                 private void Izklop2_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    SaveClickedTmr(selectedItem);
+                    Val.logocontroler.Prop1.IzklopConapop[myID].Value = Izklop2.GetSelectedValue();                   
                 }
 
                 private void Izklop1_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    SaveClickedTmr(selectedItem);
+                    Val.logocontroler.Prop1.IzklopConadop[myID].Value = Izklop1.GetSelectedValue();                    
                 }
 
                 private void Vklop2_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    SaveClickedTmr(selectedItem);
+                    Val.logocontroler.Prop1.VklopConapop[myID].Value = Vklop2.GetSelectedValue();                    
                 }
 
                 private void Vklop1_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
                 {
-                    SaveClickedTmr(selectedItem);
+                    Val.logocontroler.Prop1.VklopConadop[myID].Value = Vklop1.GetSelectedValue();                    
                 }
 
                 private void DimmerPop_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)

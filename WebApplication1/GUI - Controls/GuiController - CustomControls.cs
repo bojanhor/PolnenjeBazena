@@ -122,8 +122,7 @@ namespace WebApplication1
                     var writeVal = Val.logocontroler.Prop1.LucStatus_WriteToPLC[btnID];
                     writeVal.SendPulse();
 
-                    Val.logocontroler.ForceRefreshValuesFromPLC(1);
-                    Val.guiController.PageDefault_.ForceRefreshPanel();
+                    GlobalManagement.ForceRefreshValues(1); // prop number
 
                 }
 
@@ -258,7 +257,7 @@ namespace WebApplication1
             {
                 public int btnID;
 
-                public ImageButtonWithID( int btnID_)
+                public ImageButtonWithID(int btnID_)
                 {
                     ctor("", btnID_);
                 }
@@ -372,7 +371,7 @@ namespace WebApplication1
                         position = position_;
 
                         btnID = _btnID;
-                        this.ID = description.Replace(" ", "") + "_btn" +btnID;                        
+                        this.ID = description.Replace(" ", "") + "_btn" + btnID;
 
                         Top = position.top.ToString().Replace(",", ".");
                         Left = position.left.ToString().Replace(",", ".");
@@ -481,7 +480,7 @@ namespace WebApplication1
 
                 public ButtonWithLabel(string ID_prefix, string text, float size, float FontSize)
                 {
-                    ctor(ID_prefix,  text,  size, FontSize);
+                    ctor(ID_prefix, text, size, FontSize);
                 }
 
                 public ButtonWithLabel(string text, float size, float FontSize)
@@ -540,7 +539,7 @@ namespace WebApplication1
 
                 void Ctor(string Name, Datasourcer.Datasource dataSource, string ID, string text, float FontSize, Timer updateTimer, bool wideMode)
                 {
-                    
+
                     _text = text;
                     menuID = ID;
 
@@ -675,7 +674,7 @@ namespace WebApplication1
                     }
 
                     void ManageSelectedItem(string PlcTextValue, List<ListItem> DataSource)
-                    {                       
+                    {
 
                         string buffSelectedItem = PlcTextValue ?? PropComm.NA;
 
@@ -728,7 +727,7 @@ namespace WebApplication1
                     {
                         TitleNameLabel = new Label()
                         {
-                            Text = NameLable                            
+                            Text = NameLable
                         };
 
                         TitleNameLabel.Style.Add(HtmlTextWriterStyle.FontSize, "1vw");
@@ -760,7 +759,7 @@ namespace WebApplication1
                 {
                     Ctor_(id, Name_, hasNext, hasPreious, hasExit, false, content);
                 }
-                               
+
 
                 public void Ctor_(int id, string Name_, bool hasNext, bool hasPreious, bool hasExit, bool hasPLCTimeShow, HtmlGenericControl content)
                 {
@@ -820,7 +819,7 @@ namespace WebApplication1
                         {
                             Style.Add(HtmlTextWriterStyle.BackgroundImage, "/Pictures/alertNoExitBtn.png");
                         }
-                        
+
                         Controls.Add(Clock);
                         Controls.Add(content);
 
@@ -832,7 +831,7 @@ namespace WebApplication1
                     }
 
                 }
-                                
+
 
                 void AddSettingsPanelContent()
                 {
@@ -1122,7 +1121,7 @@ namespace WebApplication1
 
                 public SuperLabel(string text, float top, float left, float width, float height)
                 {
-                    
+
                     label.Text = text;
                     Top = top;
                     Left = left;
@@ -1148,7 +1147,7 @@ namespace WebApplication1
                 {
                     label.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
                 }
-                                
+
             }
 
             public class DropDown : HtmlGenericControl
@@ -1222,7 +1221,7 @@ namespace WebApplication1
 
                     DataSource = dataSource;
                     Style.Add("top", Helper.FloatToStringWeb(top, "%"));
-                    Style.Add("left", Helper.FloatToStringWeb(left, "%"));                    
+                    Style.Add("left", Helper.FloatToStringWeb(left, "%"));
                     Style.Add("position", "absolute");
 
                     if (selfUpdatable)
@@ -1379,9 +1378,9 @@ namespace WebApplication1
             {
                 static Datasourcer.DimmerSelectorDatasource datasource = new Datasourcer.DimmerSelectorDatasource();
 
-               
+
                 public DropDownListForDimmerLUX(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
-                    : base("Izberite Svetilnost:", datasource, ID,  PlcTextValue, top, left, size, fontSize, selfUpdatable, wideMode)
+                    : base("Izberite Svetilnost:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, wideMode)
                 {
                     Ctor();
                 }
@@ -1397,7 +1396,7 @@ namespace WebApplication1
             {
                 static Datasourcer.DimmerSelectorDatasource datasource = new Datasourcer.DimmerSelectorDatasource();
 
-                
+
                 public DropDownListForDimmerRPM(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
                     : base("Izberite obrate:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, wideMode)
                 {
@@ -1422,7 +1421,7 @@ namespace WebApplication1
 
                 public DropDownListForHisteresis(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode, bool hasZero)
                     : base("Izberite histerezo:", GetDatasource(hasZero), ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
-                {                    
+                {
                     Ctor();
                 }
 
@@ -1494,7 +1493,7 @@ namespace WebApplication1
             public class DropDownListForWeekDaySelect : DropDown
             {
                 static Datasourcer.WeekDaySelectorDatasource datasource = new Datasourcer.WeekDaySelectorDatasource();
-                                
+
                 public DropDownListForWeekDaySelect(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
                     : base("Izberite željeni dan:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
                 {
@@ -1608,7 +1607,7 @@ namespace WebApplication1
 
                 new public short GetSelectedValue()
                 {
-                   return Convert.ToInt16(base.GetSelectedValue());
+                    return Convert.ToInt16(base.GetSelectedValue());
                 }
             }
 
@@ -1642,7 +1641,7 @@ namespace WebApplication1
                         }
 
                         return datasource[1].Text; // Avtom.
-                        
+
                     }
                     return null;
                 }
@@ -1660,7 +1659,7 @@ namespace WebApplication1
                         {
                             return true;
                         }
-                    }                    
+                    }
                     return false;
                 }
 
@@ -1725,7 +1724,7 @@ namespace WebApplication1
 
                 float top, left, width, height;
 
-                public LogMeIn(Page _thisPage, HttpSessionState session )
+                public LogMeIn(Page _thisPage, HttpSessionState session)
                 {
                     top = 20;
                     left = 27;
@@ -1798,11 +1797,11 @@ namespace WebApplication1
                     password = new TextBox()
                     {
                         ID = "pwdField",
-                        TextMode = TextBoxMode.Password                        
+                        TextMode = TextBoxMode.Password
                     };
                     l.Add(password);
                     SetControlAbsolutePos(l.Last(), lblrow2, tbLeft, tbw, tbh);
-                                        
+
                     UsrnmlblERR = new Label(); ErrLblFormat(UsrnmlblERR); UsrnmlblERR.Style.Add("top", "27%");
                     pwdlblERR = new Label(); ErrLblFormat(pwdlblERR); pwdlblERR.Style.Add("top", "43%");
 
@@ -1826,7 +1825,7 @@ namespace WebApplication1
                 void ErrLblFormat(Label lbl)
                 {
                     lbl.Style.Add("position", "absolute");
-                    lbl.Text = "X"; lbl.ForeColor = System.Drawing.Color.Red;                 
+                    lbl.Text = "X"; lbl.ForeColor = System.Drawing.Color.Red;
                     lbl.Style.Add(HtmlTextWriterStyle.FontWeight, "bold");
                     lbl.Style.Add(HtmlTextWriterStyle.Visibility, "hidden");
                     lbl.Style.Add(HtmlTextWriterStyle.Left, "78%");
@@ -1860,10 +1859,10 @@ namespace WebApplication1
 
 
                             if (ucs == Helper.UserDataManager.UserCheckStatus.InvalidPassword) // invalid password flag
-                            {                                
-                               pwdlblERR.Style.Remove(HtmlTextWriterStyle.Visibility); // removes hidden atribute
+                            {
+                                pwdlblERR.Style.Remove(HtmlTextWriterStyle.Visibility); // removes hidden atribute
                             }
-                                                        
+
                         }
                     }
                 }
@@ -1889,7 +1888,7 @@ namespace WebApplication1
                 {
                     var ip = Helper.GetClientIP();
 
-                    SysLog.SetMessage("Login try: " + ip); 
+                    SysLog.SetMessage("Login try: " + ip);
 
                     try
                     {
@@ -1906,7 +1905,7 @@ namespace WebApplication1
                             if (ok)
                             {
                                 session[Navigator.ViewStateElement_LoggedIn] = Val.LoggingIn;
-                                SysLog.SetMessage("Login Success: " + ip + " - User:  " +username.Text);
+                                SysLog.SetMessage("Login Success: " + ip + " - User:  " + username.Text);
                             }
                             else
                             {
@@ -1914,10 +1913,10 @@ namespace WebApplication1
                                 SysLog.SetMessage("Login Denied: " + ip + " - User:  " + username.Text);
                             }
 
-                            session[Navigator.ViewStateElement_LoginAuth] = valid;                            
-                            
+                            session[Navigator.ViewStateElement_LoginAuth] = valid;
+
                             Navigator.Refresh();
-                        }                        
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -1949,6 +1948,47 @@ namespace WebApplication1
                 }
 
             }
+
+            public class PleaseWaitBanner : GroupBox
+            {
+                SuperLabel plsWait = new SuperLabel("Prosim počakajte...", 20, 20, 50, 15);
+
+                public PleaseWaitBanner():base(top(), left(), width(), height())
+                {
+                    Style.Add(HtmlTextWriterStyle.Visibility, "hidden");
+                    this.Style.Add(HtmlTextWriterStyle.ZIndex, "99");
+
+                    plsWait.FontWeightBold = true;
+                    Controls.Add(plsWait);
+                }
+
+                public void ShowBanner()
+                {
+                    Style.Remove(HtmlTextWriterStyle.Visibility);
+                    Style.Add(HtmlTextWriterStyle.Visibility, "visible");
+                }
+
+                static int top()
+                {
+                    return 30;
+                }
+
+                static int left()
+                {
+                    return 30;
+                }
+
+                static int width()
+                {
+                    return 40;
+                }
+
+                static int height()
+                {
+                    return 30;
+                }
+            }
         }
+
     }
 }

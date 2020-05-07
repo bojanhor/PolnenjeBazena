@@ -14,11 +14,13 @@ namespace WebApplication1
 
         public static readonly byte autoRefreshPageEvery_s = 0;       // refreshes page automatically every __ seconds ( use 0 to disable )
 
-        public static readonly int UpdateValuesPCms = 1500;          // Frekvenca osveževanja vrednosti
+        public static readonly int UpdateValuesPCms = 1200;          // Frekvenca osveževanja vrednosti
 
         public static readonly int Devices = 5;                      // how many devices supported (do not change)        
 
         public static readonly int XmlRefreshrate = 5000;                                // scans for changes in xml file (should be very high number - 60000)
+
+        public static readonly bool EnableHighPerformanceSync = true;           // Enables tcp comunication without delay (disable if CPU usage is to high)
 
         public static int ChartUpdateRefreshRate = 60000;                           // updates chart every X[ms] specified (1000 - 60000)
 

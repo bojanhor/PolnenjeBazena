@@ -83,8 +83,8 @@ namespace WebApplication1
 
             UgasniVseLuci = new PlcVars.Bit(this, new PlcVars.BitAddress(700,0), true);
 
-            Vzhod_Read = new PlcVars.TimeSet(this, new PlcVars.WordAddress(712), false) { SyncEvery_X_Time = 5 };
-            Zahod_Read = new PlcVars.TimeSet(this, new PlcVars.WordAddress(714), false) { SyncEvery_X_Time = 5 };
+            Vzhod_Read = new PlcVars.TimeSet(this, new PlcVars.WordAddress(750), false) { SyncEvery_X_Time = 5 };
+            Zahod_Read = new PlcVars.TimeSet(this, new PlcVars.WordAddress(754), false) { SyncEvery_X_Time = 5 };
             VzhodOffset_Write = new PlcVars.TimeSet(this, new PlcVars.WordAddress(716), false) { SyncEvery_X_Time = 5 };
             ZahodOffset_Write = new PlcVars.TimeSet(this, new PlcVars.WordAddress(718), false) { SyncEvery_X_Time = 5 };
             DanNoc_Vrednost_An = new PlcVars.Word(this, new PlcVars.WordAddress(736), "", "%", false) { SyncEvery_X_Time = 5 };

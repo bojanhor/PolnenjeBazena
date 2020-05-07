@@ -17,6 +17,8 @@ namespace WebApplication1
         public static string ViewStateElement_LoggedIn = "##_LoggedIn_##";
         public static string ViewStateElement_LoginAuth = "##_LogInAuth_##";
 
+        static GuiController.GControls.PleaseWaitBanner PleaseWaitBanner;
+
         static bool messagePending;
         public static List<LoginTryData> LoginTryDataList = new List<LoginTryData>();
         
@@ -109,12 +111,15 @@ namespace WebApplication1
         }
                 
         public static void EveryPageProtocol(string FriendlyPageNamePage, Page _thisPage, HttpSessionState session, HtmlGenericControl TemplateClass, bool hasMenuBtn, bool hasLogo, bool hasBackBtn, bool hasHomeBtn, bool hasClock)
-        {
-                       
+        {                       
             // Save response  
             session[ViewStateElement_Response] = _thisPage.Response;
 
+            // Login management
             LoginChk(_thisPage, session);
+
+            // ForceRefresh Management
+            GlobalManagement.ForceRefreshManage();
 
             // Reconstruct whole page if button is clicked or timer is refreshing page
             if (_thisPage.IsPostBack)
@@ -190,7 +195,21 @@ namespace WebApplication1
             pageHistory.StorePage(PageName);
             session[ViewStateElement_PageHistory] = pageHistory;
 
+            // Please Wait banner
+            PleaseWait(TemplateClass);
+
             FirstRequestOver();
+        }
+
+        static void PleaseWait(HtmlGenericControl TemplateClass)
+        {
+            PleaseWaitBanner = new GuiController.GControls.PleaseWaitBanner();
+            TemplateClass.Controls.Add(PleaseWaitBanner);
+        }
+
+        public static void ShowPleaseWait()
+        {
+            PleaseWaitBanner.ShowBanner();
         }
 
         static void FirstRequestOver()
@@ -257,7 +276,7 @@ namespace WebApplication1
         static void Clock(HtmlGenericControl TemplateClass)
         {
             GuiController.GControls.UpdatePanelFull clkUpdt = new GuiController.GControls.UpdatePanelFull("clkUpdt", 5000);
-            HtmlGenericControl div = GuiController.DIV.CreateDivAbsolute(0.7F, 90, 10, 7, "vw");
+            HtmlGenericControl div = GuiController.DIV.CreateDivAbsolute(0.7F, 90, 10, 3, "vw");
             div.ID = "clk";
             GuiController.GControls.SuperLabel clk = new GuiController.GControls.SuperLabel(
                Helper.getClockValue(), 0, 0, 100, 100); clk.FontWeightBold = true;

@@ -44,7 +44,7 @@ namespace WebApplication1
             HtmlGenericControl divMasterButtons;
                                    
             public PageDefault(Page _thisPage, System.Web.SessionState.HttpSessionState session)
-            {               
+            {
                 this.session = session;                
 
                 try
@@ -72,12 +72,7 @@ namespace WebApplication1
                 }
 
 
-            }
-
-            public void ForceRefreshPanel()
-            {
-                Tmr_LuciUpdatePanel.Interval = 300;
-            }
+            }            
 
             void ManageUpdatePanelLuci()
             {
@@ -192,7 +187,7 @@ namespace WebApplication1
                     var prop1 = Val.logocontroler.Prop1;
                     var prop2 = Val.logocontroler.Prop2; // Change temperature source here
 
-                    WeatherLabelFormater("Dan/Noč", inTemp.Width.Value, topOffset, 0);
+                    WeatherLabelFormater(GetDanNoc(), inTemp.Width.Value, topOffset, 0);
                     WeatherLabelFormater(prop1.Vzhod_Read.Value, inTemp.Width.Value, topOffset, spacingLeft);
                     WeatherLabelFormater(prop1.Zahod_Read.Value, inTemp.Width.Value, topOffset, spacingLeft * 2);
                     WeatherLabelFormater(prop2.TempZnotraj.Value_string_formatted, inTemp.Width.Value, topOffset, spacingLeft * 3);
@@ -227,6 +222,29 @@ namespace WebApplication1
                     throw new Exception("Error iside AddWeather() method. Error info: "+ex.Message);
                 }
                 
+
+            }
+
+            string GetDanNoc()
+            {
+                string message = "";
+                var prop = Val.logocontroler.Prop1;
+
+                if (prop.DanNoc_Vrednost_Dig.Value == true)
+                {
+                    message = "Dan";
+                }
+                else if (Val.logocontroler.Prop1.DanNoc_Vrednost_Dig.Value == false)
+                {
+                    message  = "Noč";
+                }
+                else
+                {
+                    return  PropComm.NA;                    
+                }
+
+                return message + " " +  prop.DanNoc_Vrednost_An.Value_string;
+
 
             }
 

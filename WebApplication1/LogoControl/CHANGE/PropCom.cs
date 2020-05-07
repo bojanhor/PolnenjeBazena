@@ -6,100 +6,114 @@ using System.Drawing;
 
 namespace WebApplication1
 {
-    
+
     public class PropComm
     {
         public const string NA = "_N/A_";
 
-        public Sharp7.S7Client Client;        
+        public Sharp7.S7Client Client;
         public AutoSync AutoSync = new AutoSync();
         bool firstSync = true;
         int poolCnt = 1;
-        
+
         public PropComm(Sharp7.S7Client client)
         {
-            Client = client;    
+            Client = client;
         }
 
         public void SyncVars()
         {
             FirstSync();
 
-            foreach (var item in AutoSync.VarsListPool[1])
-            {
-                if (item!= null)
-                {
-                    item.SyncWithPLC();
-                }
-                
-            }
-            AutoSync.VarsListPool[1].ForEach(plcVar => plcVar.SyncWithPLC());
+            SyncEveryLoopVars(AutoSync.VarsListPool[1]);
 
-            //
-            if (IsItsTurn(2))
-            {
-                foreach (var item in AutoSync.VarsListPool[2])
-                {
-                    if (item != null)
-                    {
-                        item.SyncWithPLC();
-                    }
-                }                
-            }
-
-            //
-            if (IsItsTurn(3))
-            {
-                foreach (var item in AutoSync.VarsListPool[3])
-                {
-                    if (item != null)
-                    {
-                        item.SyncWithPLC();
-                    }
-                }
-            }
-
-            //
-            if (IsItsTurn(4))
-            {
-                foreach (var item in AutoSync.VarsListPool[4])
-                {
-                    if (item != null)
-                    {
-                        item.SyncWithPLC();
-                    }
-                }
-            }
-
-            //
-            if (IsItsTurn(5))
-            {
-                foreach (var item in AutoSync.VarsListPool[5])
-                {
-                    if (item != null)
-                    {
-                        item.SyncWithPLC();
-                    }
-                }
-            }
+            // devides autossync variables which were scheduled to be synced every second loop to two groups. group 1 is synced 1st loop, group 2 is synced 2nd loop
+            SmartSyncDistributor(AutoSync.VarsListPool[2], 2, poolCnt);
+            SmartSyncDistributor(AutoSync.VarsListPool[3], 3, poolCnt);
+            SmartSyncDistributor(AutoSync.VarsListPool[4], 4, poolCnt);
+            SmartSyncDistributor(AutoSync.VarsListPool[5], 5, poolCnt);
 
             PoolCnt();
+        }
+
+        void SyncEveryLoopVars(List<PlcVars.PlcType> collection)
+        {
+            PlcVars.PlcType item;
+            for (int i = 0; i < collection.Count; i++)
+            {
+                item = collection[i];
+                item.SyncWithPLC();
+            }
+            
+        }
+        void SmartSyncDistributor(List<PlcVars.PlcType> collection, int syncEveryXvariable, int CurrentPoolNum)
+        {
+            PlcVars.PlcType item;
+
+            if (syncEveryXvariable<2 || syncEveryXvariable >5)
+            {
+                throw new Exception("Internal fatal error. SyncEveryXvariable out of range.");               
+            }
+
+            for (int i = 0; i < collection.Count; i++)
+            {
+                item = collection[i];
+                if (CurrentPoolNum % syncEveryXvariable == 0)
+                {
+                    if (i % syncEveryXvariable == 0)
+                    {
+                        item.SyncWithPLC(); // syncs if i == 0,3,6,9,12,15...
+                    }
+                }
+
+                if (CurrentPoolNum % syncEveryXvariable == 1)
+                {
+                    if (i % syncEveryXvariable == 1)
+                    {
+                        item.SyncWithPLC(); // syncs if i == 1,4,7,10,13,16...
+                    }
+                }
+
+                if (CurrentPoolNum % syncEveryXvariable == 2)
+                {
+                    if (i % syncEveryXvariable == 2)
+                    {
+                        item.SyncWithPLC(); // syncs if i == 2,5,8,11,14,17...
+                    }
+                }
+
+                if (CurrentPoolNum % syncEveryXvariable == 3)
+                {
+                    if (i % syncEveryXvariable == 3)
+                    {
+                        item.SyncWithPLC(); // syncs if i == 2,5,8,11,14,17...
+                    }
+                }
+
+                if (CurrentPoolNum % syncEveryXvariable == 4)
+                {
+                    if (i % syncEveryXvariable == 4)
+                    {
+                        item.SyncWithPLC(); // syncs if i == 2,5,8,11,14,17...
+                    }
+                }  
+            }
         }
 
         void FirstSync()
         {
             if (!firstSync)
             {
-                return;         
+                return;
             }
 
             // code only on first sync
             foreach (var item in AutoSync.VarsList)
-            {                
+            {
                 AutoSync.VarsListPool[item.SyncEvery_X_Time].Add(item); // adds variables to different pools of syncing. if variable must be synced every 2nd loop then for is added to list 2; 
             }
 
-                firstSync = false;
+            firstSync = false;
         }
 
         void PoolCnt()
@@ -121,7 +135,7 @@ namespace WebApplication1
                 if (poolCnt % 2 == 0)
                 {
                     return true;
-                }                
+                }
             }
 
             if (turn == 3)// every 3 loops
@@ -156,7 +170,7 @@ namespace WebApplication1
     {
         public List<PlcVars.PlcType> VarsList { get; private set; }
         public List<PlcVars.PlcType>[] VarsListPool = new List<PlcVars.PlcType>[6]; // different pools for syncing every other loop
-        
+
 
         public AutoSync()
         {
@@ -166,14 +180,14 @@ namespace WebApplication1
             {
                 VarsListPool[i] = new List<PlcVars.PlcType>();
             }
-            
+
         }
         public void Add(PlcVars.PlcType var)
         {
             VarsList.Add(var);
         }
     }
-        
+
 }
 
 

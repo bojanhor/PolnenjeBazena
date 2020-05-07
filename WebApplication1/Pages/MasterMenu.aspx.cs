@@ -13,10 +13,9 @@ namespace WebApplication1
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            Val.guiController.PageMastermenu_ = new GuiController.PageMasterMenu(this);
-
             Navigator.EveryPageProtocol("Meni", this, Session, TemplateClassID);
+            Val.guiController.PageMastermenu_ = new GuiController.PageMasterMenu(this);
+           
             Initialise();
 
         }

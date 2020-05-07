@@ -12,9 +12,9 @@ namespace WebApplication1.Pages
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            Val.guiController.PageMesalaPehala_ = new GuiController.PageMesalaPehala();
-
             Navigator.EveryPageProtocol("Mesala / Pehala", this, Session, TemplateClassID);
+            Val.guiController.PageMesalaPehala_ = new GuiController.PageMesalaPehala();
+            
             Initialise();
            
         }

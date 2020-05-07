@@ -32,6 +32,7 @@ namespace WebApplication1
             public GControls.NotShadowedOnOffButton[] connectSwitch = new GControls.NotShadowedOnOffButton[Settings.Devices];
 
             public Label LabelDebug = new Label();
+            public HtmlGenericControl LabelDebugDiv;
             public Label SpremljajLable = new Label();
             public TextBox TextBoxDebug = new TextBox();
 
@@ -41,7 +42,7 @@ namespace WebApplication1
                 thisPage = _thisPage;
                 Session = session;
 
-                Spremljaj = new GControls.NotShadowedOnOffButton("Spremljaj", 1, GetSpremljajChecked(), new Helper.Position(0, 0, 20));
+                Spremljaj = new GControls.NotShadowedOnOffButton("Spremljaj", 1, GetSpremljajChecked(), new Helper.Position(0, 0, 15));
 
                 AppDomainInitializerTables();
                 AddLabelDebug();                
@@ -92,28 +93,29 @@ namespace WebApplication1
 
             void PositionEdit()
             {                
-                SetControlAbsolutePos(BtnEditor,15, 68);
+                SetControlAbsolutePos(BtnEditor,15, 86);
                 BtnEditor.button.Click += Button_Click1;
                 
             }
 
             void PositionLogView()
             {
-                SetControlAbsolutePos(BtnLogView, 25, 68);
+                SetControlAbsolutePos(BtnLogView, 25, 86);
                 BtnLogView.button.Click += Button_Click2; ;
 
             }
 
             void PositionRestartServerBttn()
             {
-                SetControlAbsolutePos(BtnRestartServer, 35, 68);
+                SetControlAbsolutePos(BtnRestartServer, 35, 86);
                 BtnRestartServer.button.Click += Button_Click;
 
             }
 
             private void Button_Click(object sender, ImageClickEventArgs e)
             {
-                Navigator.Redirect("Default");
+                Navigator.Redirect("Default" +
+                    "");
                 HttpRuntime.UnloadAppDomain();
             }
 
@@ -151,27 +153,24 @@ namespace WebApplication1
                 divDebug_2 = DIV.CreateDivRelative();
 
 
-                divDebug.Style.Add(HtmlTextWriterStyle.Top, "15%");
+                divDebug.Style.Add(HtmlTextWriterStyle.Top, "10%");
                 divDebug.Style.Add(HtmlTextWriterStyle.Left, "40%");
-                divDebug.Style.Add(HtmlTextWriterStyle.Width, "25%");
-                divDebug.Style.Add(HtmlTextWriterStyle.Height, "70%");
-
+                divDebug.Style.Add(HtmlTextWriterStyle.Width, "45%");
+                divDebug.Style.Add(HtmlTextWriterStyle.Height, "78%");
 
                 LabelDebug.ID = "LabelDebug";
                 LabelDebug.Text = "Dnevnik:";
 
-
-                divDebug_1.Style.Add("width", "100%");
-                divDebug_1.Style.Add("height", "4%");
-
+                LabelDebugDiv = DIV.CreateDivAbsolute(0, 0, 100, 100, "%");
+                LabelDebugDiv.Style.Add(HtmlTextWriterStyle.BackgroundColor, Settings.RedColorHtmlHumar);
+                             
                 divDebug_1.Style.Add(HtmlTextWriterStyle.Width, "100%");
-                divDebug_1.Style.Add(HtmlTextWriterStyle.Height, "6%");
+                divDebug_1.Style.Add(HtmlTextWriterStyle.Height, "8%");
 
                 LabelDebug.Style.Add(HtmlTextWriterStyle.Position, "absolute");
-                LabelDebug.Style.Add(HtmlTextWriterStyle.Width, "97%");
-                LabelDebug.Style.Add(HtmlTextWriterStyle.Height, "100%");
-                LabelDebug.Style.Add(HtmlTextWriterStyle.PaddingTop, "2%");
-                LabelDebug.Style.Add(HtmlTextWriterStyle.BackgroundColor, Settings.RedColorHtmlHumar);
+                LabelDebug.Style.Add(HtmlTextWriterStyle.Width, "50%");
+                LabelDebug.Style.Add(HtmlTextWriterStyle.Height, "50%");
+                LabelDebug.Style.Add(HtmlTextWriterStyle.PaddingTop, "2%");     
                 LabelDebug.Style.Add(HtmlTextWriterStyle.FontWeight, "bold");
                 LabelDebug.Style.Add(HtmlTextWriterStyle.PaddingLeft, "3%");
                 LabelDebug.Style.Add(HtmlTextWriterStyle.Color, "white");
@@ -186,7 +185,7 @@ namespace WebApplication1
                 TextBoxDebug.Style.Add(HtmlTextWriterStyle.Position, "absolute");
                 TextBoxDebug.Style.Add(HtmlTextWriterStyle.Width, "100%");
                 TextBoxDebug.Style.Add(HtmlTextWriterStyle.Height, "100%");
-                TextBoxDebug.Style.Add(HtmlTextWriterStyle.Top, "1.6%");
+                TextBoxDebug.Style.Add(HtmlTextWriterStyle.Top, "0%");
                 TextBoxDebug.Style.Add(HtmlTextWriterStyle.BorderStyle, "solid");
                 TextBoxDebug.Style.Add(HtmlTextWriterStyle.FontSize, "0.8vw");
                 TextBoxDebug.Style.Add(HtmlTextWriterStyle.Padding, "0% 0%");
@@ -199,15 +198,14 @@ namespace WebApplication1
                 
                 Spremljaj.Style.Add(HtmlTextWriterStyle.Position, "absolute");
                 Spremljaj.Style.Add(HtmlTextWriterStyle.Height, "100%");
-                Spremljaj.Style.Add(HtmlTextWriterStyle.Top, "18%");
+                Spremljaj.Style.Add(HtmlTextWriterStyle.Top, "10%");
                 Spremljaj.Style.Add(HtmlTextWriterStyle.Left, "75%");
                 
-                SpremljajLable.Style.Add(HtmlTextWriterStyle.Position, "absolute");
+                SpremljajLable.Style.Add(HtmlTextWriterStyle.Position, "absolute");                
                 SpremljajLable.Style.Add(HtmlTextWriterStyle.Height, "50%");
-                SpremljajLable.Style.Add(HtmlTextWriterStyle.Height, "50%");
-                SpremljajLable.Style.Add(HtmlTextWriterStyle.Top, "20%");
-                SpremljajLable.Style.Add(HtmlTextWriterStyle.Left, "60%");
-                SpremljajLable.Style.Add(HtmlTextWriterStyle.FontSize, "0.7vw");
+                SpremljajLable.Style.Add(HtmlTextWriterStyle.Top, "30%");
+                SpremljajLable.Style.Add(HtmlTextWriterStyle.Left, "62%");
+                SpremljajLable.Style.Add(HtmlTextWriterStyle.FontSize, "0.9vw");
                 SpremljajLable.Style.Add(HtmlTextWriterStyle.Padding, "0% 0%");
                 SpremljajLable.Style.Add(HtmlTextWriterStyle.Color, "white");
                 SpremljajLable.Style.Add(HtmlTextWriterStyle.FontWeight, "bold");
@@ -218,10 +216,10 @@ namespace WebApplication1
                 Spremljaj.button.Click += Spremljaj_Button_Click;                
                 
                 divDebug_2.Style.Add("width", "100%");
-                divDebug_2.Style.Add("height", "95%");
+                divDebug_2.Style.Add("height", "100%");
 
-
-                divDebug_1.Controls.Add(LabelDebug);
+                LabelDebugDiv.Controls.Add(LabelDebug);
+                divDebug_1.Controls.Add(LabelDebugDiv);
                 divDebug_1.Controls.Add(Spremljaj);
                 divDebug_1.Controls.Add(SpremljajLable);
                 divDebug_2.Controls.Add(TextBoxDebug);

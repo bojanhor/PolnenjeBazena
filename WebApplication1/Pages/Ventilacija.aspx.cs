@@ -12,9 +12,9 @@ namespace WebApplication1.Pages
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            Val.guiController.PageVentilacija_ = new GuiController.PageVentilacija();
-
             Navigator.EveryPageProtocol("Ventilacija", this, Session, TemplateClassID);
+            Val.guiController.PageVentilacija_ = new GuiController.PageVentilacija();
+            
             Initialise();
            
         }

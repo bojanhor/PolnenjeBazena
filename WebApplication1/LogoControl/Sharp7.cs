@@ -452,8 +452,12 @@ namespace Sharp7
                         TCPSocket.Receive(Flush, 0, SizeAvail, SocketFlags.None);
                     }
                     catch { }
-                   
-                    Thread.Sleep(1);  // COMMENT THIS LINE IF YOU WANT TO DO HIGH PERFORMANCE!  --- use winapi to lower time resolution for sleep 
+
+                    if (!WebApplication1.Settings.EnableHighPerformanceSync)
+                    {
+                        Thread.Sleep(1);  // COMMENT THIS LINE IF YOU WANT TO DO HIGH PERFORMANCE!  --- use winapi to lower time resolution for sleep 
+                    }
+                    
                 }
             }
             catch

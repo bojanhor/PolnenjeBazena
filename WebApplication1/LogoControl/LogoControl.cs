@@ -538,8 +538,12 @@ namespace WebApplication1
 
         public void ForceRefreshValuesFromPLC(int device)
         {
-            forceRefresh[device] = 2; // force refresh values with minimum delay - int value represents how many cycles value will be forced to refresh
+            if (device > 0 && device < forceRefresh.Length)
+            {
+                forceRefresh[device] = 5; // force refresh values with minimum delay - int value represents how many cycles value will be forced to refresh
+            }
         }
+            
 
         /// <summary>        
         /// Reports errors to console and/or gui.         
