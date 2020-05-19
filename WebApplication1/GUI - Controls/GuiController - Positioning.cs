@@ -100,6 +100,29 @@ namespace WebApplication1
             return c;
         }
 
+        // viewport width
+        public static WebControl SetControlAbsolutePos_vw(WebControl c, float top, float left, float width, float height)
+        {
+            SetControlAbsolutePos_vw(c, top, left, width);
+            c.Style.Add("height", Helper.FloatToStringWeb(height, "vw"));
+            return c;
+        }
+
+        public static WebControl SetControlAbsolutePos_vw(WebControl c, float top, float left, float width)
+        {
+            SetControlAbsolutePos_vw(c, top, left);
+            c.Style.Add("width", Helper.FloatToStringWeb(width, "vw"));
+            return c;
+        }
+
+        public static WebControl SetControlAbsolutePos_vw(WebControl c, float top, float left)
+        {
+            c.Style.Add("position", "absolute");
+            c.Style.Add("top", Helper.FloatToStringWeb(top, "vw"));
+            c.Style.Add("left", Helper.FloatToStringWeb(left, "vw"));
+            return c;
+        }
+
 
         // SetFontProperties
         public static void SetFontProperties_vw(WebControl c, float size)

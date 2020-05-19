@@ -30,7 +30,8 @@ namespace WebApplication1
 
         public GuiController()  
         {
-            ConstructClass();            
+            ConstructClass();
+            Helper.GuiControllerInitialized = true;
         }
 
         void ConstructClass()

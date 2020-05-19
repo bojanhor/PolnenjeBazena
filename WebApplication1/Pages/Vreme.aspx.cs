@@ -11,9 +11,9 @@ namespace WebApplication1.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Val.guiController.PageVreme_ = new GuiController.PageVreme();
-
             Navigator.EveryPageProtocol("Vreme", this, Session, TemplateClassID, true, false);
+            Val.guiController.PageVreme_ = new GuiController.PageVreme();
+            
             Set();
             Initialise();
             

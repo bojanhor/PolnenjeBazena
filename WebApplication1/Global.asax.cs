@@ -29,8 +29,27 @@ namespace WebApplication1
         void Application_Error(object sender, EventArgs e)
         {
             Exception exc = Server.GetLastError();
+            var type = sender.GetType().BaseType;
+            string pageVisited = "";
 
-            SysLog.SetMessage(exc.Message + " " + exc.InnerException.Message + " " + exc.StackTrace);
+            if (type == typeof(Global))
+            {
+                var glbl = (Global)sender;
+                if (glbl.Request != null)
+                {
+                    pageVisited = "Page visited: " + glbl.Request.Path + "... ";
+                }
+                
+            }
+
+            string excInnMess = "";
+
+            if (exc.InnerException != null)
+            {
+                excInnMess = exc.InnerException.Message +"... ";
+            }
+
+            SysLog.SetMessage(pageVisited + exc.Message + " " + excInnMess + "Stack trace: "+ exc.StackTrace);
 
             Navigator.RedirectBack();
 

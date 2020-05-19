@@ -13,9 +13,7 @@ namespace WebApplication1
     public partial class GuiController
     {
         public class PageVrataZavese : Dsps
-        {
-
-            public static string ViewStateElement_MenuShown = "MenuShown";
+        {            
             Page thisPage;
             public static System.Web.SessionState.HttpSessionState Session;
 
@@ -438,9 +436,9 @@ namespace WebApplication1
             {
                 try
                 {
-                    if (Session[ViewStateElement_MenuShown] != null)
+                    if (Session[SessionHelper.MenuShown] != null)
                     {
-                        return (int)Session[ViewStateElement_MenuShown];
+                        return (int)Session[SessionHelper.MenuShown];
                     }
                     return 0;
                 }
@@ -471,17 +469,17 @@ namespace WebApplication1
 
             static void SetMenuShown_Left()
             {
-                Session[ViewStateElement_MenuShown] = 1;
+                Session[SessionHelper.MenuShown] = 1;
             }
 
             static void SetMenuShown_Right()
             {
-                Session[ViewStateElement_MenuShown] = 2;
+                Session[SessionHelper.MenuShown] = 2;
             }
 
             static void SetMenuShown_None()
             {
-                Session[ViewStateElement_MenuShown] = 0;
+                Session[SessionHelper.MenuShown] = 0;
             }
             #endregion 
         }

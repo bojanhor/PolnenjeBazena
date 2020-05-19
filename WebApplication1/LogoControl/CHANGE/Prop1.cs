@@ -8,7 +8,8 @@ using System.Threading;
 namespace WebApplication1
 {
     public class Prop1 : PropComm
-    {
+    {       
+
         // Razsvetljava
                 
         static int LucIconsTableLength = XmlController.GetHowManyLucIcons() + 1;
@@ -40,7 +41,8 @@ namespace WebApplication1
         public PlcVars.Word DayLightPercentOff;
 
         public Prop1(Sharp7.S7Client client):base(client)
-        {                        
+        {          
+           
             LogoClock = new PlcVars.LogoClock(this);
 
             const ushort inc = 10;
@@ -92,7 +94,11 @@ namespace WebApplication1
             DayLightPercentOn = new PlcVars.Word(this, new PlcVars.WordAddress(724), "", "%", true) { SyncEvery_X_Time = 3 };
             DayLightPercentOff = new PlcVars.Word(this, new PlcVars.WordAddress(728), "", "%", true) { SyncEvery_X_Time = 3 };
 
+            // Alarms
+
+            LucStatus_ReadToPC[1].AddWarningMonitor(true, WarningManager.WarningTriggerCondition.EqualTo, "Luč je Prižgana");
         }
+
 
 
         //

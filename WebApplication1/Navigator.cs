@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.SessionState;
 using System.Web.UI;
@@ -11,17 +12,15 @@ namespace WebApplication1
 {
     public class Navigator
     {
-        public static string ViewStateElement_ScriptLoader = "ScriptLoader";
-        public static string ViewStateElement_Response = "Response";
-        public static string ViewStateElement_PageHistory = "PageHistory";
-        public static string ViewStateElement_LoggedIn = "##_LoggedIn_##";
-        public static string ViewStateElement_LoginAuth = "##_LogInAuth_##";
+        static bool Initialized = false;
 
         static GuiController.GControls.PleaseWaitBanner PleaseWaitBanner;
 
+        static WarningManagerWebControl WarningManagerWebControl_;
+
         static bool messagePending;
         public static List<LoginTryData> LoginTryDataList = new List<LoginTryData>();
-        
+
         static bool firstRequestover = false; // flag indicates if site is runned one cycle
 
         public static void Redirect(string site)
@@ -36,7 +35,7 @@ namespace WebApplication1
                 var pageHistory = GetPageHistoryFromSession();
                 if (pageHistory != null)
                 {
-                    var page = pageHistory.getPreviousPage();
+                    var page = pageHistory.getPreviousPageName();
                     GetCurrentPage().Server.Transfer(page + "aspx");
                 }
 
@@ -44,20 +43,38 @@ namespace WebApplication1
 
         }
 
-        private static void Refresh(HttpSessionState session, Page thisPage)
+        private static bool IsInitialized()
         {
-            if (session != null)
+            if (Initialized)
             {
-                var pageHistory = GetPageHistoryFromSession();
-                var lastPage = pageHistory.getLastPage();
-
-                Redirect(lastPage);
+                return true;
             }
+
+            if (Helper.ChartValuesLoggerInitialized &&
+                Helper.WarningManagerInitialized &&
+                Helper.LogoControllerInitialized &&
+                Helper.GuiControllerInitialized)
+            {
+                Initialized = true;
+                return true;
+            }
+            return false;
         }
 
         public static void Refresh()
         {
-            Refresh(GetSession(), GetCurrentPage());
+            var page = GetCurrentPage();
+            if (page != null)
+            {
+                try
+                {
+                    page.Response.Redirect(page.Request.RawUrl, false);
+                }
+                catch (Exception)
+                {
+                    Redirect("Default");
+                }
+            }
         }
 
         public static void RedirectBack()
@@ -69,8 +86,7 @@ namespace WebApplication1
                 if (session != null)
                 {
                     var pageHistory = GetPageHistoryFromSession();
-                    var lastPage = pageHistory.getLastPage();
-                    Redirect(pageHistory.getPreviousPage());
+                    Redirect(pageHistory.getPreviousPageName());
                 }
 
             }
@@ -87,7 +103,7 @@ namespace WebApplication1
 
             if (session != null)
             {
-                var pageHistoryObj = session[ViewStateElement_PageHistory];
+                var pageHistoryObj = session[SessionHelper.PageHistory];
                 var pageHistory = (PageHistory)pageHistoryObj;
                 return pageHistory;
             }
@@ -97,7 +113,95 @@ namespace WebApplication1
 
         public static Page GetCurrentPage()
         {
-            return (Page)HttpContext.Current.Handler;
+
+            IHttpHandler buff;
+            Page pg;
+            string exceptionMessage = "Method GetCurrentPage() is reporting error. ";
+
+            try
+            {
+                buff = getCurrentHttpContextHandler();
+
+                if (buff != null)
+                {
+                    pg = (Page)buff;
+
+                    if (pg.Response != null)
+                    {
+                        return pg;
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("1- " + exceptionMessage + ex.Message);
+            }
+            
+            //
+            try
+            {
+                pg = GetCurrentPageAlternative();
+
+                if (pg != null)
+                {
+                    if (pg.Response != null)
+                    {
+                        return pg;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("2- " + exceptionMessage + ex.Message);
+            }
+
+            throw new Exception(exceptionMessage + "Can not get Page object from anywhere.");
+
+        }
+
+        static IHttpHandler getCurrentHttpContextHandler()
+        {
+            try
+            {
+                var cur = HttpContext.Current;
+                if (cur != null)
+                {
+                    if (true)
+                    {
+                        var h = cur.Handler;
+
+                        if (h != null)
+                        {
+                            return h;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Method getCurrentHttpContextHandler() is reporting an error: " +ex.Message);
+            }
+            
+
+            return null;
+        }
+
+        static Page GetCurrentPageAlternative()
+        {
+            try
+            {
+                var ph = GetPageHistoryFromSession();
+                if (ph != null)
+                {
+                    return ph.getThisPage();
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public static void EveryPageProtocol(string FriendlyPageNamePage, Page _thisPage, HttpSessionState session, HtmlGenericControl TemplateClassID)
@@ -107,16 +211,19 @@ namespace WebApplication1
 
         public static void EveryPageProtocol(string FriendlyPageNamePage, Page _thisPage, HttpSessionState session, HtmlGenericControl TemplateClassID, bool hasMenuBtn, bool hasLogo)
         {
-            EveryPageProtocol(FriendlyPageNamePage, _thisPage, session, TemplateClassID, hasMenuBtn, hasLogo, true, true, true);
+            EveryPageProtocol(FriendlyPageNamePage, _thisPage, session, TemplateClassID, hasMenuBtn, hasLogo, true, true, true, true);
         }
-                
-        public static void EveryPageProtocol(string FriendlyPageNamePage, Page _thisPage, HttpSessionState session, HtmlGenericControl TemplateClass, bool hasMenuBtn, bool hasLogo, bool hasBackBtn, bool hasHomeBtn, bool hasClock)
-        {                       
-            // Save response  
-            session[ViewStateElement_Response] = _thisPage.Response;
 
-            // Login management
-            LoginChk(_thisPage, session);
+        public static void EveryPageProtocol(string FriendlyPageNamePage, Page _thisPage, HttpSessionState session, HtmlGenericControl TemplateClass, bool hasMenuBtn, bool hasLogo, bool hasBackBtn, bool hasHomeBtn, bool hasClock, bool hasWarningIcon)
+        {
+            // AddTitle
+            addTabTitle(_thisPage, FriendlyPageNamePage);
+
+            // Prevent Searchengines from indexing 
+            addMetaNoIndex(_thisPage);
+
+            // Save response  
+            session[SessionHelper.Response] = _thisPage.Response;
 
             // ForceRefresh Management
             GlobalManagement.ForceRefreshManage();
@@ -126,6 +233,10 @@ namespace WebApplication1
             {
                 Val.guiController.Reconstruct();
             }
+
+            // Login management
+            LoginChk(_thisPage, session);
+
 
             // Background
             GuiController.CreateEnclosingDivForReference(TemplateClass);
@@ -162,43 +273,66 @@ namespace WebApplication1
             style.Font.Name = Settings.DefaultFont;
             _thisPage.Header.StyleSheet.CreateStyleRule(style, null, "body");
 
-
             // Register scripts added   
-            ScriptLoader scriptLoader;
-            if (session[ViewStateElement_ScriptLoader] == null)
+            ManageScripts(_thisPage, session, TemplateClass);
+
+            // WaitServerInit
+            if (!IsInitialized())
             {
-                scriptLoader = new ScriptLoader();
+                return;
             }
-            else
-            {
-                scriptLoader = (ScriptLoader)session[ViewStateElement_ScriptLoader];
-            }
-
-            scriptLoader.RegisterAllScriptsNow(_thisPage, TemplateClass);
-
-            session[ViewStateElement_ScriptLoader] = scriptLoader;
-
 
             // Page history for back button
-            var PageName = new System.IO.FileInfo(_thisPage.Request.Url.AbsolutePath).Name;
+            PageHistoryManage(_thisPage, session);                        
 
+            // Please Wait banner
+            PleaseWait(TemplateClass);
+
+            ShowWarning(TemplateClass, hasWarningIcon);
+
+            FirstRequestOver();
+        }
+
+        static void PageHistoryManage(Page _thisPage, HttpSessionState session)
+        {
+            // Page history for back button
 
             PageHistory pageHistory;
-            if (session[ViewStateElement_PageHistory] == null)
+            if (session[SessionHelper.PageHistory] == null)
             {
                 pageHistory = new PageHistory();
             }
             else
             {
-                pageHistory = (PageHistory)session[ViewStateElement_PageHistory];
+                pageHistory = (PageHistory)session[SessionHelper.PageHistory];
             }
-            pageHistory.StorePage(PageName);
-            session[ViewStateElement_PageHistory] = pageHistory;
 
-            // Please Wait banner
-            PleaseWait(TemplateClass);
+            pageHistory.StorePage(_thisPage);
+            session[SessionHelper.PageHistory] = pageHistory;
+        }
 
-            FirstRequestOver();
+        static void ManageScripts(Page _thisPage, HttpSessionState session, HtmlGenericControl TemplateClass)
+        {
+            _thisPage.LoadComplete += (sender, e) => _thisPage_LoadComplete(sender, e, _thisPage, session, TemplateClass);
+        }
+
+        private static void _thisPage_LoadComplete(object sender, EventArgs e, Page thispage, HttpSessionState session, HtmlGenericControl TemplateClass)
+        {
+            // Register scripts added   
+            ScriptLoader scriptLoader;
+            scriptLoader = ScriptLoader.GetInstance(session);
+            session[SessionHelper.ScriptLoader] = scriptLoader;
+            scriptLoader.RegisterAllScriptsNow(thispage, TemplateClass);
+        }
+
+        static void ShowWarning(HtmlGenericControl TemplateClass, bool hasWarningIcon)
+        {
+            if (hasWarningIcon)
+            {
+                WarningManagerWebControl_ = new WarningManagerWebControl(TemplateClass, 1, 70, 5);
+                TemplateClass.Controls.Add(WarningManagerWebControl_);
+            }
+
         }
 
         static void PleaseWait(HtmlGenericControl TemplateClass)
@@ -225,13 +359,13 @@ namespace WebApplication1
                 }
             }
         }
-                
+
         static void LoginChk(Page _thisPage, HttpSessionState session)
         {
             var ip = Helper.GetClientIP();
 
             // Login determine
-            var loginBuff = session[ViewStateElement_LoggedIn]; // gets login state from current session    
+            var loginBuff = session[SessionHelper.LoggedIn]; // gets login state from current session    
 
             if (loginBuff != null) // if there is no login state in session state
             {
@@ -242,23 +376,23 @@ namespace WebApplication1
                 else if (loginBuff.Equals(Val.LoggingIn)) // if value from sessionState is corect you can proceed on default page - if not than loginForm must be shown
                 {
                     Redirect("Default"); // value from sessionState was correct
-                    session[ViewStateElement_LoggedIn] = Val.LoggedIn;
+                    session[SessionHelper.LoggedIn] = Val.LoggedIn;
                     LoginTryData.IPCleared(ip); // clears login failed tries
                     return;
-                }                
+                }
             }
-                        
+
             if (LoginTryData.isBlockedIPOrUser(ip, session))
             {
                 if (_thisPage.GetType().BaseType == typeof(Pages.PageBlocked)) // if blocked form is (to be) shown proceed
                 {
                     return; // can proceed because blocked form will be shown
                 }
-                                
+
                 Redirect("Blocked"); // Ip is blocked
                 return;
             }
-            
+
             if (_thisPage.GetType().BaseType == typeof(Pages.PageLogin)) // if login form is (to be) shown proceed
             {
                 return; // can proceed because login form will be shown
@@ -270,7 +404,17 @@ namespace WebApplication1
 
         public static HttpSessionState GetSession()
         {
-            return HttpContext.Current.Session;
+            var cur = HttpContext.Current;
+
+            if (cur != null)
+            {
+                var session = cur.Session;
+                if (session != null)
+                {
+                    return session;
+                }
+            }
+            return null;
         }
 
         static void Clock(HtmlGenericControl TemplateClass)
@@ -299,12 +443,13 @@ namespace WebApplication1
 
             public void RegisterScriptOnPageLoad(string key, string script)
             { // Register scripts any time in Page Load (currently in EveryPageProtocol() )
+                // after this method call RegisterAllScriptsNow() to register all scripts added.
                 Scripts.Add(script);
                 Keys.Add(key);
             }
 
             public void RegisterAllScriptsNow(Page page, HtmlGenericControl divForScript)
-            {
+            { // RegisterScriptOnPageLoad must be called first to add scripts
                 if (Scripts.Count > 0)
                 {
                     for (int i = 0; i < Scripts.Count; i++)
@@ -317,26 +462,60 @@ namespace WebApplication1
                 }
             }
 
-            public static ScriptLoader GetScriptLoaderInstance()
+            public static ScriptLoader GetInstance(HttpSessionState session_canbeNull)
             {
                 try
                 {
-                    return (ScriptLoader)GetSession()[ViewStateElement_ScriptLoader];
+                    HttpSessionState session;
+                    if (session_canbeNull == null)
+                    {
+                        session = GetSession();
+                    }
+                    else
+                    {
+                        session = session_canbeNull;
+                    }
+
+                    if (session != null)
+                    {
+                        var obj = session[SessionHelper.ScriptLoader];  
+
+                        if (obj == null)
+                        {
+                            session[SessionHelper.ScriptLoader] = NewScriptLoaderInstnance();
+                        }
+
+                        obj = session[SessionHelper.ScriptLoader];     // reasign new instance                    
+                        var sl = (ScriptLoader)obj;                     // cast
+                        return sl;
+
+                    }
+                    else
+                    {
+                        throw new Exception("Session was null");
+                    }
+                    
                 }
-                catch
+                catch (Exception ex)
                 {
-                    return null;
+                    SysLog.SetMessage("GetScriptLoaderInstance() has not found ScriptLoader instance. Some functions might be unavailable. More info:" +ex.Message);
                 }
 
-            }            
+                return null;
+            }
         }
 
+        static ScriptLoader NewScriptLoaderInstnance()
+        {
+            return new ScriptLoader();
+        }
+                
         public class LoginTryData
         {
             string ip;
             uint attempts = 1;
             DateTime dt;
-            
+
             public static bool LoginTryIP(string ip)
             {
                 foreach (var item in LoginTryDataList)
@@ -356,7 +535,7 @@ namespace WebApplication1
 
                 var buff = new LoginTryData();
                 buff.dt = DateTime.Now;
-                buff.ip = ip;                
+                buff.ip = ip;
                 LoginTryDataList.Add(buff);
                 return false;
             }
@@ -369,7 +548,7 @@ namespace WebApplication1
                 foreach (var item in LoginTryDataList)
                 {
                     if (item.ip == ip)
-                    {                        
+                    {
                         if (item.attempts >= Settings.MaxLoginTriesIP) // max login failed tries exceeded
                         {
                             return true;
@@ -385,11 +564,11 @@ namespace WebApplication1
                 {
                     var luser = (string)luserobj;
 
-                    foreach(var item in Helper.UserDataManager.ActiveUsers)
+                    foreach (var item in Helper.UserDataManager.ActiveUsers)
                     {
                         if (item.GetUsername() == luser)
                         {
-                            return item.Blocked();                            
+                            return item.Blocked();
                         }
                     }
                 }
@@ -427,22 +606,45 @@ namespace WebApplication1
 
         public static void MessageBox(string message)
         {
-            if (!messagePending)
+            try
             {
-                var scriptLoader = ScriptLoader.GetScriptLoaderInstance();
-                if (scriptLoader != null)
+                if (!messagePending)
                 {
-                    var script = "alert('" + message + "');";
-                    scriptLoader.RegisterScriptOnPageLoad("Info", script);
+                    var scriptLoader = ScriptLoader.GetInstance(null);
+                    if (scriptLoader != null)
+                    {
+                        var script = "alert('" + message + "');";
+                        scriptLoader.RegisterScriptOnPageLoad("Info", script);                       
+                    }
+                    messagePending = true;
                     Refresh();
                 }
-                messagePending = true;
-                Refresh();
+                else
+                {
+                    messagePending = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                messagePending = false;
+                throw new Exception("Messagebox can not be shown. This error is displayed insted. ERROR MESSAGE: " + message + ". Reason for messagebox failure:" + ex.Message);
+            }  
+            
+        }
+
+        static void addMetaNoIndex(Page page)
+        {
+            if (!Settings.PreventSearchEnginesFromIndexing)
+            {
+                return;
             }
+                        
+            page.Header.Controls.Add(new LiteralControl("<meta name=\"robots\" content=\"noindex\">"));
+        }
+
+        static void addTabTitle(Page page, string pageTtitle)
+        {
+            string title = pageTtitle;
+            page.Header.Title = char.ToUpper(title[0]) + title.Substring(1);
         }
     }
 }

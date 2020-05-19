@@ -101,9 +101,9 @@ namespace WebApplication1
 
 
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
-                        throw;
+                        throw new Exception("GControls.Luc(id) error initializing." + ex.Message);
                     }
 
                     button.Click += Button_Click;
@@ -112,7 +112,11 @@ namespace WebApplication1
 
                 void GetZarnicaValue()
                 {
-                    active = Val.logocontroler.Prop1.LucStatus_ReadToPC[btnID].Value_bool;
+                    if (Val.logocontroler.Prop1 != null)
+                    {
+                        active = Val.logocontroler.Prop1.LucStatus_ReadToPC[btnID].Value_bool;
+                    }
+                    
                 }
 
                 private void Button_Click(object sender, ImageClickEventArgs e)
@@ -601,12 +605,7 @@ namespace WebApplication1
                             saveBtn.button.Click += (sender, e) => SaveClicked(sender, e, DropDown.SelectedItem);
                         }
                     }
-
-                    static string top = "0%";
-                    static string left = "0%";
-                    static string width = "100%";
-                    static string height = "100%";
-
+                                                           
                     public ImageButton exitButton;
 
                     ButtonWithLabel saveBtn;
@@ -709,14 +708,12 @@ namespace WebApplication1
                         Navigator.Refresh(); // loads inital page (with closed/invisible menu and restarts updatepanel timer)
                     }
 
-                    public SubMenuSelect(string ID, List<ListItem> list, string text, Timer updateTimer, bool wideMode)
-                        : base(top, left, width, height)
+                    public SubMenuSelect(string ID, List<ListItem> list, string text, Timer updateTimer, bool wideMode)                        
                     {
                         Ctor(ID, list, text, updateTimer, wideMode);
                     }
 
-                    public SubMenuSelect(string ID, string NameLable, List<ListItem> list, string text, Timer updateTimer, bool wideMode)
-                        : base(top, left, width, height)
+                    public SubMenuSelect(string ID, string NameLable, List<ListItem> list, string text, Timer updateTimer, bool wideMode)                        
                     {
                         Ctor(ID, list, text, updateTimer, wideMode);
 
@@ -881,15 +878,17 @@ namespace WebApplication1
                 public GroupBox(string ID, int top, int left, int width, int height)
                 {
                     this.ID = ID;
-                    SubPanelFitGroupbox(this, top, left, width, height);
+                    SetControlAbsolutePos(this, top, left, width, height);
+                    BasicStyle();
                 }
 
                 public GroupBox(int top, int left, int width, int height)
                 {
-                    SubPanelFitGroupbox(this, top, left, width, height);
+                    SetControlAbsolutePos(this, top, left, width, height);
+                    BasicStyle();
                 }
 
-                public GroupBox(string top, string left, string width, string height)
+                public GroupBox()
                 {
                     Style.Add("position", "fixed");
                     Style.Add(HtmlTextWriterStyle.Top, "15vw");
@@ -898,27 +897,47 @@ namespace WebApplication1
                     Style.Add(HtmlTextWriterStyle.PaddingBottom, XmlController.GetMasterWindowScaleY() / 3 + "%");
                     Style.Add(HtmlTextWriterStyle.ZIndex, "99");
 
+                    BasicStyle();
 
+                }
+
+                public GroupBox(int top, int left, int width, int height, bool stylized)
+                {
+                    SetControlAbsolutePos(this, top, left, width, height);
+
+                    if (stylized)
+                    {
+                        AdvancedStyle();
+                    }
+                    else
+                    {
+                        BasicStyle();
+                    }
+                }                
+
+                void BasicStyle()
+                {
                     Style.Add("border-radius", 1 + "vw");
                     Style.Add("background-color", "#f7f7f7");
                     Style.Add("border-style", "solid");
                     Style.Add("border-width", "0.1vw");
                     Style.Add("border-color", "#ededed");
                     Style.Add("box-shadow", "0.5vw 0.5vw 0.5vw #BBB");
-
                 }
 
-
-                private void SubPanelFitGroupbox(HtmlGenericControl Groupbox, int top, int left, int width, int height)
+                void AdvancedStyle()
                 {
-                    SetControlAbsolutePos(Groupbox, top, left, width, height);
-                    Groupbox.Style.Add("border-radius", 1 + "vw");
-                    Groupbox.Style.Add("background-color", "#f7f7f7");
-                    Groupbox.Style.Add("border-style", "solid");
-                    Groupbox.Style.Add("border-width", "0.1vw");
-                    Groupbox.Style.Add("border-color", "#ededed");
-                    Groupbox.Style.Add("box-shadow", "0.5vw 0.5vw 0.5vw #BBB");
+                    BasicStyle();
+                    var header = DIV.CreateDivAbsolute(-0.3F, -0.1F, 100,15,"%");
 
+                    header.Style.Add(HtmlTextWriterStyle.BackgroundColor, "#a3a3a3");
+                    header.Style.Add("border-radius", 1 + "vw" + " " + 1 + "vw" + " " + 0 + "vw" + " " + 0 + "vw");                    
+                    header.Style.Add("border-style", "solid");
+                    header.Style.Add("border-width", "0.1vw");
+                    header.Style.Add("border-color", "#a3a3a3");
+                    //header.Style.Add("box-shadow", "0.5vw 0.5vw 0.5vw #BBB");
+
+                    Controls.Add(header);
 
                 }
             }
@@ -1810,11 +1829,8 @@ namespace WebApplication1
                     Controls.Add(g);
 
                     // scriptloader
-                    var sl = Navigator.ScriptLoader.GetScriptLoaderInstance();
-                    if (sl != null)
-                    {
-                        sl.RegisterScriptOnPageLoad("FocusNextIfEnterKeyPressed", Val.FocusNextIfEnterKeyPressedScript); // MoveNext('TextBox1',event.keyCode) is defined here
-                    }
+                    var sl = Navigator.ScriptLoader.GetInstance(session);
+                    sl.RegisterScriptOnPageLoad("FocusNextIfEnterKeyPressed", Val.FocusNextIfEnterKeyPressedScript); // MoveNext('TextBox1',event.keyCode) is defined here
 
                     // javascript on keypress - enter
                     username.Attributes.Add("onkeydown", "return MoveNext('pwdField',event.keyCode);"); // method defined in FocusNextIfEnterKeyPressed.js file
@@ -1839,7 +1855,7 @@ namespace WebApplication1
 
                     if (sess != null)
                     {
-                        var lauth = sess[Navigator.ViewStateElement_LoginAuth]; // get auth info - just for graphics
+                        var lauth = sess[SessionHelper.LoginAuth]; // get auth info - just for graphics
 
                         if (lauth != null)
                         {
@@ -1904,18 +1920,18 @@ namespace WebApplication1
 
                             if (ok)
                             {
-                                session[Navigator.ViewStateElement_LoggedIn] = Val.LoggingIn;
+                                session[SessionHelper.LoggedIn] = Val.LoggingIn;
                                 SysLog.SetMessage("Login Success: " + ip + " - User:  " + username.Text);
                             }
                             else
                             {
-                                session[Navigator.ViewStateElement_LoggedIn] = "AUTH_False";
+                                session[SessionHelper.LoggedIn] = "AUTH_False";
                                 SysLog.SetMessage("Login Denied: " + ip + " - User:  " + username.Text);
                             }
 
-                            session[Navigator.ViewStateElement_LoginAuth] = valid;
+                            session[SessionHelper.LoginAuth] = valid;
 
-                            Navigator.Refresh();
+                            Navigator.Redirect("Default");
                         }
                     }
                     catch (Exception ex)
@@ -1955,6 +1971,7 @@ namespace WebApplication1
 
                 public PleaseWaitBanner():base(top(), left(), width(), height())
                 {
+                    ID = "PlsWaitBanner_hidden";
                     Style.Add(HtmlTextWriterStyle.Visibility, "hidden");
                     this.Style.Add(HtmlTextWriterStyle.ZIndex, "99");
 
@@ -1988,6 +2005,7 @@ namespace WebApplication1
                     return 30;
                 }
             }
+            
         }
 
     }

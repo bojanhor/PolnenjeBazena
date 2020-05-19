@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Advanced.aspx.cs" Inherits="WebApplication1.Pages.PageAdvanced" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Advanced.aspx.cs" Inherits="WebApplication1.Pages.PageAdvanced" validateRequest="false" %> 
 
 <!DOCTYPE html>
 

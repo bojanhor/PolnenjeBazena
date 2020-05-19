@@ -66,14 +66,15 @@ namespace WebApplication1.ChartValues
         void m()
         {
             //ChartData1 = new ChartData();
-            Thread.Sleep(100); // frees up resources for webserver to load   
-            
+                       
             manageFiles(); // finds csv file or creates it
             waitForInitialisation(); // waits for program to initialize itself if necessarry
             LimitPeriod();     
                         
             var tm = new Misc.SmartThread(()=>timing());
             tm.Start("ChartTiming");
+
+            Helper.ChartValuesLoggerInitialized = true;
             
         }
                 
@@ -454,7 +455,7 @@ namespace WebApplication1.ChartValues
         {
             try
             {
-                Microsoft.VisualBasic.FileIO.TextFieldParser parser = new Microsoft.VisualBasic.FileIO.TextFieldParser(FilePath);
+                StreamReader parser = new StreamReader(FilePath);
             }
             catch (Exception ex)
             {

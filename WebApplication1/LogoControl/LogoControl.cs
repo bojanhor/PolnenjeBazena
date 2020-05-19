@@ -33,10 +33,8 @@ namespace WebApplication1
 
         public Connection[] LOGOConnection = new Connection[Settings.Devices + 1];
 
-        public LogoControler()
+        void LogoControlerInit()
         {
-
-
             for (int i = 1; i < LOGO.Length; i++)
             {
                 LOGO[i] = new S7Client(i);
@@ -54,24 +52,26 @@ namespace WebApplication1
                 forceRefresh[i] = 0;
             }
 
-
             Prop1 = new Prop1(LOGO[1]);
             Prop2 = new Prop2(LOGO[2]);
             Prop3 = new Prop3(LOGO[3]);
             Prop4 = new Prop4(LOGO[4]);
             Prop5 = new Prop5(LOGO[5]);
 
-
-
             StartBackgroundTasks(); //
 
+            Helper.LogoControllerInitialized = true;
+        }
+
+        public LogoControler()
+        {
+            Misc.SmartThread LogoControlerInitThread = new Misc.SmartThread(() => LogoControlerInit());
+            LogoControlerInitThread.Start("LogoControlerInitThread", ApartmentState.MTA, true);
         }
 
         void StartBackgroundTasks()
         {
             Watchdog_PC = new Thread(() => { Watchdog_PC_DoWork(null, null); });
-
-
 
             for (int i = 1; i < BackgroundWorker.Length - 1; i++)
             {

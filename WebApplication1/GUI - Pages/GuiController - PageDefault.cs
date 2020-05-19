@@ -116,36 +116,42 @@ namespace WebApplication1
 
                     inTemp = new ImageButton()
                     {
+                        ID = "temp_in",
                         ImageUrl = "~/Pictures/temp-in.png",
                         Width = Unit.Percentage(11),
                     };
 
                     outTemp = new ImageButton()
                     {
+                        ID = "temp_out",
                         ImageUrl = "~/Pictures/temp-out.png",
                         Width = inTemp.Width,
                     };
 
                     rainSense = new ImageButton()
                     {
+                        ID = "vlaznost",
                         ImageUrl = "~/Pictures/vlaznost.png",
                         Width = inTemp.Width,
                     };
 
                     dayNight = new ImageButton()
                     {
+                        ID = "dayNight",
                         ImageUrl = "~/Pictures/sun.png",
                         Width = inTemp.Width,
                     };
 
                     SunRise = new ImageButton()
                     {
+                        ID = "sunRise",
                         ImageUrl = "~/Pictures/sunRise.png",
                         Width = inTemp.Width,
                     };
 
                     SunSet = new ImageButton()
                     {
+                        ID = "sunSet",
                         ImageUrl = "~/Pictures/sunSet.png",
                         Width = inTemp.Width,
                     };
@@ -153,6 +159,7 @@ namespace WebApplication1
                     //
                     Vreme = new ImageButton()
                     {
+                        ID = "Weather",
                         ImageUrl = "~/Pictures/sun.png",
                         Width = inTemp.Width,
                     };
@@ -162,6 +169,7 @@ namespace WebApplication1
                     {                 
                         guiSepare[i] = new Image()
                         {
+                            ID = "gui_sep" + i,
                             ImageUrl = "~/Pictures/gui_separator.png",
                             Width = Unit.Percentage(3.5F)
                         };
@@ -171,6 +179,7 @@ namespace WebApplication1
                     {
                         guiSepareVreme[i] = new Image()
                         {
+                            ID = "gui_sep_v" + i,
                             ImageUrl = "~/Pictures/gui_separator.png",
                             Width = Unit.Percentage(3.5F)
                         };
@@ -188,12 +197,20 @@ namespace WebApplication1
                     var prop2 = Val.logocontroler.Prop2; // Change temperature source here
 
                     WeatherLabelFormater(GetDanNoc(), inTemp.Width.Value, topOffset, 0);
-                    WeatherLabelFormater(prop1.Vzhod_Read.Value, inTemp.Width.Value, topOffset, spacingLeft);
-                    WeatherLabelFormater(prop1.Zahod_Read.Value, inTemp.Width.Value, topOffset, spacingLeft * 2);
-                    WeatherLabelFormater(prop2.TempZnotraj.Value_string_formatted, inTemp.Width.Value, topOffset, spacingLeft * 3);
-                    WeatherLabelFormater(prop2.TempZunaj.Value_string_formatted, inTemp.Width.Value, topOffset, spacingLeft * 4);
-                    WeatherLabelFormater("25L/dan", inTemp.Width.Value, topOffset, spacingLeft * 5);
 
+                    if (prop1 != null)
+                    {
+                        WeatherLabelFormater(prop1.Vzhod_Read.Value, inTemp.Width.Value, topOffset, spacingLeft);
+                        WeatherLabelFormater(prop1.Zahod_Read.Value, inTemp.Width.Value, topOffset, spacingLeft * 2);
+                    }
+
+                    if (prop2 != null)
+                    {
+                        WeatherLabelFormater(prop2.TempZnotraj.Value_string_formatted, inTemp.Width.Value, topOffset, spacingLeft * 3);
+                        WeatherLabelFormater(prop2.TempZunaj.Value_string_formatted, inTemp.Width.Value, topOffset, spacingLeft * 4);
+                    }   
+
+                    WeatherLabelFormater("25L/dan", inTemp.Width.Value, topOffset, spacingLeft * 5);
                     VremeIconFormat("Vreme", inTemp.Width.Value, topOffset,4);
 
 
@@ -230,20 +247,25 @@ namespace WebApplication1
                 string message = "";
                 var prop = Val.logocontroler.Prop1;
 
-                if (prop.DanNoc_Vrednost_Dig.Value == true)
+                if (prop != null)
                 {
-                    message = "Dan";
-                }
-                else if (Val.logocontroler.Prop1.DanNoc_Vrednost_Dig.Value == false)
-                {
-                    message  = "Noč";
+                    if (prop.DanNoc_Vrednost_Dig.Value == true)
+                    {
+                        message = "Dan";
+                    }
+                    else if (Val.logocontroler.Prop1.DanNoc_Vrednost_Dig.Value == false)
+                    {
+                        message = "Noč";
+                    }
+                    
+                    return message + " " + prop.DanNoc_Vrednost_An.Value_string;
                 }
                 else
                 {
-                    return  PropComm.NA;                    
+                    return PropComm.NA;
                 }
 
-                return message + " " +  prop.DanNoc_Vrednost_An.Value_string;
+                
 
 
             }

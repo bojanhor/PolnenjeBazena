@@ -16,8 +16,7 @@ namespace WebApplication1
         {
             Page thisPage;
             public System.Web.SessionState.HttpSessionState Session;
-            public static string ViewStateElement_SpremljajChecked = "SpremljajChecked";
-
+            
             public HtmlGenericControl divDebug;
             HtmlGenericControl divDebug_1;
             HtmlGenericControl divDebug_2;
@@ -54,13 +53,13 @@ namespace WebApplication1
 
             void AddSpremljajFunctionality()
             {
-                var session = Session[Navigator.ViewStateElement_ScriptLoader];
+                var session = Session[SessionHelper.ScriptLoader];
 
                 if (session != null)
                 {
                     var scriptloader = (Navigator.ScriptLoader)session;
 
-                    if (Spremljaj.active)
+                    if (!Spremljaj.active)
                     {
                         scriptloader.RegisterScriptOnPageLoad("scrollTo", Val.ScrolToBottomTextboxScript);
                     }
@@ -75,10 +74,10 @@ namespace WebApplication1
             bool GetSpremljajChecked()
             {
                 // get value over session
-                var buff = Session[ViewStateElement_SpremljajChecked];
+                var buff = Session[SessionHelper.SpremljajChecked];
                 if (buff == null)
                 {
-                    buff = true;
+                    buff = false;
                 }
 
                 return (bool)buff;
@@ -88,7 +87,7 @@ namespace WebApplication1
             void SetSpremljajChecked(bool value)
             {
                 // set value over session
-                Session[ViewStateElement_SpremljajChecked] = value;                
+                Session[SessionHelper.SpremljajChecked] = value;                
             }
 
             void PositionEdit()
@@ -114,8 +113,7 @@ namespace WebApplication1
 
             private void Button_Click(object sender, ImageClickEventArgs e)
             {
-                Navigator.Redirect("Default" +
-                    "");
+                Navigator.Redirect("Default" + "");
                 HttpRuntime.UnloadAppDomain();
             }
 

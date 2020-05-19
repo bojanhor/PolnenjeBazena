@@ -12,46 +12,69 @@ namespace WebApplication1
     [Serializable]
     class PageHistory
     {
-        int maxEntries = 10;
-        List<string> pages = new List<string>();
+        int maxEntries = 10;        
+        List<string> PageNames = new List<string>();
+        List<Page> Pages = new List<Page>();
 
-        public void StorePage(string pageName)
+        public void StorePage(Page Page)
         {
-            if (pages.Count > 0)
+            var PageName = GetPageNameFromPage(Page);
+
+            if (PageNames.Count > 0)
             {
-                if (pages[pages.Count - 1] != pageName) // prevents duplicates
-                {
-                    pages.Add(pageName);
+                if (PageNames[PageNames.Count - 1] != PageName) // prevents duplicates
+                {                    
+                    PageNames.Add(PageName);
+                    Pages.Add(Page);
                 }
             }
             else
-            {
-                pages.Add(pageName);
+            {               
+                PageNames.Add(PageName);
+                Pages.Add(Page);
             }
 
-            if (pages.Count > maxEntries)
-            {
-                pages.RemoveAt(pages.Count - 1);
+            if (PageNames.Count > maxEntries)
+            {                
+                PageNames.RemoveAt(PageNames.Count - 1);
+                Pages.RemoveAt(Pages.Count - 1);
             }
+
+            
         }
 
-        public string getPreviousPage()
+        public static string GetPageNameFromPage(Page p)
         {
-            if (pages.Count < 2)
+            return new FileInfo(p.Request.Url.AbsolutePath).Name;
+        }
+
+
+        public string getPreviousPageName()
+        {
+            if (PageNames.Count < 2)
             {
                 return Settings.DefaultPage;
             }
-            pages.RemoveAt(pages.Count - 1);
-            return pages[pages.Count - 1];
+            PageNames.RemoveAt(PageNames.Count - 1);
+            return PageNames[PageNames.Count - 1];
         }
 
-        public string getLastPage()
+        public string getThisPageName()
         {
-            if (pages.Count < 1)
+            if (PageNames.Count < 1)
             {
                 return Settings.DefaultPage;
             }
-            return pages[pages.Count - 1];
+            return PageNames[PageNames.Count - 1];
+        }
+
+        public Page getThisPage()
+        {
+            if (Pages.Count < 1)
+            {
+                return null;
+            }
+            return Pages[PageNames.Count - 1];
         }
 
     }

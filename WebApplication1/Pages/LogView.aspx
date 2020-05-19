@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LogView.aspx.cs" Inherits="WebApplication1.Pages.PageLogView" validateRequest="false"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LogView.aspx.cs" Inherits="WebApplication1.Pages.PageLogView" validateRequest="false" %>
 
 <!DOCTYPE html>
 

@@ -12,8 +12,8 @@ namespace WebApplication1.Pages
     {        
         protected void Page_Load(object sender, EventArgs e)
         {
-            Val.guiController.PageEditor_ = new GuiController.PageEditor();
             Navigator.EveryPageProtocol("Zahtevne Nastavitve", this, Session, TemplateClassID, true, false);
+            Val.guiController.PageEditor_ = new GuiController.PageEditor();            
                        
             InitialiseEditor();
             RegisterOnClickEditor();

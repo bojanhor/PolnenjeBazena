@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Threading;
 using System.Web;
 
 namespace WebApplication1
 {
-    public static class SysLog
-    {
-      
-        public static MessageManager Message = new MessageManager();
+    public class SysLog
+    {      
+        public static MessageManager Message;
 
         public class MessageManager : Dsps
         {
@@ -26,10 +26,13 @@ namespace WebApplication1
                        
             public MessageManager()
             {
-                AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
-                manageFiles();
+                Misc.SmartThread LogInit = new Misc.SmartThread(() => manageFiles());
+                LogInit.Start("LogInit", ApartmentState.MTA, false);
+
                 LogWriter = new Misc.SmartThread(() => WriteLogAsync());
                 LogWriter.Start("LogWriter", ApartmentState.MTA, false);
+
+                AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
             }
 
             private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
@@ -99,7 +102,15 @@ namespace WebApplication1
                 {
                     if (!Directory.Exists(LogFolderPath))
                     {
-                        Directory.CreateDirectory(LogFolderPath);
+                        try
+                        {
+                            Directory.CreateDirectory(LogFolderPath);
+                        }
+                        catch (Exception ex)
+                        {
+                            throw new Exception("Creating directory failed. " + ex.Message);
+                        }
+                        
                     }
 
                     LogFilePath = LogFolderPath + "\\" + "Log.txt";
@@ -108,13 +119,33 @@ namespace WebApplication1
                     if (!ifFileExists(tempLogFilePath))
                     {
                         CreateFile(tempLogFilePath);
+                        SetPermissions(tempLogFilePath);
                     }
 
                     if (!ifFileExists(LogFilePath))
                     {
                         if (File.Exists(tempLogFilePath))
                         {
-                            File.Move(tempLogFilePath, LogFilePath);
+                            try
+                            {
+                                File.Copy(tempLogFilePath, LogFilePath);                                
+                            }
+                            catch (Exception ex)
+                            {
+                                throw new Exception("File.Copy(tempLogFilePath, LogFilePath) reported an error: " + ex.Message);
+                            }
+
+                            try
+                            {
+                                SetPermissions(tempLogFilePath);
+                                File.Delete(tempLogFilePath);
+                            }
+                            catch (Exception ex)
+                            {
+                                throw new Exception("File.Delete(tempLogFilePath, LogFilePath) reported an error: " + ex.Message);
+                            }
+
+
                         }
                         else
                         {
@@ -128,7 +159,7 @@ namespace WebApplication1
                 }
                 catch (Exception ex)
                 {
-                    var message = "Log file problem: " + ex.Message;
+                    var message = "Log file problem: " + ex.Message + " Please check if you have write priviliges.";
                     Navigator.MessageBox(message);
                     throw new Exception(message);
                 }
@@ -210,8 +241,7 @@ namespace WebApplication1
 
             void WriteLogAsync()
             {
-                Thread.Sleep(5000); // delayed start
-
+                
                 while (true)
                 {
                     try
@@ -246,6 +276,40 @@ namespace WebApplication1
             }
         }
 
+        static void SetPermissions(string path)
+        {
+            try
+            {
+                if (File.Exists(path))
+                {
+                    AddFileSecurity_Delete(path);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Setting file permissions failed." + ex.Message);
+            }
+
+        }
+
+        public static void AddFileSecurity_Delete(string fileName)
+        {
+            // get acount name
+            var account = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+
+            // Get a FileSecurity object that represents the
+            // current security settings.
+            FileSecurity fSecurity = File.GetAccessControl(fileName);
+
+            // Add the FileSystemAccessRule to the security settings.
+            fSecurity.AddAccessRule(new FileSystemAccessRule(account,
+                FileSystemRights.Delete, AccessControlType.Allow));            
+
+            // Set the new access settings.
+            File.SetAccessControl(fileName, fSecurity);
+        }
+                
         public static void SetMessage(string message)
         {
             Message.SetMessage(message);

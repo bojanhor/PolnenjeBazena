@@ -111,9 +111,9 @@
 		<AddressLuc_WriteToPLC11>110.0</AddressLuc_WriteToPLC11>			//
 		<AddressLuc_WriteToPLC12>120.0</AddressLuc_WriteToPLC12>			//
     //
-		<EnableChart_Svetlost>False</EnableChart_Svetlost>			// Enables chart in ChartGraph (Zunanja osvetljenost)
+		<EnableChart_Svetlost>True</EnableChart_Svetlost>			// Enables chart in ChartGraph (Zunanja osvetljenost)
 		<EnableChart_Padavine>True</EnableChart_Padavine>			// Enables chart in ChartGraph (Količina padavin)
-		<EnableChart_Tzunanja>False</EnableChart_Tzunanja>			// Enables chart in ChartGraph (Temperatura zunaj)
+		<EnableChart_Tzunanja>True</EnableChart_Tzunanja>			// Enables chart in ChartGraph (Temperatura zunaj)
 		<EnableChart_Tnotranja>True</EnableChart_Tnotranja>			// Enables chart in ChartGraph (Temperatura znotraj)
 		<ShowChartMode>0</ShowChartMode>					// Chart mode selector (1 - displays today; 2 - displays yesterday...)
       //
@@ -126,7 +126,7 @@
 	<CONNECTION>// Server restart required after changing this group
 		<LOGO1>//
 			<show>true</show>			// indicates if tabpage is shown on GUI 
-			<enabled>true</enabled>			// indicates if device is enabled - (gui, communication ...) 
+			<enabled>false</enabled>			// indicates if device is enabled - (gui, communication ...) 
 			<devicename>LOGO1</devicename>		// Showname
 			<showname>Razsvetljava</showname>   //
 			<serverIP>192.168.1.201</serverIP>		// format must be ###.###.###.### (192.168.0.1) IP of PLC

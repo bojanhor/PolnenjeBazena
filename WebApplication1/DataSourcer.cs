@@ -19,7 +19,8 @@ namespace WebApplication1
             {
                 if (Text != null && Text != PropComm.NA)
                 {
-                    return Convert.ToInt32(GetNumbers(Text));
+                    return Convert.ToInt32(
+                        GetNumbers(Text));
                 }
                 return null;
             }
@@ -35,7 +36,7 @@ namespace WebApplication1
 
             static string GetNumbers(string input)
             {
-                return new string(input.Where(c => char.IsDigit(c)).ToArray());
+                return Helper.GetNumbersOnlyFromString(input);
             }
 
         }

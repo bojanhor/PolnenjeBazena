@@ -11,23 +11,42 @@ namespace WebApplication1
 {
 
     public static class Val // used to hold values that are same for all instances / users
-    {               
-        public static Helper.Initialiser Initialiser = new Helper.Initialiser();
-        public static LogoControler logocontroler = new LogoControler();
-        public static string[] watchdog = new string[Settings.Devices + 1];        
-        public static GuiController guiController = new GuiController();
-        public static string ScrolToBottomTextboxScript = GetScript("ScrollToBottom.js");
-        public static string RetainPositionTextboxScript = GetScript("RetainScrollPosition.js");
-        public static string FocusNextIfEnterKeyPressedScript = GetScript("FocusNextIfEnterKeyPressed.js");
+    {
         public static ChartValues.ChartValuesLogger ChartValues;
+        public static Helper.Initialiser Initialiser = new Helper.Initialiser();
+        public static LogoControler logocontroler;
+        public static WarningManager WarningManager;
+        public static GuiController guiController;
+        public static List<WarningManager.Warning> Warnings;
+        public static string[] watchdog = new string[Settings.Devices + 1];
+        public static string ScrolToBottomTextboxScript;
+        public static string RetainPositionTextboxScript;
+        public static string FocusNextIfEnterKeyPressedScript;
         public static string LoggedIn = "!#LoggedIn#!";
         public static string LoggingIn = "!#LoggingIn#!";
 
 
         public static void InitialiseClass()
-        {        
-            ChartValues = new ChartValues.ChartValuesLogger();
-            
+        {
+            SysLog.Message = new SysLog.MessageManager();
+            ScriptLoad();                                       // in new thread
+            guiController = new GuiController();
+            ChartValues = new ChartValues.ChartValuesLogger();  // in new thread
+            WarningManager = new WarningManager();              // in new thread
+            logocontroler = new LogoControler();                // in new thread
+        }
+
+        static void ScriptLoad()
+        {
+            Misc.SmartThread ScriptsLoaderThread = new Misc.SmartThread(() => ScriptsLoadMethod());
+            ScriptsLoaderThread.Start("ScriptsLoaderThread", System.Threading.ApartmentState.MTA, true);
+        }
+
+        static void ScriptsLoadMethod()
+        {
+            FocusNextIfEnterKeyPressedScript = GetScript("FocusNextIfEnterKeyPressed.js");
+            ScrolToBottomTextboxScript = GetScript("ScrollToBottom.js");
+            RetainPositionTextboxScript = GetScript("RetainScrollPosition.js");            
         }
 
         public static void InitializeWDTable(int device)

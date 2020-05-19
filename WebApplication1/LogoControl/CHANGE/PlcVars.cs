@@ -90,7 +90,7 @@ namespace WebApplication1
         public abstract class PlcType
         {            
             public Sharp7.S7Client Client;
-
+            
             private ushort _syncEvery_X_Time = 1;
             public ushort SyncEvery_X_Time // set to 1 for syncing to occur every loop -- 0 = turn sync off -- 2 = every 2nd loop...
             {
@@ -129,6 +129,11 @@ namespace WebApplication1
                     _syncEvery_X_Time = 1;
                 }               
 
+            }
+
+            public void AddWarningMonitor(object valueToTrigerWarning, WarningManager.WarningTriggerCondition Condition, string WarningMessage)
+            {
+                Val.WarningManager.AddWarningTrackerFromPLCVar(this, valueToTrigerWarning, Condition, WarningMessage);
             }
         }
         
@@ -1310,7 +1315,7 @@ namespace WebApplication1
                 }
             }
             
-            public void ReportError_throwException(string Message)
+            void ReportError_throwException(string Message)
             {
                 ReportError_throwException(Message, null, null);
             }

@@ -12,9 +12,8 @@ namespace WebApplication1
        
         protected void Page_Load(object sender, EventArgs e)
         {
-            Val.guiController.PagePadavine_ = new GuiController.PagePadavine(this);
-
             Navigator.EveryPageProtocol("Padavine", this, Session, TemplateClassID, true, false);
+            Val.guiController.PagePadavine_ = new GuiController.PagePadavine(this);
 
             Initialise();
         }

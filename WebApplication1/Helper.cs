@@ -4,6 +4,7 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Security;
+using System.Threading;
 using System.Web;
 using System.Web.SessionState;
 using System.Web.UI;
@@ -15,9 +16,14 @@ namespace WebApplication1
 
     public class Helper
     {
+        public static bool LogoControllerInitialized = false;
+        public static bool GuiControllerInitialized = false;
+        public static bool ChartValuesLoggerInitialized = false;
+        public static bool WarningManagerInitialized = false;
+
         public static void deleteUnencriptedConfigFileMethod()
         {
-            System.Threading.Thread.Sleep(10000);
+            Thread.Sleep(10000);
 
             try
             {
@@ -30,22 +36,32 @@ namespace WebApplication1
             }
             catch (Exception) {  }
             
-        }        
+        }
 
         public static string getClockValue()
         {
-            var p1 = Val.logocontroler.Prop1.LogoClock.Value;
-            if (p1 != PropComm.NA)
+            if (Val.logocontroler != null)
             {
-                return p1;
+                if (Val.logocontroler.Prop1 != null)
+                {
+                    var p1 = Val.logocontroler.Prop1.LogoClock.Value;
+                    if (p1 != PropComm.NA)
+                    {
+                        return p1;
+                    }
+                }
+
+                if (Val.logocontroler.Prop2 != null)
+                {
+                    var p2 = Val.logocontroler.Prop2.LogoClock.Value;
+                    if (p2 != PropComm.NA)
+                    {
+                        return p2;
+                    }
+                }                
             }
 
-            var p2 = Val.logocontroler.Prop2.LogoClock.Value;
-            if (p2 != PropComm.NA)
-            {
-                return p2;
-            }
-            else return "";
+            return "";
         }
 
         public static HtmlGenericControl PositionUnderTitle(WebControl element, Label Undertitle)
@@ -176,15 +192,10 @@ namespace WebApplication1
         }
 
         public class Initialiser
-        {
-            Misc.SmartThread InitialiseClass;
+        {            
             public Initialiser()
-            {
-                InitialiseClass = new Misc.SmartThread(
-                    new System.Threading.ThreadStart(
-                        () => Val.InitialiseClass()));
-                InitialiseClass.Start("InitialiseClass", System.Threading.ApartmentState.MTA, true);
-
+            {                
+                Val.InitialiseClass();
             }
         }
         
@@ -384,6 +395,11 @@ namespace WebApplication1
             var btn = (GuiController.GControls.TransparentButton)ButtonFromSender_Event;
             string newID = new string(btn.ID.Where(char.IsDigit).ToArray()); // remove numbers to get ID
             return Convert.ToInt16(newID);
+        }
+
+        public static string GetNumbersOnlyFromString(string input)
+        {
+            return new string(input.Where(c => char.IsDigit(c)).ToArray());
         }
     }
 }

@@ -16,7 +16,7 @@ namespace WebApplication1
         {
             public Page ThisPage;
             public System.Web.SessionState.HttpSessionState Session;
-            public static string ViewStateElement_CurrentLuciSettingsShown = "CurrentLuciSettingsShown";
+            
 
             public GControls.UpdatePanelFull updatePanel;
 
@@ -73,7 +73,7 @@ namespace WebApplication1
             int GetCurrentLuciSettingsShown()
             {
                 // save value over session
-                var buff = Session[ViewStateElement_CurrentLuciSettingsShown];
+                var buff = Session[SessionHelper.CurrentLuciSettingsShown];
                 if (buff == null)
                 {
                     buff = 0;
@@ -86,7 +86,7 @@ namespace WebApplication1
             void SetCurrentLuciSettingsShown(int value)
             {
                 // save value over session
-                Session[ViewStateElement_CurrentLuciSettingsShown] = value;
+                Session[SessionHelper.CurrentLuciSettingsShown] = value;
                 
             }
 

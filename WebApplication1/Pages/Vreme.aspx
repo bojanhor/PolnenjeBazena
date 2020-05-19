@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Vreme.aspx.cs" Inherits="WebApplication1.Pages.PageVreme" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Vreme.aspx.cs" Inherits="WebApplication1.Pages.PageVreme" ValidateRequest="false" %>
 
 <!DOCTYPE html>
 
