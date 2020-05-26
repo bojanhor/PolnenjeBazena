@@ -186,6 +186,8 @@
     <Content Include="Pictures\domov.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Pictures\DoorDn.png" />
+    <Content Include="Pictures\DoorUp.png" />
     <Content Include="Pictures\dwn.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

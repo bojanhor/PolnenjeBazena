@@ -44,16 +44,7 @@ namespace WebApplication1
 
                 }
             }
-
-            public class ZaveseSettingsSubmenu : GControls.SettingsSubMenu
-            {
-                public ZaveseSettingsSubmenu(VrazaZaveseContent SettingsContent)
-                    : base(1, "Zavese", false, SettingsContent)
-                {
-
-                }
-            }
-
+            
             public class VrazaZaveseContent : HtmlGenericControl
             {
                 // left gb

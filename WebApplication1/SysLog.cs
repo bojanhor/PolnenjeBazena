@@ -312,7 +312,10 @@ namespace WebApplication1
                 
         public static void SetMessage(string message)
         {
-            Message.SetMessage(message);
+            if (Message != null)
+            {
+                Message.SetMessage(message);
+            }                        
         }
 
         public static string GetMessagesTB_large()

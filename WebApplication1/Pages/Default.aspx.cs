@@ -25,8 +25,8 @@ namespace WebApplication1.Pages
         {
             CreateInitializePanel();
             
-            TemplateClassID.Controls.Add(Val.guiController.PageDefault_.Tmr_LuciUpdatePanel);
-            TemplateClassID.Controls.Add(Val.guiController.PageDefault_.LuciUpdatePanel);
+            TemplateClassID.Controls.Add(Val.guiController.PageDefault_.Tmr_UpdatePanel);
+            TemplateClassID.Controls.Add(Val.guiController.PageDefault_.UpdatePanel);
             TemplateClassID.Controls.Add(Val.guiController.PageDefault_.btnPannel);
 
             Val.guiController.PageDefault_.RegisterOnClick();

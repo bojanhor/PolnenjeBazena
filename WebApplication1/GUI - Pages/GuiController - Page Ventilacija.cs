@@ -56,19 +56,19 @@ namespace WebApplication1
                 static readonly int col5 = col4 + 4;
 
 
-                Label lbl_tn1 = new Label(); // temperaturni nivo 1
-                Label lbl_tn2 = new Label(); // temperaturni nivo 2
-                Label lbl_tn3 = new Label(); // temperaturni nivo 3
+                Label lbl_tn1 = new Label() { ID = "lbl_tn1" }; // temperaturni nivo 1
+                Label lbl_tn2 = new Label() { ID = "lbl_tn2" }; // temperaturni nivo 2
+                Label lbl_tn3 = new Label() { ID = "lbl_tn3" }; // temperaturni nivo 3
                                 
-                Label obr_vent = new Label(); // Vrednost [obratov] za omejevalec
+                Label obr_vent = new Label() { ID = "lbl_obrVent" }; // Vrednost [obratov] za omejevalec
 
                 GControls.DropDownListForTemperatureSelect_10_30 btnNastavi1;
                 GControls.DropDownListForTemperatureSelect_10_30 btnNastavi2;
                 GControls.DropDownListForTemperatureSelect_10_30 btnNastavi3;                
 
-                Label lbl_na1 = new Label(); // na
-                Label lbl_na2 = new Label(); // na
-                Label lbl_na3 = new Label(); // na
+                Label lbl_na1 = new Label() { ID = "lbl_na1" }; // na
+                Label lbl_na2 = new Label() { ID = "lbl_na2" }; // na
+                Label lbl_na3 = new Label() { ID = "lbl_na3" }; // na
 
                 GControls.DropDownListForDimmerRPM btnNastaviObr1;
                 GControls.DropDownListForDimmerRPM btnNastaviObr2;
@@ -84,7 +84,7 @@ namespace WebApplication1
 
                 // Declarations Right GroupBox
 
-                Label TitleRight = new Label();
+                Label TitleRight = new Label() { ID = "btn_title", };
                 GControls.GroupBox gb_R;
 
                 GControls.GuiSeparator gs0;
@@ -274,18 +274,21 @@ namespace WebApplication1
 
                     inTemp = new ImageButton()
                     {
+                        ID = "btn_tempin",
                         ImageUrl = "~/Pictures/temp-in.png",
                         Width = Unit.Percentage(21),
                     };
 
                     guiSepare = new Image()
                     {
+                        ID = "btn_gsp",
                         ImageUrl = "~/Pictures/gui_separator.png",
                         Width = Unit.Percentage(5.5F)
                     };
 
                     outTemp = new ImageButton()
                     {
+                        ID = "btn_tempout",
                         ImageUrl = "~/Pictures/temp-out.png",
                         Width = inTemp.Width,
                     };

@@ -28,6 +28,7 @@ namespace WebApplication1
             try
             {
                 GetCurrentPage().Response.Redirect(site, false);
+                SysLog.Message.SetMessage("Redirected to: " + site);
             }
             catch (Exception ex)
             {
@@ -38,9 +39,7 @@ namespace WebApplication1
                     var page = pageHistory.getPreviousPageName();
                     GetCurrentPage().Server.Transfer(page + "aspx");
                 }
-
             }
-
         }
 
         private static bool IsInitialized()
@@ -69,10 +68,12 @@ namespace WebApplication1
                 try
                 {
                     page.Response.Redirect(page.Request.RawUrl, false);
+                    SysLog.Message.SetMessage("Page refreshed.");
                 }
                 catch (Exception)
                 {
                     Redirect("Default");
+                    SysLog.Message.SetMessage("Refresh page failed.");
                 }
             }
         }
@@ -86,9 +87,15 @@ namespace WebApplication1
                 if (session != null)
                 {
                     var pageHistory = GetPageHistoryFromSession();
-                    Redirect(pageHistory.getPreviousPageName());
+                    if (pageHistory != null)
+                    {
+                        Redirect(pageHistory.getPreviousPageName());
+                    }
+                    else
+                    {
+                        Redirect("Default");
+                    }
                 }
-
             }
             catch (Exception ex)
             {

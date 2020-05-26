@@ -65,8 +65,7 @@ namespace WebApplication1.ChartValues
 
         void m()
         {
-            //ChartData1 = new ChartData();
-                       
+                                   
             manageFiles(); // finds csv file or creates it
             waitForInitialisation(); // waits for program to initialize itself if necessarry
             LimitPeriod();     
@@ -455,7 +454,12 @@ namespace WebApplication1.ChartValues
         {
             try
             {
-                StreamReader parser = new StreamReader(FilePath);
+                using (StreamReader parser = new StreamReader(FilePath))
+                {
+                    var Void = parser.Read();
+                    parser.Close();
+                }
+
             }
             catch (Exception ex)
             {
@@ -565,6 +569,7 @@ namespace WebApplication1.ChartValues
             catch (Exception ex)
             {
                 SysLog.SetMessage("Writing values to csv file failed (" + PathCsvFile + "). " + ex.Message);
+                Thread.Sleep(3000);
                 return -1;
             }
         }

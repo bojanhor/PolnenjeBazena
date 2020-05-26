@@ -19,9 +19,9 @@ namespace WebApplication1
             public GControls.MasterMenuButton[] imagebuttons;
             public Panel btnPannel;
 
-            public UpdatePanel LuciUpdatePanel;
-            public AsyncPostBackTrigger Ap_LuciUpdatePanel;
-            public Timer Tmr_LuciUpdatePanel;
+            public UpdatePanel UpdatePanel;
+            public AsyncPostBackTrigger Ap_UpdatePanel;
+            public Timer Tmr_UpdatePanel;
 
             public GControls.Luc[] Luc;
 
@@ -35,6 +35,11 @@ namespace WebApplication1
             ImageButton SunSet;
             ImageButton Vreme;
 
+            ImageButton Vrata1_up;
+            ImageButton Vrata2_up;
+            ImageButton Vrata1_dn;
+            ImageButton Vrata2_dn;
+
             Image[] guiSepare = new Image[7];
             Image[] guiSepareVreme = new Image[2];
 
@@ -45,24 +50,24 @@ namespace WebApplication1
                                    
             public PageDefault(Page _thisPage, System.Web.SessionState.HttpSessionState session)
             {
-                this.session = session;                
+                this.session = session;
 
                 try
                 {
                     thisPage = _thisPage;
+
                     imagebuttons = new GControls.MasterMenuButton[GethowManyButtonsOnFirstPage()];
                     btnPannel = new Panel();
-
                     Luc = new GControls.Luc[XmlController.GetHowManyLucIcons() + 1];
                     divStala = DIV.CreateDivAbsolute();
-
                     Stala = new Image();
 
-                    ManageUpdatePanelLuci();
+                    ManageUpdatePanel();
                     AddStala();
                     InitializeLuci();
                     AddImageButtons_Menu();
                     AddWeather();
+                    AddVrata();
                     AddbtnPanel();
 
                 }
@@ -70,38 +75,91 @@ namespace WebApplication1
                 {
                     throw new Exception("Internal error inside PageDefault class constructor: " + ex.Message);
                 }
+            }
 
-
-            }            
-
-            void ManageUpdatePanelLuci()
+            void ManageUpdatePanel()
             {
                 try
                 {
-                    LuciUpdatePanel = new UpdatePanel
+                    UpdatePanel = new UpdatePanel
                     {
                         UpdateMode = UpdatePanelUpdateMode.Conditional,
                         ID = "LuciUpdatePanel"
                     };
 
-                    Tmr_LuciUpdatePanel = new Timer
+                    Tmr_UpdatePanel = new Timer
                     {
                         Interval = Settings.UpdateValuesPCms,
                         ID = "Tmr_LuciUpdatePanel"
                     };
 
-                    Ap_LuciUpdatePanel = new AsyncPostBackTrigger
+                    Ap_UpdatePanel = new AsyncPostBackTrigger
                     {
                         ControlID = "Tmr_LuciUpdatePanel"
                     };
 
-                    LuciUpdatePanel.Triggers.Add(Ap_LuciUpdatePanel);
+                    UpdatePanel.Triggers.Add(Ap_UpdatePanel);
                 }
                 catch (Exception ex)
                 {
                     throw new Exception("Error was encountered inside ManageUpdatePanelLuci() method. Error details: " + ex.Message);
                 }
                 
+            }
+
+            void AddVrata()
+            {
+                var size = 4;
+                var top = 54;
+                var toff = 10;
+                var left = 12;
+
+                Vrata1_up = new ImageButton()
+                {
+                    ID = "vrata1_uo",
+                    ImageUrl = "~/Pictures/DoorUp.png",
+                    Width = Unit.Percentage(size)
+                };
+
+                SetControlAbsolutePos(Vrata1_up, top, left);
+
+                Vrata1_dn = new ImageButton()
+                {
+                    ID = "vrata1_dn",
+                    ImageUrl = "~/Pictures/DoorDn.png",
+                    Width = Unit.Percentage(size)
+                };
+
+                SetControlAbsolutePos(Vrata1_dn, top + toff, left);
+
+                //
+
+                top = top - 2;
+                left = 32;
+
+                Vrata2_up = new ImageButton()
+                {
+                    ID = "vrata2_up",
+                    ImageUrl = "~/Pictures/DoorUp.png",
+                    Width = Unit.Percentage(size)
+                };
+
+                SetControlAbsolutePos(Vrata2_up, top, left);
+
+                Vrata2_dn = new ImageButton()
+                {
+                    ID = "vrata2_dn",
+                    ImageUrl = "~/Pictures/Doordn.png",
+                    Width = Unit.Percentage(size)
+                };
+
+                SetControlAbsolutePos(Vrata2_dn, top + toff, left);
+
+                divStala.Controls.Add(Vrata1_up);
+                divStala.Controls.Add(Vrata2_up);
+                divStala.Controls.Add(Vrata1_dn);
+                divStala.Controls.Add(Vrata2_dn);
+
             }
 
             void AddWeather()
@@ -328,7 +386,7 @@ namespace WebApplication1
                         }
                     }
 
-                    LuciUpdatePanel.ContentTemplateContainer.Controls.Add(divStala);
+                    UpdatePanel.ContentTemplateContainer.Controls.Add(divStala);
                 }
                 catch (Exception ex)
                 {
@@ -353,6 +411,31 @@ namespace WebApplication1
                 SunSet.Click += SunSet_Click;
                 Vreme.Click += Vreme_Click;
 
+                Vrata1_up.Click += Vrata1_up_Click;
+                Vrata1_dn.Click += Vrata1_dn_Click;
+                Vrata2_up.Click += Vrata2_up_Click;
+                Vrata2_dn.Click += Vrata2_dn_Click;
+
+            }
+
+            private void Vrata2_up_Click(object sender, ImageClickEventArgs e)
+            {
+                Val.logocontroler.Prop3.VrataGorPulse2.SendPulse();
+            }
+
+            private void Vrata2_dn_Click(object sender, ImageClickEventArgs e)
+            {
+                Val.logocontroler.Prop3.VrataDolPulse2.SendPulse();
+            }
+
+            private void Vrata1_up_Click(object sender, ImageClickEventArgs e)
+            {
+                Val.logocontroler.Prop3.VrataGorPulse1.SendPulse();
+            }
+
+            private void Vrata1_dn_Click(object sender, ImageClickEventArgs e)
+            {
+                Val.logocontroler.Prop3.VrataDolPulse1.SendPulse();
             }
 
             private void Vreme_Click(object sender, ImageClickEventArgs e)
