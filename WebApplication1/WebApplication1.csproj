@@ -126,6 +126,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ChartValues\AutoAdd.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
