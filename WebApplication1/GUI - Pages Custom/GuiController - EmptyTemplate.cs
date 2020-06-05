@@ -11,14 +11,11 @@ namespace WebApplication1
     public partial class GuiController
     {
         public class EmptyTemplatePage : Dsps
-        {
-            public static string ViewStateElement_LucActiveOnGui = "LucActiveOnGui";
-
+        {            
             string Name;
             Page thisPage;
             System.Web.SessionState.HttpSessionState session;
-            public GControls.MasterMenuButton[] imagebuttons;
-            
+                       
             public UpdatePanel UpdatePanel;
             public AsyncPostBackTrigger Ap_UpdatePanel;
             public Timer Tmr_UpdatePanel;
@@ -71,19 +68,7 @@ namespace WebApplication1
                 }
                 
             }
-                       
-            private void BtnMasterMenuClick(object sender, ImageClickEventArgs e, Page thisPage)
-            {
-                var me = (GControls.MasterMenuButton)sender;
-                Val.guiController.RedirectToPageOnButtonClick(thisPage, me.btnID);
-            }
-
-            private static int GethowManyButtonsOnFirstPage()
-            {
-                return XmlController.GetHowManyMenuItems();
-            }
             
-
             public void RegisterOnClick()
             {
 

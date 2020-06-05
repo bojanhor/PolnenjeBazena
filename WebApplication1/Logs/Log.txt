@@ -39,3 +39,37 @@
 05.06.2020  11:45:37 : Redirected to: Default
 05.06.2020  11:45:38 : Redirected to: Advanced
 05.06.2020  11:45:44 : Redirected to: LogView
+05.06.2020  12:15:10 : Redirected to: Login
+05.06.2020  12:15:11 : Login try: Local
+05.06.2020  12:15:11 : Login Success: Local - User:  admin
+05.06.2020  12:15:11 : Redirected to: Default
+05.06.2020  12:15:11 : Redirected to: Default
+05.06.2020  12:15:32 : Page visited: /Pages/Template.aspx... The file '/Pages/Template.aspx' does not exist. Stack trace:    at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
+   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
+   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
+   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
+   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+05.06.2020  12:16:27 : Login try: Local
+05.06.2020  12:16:27 : Login Success: Local - User:  admin
+05.06.2020  12:16:27 : Redirected to: Default
+05.06.2020  12:16:27 : Redirected to: Default
+05.06.2020  12:18:14 : Login try: Local
+05.06.2020  12:18:14 : Login Success: Local - User:  admin
+05.06.2020  12:18:14 : Redirected to: Default
+05.06.2020  12:18:14 : Redirected to: Default
+05.06.2020  12:18:17 : Redirected to: Advanced
+05.06.2020  12:22:18 : Login try: Local
+05.06.2020  12:22:18 : Login Success: Local - User:  admin
+05.06.2020  12:22:18 : Redirected to: Default
+05.06.2020  12:22:18 : Redirected to: Default

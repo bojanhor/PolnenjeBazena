@@ -18,9 +18,10 @@ namespace WebApplication1
         public PageAdvanced PageAdvanced_ { get; set; }
         public PageMasterMenu PageMastermenu_ { get; set; }       
         public PageEditor PageEditor_ { get; set; }
-        public PageLogView PageLogView_ { get; set; }        
-
+        public PageLogView PageLogView_ { get; set; }   
         public PageLogin PageLogin_ { get; set; }
+
+        public EmptyTemplatePage TemplatePage { get; set; }
 
         public GuiController()  
         {
