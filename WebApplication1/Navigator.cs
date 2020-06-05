@@ -28,7 +28,10 @@ namespace WebApplication1
             try
             {
                 GetCurrentPage().Response.Redirect(site, false);
-                SysLog.Message.SetMessage("Redirected to: " + site);
+                if (SysLog.Message != null)
+                {
+                    SysLog.Message.SetMessage("Redirected to: " + site);
+                }               
             }
             catch (Exception ex)
             {
