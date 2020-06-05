@@ -11,10 +11,10 @@ namespace WebApplication1
     public partial class GuiController
     {
         public class PageDefault : Dsps
-        {
-            public static string ViewStateElement_LucActiveOnGui = "LucActiveOnGui";
-                        
+        {                                   
             Page thisPage;
+            string Name;
+
             System.Web.SessionState.HttpSessionState session;
             public GControls.MasterMenuButton[] imagebuttons;
             public Panel btnPannel;
@@ -23,7 +23,7 @@ namespace WebApplication1
             public AsyncPostBackTrigger Ap_UpdatePanel;
             public Timer Tmr_UpdatePanel;
                        
-            public HtmlGenericControl divStala;
+            public HtmlGenericControl divMaster;
             Image Stala;
 
             HtmlGenericControl divMasterButtons;
@@ -35,22 +35,23 @@ namespace WebApplication1
                 try
                 {
                     thisPage = _thisPage;
+                    Name = PageHistory.GetPageNameFromPage(_thisPage);
 
                     imagebuttons = new GControls.MasterMenuButton[GethowManyButtonsOnFirstPage()];
                     btnPannel = new Panel();
                   
-                    divStala = DIV.CreateDivAbsolute();
+                    divMaster = DIV.CreateDivAbsolute();
                     Stala = new Image();
 
                     ManageUpdatePanel();
-                    AddStala();                   
+                    AddMasterDiv();                   
                     AddImageButtons_Menu();                   
                     AddbtnPanel();
 
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception("Internal error inside PageDefault class constructor: " + ex.Message);
+                    throw new Exception("Internal error inside class constructor (Page: "+ Name + "): " + ex.Message);
                 }
             }
 
@@ -61,25 +62,25 @@ namespace WebApplication1
                     UpdatePanel = new UpdatePanel
                     {
                         UpdateMode = UpdatePanelUpdateMode.Conditional,
-                        ID = "LuciUpdatePanel"
+                        ID = Name + "UpdatePanel"
                     };
 
                     Tmr_UpdatePanel = new Timer
                     {
                         Interval = Settings.UpdateValuesPCms,
-                        ID = "Tmr_LuciUpdatePanel"
+                        ID = Name + "Tmr_UpdatePanel"
                     };
 
                     Ap_UpdatePanel = new AsyncPostBackTrigger
                     {
-                        ControlID = "Tmr_LuciUpdatePanel"
+                        ControlID = Name + "Tmr_UpdatePanel"
                     };
 
                     UpdatePanel.Triggers.Add(Ap_UpdatePanel);
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception("Error was encountered inside ManageUpdatePanelLuci() method. Error details: " + ex.Message);
+                    throw new Exception("Error was encountered inside ManageUpdatePanel() method. Error details: " + ex.Message);
                 }
                 
             }
@@ -105,17 +106,17 @@ namespace WebApplication1
                 btnPannel.ID = "btnPannel";
             }
 
-            void AddStala()
+            void AddMasterDiv()
             {
                 try
                 {
                     Stala.ImageUrl = "~/Pictures/MasterPic.png ";
                     Stala.Style.Add(HtmlTextWriterStyle.Width, "100%");
 
-                    divStala.Controls.Add(Stala);
-                    divStala.Style.Add(HtmlTextWriterStyle.Width, "100%");
-                    divStala.Style.Add(HtmlTextWriterStyle.Height, "100%");
-                    divStala.ID = "divStala";
+                    divMaster.Controls.Add(Stala);
+                    divMaster.Style.Add(HtmlTextWriterStyle.Width, "100%");
+                    divMaster.Style.Add(HtmlTextWriterStyle.Height, "100%");
+                    divMaster.ID = "divMaster";
                 }
                 catch (Exception ex)
                 {
