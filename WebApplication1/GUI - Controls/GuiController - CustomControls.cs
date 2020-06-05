@@ -26,6 +26,7 @@ namespace WebApplication1
                     this.ImageUrl = "~/Pictures/" + ID + ".png";
                     Width = Unit.Percentage(95);                    
                     this.Click += (sender, e) => MasterMenuButton_Click(sender, e, getLink(btnID-1));
+
                 }
 
                 private void MasterMenuButton_Click(object sender, ImageClickEventArgs e, string Link)
