@@ -89,3 +89,7 @@
 05.06.2020  13:19:12 : Login Success: Local - User:  admin
 05.06.2020  13:19:12 : Redirected to: Default
 05.06.2020  13:19:12 : Redirected to: Default
+05.06.2020  13:47:46 : Login try: Local
+05.06.2020  13:47:46 : Login Success: Local - User:  admin
+05.06.2020  13:47:46 : Redirected to: Default
+05.06.2020  13:47:46 : Redirected to: Default
