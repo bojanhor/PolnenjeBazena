@@ -24,6 +24,8 @@ namespace WebApplication1
         public static string LoggedIn = "!#LoggedIn#!";
         public static string LoggingIn = "!#LoggingIn#!";
 
+        public static StanjeProcesa StanjeProcesa = new StanjeProcesa();
+
 
         public static void InitialiseClass()
         {

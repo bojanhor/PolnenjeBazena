@@ -23,9 +23,9 @@ namespace WebApplication1.Pages
         {                        
             TemplateClassID.Controls.Add(Val.guiController.PageDefault_.Tmr_UpdatePanel);
             TemplateClassID.Controls.Add(Val.guiController.PageDefault_.UpdatePanel);
-            TemplateClassID.Controls.Add(Val.guiController.PageDefault_.btnPannel);
-
-            Val.guiController.PageDefault_.RegisterOnClick();
+            TemplateClassID.Controls.Add(Val.guiController.PageDefault_.divMaster);
+ 
+             Val.guiController.PageDefault_.RegisterOnClick();
         }
                
         

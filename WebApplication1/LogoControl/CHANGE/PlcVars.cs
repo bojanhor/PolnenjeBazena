@@ -8,7 +8,9 @@ using System.Text;
 namespace WebApplication1
 {   
     public class PlcVars
-    {        
+    {
+        public static List<AlarmMessage> AllAlarmMessageVars { get; private set; } = new List<AlarmMessage>();    
+
         public static void ReportComunicatoonMessage(string message)
         {
             SysLog.SetMessage(message);
@@ -1351,7 +1353,17 @@ namespace WebApplication1
                     "Flags: " + Flags);
             }
 
-        }        
+        }
+
+        public class AlarmMessage : Bit 
+        {
+            public string Message { get; private set; }
+            public AlarmMessage(PropComm prop, BitAddress TypeAndAdress, string MessageIfTrue) : base(prop, TypeAndAdress, false)
+            {
+                Message = MessageIfTrue;                
+                AllAlarmMessageVars.Add(this);
+            }
+        }
         
         public class LogoClock : PlcType
         {            

@@ -6,7 +6,8 @@ using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
 using System;
 using System.Web.SessionState;
-
+using Microsoft.Ajax.Utilities;
+using System.Web.UI.WebControls.WebParts;
 
 namespace WebApplication1
 {
@@ -39,7 +40,6 @@ namespace WebApplication1
                     return XmlController.GetMenuDDItemLink((short)ID);
                 }
             }
-
                       
             public class LucBtn : TransparentButton
             {
@@ -216,7 +216,7 @@ namespace WebApplication1
                         }
                         else if (type == Type.WithText)
                         {
-                            div = DIV.CreateDivAbsolute("0%", "0%", "12.8vw", "12.8vw");
+                            div = DIV.CreateDivAbsolute("0%", "0%", "100%", "100%");
                             deactivatedPicture = "~\\Pictures\\gumb-off-padded-text.png";
                             activatedPicture = "~\\Pictures\\gumb-on-padded-text.png";
 
@@ -232,7 +232,7 @@ namespace WebApplication1
                             TextLabel.Style.Add(HtmlTextWriterStyle.ZIndex, "20");
 
                             TextLabel.Style.Add(HtmlTextWriterStyle.Width, "100%");
-                            TextLabel.Style.Add(HtmlTextWriterStyle.Top, "9%");
+                            TextLabel.Style.Add(HtmlTextWriterStyle.Top, "5%");
 
                             div.Controls.Add(TextLabel);
 
@@ -241,9 +241,10 @@ namespace WebApplication1
                         {
                             throw new Exception("Type of OnOffButton is not recognised.");
                         }
-
+                                                
                         div.Style.Add("position", "absolute");
                         div.Style.Add(HtmlTextWriterStyle.ZIndex, "10");
+
 
                         div.Controls.Add(button);
 
@@ -544,15 +545,174 @@ namespace WebApplication1
                 }
             }
 
-            public class SettingsSubMenu : HtmlGenericControl
+            public class OnOffShow : HtmlGenericControl
             {
-                public ImageButton exitButton;
-                public ImageButton nextButton;
-                public ImageButton PrevButton;
-                HtmlGenericControl NameDiv = DIV.CreateDivAbsolute("5.2%", "5%", "30%", "8%");
-                Label Name = new Label();
+                public int btnID;
+                public Helper.Position position;
+                public Image Image = new Image();
 
-                Label Clock = new Label();
+                public string activatedPicture;
+                public string deactivatedPicture;
+
+
+                public OnOffShow(string id, bool activated, Helper.Position position)
+                {
+                    ID = id;
+                                        
+                    try
+                    {
+                        if (activated)
+                        {
+                            if (activatedPicture != null)
+                            {
+                                Image.ImageUrl = activatedPicture;
+                            }
+
+                        }
+                        else
+                        {
+                            if (deactivatedPicture != null)
+                            {
+                                Image.ImageUrl = deactivatedPicture;
+                            }
+
+                        }
+
+                        Image.BackColor = System.Drawing.Color.Transparent;
+                        Image.ForeColor = System.Drawing.Color.Transparent;
+                    }
+                    catch (Exception ex)
+                    {
+                        throw new Exception("Error inside OnOffShow class constructor: " + ex.Message);
+                    }
+
+                                        
+                    SetControlAbsolutePos(Image, 0, 0, position.width);
+                    Controls.Add(Image);
+                                        
+                }
+                                               
+            }
+
+
+            public class OnOffShowRound : OnOffShow
+            {                 
+                public OnOffShowRound(string id, bool activated, Helper.Position position, string color) 
+                    :base(id, activated, position)
+                {                    
+                    ID = id;
+                    getActivatedPicture(color);
+                    getDeactivatedPicture(color);
+                    base.Image.BackColor = System.Drawing.Color.Transparent;
+                    base.Image.ForeColor = System.Drawing.Color.Transparent;
+                }
+
+                void getActivatedPicture(string color)
+                {                    
+                    color = color.ToLower();
+                    if (color == "red")
+                    {
+                        base.Image.ImageUrl = GetPicture("DotRed");
+                    }
+                    else if (color == "yellow")
+                    {
+                        base.Image.ImageUrl = GetPicture("DotYe");
+                    }
+                    else if (color == "green")
+                    {
+                        base.Image.ImageUrl = GetPicture("DotGn");
+                    }
+
+                    else
+                    {
+                        throw new Exception("Unsupported color wanted. (OnOffShowRound)");
+                    }                    
+                }
+                void getDeactivatedPicture(string color)
+                {
+                    color = color.ToLower();
+                    if (color == "red")
+                    {
+                        base.Image.ImageUrl = GetPicture("DotRedX");
+                    }
+                    else if (color == "yellow")
+                    {
+                        base.Image.ImageUrl = GetPicture("DotYeX");
+                    }
+                    else if (color == "green")
+                    {
+                        base.Image.ImageUrl = GetPicture("DotGnX");
+                    }
+
+                    else
+                    {
+                        throw new Exception("Unsupported color wanted. (OnOffShowRound)");
+                    }                                       
+                }
+                static string GetPicture(string Color)
+                {
+                    return "~/Pictures/" + Color + ".png";
+                }
+            }
+
+            public class Conveyor : HtmlGenericControl
+            {
+                public Conveyor(string idprefix, float top, float left, float size, bool moving, bool full)
+                {
+                    Image trak = new Image();
+
+                    if (moving)
+                    {
+                        if (full)
+                        {
+                            trak.ImageUrl = GetGif("ConveyOnFull");
+                            SetControlAbsolutePos(trak, 0, 0, 100);
+                        }
+                        else
+                        {
+                            trak.ImageUrl = GetGif("ConveyOn");
+                            SetControlAbsolutePos(trak, 64.2F, 18.4F, 81.7F); // perfect overlay
+                        }                        
+                    }
+                    else
+                    {
+                        if (full)
+                        {
+                            trak.ImageUrl = GetGif("ConveyOffFull");
+                            SetControlAbsolutePos(trak, 0, 0, 100);
+                        }
+                        else
+                        {
+                            trak.ImageUrl = GetGif("ConveyOff");
+                            SetControlAbsolutePos(trak, 64.2F, 18.4F, 81.7F); // perfect overlay
+                        }                        
+                    }                    
+
+                    SetControlAbsolutePos(this, top, left, size,size);
+                    Controls.Add(trak);                    
+                }
+
+                static string GetGif(string Pic)
+                {
+                    return "~/Pictures/" + Pic + ".gif";
+                }
+                static string GetPicture(string Pic)
+                {
+                    return "~/Pictures/" + Pic + ".png";
+                }
+            }
+               
+                
+
+                public class SettingsSubMenu : HtmlGenericControl
+                {
+                    public ImageButton exitButton;
+                    public ImageButton nextButton;
+                    public ImageButton PrevButton;
+                    HtmlGenericControl NameDiv = DIV.CreateDivAbsolute("5.2%", "5%", "30%", "8%");
+                    Label Name = new Label();
+
+                    Label Clock = new Label();
 
                 public SettingsSubMenu(int id, string Name_, bool hasExit, HtmlGenericControl content)
                 {
