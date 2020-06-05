@@ -1,347 +1,41 @@
-﻿19.05.2020  13:38:46 : Login try: Local
-19.05.2020  13:38:46 : Login Success: Local - User:  admin
-26.05.2020  08:24:03 : Login try: Local
-26.05.2020  08:24:03 : Login Success: Local - User:  admin
-26.05.2020  08:24:05 : Page visited: /Pages/Default... Exception of type 'System.Web.HttpUnhandledException' was thrown. Internal error inside PageDefault class constructor: Error was encountered inside AddStala() method. Error details: Object reference not set to an instance of an object.... Stack trace:    at System.Web.UI.Page.HandleError(Exception e)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at ASP.pages_default_aspx.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
-   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
-   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-26.05.2020  08:24:05 : Error inside method Redirect(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:06 : Page visited: /Pages/Default... Exception of type 'System.Web.HttpUnhandledException' was thrown. Internal error inside PageDefault class constructor: Error was encountered inside AddStala() method. Error details: Object reference not set to an instance of an object.... Stack trace:    at System.Web.UI.Page.HandleError(Exception e)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at ASP.pages_default_aspx.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
-   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
-   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-26.05.2020  08:24:06 : Error inside method Redirect(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:06 : Error inside method RedirectBack(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:06 : Page visited: /Pages/Default... Exception of type 'System.Web.HttpUnhandledException' was thrown. Internal error inside PageDefault class constructor: Error was encountered inside AddStala() method. Error details: Object reference not set to an instance of an object.... Stack trace:    at System.Web.UI.Page.HandleError(Exception e)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at ASP.pages_default_aspx.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
-   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
-   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-26.05.2020  08:24:06 : Error inside method Redirect(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:06 : Error inside method RedirectBack(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:44 : Login try: Local
-26.05.2020  08:24:44 : Login Success: Local - User:  admin
-26.05.2020  08:24:45 : Page visited: /Pages/Default... Exception of type 'System.Web.HttpUnhandledException' was thrown. Value cannot be null.
-Parameter name: child... Stack trace:    at System.Web.UI.Page.HandleError(Exception e)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at ASP.pages_default_aspx.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
-   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
-   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-26.05.2020  08:24:45 : Error inside method Redirect(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:46 : Page visited: /Pages/Default... Exception of type 'System.Web.HttpUnhandledException' was thrown. Value cannot be null.
-Parameter name: child... Stack trace:    at System.Web.UI.Page.HandleError(Exception e)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at ASP.pages_default_aspx.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
-   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
-   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-26.05.2020  08:24:46 : Error inside method Redirect(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:47 : Page visited: /Pages/Default... Exception of type 'System.Web.HttpUnhandledException' was thrown. Value cannot be null.
-Parameter name: child... Stack trace:    at System.Web.UI.Page.HandleError(Exception e)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at ASP.pages_default_aspx.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
-   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
-   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-26.05.2020  08:24:47 : Error inside method Redirect(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:47 : Error inside method RedirectBack(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:48 : Page visited: /Pages/Default... Exception of type 'System.Web.HttpUnhandledException' was thrown. Value cannot be null.
-Parameter name: child... Stack trace:    at System.Web.UI.Page.HandleError(Exception e)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at ASP.pages_default_aspx.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
-   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
-   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-26.05.2020  08:24:48 : Error inside method Redirect(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:49 : Error inside method RedirectBack(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:50 : Page visited: /Pages/Default... Exception of type 'System.Web.HttpUnhandledException' was thrown. Value cannot be null.
-Parameter name: child... Stack trace:    at System.Web.UI.Page.HandleError(Exception e)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at ASP.pages_default_aspx.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
-   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
-   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-26.05.2020  08:24:50 : Error inside method Redirect(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:50 : Error inside method RedirectBack(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:50 : Page visited: /Pages/Default... Exception of type 'System.Web.HttpUnhandledException' was thrown. Value cannot be null.
-Parameter name: child... Stack trace:    at System.Web.UI.Page.HandleError(Exception e)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at ASP.pages_default_aspx.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
-   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
-   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-26.05.2020  08:24:50 : Error inside method Redirect(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:50 : Error inside method RedirectBack(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:51 : Page visited: /Pages/Default... Exception of type 'System.Web.HttpUnhandledException' was thrown. Value cannot be null.
-Parameter name: child... Stack trace:    at System.Web.UI.Page.HandleError(Exception e)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at ASP.pages_default_aspx.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
-   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
-   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-26.05.2020  08:24:51 : Error inside method Redirect(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:51 : Error inside method RedirectBack(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:52 : Page visited: /Pages/Default... Exception of type 'System.Web.HttpUnhandledException' was thrown. Value cannot be null.
-Parameter name: child... Stack trace:    at System.Web.UI.Page.HandleError(Exception e)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at ASP.pages_default_aspx.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
-   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
-   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-26.05.2020  08:24:52 : Error inside method Redirect(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:52 : Error inside method RedirectBack(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:53 : Page visited: /Pages/Default... Exception of type 'System.Web.HttpUnhandledException' was thrown. Value cannot be null.
-Parameter name: child... Stack trace:    at System.Web.UI.Page.HandleError(Exception e)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at ASP.pages_default_aspx.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
-   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
-   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-26.05.2020  08:24:53 : Error inside method Redirect(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:53 : Error inside method RedirectBack(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:54 : Page visited: /Pages/Default... Exception of type 'System.Web.HttpUnhandledException' was thrown. Value cannot be null.
-Parameter name: child... Stack trace:    at System.Web.UI.Page.HandleError(Exception e)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at ASP.pages_default_aspx.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
-   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
-   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-26.05.2020  08:24:55 : Error inside method Redirect(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:55 : Error inside method RedirectBack(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:56 : Page visited: /Pages/Default... Exception of type 'System.Web.HttpUnhandledException' was thrown. Value cannot be null.
-Parameter name: child... Stack trace:    at System.Web.UI.Page.HandleError(Exception e)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at ASP.pages_default_aspx.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
-   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
-   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-26.05.2020  08:24:56 : Error inside method Redirect(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:56 : Error inside method RedirectBack(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:56 : Page visited: /Pages/Default... Exception of type 'System.Web.HttpUnhandledException' was thrown. Value cannot be null.
-Parameter name: child... Stack trace:    at System.Web.UI.Page.HandleError(Exception e)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at ASP.pages_default_aspx.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
-   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
-   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-26.05.2020  08:24:56 : Error inside method Redirect(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:24:56 : Error inside method RedirectBack(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  08:28:31 : Login try: Local
-26.05.2020  08:28:31 : Login Success: Local - User:  admin
-26.05.2020  09:13:39 : Login try: Local
-26.05.2020  09:13:39 : Login Success: Local - User:  admin
-26.05.2020  09:14:37 : Page visited: /Pages/Default... Exception of type 'System.Web.HttpUnhandledException' was thrown. The method or operation is not implemented.... Stack trace:    at System.Web.UI.Page.HandleError(Exception e)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at ASP.pages_default_aspx.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
-   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
-   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-26.05.2020  09:14:37 : Error inside method Redirect(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  09:14:37 : Error inside method RedirectBack(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  09:20:17 : Login try: Local
-26.05.2020  09:20:17 : Login Success: Local - User:  admin
-26.05.2020  09:21:18 : Login try: Local
-26.05.2020  09:21:18 : Login Success: Local - User:  admin
-26.05.2020  09:21:57 : Login try: Local
-26.05.2020  09:21:57 : Login Success: Local - User:  admin
-26.05.2020  09:23:54 : Login try: Local
-26.05.2020  09:23:54 : Login Success: Local - User:  admin
-26.05.2020  09:25:38 : Login try: Local
-26.05.2020  09:25:38 : Login Success: Local - User:  admin
-26.05.2020  09:29:29 : Login try: Local
-26.05.2020  09:29:29 : Login Success: Local - User:  admin
-26.05.2020  09:29:33 : Page visited: /Pages/Ventilacija... Exception of type 'System.Web.HttpUnhandledException' was thrown. An error has occurred because a control with id 'ctl15' could not be located or a different control is assigned to the same ID after postback. If the ID is not assigned, explicitly set the ID property of controls that raise postback events to avoid this error.... Stack trace:    at System.Web.UI.Page.HandleError(Exception e)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at ASP.pages_ventilacija_aspx.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
-   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
-   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
-   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
-   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-26.05.2020  09:29:33 : Error inside method Redirect(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  09:29:33 : Error inside method RedirectBack(). 1- Method GetCurrentPage() is reporting error. Response is not available in this context.
-26.05.2020  09:32:25 : Login try: Local
-26.05.2020  09:32:25 : Login Success: Local - User:  admin
-26.05.2020  09:38:18 : Login try: Local
-26.05.2020  09:38:18 : Login Success: Local - User:  admin
-26.05.2020  09:47:06 : Login try: Local
-26.05.2020  09:47:06 : Login Success: Local - User:  admin
-26.05.2020  09:47:06 : Redirected to: Default
-26.05.2020  09:47:06 : Redirected to: Default
-26.05.2020  09:47:07 : Redirected to: Advanced
-26.05.2020  09:47:20 : Redirected to: Default
+﻿05.06.2020  11:34:22 : Login try: Local
+05.06.2020  11:34:22 : Login Success: Local - User:  admin
+05.06.2020  11:34:22 : Redirected to: Default
+05.06.2020  11:34:22 : Redirected to: Default
+05.06.2020  11:34:25 : Redirected to: Default
+05.06.2020  11:34:27 : Redirected to: Default
+05.06.2020  11:34:28 : Redirected to: MasterMenu
+05.06.2020  11:34:29 : Redirected to: asdf
+05.06.2020  11:34:31 : Redirected to: Default
+05.06.2020  11:34:39 : Redirected to: MasterMenu
+05.06.2020  11:34:41 : Redirected to: Default
+05.06.2020  11:34:50 : Redirected to: Editor
+05.06.2020  11:35:13 : Login try: Local
+05.06.2020  11:35:13 : Login Success: Local - User:  admin
+05.06.2020  11:35:13 : Redirected to: Default
+05.06.2020  11:35:13 : Redirected to: Default
+05.06.2020  11:35:17 : Redirected to: Editor
+05.06.2020  11:36:53 : ConfigFile was changed, by user.
+05.06.2020  11:36:53 : Page refreshed.
+05.06.2020  11:37:01 : Page refreshed.
+05.06.2020  11:37:15 : Login try: Local
+05.06.2020  11:37:15 : Login Success: Local - User:  admin
+05.06.2020  11:37:15 : Redirected to: Default
+05.06.2020  11:37:15 : Redirected to: Default
+05.06.2020  11:44:22 : Login try: Local
+05.06.2020  11:44:22 : Login Success: Local - User:  admin
+05.06.2020  11:44:22 : Redirected to: Default
+05.06.2020  11:44:22 : Redirected to: Default
+05.06.2020  11:44:23 : Redirected to: asdf
+05.06.2020  11:44:37 : Redirected to: Editor
+05.06.2020  11:45:19 : Login try: Local
+05.06.2020  11:45:19 : Login Success: Local - User:  admin
+05.06.2020  11:45:19 : Redirected to: Default
+05.06.2020  11:45:19 : Redirected to: Default
+05.06.2020  11:45:20 : Redirected to: asdf
+05.06.2020  11:45:37 : Login try: Local
+05.06.2020  11:45:37 : Login Success: Local - User:  admin
+05.06.2020  11:45:37 : Redirected to: Default
+05.06.2020  11:45:37 : Redirected to: Default
+05.06.2020  11:45:38 : Redirected to: Advanced
+05.06.2020  11:45:44 : Redirected to: LogView

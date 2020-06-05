@@ -11,8 +11,7 @@ namespace WebApplication1
 {
 
     public static class Val // used to hold values that are same for all instances / users
-    {
-        public static ChartValues.ChartValuesLogger ChartValues;
+    {        
         public static Helper.Initialiser Initialiser = new Helper.Initialiser();
         public static LogoControler logocontroler;
         public static WarningManager WarningManager;
@@ -30,8 +29,7 @@ namespace WebApplication1
         {
             SysLog.Message = new SysLog.MessageManager();
             ScriptLoad();                                       // in new thread
-            guiController = new GuiController();
-            ChartValues = new ChartValues.ChartValuesLogger();  // in new thread
+            guiController = new GuiController();            
             WarningManager = new WarningManager();              // in new thread
             logocontroler = new LogoControler();                // in new thread
         }

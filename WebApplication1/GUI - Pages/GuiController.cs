@@ -16,15 +16,9 @@ namespace WebApplication1
         public Template Template_ { get; set; }
         public PageDefault PageDefault_ { get; set; }
         public PageAdvanced PageAdvanced_ { get; set; }
-        public PageMasterMenu PageMastermenu_ { get; set; }
-        public PageRazsvetljava PageRazsvetljava_ { get; set; }
-        public PageVreme PageVreme_ { get; set; }
+        public PageMasterMenu PageMastermenu_ { get; set; }       
         public PageEditor PageEditor_ { get; set; }
-        public PageLogView PageLogView_ { get; set; }
-        public PageVentilacija PageVentilacija_ { get; set; }
-        public PageVrataZavese PageVrataZavese_ { get; set; }
-        public PagePadavine PagePadavine_ { get; set; }
-        public PageMesalaPehala PageMesalaPehala_ { get; set; }
+        public PageLogView PageLogView_ { get; set; }        
 
         public PageLogin PageLogin_ { get; set; }
 

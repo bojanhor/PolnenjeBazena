@@ -25,10 +25,7 @@ namespace WebApplication1
         public Prop3 Prop3 { get; set; }
         public Prop4 Prop4 { get; set; }
         public Prop5 Prop5 { get; set; }
-        public Prop6 Prop6 { get; set; }
-        public Prop7 Prop7 { get; set; }
-        public Prop8 Prop8 { get; set; }        
-
+       
         public S7Client[] LOGO = new S7Client[Settings.Devices + 1];
 
         public Connection[] LOGOConnection = new Connection[Settings.Devices + 1];
@@ -179,11 +176,7 @@ namespace WebApplication1
                                 case 3: Prop3.SyncVars(); break;
                                 case 4: Prop4.SyncVars(); break;
                                 case 5: Prop5.SyncVars(); break;
-                                case 6: Prop6.SyncVars(); break;
-                                case 7: Prop7.SyncVars(); break;
-                                case 8: Prop8.SyncVars(); break;
-
-
+                               
                                 default:
                                     WL("Internal Error: Switch statement does not support this device", -2); LOGOConnection[device].connectionStatusLOGO = Connection.Status.Error; break;
 

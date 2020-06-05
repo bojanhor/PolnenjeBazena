@@ -24,216 +24,22 @@ namespace WebApplication1
                     btnID = _btnID;
                     ID = "Btn" + btnID;
                     this.ImageUrl = "~/Pictures/" + ID + ".png";
-                    Width = Unit.Percentage(95);
+                    Width = Unit.Percentage(95);                    
+                    this.Click += (sender, e) => MasterMenuButton_Click(sender, e, getLink(btnID-1));
+                }
 
+                private void MasterMenuButton_Click(object sender, ImageClickEventArgs e, string Link)
+                {
+                    Navigator.Redirect(Link);
+                }
+
+                string getLink(int ID)
+                {
+                    return XmlController.GetMenuDDItemLink((short)ID);
                 }
             }
 
-            public class Luc : HtmlGenericControl
-            {
-
-                public LucBtn button;
-                public ImageButton Zarnica1;
-                public ImageButton Zarnica0;
-                public Label Number1;
-                public Label Number0;
-                public int btnID;
-                public Helper.Position position;
-                public bool active = false;
-                public string address;
-                public readonly string deactivatedPicture = "~\\Pictures\\Zarnica.png";
-                public readonly string activatedPicture = "~\\Pictures\\Zarnica1.png";
-
-                public string Top
-                {
-                    set
-                    {
-                        Style.Remove(HtmlTextWriterStyle.Top);
-                        Style.Add(HtmlTextWriterStyle.Top, value + "%");
-                    }
-                }
-
-                public string Left
-                {
-                    set
-                    {
-                        Style.Remove(HtmlTextWriterStyle.Left);
-                        Style.Add(HtmlTextWriterStyle.Left, value + "%");
-                    }
-                }
-
-                private string width;
-                public string Width
-                {
-                    get
-                    {
-                        return width;
-                    }
-                    set
-                    {
-                        width = value;
-                        Style.Remove(HtmlTextWriterStyle.Width);
-                        Style.Add(HtmlTextWriterStyle.Width, value + "%");
-                        Style.Add(HtmlTextWriterStyle.Height, Convert.ToInt32(value) * 2 + "%");
-                    }
-                }
-
-
-                public Luc(int _btnID)
-                {
-                    try
-                    {
-                        button = new LucBtn(this, _btnID);
-                        btnID = _btnID;
-                        ID = "Luc" + btnID;
-                        Style.Add(HtmlTextWriterStyle.Position, "absolute");
-
-                        position = XmlController.GetPositionLucForDefaultScreen(btnID);
-
-                        Top = position.top.ToString().Replace(",", ".");
-                        Left = position.left.ToString().Replace(",", ".");
-                        Width = position.width.ToString().Replace(",", ".");
-
-                        GetZarnicaValue();
-                        AddImageButton();
-                        AddNumber();
-                        AddButtonOverlay();
-
-
-                    }
-                    catch (Exception ex)
-                    {
-                        throw new Exception("GControls.Luc(id) error initializing." + ex.Message);
-                    }
-
-                    button.Click += Button_Click;
-
-                }
-
-                void GetZarnicaValue()
-                {
-                    if (Val.logocontroler.Prop1 != null)
-                    {
-                        active = Val.logocontroler.Prop1.LucStatus_ReadToPC[btnID].Value_bool;
-                    }
-                    
-                }
-
-                private void Button_Click(object sender, ImageClickEventArgs e)
-                {
-                    var l = Val.logocontroler.Prop1.LucStatus_ReadToPC[btnID].Value;
-
-                    var writeVal = Val.logocontroler.Prop1.LucStatus_WriteToPLC[btnID];
-                    writeVal.SendPulse();
-
-                    GlobalManagement.ForceRefreshValues(1); // prop number
-
-                }
-
-                void AddNumber()
-                {
-                    Number1 = new Label();
-                    Number0 = new Label();
-
-                    var size = 100;
-
-                    Number1.Text = btnID + "";
-                    Number1.Style.Add(HtmlTextWriterStyle.Position, "absolute");
-                    Number1.Style.Add(HtmlTextWriterStyle.Top, "32%");
-                    Number1.Style.Add(HtmlTextWriterStyle.Left, "0%");
-                    Number1.Style.Add(HtmlTextWriterStyle.Width, size + "%");
-                    Number1.Style.Add(HtmlTextWriterStyle.Height, size + "%");
-                    Number1.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
-                    Number1.Style.Add(HtmlTextWriterStyle.VerticalAlign, "middle");
-                    Number1.Style.Add(HtmlTextWriterStyle.FontSize, Helper.FloatToStringWeb((position.width / 3.5F), "vw"));
-                    Number1.Style.Add(HtmlTextWriterStyle.Color, "black");
-                    Number1.Style.Add(HtmlTextWriterStyle.ZIndex, "9");
-
-                    Number0.Text = btnID + "";
-                    Number0.Style.Add(HtmlTextWriterStyle.Position, "absolute");
-                    Number0.Style.Add(HtmlTextWriterStyle.Top, "32%");
-                    Number0.Style.Add(HtmlTextWriterStyle.Left, "0%");
-                    Number0.Style.Add(HtmlTextWriterStyle.Width, size + "%");
-                    Number0.Style.Add(HtmlTextWriterStyle.Height, size + "%");
-                    Number0.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
-                    Number0.Style.Add(HtmlTextWriterStyle.VerticalAlign, "middle");
-                    Number0.Style.Add(HtmlTextWriterStyle.FontSize, Helper.FloatToStringWeb((position.width / 3.5F), "vw"));
-                    Number0.Style.Add(HtmlTextWriterStyle.Color, "white");
-                    Number0.Style.Add(HtmlTextWriterStyle.ZIndex, "9");
-
-                    if (active)
-                    {
-                        Controls.Add(Number1);
-                    }
-                    else
-                    {
-                        Controls.Add(Number0);
-                    }
-
-                }
-
-                void AddImageButton()
-                {
-                    var size = 100;
-                    Zarnica0 = new ImageButton();
-                    Zarnica1 = new ImageButton
-                    {
-                        ImageUrl = activatedPicture// + "?" + DateTime.Now;
-                    };
-                    Zarnica0.ImageUrl = deactivatedPicture;// + "?" + DateTime.Now;
-
-                    Zarnica0.ID = "ZarnicaOff" + btnID;
-                    Zarnica0.Style.Add(HtmlTextWriterStyle.Position, "absolute");
-                    Zarnica0.Style.Add(HtmlTextWriterStyle.Top, "0%");
-                    Zarnica0.Style.Add(HtmlTextWriterStyle.Left, "0%");
-                    Zarnica0.Style.Add(HtmlTextWriterStyle.Width, size + "%");
-                    Zarnica0.Style.Add(HtmlTextWriterStyle.Height, size + "%");
-                    Zarnica0.Style.Add(HtmlTextWriterStyle.ZIndex, "8");
-
-                    Zarnica1.ID = "ZarnicaOn" + btnID;
-                    Zarnica1.Style.Add(HtmlTextWriterStyle.Position, "absolute");
-                    Zarnica1.Style.Add(HtmlTextWriterStyle.Top, "0%");
-                    Zarnica1.Style.Add(HtmlTextWriterStyle.Left, "0%");
-                    Zarnica1.Style.Add(HtmlTextWriterStyle.Width, size + "%");
-                    Zarnica1.Style.Add(HtmlTextWriterStyle.Height, size + "%");
-                    Zarnica1.Style.Add(HtmlTextWriterStyle.ZIndex, "8");
-
-                    if (active)
-                    {
-                        Controls.Add(Zarnica1);
-                    }
-                    else
-                    {
-                        Controls.Add(Zarnica0);
-                    }
-                }
-
-                void AddButtonOverlay()
-                {
-                    var size = 100;
-
-                    button.ID = "Zarnica_Btn" + btnID;
-                    button.Style.Add(HtmlTextWriterStyle.Position, "absolute");
-                    button.Style.Add(HtmlTextWriterStyle.Top, "0%");
-                    button.Style.Add(HtmlTextWriterStyle.Left, "0%");
-                    button.Style.Add(HtmlTextWriterStyle.Width, size + "%");
-                    button.Style.Add(HtmlTextWriterStyle.Height, size + "%");
-                    button.Style.Add(HtmlTextWriterStyle.ZIndex, "10");
-                    button.Style.Add(HtmlTextWriterStyle.BackgroundColor, "transparent");
-                    Controls.Add(button);
-                }
-            }
-
-            public class LucSet : Luc
-            {
-
-                public LucSet(int _btnID, UpdatePanel Parent)
-                    : base(_btnID)
-                {
-
-                }
-            }
-
+                      
             public class LucBtn : TransparentButton
             {
                 public HtmlGenericControl ParentControl;

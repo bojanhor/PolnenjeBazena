@@ -16,9 +16,12 @@ namespace WebApplication1
         bool firstSync = true;
         int poolCnt = 1;
 
+        public PlcVars.LogoClock LogoClock;
+
         public PropComm(Sharp7.S7Client client)
         {
             Client = client;
+            LogoClock = new PlcVars.LogoClock(this);
         }
 
         public void SyncVars()
