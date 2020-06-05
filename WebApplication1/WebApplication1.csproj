@@ -466,6 +466,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="GUI - Pages Custom\GuiController - EmptyTemplate.cs" />
     <Compile Include="LogoControl\Change\Prop3.cs" />
     <Compile Include="LogoControl\Change\Prop4.cs" />
     <Compile Include="LogoControl\Change\Prop5.cs" />
