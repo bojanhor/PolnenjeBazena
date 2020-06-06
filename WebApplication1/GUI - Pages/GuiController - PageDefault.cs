@@ -206,7 +206,7 @@ namespace WebApplication1
 
             void Trak()
             {
-                GControls.Conveyor c = new GControls.Conveyor("convey", 20,30,20, true, true);
+                GControls.Conveyor c = new GControls.Conveyor("convey", 20,30,20, Val.logocontroler.Prop1. true);
                 
                 divMaster.Controls.Add(c);
                 
