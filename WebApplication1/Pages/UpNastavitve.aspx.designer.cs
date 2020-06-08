@@ -11,7 +11,7 @@ namespace WebApplication1.Pages
 {
 
 
-    public partial class PageDefault
+    public partial class UpNastavitve
     {
 
         /// <summary>

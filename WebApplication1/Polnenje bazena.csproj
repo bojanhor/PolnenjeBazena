@@ -146,6 +146,7 @@
     <Content Include="Logs\Log.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Pages\UpNastavitve.aspx" />
     <Content Include="Pages\Template.aspx" />
     <Content Include="Pages\PleaseWait.aspx" />
     <Content Include="Pages\Blocked.aspx" />
@@ -171,6 +172,8 @@
     <Content Include="Pictures\alertNoExitBtn.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Pictures\Btn1.png" />
+    <Content Include="Pictures\Btn2.png" />
     <Content Include="Pictures\Circ1.png" />
     <Content Include="Pictures\ConveyOn.gif" />
     <Content Include="Pictures\DirectionArrowDn.png">
@@ -194,6 +197,7 @@
     <Content Include="Pictures\dwn.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Pictures\dwn_press.png" />
     <Content Include="Pictures\EmptyBtnWide.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -206,6 +210,7 @@
     <Content Include="Pictures\groupbox.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Pictures\gui_separator2.png" />
     <Content Include="Pictures\MasterPic.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -218,15 +223,14 @@
     <Content Include="Pictures\nxt.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Pictures\nxt_press.png" />
     <Content Include="Pictures\prv.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Pictures\prv_press.png" />
     <Content Include="Pictures\Start1.png" />
     <Content Include="Pictures\Stop1.png" />
     <Content Include="Pictures\TemplateImage.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Pictures\Btn10.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Pictures\DDBGIMG.png">
@@ -268,6 +272,7 @@
     <Content Include="Pictures\up.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Pictures\up_press.png" />
     <Content Include="Pictures\Warning.png" />
     <Content Include="Pictures\Zig1.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -407,6 +412,14 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="GUI - Pages Custom\GuiController - UpNastavitve.cs" />
+    <Compile Include="Pages\UpNastavitve.aspx.cs">
+      <DependentUpon>UpNastavitve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UpNastavitve.aspx.designer.cs">
+      <DependentUpon>UpNastavitve.aspx</DependentUpon>
+    </Compile>
     <Compile Include="StanjeProcesa.cs" />
     <Compile Include="GUI - Pages Custom\GuiController - EmptyTemplate.cs" />
     <Compile Include="LogoControl\Change\Prop3.cs" />

@@ -8,6 +8,7 @@ using System;
 using System.Web.SessionState;
 using Microsoft.Ajax.Utilities;
 using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.DataVisualization.Charting;
 
 namespace WebApplication1
 {
@@ -555,7 +556,7 @@ namespace WebApplication1
                 public string deactivatedPicture;
 
 
-                public OnOffShow(string id, bool activated, Helper.Position position)
+                public OnOffShow(string id, bool activated, Helper.Position position, string activatedPicture, string deactivatedPicture)
                 {
                     ID = id;
                                         
@@ -598,29 +599,24 @@ namespace WebApplication1
             public class OnOffShowRound : OnOffShow
             {                 
                 public OnOffShowRound(string id, bool activated, Helper.Position position, string color) 
-                    :base(id, activated, position)
+                    :base(id, activated, position, getActivatedPicture(color), getDeactivatedPicture(color))
                 {                    
-                    ID = id;
-                    getActivatedPicture(color);
-                    getDeactivatedPicture(color);
-                    base.Image.BackColor = System.Drawing.Color.Transparent;
-                    base.Image.ForeColor = System.Drawing.Color.Transparent;
+                                                    
                 }
-
-                void getActivatedPicture(string color)
+                static string getActivatedPicture(string color)
                 {                    
                     color = color.ToLower();
                     if (color == "red")
                     {
-                        base.Image.ImageUrl = GetPicture("DotRed");
+                        return GetPicture("DotRed");
                     }
                     else if (color == "yellow")
                     {
-                        base.Image.ImageUrl = GetPicture("DotYe");
+                        return GetPicture("DotYe");
                     }
                     else if (color == "green")
                     {
-                        base.Image.ImageUrl = GetPicture("DotGn");
+                        return GetPicture("DotGn");
                     }
 
                     else
@@ -628,20 +624,20 @@ namespace WebApplication1
                         throw new Exception("Unsupported color wanted. (OnOffShowRound)");
                     }                    
                 }
-                void getDeactivatedPicture(string color)
+                static string getDeactivatedPicture(string color)
                 {
                     color = color.ToLower();
                     if (color == "red")
                     {
-                        base.Image.ImageUrl = GetPicture("DotRedX");
+                        return GetPicture("DotRedX");
                     }
                     else if (color == "yellow")
                     {
-                        base.Image.ImageUrl = GetPicture("DotYeX");
+                        return GetPicture("DotYeX");
                     }
                     else if (color == "green")
                     {
-                        base.Image.ImageUrl = GetPicture("DotGnX");
+                        return GetPicture("DotGnX");
                     }
 
                     else
@@ -660,7 +656,8 @@ namespace WebApplication1
                 public Conveyor(string idprefix, float top, float left, float size, bool moving, bool full)
                 {
                     Image trak = new Image();
-
+                   
+                    
                     if (moving)
                     {
                         if (full)
@@ -671,7 +668,7 @@ namespace WebApplication1
                         else
                         {
                             trak.ImageUrl = GetGif("ConveyOn");
-                            SetControlAbsolutePos(trak, 64.2F, 18.4F, 81.7F); // perfect overlay
+                            SetControlAbsolutePos(trak, 45, 18.4F, 81.7F); // perfect overlay
                         }                        
                     }
                     else
@@ -684,7 +681,7 @@ namespace WebApplication1
                         else
                         {
                             trak.ImageUrl = GetGif("ConveyOff");
-                            SetControlAbsolutePos(trak, 64.2F, 18.4F, 81.7F); // perfect overlay
+                            SetControlAbsolutePos(trak, 45, 18.4F, 81.7F); // perfect overlay
                         }                        
                     }                    
 
@@ -701,10 +698,94 @@ namespace WebApplication1
                     return "~/Pictures/" + Pic + ".png";
                 }
             }
-               
+
+            public class DirectionButton : ImageButtonWithID
+            {               
+                public Direction direction { get; private set; }
+                public DirectionButton(string ID_prefix, int btnID_, bool pressed, Direction direction) :base(ID_prefix, btnID_)
+                {
+                    this.direction = direction;
+
+                    if (direction == Direction.Up)
+                    {
+                        if (pressed)
+                        {
+                            this.ImageUrl = "~/Pictures/up_press.png";
+                        }
+                        else
+                        {
+                            this.ImageUrl = "~/Pictures/up.png";
+                        }                        
+                    }
+                    else if (direction == Direction.Down)
+                    {
+                        if (pressed)
+                        {
+                            this.ImageUrl = "~/Pictures/dwn_press.png";
+                        }
+                        else
+                        {
+                            this.ImageUrl = "~/Pictures/dwn.png";
+                        }                        
+                    }
+                    else if (direction == Direction.Left)
+                    {
+                        if (pressed)
+                        {
+                            this.ImageUrl = "~/Pictures/prv_press.png";
+                        }
+                        else
+                        {
+                            this.ImageUrl = "~/Pictures/prv.png";
+                        }                        
+                    }
+                    else if (direction == Direction.Right)
+                    {
+                        if (pressed)
+                        {
+                            this.ImageUrl = "~/Pictures/nxt_press.png";
+                        }
+                        else
+                        {
+                            this.ImageUrl = "~/Pictures/nxt.png";
+                        }                        
+                    }
+
+                }
+                public enum Direction
+                {
+                    Up,Down,Left,Right
+                }
+            }
+
+            public class JoystickDirection : HtmlGenericControl
+            {
+                public DirectionButton btn_up { get; private set; }
+                public DirectionButton btn_dn { get; private set; }
+                public DirectionButton btn_l { get; private set; }
+                public DirectionButton btn_r { get; private set; }
+                GroupBox g;
+                public JoystickDirection(int top, int left, int size, bool upPressed, bool dwnPressed, bool lftPressed, bool rghtPressen)
+                {                    
+                    var sizeDwn = 20;
+                    var widthMltply = size / 2;
+                    var cntrIcon = 33;
+                
+                    btn_up = new DirectionButton("Joy", 1, upPressed, DirectionButton.Direction.Up); SetControlAbsolutePos(btn_up, 5, cntrIcon, sizeDwn*1.9F);
+                    btn_dn = new DirectionButton("Joy", 2, dwnPressed, DirectionButton.Direction.Down); SetControlAbsolutePos(btn_dn, 75, cntrIcon, sizeDwn*1.9F);
+                    btn_l = new DirectionButton("Joy", 3, lftPressed, DirectionButton.Direction.Left); SetControlAbsolutePos(btn_l, 32, 5, sizeDwn);
+                    btn_r = new DirectionButton("Joy", 4, rghtPressen, DirectionButton.Direction.Right); SetControlAbsolutePos(btn_r, 32, cntrIcon + 43, sizeDwn);
+                    g = new GroupBox(0, 0, 100, 100);
+
+                    SetControlAbsolutePos(this, top, left, widthMltply, size);
+
+                    g.Controls.Add(btn_up); g.Controls.Add(btn_dn); g.Controls.Add(btn_l); g.Controls.Add(btn_r);
+                    Controls.Add(g);
+                }
+            }
                 
 
-                public class SettingsSubMenu : HtmlGenericControl
+            public class SettingsSubMenu : HtmlGenericControl
                 {
                     public ImageButton exitButton;
                     public ImageButton nextButton;
@@ -1912,7 +1993,7 @@ namespace WebApplication1
             {
                 public Timer Timer;
                 AsyncPostBackTrigger ap;
-
+                
                 public UpdatePanelFull(string ID, int intervalUpdate)
                 {
                     Timer = new Timer();
@@ -1923,11 +2004,32 @@ namespace WebApplication1
                     ap.ControlID = Timer.ID;
                     ContentTemplateContainer.Controls.Add(Timer);
                     Triggers.Add(ap);
+                    this.UpdateMode = UpdatePanelUpdateMode.Conditional;
                 }
 
                 public void Controls_Add(Control c)
                 {
                     this.ContentTemplateContainer.Controls.Add(c);
+                }
+
+                public bool IsUpdating(Page page)
+                {
+                    string controlName = page.Request.Form["__EVENTTARGET"];
+                    if (!string.IsNullOrEmpty(controlName))
+                    {
+                        var control = page.FindControl(controlName);
+                        if (control != null)
+                        {
+                            if (control.ID == Timer.ID)
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                    return false;
+
+
+
                 }
 
             }

@@ -12,8 +12,8 @@ namespace WebApplication1.Pages
               
         protected void Page_Load(object sender, EventArgs e)
         {
-            Navigator.EveryPageProtocol("Template", this, Session, TemplateClassID);
-            Val.guiController.TemplatePage = new GuiController.EmptyTemplatePage(this, Session);           
+            Navigator.EveryPageProtocol("Template", this, Session, TemplateClass);
+            Val.guiController.PageTemplate_ = new GuiController.EmptyTemplatePage(this, Session);           
 
 
             Initialise();           

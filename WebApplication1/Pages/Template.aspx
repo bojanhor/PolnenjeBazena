@@ -15,7 +15,7 @@
 <body>    
     <form id="form1" runat="server">
         <asp:ScriptManager ID="Scriptmanager" runat="server"></asp:ScriptManager>
-        <div id="TemplateClassID" class="TemplateClass" runat="server">
+        <div id="TemplateClass" class="TemplateClass" runat="server">
             
             
 

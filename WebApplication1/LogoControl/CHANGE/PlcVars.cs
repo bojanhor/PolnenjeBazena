@@ -157,7 +157,7 @@ namespace WebApplication1
                 }
             }
 
-            public short? Value_short
+            public short Value_short
             {
                 get
                 {
@@ -172,10 +172,9 @@ namespace WebApplication1
                 }
                 set
                 {
-                    if (value != null)
-                    {
-                        ReadFromPCtoBuffer(value);
-                    }
+
+                    ReadFromPCtoBuffer(value);
+
                 }
             }
 
@@ -1182,6 +1181,11 @@ namespace WebApplication1
                 }
             }
 
+            public void ToggleValue()
+            {
+                Value_bool = !Value_bool;                
+            }
+            
             private bool? PLCval;
             private bool? PCval;
             private bool directionToPLC = false;
@@ -1358,9 +1362,20 @@ namespace WebApplication1
         public class AlarmMessage : Bit 
         {
             public string Message { get; private set; }
-            public AlarmMessage(PropComm prop, BitAddress TypeAndAdress, string MessageIfTrue) : base(prop, TypeAndAdress, false)
+            public bool InvertState = false;
+            public bool Emergency = false;
+            
+            public AlarmMessage(PropComm prop, BitAddress TypeAndAdress, string Message , bool invertState, bool Emergency) : base(prop, TypeAndAdress, false)
             {
-                Message = MessageIfTrue;                
+                InvertState = invertState;
+                this.Emergency = Emergency;
+                this.Message = Message;                
+                AllAlarmMessageVars.Add(this);
+            }
+            public AlarmMessage(PropComm prop, BitAddress TypeAndAdress, string Message) : base(prop, TypeAndAdress, false)
+            {
+                InvertState = false;
+                this.Message = Message;
                 AllAlarmMessageVars.Add(this);
             }
         }

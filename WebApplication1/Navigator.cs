@@ -377,6 +377,11 @@ namespace WebApplication1
             // Login determine
             var loginBuff = session[SessionHelper.LoggedIn]; // gets login state from current session    
 
+            if (XmlController.IsDebugEnabled())
+            {
+                return;
+            }
+
             if (loginBuff != null) // if there is no login state in session state
             {
                 if (loginBuff.Equals(Val.LoggedIn))

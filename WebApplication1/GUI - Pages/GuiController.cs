@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
-
+using WebApplication1.Pages;
 
 namespace WebApplication1
 {
@@ -21,7 +21,9 @@ namespace WebApplication1
         public PageLogView PageLogView_ { get; set; }   
         public PageLogin PageLogin_ { get; set; }
 
-        public EmptyTemplatePage TemplatePage { get; set; }
+        public PageUpNastavitve UpNastavitve_ { get; set; }
+
+        public EmptyTemplatePage PageTemplate_ { get; set; }
 
         public GuiController()  
         {

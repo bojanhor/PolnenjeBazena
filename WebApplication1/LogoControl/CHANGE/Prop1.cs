@@ -35,7 +35,7 @@ namespace WebApplication1
 
         public PlcVars.Bit ReadKSX1; public PlcVars.Bit ReadKSX2; public PlcVars.Bit ReadKSY1; public PlcVars.Bit ReadKSY2;
 
-        public PlcVars.Bit Inicializacija; public PlcVars.Bit Korak1; public PlcVars.Bit Korak2; public PlcVars.Bit Korak3; public PlcVars.Bit Korak4;
+        public PlcVars.Bit Inicializacija; public PlcVars.Bit Korak1; public PlcVars.Bit KorakZigZag1; public PlcVars.Bit Korak3; public PlcVars.Bit KorakZigZag2;
 
         public PlcVars.Bit InitCircle; public PlcVars.Bit KorakCircle1; public PlcVars.Bit KorakCircle2; public PlcVars.Bit KorakCircle3; public PlcVars.Bit KorakCircle4;
 
@@ -47,77 +47,98 @@ namespace WebApplication1
 
         public PlcVars.Word TimeZigY;
 
-        public PlcVars.Bit SemaforZe; public PlcVars.Bit SemaforRd; public PlcVars.Bit SemaforYe;
+        public PlcVars.Bit SemaforGn; public PlcVars.Bit SemaforRd; public PlcVars.Bit SemaforYe;
+
+        public PlcVars.Word PosX; public PlcVars.Word PosY;
+
+        // alarms
+        public PlcVars.Bit Alarm_goba;
+        public PlcVars.Bit Alarm_zavesa1;
+        public PlcVars.Bit Alarm_zavesa2;
+        public PlcVars.Bit Alarm_FreqX;
+        public PlcVars.Bit Alarm_FreqY;
+        public PlcVars.Bit AlarmInit;
 
 
         public Prop1(Sharp7.S7Client client):base(client)
-        {
-            Ustavljeno = new PlcVars.Bit(this, new PlcVars.BitAddress(1, 0), false);
-            Rocno_read = new PlcVars.Bit(this, new PlcVars.BitAddress(2, 0), false);
-            Avtomat_read = new PlcVars.Bit(this, new PlcVars.BitAddress(3, 0), false);
-            CakanjeMateriala = new PlcVars.Bit(this, new PlcVars.BitAddress(4, 0), false);
-            CakanjeUkaza = new PlcVars.Bit(this, new PlcVars.BitAddress(5, 0), false);
+        {   
+            Circle = new PlcVars.Bit(this, new PlcVars.BitAddress(9, 0), true) { SyncEvery_X_Time = 2 };
+            ZigZag = new PlcVars.Bit(this, new PlcVars.BitAddress(8, 0), true) { SyncEvery_X_Time = 2 };
+            Start = new PlcVars.Bit(this, new PlcVars.BitAddress(10, 0), true) { SyncEvery_X_Time = 2 };
+            Stop = new PlcVars.Bit(this, new PlcVars.BitAddress(12, 0), true) { SyncEvery_X_Time = 2 };
 
-            Circle = new PlcVars.Bit(this, new PlcVars.BitAddress(9, 0), true);
-            ZigZag = new PlcVars.Bit(this, new PlcVars.BitAddress(8, 0), true);
-            Start = new PlcVars.Bit(this, new PlcVars.BitAddress(10, 0), true);
-            Stop = new PlcVars.Bit(this, new PlcVars.BitAddress(12, 0), true);
+            Man_AutoReadState = new PlcVars.Bit(this, new PlcVars.BitAddress(13, 0), false) { SyncEvery_X_Time = 3 };
 
-            Man_AutoReadState = new PlcVars.Bit(this, new PlcVars.BitAddress(13, 0), false);
+            Auto = new PlcVars.Bit(this, new PlcVars.BitAddress(14, 0), true) { SyncEvery_X_Time = 2 };
+            ResetPulse = new PlcVars.Bit(this, new PlcVars.BitAddress(16, 0), true) { SyncEvery_X_Time = 2 };
 
-            Auto = new PlcVars.Bit(this, new PlcVars.BitAddress(14, 0), true);
-            ResetPulse = new PlcVars.Bit(this, new PlcVars.BitAddress(16, 0), true);
+            DirX1 = new PlcVars.Bit(this, new PlcVars.BitAddress(20, 0), false) { SyncEvery_X_Time = 2 };
+            DirX2 = new PlcVars.Bit(this, new PlcVars.BitAddress(22, 0), false) { SyncEvery_X_Time = 2 };
+            DirY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(24, 0), false) { SyncEvery_X_Time = 2 };
+            DirY2 = new PlcVars.Bit(this, new PlcVars.BitAddress(26, 0), false) { SyncEvery_X_Time = 2 };
+            TrakRead = new PlcVars.Bit(this, new PlcVars.BitAddress(28, 0), false) { SyncEvery_X_Time = 3 };
 
-            DirX1 = new PlcVars.Bit(this, new PlcVars.BitAddress(20, 0), false);
-            DirX2 = new PlcVars.Bit(this, new PlcVars.BitAddress(22, 0), false);
-            DirY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(24, 0), false);
-            DirY2 = new PlcVars.Bit(this, new PlcVars.BitAddress(26, 0), false);
-            TrakRead = new PlcVars.Bit(this, new PlcVars.BitAddress(28, 0), false);
+            Trak_muss = new PlcVars.Bit(this, new PlcVars.BitAddress(29, 0), true) { SyncEvery_X_Time = 3 };
 
-            Trak_muss = new PlcVars.Bit(this, new PlcVars.BitAddress(29, 0), true);
+            SymPrisotMat = new PlcVars.Bit(this, new PlcVars.BitAddress(30, 0), true) { SyncEvery_X_Time = 3 };
+            ReadPrisotMat = new PlcVars.Bit(this, new PlcVars.BitAddress(32, 0), false) { SyncEvery_X_Time = 3 };
 
-            SymPrisotMat = new PlcVars.Bit(this, new PlcVars.BitAddress(30, 0), true);
-            ReadPrisotMat = new PlcVars.Bit(this, new PlcVars.BitAddress(32, 0), false);
+            SymKSX1 = new PlcVars.Bit(this, new PlcVars.BitAddress(40, 0), true) {SyncEvery_X_Time = 4 };
+            SymKSX2 = new PlcVars.Bit(this, new PlcVars.BitAddress(42, 0), true) { SyncEvery_X_Time = 4 };
+            SymKSY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(44, 0), true) { SyncEvery_X_Time = 4 };
+            SymKSY2 = new PlcVars.Bit(this, new PlcVars.BitAddress(46, 0), true) { SyncEvery_X_Time = 4 };
 
-            SymKSX1 = new PlcVars.Bit(this, new PlcVars.BitAddress(40, 0), true) {SyncEvery_X_Time = 2 };
-            SymKSX2 = new PlcVars.Bit(this, new PlcVars.BitAddress(42, 0), true) { SyncEvery_X_Time = 2 };
-            SymKSY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(44, 0), true) { SyncEvery_X_Time = 2 };
-            SymKSY2 = new PlcVars.Bit(this, new PlcVars.BitAddress(46, 0), true) { SyncEvery_X_Time = 2 };
+            ReadKSX1 = new PlcVars.Bit(this, new PlcVars.BitAddress(50, 0), false) { SyncEvery_X_Time = 3 };
+            ReadKSX2 = new PlcVars.Bit(this, new PlcVars.BitAddress(52, 0), false) { SyncEvery_X_Time = 3 };
+            ReadKSY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(54, 0), false) { SyncEvery_X_Time = 3 };
+            ReadKSY2 = new PlcVars.Bit(this, new PlcVars.BitAddress(56, 0), false) { SyncEvery_X_Time = 3 };
+                        
+            JoyStickCommandX1 = new PlcVars.Bit(this, new PlcVars.BitAddress(90, 0), true) { SyncEvery_X_Time = 3 };
+            JoyStickCommandX2 = new PlcVars.Bit(this, new PlcVars.BitAddress(91, 0), true) { SyncEvery_X_Time = 3 };
+            JoyStickCommandY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(92, 0), true) { SyncEvery_X_Time = 3 };
+            JoyStickCommandY2 = new PlcVars.Bit(this, new PlcVars.BitAddress(93, 0), true) { SyncEvery_X_Time = 3 };
 
-            ReadKSX1 = new PlcVars.Bit(this, new PlcVars.BitAddress(50, 0), false);
-            ReadKSX2 = new PlcVars.Bit(this, new PlcVars.BitAddress(52, 0), false);
-            ReadKSY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(54, 0), false);
-            ReadKSY2 = new PlcVars.Bit(this, new PlcVars.BitAddress(56, 0), false);
+            SpeedX = new PlcVars.Word(this, new PlcVars.WordAddress(100), false) { SyncEvery_X_Time = 4 };
+            SpeedY = new PlcVars.Word(this, new PlcVars.WordAddress(104), false) { SyncEvery_X_Time = 4 };
 
-            Inicializacija = new PlcVars.Bit(this, new PlcVars.BitAddress(60, 0), false);
-            Korak1 = new PlcVars.Bit(this, new PlcVars.BitAddress(60, 0), false);
-            Korak2 = new PlcVars.Bit(this, new PlcVars.BitAddress(61, 0), false);
-            Korak3 = new PlcVars.Bit(this, new PlcVars.BitAddress(62, 0), false);
-            Korak4 = new PlcVars.Bit(this, new PlcVars.BitAddress(63, 0), false);
+            Trak_speedSet = new PlcVars.Word(this, new PlcVars.WordAddress(106), true) { SyncEvery_X_Time = 3 };
 
-            InitCircle = new PlcVars.Bit(this, new PlcVars.BitAddress(70, 0), false);
-            KorakCircle1 = new PlcVars.Bit(this, new PlcVars.BitAddress(71, 0), false);
-            KorakCircle2 = new PlcVars.Bit(this, new PlcVars.BitAddress(72, 0), false);
-            KorakCircle3 = new PlcVars.Bit(this, new PlcVars.BitAddress(73, 0), false);
-            KorakCircle4 = new PlcVars.Bit(this, new PlcVars.BitAddress(74, 0), false);
+            Trak_speedRead = new PlcVars.Word(this, new PlcVars.WordAddress(108), false) { SyncEvery_X_Time = 3 };
 
-            JoyStickCommandX1 = new PlcVars.Bit(this, new PlcVars.BitAddress(90, 0), true);
-            JoyStickCommandX2 = new PlcVars.Bit(this, new PlcVars.BitAddress(91, 0), true);
-            JoyStickCommandY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(92, 0), true);
-            JoyStickCommandY2 = new PlcVars.Bit(this, new PlcVars.BitAddress(93, 0), true);
+            TimeZigY = new PlcVars.Word(this, new PlcVars.WordAddress(110), true) { SyncEvery_X_Time = 4 };
 
-            SpeedX = new PlcVars.Word(this, new PlcVars.WordAddress(100), false) { SyncEvery_X_Time = 2 };
-            SpeedY = new PlcVars.Word(this, new PlcVars.WordAddress(104), false) { SyncEvery_X_Time = 2 };
+            SemaforGn = new PlcVars.Bit(this, new PlcVars.BitAddress(200, 0), false) { SyncEvery_X_Time = 2 };
+            SemaforRd = new PlcVars.Bit(this, new PlcVars.BitAddress(202, 0), false) { SyncEvery_X_Time = 2 };
+            SemaforYe = new PlcVars.Bit(this, new PlcVars.BitAddress(204, 0), false) { SyncEvery_X_Time = 2 };
 
-            Trak_speedSet = new PlcVars.Word(this, new PlcVars.WordAddress(106), true);
+            PosX = new PlcVars.Word(this, new PlcVars.WordAddress(700), false);
+            PosY = new PlcVars.Word(this, new PlcVars.WordAddress(702), false);
 
-            Trak_speedRead = new PlcVars.Word(this, new PlcVars.WordAddress(108), false);
+            // Alarms
 
-            TimeZigY = new PlcVars.Word(this, new PlcVars.WordAddress(110), true) { SyncEvery_X_Time = 2 };
+            Alarm_goba = new PlcVars.AlarmMessage(this, new PlcVars.BitAddress(310, 0), "AKTIVIRANA JE GOBASTA TIPKA!",true, true) { SyncEvery_X_Time = 3 };
+            Alarm_zavesa1 = new PlcVars.AlarmMessage(this, new PlcVars.BitAddress(311 , 0), "AKTIVIRANA JE ZAVESA 1!", true, true) { SyncEvery_X_Time = 3 };
+        Alarm_zavesa2 = new PlcVars.AlarmMessage(this, new PlcVars.BitAddress( 312, 0), "AKTIVIRANA JE ZAVESA 2!", true, true) { SyncEvery_X_Time = 3 };
+            Alarm_FreqX = new PlcVars.AlarmMessage(this, new PlcVars.BitAddress( 313, 0), "NAPAKA FREKVENČNEGA PRETVORNIKA X OSI!", false, true) { SyncEvery_X_Time = 3 };
+            Alarm_FreqY = new PlcVars.AlarmMessage(this, new PlcVars.BitAddress( 314, 0), "NAPAKA FREKVENČNEGA PRETVORNIKA Y OSI!", false, true) { SyncEvery_X_Time = 3 };
+            AlarmInit = new PlcVars.AlarmMessage(this, new PlcVars.BitAddress(315, 0), "NAPAKA Inicializacije!", false, true) { SyncEvery_X_Time = 3 };
 
-            SemaforZe = new PlcVars.Bit(this, new PlcVars.BitAddress(90, 0), false);
-            SemaforRd = new PlcVars.Bit(this, new PlcVars.BitAddress(91, 0), false);
-            SemaforYe = new PlcVars.Bit(this, new PlcVars.BitAddress(92, 0), false);
+            // info proces
+            Ustavljeno = new PlcVars.AlarmMessage(this, new PlcVars.BitAddress(1, 0), "USTAVLJENO", true, true) { SyncEvery_X_Time = 3 };
+            Rocno_read = new PlcVars.AlarmMessage(this, new PlcVars.BitAddress(2, 0), "ROČNI NAČIN") { SyncEvery_X_Time = 3 };
+            Avtomat_read = new PlcVars.AlarmMessage(this, new PlcVars.BitAddress(3, 0), "Avtomatski način") { SyncEvery_X_Time = 3 };
+            CakanjeMateriala = new PlcVars.AlarmMessage(this, new PlcVars.BitAddress(4, 0), "ČAKANJE MATERIALA") { SyncEvery_X_Time = 3 };
+            CakanjeUkaza = new PlcVars.AlarmMessage(this, new PlcVars.BitAddress(5, 0), "ČAKANJE UKAZA") { SyncEvery_X_Time = 3 };
+
+            Inicializacija = new PlcVars.AlarmMessage(this, new PlcVars.BitAddress(60, 0), "ZigZag - Inicializacija") { SyncEvery_X_Time = 3 };           
+            KorakZigZag1 = new PlcVars.AlarmMessage(this, new PlcVars.BitAddress(61, 0), "ZigZag - Korak1") { SyncEvery_X_Time = 3 };            
+            KorakZigZag2 = new PlcVars.AlarmMessage(this, new PlcVars.BitAddress(63, 0), "ZigZag - Korak2") { SyncEvery_X_Time = 3 };
+
+            InitCircle = new PlcVars.AlarmMessage(this, new PlcVars.BitAddress(70, 0), "Rob - Inicializacija") { SyncEvery_X_Time = 3 };
+            KorakCircle1 = new PlcVars.AlarmMessage(this, new PlcVars.BitAddress(71, 0), "Rob - Korak1") { SyncEvery_X_Time = 3 };
+            KorakCircle2 = new PlcVars.AlarmMessage(this, new PlcVars.BitAddress(72, 0), "Rob - Korak2") { SyncEvery_X_Time = 3 };
+            KorakCircle3 = new PlcVars.AlarmMessage(this, new PlcVars.BitAddress(73, 0), "Rob - Korak3") { SyncEvery_X_Time = 3 };
+            KorakCircle4 = new PlcVars.AlarmMessage(this, new PlcVars.BitAddress(74, 0), "Rob - Korak4") { SyncEvery_X_Time = 3 };
 
         }
 

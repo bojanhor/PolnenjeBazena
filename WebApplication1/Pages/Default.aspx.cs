@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,23 +10,25 @@ namespace WebApplication1.Pages
 {
     public partial class PageDefault : System.Web.UI.Page
     {
-              
+
+
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {            
             Navigator.EveryPageProtocol("Dobrodošli", this, Session, TemplateClassID);
-            Val.guiController.PageDefault_ = new GuiController.PageDefault(this, Session);           
 
+            Val.guiController.PageDefault_ = new GuiController.PageDefault(this, Session);
+            Initialise();
 
-            Initialise();           
         }
-                      
+
         private void Initialise()
-        {                        
-            TemplateClassID.Controls.Add(Val.guiController.PageDefault_.Tmr_UpdatePanel);
-            TemplateClassID.Controls.Add(Val.guiController.PageDefault_.UpdatePanel);
-            TemplateClassID.Controls.Add(Val.guiController.PageDefault_.divMaster);
- 
-             Val.guiController.PageDefault_.RegisterOnClick();
+        {
+            TemplateClassID.Controls.Add(Val.guiController.PageDefault_.ConvUP);            
+            TemplateClassID.Controls.Add(Val.guiController.PageDefault_.UP);                       
+                       
+            Val.guiController.PageDefault_.UP.Controls_Add(Val.guiController.PageDefault_.divMaster);
+            Val.guiController.PageDefault_.ConvUP.Controls_Add(Val.guiController.PageDefault_.divConveyor);
+            
         }
                
         

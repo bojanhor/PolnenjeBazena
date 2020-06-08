@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication1.Pages.PageDefault" EnableEventValidation="false"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UpNastavitve.aspx.cs" Inherits="WebApplication1.Pages.UpNastavitve" %>
 
 <!DOCTYPE html>
 
@@ -17,12 +17,9 @@
         <asp:ScriptManager ID="Scriptmanager" runat="server"></asp:ScriptManager>
         <div id="TemplateClassID" class="TemplateClass" runat="server">
             
-           
+            
 
         </div>
-
-
-
     </form>
 </body>
 </html>

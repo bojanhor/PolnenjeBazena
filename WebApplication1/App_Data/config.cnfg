@@ -12,30 +12,30 @@
   <scaleGuiFactorX>99</scaleGuiFactorX>						// Gui Scaling Factor (size of user interface) (example 99)
   <scaleGuiFactorY>47</scaleGuiFactorY>						// Gui Scaling Factor (size of user interface) (example 47)
   //
-  <HowManyDDMenuItems>4</HowManyDDMenuItems>					// How many Menu items is showed in DROPDOWN menu
+  <HowManyDDMenuItems>2</HowManyDDMenuItems>					// How many Menu items is showed in DROPDOWN menu
   <DDMenuItemName0>Default</DDMenuItemName0>					// Item is not in dropdown Menu, it is default page Name
-  <DDMenuItemName1>Razsvetljava</DDMenuItemName1>					// Item in Dropdown Menu
-  <DDMenuItemName2>Ventilacija</DDMenuItemName2>					// Item in Dropdown Menu
-  <DDMenuItemName3>Vrata/Zavese</DDMenuItemName3>					// Item in Dropdown Menu
-  <DDMenuItemName4>Mešalo</DDMenuItemName4>					// Item in Dropdown Menu
+  <DDMenuItemName1>Uporabniške Nastavitve</DDMenuItemName1>					// Item in Dropdown Menu
+  <DDMenuItemName2>Servisne Nastavitve</DDMenuItemName2>					// Item in Dropdown Menu
+  <DDMenuItemName3>asdfasdf/Zavese</DDMenuItemName3>					// Item in Dropdown Menu
+  <DDMenuItemName4>asdfasdf</DDMenuItemName4>					// Item in Dropdown Menu
   <DDMenuItemName5>asdfasdf</DDMenuItemName5>					// Item in Dropdown Menu
   <DDMenuItemName6>asdf sdfght</DDMenuItemName6>					// Item in Dropdown Menu
   <DDMenuItemName7>asdf shsf</DDMenuItemName7>					// Item in Dropdown Menu
   <DDMenuItemName8>asdfsdfghfg</DDMenuItemName8>					// Item in Dropdown Menu
   <DDMenuItemName9>asdf dfghs ffdae</DDMenuItemName9>				// Item in Dropdown Menu
-  <DDMenuItemName10>Servisne Nastavitve</DDMenuItemName10>		        // Item in Dropdown Menu
+  <DDMenuItemName10>asdfasdf</DDMenuItemName10>		                       // Item in Dropdown Menu
   //
   <DDMenuItemLink0>Default</DDMenuItemLink0>					// LinkName for Page in Dropdown Menu
-  <DDMenuItemLink1>asdf</DDMenuItemLink1>					// LinkName for Page in Dropdown Menu
-  <DDMenuItemLink2>asdf</DDMenuItemLink2>					// LinkName for Page in Dropdown Menu
+  <DDMenuItemLink1>UpNastavitve</DDMenuItemLink1>					// LinkName for Page in Dropdown Menu
+  <DDMenuItemLink2>Advanced</DDMenuItemLink2>					// LinkName for Page in Dropdown Menu
   <DDMenuItemLink3>asdf</DDMenuItemLink3>					// LinkName for Page in Dropdown Menu
-  <DDMenuItemLink4>Advanced</DDMenuItemLink4>					// LinkName for Page in Dropdown Menu
+  <DDMenuItemLink4>asdf</DDMenuItemLink4>					// LinkName for Page in Dropdown Menu
   <DDMenuItemLink5>asdf</DDMenuItemLink5>						// LinkName for Page in Dropdown Menu
   <DDMenuItemLink6>asdf</DDMenuItemLink6>						// LinkName for Page in Dropdown Menu
   <DDMenuItemLink7>asdf</DDMenuItemLink7>						// LinkName for Page in Dropdown Menu
   <DDMenuItemLink8>asdf</DDMenuItemLink8>						// LinkName for Page in Dropdown Menu
   <DDMenuItemLink9>asdf</DDMenuItemLink9>						// LinkName for Page in Dropdown Menu
-  <DDMenuItemLink10>Advanced</DDMenuItemLink10>					// LinkName for Page  in Dropdown Menu
+  <DDMenuItemLink10>asdf</DDMenuItemLink10>					// LinkName for Page  in Dropdown Menu
   //
   <HowManyMenuItems>5</HowManyMenuItems>				// How many Menu items is showed in MAIN menu
   <MenuItemLink1>AAAA</MenuItemLink1>					// Page name in Main Menu
@@ -48,14 +48,14 @@
 	<CONNECTION>// Server restart required after changing this group
 		<LOGO1>//
 			<show>true</show>			// indicates if tabpage is shown on GUI 
-			<enabled>false</enabled>			// indicates if device is enabled - (gui, communication ...) 
+			<enabled>true</enabled>			// indicates if device is enabled - (gui, communication ...) 
 			<devicename>LOGO1</devicename>		// Showname
-			<showname>Razsvetljava</showname>   //
-			<serverIP>192.168.1.201</serverIP>		// format must be ###.###.###.### (192.168.0.1) IP of PLC
+			<showname>Polnenje</showname>   //
+			<serverIP>192.168.1.200</serverIP>		// format must be ###.###.###.### (192.168.0.1) IP of PLC
 			<localTSAP>"03.00"</localTSAP>		// format must be ##.## (00.03) TSAP is used for comunication between PLCs 
 			<remoteTSAP>"02.00"</remoteTSAP>	// format must be ##.## (00.03) TSAP is used for comunication between PLCs			
 			<watchdogAddress>800</watchdogAddress>   // value must be string between valid PLC adress range .. watchdog is used for detecting comunication problems (example 100 if watchdog value is Word on address 100)
-			<ReadWriteCycle>300</ReadWriteCycle>		// value in miliseconds - frequency at which data aquisition is preformed - read, action, write, delay. (watchdog is also bound at this frequency)
+			<ReadWriteCycle>60</ReadWriteCycle>		// value in miliseconds - frequency at which data aquisition is preformed - read, action, write, delay. (watchdog is also bound at this frequency)
 		</LOGO1>//
 	  //
 		<LOGO2>//
@@ -67,7 +67,7 @@
 			<localTSAP>"03.00"</localTSAP>//
 			<remoteTSAP>"02.00"</remoteTSAP>//		
 			<watchdogAddress>5</watchdogAddress>//
-			<ReadWriteCycle>500</ReadWriteCycle>//
+			<ReadWriteCycle>200</ReadWriteCycle>//
 		</LOGO2>//
 	  //
 		<LOGO3>//

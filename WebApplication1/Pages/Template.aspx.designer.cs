@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication1.Pages {
-    
-    
-    public partial class PageTemplate {
-        
+namespace WebApplication1.Pages
+{
+
+
+    public partial class PageTemplate
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace WebApplication1.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// Scriptmanager control.
         /// </summary>
@@ -29,14 +31,14 @@ namespace WebApplication1.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager Scriptmanager;
-        
+
         /// <summary>
-        /// TemplateClassID control.
+        /// TemplateClass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TemplateClassID;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TemplateClass;
     }
 }
