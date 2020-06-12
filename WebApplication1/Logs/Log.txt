@@ -27371,3 +27371,491 @@ Parameter name: updatePanel Stack trace:    at System.Web.UI.PageRequestManager.
 08.06.2020  18:09:15 : Logo1: Running connection diagnostics...
 08.06.2020  18:09:15 : Logo1:   -Ping successful at: 192.168.1.200
 08.06.2020  18:09:16 : Logo1: Connected again
+10.06.2020  12:05:50 : Logo1: Connecting...
+10.06.2020  12:05:51 : Logo1: Connected
+10.06.2020  12:05:52 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.06.2020  12:06:25 : Logo1: Connecting...
+10.06.2020  12:06:26 : Logo1: Connected
+10.06.2020  12:06:26 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.06.2020  12:07:10 : Logo1: Connecting...
+10.06.2020  12:07:11 : Logo1: Connected
+10.06.2020  12:07:11 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.06.2020  12:12:05 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  12:12:05 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  12:12:08 : Logo1: Running connection diagnostics...
+10.06.2020  12:12:08 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  12:12:08 : Logo1: Connected again
+10.06.2020  12:13:42 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  12:13:42 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  12:13:45 : Logo1: Running connection diagnostics...
+10.06.2020  12:13:45 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  12:13:46 : Logo1: Connected again
+10.06.2020  12:15:38 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  12:15:38 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  12:15:41 : Logo1: Running connection diagnostics...
+10.06.2020  12:15:41 : Logo1:   -Ping successful but connection is poor: 192.168.1.200
+10.06.2020  12:15:41 : Logo1: Connected again
+10.06.2020  12:16:23 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  12:16:23 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  12:16:26 : Logo1: Running connection diagnostics...
+10.06.2020  12:16:26 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  12:16:27 : Logo1: Connected again
+10.06.2020  12:17:21 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  12:17:21 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  12:17:25 : Logo1: Running connection diagnostics...
+10.06.2020  12:17:25 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  12:17:25 : Logo1: Connected again
+10.06.2020  12:17:46 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  12:17:46 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  12:17:49 : Logo1: Running connection diagnostics...
+10.06.2020  12:17:49 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  12:17:49 : Logo1: Connected again
+10.06.2020  12:18:11 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  12:18:11 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  12:18:14 : Logo1: Running connection diagnostics...
+10.06.2020  12:18:14 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  12:18:15 : Logo1: Connected again
+10.06.2020  12:18:55 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  12:18:55 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  12:18:58 : Logo1: Running connection diagnostics...
+10.06.2020  12:18:58 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  12:18:59 : Logo1: Connected again
+10.06.2020  12:20:31 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  12:20:31 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  12:20:34 : Logo1: Running connection diagnostics...
+10.06.2020  12:20:34 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  12:20:34 : Logo1: Connected again
+10.06.2020  12:20:59 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  12:20:59 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  12:21:02 : Logo1: Running connection diagnostics...
+10.06.2020  12:21:02 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  12:21:02 : Logo1: Connected again
+10.06.2020  12:21:52 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  12:21:52 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  12:21:55 : Logo1: Running connection diagnostics...
+10.06.2020  12:21:55 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  12:21:55 : Logo1: Connected again
+10.06.2020  12:23:24 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  12:23:24 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  12:23:27 : Logo1: Running connection diagnostics...
+10.06.2020  12:23:27 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  12:23:28 : Logo1: Connected again
+10.06.2020  12:25:14 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  12:25:14 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  12:25:17 : Logo1: Running connection diagnostics...
+10.06.2020  12:25:17 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  12:25:18 : Logo1: Connected again
+10.06.2020  12:25:18 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  12:25:21 : Logo1: Running connection diagnostics...
+10.06.2020  12:25:21 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  12:25:22 : Logo1: Connected again
+10.06.2020  12:26:07 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  12:26:07 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  12:26:10 : Logo1: Running connection diagnostics...
+10.06.2020  12:26:10 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  12:26:10 : Logo1: Connected again
+10.06.2020  12:37:26 : Logo1: Connecting...
+10.06.2020  12:37:28 : Logo1: Connected
+10.06.2020  12:37:28 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.06.2020  12:37:50 : Logo1: Connecting...
+10.06.2020  12:37:51 : Logo1: Connected
+10.06.2020  12:37:51 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.06.2020  12:37:56 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:37:56 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:37:56 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:37:56 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:37:57 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:37:57 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:37:57 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:37:58 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:37:58 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:37:58 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:37:58 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:37:59 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:37:59 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:37:59 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:37:59 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:00 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:00 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:00 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:01 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:01 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:01 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:01 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:02 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:02 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:02 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:03 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:03 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:03 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:03 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:04 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:04 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:04 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:05 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:05 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:05 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:05 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:06 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:06 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:06 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:06 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:07 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:07 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:07 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:08 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:08 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:08 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:08 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:09 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:09 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:09 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:09 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:10 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:10 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:10 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:10 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:11 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:11 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:11 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:12 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:12 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:12 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:12 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:13 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:13 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:13 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:13 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:14 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:14 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:14 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:15 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:15 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:15 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:15 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:16 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:16 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:16 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:17 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:17 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:17 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:17 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:18 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:18 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:18 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:19 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:19 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:19 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:19 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:20 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:20 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:20 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:21 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:21 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:21 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:21 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:22 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:22 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:22 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:22 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:23 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:23 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:23 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:24 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:24 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:24 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:24 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:25 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:25 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:25 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:26 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:26 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:26 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:27 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:27 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:27 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:27 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:28 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:28 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:28 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:29 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:29 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:29 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:29 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:30 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:30 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:30 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:30 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:31 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:31 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:31 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:32 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:32 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:32 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:32 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:33 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:33 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:33 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:34 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:34 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:34 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:34 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:35 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:35 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:35 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:36 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:36 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:36 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:37 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:37 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:37 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:37 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:38 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:38 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:38 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:38 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:39 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:39 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:39 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:40 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:40 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:40 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:40 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:41 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:41 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:41 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:42 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:42 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:42 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:42 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:43 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:43 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:43 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:44 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:44 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:44 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:44 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:45 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:45 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:45 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:46 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:46 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:46 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:46 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:47 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:47 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:47 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:48 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:48 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:48 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:48 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:49 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:49 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:49 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:50 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:50 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:50 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:50 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:51 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:51 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:51 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:51 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:52 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:52 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:52 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:53 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:53 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:53 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:53 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:54 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:54 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:54 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:55 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:55 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:55 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:55 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:56 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:56 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:56 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:57 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:57 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:57 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:57 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:58 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:58 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:58 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:59 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:59 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:59 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:38:59 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:00 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:00 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:00 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:01 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:01 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:01 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:02 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:02 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:02 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:02 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:03 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:03 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:03 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:03 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:04 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:04 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:06 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:07 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:07 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:07 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:07 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:08 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:08 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:08 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:08 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:09 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:09 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:09 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:10 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:10 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:10 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:10 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:11 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:11 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:11 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:11 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:12 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:12 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:12 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:13 : Write to PLC failed IsWritable flag must be true for writing to PLC. Address: bit at 930, Read Error type: OK, Write Error type: OK, Client: Logo1. Flags: directionToPLC: True isWritable: False;
+10.06.2020  12:39:19 : Logo1: Connecting...
+10.06.2020  12:39:20 : Logo1: Connected
+10.06.2020  12:39:20 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.06.2020  12:41:01 : Logo1: Connecting...
+10.06.2020  12:41:02 : Logo1: Connected
+10.06.2020  12:41:02 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.06.2020  12:42:16 : Logo1: Connecting...
+10.06.2020  12:42:17 : Logo1: Connected
+10.06.2020  12:42:17 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.06.2020  12:45:11 : Logo1: Connecting...
+10.06.2020  12:45:12 : Logo1: Connected
+10.06.2020  12:45:12 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.06.2020  12:46:11 : Logo1: Connecting...
+10.06.2020  12:46:12 : Logo1: Connected
+10.06.2020  12:46:12 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.06.2020  12:49:10 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  12:49:10 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  12:49:13 : Logo1: Running connection diagnostics...
+10.06.2020  12:49:13 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  12:49:14 : Logo1: Connected again
+10.06.2020  12:51:21 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  12:51:21 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  12:51:24 : Logo1: Running connection diagnostics...
+10.06.2020  12:51:24 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  12:51:25 : Logo1: Connected again
+10.06.2020  12:57:04 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  12:57:04 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  12:57:07 : Logo1: Running connection diagnostics...
+10.06.2020  12:57:07 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  12:57:08 : Logo1: Connected again
+10.06.2020  13:00:12 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  13:00:12 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  13:00:15 : Logo1: Running connection diagnostics...
+10.06.2020  13:00:15 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  13:00:16 : Logo1: Connected again
+10.06.2020  13:04:17 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  13:04:17 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  13:04:20 : Logo1: Running connection diagnostics...
+10.06.2020  13:04:21 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  13:04:21 : Logo1: Connected again
+10.06.2020  13:05:11 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  13:05:11 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  13:05:14 : Logo1: Running connection diagnostics...
+10.06.2020  13:05:14 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  13:05:14 : Logo1: Connected again
+10.06.2020  13:19:05 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  13:19:05 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  13:19:08 : Logo1: Running connection diagnostics...
+10.06.2020  13:19:08 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  13:19:08 : Logo1: Connected again
+10.06.2020  13:19:55 : Logo1: Connecting...
+10.06.2020  13:19:56 : Logo1: Connected
+10.06.2020  13:19:56 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.06.2020  13:24:00 : Logo1: Connecting...
+10.06.2020  13:24:01 : Logo1: Connected
+10.06.2020  13:24:01 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.06.2020  14:21:53 : Logo1: Connecting...
+10.06.2020  14:21:54 : Logo1: Connected
+10.06.2020  14:21:54 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.06.2020  14:22:02 : Login try: Local
+10.06.2020  14:22:02 : Login Success: Local - User:  Local
+10.06.2020  14:22:02 : Redirected to: Default
+10.06.2020  14:22:02 : Redirected to: Default
+10.06.2020  14:24:01 : Logo1: Connecting...
+10.06.2020  14:24:11 : Logo1: Connected
+10.06.2020  14:24:11 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.06.2020  14:24:17 : Login try: Local
+10.06.2020  14:24:17 : Login Failed: Password was invalid
+10.06.2020  14:24:17 : Login Denied: Local - User:  Local
+10.06.2020  14:24:17 : Redirected to: Default
+10.06.2020  14:24:17 : Redirected to: Login
+10.06.2020  14:24:25 : Read from PLC failed. Address: bit at 730, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.06.2020  14:24:27 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  14:24:27 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  14:24:30 : Logo1: Running connection diagnostics...
+10.06.2020  14:24:30 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  14:24:30 : Logo1: Connected again
+10.06.2020  14:25:06 : Login try: Local
+10.06.2020  14:25:06 : Login Failed: Password was invalid
+10.06.2020  14:25:06 : Login Denied: Local - User:  Local
+10.06.2020  14:25:06 : Redirected to: Default
+10.06.2020  14:25:06 : Redirected to: Login
+10.06.2020  14:25:10 : Read from PLC failed. Address: bit at 3100, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.06.2020  14:25:16 : Read from PLC failed. Address: bit at 600, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.06.2020  14:25:16 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  14:25:16 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  14:25:19 : Logo1: Running connection diagnostics...
+10.06.2020  14:25:19 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  14:25:19 : Logo1: Connected again
+10.06.2020  14:25:33 : Login try: Local
+10.06.2020  14:25:33 : Login Failed: Password was invalid
+10.06.2020  14:25:33 : Login Denied: Local - User:  Local
+10.06.2020  14:25:33 : Redirected to: Default
+10.06.2020  14:25:33 : Redirected to: Login
+10.06.2020  14:25:39 : Read from PLC failed. Address: bit at 160, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+10.06.2020  14:25:41 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  14:25:41 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  14:25:44 : Logo1: Running connection diagnostics...
+10.06.2020  14:25:44 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  14:25:45 : Logo1: Connected again
+10.06.2020  14:26:07 : Login try: Local
+10.06.2020  14:26:07 : Login Success: Local - User:  Local
+10.06.2020  14:26:07 : Redirected to: Default
+10.06.2020  14:26:07 : Redirected to: Default
+10.06.2020  14:26:15 : Read from PLC failed. Address: bit at 730, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.06.2020  14:26:16 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  14:26:16 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  14:26:20 : Logo1: Running connection diagnostics...
+10.06.2020  14:26:20 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  14:26:55 : Logo1: Connection failed. Trying to reconnect
+10.06.2020  14:26:55 : Logo1: Running connection diagnostics...
+10.06.2020  14:26:55 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  14:26:59 : Logo1: Connected again
+10.06.2020  14:27:10 : Read from PLC failed. Address: bit at 280, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.06.2020  14:27:10 : Logo1: Watchdog error - Watchdog does not change
+10.06.2020  14:27:10 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.06.2020  14:27:19 : Logo1: Running connection diagnostics...
+10.06.2020  14:27:19 : Logo1:   -Ping successful at: 192.168.1.200
+10.06.2020  14:27:19 : Logo1: Connected again
+10.06.2020  14:27:35 : Logo1: Connecting...
+10.06.2020  14:27:36 : Logo1: Connected
+10.06.2020  14:27:36 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.06.2020  14:27:38 : Login try: Local
+10.06.2020  14:27:38 : Login Success: Local - User:  Local
+10.06.2020  14:32:11 : Logo1: Connecting...
+10.06.2020  14:32:12 : Logo1: Connected
+10.06.2020  14:32:12 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.06.2020  14:32:14 : Login try: Local
+10.06.2020  14:32:14 : Login Success: Local - User:  Local
+10.06.2020  14:32:14 : Redirected to: Default
+10.06.2020  14:32:14 : Redirected to: Default

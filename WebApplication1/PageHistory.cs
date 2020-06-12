@@ -12,9 +12,9 @@ namespace WebApplication1
     [Serializable]
     class PageHistory
     {
-        int maxEntries = 10;        
-        List<string> PageNames = new List<string>();
-        List<Page> Pages = new List<Page>();
+        readonly int maxEntries = 10;
+        readonly List<string> PageNames = new List<string>();
+        readonly List<Page> Pages = new List<Page>();
 
         public void StorePage(Page Page)
         {

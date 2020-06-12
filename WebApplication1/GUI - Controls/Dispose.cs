@@ -12,8 +12,9 @@ namespace WebApplication1
 
         // Flag: Has Dispose already been called?
         bool disposed = false;
+
         // Instantiate a SafeHandle instance.
-        SafeHandle handle = new SafeFileHandle(IntPtr.Zero, true);
+        readonly SafeHandle handle = new SafeFileHandle(IntPtr.Zero, true);
 
         // Public implementation of Dispose pattern callable by consumers.
         public void Dispose()

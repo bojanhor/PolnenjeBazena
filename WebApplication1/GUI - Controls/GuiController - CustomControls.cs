@@ -115,7 +115,7 @@ namespace WebApplication1
 
                 public Label LabelText; // only for padded type with text
 
-                HtmlGenericControl div;
+                readonly HtmlGenericControl div;
 
                 public enum Type
                 {
@@ -764,7 +764,8 @@ namespace WebApplication1
                 public DirectionButton btn_dn { get; private set; }
                 public DirectionButton btn_l { get; private set; }
                 public DirectionButton btn_r { get; private set; }
-                GroupBox g;
+
+                readonly GroupBox g;
                 public JoystickDirection(int top, int left, int size, bool upPressed, bool dwnPressed, bool lftPressed, bool rghtPressen)
                 {                    
                     var sizeDwn = 20;
@@ -790,10 +791,9 @@ namespace WebApplication1
                     public ImageButton exitButton;
                     public ImageButton nextButton;
                     public ImageButton PrevButton;
-                    HtmlGenericControl NameDiv = DIV.CreateDivAbsolute("5.2%", "5%", "30%", "8%");
-                    Label Name = new Label();
-
-                    Label Clock = new Label();
+                readonly HtmlGenericControl NameDiv = DIV.CreateDivAbsolute("5.2%", "5%", "30%", "8%");
+                readonly Label Name = new Label();
+                readonly Label Clock = new Label();
 
                 public SettingsSubMenu(int id, string Name_, bool hasExit, HtmlGenericControl content)
                 {
@@ -1010,7 +1010,7 @@ namespace WebApplication1
                     }
                 }
 
-                HtmlGenericControl[] subdiv;
+                readonly HtmlGenericControl[] subdiv;
 
                 public GuiSeparator_DottedLine(float top, float left, float width, float height, int howMayDots)
                 {
@@ -1413,7 +1413,7 @@ namespace WebApplication1
 
             public class DropDownListChartViewSelector : DropDown
             {
-                static Datasourcer.ChartViewSelectorDatasource datasource = new Datasourcer.ChartViewSelectorDatasource();
+                static readonly Datasourcer.ChartViewSelectorDatasource datasource = new Datasourcer.ChartViewSelectorDatasource();
 
                 public DropDownListChartViewSelector(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable)
                     : base("Izbor pogleda:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, true)
@@ -1443,7 +1443,7 @@ namespace WebApplication1
 
             public class DropDownListForDimmerLUX : DropDown
             {
-                static Datasourcer.DimmerSelectorDatasource datasource = new Datasourcer.DimmerSelectorDatasource();
+                static readonly Datasourcer.DimmerSelectorDatasource datasource = new Datasourcer.DimmerSelectorDatasource();
 
 
                 public DropDownListForDimmerLUX(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
@@ -1461,7 +1461,7 @@ namespace WebApplication1
 
             public class DropDownListForDimmerRPM : DropDown
             {
-                static Datasourcer.DimmerSelectorDatasource datasource = new Datasourcer.DimmerSelectorDatasource();
+                static readonly Datasourcer.DimmerSelectorDatasource datasource = new Datasourcer.DimmerSelectorDatasource();
 
 
                 public DropDownListForDimmerRPM(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
@@ -1512,7 +1512,7 @@ namespace WebApplication1
 
             public class DropDownListForTimer_1_30s : DropDown
             {
-                static Datasourcer.TimerSelectorDatasource datasource = new Datasourcer.TimerSelectorDatasource(1, 30, 1, "s");
+                static readonly Datasourcer.TimerSelectorDatasource datasource = new Datasourcer.TimerSelectorDatasource(1, 30, 1, "s");
 
                 public DropDownListForTimer_1_30s(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
                     : base("", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
@@ -1530,7 +1530,7 @@ namespace WebApplication1
 
             public class DropDownListForTemperatureSelect_10_30 : DropDown
             {
-                static Datasourcer.Temperature_10_30_SelectorDatasource datasource = new Datasourcer.Temperature_10_30_SelectorDatasource();
+                static readonly Datasourcer.Temperature_10_30_SelectorDatasource datasource = new Datasourcer.Temperature_10_30_SelectorDatasource();
 
                 public DropDownListForTemperatureSelect_10_30(string ID, string PlcTextValue, float size, float fontSize, bool selfUpdatable)
                     : base("Izberite željeno temperaturo:", datasource, ID, PlcTextValue, 0, 0, size, fontSize, selfUpdatable, false)
@@ -1559,7 +1559,7 @@ namespace WebApplication1
 
             public class DropDownListForWeekDaySelect : DropDown
             {
-                static Datasourcer.WeekDaySelectorDatasource datasource = new Datasourcer.WeekDaySelectorDatasource();
+                static readonly Datasourcer.WeekDaySelectorDatasource datasource = new Datasourcer.WeekDaySelectorDatasource();
 
                 public DropDownListForWeekDaySelect(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
                     : base("Izberite željeni dan:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
@@ -1582,7 +1582,7 @@ namespace WebApplication1
 
             public class DropDownListForHourSelect : DropDown
             {
-                static Datasourcer.TimeSelectorDatasource datasource = new Datasourcer.TimeSelectorDatasource();
+                static readonly Datasourcer.TimeSelectorDatasource datasource = new Datasourcer.TimeSelectorDatasource();
 
                 public DropDownListForHourSelect(string ID, string PlcTextValue, float size, float fontSize, bool selfUpdatable)
                    : base("Izberite čas:", datasource, ID, PlcTextValue, 0, 0, size, fontSize, selfUpdatable, false)
@@ -1605,7 +1605,7 @@ namespace WebApplication1
 
             public class DropDownListForYesNoSelect : DropDown
             {
-                static Datasourcer.YesNoSelectorDatasource datasource = new Datasourcer.YesNoSelectorDatasource();
+                static readonly Datasourcer.YesNoSelectorDatasource datasource = new Datasourcer.YesNoSelectorDatasource();
 
                 public DropDownListForYesNoSelect(string ID, short? PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
                     : base("", datasource, ID, selectVal(PlcTextValue), top, left, size, fontSize, selfUpdatable, widemode)
@@ -1645,7 +1645,7 @@ namespace WebApplication1
 
             public class DropDownListForRocnoAvtoSelect : DropDown
             {
-                static Datasourcer.RocnoAvtoSelectorDatasource datasource = new Datasourcer.RocnoAvtoSelectorDatasource();
+                static readonly Datasourcer.RocnoAvtoSelectorDatasource datasource = new Datasourcer.RocnoAvtoSelectorDatasource();
 
                 public DropDownListForRocnoAvtoSelect(string ID, short? PlcValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
                     : base("Izberite režim delovanja:", datasource, ID, selectVal(PlcValue), top, left, size, fontSize, selfUpdatable, widemode)
@@ -1680,7 +1680,7 @@ namespace WebApplication1
 
             public class DropDownListForRocno0Rocno1AvtoSelect : DropDown
             {
-                static Datasourcer.Rocno0Rocno1AvtoDatasource datasource = new Datasourcer.Rocno0Rocno1AvtoDatasource();
+                static readonly Datasourcer.Rocno0Rocno1AvtoDatasource datasource = new Datasourcer.Rocno0Rocno1AvtoDatasource();
 
                 public DropDownListForRocno0Rocno1AvtoSelect(string ID, short? PlcValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
                     : base("Izberite režim delovanja:", datasource, ID, selectVal(PlcValue), top, left, size, fontSize, selfUpdatable, widemode)
@@ -1751,7 +1751,7 @@ namespace WebApplication1
 
             public class DropDownListForOnOffSelect : DropDown
             {
-                static Datasourcer.OnOffSelectorDatasource datasource = new Datasourcer.OnOffSelectorDatasource();
+                static readonly Datasourcer.OnOffSelectorDatasource datasource = new Datasourcer.OnOffSelectorDatasource();
 
                 public DropDownListForOnOffSelect(string ID, bool? PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
                     : base("", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
@@ -1768,28 +1768,20 @@ namespace WebApplication1
 
             public class LogMeIn : HtmlGenericControl
             {
-
-                Label Title;
-                Label Usrnmlbl;
-                Label pwdlbl;
-
-                Label UsrnmlblERR;
-                Label pwdlblERR;
-
-                TextBox username;
-                TextBox password;
+                readonly Label Title;
+                readonly Label Usrnmlbl;
+                readonly Label pwdlbl;
+                readonly Label UsrnmlblERR;
+                readonly Label pwdlblERR;
+                readonly TextBox username;
+                readonly TextBox password;
                 ButtonWithLabel OK;
-
-                Page page;
-                HttpSessionState session;
-
-                float fontSize;
-
-                GroupBox g = new GroupBox(0, 0, 100, 100);
-
-                List<WebControl> l = new List<WebControl>();
-
-                float top, left, width, height;
+                readonly Page page;
+                readonly HttpSessionState session;
+                readonly float fontSize;
+                readonly GroupBox g = new GroupBox(0, 0, 100, 100);
+                readonly List<WebControl> l = new List<WebControl>();
+                readonly float top, left, width, height;
 
                 public LogMeIn(Page _thisPage, HttpSessionState session)
                 {
@@ -1951,6 +1943,7 @@ namespace WebApplication1
                 private void Button_Click(object sender, ImageClickEventArgs e)
                 {
                     var ip = Helper.GetClientIP();
+                    var usr = "";
 
                     SysLog.SetMessage("Login try: " + ip);
 
@@ -1960,9 +1953,10 @@ namespace WebApplication1
 
                         if (!Navigator.LoginTryData.LoginTryIP(ip)) // checks if too many retries to login were performed
                         {
+                            usr = ((TextBox)FindControl("usrField")).Text;
+
                             var ok = Helper.UserDataManager.ConfirmUsername(
-                            out valid,
-                            ((TextBox)FindControl("usrField")).Text,
+                            out valid, usr,
                             ((TextBox)FindControl("pwdField")).Text,
                             Navigator.GetSession());
 
@@ -1970,6 +1964,7 @@ namespace WebApplication1
                             {
                                 session[SessionHelper.LoggedIn] = Val.LoggingIn;
                                 SysLog.SetMessage("Login Success: " + ip + " - User:  " + username.Text);
+                                SessionHelper.SetCurrentUser(usr);
                             }
                             else
                             {
@@ -1992,7 +1987,7 @@ namespace WebApplication1
             public class UpdatePanelFull : UpdatePanel
             {
                 public Timer Timer;
-                AsyncPostBackTrigger ap;
+                readonly AsyncPostBackTrigger ap;
                 
                 public UpdatePanelFull(string ID, int intervalUpdate)
                 {
@@ -2036,7 +2031,7 @@ namespace WebApplication1
 
             public class PleaseWaitBanner : GroupBox
             {
-                SuperLabel plsWait = new SuperLabel("Prosim počakajte...", 20, 20, 50, 15);
+                readonly SuperLabel plsWait = new SuperLabel("Prosim počakajte...", 20, 20, 50, 15);
 
                 public PleaseWaitBanner():base(top(), left(), width(), height())
                 {

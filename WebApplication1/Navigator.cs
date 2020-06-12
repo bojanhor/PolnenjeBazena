@@ -448,8 +448,8 @@ namespace WebApplication1
 
         public class ScriptLoader
         {// add scripts before RegisterScriptOnPageLoad()
-            List<string> Scripts = new List<string>();
-            List<string> Keys = new List<string>();
+            readonly List<string> Scripts = new List<string>();
+            readonly List<string> Keys = new List<string>();
 
             public ScriptLoader()
             {

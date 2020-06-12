@@ -14,17 +14,14 @@ namespace WebApplication1
 {
     public class WarningManagerWebControl : HtmlGenericControl
     {
-        HtmlGenericControl TemplateClass;
-                
-        UpdatePanelFull up = new UpdatePanelFull("WarningShowUpdatePanel", Settings.UpdateValuesPCms);
-        GroupBox WarningMenuShow = new GroupBox(20, 20, 60, 60, true);
+        readonly HtmlGenericControl TemplateClass;
+        readonly UpdatePanelFull up = new UpdatePanelFull("WarningShowUpdatePanel", Settings.UpdateValuesPCms);
+        readonly GroupBox WarningMenuShow = new GroupBox(20, 20, 60, 60, true);
         ImageButton exitButton;
-        SuperLabel TiltleLbl = new SuperLabel("OPOZORILA: ", 4, 2, 30, 6);
-
-        SuperLabel[] messages = new SuperLabel[5];
-
-        Image WarningSymbol = new Image();
-        TransparentButton btn = new TransparentButton("btnWarningSymbol");
+        readonly SuperLabel TiltleLbl = new SuperLabel("OPOZORILA: ", 4, 2, 30, 6);
+        readonly SuperLabel[] messages = new SuperLabel[5];
+        readonly Image WarningSymbol = new Image();
+        readonly TransparentButton btn = new TransparentButton("btnWarningSymbol");
         
         public WarningManagerWebControl(HtmlGenericControl TemplateClass, float top, float left, float size)
         {
@@ -243,8 +240,7 @@ namespace WebApplication1
         Misc.SmartThread WarningTrackerThread;
 
         public List<Warning> WarningsShowList;
-
-        List<Tracker> MessageTrackerList = new List<Tracker>();
+        readonly List<Tracker> MessageTrackerList = new List<Tracker>();
 
         public void AddMessageForUser_Warning(string message)
         {
@@ -644,8 +640,8 @@ namespace WebApplication1
 
         public class Warning
         {
-            int id;
-            string message = "";
+            readonly int id;
+            readonly string message = "";
 
             public Warning(string Message, int id)
             {

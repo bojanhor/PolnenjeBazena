@@ -4,7 +4,7 @@
 		<WatchdogRetries>3</WatchdogRetries>	// how many times watchdog retries to get value from PLC before error is shown and reconection is invoked
 		<AutoConnect>True</AutoConnect>         // autoconnect at startup		
 		<AddressPC_WD>W 278</AddressPC_WD> // program will generate watchdog counter on specified profinet address (type is word; example value: "W 278")		
-		<debugToConsole>true</debugToConsole>					// debug writeline to VS console (ne spreminjaj)		
+		<debugToConsole>false</debugToConsole>					// debug writeline to VS console (ne spreminjaj)	
 	</GENERAL>//
 
 	<GUI>
@@ -110,8 +110,8 @@
 	  //
 	<USERS>// Users paswords and permisions
 		<User1>//
-			<Name>admin</Name> 	// Displayname for user
-			<Pwd>admin</Pwd> // Pasword for user
+			<Name>Local</Name> 	// Displayname for user  - ne spreminjaj imena (uporabljeno je za refreshrate booster - ConveyorUpdatePanel)
+      <Pwd>localUser1</Pwd> // Pasword for user
 			<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
 			<permission2>true</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
 			<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
@@ -126,8 +126,8 @@
 		</User1>//
 	  //
 		<User2>//
-			<Name>user</Name> 	//
-			<Pwd>password</Pwd> //
+			<Name>RemoteUser</Name> 	//
+			<Pwd>remoteUser1</Pwd> //
 			<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
 			<permission2>true</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
 			<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)

@@ -14,11 +14,11 @@ namespace WebApplication1
 
         public class MessageManager : Dsps
         {
-            List<string> PendingMessages = new List<string>();
-            Misc.SmartThread LogWriter;
+            readonly List<string> PendingMessages = new List<string>();
+            readonly Misc.SmartThread LogWriter;
 
 
-            static string LogFolderPath = Directory.GetParent(XmlController.BaseDirectoryPath).ToString() + "\\" + "Logs";
+            static readonly string LogFolderPath = Directory.GetParent(XmlController.BaseDirectoryPath).ToString() + "\\" + "Logs";
             public static string LogFilePath;
             static string tempLogFilePath;
 

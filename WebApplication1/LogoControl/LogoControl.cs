@@ -10,7 +10,7 @@ namespace WebApplication1
 {
     public partial class LogoControler
     {
-        private int[] forceRefresh = new int[Settings.Devices + 1];
+        private readonly int[] forceRefresh = new int[Settings.Devices + 1];
 
         public int WatchdogRetries = 5;
 
@@ -114,7 +114,7 @@ namespace WebApplication1
             string progress = PropComm.NA;
 
 
-            S7Client tmpClient = LOGO[device];
+           
             Val.InitializeWDTable(device);
 
             int errCode = S7Consts.err_OK;
@@ -391,7 +391,7 @@ namespace WebApplication1
         {
             WL("Running connection diagnostics...",1);
 
-            ping(device);
+            Ping(device);
             
             Reconnect(LOGO[device]);
         }
@@ -445,8 +445,7 @@ namespace WebApplication1
         }
 
         void Reconnect(S7Client Client)
-        {
-            int id = Client.deviceID;
+        {            
             int err;
 
             LOGOConnection[Client.deviceID].connectionStatusLOGO = Connection.Status.Connecting;
@@ -468,7 +467,7 @@ namespace WebApplication1
 
         }
 
-        void ping(int device)
+        void Ping(int device)
         {
             var pingTries = 5; // ping retries
             var ip = LOGOConnection[device].IpAddress; // ip to ping
@@ -489,7 +488,7 @@ namespace WebApplication1
                 }
                 else
                 {
-                    timeout = timeout * 2; // if ping not successfull increase timeout
+                    timeout *= 2; // if ping not successfull increase timeout
                 }
             }
 
@@ -544,8 +543,7 @@ namespace WebApplication1
         /// <param name="message">type a message to report or log</param>
         /// <param name="device">(device 0 = info message) (device -1 = warning message) (device -2 = error message)</param>
         private void WL(string message, int device)
-        {
-            var d = DateTime.Now.ToString("dd.MM.yyyy - HH:mm");
+        {            
             var msg = "";
 
             if (device > 0)

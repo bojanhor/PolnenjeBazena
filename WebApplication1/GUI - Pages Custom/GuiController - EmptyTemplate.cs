@@ -11,10 +11,10 @@ namespace WebApplication1
     public partial class GuiController
     {
         public class EmptyTemplatePage : Dsps
-        {            
-            string Name;
-            Page thisPage;
-            System.Web.SessionState.HttpSessionState session;
+        {
+            readonly string Name;
+            readonly Page thisPage;
+            readonly System.Web.SessionState.HttpSessionState session;
                        
             public UpdatePanel UpdatePanel;
             public AsyncPostBackTrigger Ap_UpdatePanel;

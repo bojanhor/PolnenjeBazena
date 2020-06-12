@@ -14,7 +14,7 @@ namespace WebApplication1
         private const int KeySize = 256;
         private const int PasswordIterations = 2; //2;
         private const string SaltValue = "W&h59_Xe9P 2za-eFr2fa&@ras! a+uc@$%/&sd fasu=ćščapwe";
-        private static string passPhrase = "793qwegfz' q2394zf174a ĐŠŠ%/(&U7WHRBR4!# %&$5A86";
+        private static readonly string passPhrase = "793qwegfz' q2394zf174a ĐŠŠ%/(&U7WHRBR4!# %&$5A86";
 
         public static string Decrypt(string encryptedText)
         {

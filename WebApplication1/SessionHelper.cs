@@ -11,6 +11,7 @@ namespace WebApplication1
         public static string Response = "Response";
         public static string PageHistory = "PageHistory";
         public static string LoggedIn = "##_LoggedIn_##";
+        public static string ViewStateElement_CurrentUser = "##_CurrentUser_##";
         public static string LoginAuth = "##_LogInAuth_##";
 
         // Razsvetljava
@@ -54,24 +55,33 @@ namespace WebApplication1
                 
         static void SetBool(string id, bool value)
         {
-            var variable = GetObject(id);
-            variable = value;
+            Navigator.GetSession()[id] = value;
         }
 
         static void SetInt(string id, int value)
         {
-            var variable = GetObject(id);
-            variable = value;
-
+            Navigator.GetSession()[id] = value;
         }
 
         static void SetString(string id, string value)
         {
-            var variable = GetObject(id);
-            variable = value;
+            Navigator.GetSession()[id] = value;
         }
 
+        public static string GetCurrentUser()
+        {
+            var a = GetString(ViewStateElement_CurrentUser);
+            if (a == null)
+            {
+                return "";
+            }
+            return a;
+        }
 
+        public static void SetCurrentUser(string CurrentUser)
+        {
+            SetString(ViewStateElement_CurrentUser, CurrentUser);
+        }
 
     }
 }

@@ -770,7 +770,7 @@ namespace Sharp7
     {
         #region [Help Functions]
 
-        private static Int64 bias = 621355968000000000; // "decimicros" between 0001-01-01 00:00:00 and 1970-01-01 00:00:00
+        private static readonly Int64 bias = 621355968000000000; // "decimicros" between 0001-01-01 00:00:00 and 1970-01-01 00:00:00
 
         private static int BCDtoByte(byte B)
         {
@@ -1322,10 +1322,10 @@ namespace Sharp7
     public class S7MultiVar
     {
         #region [MultiRead/Write Helper]
-        private S7Client FClient;
-        private GCHandle[] Handles = new GCHandle[S7Client.MaxVars];
+        private readonly S7Client FClient;
+        private readonly GCHandle[] Handles = new GCHandle[S7Client.MaxVars];
         private int Count = 0;
-        private S7Client.S7DataItem[] Items = new S7Client.S7DataItem[S7Client.MaxVars];
+        private readonly S7Client.S7DataItem[] Items = new S7Client.S7DataItem[S7Client.MaxVars];
 
 
         public int[] Results = new int[S7Client.MaxVars];
@@ -1654,7 +1654,7 @@ namespace Sharp7
         #region [S7 Telegrams]
 
         // ISO Connection Request telegram (contains also ISO Header and COTP Header)
-        byte[] ISO_CR = {
+        readonly byte[] ISO_CR = {
             // TPKT (RFC1006 Header)
             0x03, // RFC 1006 ID (3) 
             0x00, // Reserved, always 0
@@ -1682,14 +1682,14 @@ namespace Sharp7
         };
 
         // TPKT + ISO COTP Header (Connection Oriented Transport Protocol)
-        byte[] TPKT_ISO = { // 7 bytes
+        readonly byte[] TPKT_ISO = { // 7 bytes
             0x03,0x00,
             0x00,0x1f,      // Telegram Length (Data Size + 31 or 35)
             0x02,0xf0,0x80  // COTP (see above for info)
         };
 
         // S7 PDU Negotiation Telegram (contains also ISO Header and COTP Header)
-        byte[] S7_PN = {
+        readonly byte[] S7_PN = {
             0x03, 0x00, 0x00, 0x19, 
             0x02, 0xf0, 0x80, // TPKT + COTP (see above for info)
             0x32, 0x01, 0x00, 0x00, 
@@ -1698,9 +1698,9 @@ namespace Sharp7
             0x00, 0x01, 0x00, 0x01, 
             0x00, 0x1e        // PDU Length Requested = HI-LO Here Default 480 bytes
         };
-        
+
         // S7 Read/Write Request Header (contains also ISO Header and COTP Header)
-        byte[] S7_RW = { // 31-35 bytes
+        readonly byte[] S7_RW = { // 31-35 bytes
             0x03,0x00, 
             0x00,0x1f,       // Telegram Length (Data Size + 31 or 35)
             0x02,0xf0, 0x80, // COTP (see above for info)
@@ -1725,11 +1725,11 @@ namespace Sharp7
             0x04,            // Transport size
             0x00,0x00,       // Data Length * 8 (if not bit or timer or counter) 
         };
-        private static int Size_RD = 31; // Header Size when Reading 
-        private static int Size_WR = 35; // Header Size when Writing
+        private static readonly int Size_RD = 31; // Header Size when Reading 
+        private static readonly int Size_WR = 35; // Header Size when Writing
 
         // S7 Variable MultiRead Header
-        byte[] S7_MRD_HEADER = {
+        readonly byte[] S7_MRD_HEADER = {
             0x03,0x00, 
             0x00,0x1f,       // Telegram Length 
             0x02,0xf0, 0x80, // COTP (see above for info)
@@ -1744,7 +1744,7 @@ namespace Sharp7
         };
 
         // S7 Variable MultiRead Item
-        byte[] S7_MRD_ITEM = {
+        readonly byte[] S7_MRD_ITEM = {
             0x12,            // Var spec.
             0x0a,            // Length of remaining bytes
             0x10,            // Syntax ID 
@@ -1756,7 +1756,7 @@ namespace Sharp7
         };
 
         // S7 Variable MultiWrite Header
-        byte[] S7_MWR_HEADER = {
+        readonly byte[] S7_MWR_HEADER = {
             0x03,0x00,
             0x00,0x1f,       // Telegram Length 
             0x02,0xf0, 0x80, // COTP (see above for info)
@@ -1771,7 +1771,7 @@ namespace Sharp7
         };
 
         // S7 Variable MultiWrite Item (Param)
-        byte[] S7_MWR_PARAM = {
+        readonly byte[] S7_MWR_PARAM = {
             0x12,            // Var spec.
             0x0a,            // Length of remaining bytes
             0x10,            // Syntax ID 
@@ -1783,7 +1783,7 @@ namespace Sharp7
         };
 
         // SZL First telegram request   
-        byte[] S7_SZL_FIRST = {
+        readonly byte[] S7_SZL_FIRST = {
             0x03, 0x00, 0x00, 0x21,
             0x02, 0xf0, 0x80, 0x32,
             0x07, 0x00, 0x00,
@@ -1798,7 +1798,7 @@ namespace Sharp7
         };
 
         // SZL Next telegram request 
-        byte[] S7_SZL_NEXT = {
+        readonly byte[] S7_SZL_NEXT = {
             0x03, 0x00, 0x00, 0x21,
             0x02, 0xf0, 0x80, 0x32,
             0x07, 0x00, 0x00, 0x06,
@@ -1811,7 +1811,7 @@ namespace Sharp7
         };
 
         // Get Date/Time request
-        byte[] S7_GET_DT = {
+        readonly byte[] S7_GET_DT = {
             0x03, 0x00, 0x00, 0x1d,
             0x02, 0xf0, 0x80, 0x32,
             0x07, 0x00, 0x00, 0x38,
@@ -1823,7 +1823,7 @@ namespace Sharp7
         };
 
         // Set Date/Time command
-        byte[] S7_SET_DT = {
+        readonly byte[] S7_SET_DT = {
             0x03, 0x00, 0x00, 0x27,
             0x02, 0xf0, 0x80, 0x32,
             0x07, 0x00, 0x00, 0x89,
@@ -1843,7 +1843,7 @@ namespace Sharp7
         };
 
         // S7 Set Session Password 
-        byte[] S7_SET_PWD = {
+        readonly byte[] S7_SET_PWD = {
             0x03, 0x00, 0x00, 0x25,
             0x02, 0xf0, 0x80, 0x32,
             0x07, 0x00, 0x00, 0x27,
@@ -1858,7 +1858,7 @@ namespace Sharp7
         };
 
         // S7 Clear Session Password 
-        byte[] S7_CLR_PWD = {
+        readonly byte[] S7_CLR_PWD = {
             0x03, 0x00, 0x00, 0x1d,
             0x02, 0xf0, 0x80, 0x32,
             0x07, 0x00, 0x00, 0x29,
@@ -1870,7 +1870,7 @@ namespace Sharp7
         };
 
         // S7 STOP request
-        byte[] S7_STOP = {
+        readonly byte[] S7_STOP = {
             0x03, 0x00, 0x00, 0x21,
             0x02, 0xf0, 0x80, 0x32,
             0x01, 0x00, 0x00, 0x0e,
@@ -1883,7 +1883,7 @@ namespace Sharp7
         };
 
         // S7 HOT Start request
-        byte[] S7_HOT_START = {
+        readonly byte[] S7_HOT_START = {
             0x03, 0x00, 0x00, 0x25,
             0x02, 0xf0, 0x80, 0x32,
             0x01, 0x00, 0x00, 0x0c,
@@ -1897,7 +1897,7 @@ namespace Sharp7
         };
 
         // S7 COLD Start request
-        byte[] S7_COLD_START = {
+        readonly byte[] S7_COLD_START = {
             0x03, 0x00, 0x00, 0x27,
             0x02, 0xf0, 0x80, 0x32,
             0x01, 0x00, 0x00, 0x0f,
@@ -1915,7 +1915,7 @@ namespace Sharp7
         const byte pduAlreadyStopped = 0x07;   // CPU already in stop mode
 
         // S7 Get PLC Status 
-        byte[] S7_GET_STAT = {
+        readonly byte[] S7_GET_STAT = {
             0x03, 0x00, 0x00, 0x21,
             0x02, 0xf0, 0x80, 0x32,
             0x07, 0x00, 0x00, 0x2c,
@@ -1928,7 +1928,7 @@ namespace Sharp7
         };
 
         // S7 Get Block Info Request Header (contains also ISO Header and COTP Header)
-        byte[] S7_BI = {
+        readonly byte[] S7_BI = {
             0x03, 0x00, 0x00, 0x25, 
             0x02, 0xf0, 0x80, 0x32, 
             0x07, 0x00, 0x00, 0x05, 
@@ -1947,12 +1947,12 @@ namespace Sharp7
         #region [Internals]
 
         // Defaults
-        private static int ISOTCP = 102; // ISOTCP Port
-        private static int MinPduSize = 16;
-        private static int MinPduSizeToRequest = 240;
-        private static int MaxPduSizeToRequest = 960;
-        private static int DefaultTimeout = 2000;
-        private static int IsoHSize = 7; // TPKT+COTP Header Size
+        private static readonly int ISOTCP = 102; // ISOTCP Port
+        private static readonly int MinPduSize = 16;
+        private static readonly int MinPduSizeToRequest = 240;
+        private static readonly int MaxPduSizeToRequest = 960;
+        private static readonly int DefaultTimeout = 2000;
+        private static readonly int IsoHSize = 7; // TPKT+COTP Header Size
 
         // Properties
         private int _PDULength = 0;
@@ -1970,7 +1970,7 @@ namespace Sharp7
         private byte RemoteTSAP_LO;
         private byte LastPDUType;
         private ushort ConnType = CONNTYPE_PG;
-        private byte[] PDU = new byte[2048];
+        private readonly byte[] PDU = new byte[2048];
         private MsgSocket Socket = null;
         private int Time_ms = 0;
 

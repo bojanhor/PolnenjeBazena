@@ -9,12 +9,12 @@ namespace WebApplication1
 {
     public class StanjeProcesa
     {        
-        public static List<PlcVars.AlarmMessage> SporocilaZaPrikaz { get; private set; }
+        public static List<PlcVars.AlarmBit> SporocilaZaPrikaz { get; private set; }
         public static List<string> SporocilaZaPrikaz_custom = new List<string>();
 
         public StanjeProcesa()
         {
-            SporocilaZaPrikaz = new List<PlcVars.AlarmMessage>();            
+            SporocilaZaPrikaz = new List<PlcVars.AlarmBit>();            
 
             Misc.SmartThread SporocilniSistem = new Misc.SmartThread(() => SporocilniSistem_method());
             SporocilniSistem.Start("SporocilniSistem", true);
@@ -39,14 +39,14 @@ namespace WebApplication1
 
         private static void ShowCustomMessage(string message)
         {
-            if (!doesItExist(message, SporocilaZaPrikaz_custom))
+            if (!DoesItExist(message, SporocilaZaPrikaz_custom))
             {
                 SporocilaZaPrikaz_custom.Add(message);
             }
         }
         private static void HideCustomMessage(string message)
         {
-            if (doesItExist(message, SporocilaZaPrikaz_custom))
+            if (DoesItExist(message, SporocilaZaPrikaz_custom))
             {
                 SporocilaZaPrikaz_custom.Remove(message);
             }
@@ -56,7 +56,7 @@ namespace WebApplication1
         {
             while (true)
             {
-                if (Val.logocontroler != null && Val.logocontroler.LOGO[1] != null)
+                if (Val.logocontroler != null && Val.logocontroler.LOGOConnection[1] != null)
                 {
                     NiPovezave(Val.logocontroler.LOGOConnection[1].connectionStatusLOGO != Connection.Status.Connected);
                 }
@@ -75,14 +75,14 @@ namespace WebApplication1
                     {
                         if (item.Value == !item.InvertState)
                         {
-                            if (!doesItExist(item.Message, SporocilaZaPrikaz))
+                            if (!DoesItExist(item.Message, SporocilaZaPrikaz))
                             {
                                 SporocilaZaPrikaz.Add(item); // adds message to display if it does not exist yet   if alarm bool is == 1
                             }                            
                         }
                         else
                         {
-                            if (doesItExist(item.Message, SporocilaZaPrikaz))
+                            if (DoesItExist(item.Message, SporocilaZaPrikaz))
                             {
                                 SporocilaZaPrikaz.Remove(item);// removes message to display if it exists   if alarm bool is == 0
                             }
@@ -95,7 +95,7 @@ namespace WebApplication1
             }
         }
 
-        static bool doesItExist(string sporocilo, List<string> collection)
+        static bool  DoesItExist(string sporocilo, List<string> collection)
         {
             foreach (var item in collection)
             {
@@ -107,7 +107,7 @@ namespace WebApplication1
             return false;
             
         }
-        static bool doesItExist(string sporocilo, List<PlcVars.AlarmMessage> collection)
+        static bool DoesItExist(string sporocilo, List<PlcVars.AlarmBit> collection)
         {
             foreach (var item in collection)
             {

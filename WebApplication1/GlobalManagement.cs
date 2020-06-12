@@ -9,8 +9,8 @@ namespace WebApplication1
     public static class GlobalManagement
     {
         static int ForceRefreshState = 0;
-        static int FastTimerInterval = 300;
-        static int normalTimerrInterval = Settings.UpdateValuesPCms;
+        static readonly int FastTimerInterval = 300;
+        static readonly int normalTimerrInterval = Settings.UpdateValuesPCms;
 
         public static IEnumerable<T> GetAllControlsOfType<T>(this Control parent) where T : Control
         {

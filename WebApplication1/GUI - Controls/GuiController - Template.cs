@@ -13,9 +13,9 @@ namespace WebApplication1
 
         public class Template : Dsps
         {
-            List<GControls.MenuItem> DDMenuItems = new List<GControls.MenuItem>();              // dropdown items
+            readonly List<GControls.MenuItem> DDMenuItems = new List<GControls.MenuItem>();              // dropdown items
 
-            static Image TemplateImage = new Image();
+            static readonly Image TemplateImage = new Image();
             public static ImageButton HomeBtn = new ImageButton();
             public static ImageButton MenuBtn = new ImageButton();
             ImageButton PrevButton;

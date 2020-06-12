@@ -9,7 +9,7 @@ namespace WebApplication1
 {   
     public class PlcVars
     {
-        public static List<AlarmMessage> AllAlarmMessageVars { get; private set; } = new List<AlarmMessage>();    
+        public static List<AlarmBit> AllAlarmMessageVars { get; private set; } = new List<AlarmBit>();    
 
         public static void ReportComunicatoonMessage(string message)
         {
@@ -97,7 +97,7 @@ namespace WebApplication1
             public ushort SyncEvery_X_Time // set to 1 for syncing to occur every loop -- 0 = turn sync off -- 2 = every 2nd loop...
             {
                 get { return _syncEvery_X_Time;  }
-                set { chk_SyncEvery_X_Time_Val(value); }
+                set { Chk_SyncEvery_X_Time_Val(value); }
             }
 
             public ushort skipNextLoop = 1; // alghoritem syncs variable only if this value is 1;
@@ -111,7 +111,7 @@ namespace WebApplication1
                         
             public abstract void SyncWithPLC();            
 
-            void chk_SyncEvery_X_Time_Val(ushort val)
+            void Chk_SyncEvery_X_Time_Val(ushort val)
             {
                 // limit
                 if (val >= 0)
@@ -338,7 +338,7 @@ namespace WebApplication1
                     "Address: " + Address + ", " +
                     "Read Error type: " + ErrTyp_Read + ", " +
                     "Write Error type: " + ErrTyp_Write + ", " +
-                    "Client: " + Client + ". " +
+                    "Client: " + ClientName + ". " +
                     "Flags: " + Flags);
             }
             
@@ -604,15 +604,15 @@ namespace WebApplication1
             private short? PLCval;
             private short? PCval;
             private bool directionToPLC = false;
-            private DoubleWordAddress _TypeAndAdress;
-            private Sharp7.S7Client _Client;
+            private readonly DoubleWordAddress _TypeAndAdress;
+            private readonly Sharp7.S7Client _Client;
             int ErrRead;
             int ErrWrite;
             short? buffRead;
             short? buffWrite;
-            string _prefixToShow;
-            string _postFixToShow;
-            bool _IsWritable = false;
+            readonly string _prefixToShow;
+            readonly string _postFixToShow;
+            readonly bool _IsWritable = false;
            
             public DWord(Sharp7.S7Client Client, PropComm prop, DoubleWordAddress TypeAndAdress, string prefixToShow, string postFixToShow, bool IsWritable) : base(prop)
             {
@@ -784,13 +784,13 @@ namespace WebApplication1
             private short? PLCval;
             private short? PCval;
             private bool directionToPLC = false;
-            private WordAddress _TypeAndAdress;
-            private Sharp7.S7Client _Client;
+            private readonly WordAddress _TypeAndAdress;
+            private readonly Sharp7.S7Client _Client;
             int ErrRead;
             int ErrWrite;
             short? buffRead;
             short? buffWrite;
-            bool _IsWritable = false;
+            readonly bool _IsWritable = false;
             
             public TimeSet(PropComm prop, WordAddress TypeAndAdress, bool IsWritable) : base(prop)
             {
@@ -968,17 +968,17 @@ namespace WebApplication1
             private short? PLCval;
             private short? PCval;
             private bool directionToPLC = false;
-            private WordAddress _TypeAndAdress;
-            private Sharp7.S7Client _Client;
+            private readonly WordAddress _TypeAndAdress;
+            private readonly Sharp7.S7Client _Client;
             int ErrRead;
             int ErrWrite;            
             short? buffRead;
             short? buffWrite;
-            string _prefixToShow;
-            string _postFixToShow;
+            readonly string _prefixToShow;
+            readonly string _postFixToShow;
             public float _kx;
             public float _n;
-            bool _isWritable;
+            readonly bool _isWritable;
             private int decimalPlaces;
             public int DecimalPlaces
             {
@@ -1189,13 +1189,13 @@ namespace WebApplication1
             private bool? PLCval;
             private bool? PCval;
             private bool directionToPLC = false;
-            private BitAddress _TypeAndAdress;
-            private Sharp7.S7Client _Client;
+            private readonly BitAddress _TypeAndAdress;
+            private readonly Sharp7.S7Client _Client;
             int ErrRead;
             int ErrWrite;
             short? buffRead;
-            short? buffWrite;            
-            bool _IsWritable = false;           
+            short? buffWrite;
+            readonly bool _IsWritable = false;
             byte sendpulseState = 0;
 
             public Bit(PropComm prop, BitAddress TypeAndAdress, bool IsWritable) : base(prop)
@@ -1214,7 +1214,7 @@ namespace WebApplication1
                 Value = true;               
             }            
 
-            private void stopSendPulse()
+            private void StopSendPulse()
             {
                 if (sendpulseState == 2)
                 {
@@ -1241,7 +1241,7 @@ namespace WebApplication1
                     else if (sendpulseState == 2)
                     {
                         WriteToPLCFromBuffer(true);
-                        stopSendPulse();
+                        StopSendPulse();
                     }
                     else
                     {
@@ -1359,20 +1359,29 @@ namespace WebApplication1
 
         }
 
-        public class AlarmMessage : Bit 
+        public class AlarmBit : Bit 
         {
             public string Message { get; private set; }
             public bool InvertState = false;
             public bool Emergency = false;
-            
-            public AlarmMessage(PropComm prop, BitAddress TypeAndAdress, string Message , bool invertState, bool Emergency) : base(prop, TypeAndAdress, false)
+
+
+            public AlarmBit(PropComm prop, BitAddress TypeAndAdress, string Message, bool invertState, bool Emergency, bool IsWritable) : base(prop, TypeAndAdress, IsWritable)
+            {                
+                InvertState = invertState;
+                this.Emergency = Emergency;
+                this.Message = Message;
+                AllAlarmMessageVars.Add(this);                
+            }
+
+            public AlarmBit(PropComm prop, BitAddress TypeAndAdress, string Message , bool invertState, bool Emergency) : base(prop, TypeAndAdress, false)
             {
                 InvertState = invertState;
                 this.Emergency = Emergency;
                 this.Message = Message;                
                 AllAlarmMessageVars.Add(this);
             }
-            public AlarmMessage(PropComm prop, BitAddress TypeAndAdress, string Message) : base(prop, TypeAndAdress, false)
+            public AlarmBit(PropComm prop, BitAddress TypeAndAdress, string Message) : base(prop, TypeAndAdress, false)
             {
                 InvertState = false;
                 this.Message = Message;
@@ -1399,8 +1408,8 @@ namespace WebApplication1
             }                        
 
             private short? PLCval;                   
-            private WordAddress _TypeAndAdress;
-            private Sharp7.S7Client _Client;
+            private readonly WordAddress _TypeAndAdress;
+            private readonly Sharp7.S7Client _Client;
             int ErrRead;           
             short? buffRead;           
             
@@ -1457,8 +1466,7 @@ namespace WebApplication1
         public static string RemoveFromEnd(string s, string suffix)
         {
             if (s.EndsWith(suffix))
-            {
-                var a = s.Substring(0, s.Length - suffix.Length);
+            {               
                 return s.Substring(0, s.Length - suffix.Length);
             }
             else

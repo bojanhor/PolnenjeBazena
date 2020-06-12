@@ -200,9 +200,9 @@ namespace WebApplication1
         }
         
         public class UserData
-        {                 
-            string Username;
-            string Password;
+        {
+            readonly string Username;
+            readonly string Password;
             uint tries = 1;
 
             bool blocked = false;

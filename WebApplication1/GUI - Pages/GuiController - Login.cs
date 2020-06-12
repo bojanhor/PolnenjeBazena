@@ -13,9 +13,9 @@ namespace WebApplication1
 
         public class PageLogin : Dsps
         {
-            HtmlGenericControl TemplateClassID;
-            Page thisPage;
-            System.Web.SessionState.HttpSessionState session;
+            readonly HtmlGenericControl TemplateClassID;
+            readonly Page thisPage;
+            readonly System.Web.SessionState.HttpSessionState session;
 
             public PageLogin(Page _thisPage, System.Web.SessionState.HttpSessionState session, HtmlGenericControl TemplateClass)
             {

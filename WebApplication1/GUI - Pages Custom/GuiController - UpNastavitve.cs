@@ -11,10 +11,10 @@ namespace WebApplication1
     public partial class GuiController
     {
         public class PageUpNastavitve : Dsps
-        {            
-            string Name;
-            Page thisPage;
-            System.Web.SessionState.HttpSessionState session;
+        {
+            private readonly string Name;
+            private readonly Page thisPage;
+            private readonly System.Web.SessionState.HttpSessionState session;
                        
             public GControls.UpdatePanelFull up;
                        
@@ -37,7 +37,7 @@ namespace WebApplication1
                 }
             }
 
-            void ManageUpdatePanel()
+            private void ManageUpdatePanel()
             {
                 try
                 {

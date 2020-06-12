@@ -14,7 +14,7 @@ namespace WebApplication1
     {
         public class PageAdvanced : Dsps
         {
-            Page thisPage;
+            readonly Page thisPage;
             public System.Web.SessionState.HttpSessionState Session;
             
             public HtmlGenericControl divDebug;
@@ -25,7 +25,7 @@ namespace WebApplication1
             public GControls.ButtonWithLabel BtnRestartServer = new GControls.ButtonWithLabel("RestatrtServer", 10, 1.2F);
 
             public GControls.NotShadowedOnOffButton Spremljaj;
-            GControls.ImageButtonWithID EditBtn = new GControls.ImageButtonWithID("Edit", 0);
+            readonly GControls.ImageButtonWithID EditBtn = new GControls.ImageButtonWithID("Edit", 0);
 
             
             public GControls.NotShadowedOnOffButton[] connectSwitch = new GControls.NotShadowedOnOffButton[Settings.Devices];

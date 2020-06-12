@@ -12,10 +12,10 @@ namespace WebApplication1
     {
         public class PageMasterMenu : Dsps
         {
-            Page thisPage;
+            readonly Page thisPage;
             public Panel MasterbtnPannel;
-            GControls.MasterMenuButton[] imageButtons = new GControls.MasterMenuButton[XmlController.GetHowManyMenuDDItems() + 1];
-            Label[] TitleUnder = new Label[XmlController.GetHowManyMenuDDItems() + 1];
+            readonly GControls.MasterMenuButton[] imageButtons = new GControls.MasterMenuButton[XmlController.GetHowManyMenuDDItems() + 1];
+            readonly Label[] TitleUnder = new Label[XmlController.GetHowManyMenuDDItems() + 1];
             HtmlGenericControl divMasterButtons;
            
             public PageMasterMenu(Page _thisPage)
