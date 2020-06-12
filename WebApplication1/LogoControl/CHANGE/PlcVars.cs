@@ -252,7 +252,7 @@ namespace WebApplication1
                         }
                         else
                         {
-                            ReportError_throwException("Read from PLC failed.", null, forceRead);
+                            ReportError("Read from PLC failed.", null, forceRead);
                         }
                     }
                 }
@@ -308,17 +308,15 @@ namespace WebApplication1
                                  
             public void ReportError_throwException(string Message)
             {
-                ReportError_throwException(Message, null, null);
+                ReportError(Message, null, null);
             }
-            public void ReportError_throwException(string Message, bool? forceSet_FlagToReport, bool? forceRead_FlagToReport)
+            public void ReportError(string Message, bool? forceSet_FlagToReport, bool? forceRead_FlagToReport)
             {               
                 string Address = _TypeAndAdress.GetStringRepresentation();
                 string ErrTyp_Read = Client.ErrorText(ErrRead);
                 string ErrTyp_Write = Client.ErrorText(ErrWrite);
                 string ClientName = "Logo" + Client.deviceID;
-                string Flags;
-
-                Flags = "directionToPLC: " + directionToPLC;
+                string Flags = "directionToPLC: " + directionToPLC;
 
                 if (forceSet_FlagToReport != null)
                 {
@@ -333,8 +331,7 @@ namespace WebApplication1
                 Flags += " isWritable: " + _IsWritable.ToString() + ";";
 
 
-                throw new Exception(
-                    Message + " " +
+                SysLog.Message.SetMessage(Message + " " +
                     "Address: " + Address + ", " +
                     "Read Error type: " + ErrTyp_Read + ", " +
                     "Write Error type: " + ErrTyp_Write + ", " +
