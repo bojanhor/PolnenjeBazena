@@ -50,9 +50,7 @@ namespace WebApplication1
             }
 
             SysLog.SetMessage(pageVisited + exc.Message + " " + excInnMess + "Stack trace: "+ exc.StackTrace);
-
-            Navigator.RedirectBack();
-
+                        
         }        
     }
 }

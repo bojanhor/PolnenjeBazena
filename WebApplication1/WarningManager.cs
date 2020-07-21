@@ -78,39 +78,36 @@ namespace WebApplication1
         void DisplayMessages()
         {
             var top = 20;
-            var dist = 16;
-
-            var WarningsShowList = Val.WarningManager.WarningsShowList;
-
+            var dist = 16;                        
             int from = 0;
             
 
-            if (Val.Warnings.Count >= 5)
+            if (WarningManager.Warnings.Count >= 5)
             {
-                from = Val.Warnings.Count - 5;
-                WarningsShowList = Val.Warnings.GetRange(from, 5);
+                from = WarningManager.Warnings.Count - 5;
+                WarningManager.WarningsShowList = WarningManager.Warnings.GetRange(from, 5);
             }
             else
             {
-                if (Val.Warnings.Count < 1)
+                if (WarningManager.Warnings.Count < 1)
                 {
                     return;
                 }
 
-                WarningsShowList = Val.Warnings.GetRange(0, (Val.Warnings.Count));
+                WarningManager.WarningsShowList = WarningManager.Warnings.GetRange(0, (WarningManager.Warnings.Count));
 
             }
 
-            for (int i = 0; i < WarningsShowList.Count; i++)
+            for (int i = 0; i < WarningManager.WarningsShowList.Count; i++)
             {
-                if (WarningsShowList[i] != null)
+                if (WarningManager.WarningsShowList[i] != null)
                 {
                     var newTop = top + dist * i;
                     messages[i] = new SuperLabel("", newTop, 5, 85, 6) { FontWeightBold = true, FontSize = 1.4F };
                     CancelMessageBtn(i, newTop);
                     Separe(newTop);
 
-                    messages[i].label.Text = WarningsShowList[i].GetMessage();
+                    messages[i].label.Text = WarningManager.WarningsShowList[i].GetMessage();
                     WarningMenuShow.Controls.Add(messages[i]);
                 }
             }
@@ -186,14 +183,14 @@ namespace WebApplication1
             var btn = (ImageButton)sender;
             var btnId = Convert.ToInt32(Helper.GetNumbersOnlyFromString(btn.ID));
             var warningToRemove = FindMessage(btnId);
-            Val.WarningManager.deleteItem(warningToRemove);
+            WarningManager.RemoveMessageForUser_Warning(warningToRemove);
             SysLog.Message.SetMessage("User acknowledged message: " + warningToRemove.GetMessage());
         }
 
         void ShowWarningSymbol()
         {
             var show = false;
-            if (Val.Warnings.Count > 0)
+            if (WarningManager.Warnings.Count > 0)
             {
                 show = true;
             }
@@ -215,7 +212,7 @@ namespace WebApplication1
 
         WarningManager.Warning FindMessage(int btnId)
         {
-            foreach (var item in Val.WarningManager.WarningsShowList)
+            foreach (var item in WarningManager.WarningsShowList)
             {
                 if (item != null)
                 {
@@ -232,21 +229,23 @@ namespace WebApplication1
 
     public class WarningManager
     {
+        public static List<Warning> Warnings = new List<Warning>();
+
         public WarningManager()
         {
             StartWarningTrackerThread();
         }
 
-        Misc.SmartThread WarningTrackerThread;
+        static Misc.SmartThread WarningTrackerThread;
 
-        public List<Warning> WarningsShowList;
-        readonly List<Tracker> MessageTrackerList = new List<Tracker>();
+        public static List<Warning> WarningsShowList;
+        static readonly List<Tracker> MessageTrackerList = new List<Tracker>();
 
-        public void AddMessageForUser_Warning(string message)
+        public static void AddMessageForUser_Warning(string message)
         {
-            if (PreventThisMessage_IsDuplicacate(message))
+            if (!PreventThisMessage_IsDuplicacate(message))
             {
-                Val.Warnings.Add(new Warning("- " + message, CreateId()));
+                Warnings.Add(new Warning(message, CreateId()));
                 SysLog.Message.SetMessage("Message shown to user: " + message);
             }
         }
@@ -254,7 +253,7 @@ namespace WebApplication1
         void WarningTrackerThreadMethod()
         {
             bool Alarm = false;
-            Val.Warnings = new List<Warning>();
+            WarningManager.Warnings = new List<Warning>();
 
             try
             {
@@ -276,18 +275,26 @@ namespace WebApplication1
             }
         }
 
-        public void AddWarningTrackerFromPLCVar(PlcVars.PlcType PlcVar, object valueToTrigerWarning, WarningTriggerCondition Condition, string WarningMessage)
+        public static void AddWarningTrackerFromPLCVar(PlcVars.PlcType PlcVar, object valueToTrigerWarning, WarningTriggerCondition Condition, string WarningMessage)
         {
             Tracker t = new Tracker(PlcVar, valueToTrigerWarning, Condition, WarningMessage);
             MessageTrackerList.Add(t);
-
-            if (!WarningTrackerThread.IsBusy)
-            {
-                WarningTrackerThread.Start("WarningTrackerThread", ApartmentState.MTA, true);
-            }
-
+                        
         }        
-        
+       
+        public static void RemoveMessageForUser_Warning(Warning warning)
+        {
+            WarningManager.Warnings.Remove(warning);
+        }
+        public static void RemoveMessageForUser_Warning(string warning)
+        {
+            if (WarningsShowList != null)
+            {
+                WarningsShowList.Find(item => item.GetMessage() == warning);
+            }
+            
+        }
+
         public enum WarningTriggerCondition
         {
             EqualTo,
@@ -296,16 +303,16 @@ namespace WebApplication1
             LessThan,
             GreaterThanOrEqualTo,
             LessThanOrEqualTo
-        }        
+        }
 
-        int CreateId()
+        static int CreateId()
         {
             int id = 0;
             bool again = false;
 
             while (true)
             {
-                foreach (var item in Val.Warnings)
+                foreach (var item in WarningManager.Warnings)
                 {
                     if (item != null)
                     {
@@ -328,18 +335,13 @@ namespace WebApplication1
                     again = false;
                 }
             }
-        }       
+        }
 
-        public void deleteItem(Warning warning)
+        static bool PreventThisMessage_IsDuplicacate(string message)
         {
-            Val.Warnings.Remove(warning);
-        }        
-               
-        bool PreventThisMessage_IsDuplicacate(string message)
-        {
-            if (Val.Warnings != null)
+            if (Warnings != null)
             {
-                foreach (var item in Val.Warnings)
+                foreach (var item in WarningManager.Warnings)
                 {
                     if (message == item.GetMessage())
                     {
@@ -353,6 +355,7 @@ namespace WebApplication1
         void StartWarningTrackerThread()
         {
             WarningTrackerThread = new Misc.SmartThread(() => WarningTrackerThreadMethod());
+            WarningTrackerThread.Start("WarningTrackerThread", ApartmentState.MTA, true);
         }
 
         class Tracker

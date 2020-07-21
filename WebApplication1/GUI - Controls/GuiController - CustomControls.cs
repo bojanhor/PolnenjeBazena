@@ -1526,6 +1526,11 @@ namespace WebApplication1
                     DataSource = datasource;
                     Button_Outside.DataBind();
                 }
+
+                new public short GetSelectedValue()
+                {
+                    return Convert.ToInt16(base.GetSelectedValue());
+                }
             }
 
             public class DropDownListForTemperatureSelect_10_30 : DropDown

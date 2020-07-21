@@ -35,16 +35,22 @@ namespace WebApplication1
             }
             catch (Exception ex)
             {
-                SysLog.SetMessage("Error inside method Redirect(). " + ex.Message);
-                var pageHistory = GetPageHistoryFromSession();
-                if (pageHistory != null)
+                try
                 {
-                    var page = pageHistory.getPreviousPageName();
-                    GetCurrentPage().Server.Transfer(page + "aspx");
+                    var pageHistory = GetPageHistoryFromSession();
+                    if (pageHistory != null)
+                    {
+                        var page = pageHistory.getPreviousPageName();
+                        GetCurrentPage().Server.Transfer(page + "aspx");
+                    }
                 }
+                catch (Exception)
+                {
+                    SysLog.SetMessage("Error inside method Redirect(). " + ex.Message);
+                }                  
             }
         }
-
+        
         private static bool IsInitialized()
         {
             if (Initialized)
@@ -52,10 +58,11 @@ namespace WebApplication1
                 return true;
             }
 
-            if (Helper.ChartValuesLoggerInitialized &&
+            if (
                 Helper.WarningManagerInitialized &&
                 Helper.LogoControllerInitialized &&
-                Helper.GuiControllerInitialized)
+                Helper.GuiControllerInitialized
+                )
             {
                 Initialized = true;
                 return true;
@@ -145,7 +152,7 @@ namespace WebApplication1
             }
             catch (Exception ex)
             {
-                throw new Exception("1- " + exceptionMessage + ex.Message);
+                SysLog.SetMessage("1- " + exceptionMessage + ex.Message);
             }
             
             //
@@ -163,10 +170,11 @@ namespace WebApplication1
             }
             catch (Exception ex)
             {
-                throw new Exception("2- " + exceptionMessage + ex.Message);
+                SysLog.SetMessage("2- " + exceptionMessage + ex.Message);
             }
-
-            throw new Exception(exceptionMessage + "Can not get Page object from anywhere.");
+            exceptionMessage = "GetCurrentPage() is reporting an error: Can not get Page object from anywhere.";
+            SysLog.SetMessage(exceptionMessage);
+            throw new Exception(exceptionMessage);            
 
         }
 
@@ -210,7 +218,8 @@ namespace WebApplication1
             }
             catch (Exception ex)
             {
-                throw ex;
+                SysLog.SetMessage("GetCurrentPageAlternative() failed. " + ex.Message);
+                return null;
             }
         }
 

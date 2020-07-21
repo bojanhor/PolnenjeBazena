@@ -30,13 +30,15 @@ namespace WebApplication1
             if (prikazi)
             {
                 ShowCustomMessage(message);
+               WarningManager.AddMessageForUser_Warning(message);
             }
             else
             {
                 HideCustomMessage(message);
+                WarningManager.RemoveMessageForUser_Warning(message);
             }
         }
-
+                
         private static void ShowCustomMessage(string message)
         {
             if (!DoesItExist(message, SporocilaZaPrikaz_custom))

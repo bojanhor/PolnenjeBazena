@@ -12,7 +12,7 @@ namespace WebApplication1.Pages
     {        
         protected void Page_Load(object sender, EventArgs e)
         {
-            Navigator.EveryPageProtocol("Zahtevne Nastavitve", this, Session, TemplateClassID, true, false);
+            Navigator.EveryPageProtocol("Zahtevne Nastavitve", this, Session, TemplateClassID, true, false, true, true, true, true);
             Val.guiController.PageEditor_ = new GuiController.PageEditor();            
                        
             InitialiseEditor();

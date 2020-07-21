@@ -35,7 +35,7 @@ namespace WebApplication1
 
         public PlcVars.AlarmBit ReadKSX1; public PlcVars.AlarmBit ReadKSX2; public PlcVars.AlarmBit ReadKSY1; public PlcVars.AlarmBit ReadKSY2;
 
-        public PlcVars.Bit Inicializacija; public PlcVars.Bit Korak1; public PlcVars.Bit KorakZigZag1; public PlcVars.Bit Korak3; public PlcVars.Bit KorakZigZag2;
+        public PlcVars.Bit Inicializacija; public PlcVars.Bit KorakZigZag1; public PlcVars.Bit KorakZigZag2;
 
         public PlcVars.Bit InitCircle; public PlcVars.Bit KorakCircle1; public PlcVars.Bit KorakCircle2; public PlcVars.Bit KorakCircle3; public PlcVars.Bit KorakCircle4;
 
@@ -43,7 +43,7 @@ namespace WebApplication1
 
         public PlcVars.Word SpeedX; public PlcVars.Word SpeedY;
 
-        public PlcVars.Word Trak_speedSet; public PlcVars.Word Trak_speedRead;
+        public PlcVars.Word SpeedSet; public PlcVars.Word SpeedRead;
 
         public PlcVars.Word TimeZigY;
 
@@ -130,11 +130,10 @@ namespace WebApplication1
             SpeedX = new PlcVars.Word(this, new PlcVars.WordAddress(100), false) { SyncEvery_X_Time = 4 };
             SpeedY = new PlcVars.Word(this, new PlcVars.WordAddress(104), false) { SyncEvery_X_Time = 4 };
 
-            Trak_speedSet = new PlcVars.Word(this, new PlcVars.WordAddress(106), true) { SyncEvery_X_Time = 3 };
+            SpeedSet = new PlcVars.Word(this, new PlcVars.WordAddress(106), true) { SyncEvery_X_Time = 3 };
+            SpeedRead = new PlcVars.Word(this, new PlcVars.WordAddress(108), false) { SyncEvery_X_Time = 3 };
 
-            Trak_speedRead = new PlcVars.Word(this, new PlcVars.WordAddress(108), false) { SyncEvery_X_Time = 3 };
-
-            TimeZigY = new PlcVars.Word(this, new PlcVars.WordAddress(110), true) { SyncEvery_X_Time = 4 };
+            TimeZigY = new PlcVars.Word(this, new PlcVars.WordAddress(110),"","s", true) { SyncEvery_X_Time = 4 };
 
             SemaforGn = new PlcVars.Bit(this, new PlcVars.BitAddress(200, 0), false);
             SemaforRd = new PlcVars.Bit(this, new PlcVars.BitAddress(202, 0), false);

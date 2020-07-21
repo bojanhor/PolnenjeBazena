@@ -27859,3 +27859,611 @@ Parameter name: updatePanel Stack trace:    at System.Web.UI.PageRequestManager.
 10.06.2020  14:32:14 : Login Success: Local - User:  Local
 10.06.2020  14:32:14 : Redirected to: Default
 10.06.2020  14:32:14 : Redirected to: Default
+15.06.2020  13:12:27 : Logo1: Connecting...
+15.06.2020  13:12:28 : Logo1: Connected
+15.06.2020  13:12:28 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  13:15:07 : Logo1: Connecting...
+15.06.2020  13:15:08 : Logo1: Connected
+15.06.2020  13:15:08 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  13:15:09 : Login try: Local
+15.06.2020  13:15:09 : Login Failed: Username (admin) was invalid
+15.06.2020  13:15:09 : Login Denied: Local - User:  admin
+15.06.2020  13:15:09 : Redirected to: Default
+15.06.2020  13:15:09 : Redirected to: Login
+15.06.2020  13:15:22 : Login try: Local
+15.06.2020  13:15:22 : Login Success: Local - User:  Local
+15.06.2020  13:15:22 : Redirected to: Default
+15.06.2020  13:15:22 : Redirected to: Default
+15.06.2020  13:15:26 : Redirected to: MasterMenu
+15.06.2020  13:15:27 : Redirected to: UpNastavitve
+15.06.2020  13:15:27 : Redirected to: Advanced
+15.06.2020  13:15:33 : Redirected to: Default
+15.06.2020  13:16:44 : Redirected to: MasterMenu
+15.06.2020  13:16:45 : Redirected to: UpNastavitve
+15.06.2020  13:16:45 : Redirected to: Advanced
+15.06.2020  13:16:46 : Logo1: Disconected by the user
+15.06.2020  13:16:48 : Redirected to: Default
+15.06.2020  13:21:26 : Logo1: Connecting...
+15.06.2020  13:21:27 : Logo1: Connected
+15.06.2020  13:21:27 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  13:21:29 : Login try: Local
+15.06.2020  13:21:29 : Login Success: Local - User:  Local
+15.06.2020  13:21:29 : Redirected to: Default
+15.06.2020  13:21:29 : Redirected to: Default
+15.06.2020  13:21:31 : Redirected to: MasterMenu
+15.06.2020  13:21:31 : Redirected to: UpNastavitve
+15.06.2020  13:21:31 : Redirected to: Advanced
+15.06.2020  13:21:37 : Logo1: Disconected by the user
+15.06.2020  13:21:44 : Logo1: Connecting...
+15.06.2020  13:21:45 : Logo1: Connected
+15.06.2020  13:21:45 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  13:21:53 : Redirected to: Default
+15.06.2020  13:21:53 : Redirected to: Default
+15.06.2020  13:22:08 : Read from PLC failed. Address: bit at 920, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:22:08 : Read from PLC failed. Address: VW108, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:22:08 : Read from PLC failed. Address: bit at 420, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:22:08 : Read from PLC failed. Address: VW104, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:22:08 : Logo1: CLI : Client not connected
+15.06.2020  13:22:08 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:22:11 : Logo1: Running connection diagnostics...
+15.06.2020  13:22:11 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:22:11 : Logo1: Running connection diagnostics...
+15.06.2020  13:22:11 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:22:11 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:22:14 : Logo1: Running connection diagnostics...
+15.06.2020  13:22:14 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:22:14 : Logo1: Running connection diagnostics...
+15.06.2020  13:22:14 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:22:14 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:22:17 : Logo1: Running connection diagnostics...
+15.06.2020  13:22:17 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:22:17 : Logo1: Running connection diagnostics...
+15.06.2020  13:22:17 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:22:17 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:22:20 : Logo1: Running connection diagnostics...
+15.06.2020  13:22:20 : Logo1:   -Ping successful at: 192.168.1.200
+15.06.2020  13:22:21 : Logo1: Connected again
+15.06.2020  13:23:33 : Logo1: Connecting...
+15.06.2020  13:23:34 : Logo1: Connected
+15.06.2020  13:23:34 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  13:23:36 : Login try: Local
+15.06.2020  13:23:36 : Login Success: Local - User:  Local
+15.06.2020  13:23:36 : Redirected to: Default
+15.06.2020  13:23:36 : Redirected to: Default
+15.06.2020  13:23:50 : Read from PLC failed. Address: bit at 2000, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:23:50 : Read from PLC failed. Address: bit at 2020, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:23:50 : Read from PLC failed. Address: bit at 2040, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:23:50 : Read from PLC failed. Address: VW700, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:23:50 : Read from PLC failed. Address: VW702, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:23:50 : Read from PLC failed. Address: bit at 90, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:23:50 : Read from PLC failed. Address: bit at 100, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:23:50 : Read from PLC failed. Address: bit at 140, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:23:50 : Read from PLC failed. Address: bit at 200, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:23:50 : Read from PLC failed. Address: bit at 240, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:23:50 : Read from PLC failed. Address: bit at 3100, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:23:50 : Read from PLC failed. Address: bit at 3130, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:23:50 : Read from PLC failed. Address: bit at 3160, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:23:50 : Read from PLC failed. Address: bit at 30, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:23:50 : Read from PLC failed. Address: bit at 600, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:23:50 : Read from PLC failed. Address: bit at 700, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:23:50 : Read from PLC failed. Address: bit at 730, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:23:50 : Read from PLC failed. Address: bit at 280, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:23:50 : Read from PLC failed. Address: bit at 320, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:23:50 : Read from PLC failed. Address: bit at 540, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:23:50 : Read from PLC failed. Address: bit at 910, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:23:50 : Read from PLC failed. Address: VW106, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:23:50 : Read from PLC failed. Address: bit at 400, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:23:50 : Read from PLC failed. Address: VW100, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:23:50 : Logo1: CLI : Client not connected
+15.06.2020  13:23:50 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:23:53 : Logo1: Running connection diagnostics...
+15.06.2020  13:23:53 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:23:53 : Logo1: Running connection diagnostics...
+15.06.2020  13:23:53 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:23:53 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:23:55 : Redirected to: MasterMenu
+15.06.2020  13:23:56 : Redirected to: UpNastavitve
+15.06.2020  13:23:56 : Redirected to: Advanced
+15.06.2020  13:23:56 : Logo1: Running connection diagnostics...
+15.06.2020  13:23:56 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:23:56 : Logo1: Running connection diagnostics...
+15.06.2020  13:23:56 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:23:56 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:23:59 : Logo1: Running connection diagnostics...
+15.06.2020  13:23:59 : Logo1:   -Ping successful at: 192.168.1.200
+15.06.2020  13:24:00 : Page refreshed.
+15.06.2020  13:24:00 : Logo1: Connected again
+15.06.2020  13:24:05 : Page refreshed.
+15.06.2020  13:24:42 : Logo1: Read-Write cycle is taking 66ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+15.06.2020  13:24:54 : Logo1: Read-Write cycle is taking 100ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+15.06.2020  13:24:56 : Logo1: Read-Write cycle is taking 72ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+15.06.2020  13:24:59 : Logo1: Read-Write cycle is taking 63ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+15.06.2020  13:25:02 : Logo1: Read-Write cycle is taking 82ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+15.06.2020  13:25:04 : Redirected to: Default
+15.06.2020  13:26:23 : Logo1: Connecting...
+15.06.2020  13:26:24 : Logo1: Connected
+15.06.2020  13:26:24 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  13:26:28 : Login try: Local
+15.06.2020  13:26:28 : Login Success: Local - User:  Local
+15.06.2020  13:26:28 : Redirected to: Default
+15.06.2020  13:26:28 : Redirected to: Default
+15.06.2020  13:26:37 : Read from PLC failed. Address: bit at 2000, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:26:37 : Read from PLC failed. Address: bit at 2020, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:26:37 : Read from PLC failed. Address: bit at 2040, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:26:37 : Read from PLC failed. Address: VW700, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:26:37 : Read from PLC failed. Address: VW702, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:26:37 : Read from PLC failed. Address: bit at 90, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:26:37 : Read from PLC failed. Address: bit at 100, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:26:37 : Read from PLC failed. Address: bit at 140, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:26:37 : Read from PLC failed. Address: bit at 200, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:26:37 : Read from PLC failed. Address: bit at 240, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:26:37 : Read from PLC failed. Address: bit at 3120, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:26:37 : Read from PLC failed. Address: bit at 3150, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:26:37 : Read from PLC failed. Address: bit at 20, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:26:37 : Read from PLC failed. Address: bit at 50, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:26:37 : Read from PLC failed. Address: bit at 630, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:26:37 : Read from PLC failed. Address: bit at 720, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:26:37 : Read from PLC failed. Address: bit at 130, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:26:37 : Read from PLC failed. Address: bit at 300, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:26:37 : Read from PLC failed. Address: bit at 520, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:26:37 : Read from PLC failed. Address: bit at 900, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:26:37 : Read from PLC failed. Address: bit at 930, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:26:37 : Read from PLC failed. Address: bit at 400, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:26:37 : Read from PLC failed. Address: VW100, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:26:37 : Logo1: CLI : Client not connected
+15.06.2020  13:26:37 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:26:40 : Logo1: Running connection diagnostics...
+15.06.2020  13:26:40 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:26:40 : Logo1: Running connection diagnostics...
+15.06.2020  13:26:40 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:26:40 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:26:43 : Logo1: Running connection diagnostics...
+15.06.2020  13:26:43 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:26:43 : Logo1: Running connection diagnostics...
+15.06.2020  13:26:43 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:26:43 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:26:46 : Logo1: Running connection diagnostics...
+15.06.2020  13:26:46 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:26:46 : Logo1: Running connection diagnostics...
+15.06.2020  13:26:46 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:26:46 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:26:46 : Redirected to: Default
+15.06.2020  13:26:47 : Redirected to: MasterMenu
+15.06.2020  13:26:49 : Logo1: Running connection diagnostics...
+15.06.2020  13:26:49 : Logo1:   -Ping successful at: 192.168.1.200
+15.06.2020  13:26:49 : Logo1: Connected again
+15.06.2020  13:26:50 : Redirected to: UpNastavitve
+15.06.2020  13:26:50 : Redirected to: Advanced
+15.06.2020  13:27:21 : Read from PLC failed. Address: bit at 300, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:27:21 : Logo1: Watchdog error - Watchdog does not change
+15.06.2020  13:27:21 : Logo1: Connection error: Watchdog error - Watchdog does not change
+15.06.2020  13:27:25 : Logo1: Running connection diagnostics...
+15.06.2020  13:27:31 : Logo1:   -Ping successful at: 192.168.1.200
+15.06.2020  13:27:33 : Logo1: Connected again
+15.06.2020  13:28:10 : Logo1: Connecting...
+15.06.2020  13:28:11 : Logo1: Connected
+15.06.2020  13:28:11 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  13:28:20 : Logo1: Connecting...
+15.06.2020  13:28:21 : Logo1: Connected
+15.06.2020  13:28:21 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  13:28:22 : Login try: Local
+15.06.2020  13:28:22 : Login Success: Local - User:  Local
+15.06.2020  13:28:22 : Redirected to: Default
+15.06.2020  13:28:23 : Redirected to: Default
+15.06.2020  13:28:26 : Redirected to: MasterMenu
+15.06.2020  13:28:27 : Redirected to: UpNastavitve
+15.06.2020  13:28:27 : Redirected to: Advanced
+15.06.2020  13:28:35 : Read from PLC failed. Address: VW702, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:28:36 : Read from PLC failed. Address: bit at 80, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:28:36 : Read from PLC failed. Address: bit at 120, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:28:36 : Read from PLC failed. Address: bit at 160, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:28:36 : Read from PLC failed. Address: bit at 220, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:28:36 : Read from PLC failed. Address: bit at 260, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:28:36 : Read from PLC failed. Address: bit at 3110, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:28:36 : Read from PLC failed. Address: bit at 3140, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:28:36 : Read from PLC failed. Address: bit at 10, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:28:36 : Read from PLC failed. Address: bit at 40, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:28:36 : Read from PLC failed. Address: bit at 610, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:28:36 : Read from PLC failed. Address: bit at 710, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:28:36 : Read from PLC failed. Address: bit at 740, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:28:36 : Read from PLC failed. Address: bit at 290, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:28:36 : Read from PLC failed. Address: bit at 500, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:28:36 : Read from PLC failed. Address: bit at 560, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:28:36 : Read from PLC failed. Address: bit at 920, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:28:36 : Read from PLC failed. Address: VW108, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:28:36 : Read from PLC failed. Address: bit at 420, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:28:36 : Read from PLC failed. Address: VW104, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:28:36 : Logo1: CLI : Client not connected
+15.06.2020  13:28:36 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:28:39 : Logo1: Running connection diagnostics...
+15.06.2020  13:28:39 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:28:39 : Logo1: Running connection diagnostics...
+15.06.2020  13:28:39 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:28:39 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:28:42 : Logo1: Running connection diagnostics...
+15.06.2020  13:28:42 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:28:42 : Logo1: Running connection diagnostics...
+15.06.2020  13:28:42 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:28:42 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:28:45 : Logo1: Running connection diagnostics...
+15.06.2020  13:28:45 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:28:45 : Logo1: Running connection diagnostics...
+15.06.2020  13:28:45 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:28:45 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:28:48 : Logo1: Running connection diagnostics...
+15.06.2020  13:28:48 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:28:48 : Logo1: Running connection diagnostics...
+15.06.2020  13:28:48 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:28:48 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:28:51 : Logo1: Running connection diagnostics...
+15.06.2020  13:28:51 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:28:51 : Logo1: Running connection diagnostics...
+15.06.2020  13:28:51 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:28:51 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:29:17 : Logo1: Connecting...
+15.06.2020  13:29:23 : Logo1: Connected
+15.06.2020  13:29:23 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  13:29:27 : Login try: Local
+15.06.2020  13:29:27 : Login Success: Local - User:  Local
+15.06.2020  13:29:27 : Redirected to: Default
+15.06.2020  13:29:27 : Redirected to: Default
+15.06.2020  13:29:36 : Read from PLC failed. Address: bit at 710, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:29:36 : Read from PLC failed. Address: bit at 740, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:29:36 : Read from PLC failed. Address: bit at 290, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:29:36 : Read from PLC failed. Address: bit at 500, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:29:36 : Read from PLC failed. Address: bit at 560, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:29:36 : Read from PLC failed. Address: bit at 920, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:29:36 : Read from PLC failed. Address: VW108, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  13:29:36 : Read from PLC failed. Address: bit at 460, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  13:29:36 : Logo1: CLI : Client not connected
+15.06.2020  13:29:36 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:29:39 : Logo1: Running connection diagnostics...
+15.06.2020  13:29:39 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:29:39 : Logo1: Running connection diagnostics...
+15.06.2020  13:29:39 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:29:39 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:29:42 : Logo1: Running connection diagnostics...
+15.06.2020  13:29:42 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:29:42 : Logo1: Running connection diagnostics...
+15.06.2020  13:29:42 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:29:42 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:29:47 : Logo1: Running connection diagnostics...
+15.06.2020  13:29:48 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:29:48 : Logo1: Running connection diagnostics...
+15.06.2020  13:29:48 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:29:48 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:29:52 : Logo1: Running connection diagnostics...
+15.06.2020  13:29:52 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:29:52 : Logo1: Running connection diagnostics...
+15.06.2020  13:29:52 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:29:52 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:32:17 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  13:32:17 : Logo1: Connecting...
+15.06.2020  13:32:18 : Logo1: TCP : Connection Error
+15.06.2020  13:32:18 : Logo1: Running connection diagnostics...
+15.06.2020  13:32:18 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:32:18 : Logo1: CLI : Client not connected
+15.06.2020  13:32:18 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:32:19 : Login try: Local
+15.06.2020  13:32:19 : Login Success: Local - User:  Local
+15.06.2020  13:32:19 : Redirected to: Default
+15.06.2020  13:32:19 : Redirected to: Default
+15.06.2020  13:32:21 : Logo1: Running connection diagnostics...
+15.06.2020  13:32:21 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:32:21 : Logo1: Running connection diagnostics...
+15.06.2020  13:32:21 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:32:21 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  13:32:21 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:32:24 : Logo1: Running connection diagnostics...
+15.06.2020  13:32:24 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:32:24 : Logo1: Running connection diagnostics...
+15.06.2020  13:32:24 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:32:24 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:32:29 : Logo1: Running connection diagnostics...
+15.06.2020  13:32:36 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:32:36 : Logo1: Running connection diagnostics...
+15.06.2020  13:32:36 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:32:36 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:33:16 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  13:33:16 : Logo1: Connecting...
+15.06.2020  13:33:17 : Logo1: TCP : Connection Error
+15.06.2020  13:33:17 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:17 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:17 : Logo1: CLI : Client not connected
+15.06.2020  13:33:17 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:33:19 : Login try: Local
+15.06.2020  13:33:19 : Login Success: Local - User:  Local
+15.06.2020  13:33:19 : Redirected to: Default
+15.06.2020  13:33:19 : Redirected to: Default
+15.06.2020  13:33:20 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:20 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:20 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:20 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:20 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  13:33:20 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:33:23 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:23 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:23 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:23 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:23 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:33:26 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:26 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:26 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:26 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:26 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:33:31 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:31 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:31 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:31 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:31 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:33:34 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:34 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:34 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:34 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:34 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:33:37 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:37 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:37 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:37 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:37 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:33:40 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:40 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:40 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:40 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:40 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:33:43 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:43 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:43 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:43 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:43 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:33:46 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:46 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:46 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:46 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:46 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:33:49 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:49 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:49 : Logo1: Running connection diagnostics...
+15.06.2020  13:33:49 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:33:49 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:34:13 : Logo1: Running connection diagnostics...
+15.06.2020  13:35:06 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  13:35:06 : Logo1: Connecting...
+15.06.2020  13:35:08 : Logo1: TCP : Connection Error
+15.06.2020  13:35:08 : Logo1: Running connection diagnostics...
+15.06.2020  13:35:09 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:35:09 : Logo1: CLI : Client not connected
+15.06.2020  13:35:09 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:35:09 : Page visited: /Pages/Default... Exception of type 'System.Web.HttpUnhandledException' was thrown. Internal error inside class constructor (Page: Default): Internal error inside Kontrola(HtmlGenericControl) method. Object reference not set to an instance of an object.... Stack trace:    at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_default_aspx.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
+   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
+   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
+   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
+   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+15.06.2020  13:35:18 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  13:35:21 : Logo1: Connecting...
+15.06.2020  13:35:25 : Logo1: TCP : Connection Error
+15.06.2020  13:35:25 : Logo1: Running connection diagnostics...
+15.06.2020  13:35:28 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:35:28 : Logo1: CLI : Client not connected
+15.06.2020  13:35:28 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:35:31 : Logo1: Running connection diagnostics...
+15.06.2020  13:35:31 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:35:31 : Logo1: Running connection diagnostics...
+15.06.2020  13:35:31 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:35:31 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  13:35:31 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:35:36 : Logo1: Running connection diagnostics...
+15.06.2020  13:35:39 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:35:39 : Logo1: Running connection diagnostics...
+15.06.2020  13:35:39 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:35:39 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:35:39 : Login try: Local
+15.06.2020  13:35:39 : Login Success: Local - User:  Local
+15.06.2020  13:35:39 : Redirected to: Default
+15.06.2020  13:35:39 : Redirected to: Default
+15.06.2020  13:38:35 : Logo1: Connecting...
+15.06.2020  13:38:35 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  13:38:37 : Logo1: TCP : Connection Error
+15.06.2020  13:38:37 : Logo1: Running connection diagnostics...
+15.06.2020  13:38:39 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:38:39 : Logo1: CLI : Client not connected
+15.06.2020  13:38:39 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:38:42 : Logo1: Running connection diagnostics...
+15.06.2020  13:38:42 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:38:42 : Logo1: Running connection diagnostics...
+15.06.2020  13:38:42 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:38:42 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  13:38:42 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:38:49 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  13:38:49 : Logo1: Connecting...
+15.06.2020  13:38:50 : Logo1: TCP : Connection Error
+15.06.2020  13:38:50 : Logo1: Running connection diagnostics...
+15.06.2020  13:38:50 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:38:50 : Logo1: CLI : Client not connected
+15.06.2020  13:38:50 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:38:50 : Login try: Local
+15.06.2020  13:38:50 : Login Success: Local - User:  Local
+15.06.2020  13:38:50 : Redirected to: Default
+15.06.2020  13:38:50 : Redirected to: Default
+15.06.2020  13:38:53 : Logo1: Running connection diagnostics...
+15.06.2020  13:38:53 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:38:53 : Logo1: Running connection diagnostics...
+15.06.2020  13:38:53 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:38:53 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  13:38:53 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:38:53 : Page refreshed.
+15.06.2020  13:38:56 : Page refreshed.
+15.06.2020  13:38:56 : Logo1: Running connection diagnostics...
+15.06.2020  13:38:56 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:38:56 : Logo1: Running connection diagnostics...
+15.06.2020  13:38:56 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:38:56 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:38:59 : Logo1: Running connection diagnostics...
+15.06.2020  13:38:59 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:38:59 : Logo1: Running connection diagnostics...
+15.06.2020  13:38:59 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:38:59 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:39:02 : Logo1: Running connection diagnostics...
+15.06.2020  13:39:02 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:39:02 : Logo1: Running connection diagnostics...
+15.06.2020  13:39:02 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+15.06.2020  13:39:02 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  13:39:05 : Logo1: Running connection diagnostics...
+15.06.2020  13:39:05 : Logo1:   -Ping successful but connection is poor: 192.168.1.200
+15.06.2020  13:39:05 : Logo1: Connected again
+15.06.2020  13:39:10 : Page refreshed.
+15.06.2020  13:39:15 : Page refreshed.
+15.06.2020  14:32:09 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  14:32:09 : Logo1: Connecting...
+15.06.2020  14:32:10 : Logo1: Connected
+15.06.2020  14:32:10 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  14:32:11 : Login try: Local
+15.06.2020  14:32:11 : Login Success: Local - User:  Local
+15.06.2020  14:32:11 : Redirected to: Default
+15.06.2020  14:32:11 : Redirected to: Default
+15.06.2020  14:33:26 : Read from PLC failed. Address: bit at 3160, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  14:33:26 : Logo1: Watchdog error - Watchdog does not change
+15.06.2020  14:33:26 : Logo1: Connection error: Watchdog error - Watchdog does not change
+15.06.2020  14:33:45 : Logo1: Connecting...
+15.06.2020  14:33:45 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  14:33:46 : Logo1: Connected
+15.06.2020  14:33:46 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  14:33:47 : Login try: Local
+15.06.2020  14:33:47 : Login Success: Local - User:  Local
+15.06.2020  14:33:47 : Redirected to: Default
+15.06.2020  14:33:47 : Redirected to: Default
+15.06.2020  14:35:34 : Read from PLC failed. Address: bit at 260, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  14:35:36 : Read from PLC failed. Address: bit at 3100, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  14:35:38 : Read from PLC failed. Address: bit at 3130, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  14:35:40 : Read from PLC failed. Address: bit at 3160, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  14:35:42 : Read from PLC failed. Address: bit at 30, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  14:35:44 : Read from PLC failed. Address: bit at 600, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  14:35:46 : Read from PLC failed. Address: bit at 700, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  14:35:48 : Read from PLC failed. Address: bit at 730, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  14:35:50 : Read from PLC failed. Address: bit at 280, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  14:35:52 : Read from PLC failed. Address: bit at 320, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  14:35:54 : Read from PLC failed. Address: bit at 540, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  14:35:54 : Read from PLC failed. Address: bit at 910, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  14:35:54 : Read from PLC failed. Address: VW106, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  14:35:54 : Read from PLC failed. Address: bit at 460, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  14:35:54 : Logo1: CLI : Client not connected
+15.06.2020  14:35:54 : Logo1: Connection error: CLI : Client not connected
+15.06.2020  14:35:57 : Logo1: Running connection diagnostics...
+15.06.2020  14:35:57 : Logo1:   -Ping successful at: 192.168.1.200
+15.06.2020  14:35:58 : Logo1: Connected again
+15.06.2020  14:47:50 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  14:47:50 : Logo1: Connecting...
+15.06.2020  14:47:51 : Logo1: Connected
+15.06.2020  14:47:51 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  14:47:52 : Login try: Local
+15.06.2020  14:47:52 : Login Success: Local - User:  Local
+15.06.2020  14:47:52 : Redirected to: Default
+15.06.2020  14:47:52 : Redirected to: Default
+15.06.2020  14:48:40 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  14:48:40 : Logo1: Connecting...
+15.06.2020  14:48:41 : Logo1: Connected
+15.06.2020  14:48:41 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  14:48:42 : Login try: Local
+15.06.2020  14:48:42 : Login Success: Local - User:  Local
+15.06.2020  14:48:42 : Redirected to: Default
+15.06.2020  14:48:42 : Redirected to: Default
+15.06.2020  14:48:50 : Page refreshed.
+15.06.2020  14:48:50 : Page refreshed.
+15.06.2020  14:49:17 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  14:49:17 : Logo1: Connecting...
+15.06.2020  14:49:18 : Logo1: Connected
+15.06.2020  14:49:18 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  14:49:18 : Login try: Local
+15.06.2020  14:49:18 : Login Success: Local - User:  Local
+15.06.2020  14:49:18 : Redirected to: Default
+15.06.2020  14:49:18 : Redirected to: Default
+15.06.2020  14:49:25 : Page refreshed.
+15.06.2020  14:49:25 : Page refreshed.
+15.06.2020  14:49:32 : Page refreshed.
+15.06.2020  14:49:42 : Logo1: Connecting...
+15.06.2020  14:49:42 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  14:49:43 : Logo1: Connected
+15.06.2020  14:49:43 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  14:50:21 : Login try: Local
+15.06.2020  14:50:21 : Login Success: Local - User:  Local
+15.06.2020  14:50:21 : Redirected to: Default
+15.06.2020  14:50:21 : Redirected to: Default
+15.06.2020  14:50:37 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  14:50:37 : Logo1: Connecting...
+15.06.2020  14:50:38 : Logo1: Connected
+15.06.2020  14:50:38 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  14:50:41 : Login try: Local
+15.06.2020  14:50:41 : Login Success: Local - User:  Local
+15.06.2020  14:50:41 : Redirected to: Default
+15.06.2020  14:50:41 : Redirected to: Default
+15.06.2020  14:50:47 : Page refreshed.
+15.06.2020  14:51:23 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  14:51:23 : Logo1: Connecting...
+15.06.2020  14:51:29 : Logo1: TCP : Connection Error
+15.06.2020  14:51:29 : Logo1: Running connection diagnostics...
+15.06.2020  14:51:32 : Logo1:   -Ping successful at: 192.168.1.200
+15.06.2020  14:51:39 : Logo1: Connected again
+15.06.2020  14:51:39 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  14:51:46 : Read from PLC failed. Address: bit at 160, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+15.06.2020  14:51:56 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  14:51:56 : Logo1: Connecting...
+15.06.2020  14:52:09 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  14:52:09 : Logo1: Connecting...
+15.06.2020  14:52:22 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  14:52:22 : Logo1: Connecting...
+15.06.2020  14:53:33 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  14:53:33 : Logo1: Connecting...
+15.06.2020  14:53:37 : Logo1: Connected
+15.06.2020  14:53:37 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  14:53:39 : Login try: Local
+15.06.2020  14:53:39 : Login Success: Local - User:  Local
+15.06.2020  14:53:39 : Redirected to: Default
+15.06.2020  14:53:39 : Redirected to: Default
+15.06.2020  14:53:54 : Logo1: Connecting...
+15.06.2020  14:53:54 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  14:54:00 : Logo1: Connected
+15.06.2020  14:54:06 : Read from PLC failed. Address: VW700, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  14:54:17 : Read from PLC failed. Address: VW104, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  14:54:19 : Logo1: Watchdog error - Watchdog does not change
+15.06.2020  14:54:19 : Logo1: Connection error: Watchdog error - Watchdog does not change
+15.06.2020  14:54:24 : Logo1: Running connection diagnostics...
+15.06.2020  14:55:49 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  14:55:49 : Logo1: Connecting...
+15.06.2020  14:55:57 : Logo1: Connected
+15.06.2020  14:56:03 : Read from PLC failed. Address: bit at 3110, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+15.06.2020  14:56:03 : Logo1: Watchdog error - Watchdog does not change
+15.06.2020  14:56:03 : Logo1: Connection error: Watchdog error - Watchdog does not change
+15.06.2020  14:56:05 : Login try: Local
+15.06.2020  14:56:05 : Login Success: Local - User:  Local
+15.06.2020  14:56:05 : Redirected to: Default
+15.06.2020  14:56:05 : Redirected to: Default
+15.06.2020  14:56:06 : Logo1: Running connection diagnostics...
+15.06.2020  14:56:06 : Logo1:   -Ping successful at: 192.168.1.200
+15.06.2020  14:56:07 : Logo1: Connected again
+15.06.2020  14:56:07 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+15.06.2020  14:56:15 : Page refreshed.
+15.06.2020  14:56:15 : Page refreshed.
+15.06.2020  14:56:28 : Page refreshed.
+15.06.2020  14:56:29 : User acknowledged message: NI POVEZAVE S KRMILNIKOM!
+15.06.2020  14:56:30 : Redirected to: MasterMenu
+15.06.2020  14:56:32 : Page refreshed.
+15.06.2020  14:56:33 : Redirected to: UpNastavitve
+15.06.2020  14:56:33 : Redirected to: Advanced
+15.06.2020  14:56:38 : Redirected to: MasterMenu
+15.06.2020  14:56:38 : Redirected to: MasterMenu
+15.06.2020  14:56:39 : Redirected to: Default
+15.06.2020  14:57:32 : Page refreshed.
+15.06.2020  14:57:32 : Page refreshed.
+15.06.2020  14:57:54 : Page refreshed.
+15.06.2020  14:57:54 : Page refreshed.

@@ -18,7 +18,12 @@ namespace WebApplication1
 
         public class PlcAddress
         {
-            public int Address;
+            public readonly int Address;
+
+            public PlcAddress(int address)
+            {
+                Address = address;
+            }
 
             public int GetAddress()
             {
@@ -28,12 +33,11 @@ namespace WebApplication1
 
         public class BitAddress : PlcAddress
         {
-            public ushort SubAddress;
+            public readonly ushort SubAddress;
 
-            public BitAddress(int address, ushort subAddress)
+            public BitAddress(int address, ushort subAddress): base(address)
             {
-                SubAddress = subAddress;
-                Address = address;
+                SubAddress = subAddress;                
             }
             public int GetSubAddress()
             {
@@ -49,9 +53,9 @@ namespace WebApplication1
 
         public class WordAddress : PlcAddress
         {
-            public WordAddress(int address)
+            public WordAddress(int address) : base(address)
             {
-                Address = address;
+                
             }
 
             public string GetStringRepresentation()
@@ -62,9 +66,9 @@ namespace WebApplication1
 
         public class ByteAddress : PlcAddress
         {
-            public ByteAddress(int address)
+            public ByteAddress(int address) : base(address)
             {
-                Address = address;
+                
             }
 
             public string GetStringRepresentation()
@@ -75,9 +79,9 @@ namespace WebApplication1
 
         public class DoubleWordAddress : PlcAddress
         {
-            public DoubleWordAddress(int address)
+            public DoubleWordAddress(int address) : base(address)
             {
-                Address = address;
+               
             }
 
             public string GetStringRepresentation()
@@ -135,7 +139,7 @@ namespace WebApplication1
 
             public void AddWarningMonitor(object valueToTrigerWarning, WarningManager.WarningTriggerCondition Condition, string WarningMessage)
             {
-                Val.WarningManager.AddWarningTrackerFromPLCVar(this, valueToTrigerWarning, Condition, WarningMessage);
+                WarningManager.AddWarningTrackerFromPLCVar(this, valueToTrigerWarning, Condition, WarningMessage);
             }
         }
         

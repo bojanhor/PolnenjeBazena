@@ -140,7 +140,7 @@ namespace WebApplication1
         {
             public TimerSelectorDatasource(int from_seconds, int to_seconds, float increment, string unit)
             {
-                GetDatasource(from_seconds, from_seconds, increment, unit);
+                GetDatasource(from_seconds, to_seconds, increment, unit);
             }
 
             public void GetDatasource(int from_seconds, int to_seconds, float increment, string unit)
@@ -148,7 +148,7 @@ namespace WebApplication1
                 var range = to_seconds - from_seconds;
                 float valBuff;
                 string txtBuff;
-                float buff;
+                float buff = from_seconds;
 
                 valBuff = from_seconds;
                 txtBuff = valBuff + unit;
@@ -157,7 +157,7 @@ namespace WebApplication1
 
                 for (int i = 1; i < 100; i++) // protection from  to many steps
                 {
-                    buff = from_seconds + increment;
+                    buff += increment;
                     if (buff > to_seconds)
                     {
                         break;

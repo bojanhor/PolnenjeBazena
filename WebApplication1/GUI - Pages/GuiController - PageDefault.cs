@@ -27,6 +27,7 @@ namespace WebApplication1
             public HtmlGenericControl divMaster;
             public HtmlGenericControl divConveyor;
             GControls.DropDownListForDimmerRPM speed;
+            GControls.DropDownListForTimer_1_30s TimeZigY;
             GControls.GroupBox gb1;
             GControls.ImageButtonWithID btnStart;
             GControls.ImageButtonWithID btnStop;
@@ -40,7 +41,10 @@ namespace WebApplication1
             GControls.OnOffShowRound RedDot;
             GControls.OnOffShowRound GnDot;
             GControls.OnOffShowRound YelDot;
+
+            //
             GControls.SuperLabel spdlbl;
+            GControls.SuperLabel stplbl;
 
             // stanje
             GControls.SuperLabel Status;
@@ -172,13 +176,15 @@ namespace WebApplication1
                     btnTrak.button.Click += BtnTrak_Click;
                     top += dif; gb1.Controls.Add(btnTrak);
 
-
                     btnCirc = new GControls.ImageButtonWithID("Circ", 1)
-                    { ImageUrl = ImageUrl("Circ1") }; SetControlAbsolutePos(btnCirc, top, left, size); btnCirc.Click += BtnCirc_Click;
+                    { ImageUrl = ImageUrl(CircleInProgress() ? "Circ1_on" : "Circ1") }; 
+                    SetControlAbsolutePos(btnCirc, top, left, size); btnCirc.Click += BtnCirc_Click;
                     top += dif; gb1.Controls.Add(btnCirc); btnCirc.Style.Add(HtmlTextWriterStyle.ZIndex, "10");
+                                        
 
                     btnZig = new GControls.ImageButtonWithID("Zig", 1)
-                    { ImageUrl = ImageUrl("Zig1") }; SetControlAbsolutePos(btnZig, top, left, size); btnZig.Click += BtnZig_Click;
+                    { ImageUrl = ImageUrl(ZigZagInProgress() ? "Zig1_on" : "Zig1") }; 
+                    SetControlAbsolutePos(btnZig, top, left, size); btnZig.Click += BtnZig_Click;
                     gb1.Controls.Add(btnZig); btnZig.Style.Add(HtmlTextWriterStyle.ZIndex, "10");
 
                     // Semaphore
@@ -199,11 +205,18 @@ namespace WebApplication1
                     gb1.Controls.Add(gb2);
 
                     // speedSel
-                    spdlbl = new GControls.SuperLabel("Hitrost:", 67, 15, 20, 10);
-                    speed = new GControls.DropDownListForDimmerRPM("Speedsel", prop.Trak_speedRead.Value_string, 70, 2, 5, 1.5F, false, false);
+                    spdlbl = new GControls.SuperLabel("Hitrost:", 62, 15, 20, 10);
+                    speed = new GControls.DropDownListForDimmerRPM("Speedsel", prop.SpeedRead.Value_string, 65, 2, 5, 1.5F, false, false);
                     speed.SaveClicked += Speed_SaveClicked;
                     gb1.Controls.Add(speed);
                     gb1.Controls.Add(spdlbl);
+
+                    // Y step Time
+                    stplbl = new GControls.SuperLabel("Korak:", 75, 15, 20, 10);
+                    TimeZigY = new GControls.DropDownListForTimer_1_30s("Stepsel", prop.TimeZigY.Value_string, 78, 2, 5, 1.5F, false, false);
+                    TimeZigY.SaveClicked += TimeZigY_SaveClicked;
+                    gb1.Controls.Add(TimeZigY);
+                    gb1.Controls.Add(stplbl);
 
                 }
                 catch (Exception ex)
@@ -213,7 +226,7 @@ namespace WebApplication1
                 }
                 
             }
-
+                        
 
             void Stanje()
             {
@@ -369,6 +382,29 @@ namespace WebApplication1
 
             }
 
+            // helpers
+            bool CircleInProgress()
+            {
+                var a = Val.logocontroler.Prop1;
+
+                if (a.InitCircle.Value_bool || a.KorakCircle1.Value_bool || a.KorakCircle2.Value_bool || a.KorakCircle3.Value_bool || a.KorakCircle4.Value_bool)
+                {
+                    return true;
+                }
+                return false;
+            }
+
+            bool ZigZagInProgress()
+            {
+                var a = Val.logocontroler.Prop1;
+
+                if (a.Inicializacija.Value_bool || a.KorakZigZag1.Value_bool || a.KorakZigZag2.Value_bool)
+                {
+                    return true;
+                }
+                return false;
+            }
+
             // ONCLICKS
 
             private void Btn_r_Click(object sender, ImageClickEventArgs e)
@@ -402,7 +438,12 @@ namespace WebApplication1
 
             private void Speed_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
             {
-                Val.logocontroler.Prop1.Trak_speedSet.Value_short = speed.GetSelectedValue();
+                Val.logocontroler.Prop1.SpeedSet.Value_short = speed.GetSelectedValue();
+            }
+
+            private void TimeZigY_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
+            {
+                Val.logocontroler.Prop1.TimeZigY.Value_short = TimeZigY.GetSelectedValue();
             }
 
             private void BtnZig_Click(object sender, ImageClickEventArgs e)
