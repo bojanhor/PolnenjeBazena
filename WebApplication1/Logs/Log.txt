@@ -28467,3 +28467,694 @@ Parameter name: updatePanel Stack trace:    at System.Web.UI.PageRequestManager.
 15.06.2020  14:57:32 : Page refreshed.
 15.06.2020  14:57:54 : Page refreshed.
 15.06.2020  14:57:54 : Page refreshed.
+21.07.2020  12:21:43 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+21.07.2020  12:21:43 : Logo1: Connecting...
+21.07.2020  12:22:28 : Logo2: Connecting...
+21.07.2020  12:22:30 : Login try: Local
+21.07.2020  12:22:30 : Login Success: Local - User:  Local
+21.07.2020  12:22:30 : Redirected to: Default
+21.07.2020  12:22:30 : Redirected to: Default
+21.07.2020  12:22:30 : Logo1: TCP : Connection Error
+21.07.2020  12:22:30 : Logo1: Running connection diagnostics...
+21.07.2020  12:22:30 : Logo2: Connected
+21.07.2020  12:22:30 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:22:33 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+21.07.2020  12:22:36 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:22:36 : Logo1: CLI : Client not connected
+21.07.2020  12:22:36 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:22:39 : Logo1: Running connection diagnostics...
+21.07.2020  12:22:41 : Page refreshed.
+21.07.2020  12:22:42 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+21.07.2020  12:22:43 : Redirected to: MasterMenu
+21.07.2020  12:22:44 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:22:44 : Logo1: Running connection diagnostics...
+21.07.2020  12:22:44 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:22:46 : User acknowledged message: NI POVEZAVE S KRMILNIKOM!
+21.07.2020  12:22:46 : Message shown to user: NI POVEZAVE S KRMILNIKOM!
+21.07.2020  12:22:46 : Page refreshed.
+21.07.2020  12:22:47 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:22:47 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:22:47 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:22:47 : Redirected to: Default
+21.07.2020  12:22:50 : Logo1: Running connection diagnostics...
+21.07.2020  12:22:50 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:22:51 : Redirected to: MasterMenu
+21.07.2020  12:22:52 : Redirected to: UpNastavitve
+21.07.2020  12:22:52 : Redirected to: Advanced
+21.07.2020  12:22:52 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:22:52 : Logo1: Running connection diagnostics...
+21.07.2020  12:22:52 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:22:55 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:22:55 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:26:03 : Logo1: Connecting...
+21.07.2020  12:26:03 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+21.07.2020  12:26:03 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+21.07.2020  12:26:10 : Logo2: Connecting...
+21.07.2020  12:26:11 : Login try: Local
+21.07.2020  12:26:11 : Login Success: Local - User:  Local
+21.07.2020  12:26:11 : Redirected to: Default
+21.07.2020  12:26:11 : Redirected to: Default
+21.07.2020  12:26:12 : Logo1: TCP : Connection Error
+21.07.2020  12:26:12 : Logo1: Running connection diagnostics...
+21.07.2020  12:26:12 : Logo2: Connected
+21.07.2020  12:26:12 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:26:12 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:26:14 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:26:14 : Logo1: CLI : Client not connected
+21.07.2020  12:26:14 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:26:17 : Logo1: Running connection diagnostics...
+21.07.2020  12:26:17 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:26:20 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:26:20 : Logo1: Running connection diagnostics...
+21.07.2020  12:26:20 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:26:22 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:26:22 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:26:22 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:26:25 : Logo1: Running connection diagnostics...
+21.07.2020  12:26:25 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:26:28 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:26:28 : Logo1: Running connection diagnostics...
+21.07.2020  12:26:28 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:26:30 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:26:30 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:27:46 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+21.07.2020  12:27:46 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+21.07.2020  12:27:46 : Logo1: Connecting...
+21.07.2020  12:27:46 : Logo2: Connecting...
+21.07.2020  12:27:48 : Login try: Local
+21.07.2020  12:27:48 : Login Success: Local - User:  Local
+21.07.2020  12:27:48 : Redirected to: Default
+21.07.2020  12:27:48 : Redirected to: Default
+21.07.2020  12:28:17 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+21.07.2020  12:28:17 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+21.07.2020  12:28:17 : Logo1: Connecting...
+21.07.2020  12:28:18 : Logo2: Connecting...
+21.07.2020  12:28:20 : Logo2: Connected
+21.07.2020  12:28:20 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:28:20 : Login try: Local
+21.07.2020  12:28:20 : Login Success: Local - User:  Local
+21.07.2020  12:28:20 : Redirected to: Default
+21.07.2020  12:28:20 : Redirected to: Default
+21.07.2020  12:28:20 : Logo1: TCP : Connection Error
+21.07.2020  12:28:20 : Logo1: Running connection diagnostics...
+21.07.2020  12:28:21 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:28:23 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:28:23 : Logo1: CLI : Client not connected
+21.07.2020  12:28:23 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:28:26 : Logo1: Running connection diagnostics...
+21.07.2020  12:28:26 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:28:29 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:28:29 : Logo1: Running connection diagnostics...
+21.07.2020  12:28:29 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:28:31 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:28:31 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:28:31 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:28:34 : Logo1: Running connection diagnostics...
+21.07.2020  12:28:34 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:28:37 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:28:37 : Logo1: Running connection diagnostics...
+21.07.2020  12:28:37 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:28:39 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:28:39 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:28:42 : Logo1: Running connection diagnostics...
+21.07.2020  12:28:42 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:28:45 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:28:45 : Logo1: Running connection diagnostics...
+21.07.2020  12:28:45 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:28:47 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:28:47 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:28:50 : Logo1: Running connection diagnostics...
+21.07.2020  12:28:50 : Logo1:   -Ping successful but connection is poor: 192.168.1.200
+21.07.2020  12:28:53 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:28:53 : Logo1: Running connection diagnostics...
+21.07.2020  12:28:53 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:28:55 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:28:55 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:28:58 : Logo1: Running connection diagnostics...
+21.07.2020  12:28:58 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:29:01 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:29:01 : Logo1: Running connection diagnostics...
+21.07.2020  12:29:01 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:29:03 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:29:03 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:29:07 : Logo1: Running connection diagnostics...
+21.07.2020  12:29:07 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:29:16 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+21.07.2020  12:29:16 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+21.07.2020  12:29:16 : Logo1: Connecting...
+21.07.2020  12:29:16 : Logo2: Connecting...
+21.07.2020  12:29:18 : Logo2: Connected
+21.07.2020  12:29:18 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:29:30 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+21.07.2020  12:29:30 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+21.07.2020  12:29:30 : Logo1: Connecting...
+21.07.2020  12:29:30 : Logo2: Connecting...
+21.07.2020  12:29:32 : Login try: Local
+21.07.2020  12:29:32 : Login Success: Local - User:  Local
+21.07.2020  12:29:32 : Redirected to: Default
+21.07.2020  12:29:32 : Redirected to: Default
+21.07.2020  12:29:32 : Logo2: Connected
+21.07.2020  12:29:32 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:30:47 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+21.07.2020  12:30:47 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+21.07.2020  12:30:47 : Logo1: Connecting...
+21.07.2020  12:30:47 : Logo2: Connecting...
+21.07.2020  12:30:49 : Login try: Local
+21.07.2020  12:30:49 : Login Success: Local - User:  Local
+21.07.2020  12:30:49 : Redirected to: Default
+21.07.2020  12:30:49 : Redirected to: Default
+21.07.2020  12:32:05 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+21.07.2020  12:32:05 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+21.07.2020  12:32:05 : Logo1: Connecting...
+21.07.2020  12:32:05 : Logo2: Connecting...
+21.07.2020  12:32:07 : Login try: Local
+21.07.2020  12:32:07 : Login Success: Local - User:  Local
+21.07.2020  12:32:07 : Redirected to: Default
+21.07.2020  12:32:07 : Redirected to: Default
+21.07.2020  12:32:07 : Logo2: Connected
+21.07.2020  12:32:07 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:32:08 : Logo1: TCP : Connection Error
+21.07.2020  12:32:08 : Logo1: Running connection diagnostics...
+21.07.2020  12:32:08 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:32:11 : Page refreshed.
+21.07.2020  12:32:11 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:32:11 : Logo1: CLI : Client not connected
+21.07.2020  12:32:11 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:32:13 : Page refreshed.
+21.07.2020  12:32:14 : Logo1: Running connection diagnostics...
+21.07.2020  12:32:14 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:32:15 : Redirected to: MasterMenu
+21.07.2020  12:32:15 : Redirected to: UpNastavitve
+21.07.2020  12:32:15 : Redirected to: Advanced
+21.07.2020  12:32:16 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:32:16 : Logo1: Running connection diagnostics...
+21.07.2020  12:32:16 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:32:19 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:32:19 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:32:19 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:32:22 : Logo1: Running connection diagnostics...
+21.07.2020  12:32:22 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:32:24 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:32:24 : Logo1: Running connection diagnostics...
+21.07.2020  12:32:24 : Logo1:   -Ping successful but connection is poor: 192.168.1.200
+21.07.2020  12:32:27 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:32:27 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:32:30 : Logo1: Running connection diagnostics...
+21.07.2020  12:32:30 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:33:19 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:33:19 : Logo1: Running connection diagnostics...
+21.07.2020  12:33:31 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:34:20 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:34:20 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:34:20 : Read from PLC failed. Address: bit at 3130, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+21.07.2020  12:34:20 : Logo2: Watchdog error - Watchdog does not change
+21.07.2020  12:34:20 : Logo2: Connection error: Watchdog error - Watchdog does not change
+21.07.2020  12:34:23 : Logo1: Running connection diagnostics...
+21.07.2020  12:34:23 : Logo1:   -Ping successful but connection is poor: 192.168.1.200
+21.07.2020  12:34:23 : Logo1: Running connection diagnostics...
+21.07.2020  12:34:23 : Logo2:   -Ping successful at: 192.168.1.201
+21.07.2020  12:34:24 : Logo2: Connected again
+21.07.2020  12:34:29 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:34:29 : Logo1: Running connection diagnostics...
+21.07.2020  12:34:29 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:34:32 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:34:32 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:34:35 : Logo1: Running connection diagnostics...
+21.07.2020  12:34:35 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:34:36 : Redirected to: Default
+21.07.2020  12:34:37 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:34:37 : Logo1: Running connection diagnostics...
+21.07.2020  12:34:37 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:34:40 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:34:40 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:34:46 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+21.07.2020  12:34:46 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+21.07.2020  12:34:46 : Logo1: Connecting...
+21.07.2020  12:34:46 : Logo2: Connecting...
+21.07.2020  12:34:48 : Login try: Local
+21.07.2020  12:34:48 : Login Success: Local - User:  Local
+21.07.2020  12:34:48 : Redirected to: Default
+21.07.2020  12:34:48 : Redirected to: Default
+21.07.2020  12:34:48 : Logo2: Connected
+21.07.2020  12:34:48 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:34:51 : Logo1: TCP : Connection Error
+21.07.2020  12:34:51 : Logo1: Running connection diagnostics...
+21.07.2020  12:34:51 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:34:54 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:34:54 : Logo1: CLI : Client not connected
+21.07.2020  12:34:54 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:34:57 : Logo1: Running connection diagnostics...
+21.07.2020  12:34:57 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:35:02 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+21.07.2020  12:35:02 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+21.07.2020  12:35:02 : Logo1: Connecting...
+21.07.2020  12:35:02 : Logo2: Connecting...
+21.07.2020  12:35:04 : Logo2: Connected
+21.07.2020  12:35:04 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:35:05 : Logo1: TCP : Connection Error
+21.07.2020  12:35:05 : Logo1: Running connection diagnostics...
+21.07.2020  12:35:05 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:35:06 : Login try: Local
+21.07.2020  12:35:06 : Login Success: Local - User:  Local
+21.07.2020  12:35:06 : Redirected to: Default
+21.07.2020  12:35:06 : Redirected to: Default
+21.07.2020  12:35:08 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:35:08 : Logo1: CLI : Client not connected
+21.07.2020  12:35:08 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:35:11 : Logo1: Running connection diagnostics...
+21.07.2020  12:35:11 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:35:13 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:35:13 : Logo1: Running connection diagnostics...
+21.07.2020  12:35:13 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:35:16 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:35:16 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:35:16 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:35:47 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+21.07.2020  12:35:47 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+21.07.2020  12:35:47 : Logo1: Connecting...
+21.07.2020  12:35:47 : Logo2: Connecting...
+21.07.2020  12:35:49 : Logo2: Connected
+21.07.2020  12:35:49 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:35:49 : Login try: Local
+21.07.2020  12:35:49 : Login Success: Local - User:  Local
+21.07.2020  12:35:49 : Redirected to: Default
+21.07.2020  12:35:50 : Redirected to: Default
+21.07.2020  12:35:50 : Logo1: TCP : Connection Error
+21.07.2020  12:35:50 : Logo1: Running connection diagnostics...
+21.07.2020  12:35:50 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:35:53 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:35:53 : Logo1: CLI : Client not connected
+21.07.2020  12:35:53 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:35:56 : Logo1: Running connection diagnostics...
+21.07.2020  12:35:56 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:35:58 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:35:58 : Logo1: Running connection diagnostics...
+21.07.2020  12:35:58 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:36:01 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:36:01 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:36:01 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:36:04 : Logo1: Running connection diagnostics...
+21.07.2020  12:36:04 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:36:47 : Logo1: Connecting...
+21.07.2020  12:36:47 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+21.07.2020  12:36:47 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+21.07.2020  12:36:47 : Logo2: Connecting...
+21.07.2020  12:36:49 : Login try: Local
+21.07.2020  12:36:49 : Login Success: Local - User:  Local
+21.07.2020  12:36:49 : Redirected to: Default
+21.07.2020  12:36:49 : Redirected to: Default
+21.07.2020  12:36:49 : Logo2: Connected
+21.07.2020  12:36:49 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:36:50 : Logo1: TCP : Connection Error
+21.07.2020  12:36:50 : Logo1: Running connection diagnostics...
+21.07.2020  12:36:50 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:37:01 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+21.07.2020  12:37:01 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+21.07.2020  12:37:01 : Logo1: Connecting...
+21.07.2020  12:37:01 : Logo2: Connecting...
+21.07.2020  12:37:03 : Login try: Local
+21.07.2020  12:37:03 : Login Success: Local - User:  Local
+21.07.2020  12:37:03 : Redirected to: Default
+21.07.2020  12:37:03 : Redirected to: Default
+21.07.2020  12:37:03 : Logo2: Connected
+21.07.2020  12:37:03 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:37:04 : Logo1: TCP : Connection Error
+21.07.2020  12:37:04 : Logo1: Running connection diagnostics...
+21.07.2020  12:37:04 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:37:07 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:37:07 : Logo1: CLI : Client not connected
+21.07.2020  12:37:07 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:37:10 : Logo1: Running connection diagnostics...
+21.07.2020  12:37:10 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:37:26 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+21.07.2020  12:37:26 : Logo1: Connecting...
+21.07.2020  12:37:26 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+21.07.2020  12:37:26 : Logo2: Connecting...
+21.07.2020  12:37:28 : Logo2: Connected
+21.07.2020  12:37:28 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:37:29 : Logo1: TCP : Connection Error
+21.07.2020  12:37:29 : Logo1: Running connection diagnostics...
+21.07.2020  12:37:29 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:37:30 : Login try: Local
+21.07.2020  12:37:30 : Login Success: Local - User:  Local
+21.07.2020  12:37:30 : Redirected to: Default
+21.07.2020  12:37:30 : Redirected to: Default
+21.07.2020  12:37:32 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:37:32 : Logo1: CLI : Client not connected
+21.07.2020  12:37:32 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:37:35 : Logo1: Running connection diagnostics...
+21.07.2020  12:37:35 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:37:37 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:37:37 : Logo1: Running connection diagnostics...
+21.07.2020  12:37:37 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:37:40 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:37:40 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:37:40 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:37:43 : Logo1: Running connection diagnostics...
+21.07.2020  12:37:43 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:37:45 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:37:45 : Logo1: Running connection diagnostics...
+21.07.2020  12:37:45 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:37:48 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:37:48 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:37:51 : Logo1: Running connection diagnostics...
+21.07.2020  12:37:51 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:37:54 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:37:54 : Logo1: Running connection diagnostics...
+21.07.2020  12:37:54 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:37:56 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:37:56 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:39:07 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+21.07.2020  12:39:07 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+21.07.2020  12:39:07 : Logo1: Connecting...
+21.07.2020  12:39:07 : Logo2: Connecting...
+21.07.2020  12:39:09 : Logo2: Connected
+21.07.2020  12:39:09 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:39:10 : Login try: Local
+21.07.2020  12:39:10 : Login Success: Local - User:  Local
+21.07.2020  12:39:10 : Redirected to: Default
+21.07.2020  12:39:10 : Redirected to: Default
+21.07.2020  12:39:10 : Logo1: TCP : Connection Error
+21.07.2020  12:39:10 : Logo1: Running connection diagnostics...
+21.07.2020  12:39:10 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:39:12 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:39:12 : Logo1: CLI : Client not connected
+21.07.2020  12:39:12 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:39:15 : Logo1: Running connection diagnostics...
+21.07.2020  12:39:15 : Logo1:   -Ping successful but connection is poor: 192.168.1.200
+21.07.2020  12:39:18 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:39:18 : Logo1: Running connection diagnostics...
+21.07.2020  12:39:18 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:39:20 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:39:20 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+21.07.2020  12:39:20 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:39:23 : Logo1: Running connection diagnostics...
+21.07.2020  12:39:23 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:39:26 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:39:26 : Logo1: Running connection diagnostics...
+21.07.2020  12:39:26 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:39:28 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:39:28 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:39:32 : Logo1: Running connection diagnostics...
+21.07.2020  12:39:32 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:39:34 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:39:34 : Logo1: Running connection diagnostics...
+21.07.2020  12:39:34 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:39:37 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:39:37 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:39:40 : Logo1: Running connection diagnostics...
+21.07.2020  12:39:40 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:39:42 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:39:42 : Logo1: Running connection diagnostics...
+21.07.2020  12:39:42 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:39:45 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:39:45 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:39:48 : Logo1: Running connection diagnostics...
+21.07.2020  12:39:48 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:39:50 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:39:50 : Logo1: Running connection diagnostics...
+21.07.2020  12:39:50 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:39:53 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:39:53 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:39:56 : Logo1: Running connection diagnostics...
+21.07.2020  12:39:56 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:39:58 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:39:58 : Logo1: Running connection diagnostics...
+21.07.2020  12:39:58 : Logo1:   -Ping successful but connection is poor: 192.168.1.200
+21.07.2020  12:40:01 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:40:01 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:40:04 : Logo1: Running connection diagnostics...
+21.07.2020  12:40:04 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:40:06 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:40:06 : Logo1: Running connection diagnostics...
+21.07.2020  12:40:06 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:40:09 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:40:09 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:40:12 : Logo1: Running connection diagnostics...
+21.07.2020  12:40:12 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:40:15 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:40:15 : Logo1: Running connection diagnostics...
+21.07.2020  12:40:15 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:40:17 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:40:17 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:40:20 : Logo1: Running connection diagnostics...
+21.07.2020  12:40:20 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:40:23 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:40:23 : Logo1: Running connection diagnostics...
+21.07.2020  12:40:23 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:40:25 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:40:25 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:40:28 : Logo1: Running connection diagnostics...
+21.07.2020  12:40:28 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:40:31 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:40:31 : Logo1: Running connection diagnostics...
+21.07.2020  12:40:31 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:40:33 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:40:33 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:40:36 : Logo1: Running connection diagnostics...
+21.07.2020  12:40:36 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:40:39 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:40:39 : Logo1: Running connection diagnostics...
+21.07.2020  12:40:39 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:40:41 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:40:41 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:40:44 : Logo1: Running connection diagnostics...
+21.07.2020  12:40:44 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:40:47 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:40:47 : Logo1: Running connection diagnostics...
+21.07.2020  12:40:47 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:40:49 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:40:49 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:40:52 : Logo1: Running connection diagnostics...
+21.07.2020  12:40:52 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:40:55 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:40:55 : Logo1: Running connection diagnostics...
+21.07.2020  12:40:55 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:40:58 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:40:58 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:41:01 : Logo1: Running connection diagnostics...
+21.07.2020  12:41:01 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:41:03 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:41:03 : Logo1: Running connection diagnostics...
+21.07.2020  12:41:03 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:41:06 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:41:06 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:41:09 : Logo1: Running connection diagnostics...
+21.07.2020  12:41:09 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:41:11 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:41:11 : Logo1: Running connection diagnostics...
+21.07.2020  12:41:11 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:41:14 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:41:14 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:41:17 : Logo1: Running connection diagnostics...
+21.07.2020  12:41:17 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:41:19 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:41:19 : Logo1: Running connection diagnostics...
+21.07.2020  12:41:19 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:41:22 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:41:22 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:41:25 : Logo1: Running connection diagnostics...
+21.07.2020  12:41:25 : Logo1:   -Ping successful but connection is poor: 192.168.1.200
+21.07.2020  12:41:27 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:41:27 : Logo1: Running connection diagnostics...
+21.07.2020  12:41:27 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:41:30 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:41:30 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:41:33 : Logo1: Running connection diagnostics...
+21.07.2020  12:41:33 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:41:36 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:41:36 : Logo1: Running connection diagnostics...
+21.07.2020  12:41:36 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:41:38 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:41:38 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:41:41 : Logo1: Running connection diagnostics...
+21.07.2020  12:41:41 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:41:44 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:41:44 : Logo1: Running connection diagnostics...
+21.07.2020  12:41:44 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:41:46 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:41:46 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:41:49 : Logo1: Running connection diagnostics...
+21.07.2020  12:41:49 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:41:52 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:41:52 : Logo1: Running connection diagnostics...
+21.07.2020  12:41:52 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:41:54 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:41:54 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:41:57 : Logo1: Running connection diagnostics...
+21.07.2020  12:41:57 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:42:00 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:42:00 : Logo1: Running connection diagnostics...
+21.07.2020  12:42:00 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:42:02 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:42:02 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:42:05 : Logo1: Running connection diagnostics...
+21.07.2020  12:42:05 : Logo1:   -Ping successful but connection is poor: 192.168.1.200
+21.07.2020  12:42:08 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:42:08 : Logo1: Running connection diagnostics...
+21.07.2020  12:42:08 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:42:10 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:42:10 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:42:13 : Logo1: Running connection diagnostics...
+21.07.2020  12:42:13 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:42:16 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:42:16 : Logo1: Running connection diagnostics...
+21.07.2020  12:42:16 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:42:18 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:42:18 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:42:22 : Logo1: Running connection diagnostics...
+21.07.2020  12:42:22 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:42:24 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:42:24 : Logo1: Running connection diagnostics...
+21.07.2020  12:42:24 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:42:27 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:42:27 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:42:30 : Logo1: Running connection diagnostics...
+21.07.2020  12:42:30 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:42:32 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:42:32 : Logo1: Running connection diagnostics...
+21.07.2020  12:42:32 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:42:35 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:42:35 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:42:38 : Logo1: Running connection diagnostics...
+21.07.2020  12:42:38 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:42:40 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:42:40 : Logo1: Running connection diagnostics...
+21.07.2020  12:42:40 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:42:43 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:42:43 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:42:46 : Logo1: Running connection diagnostics...
+21.07.2020  12:42:46 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:42:48 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:42:48 : Logo1: Running connection diagnostics...
+21.07.2020  12:42:48 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:42:51 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:42:51 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:42:54 : Logo1: Running connection diagnostics...
+21.07.2020  12:42:54 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:42:56 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:42:56 : Logo1: Running connection diagnostics...
+21.07.2020  12:42:56 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:42:59 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:42:59 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:43:02 : Logo1: Running connection diagnostics...
+21.07.2020  12:43:02 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:43:05 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:43:05 : Logo1: Running connection diagnostics...
+21.07.2020  12:43:05 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:43:07 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:43:07 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:43:10 : Logo1: Running connection diagnostics...
+21.07.2020  12:43:10 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:43:13 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:43:13 : Logo1: Running connection diagnostics...
+21.07.2020  12:43:13 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:43:15 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:43:15 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:43:18 : Logo1: Running connection diagnostics...
+21.07.2020  12:43:18 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:43:21 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:43:21 : Logo1: Running connection diagnostics...
+21.07.2020  12:43:21 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:43:23 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:43:23 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:43:26 : Logo1: Running connection diagnostics...
+21.07.2020  12:43:26 : Logo1:   -Ping successful but connection is poor: 192.168.1.200
+21.07.2020  12:43:29 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:43:29 : Logo1: Running connection diagnostics...
+21.07.2020  12:43:29 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:43:31 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:43:31 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:43:34 : Logo1: Running connection diagnostics...
+21.07.2020  12:43:34 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:43:37 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:43:37 : Logo1: Running connection diagnostics...
+21.07.2020  12:43:37 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:43:40 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:43:40 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:43:43 : Logo1: Running connection diagnostics...
+21.07.2020  12:43:43 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:43:45 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:43:45 : Logo1: Running connection diagnostics...
+21.07.2020  12:43:45 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:43:48 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:43:48 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:43:51 : Logo1: Running connection diagnostics...
+21.07.2020  12:43:51 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:43:53 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:43:53 : Logo1: Running connection diagnostics...
+21.07.2020  12:43:53 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:43:56 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:43:56 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:43:59 : Logo1: Running connection diagnostics...
+21.07.2020  12:43:59 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:44:01 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:44:01 : Logo1: Running connection diagnostics...
+21.07.2020  12:44:01 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:44:04 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:44:04 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:44:07 : Logo1: Running connection diagnostics...
+21.07.2020  12:44:07 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:44:09 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:44:09 : Logo1: Running connection diagnostics...
+21.07.2020  12:44:09 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:44:12 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:44:12 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:44:15 : Logo1: Running connection diagnostics...
+21.07.2020  12:44:15 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:44:17 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:44:17 : Logo1: Running connection diagnostics...
+21.07.2020  12:44:18 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:44:20 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:44:20 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:44:23 : Logo1: Running connection diagnostics...
+21.07.2020  12:44:23 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:44:26 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:44:26 : Logo1: Running connection diagnostics...
+21.07.2020  12:44:26 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:44:28 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:44:28 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:44:31 : Logo1: Running connection diagnostics...
+21.07.2020  12:44:31 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:44:34 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:44:34 : Logo1: Running connection diagnostics...
+21.07.2020  12:44:34 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:44:36 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:44:36 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:44:39 : Logo1: Running connection diagnostics...
+21.07.2020  12:44:39 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:44:42 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:44:42 : Logo1: Running connection diagnostics...
+21.07.2020  12:44:42 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:44:44 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:44:44 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:44:47 : Logo1: Running connection diagnostics...
+21.07.2020  12:44:47 : Logo1:   -Ping successful but connection is poor: 192.168.1.200
+21.07.2020  12:44:50 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:44:50 : Logo1: Running connection diagnostics...
+21.07.2020  12:44:50 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:44:52 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:44:52 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:44:55 : Logo1: Running connection diagnostics...
+21.07.2020  12:44:55 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:44:58 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:44:58 : Logo1: Running connection diagnostics...
+21.07.2020  12:44:58 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:45:01 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:45:01 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:45:04 : Logo1: Running connection diagnostics...
+21.07.2020  12:45:04 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:45:06 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:45:06 : Logo1: Running connection diagnostics...
+21.07.2020  12:45:06 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:45:09 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:45:09 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:45:12 : Logo1: Running connection diagnostics...
+21.07.2020  12:45:12 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:45:14 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:45:14 : Logo1: Running connection diagnostics...
+21.07.2020  12:45:14 : Logo1:   -Ping successful at: 192.168.1.200
+21.07.2020  12:45:17 : Logo1: Connection failed. Trying to reconnect
+21.07.2020  12:45:17 : Logo1: Connection error: CLI : Client not connected
+21.07.2020  12:45:20 : Logo1: Running connection diagnostics...
+21.07.2020  12:45:20 : Logo1:   -Ping successful at: 192.168.1.200

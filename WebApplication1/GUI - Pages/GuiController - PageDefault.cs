@@ -17,7 +17,8 @@ namespace WebApplication1
         {
             readonly Page thisPage;
             readonly string Name;
-            readonly Prop1 prop = Val.logocontroler.Prop1;
+            readonly Prop1 prop1 = Val.logocontroler.Prop1; 
+            readonly Prop2 prop2 = Val.logocontroler.Prop2;
             readonly System.Web.SessionState.HttpSessionState session;
             public GControls.MasterMenuButton[] imagebuttons;
 
@@ -168,11 +169,11 @@ namespace WebApplication1
 
                     top += dif + 2; gb1.Controls.Add(btnStop);
 
-                    btnAuto = new GControls.OnOffButton("Auto", 1, prop.Man_AutoReadState.Value_bool, new Helper.Position(top, left, size), GControls.OnOffButton.Type.WithText);
+                    btnAuto = new GControls.OnOffButton("Auto", 1, prop1.Man_AutoReadState.Value_bool, new Helper.Position(top, left, size), GControls.OnOffButton.Type.WithText);
                     btnAuto.button.Click += BtnAuto_Click1;
                     top += dif; gb1.Controls.Add(btnAuto);
 
-                    btnTrak = new GControls.OnOffButton("Trak", 1, prop.TrakRead.Value_bool, new Helper.Position(top, left, size), GControls.OnOffButton.Type.WithText);
+                    btnTrak = new GControls.OnOffButton("Trak", 1, prop1.TrakRead.Value_bool, new Helper.Position(top, left, size), GControls.OnOffButton.Type.WithText);
                     btnTrak.button.Click += BtnTrak_Click;
                     top += dif; gb1.Controls.Add(btnTrak);
 
@@ -190,30 +191,30 @@ namespace WebApplication1
                     // Semaphore
                     gb2 = new GControls.GroupBox(2, 4, 30, 49);
 
-                    RedDot = new GControls.OnOffShowRound("Red", prop.SemaforRd.Value_bool, new Helper.Position(top, left, 100), "red");
+                    RedDot = new GControls.OnOffShowRound("Red", prop1.SemaforRd.Value_bool, new Helper.Position(top, left, 100), "red");
                     SetControlAbsolutePos(RedDot, dottop, dotlft, dotSize);
                     dottop += dotdif;
 
-                    GnDot = new GControls.OnOffShowRound("Grn", prop.SemaforGn.Value_bool, new Helper.Position(top, left, 100), "green");
+                    GnDot = new GControls.OnOffShowRound("Grn", prop1.SemaforGn.Value_bool, new Helper.Position(top, left, 100), "green");
                     SetControlAbsolutePos(GnDot, dottop, dotlft, dotSize);
                     dottop += dotdif;
 
-                    YelDot = new GControls.OnOffShowRound("Yel", prop.SemaforYe.Value_bool, new Helper.Position(top, left, 100), "yellow");
+                    YelDot = new GControls.OnOffShowRound("Yel", prop1.SemaforYe.Value_bool, new Helper.Position(top, left, 100), "yellow");
                     SetControlAbsolutePos(YelDot, dottop, dotlft, dotSize);
 
                     gb2.Controls.Add(RedDot); gb2.Controls.Add(GnDot); gb2.Controls.Add(YelDot);
                     gb1.Controls.Add(gb2);
 
                     // speedSel
-                    spdlbl = new GControls.SuperLabel("Hitrost:", 62, 15, 20, 10);
-                    speed = new GControls.DropDownListForDimmerRPM("Speedsel", prop.SpeedRead.Value_string, 65, 2, 5, 1.5F, false, false);
+                    spdlbl = new GControls.SuperLabel("Hitrost:", 62, 15, 20, 10) { FontSize = 1.2F }; ;
+                    speed = new GControls.DropDownListForDimmerRPM("Speedsel", prop1.SpeedRead.Value_string, 65, 2, 5, 1.5F, false, false);
                     speed.SaveClicked += Speed_SaveClicked;
                     gb1.Controls.Add(speed);
                     gb1.Controls.Add(spdlbl);
 
                     // Y step Time
-                    stplbl = new GControls.SuperLabel("Korak:", 75, 15, 20, 10);
-                    TimeZigY = new GControls.DropDownListForTimer_1_30s("Stepsel", prop.TimeZigY.Value_string, 78, 2, 5, 1.5F, false, false);
+                    stplbl = new GControls.SuperLabel("Korak:", 77, 15, 20, 10) {FontSize = 1.2F };
+                    TimeZigY = new GControls.DropDownListForTimer_1_30s("Stepsel", prop1.TimeZigY.Value_string, 80, 2, 5, 1.5F, false, false);
                     TimeZigY.SaveClicked += TimeZigY_SaveClicked;
                     gb1.Controls.Add(TimeZigY);
                     gb1.Controls.Add(stplbl);
@@ -234,7 +235,7 @@ namespace WebApplication1
                 var dif = 8;
                 try
                 {
-                    gb3 = new GControls.GroupBox(20, 1, 18, 70);
+                    gb3 = new GControls.GroupBox(20, 1, 20, 70);
                     Status = new GControls.SuperLabel("Stanje:", 3, 35, 30, 10) { FontWeightBold = true };
 
                     var msgs = StanjeProcesa.SporocilaZaPrikaz;
@@ -280,7 +281,7 @@ namespace WebApplication1
                 try
                 {
                     joystick = new GControls.JoystickDirection(74, 29, 15,
-                    prop.JoyStickCommandY2.Value_bool, prop.JoyStickCommandY1.Value_bool, prop.JoyStickCommandX1.Value_bool, prop.JoyStickCommandX2.Value_bool);
+                    prop1.JoyStickCommandY2.Value_bool, prop1.JoyStickCommandY1.Value_bool, prop1.JoyStickCommandX1.Value_bool, prop1.JoyStickCommandX2.Value_bool);
                     divMaster.Controls.Add(joystick);
 
                     joystick.btn_up.Click += Btn_up_Click;
@@ -300,15 +301,15 @@ namespace WebApplication1
             {
                 var cor_YHigher = 48; var cor_Yrange = 0.70F; var cor_Xrange = 0.6F;
 
-                float posx = prop.PosX.Value_short; posx *= cor_Xrange; // start position of conveyor simulation
-                float posy = prop.PosY.Value_short; posy = (posy + cor_YHigher) * cor_Yrange; // start position of conveyor simulation
+                float posx = prop2.PosX.Value_short; posx *= cor_Xrange; // start position of conveyor simulation
+                float posy = prop2.PosY.Value_short; posy = (posy + cor_YHigher) * cor_Yrange; // start position of conveyor simulation
 
                 try
                 {
                     conveyor = new GControls.Conveyor("convey",
                     (100 - posy), (posx),
                     40,
-                    prop.TrakRead.Value_bool, prop.ReadPrisotMat.Value_bool);
+                    prop1.TrakRead.Value_bool, prop1.ReadPrisotMat.Value_bool);
 
                     gb_Conveyor = new GControls.GroupBox(0, 0, 100, 100);
 
@@ -349,29 +350,29 @@ namespace WebApplication1
 
                 try
                 {
-                    if (prop.ReadKSX1.Value_bool)
+                    if (prop1.ReadKSX1.Value_bool)
                     {
                         KoncnaPozX1 = new GControls.ImageButtonWithID(10) { ImageUrl = "~/Pictures/gui_separator.png" };
                         gb_Conveyor.Controls.Add(KoncnaPozX1); SetControlAbsolutePos(KoncnaPozX1, 7, -3, 7, 86);
-                        prop.JoyStickCommandX1.Value_bool = false;
+                        prop1.JoyStickCommandX1.Value_bool = false;
                     }
-                    if (prop.ReadKSX2.Value_bool)
+                    if (prop1.ReadKSX2.Value_bool)
                     {
                         KoncnaPozX2 = new GControls.ImageButtonWithID(11) { ImageUrl = "~/Pictures/gui_separator.png" };
                         gb_Conveyor.Controls.Add(KoncnaPozX2); SetControlAbsolutePos(KoncnaPozX2, 7, 96.5F, 7, 86);
-                        prop.JoyStickCommandX2.Value_bool = false;
+                        prop1.JoyStickCommandX2.Value_bool = false;
                     }
-                    if (prop.ReadKSY1.Value_bool)
+                    if (prop1.ReadKSY1.Value_bool)
                     {
                         KoncnaPozY1 = new GControls.ImageButtonWithID(12) { ImageUrl = "~/Pictures/gui_separator2.png" };
                         gb_Conveyor.Controls.Add(KoncnaPozY1); SetControlAbsolutePos(KoncnaPozY1, 95, 5, 90, 10);
-                        prop.JoyStickCommandY1.Value_bool = false;
+                        prop1.JoyStickCommandY1.Value_bool = false;
                     }
-                    if (prop.ReadKSY2.Value_bool)
+                    if (prop1.ReadKSY2.Value_bool)
                     {
                         KoncnaPozY2 = new GControls.ImageButtonWithID(13) { ImageUrl = "~/Pictures/gui_separator2.png" };
                         gb_Conveyor.Controls.Add(KoncnaPozY2); SetControlAbsolutePos(KoncnaPozY2, -5, 5, 90, 10);
-                        prop.JoyStickCommandY2.Value_bool = false;
+                        prop1.JoyStickCommandY2.Value_bool = false;
                     }
                 }
                 catch (Exception ex)

@@ -24,9 +24,9 @@ namespace WebApplication1
         }
 
         //
-        public static  void NiPovezave(bool prikazi)
+        public static  void NiPovezave(bool prikazi, int device)
         {
-            var message = "NI POVEZAVE S KRMILNIKOM!";
+            var message = "NI POVEZAVE S KRMILNIKOM "+ device +"!";
             if (prikazi)
             {
                 ShowCustomMessage(message);
@@ -60,9 +60,13 @@ namespace WebApplication1
             {
                 if (Val.logocontroler != null && Val.logocontroler.LOGOConnection[1] != null)
                 {
-                    NiPovezave(Val.logocontroler.LOGOConnection[1].connectionStatusLOGO != Connection.Status.Connected);
+                    NiPovezave(Val.logocontroler.LOGOConnection[1].connectionStatusLOGO != Connection.Status.Connected, 1);
                 }
-                
+                if (Val.logocontroler != null && Val.logocontroler.LOGOConnection[2] != null)
+                {
+                    NiPovezave(Val.logocontroler.LOGOConnection[2].connectionStatusLOGO != Connection.Status.Connected, 2);
+                }
+
                 Thread.Sleep(1000);
             }
         }

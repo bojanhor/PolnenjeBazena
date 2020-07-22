@@ -49,14 +49,7 @@ namespace WebApplication1
 
         public PlcVars.Bit SemaforGn; public PlcVars.Bit SemaforRd; public PlcVars.Bit SemaforYe;
 
-        public PlcVars.Word PosX; public PlcVars.Word PosY;
-
-        // alarms
-        public PlcVars.Bit Alarm_goba;
-        public PlcVars.Bit Alarm_zavesa1;
-        public PlcVars.Bit Alarm_zavesa2;
-        public PlcVars.Bit Alarm_FreqX;
-        public PlcVars.Bit Alarm_FreqY;
+        
         public PlcVars.Bit AlarmInit;
         public PlcVars.Bit CriticalMalfunction;
 
@@ -65,12 +58,6 @@ namespace WebApplication1
         {
 
             // Alarms
-
-            Alarm_goba = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(310, 0), "AKTIVIRANA JE GOBASTA TIPKA!", true, true) { SyncEvery_X_Time = 3 };
-            Alarm_zavesa1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(311, 0), "AKTIVIRANA JE ZAVESA 1!", true, true) { SyncEvery_X_Time = 3 };
-            Alarm_zavesa2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(312, 0), "AKTIVIRANA JE ZAVESA 2!", true, true) { SyncEvery_X_Time = 3 };
-            Alarm_FreqX = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(313, 0), "NAPAKA FREKVENČNEGA PRETVORNIKA X OSI!", false, true) { SyncEvery_X_Time = 3 };
-            Alarm_FreqY = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(314, 0), "NAPAKA FREKVENČNEGA PRETVORNIKA Y OSI!", false, true) { SyncEvery_X_Time = 3 };
             AlarmInit = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(315, 0), "NAPAKA Inicializacije!", false, true) { SyncEvery_X_Time = 3 };
             CriticalMalfunction = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(316, 0), "KRITIČNA NAPAKA Krmilja!", false, true) { SyncEvery_X_Time = 3 };
 
@@ -139,8 +126,7 @@ namespace WebApplication1
             SemaforRd = new PlcVars.Bit(this, new PlcVars.BitAddress(202, 0), false);
             SemaforYe = new PlcVars.Bit(this, new PlcVars.BitAddress(204, 0), false);
 
-            PosX = new PlcVars.Word(this, new PlcVars.WordAddress(700), false);
-            PosY = new PlcVars.Word(this, new PlcVars.WordAddress(702), false);
+            
 
             
 
