@@ -27,14 +27,14 @@ namespace WebApplication1
         public Prop2(Sharp7.S7Client client):base(client)
         {
             // Alarms
-            Alarm_zavesa1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(311, 0), "AKTIVIRANA JE ZAVESA 1!", true, true) { SyncEvery_X_Time = 3 };
-            Alarm_zavesa2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(312, 0), "AKTIVIRANA JE ZAVESA 2!", true, true) { SyncEvery_X_Time = 3 };
+            Alarm_zavesa1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(311, 0), "AKTIVIRANA JE ZAVESA 1!", false, true) { SyncEvery_X_Time = 3 };
+            Alarm_zavesa2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(312, 0), "AKTIVIRANA JE ZAVESA 2!", false, true) { SyncEvery_X_Time = 3 };
             Alarm_FreqX = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(313, 0), "NAPAKA FREKVENČNEGA PRETVORNIKA X OSI!", false, true) { SyncEvery_X_Time = 3 };
             Alarm_FreqY = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(314, 0), "NAPAKA FREKVENČNEGA PRETVORNIKA Y OSI!", false, true) { SyncEvery_X_Time = 3 };
             Alarm_FreqT = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(322, 0), "NAPAKA FREKVENČNEGA PRETVORNIKA TRAKU!", false, true) { SyncEvery_X_Time = 3 };
-            MainSupplyErr = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(311, 0), "Napaka Napajalne napetosti!", true, true) { SyncEvery_X_Time = 3 };
-            GobaNC = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(311, 0), "AKTIVIRANA JE GOBASTA TIPKA (NC)!", true, true) { SyncEvery_X_Time = 3 };
-            GobaNO = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(311, 0), "AKTIVIRANA JE GOBASTA TIPKA (NO)!", true, true) { SyncEvery_X_Time = 3 };
+            MainSupplyErr = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(323, 0), "Napaka Napajalne napetosti!", false, true) { SyncEvery_X_Time = 3 };
+            GobaNC = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(324, 0), "AKTIVIRANA JE GOBASTA TIPKA (NC)!", false, true) { SyncEvery_X_Time = 3 };
+            GobaNO = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(325, 0), "AKTIVIRANA JE GOBASTA TIPKA (NO)!", false, true) { SyncEvery_X_Time = 3 };
 
             // PositionSimulation            
             PosX = new PlcVars.Word(this, new PlcVars.WordAddress(700), false);
