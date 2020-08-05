@@ -24,9 +24,8 @@ namespace WebApplication1.Pages
         private void Initialise()
         {
             TemplateClassID.Controls.Add(Val.guiController.PageDefault_.ConvUP);            
-            TemplateClassID.Controls.Add(Val.guiController.PageDefault_.UP);                       
-                       
-            Val.guiController.PageDefault_.UP.Controls_Add(Val.guiController.PageDefault_.divMaster);
+            TemplateClassID.Controls.Add(Val.guiController.PageDefault_.divMaster);                       
+            
             Val.guiController.PageDefault_.ConvUP.Controls_Add(Val.guiController.PageDefault_.divConveyor);
             
         }

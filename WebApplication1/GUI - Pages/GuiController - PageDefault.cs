@@ -17,25 +17,26 @@ namespace WebApplication1
         {
             readonly Page thisPage;
             readonly string Name;
-            readonly Prop1 prop1 = Val.logocontroler.Prop1; 
-            readonly Prop2 prop2 = Val.logocontroler.Prop2;
+            Prop1 prop1;
+            Prop2 prop2;
             readonly System.Web.SessionState.HttpSessionState session;
             public GControls.MasterMenuButton[] imagebuttons;
-
-            public GControls.UpdatePanelFull UP = new GControls.UpdatePanelFull("PageUpdatePanel", Settings.UpdateValuesPCms);
+                        
             public GControls.UpdatePanelFull ConvUP;
+            public GControls.UpdatePanelFull SemaphoreUP;
+            public GControls.UpdatePanelFull OthersUP;
 
             public HtmlGenericControl divMaster;
             public HtmlGenericControl divConveyor;
             GControls.DropDownListForDimmerRPM speed;
-            GControls.DropDownListForTimer_1_30s TimeZigY;
+
             GControls.GroupBox gb1;
             GControls.ImageButtonWithID btnStart;
             GControls.ImageButtonWithID btnStop;
             GControls.OnOffButton btnAuto;
             GControls.OnOffButton btnTrak;
             GControls.ImageButtonWithID btnCirc;
-            GControls.ImageButtonWithID btnZig;
+            GControls.DropDownListForBazenSel bazenSel;
 
             // Semaphore
             GControls.GroupBox gb2;
@@ -45,14 +46,12 @@ namespace WebApplication1
 
             //
             GControls.SuperLabel spdlbl;
-            GControls.SuperLabel stplbl;
+
 
             // stanje
             GControls.SuperLabel Status;
             GControls.GroupBox gb3;
             GControls.SuperLabel lbl_msgs;
-
-            GControls.JoystickDirection joystick;
 
             GControls.Conveyor conveyor;
             GControls.GroupBox gb_Conveyor;
@@ -66,20 +65,31 @@ namespace WebApplication1
             GControls.ImageButtonWithID KoncnaPozY1;
             GControls.ImageButtonWithID KoncnaPozY2;
 
+            // joystick
+
+            GControls.ImageButtonWithID y_up; GControls.ImageButtonWithID y_dn; GControls.ImageButtonWithID y_lft; GControls.ImageButtonWithID y_rght;
+
 
             public PageDefault(Page _thisPage, System.Web.SessionState.HttpSessionState session)
-            {                
+            {
                 this.session = session;
 
                 if (SessionHelper.GetCurrentUser() == "Local") // prvi username v config
                 {
                     ConvUP = new GControls.UpdatePanelFull("ConveyorUpdatePanel", Settings.Updateanimations);
+                    SemaphoreUP = new GControls.UpdatePanelFull("SemaphoreUP", Settings.UpdateValuesPCms / 3);
+                    OthersUP = new GControls.UpdatePanelFull("OthersUP", Settings.UpdateValuesPCms/2);
                 }
                 else
                 {
                     ConvUP = new GControls.UpdatePanelFull("ConveyorUpdatePanel", Settings.UpdateValuesPCms);
+                    SemaphoreUP = new GControls.UpdatePanelFull("SemaphoreUP", Settings.UpdateValuesPCms / 2);
+                    OthersUP = new GControls.UpdatePanelFull("OthersUP", Settings.UpdateValuesPCms);
                 }
+
                 
+                
+
 
                 try
                 {
@@ -96,7 +106,7 @@ namespace WebApplication1
                     SimulirajMaterial();
                     JoyStick();
                     KoncnePozicije();
-                                        
+
                 }
                 catch (Exception ex)
                 {
@@ -123,7 +133,8 @@ namespace WebApplication1
                     SetControlAbsolutePos(divConveyor, 20, 29, 35, 50);
                     divConveyor.ID = "divConveyor";
                 }
-                catch (Exception ex) {
+                catch (Exception ex)
+                {
 
                     throw new Exception("Error was encountered inside AddDivs() method. Error details: " + ex.Message);
                 }
@@ -134,6 +145,8 @@ namespace WebApplication1
             void AddContent()
             {
                 gb1 = new GControls.GroupBox(10, 74, 24, 83);
+                prop1 = Val.logocontroler.Prop1;
+                prop2 = Val.logocontroler.Prop2;
 
                 // Control buttons    
                 Kontrola(gb1);
@@ -153,13 +166,14 @@ namespace WebApplication1
             }
 
             void Kontrola(HtmlGenericControl gb1)
-            {                
+            {
 
                 int top = 0; int dif = 16; int size = 50; int left = 46;
                 int dottop = 6; int dotdif = 32; int dotSize = 55; int dotlft = 20;
 
                 try
-                {
+                {                    
+
                     btnStart = new GControls.ImageButtonWithID("Start", 1)
                     { ImageUrl = ImageUrl("Start1") }; SetControlAbsolutePos(btnStart, top, left, size); btnStart.Click += BtnStart_Click;
                     top += dif; gb1.Controls.Add(btnStart);
@@ -171,22 +185,26 @@ namespace WebApplication1
 
                     btnAuto = new GControls.OnOffButton("Auto", 1, prop1.Man_AutoReadState.Value_bool, new Helper.Position(top, left, size), GControls.OnOffButton.Type.WithText);
                     btnAuto.button.Click += BtnAuto_Click1;
-                    top += dif; gb1.Controls.Add(btnAuto);
+                    top += dif; OthersUP.Controls_Add(btnAuto);
 
                     btnTrak = new GControls.OnOffButton("Trak", 1, prop1.TrakRead.Value_bool, new Helper.Position(top, left, size), GControls.OnOffButton.Type.WithText);
                     btnTrak.button.Click += BtnTrak_Click;
-                    top += dif; gb1.Controls.Add(btnTrak);
+                    top += dif; OthersUP.Controls_Add(btnTrak);
 
                     btnCirc = new GControls.ImageButtonWithID("Circ", 1)
-                    { ImageUrl = ImageUrl(CircleInProgress() ? "Circ1_on" : "Circ1") }; 
+                    { ImageUrl = ImageUrl("Circ1") };
                     SetControlAbsolutePos(btnCirc, top, left, size); btnCirc.Click += BtnCirc_Click;
-                    top += dif; gb1.Controls.Add(btnCirc); btnCirc.Style.Add(HtmlTextWriterStyle.ZIndex, "10");
-                                        
+                    top += dif; gb1.Controls.Add(btnCirc); btnCirc.Style.Add(HtmlTextWriterStyle.ZIndex, "11");
 
-                    btnZig = new GControls.ImageButtonWithID("Zig", 1)
-                    { ImageUrl = ImageUrl(ZigZagInProgress() ? "Zig1_on" : "Zig1") }; 
-                    SetControlAbsolutePos(btnZig, top, left, size); btnZig.Click += BtnZig_Click;
-                    gb1.Controls.Add(btnZig); btnZig.Style.Add(HtmlTextWriterStyle.ZIndex, "10");
+                    bazenSel = new GControls.DropDownListForBazenSel("bazenSel", 
+                        GControls.DropDownListForBazenSel.GetSelectedText(prop1.ImpulsesDisplayVal.Value_short), 
+                        top+1, left+1, size/8.55F, 1.3F, false, false);      
+                    
+                    bazenSel.Style.Add(HtmlTextWriterStyle.ZIndex, "10");
+                    OthersUP.Controls_Add(bazenSel);
+                    bazenSel.SaveClicked += BazenSel_SaveClicked;
+
+                    gb1.Controls.Add(OthersUP);
 
                     // Semaphore
                     gb2 = new GControls.GroupBox(2, 4, 30, 49);
@@ -202,33 +220,39 @@ namespace WebApplication1
                     YelDot = new GControls.OnOffShowRound("Yel", prop1.SemaforYe.Value_bool, new Helper.Position(top, left, 100), "yellow");
                     SetControlAbsolutePos(YelDot, dottop, dotlft, dotSize);
 
-                    gb2.Controls.Add(RedDot); gb2.Controls.Add(GnDot); gb2.Controls.Add(YelDot);
+                    SemaphoreUP.Controls_Add(RedDot);
+                    SemaphoreUP.Controls_Add(GnDot);
+                    SemaphoreUP.Controls_Add(YelDot);
+                    gb2.Controls.Add(SemaphoreUP);
                     gb1.Controls.Add(gb2);
 
                     // speedSel
-                    spdlbl = new GControls.SuperLabel("Hitrost:", 62, 15, 20, 10) { FontSize = 1.2F }; ;
-                    speed = new GControls.DropDownListForDimmerRPM("Speedsel", prop1.SpeedRead.Value_string, 65, 2, 5, 1.5F, false, false);
+                    spdlbl = new GControls.SuperLabel("Hitrost:", 64, 15, 20, 10) { FontSize = 1.2F }; ;
+                    speed = new GControls.DropDownListForDimmerRPM("Speedsel", prop1.SpeedRead.Value_string, 67, 2, 5, 1.5F, false, false);
                     speed.SaveClicked += Speed_SaveClicked;
-                    gb1.Controls.Add(speed);
-                    gb1.Controls.Add(spdlbl);
-
-                    // Y step Time
-                    stplbl = new GControls.SuperLabel("Korak:", 77, 15, 20, 10) {FontSize = 1.2F };
-                    TimeZigY = new GControls.DropDownListForTimer_1_30s("Stepsel", prop1.TimeZigY.Value_string, 80, 2, 5, 1.5F, false, false);
-                    TimeZigY.SaveClicked += TimeZigY_SaveClicked;
-                    gb1.Controls.Add(TimeZigY);
-                    gb1.Controls.Add(stplbl);
-
+                    OthersUP.Controls_Add(speed);
+                    
                 }
                 catch (Exception ex)
                 {
 
-                    throw new Exception("Internal error inside Kontrola(HtmlGenericControl) method. "+ ex.Message);
+                    throw new Exception("Internal error inside Kontrola(HtmlGenericControl) method. " + ex.Message);
                 }
-                
-            }
-                        
 
+            }
+
+            private void BazenSel_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
+            {
+                var selectedIndex = bazenSel.GetSelectedValue(); // gets index of selected dropdown item
+                var Ximpulses = XmlController.GetBazenTypeXImpulses(selectedIndex); // Gets value from XML about selected item
+                var Yimpulses = XmlController.GetBazenTypeYImpulses(selectedIndex);
+
+                prop1.XImpulses.Value_short = Ximpulses;
+                prop1.YImpulses.Value_short = Yimpulses;
+                prop1.ImpulsesDisplayVal.Value_short = selectedIndex;
+            }
+
+            
             void Stanje()
             {
                 var top = 13;
@@ -278,23 +302,96 @@ namespace WebApplication1
 
             void JoyStick()
             {
+                y_up = new GControls.ImageButtonWithID("y_up", 0); y_dn = new GControls.ImageButtonWithID("y_dn", 0);
+                y_lft = new GControls.ImageButtonWithID("y_lft", 0); y_rght = new GControls.ImageButtonWithID("y_rght", 0);
+
+                var top = 8;
+                var xcent = 43;
+                var ycent = 36;
+                var size1 = 10;
+                var size2 = 5.5F;
+                var picname = "~/Pictures/";
+                var picpost = ".png";
+                string buff1, buff2, buff3, buff4;
+
                 try
                 {
-                    joystick = new GControls.JoystickDirection(74, 29, 15,
-                    prop1.JoyStickCommandY2.Value_bool, prop1.JoyStickCommandY1.Value_bool, prop1.JoyStickCommandX1.Value_bool, prop1.JoyStickCommandX2.Value_bool);
-                    divMaster.Controls.Add(joystick);
+                    buff1 = picname + "up";
+                    buff2 = picname + "dwn";
+                    buff3 = picname + "prv";
+                    buff4 = picname + "nxt";
 
-                    joystick.btn_up.Click += Btn_up_Click;
-                    joystick.btn_dn.Click += Btn_dn_Click;
-                    joystick.btn_l.Click += Btn_l_Click;
-                    joystick.btn_r.Click += Btn_r_Click;
+                    if (prop1.joy_up)
+                    {
+                        buff1 += "_press";
+                    }
+
+                    if (prop1.joy_dn)
+                    {
+                        buff2 += "_press";
+                    }
+
+                    if (prop1.joy_lft)
+                    {
+                        buff3 += "_press";
+                    }
+
+                    if (prop1.joy_rght)
+                    {
+                        buff4 += "_press";
+                    }
+
+                    y_up.ImageUrl += buff1 + picpost;
+                    y_dn.ImageUrl += buff2 + picpost;
+                    y_lft.ImageUrl += buff3 + picpost;
+                    y_rght.ImageUrl += buff4 + picpost;
+
+                    SetControlAbsolutePos(y_up, top, xcent, size1); SetControlAbsolutePos(y_dn, top + 63, xcent, size1);
+                    SetControlAbsolutePos(y_lft, ycent, xcent - 20, size2); SetControlAbsolutePos(y_rght, ycent, xcent + 22, size2);
+                    divMaster.Controls.Add(y_up); divMaster.Controls.Add(y_dn); divMaster.Controls.Add(y_lft); divMaster.Controls.Add(y_rght);
 
                 }
                 catch (Exception ex)
                 {
                     throw new Exception("Internal error inside JoyStick() method. " + ex.Message);
                 }
-                
+
+                y_up.Click += Y_up_Click;
+                y_dn.Click += Y_dn_Click;
+                y_lft.Click += Y_lft_Click;
+                y_rght.Click += Y_rght_Click;
+            }
+
+            private void Y_rght_Click(object sender, ImageClickEventArgs e)
+            {
+
+                prop1.joy_rght = !prop1.joy_rght;
+                prop1.JoyStickCommandX2.Value_bool = prop1.joy_rght;
+
+            }
+
+            private void Y_lft_Click(object sender, ImageClickEventArgs e)
+            {
+
+                prop1.joy_lft = !prop1.joy_lft;
+                prop1.JoyStickCommandY1.Value_bool = prop1.joy_lft;
+
+            }
+
+            private void Y_dn_Click(object sender, ImageClickEventArgs e)
+            {
+
+                prop1.joy_dn = !prop1.joy_dn;
+                prop1.JoyStickCommandX1.Value_bool = prop1.joy_dn;
+
+            }
+
+            private void Y_up_Click(object sender, ImageClickEventArgs e)
+            {
+
+                prop1.joy_up = !prop1.joy_up;
+                prop1.JoyStickCommandY2.Value_bool = prop1.joy_up;
+
             }
 
             void Trak()
@@ -321,9 +418,9 @@ namespace WebApplication1
                 {
                     throw new Exception("Internal error inside Trak() method. " + ex.Message);
                 }
-                
 
-                
+
+
 
             }
 
@@ -384,16 +481,6 @@ namespace WebApplication1
             }
 
             // helpers
-            bool CircleInProgress()
-            {
-                var a = Val.logocontroler.Prop1;
-
-                if (a.InitCircle.Value_bool || a.KorakCircle1.Value_bool || a.KorakCircle2.Value_bool || a.KorakCircle3.Value_bool || a.KorakCircle4.Value_bool)
-                {
-                    return true;
-                }
-                return false;
-            }
 
             bool ZigZagInProgress()
             {
@@ -431,7 +518,7 @@ namespace WebApplication1
                 Val.logocontroler.Prop1.JoyStickCommandY2.ToggleValue();
                 Val.logocontroler.Prop1.JoyStickCommandY1.Value_bool = false;
             }
-                        
+
             private void Button_Click(object sender, ImageClickEventArgs e)
             {
                 Val.logocontroler.Prop1.SymPrisotMat.ToggleValue();
@@ -442,10 +529,7 @@ namespace WebApplication1
                 Val.logocontroler.Prop1.SpeedSet.Value_short = speed.GetSelectedValue();
             }
 
-            private void TimeZigY_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
-            {
-                Val.logocontroler.Prop1.TimeZigY.Value_short = TimeZigY.GetSelectedValue();
-            }
+
 
             private void BtnZig_Click(object sender, ImageClickEventArgs e)
             {
@@ -454,7 +538,7 @@ namespace WebApplication1
 
             private void BtnCirc_Click(object sender, ImageClickEventArgs e)
             {
-                Val.logocontroler.Prop1.Circle.SendPulse();
+                Navigator.Redirect("Vzorci");
             }
 
             private void BtnAuto_Click1(object sender, ImageClickEventArgs e)

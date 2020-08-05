@@ -11,18 +11,19 @@ namespace WebApplication1
 {
     public partial class GuiController
     {
-        
+
         // Template class for every page
         public Template Template_ { get; set; }
         public PageDefault PageDefault_ { get; set; }
         public PageAdvanced PageAdvanced_ { get; set; }
-        public PageMasterMenu PageMastermenu_ { get; set; }       
+        public PageMasterMenu PageMastermenu_ { get; set; }
         public PageEditor PageEditor_ { get; set; }
-        public PageLogView PageLogView_ { get; set; }   
+        public PageLogView PageLogView_ { get; set; }
         public PageLogin PageLogin_ { get; set; }
 
         public PageUpNastavitve UpNastavitve_ { get; set; }
 
+        public PageVzorci PageVzorci_ {get;set; }
         public EmptyTemplatePage PageTemplate_ { get; set; }
 
         public GuiController()  

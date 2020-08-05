@@ -59,6 +59,22 @@ namespace WebApplication1
             }
         }
 
+        // General section of xml file
+        private static XElement _XmlBazen;
+        public static XElement XmlBazen
+        {
+            get
+            {
+                return _XmlBazen;
+            }
+
+            private set
+            {
+                _XmlBazen = value;
+            }
+        }
+
+
         // GUI section of xml file
         private static XElement _XmlGUI;
         public static XElement XmlGUI
@@ -467,6 +483,7 @@ namespace WebApplication1
             try
             {
                 XmlGeneral = XmlFile.Element("root").Element("GENERAL");
+                XmlBazen = XmlFile.Element("root").Element("Bazeni");
                 XmlGUI = XmlFile.Element("root").Element("GUI");
                 XmlConn = XmlFile.Element("root").Element("CONNECTION");
                 XmlUsr = XmlFile.Element("root").Element("USERS");
@@ -914,5 +931,94 @@ namespace WebApplication1
                     "Correct the " + searchValue + " value in config or call your support administrator. ");
             }
         }
+
+        public static int GetBazenTypeCnt()
+        {
+            var searchValue = "BazenTypeCnt";
+
+            try
+            {
+                var buff = XmlBazen.Element("searchValue").ToString();
+                var n = Convert.ToInt32(buff);
+                return n;
+            }
+            catch (Exception)
+            {
+                throw new Exception(searchValue + " value in config file is not valid " + searchValue + " value. " + 
+                    "Correct the " + searchValue + " value in config or call your support administrator. " +
+                    "Value must be more than 0 and less than or equal to 20.");
+            }
+        }
+
+        public static string GetBazenTypeName(short index)
+        {
+            var searchValue = "BazenType";
+                        
+
+            try
+            {
+                if (index < 1 || index > 20)
+                {
+                    throw new Exception();
+                }
+
+                var buff = XmlBazen.Element(searchValue + index + "_Name").Value;               
+                return buff;
+            }
+            catch (Exception)
+            {
+                throw new Exception(searchValue + " value in config file is not valid " + searchValue + " value. " +
+                    "Correct the " + searchValue + " value in config or call your support administrator. " +
+                    "Index must be more than 0 and less than or equal to 20.");
+            }
+        }
+
+        public static short GetBazenTypeXImpulses(int index)
+        {
+            var searchValue = "BazenType";
+
+            try
+            {
+                if (index < 1 || index > 20)
+                {
+                    throw new Exception();
+                }
+
+                var buff = XmlBazen.Element(searchValue + index + "_X_impulse").Value;
+                var n = Convert.ToInt16(buff);
+                return n;
+            }
+            catch (Exception)
+            {
+                throw new Exception(searchValue + " value in config file is not valid " + searchValue + " value. " +
+                    "Correct the " + searchValue + " value in config or call your support administrator. " +
+                    "Index must be more than 0 and less than or equal to 20. Value in xml must be positive number.");
+            }
+        }
+
+        public static short GetBazenTypeYImpulses(int index)
+        {
+            var searchValue = "BazenType";
+
+            try
+            {
+                if (index < 1 || index > 20)
+                {
+                    throw new Exception();
+                }
+
+                var buff = XmlBazen.Element(searchValue + index + "_Y_impulse").Value;
+                var n = Convert.ToInt16(buff);
+                return n;
+            }
+            catch (Exception)
+            {
+                throw new Exception(searchValue + " value in config file is not valid " + searchValue + " value. " +
+                    "Correct the " + searchValue + " value in config or call your support administrator. " +
+                    "Index must be more than 0 and less than or equal to 20. Value in xml must be positive number.");
+            }
+        }
+
+
     }
 }
