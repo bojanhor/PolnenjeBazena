@@ -68,7 +68,7 @@ namespace WebApplication1
 
         public class ChartViewSelectorDatasource : Datasource
         {
-           
+
             public ChartViewSelectorDatasource()
             {
                 GetDatasource();
@@ -79,7 +79,7 @@ namespace WebApplication1
                 GetDatasource();
             }
 
-            
+
 
             ListItem CreateRow(string text, string value)
             {
@@ -136,6 +136,42 @@ namespace WebApplication1
             }
         }
 
+
+        public class BazenSelectorDatasource : Datasource
+        {
+            static string[] Bazeni = new string[] { "1-8(m)", "9-17(v)", "18-19(v)" };
+
+            public BazenSelectorDatasource()
+            {
+                GetDatasource();
+            }
+
+
+            public void GetDatasource()
+            {
+                CreateRow(PropComm.NA, "0");
+
+                for (int i = 0; i < Bazeni.Length; i++)
+                {
+                    CreateRow(Bazeni[i], (i + 1).ToString());
+                }
+
+
+            }
+
+            ListItem CreateRow(string text, string value)
+            {
+                ListItem r = new ListItem
+                {
+                    Text = text,
+                    Value = value
+                };
+                Add(r);// adds to base class
+                return r;
+            }
+        }
+
+
         public class TimerSelectorDatasource : Datasource
         {
             public TimerSelectorDatasource(int from_seconds, int to_seconds, float increment, string unit)
@@ -187,7 +223,7 @@ namespace WebApplication1
             {
                 GetDatasource(1, HasZero);
             }
-                        
+
             public void GetDatasource(int increment, bool HasZero)
             {
                 int from = 1;

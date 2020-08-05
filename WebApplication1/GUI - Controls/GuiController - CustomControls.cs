@@ -1405,7 +1405,14 @@ namespace WebApplication1
 
                 public string GetSelectedText()
                 {
-                    return selectedItem.Text;
+                    if (selectedItem != null)
+                    {
+                        if (selectedItem.Text != "")
+                        {
+                            return selectedItem.Text;
+                        }
+                    }
+                    return PropComm.NA;
                 }
 
             }
@@ -1479,6 +1486,41 @@ namespace WebApplication1
                 new public short GetSelectedValue()
                 {
                     return Convert.ToInt16(base.GetSelectedValue());
+                }
+            }
+
+            public class DropDownListForBazenSel : DropDown
+            {
+                static readonly Datasourcer.BazenSelectorDatasource datasource = new Datasourcer.BazenSelectorDatasource();
+
+
+                public DropDownListForBazenSel(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
+                    : base("Izberite bazen:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, wideMode)
+                {
+                    Ctor();
+                }
+
+                void Ctor()
+                {
+                    DataSource = datasource;
+                    Button_Outside.DataBind();
+                }
+
+                new public short GetSelectedValue()
+                {
+                    return Convert.ToInt16(base.GetSelectedValue());
+                }
+
+                public static string GetSelectedText(short value)
+                {
+                   
+
+                    if (value > 0)
+                    {
+                        return XmlController.GetBazenTypeName(value);
+                    }
+
+                    return PropComm.NA;
                 }
             }
 

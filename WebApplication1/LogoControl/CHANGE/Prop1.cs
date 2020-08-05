@@ -15,7 +15,9 @@ namespace WebApplication1
         public PlcVars.Bit CakanjeMateriala;
         public PlcVars.Bit CakanjeUkaza;
 
-        public PlcVars.Bit Circle; public PlcVars.Bit ZigZag;
+        public PlcVars.Bit ZigZag; public PlcVars.Bit RobX1; public PlcVars.Bit RobY1; public PlcVars.Bit RobX2; public PlcVars.Bit RobY2;
+        public PlcVars.Word XImpulses; public PlcVars.Word YImpulses; public PlcVars.Word ImpulsesDisplayVal;
+
         public PlcVars.Bit Start; public PlcVars.Bit Stop;
 
         public PlcVars.Bit Man_AutoReadState;
@@ -36,9 +38,7 @@ namespace WebApplication1
         public PlcVars.AlarmBit ReadKSX1; public PlcVars.AlarmBit ReadKSX2; public PlcVars.AlarmBit ReadKSY1; public PlcVars.AlarmBit ReadKSY2;
 
         public PlcVars.Bit Inicializacija; public PlcVars.Bit KorakZigZag1; public PlcVars.Bit KorakZigZag2;
-
-        public PlcVars.Bit InitCircle; public PlcVars.Bit KorakCircle1; public PlcVars.Bit KorakCircle2; public PlcVars.Bit KorakCircle3; public PlcVars.Bit KorakCircle4;
-
+                
         public PlcVars.Bit JoyStickCommandX1; public PlcVars.Bit JoyStickCommandX2; public PlcVars.Bit JoyStickCommandY1; public PlcVars.Bit JoyStickCommandY2;
 
         public PlcVars.Word SpeedX; public PlcVars.Word SpeedY;
@@ -54,6 +54,10 @@ namespace WebApplication1
         public PlcVars.Bit CriticalMalfunction;
         public PlcVars.Bit MotorThermalX; public PlcVars.Bit MotorThermalY; public PlcVars.Bit MotorThermalT;
         public PlcVars.AlarmBit Starting;
+
+        // LOCAL VARS
+        public bool joy_up = false, joy_dn = false, joy_lft = false, joy_rght = false;
+        
 
         public Prop1(Sharp7.S7Client client):base(client)
         {
@@ -77,17 +81,20 @@ namespace WebApplication1
             Inicializacija = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(60, 0), "ZigZag - Inicializacija") { SyncEvery_X_Time = 3 };
             KorakZigZag1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(61, 0), "ZigZag - Korak1") { SyncEvery_X_Time = 3 };
             KorakZigZag2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(63, 0), "ZigZag - Korak2") { SyncEvery_X_Time = 3 };
-
-            InitCircle = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(70, 0), "Rob - Inicializacija") { SyncEvery_X_Time = 3 };
-            KorakCircle1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(71, 0), "Rob - Korak1") { SyncEvery_X_Time = 3 };
-            KorakCircle2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(72, 0), "Rob - Korak2") { SyncEvery_X_Time = 3 };
-            KorakCircle3 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(73, 0), "Rob - Korak3") { SyncEvery_X_Time = 3 };
-            KorakCircle4 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(74, 0), "Rob - Korak4") { SyncEvery_X_Time = 3 };
-
-            Circle = new PlcVars.Bit(this, new PlcVars.BitAddress(9, 0), true) { SyncEvery_X_Time = 2 };
+                                          
             ZigZag = new PlcVars.Bit(this, new PlcVars.BitAddress(8, 0), true) { SyncEvery_X_Time = 2 };
+
+            XImpulses = new PlcVars.Word(this, new PlcVars.WordAddress(210), true) { SyncEvery_X_Time = 3 };
+            YImpulses = new PlcVars.Word(this, new PlcVars.WordAddress(212), true) { SyncEvery_X_Time = 3 };
+           ImpulsesDisplayVal = new PlcVars.Word(this, new PlcVars.WordAddress(214), true) { SyncEvery_X_Time = 3 };
+
             Start = new PlcVars.Bit(this, new PlcVars.BitAddress(10, 0), true) { SyncEvery_X_Time = 2 };
-            Stop = new PlcVars.Bit(this, new PlcVars.BitAddress(12, 0), true) { SyncEvery_X_Time = 2 };
+            Stop = new PlcVars.Bit(this, new PlcVars.BitAddress(12, 0), true) { SyncEvery_X_Time = 1 };
+
+            RobX1 = new PlcVars.Bit(this, new PlcVars.BitAddress(34, 0), true) { SyncEvery_X_Time = 2 };
+            RobY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(34, 0), true) { SyncEvery_X_Time = 2 };
+            RobX2 = new PlcVars.Bit(this, new PlcVars.BitAddress(34, 0), true) { SyncEvery_X_Time = 2 };
+            RobY2 = new PlcVars.Bit(this, new PlcVars.BitAddress(34, 0), true) { SyncEvery_X_Time = 2 };
 
             Man_AutoReadState = new PlcVars.Bit(this, new PlcVars.BitAddress(13, 0), false) { SyncEvery_X_Time = 3 };
 

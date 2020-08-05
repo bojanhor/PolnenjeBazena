@@ -4,10 +4,23 @@
 		<WatchdogRetries>3</WatchdogRetries>	// how many times watchdog retries to get value from PLC before error is shown and reconection is invoked
 		<AutoConnect>True</AutoConnect>         // autoconnect at startup		
 		<AddressPC_WD>W 278</AddressPC_WD> // program will generate watchdog counter on specified profinet address (type is word; example value: "W 278")		
-		<debugToConsole>false</debugToConsole>					// debug writeline to VS console (ne spreminjaj)	
+		<debugToConsole>true</debugToConsole>					// debug writeline to VS console (ne spreminjaj)	
 	</GENERAL>//
 
-	<GUI>
+  <Bazeni>//
+		<BazenTypeCnt>3</BazenTypeCnt>//
+    <BazenType1_Name>1-8(m)</BazenType1_Name> // 
+    <BazenType1_X_impulse>10</BazenType1_X_impulse> //
+    <BazenType1_Y_impulse>10</BazenType1_Y_impulse> //
+    <BazenType2_Name>9-17(v)</BazenType2_Name> //
+    <BazenType2_X_impulse>15</BazenType2_X_impulse> //
+    <BazenType2_Y_impulse>15</BazenType2_Y_impulse> //
+    <BazenType3_Name>18-19(v)</BazenType3_Name> //
+    <BazenType3_X_impulse>20</BazenType3_X_impulse> //
+    <BazenType3_Y_impulse>20</BazenType3_Y_impulse> //
+  </Bazeni>//
+
+  <GUI>
   //
   <scaleGuiFactorX>99</scaleGuiFactorX>						// Gui Scaling Factor (size of user interface) (example 99)
   <scaleGuiFactorY>47</scaleGuiFactorY>						// Gui Scaling Factor (size of user interface) (example 47)
