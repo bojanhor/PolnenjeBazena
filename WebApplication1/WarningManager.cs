@@ -187,6 +187,11 @@ namespace WebApplication1
             SysLog.Message.SetMessage("User acknowledged message: " + warningToRemove.GetMessage());
         }
 
+        void RemoveMessage(string warningToRemove)
+        {
+            WarningManager.RemoveMessageForUser_Warning(warningToRemove);
+        }
+
         void ShowWarningSymbol()
         {
             var show = false;
@@ -291,6 +296,13 @@ namespace WebApplication1
             if (WarningsShowList != null)
             {
                 WarningsShowList.Find(item => item.GetMessage() == warning);
+                foreach (var item in WarningsShowList)
+                {
+                    if (warning == item.GetMessage())
+                    {
+                        RemoveMessageForUser_Warning(item);
+                    }
+                }
             }
             
         }

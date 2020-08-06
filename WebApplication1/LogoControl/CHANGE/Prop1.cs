@@ -37,7 +37,7 @@ namespace WebApplication1
 
         public PlcVars.AlarmBit ReadKSX1; public PlcVars.AlarmBit ReadKSX2; public PlcVars.AlarmBit ReadKSY1; public PlcVars.AlarmBit ReadKSY2;
 
-        public PlcVars.Bit Inicializacija; public PlcVars.Bit KorakZigZag1; public PlcVars.Bit KorakZigZag2;
+        public PlcVars.Bit ProcesZigZag; public PlcVars.Bit ProcesRob;
                 
         public PlcVars.Bit JoyStickCommandX1; public PlcVars.Bit JoyStickCommandX2; public PlcVars.Bit JoyStickCommandY1; public PlcVars.Bit JoyStickCommandY2;
 
@@ -55,9 +55,7 @@ namespace WebApplication1
         public PlcVars.Bit MotorThermalX; public PlcVars.Bit MotorThermalY; public PlcVars.Bit MotorThermalT;
         public PlcVars.AlarmBit Starting;
 
-        // LOCAL VARS
-        public bool joy_up = false, joy_dn = false, joy_lft = false, joy_rght = false;
-        
+                
 
         public Prop1(Sharp7.S7Client client):base(client)
         {
@@ -77,11 +75,10 @@ namespace WebApplication1
             Avtomat_read = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(3, 0), "Avtomatski način") { SyncEvery_X_Time = 3 };
             CakanjeMateriala = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(4, 0), "ČAKANJE MATERIALA") { SyncEvery_X_Time = 3 };
             CakanjeUkaza = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(5, 0), "ČAKANJE UKAZA") { SyncEvery_X_Time = 3 };
+            
+            ProcesZigZag = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(61, 0), "ZigZag - Polnenje") { SyncEvery_X_Time = 3 };
+            ProcesRob = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(71, 0), "Rob - Polnenje") { SyncEvery_X_Time = 3 };
 
-            Inicializacija = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(60, 0), "ZigZag - Inicializacija") { SyncEvery_X_Time = 3 };
-            KorakZigZag1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(61, 0), "ZigZag - Korak1") { SyncEvery_X_Time = 3 };
-            KorakZigZag2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(63, 0), "ZigZag - Korak2") { SyncEvery_X_Time = 3 };
-                                          
             ZigZag = new PlcVars.Bit(this, new PlcVars.BitAddress(8, 0), true) { SyncEvery_X_Time = 2 };
 
             XImpulses = new PlcVars.Word(this, new PlcVars.WordAddress(210), true) { SyncEvery_X_Time = 3 };

@@ -8,7 +8,8 @@ using System.Web;
 namespace WebApplication1
 {
     public class StanjeProcesa
-    {        
+    {
+        static string NoconnectionMessagePrefix = "NI POVEZAVE S KRMILNIKOM ";
         public static List<PlcVars.AlarmBit> SporocilaZaPrikaz { get; private set; }
         public static List<string> SporocilaZaPrikaz_custom = new List<string>();
 
@@ -26,7 +27,7 @@ namespace WebApplication1
         //
         public static  void NiPovezave(bool prikazi, int device)
         {
-            var message = "NI POVEZAVE S KRMILNIKOM "+ device +"!";
+            var message = NoconnectionMessagePrefix + device +"!";
             if (prikazi)
             {
                 ShowCustomMessage(message);
