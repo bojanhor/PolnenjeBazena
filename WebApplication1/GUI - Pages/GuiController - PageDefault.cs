@@ -374,7 +374,7 @@ namespace WebApplication1
             {
 
                 prop1.joy_lft = !prop1.joy_lft;
-                prop1.JoyStickCommandY1.Value_bool = prop1.joy_lft;
+                prop1.JoyStickCommandX1.Value_bool = prop1.joy_lft;
 
             }
 
@@ -382,7 +382,7 @@ namespace WebApplication1
             {
 
                 prop1.joy_dn = !prop1.joy_dn;
-                prop1.JoyStickCommandX1.Value_bool = prop1.joy_dn;
+                prop1.JoyStickCommandY1.Value_bool = prop1.joy_dn;
 
             }
 

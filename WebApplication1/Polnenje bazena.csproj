@@ -143,7 +143,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Index.html" />
-    <Content Include="Logs\Log.txt">
+    <Content Include="Logs\Log.txt.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Pages\Vzorci.aspx" />
