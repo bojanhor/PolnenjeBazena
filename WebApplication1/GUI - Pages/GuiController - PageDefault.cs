@@ -26,6 +26,7 @@ namespace WebApplication1
             public GControls.UpdatePanelFull SemaphoreUP;
             public GControls.UpdatePanelFull OthersUP;
             public GControls.UpdatePanelFull JoystickUP;
+            public GControls.UpdatePanelFull WarningsUP;
 
             public HtmlGenericControl divMaster;
             public HtmlGenericControl divConveyor;
@@ -81,6 +82,7 @@ namespace WebApplication1
                     SemaphoreUP = new GControls.UpdatePanelFull("SemaphoreUP", Settings.UpdateValuesPCms / 3);
                     OthersUP = new GControls.UpdatePanelFull("OthersUP", Settings.UpdateValuesPCms/2);
                     JoystickUP = new GControls.UpdatePanelFull("JoystickUP", Settings.UpdateValuesPCms/2);
+                    WarningsUP = new GControls.UpdatePanelFull("WarningsUP", Settings.UpdateValuesPCms);
                 }
                 else
                 {
@@ -88,6 +90,7 @@ namespace WebApplication1
                     SemaphoreUP = new GControls.UpdatePanelFull("SemaphoreUP", Settings.UpdateValuesPCms / 2);
                     OthersUP = new GControls.UpdatePanelFull("OthersUP", Settings.UpdateValuesPCms);
                     JoystickUP = new GControls.UpdatePanelFull("JoystickUP", Settings.UpdateValuesPCms);
+                    WarningsUP = new GControls.UpdatePanelFull("WarningsUP", Settings.UpdateValuesPCms);
                 }
 
                 
@@ -200,7 +203,7 @@ namespace WebApplication1
                     top += dif; gb1.Controls.Add(btnCirc); btnCirc.Style.Add(HtmlTextWriterStyle.ZIndex, "11");
 
                     bazenSel = new GControls.DropDownListForBazenSel("bazenSel", 
-                        GControls.DropDownListForBazenSel.GetSelectedText(prop1.ImpulsesDisplayVal.Value_short), 
+                        GControls.DropDownListForBazenSel.GetSelectedText(prop1.ImpulsesDisplayValRead.Value_short), 
                         top+1, left+1, size/8.55F, 1.3F, false, false);      
                     
                     bazenSel.Style.Add(HtmlTextWriterStyle.ZIndex, "10");
@@ -234,6 +237,7 @@ namespace WebApplication1
                     speed = new GControls.DropDownListForDimmerRPM("Speedsel", prop1.SpeedRead.Value_string, 67, 2, 5, 1.5F, false, false);
                     speed.SaveClicked += Speed_SaveClicked;
                     OthersUP.Controls_Add(speed);
+                    
                     
                 }
                 catch (Exception ex)
@@ -292,7 +296,8 @@ namespace WebApplication1
                     }
 
                     gb3.Controls.Add(Status);
-                    divMaster.Controls.Add(gb3);
+                    WarningsUP.Controls_Add(gb3);
+                    divMaster.Controls.Add(WarningsUP);
 
                 }
                 catch (Exception ex)
@@ -373,12 +378,12 @@ namespace WebApplication1
 
             private void Y_lft_Click(object sender, ImageClickEventArgs e)
             {
-                prop1.JoyStickCommandY1.Value_bool = !prop1.JoyStickCommandY1.Value_bool;
+                prop1.JoyStickCommandX1.Value_bool = !prop1.JoyStickCommandX1.Value_bool;
             }
 
             private void Y_dn_Click(object sender, ImageClickEventArgs e)
             {
-                prop1.JoyStickCommandX1.Value_bool = !prop1.JoyStickCommandX1.Value_bool;
+                prop1.JoyStickCommandY1.Value_bool = !prop1.JoyStickCommandY1.Value_bool;
             }
 
             private void Y_up_Click(object sender, ImageClickEventArgs e)
@@ -424,7 +429,7 @@ namespace WebApplication1
                     SimMaterial = new GControls.OnOffButton("SimulirajMaterial", 1, Val.logocontroler.Prop1.ReadPrisotMat.Value_bool, new Helper.Position(top, left, size), GControls.OnOffButton.Type.Shadowed);
                     SimMaterial.button.Click += Button_Click;
                     SimMat = new GControls.SuperLabel("Simuliraj Material:", top + 1.7F, left - 8, size + 3, size - 3) { FontSize = 1.0F };
-                    divMaster.Controls.Add(SimMaterial);
+                    WarningsUP.Controls_Add(SimMaterial);
                     divMaster.Controls.Add(SimMat);
                 }
                 catch (Exception ex)

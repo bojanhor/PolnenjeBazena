@@ -63,7 +63,7 @@ namespace WebApplication1
 
                 // Y step Time
                 stplbl = new GControls.SuperLabel("Korak:", top, left + 46, 20, 10) { FontSize = 1.2F };
-                TimeZigY = new GControls.DropDownListForTimer_1_30s("Stepsel", prop1.TimeZigY.Value_string, top + 4, left + 38, 5, 1.5F, false, false);
+                TimeZigY = new GControls.DropDownListForTimer_1_30s("Stepsel", prop1.TimeZigY.Value_string, top + 4, left + 38, 5, 1.5F, true, false);
                 TimeZigY.SaveClicked += TimeZigY_SaveClicked;
                 gb_ZigZag.Controls.Add(TimeZigY);
                 gb_ZigZag.Controls.Add(stplbl);
@@ -78,6 +78,7 @@ namespace WebApplication1
             private void ZigZag_Click(object sender, ImageClickEventArgs e)
             {
                 prop1.ZigZag.SendPulse();
+                Navigator.Redirect("Default");
             }
 
             private void RobY2_Click(object sender, ImageClickEventArgs e)

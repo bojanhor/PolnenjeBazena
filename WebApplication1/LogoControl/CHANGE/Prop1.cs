@@ -16,7 +16,7 @@ namespace WebApplication1
         public PlcVars.Bit CakanjeUkaza;
 
         public PlcVars.Bit ZigZag; public PlcVars.Bit RobX1; public PlcVars.Bit RobY1; public PlcVars.Bit RobX2; public PlcVars.Bit RobY2;
-        public PlcVars.Word XImpulses; public PlcVars.Word YImpulses; public PlcVars.Word ImpulsesDisplayVal;
+        public PlcVars.Word XImpulses; public PlcVars.Word YImpulses; public PlcVars.Word ImpulsesDisplayVal; public PlcVars.Word ImpulsesDisplayValRead;
 
         public PlcVars.Bit Start; public PlcVars.Bit Stop;
 
@@ -84,14 +84,15 @@ namespace WebApplication1
             XImpulses = new PlcVars.Word(this, new PlcVars.WordAddress(210), true) { SyncEvery_X_Time = 3 };
             YImpulses = new PlcVars.Word(this, new PlcVars.WordAddress(212), true) { SyncEvery_X_Time = 3 };
            ImpulsesDisplayVal = new PlcVars.Word(this, new PlcVars.WordAddress(214), true) { SyncEvery_X_Time = 3 };
+            ImpulsesDisplayValRead = new PlcVars.Word(this, new PlcVars.WordAddress(216), false) { SyncEvery_X_Time = 3 };
 
             Start = new PlcVars.Bit(this, new PlcVars.BitAddress(10, 0), true) { SyncEvery_X_Time = 2 };
             Stop = new PlcVars.Bit(this, new PlcVars.BitAddress(12, 0), true) { SyncEvery_X_Time = 1 };
 
             RobX1 = new PlcVars.Bit(this, new PlcVars.BitAddress(34, 0), true) { SyncEvery_X_Time = 2 };
-            RobY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(34, 0), true) { SyncEvery_X_Time = 2 };
-            RobX2 = new PlcVars.Bit(this, new PlcVars.BitAddress(34, 0), true) { SyncEvery_X_Time = 2 };
-            RobY2 = new PlcVars.Bit(this, new PlcVars.BitAddress(34, 0), true) { SyncEvery_X_Time = 2 };
+            RobY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(35, 0), true) { SyncEvery_X_Time = 2 };
+            RobX2 = new PlcVars.Bit(this, new PlcVars.BitAddress(36, 0), true) { SyncEvery_X_Time = 2 };
+            RobY2 = new PlcVars.Bit(this, new PlcVars.BitAddress(37, 0), true) { SyncEvery_X_Time = 2 };
 
             Man_AutoReadState = new PlcVars.Bit(this, new PlcVars.BitAddress(13, 0), false) { SyncEvery_X_Time = 3 };
 

@@ -143,9 +143,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Index.html" />
-    <Content Include="Logs\Log.txt.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Logs\Log.txt" />
     <Content Include="Pages\Vzorci.aspx" />
     <Content Include="Pages\UpNastavitve.aspx" />
     <Content Include="Pages\Template.aspx" />
@@ -165,7 +163,6 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="App_Data\config.cnfg" />
-    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pictures\alert.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -619,6 +616,7 @@
   <ItemGroup>
     <Folder Include="App_LocalResources\" />
     <Folder Include="App_Start\App_LocalResources\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
