@@ -25,6 +25,7 @@ namespace WebApplication1
             public GControls.UpdatePanelFull ConvUP;
             public GControls.UpdatePanelFull SemaphoreUP;
             public GControls.UpdatePanelFull OthersUP;
+            public GControls.UpdatePanelFull JoystickUP;
 
             public HtmlGenericControl divMaster;
             public HtmlGenericControl divConveyor;
@@ -79,12 +80,14 @@ namespace WebApplication1
                     ConvUP = new GControls.UpdatePanelFull("ConveyorUpdatePanel", Settings.Updateanimations);
                     SemaphoreUP = new GControls.UpdatePanelFull("SemaphoreUP", Settings.UpdateValuesPCms / 3);
                     OthersUP = new GControls.UpdatePanelFull("OthersUP", Settings.UpdateValuesPCms/2);
+                    JoystickUP = new GControls.UpdatePanelFull("JoystickUP", Settings.UpdateValuesPCms/2);
                 }
                 else
                 {
                     ConvUP = new GControls.UpdatePanelFull("ConveyorUpdatePanel", Settings.UpdateValuesPCms);
                     SemaphoreUP = new GControls.UpdatePanelFull("SemaphoreUP", Settings.UpdateValuesPCms / 2);
                     OthersUP = new GControls.UpdatePanelFull("OthersUP", Settings.UpdateValuesPCms);
+                    JoystickUP = new GControls.UpdatePanelFull("JoystickUP", Settings.UpdateValuesPCms);
                 }
 
                 
@@ -321,22 +324,22 @@ namespace WebApplication1
                     buff3 = picname + "prv";
                     buff4 = picname + "nxt";
 
-                    if (prop1.joy_up)
+                    if (prop1.JoyStickCommandY2.Value_bool)
                     {
                         buff1 += "_press";
                     }
 
-                    if (prop1.joy_dn)
+                    if (prop1.JoyStickCommandY1.Value_bool)
                     {
                         buff2 += "_press";
                     }
 
-                    if (prop1.joy_lft)
+                    if (prop1.JoyStickCommandX1.Value_bool)
                     {
                         buff3 += "_press";
                     }
 
-                    if (prop1.joy_rght)
+                    if (prop1.JoyStickCommandX2.Value_bool)
                     {
                         buff4 += "_press";
                     }
@@ -348,7 +351,8 @@ namespace WebApplication1
 
                     SetControlAbsolutePos(y_up, top, xcent, size1); SetControlAbsolutePos(y_dn, top + 63, xcent, size1);
                     SetControlAbsolutePos(y_lft, ycent, xcent - 20, size2); SetControlAbsolutePos(y_rght, ycent, xcent + 22, size2);
-                    divMaster.Controls.Add(y_up); divMaster.Controls.Add(y_dn); divMaster.Controls.Add(y_lft); divMaster.Controls.Add(y_rght);
+                    JoystickUP.Controls_Add(y_up); JoystickUP.Controls_Add(y_dn); JoystickUP.Controls_Add(y_lft); JoystickUP.Controls_Add(y_rght);
+                    divMaster.Controls.Add(JoystickUP);
 
                 }
                 catch (Exception ex)
@@ -364,34 +368,22 @@ namespace WebApplication1
 
             private void Y_rght_Click(object sender, ImageClickEventArgs e)
             {
-
-                prop1.joy_rght = !prop1.joy_rght;
-                prop1.JoyStickCommandX2.Value_bool = prop1.joy_rght;
-
+                prop1.JoyStickCommandX2.Value_bool = !prop1.JoyStickCommandX2.Value_bool;
             }
 
             private void Y_lft_Click(object sender, ImageClickEventArgs e)
             {
-
-                prop1.joy_lft = !prop1.joy_lft;
-                prop1.JoyStickCommandY1.Value_bool = prop1.joy_lft;
-
+                prop1.JoyStickCommandY1.Value_bool = !prop1.JoyStickCommandY1.Value_bool;
             }
 
             private void Y_dn_Click(object sender, ImageClickEventArgs e)
             {
-
-                prop1.joy_dn = !prop1.joy_dn;
-                prop1.JoyStickCommandX1.Value_bool = prop1.joy_dn;
-
+                prop1.JoyStickCommandX1.Value_bool = !prop1.JoyStickCommandX1.Value_bool;
             }
 
             private void Y_up_Click(object sender, ImageClickEventArgs e)
             {
-
-                prop1.joy_up = !prop1.joy_up;
-                prop1.JoyStickCommandY2.Value_bool = prop1.joy_up;
-
+                prop1.JoyStickCommandY2.Value_bool = !prop1.JoyStickCommandY2.Value_bool;
             }
 
             void Trak()
@@ -480,18 +472,7 @@ namespace WebApplication1
 
             }
 
-            // helpers
-
-            bool ZigZagInProgress()
-            {
-                var a = Val.logocontroler.Prop1;
-
-                if (a.Inicializacija.Value_bool || a.KorakZigZag1.Value_bool || a.KorakZigZag2.Value_bool)
-                {
-                    return true;
-                }
-                return false;
-            }
+           
 
             // ONCLICKS
 
