@@ -7,8 +7,9 @@
 		<debugToConsole>true</debugToConsole>					// debug writeline to VS console (ne spreminjaj)	
 	</GENERAL>//
 
-  <Bazeni>//
-		<BazenTypeCnt>3</BazenTypeCnt>//
+  <Bazeni>// 
+		<X_Step>5</X_Step>//			ZigZag vzorec - korak X
+    <Y_Step>5</Y_Step>//			ZigZag vzorec - korak Y
     <BazenType1_Name>1-8(m)</BazenType1_Name> // 
     <BazenType1_X_impulse>10</BazenType1_X_impulse> //
     <BazenType1_Y_impulse>10</BazenType1_Y_impulse> //

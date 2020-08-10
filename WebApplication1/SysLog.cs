@@ -27,10 +27,10 @@ namespace WebApplication1
             public MessageManager()
             {
                 Misc.SmartThread LogInit = new Misc.SmartThread(() => manageFiles());
-                LogInit.Start("LogInit", ApartmentState.MTA, false);
+                LogInit.Start("LogInit", ApartmentState.MTA, true);
 
                 LogWriter = new Misc.SmartThread(() => WriteLogAsync());
-                LogWriter.Start("LogWriter", ApartmentState.MTA, false);
+                LogWriter.Start("LogWriter", ApartmentState.MTA, true);
 
                 AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
             }

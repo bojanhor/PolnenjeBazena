@@ -1575,6 +1575,29 @@ namespace WebApplication1
                 }
             }
 
+            public class DropDownList_1_30 : DropDown
+            {
+                static readonly Datasourcer.StepSelectorDatasource datasource = new Datasourcer.StepSelectorDatasource();
+
+                public DropDownList_1_30(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool widemode)
+                    : base("", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, widemode)
+                {
+                    Ctor();
+                }
+
+
+                void Ctor()
+                {
+                    DataSource = datasource;
+                    Button_Outside.DataBind();
+                }
+
+                new public short GetSelectedValue()
+                {
+                    return Convert.ToInt16(base.GetSelectedValue());
+                }
+            }
+
             public class DropDownListForTemperatureSelect_10_30 : DropDown
             {
                 static readonly Datasourcer.Temperature_10_30_SelectorDatasource datasource = new Datasourcer.Temperature_10_30_SelectorDatasource();

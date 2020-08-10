@@ -136,6 +136,49 @@ namespace WebApplication1
             }
         }
 
+        public class StepSelectorDatasource : Datasource
+        {
+            static string[] percents;
+
+            public StepSelectorDatasource()
+            {
+                GetDatasource();
+            }
+
+            public void GetDatasource()
+            {
+                GetDatasource(1);
+            }
+
+            public void GetDatasource(int increment)
+            {
+
+                percents = new string[30 / increment];
+
+                CreateRow(PropComm.NA, "0");
+
+                var buff = 0;
+
+                for (int i = 0; i < percents.Length + 1; i++)
+                {
+                    CreateRow(buff.ToString(), buff.ToString());
+                    buff += increment;
+                }
+
+            }
+
+            ListItem CreateRow(string text, string value)
+            {
+                ListItem r = new ListItem
+                {
+                    Text = text,
+                    Value = value
+                };
+                Add(r);// adds to base class
+                return r;
+            }
+        }
+
 
         public class BazenSelectorDatasource : Datasource
         {

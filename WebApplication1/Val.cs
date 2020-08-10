@@ -14,10 +14,13 @@ namespace WebApplication1
     {        
         public static Helper.Initialiser Initialiser = new Helper.Initialiser();
         public static LogoControler logocontroler;
+        public static Kontrola Kontrola;
+        public static PC_WD PCWD;
         public static WarningManager WarningManager;
         public static GuiController guiController;        
         public static string[] watchdog = new string[Settings.Devices + 1];
         public static string ScrolToBottomTextboxScript;
+        public static string CantStartPatern;
         public static string RetainPositionTextboxScript;
         public static string FocusNextIfEnterKeyPressedScript;
         public static string LoggedIn = "!#LoggedIn#!";
@@ -33,6 +36,8 @@ namespace WebApplication1
             guiController = new GuiController();            
             WarningManager = new WarningManager();              // in new thread
             logocontroler = new LogoControler();                // in new thread
+            PCWD = new PC_WD();                                 // in new thread
+            Kontrola = new Kontrola();
         }
 
         static void ScriptLoad()

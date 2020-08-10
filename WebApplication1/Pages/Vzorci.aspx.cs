@@ -21,8 +21,10 @@ namespace WebApplication1.Pages
                       
         private void Initialise()
         {
-            TemplateClass.Controls.Add(Val.guiController.PageVzorci_.gb_Rob);
-            TemplateClass.Controls.Add(Val.guiController.PageVzorci_.gb_ZigZag);
+            Val.guiController.PageVzorci_.UP.Controls_Add(Val.guiController.PageVzorci_.gb_Rob);
+            Val.guiController.PageVzorci_.UP.Controls_Add(Val.guiController.PageVzorci_.gb_ZigZag);
+            TemplateClass.Controls.Add(Val.guiController.PageVzorci_.Opozorilo);
+            TemplateClass.Controls.Add(Val.guiController.PageVzorci_.UP);
         }
                
         
