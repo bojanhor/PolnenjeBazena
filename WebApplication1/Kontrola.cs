@@ -17,6 +17,7 @@ namespace WebApplication1
         bool _RobY2InProcess = false;
         bool _KrozenjeInProcess = false;
         bool _EnKrogInProcess = false;
+        bool permissionToRunLocal = false;
 
         public bool ZigzagInProcess 
         { get { return _ZigzagInProcess; } set { _ZigzagInProcess = value; } }
@@ -181,6 +182,8 @@ namespace WebApplication1
 
         public void StopPatern()
         {
+            stopMoving();
+            
             if (Current != null)
             {
                 Current.Stop();
@@ -344,7 +347,7 @@ namespace WebApplication1
             }
 
             prop1 = Val.logocontroler.Prop1;
-
+            permissionToRunLocal = true;
             try
             {
                 while (true)
@@ -371,9 +374,11 @@ namespace WebApplication1
                     if (prop1.Ustavljeno.Value_bool)
                     {
                         StopPatern();
+                        stopMoving();
                     }
 
-                    Thread.Sleep(500);
+                   
+                    Thread.Sleep(150);
                 }
             }
             catch (Exception ex)
@@ -970,8 +975,9 @@ namespace WebApplication1
             prop1.AutoDirX2.Value_bool = false;
         }
 
-        void stopMoving()
+        public void stopMoving()
         {
+            prop1.Halt.SendPulse();
             stopUp(); stopDwn(); stopLft(); stopRght();
         }
 
@@ -1018,8 +1024,8 @@ namespace WebApplication1
         }
 
         public void Stop()
-        {
-            paternThread.Stop(0, 0);
+        {            
+            paternThread.ForceAbort();
         }
 
     }

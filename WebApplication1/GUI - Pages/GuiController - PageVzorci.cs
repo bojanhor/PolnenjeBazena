@@ -77,6 +77,8 @@ namespace WebApplication1
 
             private void ZigZag_Click(object sender, ImageClickEventArgs e)
             {
+                
+                Val.Kontrola.StopPatern();
                 prop1.ZigZag.SendPulse();
                 if (Val.Kontrola.StartZigZag())
                 {                    
@@ -90,6 +92,8 @@ namespace WebApplication1
 
             private void RobY2_Click(object sender, ImageClickEventArgs e)
             {
+                
+                Val.Kontrola.StopPatern();
                 prop1.RobY2.SendPulse();
                 if (Val.Kontrola.StartRobY2())
                 {
@@ -104,6 +108,8 @@ namespace WebApplication1
 
             private void RobX2_Click(object sender, ImageClickEventArgs e)
             {
+                
+                Val.Kontrola.StopPatern();
                 prop1.RobX2.SendPulse();
                 if (Val.Kontrola.StartRobX2())
                 {
@@ -118,6 +124,8 @@ namespace WebApplication1
 
             private void RobY1_Click(object sender, ImageClickEventArgs e)
             {
+                
+                Val.Kontrola.StopPatern();
                 prop1.RobY1.SendPulse();
                 if (Val.Kontrola.StartRobY1())
                 {
@@ -132,6 +140,8 @@ namespace WebApplication1
 
             private void RobX1_Click(object sender, ImageClickEventArgs e)
             {
+                
+                Val.Kontrola.StopPatern();
                 prop1.RobX1.SendPulse();
                 if (Val.Kontrola.StartRobX1())
                 {

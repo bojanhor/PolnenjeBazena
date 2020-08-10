@@ -69,7 +69,7 @@
 			<localTSAP>"03.00"</localTSAP>		// format must be ##.## (00.03) TSAP is used for comunication between PLCs 
 			<remoteTSAP>"02.00"</remoteTSAP>	// format must be ##.## (00.03) TSAP is used for comunication between PLCs			
 			<watchdogAddress>800</watchdogAddress>   // value must be string between valid PLC adress range .. watchdog is used for detecting comunication problems (example 100 if watchdog value is Word on address 100)
-			<ReadWriteCycle>60</ReadWriteCycle>		// value in miliseconds - frequency at which data aquisition is preformed - read, action, write, delay. (watchdog is also bound at this frequency)
+			<ReadWriteCycle>100</ReadWriteCycle>		// value in miliseconds - frequency at which data aquisition is preformed - read, action, write, delay. (watchdog is also bound at this frequency)
 		</LOGO1>//
 	  //
 		<LOGO2>//
@@ -81,7 +81,7 @@
 			<localTSAP>"03.00"</localTSAP>//
 			<remoteTSAP>"02.00"</remoteTSAP>//		
 			<watchdogAddress>800</watchdogAddress>//
-			<ReadWriteCycle>60</ReadWriteCycle>//
+			<ReadWriteCycle>100</ReadWriteCycle>//
 		</LOGO2>//
 	  //
 		<LOGO3>//

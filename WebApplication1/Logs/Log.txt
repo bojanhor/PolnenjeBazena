@@ -8655,3 +8655,676 @@
 10.08.2020  18:25:23 : Logo2: Connection error: CLI : Client not connected
 10.08.2020  18:25:26 : Logo1: Running connection diagnostics...
 10.08.2020  18:25:30 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:48:44 : Logo1: Connecting...
+10.08.2020  18:48:44 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  18:48:44 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  18:48:44 : Logo2: Connecting...
+10.08.2020  18:48:47 : Logo1: TCP : Connection Error
+10.08.2020  18:48:47 : Logo1: Running connection diagnostics...
+10.08.2020  18:48:48 : Logo2: TCP : Connection Error
+10.08.2020  18:48:48 : Logo1: Running connection diagnostics...
+10.08.2020  18:48:50 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:48:51 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:48:52 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:48:52 : Logo1: CLI : Client not connected
+10.08.2020  18:48:52 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  18:48:53 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:48:53 : Logo2: CLI : Client not connected
+10.08.2020  18:48:53 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  18:48:55 : Logo1: Running connection diagnostics...
+10.08.2020  18:48:56 : Logo1: Running connection diagnostics...
+10.08.2020  18:48:59 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:49:00 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:49:01 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:49:01 : Logo1: Running connection diagnostics...
+10.08.2020  18:49:02 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:49:02 : Logo1: Running connection diagnostics...
+10.08.2020  18:50:24 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  18:50:24 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  18:50:24 : Logo1: Connecting...
+10.08.2020  18:50:24 : Logo2: Connecting...
+10.08.2020  18:50:27 : Logo1: TCP : Connection Error
+10.08.2020  18:50:27 : Logo1: Running connection diagnostics...
+10.08.2020  18:50:28 : Logo2: TCP : Connection Error
+10.08.2020  18:50:28 : Logo1: Running connection diagnostics...
+10.08.2020  18:50:31 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:50:32 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:50:33 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:50:33 : Logo1: CLI : Client not connected
+10.08.2020  18:50:33 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  18:50:34 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:50:34 : Logo2: CLI : Client not connected
+10.08.2020  18:50:34 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  18:50:36 : Logo1: Running connection diagnostics...
+10.08.2020  18:50:37 : Logo1: Running connection diagnostics...
+10.08.2020  18:50:40 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:50:41 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:50:42 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:50:42 : Logo1: Running connection diagnostics...
+10.08.2020  18:50:43 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:50:43 : Logo1: Running connection diagnostics...
+10.08.2020  18:50:46 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:50:47 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:50:48 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:50:48 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.08.2020  18:50:48 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  18:50:49 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:50:49 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+10.08.2020  18:50:49 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  18:50:51 : Logo1: Running connection diagnostics...
+10.08.2020  18:50:52 : Logo1: Running connection diagnostics...
+10.08.2020  18:50:55 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:50:56 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:50:57 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:50:57 : Logo1: Running connection diagnostics...
+10.08.2020  18:50:58 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:50:58 : Logo1: Running connection diagnostics...
+10.08.2020  18:51:01 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:51:02 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:51:03 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:51:03 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  18:51:04 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:51:04 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  18:51:06 : Logo1: Running connection diagnostics...
+10.08.2020  18:51:07 : Logo1: Running connection diagnostics...
+10.08.2020  18:51:10 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:51:11 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:51:12 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:51:12 : Logo1: Running connection diagnostics...
+10.08.2020  18:51:13 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:51:13 : Logo1: Running connection diagnostics...
+10.08.2020  18:51:16 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:51:17 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:51:18 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:51:18 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  18:51:19 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:51:19 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  18:51:21 : Logo1: Running connection diagnostics...
+10.08.2020  18:51:22 : Logo1: Running connection diagnostics...
+10.08.2020  18:51:25 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:51:26 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:51:27 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:51:27 : Logo1: Running connection diagnostics...
+10.08.2020  18:51:29 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:51:29 : Logo1: Running connection diagnostics...
+10.08.2020  18:51:31 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:51:32 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:51:33 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:51:33 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  18:51:35 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:51:35 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  18:51:36 : Logo1: Running connection diagnostics...
+10.08.2020  18:51:38 : Logo1: Running connection diagnostics...
+10.08.2020  18:51:40 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:51:41 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:51:42 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:51:42 : Logo1: Running connection diagnostics...
+10.08.2020  18:51:44 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:51:44 : Logo1: Running connection diagnostics...
+10.08.2020  18:51:46 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:51:47 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:51:48 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:51:48 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  18:51:50 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:51:50 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  18:51:51 : Logo1: Running connection diagnostics...
+10.08.2020  18:51:53 : Logo1: Running connection diagnostics...
+10.08.2020  18:51:55 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:51:56 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:51:57 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:51:57 : Logo1: Running connection diagnostics...
+10.08.2020  18:51:59 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:51:59 : Logo1: Running connection diagnostics...
+10.08.2020  18:52:01 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:52:02 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:52:03 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:52:03 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  18:52:05 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:52:05 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  18:52:06 : Logo1: Running connection diagnostics...
+10.08.2020  18:52:08 : Logo1: Running connection diagnostics...
+10.08.2020  18:52:10 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:52:11 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:52:12 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:52:12 : Logo1: Running connection diagnostics...
+10.08.2020  18:52:14 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:52:14 : Logo1: Running connection diagnostics...
+10.08.2020  18:52:16 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:52:17 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:52:18 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:52:18 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  18:52:20 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:52:20 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  18:52:21 : Logo1: Running connection diagnostics...
+10.08.2020  18:52:23 : Logo1: Running connection diagnostics...
+10.08.2020  18:52:25 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:52:26 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:52:27 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:52:27 : Logo1: Running connection diagnostics...
+10.08.2020  18:52:29 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:52:29 : Logo1: Running connection diagnostics...
+10.08.2020  18:52:31 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:52:32 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:52:33 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:52:33 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  18:52:35 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:52:35 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  18:52:36 : Logo1: Running connection diagnostics...
+10.08.2020  18:52:38 : Logo1: Running connection diagnostics...
+10.08.2020  18:52:40 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:52:41 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:52:42 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:52:42 : Logo1: Running connection diagnostics...
+10.08.2020  18:52:44 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:52:44 : Logo1: Running connection diagnostics...
+10.08.2020  18:52:46 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:52:47 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:52:48 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:52:48 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  18:52:50 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:52:50 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  18:52:51 : Logo1: Running connection diagnostics...
+10.08.2020  18:52:53 : Logo1: Running connection diagnostics...
+10.08.2020  18:52:55 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:52:56 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:52:57 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:52:57 : Logo1: Running connection diagnostics...
+10.08.2020  18:52:59 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:52:59 : Logo1: Running connection diagnostics...
+10.08.2020  18:53:01 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:53:02 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:53:03 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:53:03 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  18:53:05 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:53:05 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  18:53:06 : Logo1: Running connection diagnostics...
+10.08.2020  18:53:08 : Logo1: Running connection diagnostics...
+10.08.2020  18:53:10 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:53:11 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:53:12 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:53:12 : Logo1: Running connection diagnostics...
+10.08.2020  18:53:14 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:53:14 : Logo1: Running connection diagnostics...
+10.08.2020  18:53:16 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:53:17 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:53:18 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:53:18 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  18:53:20 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:53:20 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  18:53:21 : Logo1: Running connection diagnostics...
+10.08.2020  18:53:23 : Logo1: Running connection diagnostics...
+10.08.2020  18:53:24 : Logo2: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+10.08.2020  18:53:24 : Logo1: Running connection diagnostics...
+10.08.2020  18:53:24 : Logo2: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+10.08.2020  18:53:24 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  18:53:25 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:53:25 : Logo1: Connected again
+10.08.2020  18:53:27 : Logo1: Running connection diagnostics...
+10.08.2020  18:53:27 : Logo2:   -Ping successful at: 192.168.1.201
+10.08.2020  18:53:27 : Logo1: Read-Write cycle is taking 196ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:28 : Logo2: Connected again
+10.08.2020  18:53:28 : Logo1: Read-Write cycle is taking 89ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:29 : Logo1: Read-Write cycle is taking 74ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:30 : Logo1: Read-Write cycle is taking 111ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:32 : Logo1: Read-Write cycle is taking 75ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:33 : Logo1: Read-Write cycle is taking 77ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:33 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  18:53:34 : Logo1: Read-Write cycle is taking 72ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:35 : Logo1: Read-Write cycle is taking 70ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:36 : Logo1: Read-Write cycle is taking 94ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:37 : Logo1: Read-Write cycle is taking 79ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:39 : Logo1: Read-Write cycle is taking 81ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:40 : Logo1: Read-Write cycle is taking 75ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:40 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  18:53:41 : Logo1: Read-Write cycle is taking 63ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:41 : Logo1: Watchdog error - Watchdog does not change
+10.08.2020  18:53:41 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.08.2020  18:53:42 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  18:53:44 : Logo1: Running connection diagnostics...
+10.08.2020  18:53:44 : Logo1:   -Ping successful at: 192.168.1.200
+10.08.2020  18:53:45 : Logo1: Connected again
+10.08.2020  18:53:45 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.08.2020  18:53:48 : Logo1: Running connection diagnostics...
+10.08.2020  18:53:48 : Logo1:   -Ping successful at: 192.168.1.200
+10.08.2020  18:53:48 : Logo1: Connected again
+10.08.2020  18:53:49 : Logo1: Read-Write cycle is taking 84ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:50 : Logo1: Read-Write cycle is taking 90ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:51 : Logo1: Read-Write cycle is taking 78ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:52 : Logo1: Read-Write cycle is taking 121ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:53 : Logo1: Read-Write cycle is taking 105ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:54 : Logo1: Read-Write cycle is taking 93ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:55 : Logo1: Read-Write cycle is taking 93ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:56 : Logo1: Read-Write cycle is taking 81ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:57 : Logo1: Read-Write cycle is taking 89ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:53:59 : Logo1: Read-Write cycle is taking 102ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:00 : Logo1: Read-Write cycle is taking 96ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:01 : Logo1: Read-Write cycle is taking 83ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:02 : Logo1: Read-Write cycle is taking 99ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:03 : Logo1: Read-Write cycle is taking 112ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:04 : Logo1: Read-Write cycle is taking 211ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:07 : Logo1: Read-Write cycle is taking 211ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:08 : Logo1: Read-Write cycle is taking 93ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:09 : Logo1: Read-Write cycle is taking 99ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:10 : Logo1: Read-Write cycle is taking 78ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:11 : Logo1: Read-Write cycle is taking 86ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:13 : Logo1: Read-Write cycle is taking 90ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:14 : Logo1: Read-Write cycle is taking 83ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:15 : Logo1: Read-Write cycle is taking 86ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:16 : Logo1: Read-Write cycle is taking 99ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:17 : Logo1: Read-Write cycle is taking 106ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:18 : Logo1: Read-Write cycle is taking 105ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:19 : Logo1: Read-Write cycle is taking 80ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:20 : Logo1: Read-Write cycle is taking 94ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:21 : Logo1: Read-Write cycle is taking 86ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:22 : Logo1: Read-Write cycle is taking 110ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:23 : Logo1: Read-Write cycle is taking 84ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:24 : Logo1: Read-Write cycle is taking 90ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:25 : Logo1: Read-Write cycle is taking 86ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:26 : Logo1: Read-Write cycle is taking 105ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:27 : Logo1: Read-Write cycle is taking 94ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:29 : Logo1: Read-Write cycle is taking 86ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:30 : Logo1: Read-Write cycle is taking 124ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:31 : Logo1: Read-Write cycle is taking 124ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:32 : Logo1: Read-Write cycle is taking 90ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:33 : Logo1: Read-Write cycle is taking 113ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:34 : Logo1: Read-Write cycle is taking 104ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:35 : Logo1: Read-Write cycle is taking 87ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:35 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  18:54:36 : Logo1: Read-Write cycle is taking 86ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:37 : Logo1: Read-Write cycle is taking 104ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:38 : Logo1: Read-Write cycle is taking 93ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:39 : Logo1: Read-Write cycle is taking 93ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:40 : Logo1: Read-Write cycle is taking 87ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:42 : Logo1: Read-Write cycle is taking 109ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:43 : Logo1: Read-Write cycle is taking 92ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:44 : Logo1: Read-Write cycle is taking 102ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:45 : Logo1: Read-Write cycle is taking 82ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:46 : Redirected to: MasterMenu
+10.08.2020  18:54:46 : Logo1: Read-Write cycle is taking 97ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:47 : Redirected to: UpNastavitve
+10.08.2020  18:54:47 : Redirected to: Advanced
+10.08.2020  18:54:47 : Logo1: Read-Write cycle is taking 90ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:47 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  18:54:48 : Logo1: Read-Write cycle is taking 119ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:49 : Logo1: Read-Write cycle is taking 94ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:50 : Logo1: Read-Write cycle is taking 114ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:52 : Logo1: Read-Write cycle is taking 88ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:53 : Logo1: Read-Write cycle is taking 123ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:54 : Logo1: Read-Write cycle is taking 92ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:55 : Logo1: Read-Write cycle is taking 102ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:56 : Logo1: Read-Write cycle is taking 95ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:58 : Logo1: Read-Write cycle is taking 219ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:54:58 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  18:55:01 : Logo1: Read-Write cycle is taking 79ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:01 : Read from PLC failed. Address: VW700, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  18:55:02 : Logo2: Watchdog error - Watchdog does not change
+10.08.2020  18:55:02 : Logo2: Connection error: Watchdog error - Watchdog does not change
+10.08.2020  18:55:02 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  18:55:03 : Logo1: Read-Write cycle is taking 95ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:04 : Logo1: Read-Write cycle is taking 62ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:05 : Logo1: Read-Write cycle is taking 93ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:05 : Logo1: Running connection diagnostics...
+10.08.2020  18:55:05 : Logo2:   -Ping successful at: 192.168.1.201
+10.08.2020  18:55:05 : Logo2: Connected again
+10.08.2020  18:55:07 : Logo1: Read-Write cycle is taking 84ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:08 : Redirected to: Editor
+10.08.2020  18:55:09 : Logo1: Read-Write cycle is taking 86ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:10 : Logo1: Read-Write cycle is taking 78ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:11 : Logo1: Read-Write cycle is taking 93ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:14 : Logo1: Read-Write cycle is taking 140ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:17 : Logo1: Read-Write cycle is taking 78ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:18 : Logo1: Read-Write cycle is taking 124ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:19 : Logo1: Read-Write cycle is taking 62ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:21 : Logo1: Read-Write cycle is taking 62ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:22 : Logo1: Read-Write cycle is taking 62ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:28 : Logo1: Read-Write cycle is taking 78ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:32 : Logo1: Read-Write cycle is taking 101ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:33 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  18:55:35 : Logo1: Read-Write cycle is taking 190ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:40 : Logo1: Read-Write cycle is taking 78ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:41 : Logo1: Read-Write cycle is taking 78ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:42 : ConfigFile was changed, by user.
+10.08.2020  18:55:42 : Logo1: Read-Write cycle is taking 258ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:42 : Page refreshed.
+10.08.2020  18:55:44 : Logo1: Read-Write cycle is taking 78ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:46 : Logo1: Read-Write cycle is taking 62ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:48 : Logo1: Read-Write cycle is taking 78ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:51 : Logo1: Read-Write cycle is taking 124ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:55 : ConfigFile was changed, by user.
+10.08.2020  18:55:55 : Page refreshed.
+10.08.2020  18:55:55 : Logo1: Read-Write cycle is taking 208ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:56 : Logo1: Read-Write cycle is taking 71ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:56 : Redirected to: Default
+10.08.2020  18:55:58 : Redirected to: MasterMenu
+10.08.2020  18:55:59 : Logo1: Read-Write cycle is taking 62ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:55:59 : Redirected to: UpNastavitve
+10.08.2020  18:55:59 : Redirected to: Advanced
+10.08.2020  18:56:01 : Logo1: Read-Write cycle is taking 93ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:56:03 : Logo1: Read-Write cycle is taking 110ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:56:04 : Logo1: Read-Write cycle is taking 76ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:56:05 : Logo1: Read-Write cycle is taking 93ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:56:07 : Logo1: Read-Write cycle is taking 70ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:56:07 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  18:56:22 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  18:56:22 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  18:56:22 : Logo1: Connecting...
+10.08.2020  18:56:22 : Logo2: Connecting...
+10.08.2020  18:56:23 : Logo1: Connected
+10.08.2020  18:56:23 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+10.08.2020  18:56:24 : Logo2: Connected
+10.08.2020  18:56:24 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+10.08.2020  18:56:31 : Redirected to: MasterMenu
+10.08.2020  18:56:32 : Redirected to: UpNastavitve
+10.08.2020  18:56:32 : Redirected to: Advanced
+10.08.2020  18:56:44 : Redirected to: MasterMenu
+10.08.2020  18:56:46 : Redirected to: Default
+10.08.2020  18:56:49 : Read from PLC failed. Address: bit at 3240, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  18:56:51 : Logo2: Watchdog error - Watchdog does not change
+10.08.2020  18:56:51 : Logo2: Connection error: Watchdog error - Watchdog does not change
+10.08.2020  18:56:51 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  18:56:54 : Logo1: Running connection diagnostics...
+10.08.2020  18:56:54 : Logo2:   -Ping successful at: 192.168.1.201
+10.08.2020  18:56:54 : Logo2: Connected again
+10.08.2020  18:58:47 : Logo1: Watchdog error - Watchdog does not change
+10.08.2020  18:58:47 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.08.2020  18:58:47 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  18:58:50 : Logo1: Running connection diagnostics...
+10.08.2020  18:58:50 : Logo1:   -Ping successful at: 192.168.1.200
+10.08.2020  18:58:51 : Logo1: Connected again
+10.08.2020  18:58:51 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+10.08.2020  18:58:51 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.08.2020  18:58:54 : Logo1: Running connection diagnostics...
+10.08.2020  18:58:54 : Logo1:   -Ping successful at: 192.168.1.200
+10.08.2020  18:58:54 : Logo1: Connected again
+10.08.2020  18:59:21 : Redirected to: Vzorci
+10.08.2020  18:59:24 : Redirected to: Default
+10.08.2020  18:59:28 : Page refreshed.
+10.08.2020  18:59:28 : Page refreshed.
+10.08.2020  18:59:29 : Redirected to: Vzorci
+10.08.2020  18:59:56 : Redirected to: Default
+10.08.2020  19:00:09 : Logo1: Watchdog error - Watchdog does not change
+10.08.2020  19:00:09 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.08.2020  19:00:10 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:00:12 : Logo1: Running connection diagnostics...
+10.08.2020  19:00:12 : Logo1:   -Ping successful at: 192.168.1.200
+10.08.2020  19:00:12 : Logo1: Connected again
+10.08.2020  19:00:12 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+10.08.2020  19:00:12 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.08.2020  19:00:15 : Logo1: Running connection diagnostics...
+10.08.2020  19:00:15 : Logo1:   -Ping successful at: 192.168.1.200
+10.08.2020  19:00:16 : Logo1: Connected again
+10.08.2020  19:00:45 : Redirected to: Vzorci
+10.08.2020  19:02:40 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:02:40 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  19:02:40 : Logo1: Connecting...
+10.08.2020  19:02:40 : Logo2: Connecting...
+10.08.2020  19:02:41 : Logo1: Connected
+10.08.2020  19:02:42 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+10.08.2020  19:02:43 : Logo2: Connected
+10.08.2020  19:02:43 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+10.08.2020  19:02:47 : Logo1: Read-Write cycle is taking 333ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+10.08.2020  19:02:47 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:02:49 : Redirected to: Vzorci
+10.08.2020  19:02:51 : Redirected to: Default
+10.08.2020  19:02:53 : Redirected to: Vzorci
+10.08.2020  19:03:12 : Read from PLC failed. Address: bit at 440, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+10.08.2020  19:03:14 : Read from PLC failed. Address: bit at 460, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+10.08.2020  19:03:15 : Logo1: Watchdog error - Watchdog does not change
+10.08.2020  19:03:15 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.08.2020  19:03:16 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:03:18 : Logo1: Running connection diagnostics...
+10.08.2020  19:03:18 : Logo1:   -Ping successful at: 192.168.1.200
+10.08.2020  19:03:18 : Logo1: Connected again
+10.08.2020  19:03:58 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: TCP : Error receiving Data, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+10.08.2020  19:04:13 : Redirected to: Default
+10.08.2020  19:04:13 : Logo2: TCP : Error receiving Data
+10.08.2020  19:04:13 : Read from PLC failed. Address: bit at 120, Read Error type: ISO : Invalid Buffer passed to Send/Receive, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+10.08.2020  19:04:13 : Logo2: Connection error: TCP : Error receiving Data
+10.08.2020  19:04:15 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  19:04:15 : Read from PLC failed. Address: bit at 540, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  19:04:15 : Redirected to: Default
+10.08.2020  19:04:15 : Logo1: Watchdog error - Watchdog does not change
+10.08.2020  19:04:15 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.08.2020  19:04:16 : Logo1: Running connection diagnostics...
+10.08.2020  19:04:16 : Logo2:   -Ping successful at: 192.168.1.201
+10.08.2020  19:04:16 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:04:16 : Redirected to: Default
+10.08.2020  19:04:17 : Redirected to: Default
+10.08.2020  19:04:17 : Redirected to: Default
+10.08.2020  19:04:18 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  19:04:18 : Logo1: Running connection diagnostics...
+10.08.2020  19:04:18 : Logo1: Running connection diagnostics...
+10.08.2020  19:04:18 : Logo2:   -Ping successful at: 192.168.1.201
+10.08.2020  19:04:18 : Logo1:   -Ping successful at: 192.168.1.200
+10.08.2020  19:04:19 : Logo2: Connected again
+10.08.2020  19:04:19 : Logo1: Connected again
+10.08.2020  19:04:19 : Redirected to: Vzorci
+10.08.2020  19:04:23 : Redirected to: Default
+10.08.2020  19:04:27 : Redirected to: Vzorci
+10.08.2020  19:04:27 : Logo1: Read-Write cycle is taking 542ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+10.08.2020  19:04:36 : Redirected to: Default
+10.08.2020  19:04:42 : Page refreshed.
+10.08.2020  19:04:42 : Page refreshed.
+10.08.2020  19:05:03 : Redirected to: Vzorci
+10.08.2020  19:05:33 : Logo1: Watchdog error - Watchdog does not change
+10.08.2020  19:05:33 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.08.2020  19:05:34 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:05:36 : Logo1: Running connection diagnostics...
+10.08.2020  19:05:36 : Logo1:   -Ping successful at: 192.168.1.200
+10.08.2020  19:05:37 : Logo1: Connected again
+10.08.2020  19:05:42 : Redirected to: Default
+10.08.2020  19:05:46 : Redirected to: Vzorci
+10.08.2020  19:07:21 : Read from PLC failed. Address: VW700, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  19:07:27 : Logo2: TCP : Error receiving Data
+10.08.2020  19:07:27 : Logo2: Connection error: TCP : Error receiving Data
+10.08.2020  19:07:31 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  19:07:31 : Read from PLC failed. Address: bit at 560, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  19:07:34 : Logo1: Running connection diagnostics...
+10.08.2020  19:07:43 : Read from PLC failed. Address: bit at 220, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  19:08:06 : Logo2:   -Ping successful at: 192.168.1.201
+10.08.2020  19:08:12 : Read from PLC failed. Address: bit at 3210, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  19:08:50 : Redirected to: Default
+10.08.2020  19:08:50 : Redirected to: Default
+10.08.2020  19:08:50 : Read from PLC failed. Address: bit at 300, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+10.08.2020  19:08:50 : Logo1: Watchdog error - Watchdog does not change
+10.08.2020  19:08:50 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.08.2020  19:08:50 : Redirected to: Default
+10.08.2020  19:08:50 : Redirected to: Default
+10.08.2020  19:08:51 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:08:51 : Redirected to: Default
+10.08.2020  19:08:52 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  19:08:52 : Logo1: Running connection diagnostics...
+10.08.2020  19:08:52 : Logo2:   -Ping successful at: 192.168.1.201
+10.08.2020  19:08:53 : Logo2: Connected again
+10.08.2020  19:08:53 : Logo1: Running connection diagnostics...
+10.08.2020  19:08:53 : Logo1:   -Ping successful at: 192.168.1.200
+10.08.2020  19:08:53 : Logo1: Connected again
+10.08.2020  19:09:24 : Logo1: Read-Write cycle is taking 120ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+10.08.2020  19:09:24 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:09:53 : Read from PLC failed. Address: bit at 290, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+10.08.2020  19:09:54 : Logo1: Watchdog error - Watchdog does not change
+10.08.2020  19:09:54 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.08.2020  19:09:55 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:09:57 : Logo1: Running connection diagnostics...
+10.08.2020  19:09:57 : Logo1:   -Ping successful at: 192.168.1.200
+10.08.2020  19:09:57 : Logo1: Connected again
+10.08.2020  19:10:38 : Logo1: Read-Write cycle is taking 410ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+10.08.2020  19:10:39 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:10:47 : Logo1: Read-Write cycle is taking 146ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+10.08.2020  19:10:48 : Logo1: Read-Write cycle is taking 142ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+10.08.2020  19:10:49 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:12:44 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: TCP : Error receiving Data, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+10.08.2020  19:15:43 : Logo1: Connecting...
+10.08.2020  19:15:43 : Logo2: Connecting...
+10.08.2020  19:15:44 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:15:44 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  19:15:44 : Logo1: Connected
+10.08.2020  19:15:44 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+10.08.2020  19:15:45 : Logo2: Connected
+10.08.2020  19:15:45 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+10.08.2020  19:16:02 : Redirected to: Vzorci
+10.08.2020  19:16:28 : Logo1: Read-Write cycle is taking 296ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+10.08.2020  19:16:45 : Redirected to: Default
+10.08.2020  19:16:48 : Redirected to: Vzorci
+10.08.2020  19:17:47 : Redirected to: Default
+10.08.2020  19:18:20 : Redirected to: Vzorci
+10.08.2020  19:20:17 : Read from PLC failed. Address: VW700, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  19:20:17 : Logo2: Watchdog error - Watchdog does not change
+10.08.2020  19:20:17 : Logo2: Connection error: Watchdog error - Watchdog does not change
+10.08.2020  19:20:17 : Read from PLC failed. Address: bit at 120, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+10.08.2020  19:20:17 : Write to PLC failed. Address: bit at 400, Read Error type: OK, Write Error type: ISO : Invalid PDU received, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+10.08.2020  19:20:17 : Read from PLC failed. Address: bit at 420, Read Error type: ISO : Invalid Buffer passed to Send/Receive, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+10.08.2020  19:20:17 : Write to PLC failed. Address: bit at 460, Read Error type: OK, Write Error type: ISO : Invalid PDU received, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+10.08.2020  19:20:17 : Read from PLC failed. Address: bit at 500, Read Error type: ISO : Invalid Buffer passed to Send/Receive, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  19:20:19 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  19:20:19 : Read from PLC failed. Address: bit at 50, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  19:20:19 : Write to PLC failed. Address: bit at 330, Read Error type: OK, Write Error type: ISO : Invalid PDU received, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+10.08.2020  19:20:19 : Read from PLC failed. Address: bit at 1650, Read Error type: ISO : Invalid Buffer passed to Send/Receive, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  19:20:19 : Logo1: Watchdog error - Watchdog does not change
+10.08.2020  19:20:19 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.08.2020  19:20:20 : Logo1: Running connection diagnostics...
+10.08.2020  19:20:20 : Logo2:   -Ping successful at: 192.168.1.201
+10.08.2020  19:20:20 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:20:20 : Logo2: Connected again
+10.08.2020  19:20:22 : Logo1: Running connection diagnostics...
+10.08.2020  19:20:22 : Logo1:   -Ping successful at: 192.168.1.200
+10.08.2020  19:20:22 : Logo1: Connected again
+10.08.2020  19:21:04 : Redirected to: Default
+10.08.2020  19:21:25 : Redirected to: Vzorci
+10.08.2020  19:21:34 : Redirected to: Default
+10.08.2020  19:21:37 : Redirected to: Vzorci
+10.08.2020  19:21:58 : Redirected to: Default
+10.08.2020  19:24:53 : Logo1: Read-Write cycle is taking 345ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+10.08.2020  19:25:55 : Logo1: Read-Write cycle is taking 192ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+10.08.2020  19:26:27 : Logo1: Read-Write cycle is taking 357ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+10.08.2020  19:26:36 : Logo1: Read-Write cycle is taking 113ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+10.08.2020  19:28:38 : Logo1: Connecting...
+10.08.2020  19:28:38 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:28:38 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  19:28:38 : Logo2: Connecting...
+10.08.2020  19:28:39 : Logo1: Connected
+10.08.2020  19:28:39 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+10.08.2020  19:28:40 : Logo2: Connected
+10.08.2020  19:28:40 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+10.08.2020  19:29:03 : Redirected to: Vzorci
+10.08.2020  19:29:09 : Redirected to: Default
+10.08.2020  19:29:13 : Redirected to: Vzorci
+10.08.2020  19:29:21 : Read from PLC failed. Address: VW700, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  19:29:21 : Logo2: Watchdog error - Watchdog does not change
+10.08.2020  19:29:21 : Logo2: Connection error: Watchdog error - Watchdog does not change
+10.08.2020  19:29:21 : Read from PLC failed. Address: bit at 1660, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  19:29:21 : Logo1: Watchdog error - Watchdog does not change
+10.08.2020  19:29:21 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.08.2020  19:29:22 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:29:22 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  19:29:24 : Logo1: Running connection diagnostics...
+10.08.2020  19:29:24 : Logo2:   -Ping successful at: 192.168.1.201
+10.08.2020  19:29:24 : Logo1: Running connection diagnostics...
+10.08.2020  19:29:24 : Logo1:   -Ping successful at: 192.168.1.200
+10.08.2020  19:29:24 : Logo2: Connected again
+10.08.2020  19:29:24 : Logo1: Connected again
+10.08.2020  19:33:38 : Logo1: Connecting...
+10.08.2020  19:33:38 : Logo2: Connecting...
+10.08.2020  19:33:39 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:33:39 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  19:33:39 : Logo1: Connected
+10.08.2020  19:33:39 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+10.08.2020  19:33:40 : Logo2: Connected
+10.08.2020  19:33:40 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+10.08.2020  19:34:42 : Redirected to: Vzorci
+10.08.2020  19:35:19 : Redirected to: MasterMenu
+10.08.2020  19:35:21 : Redirected to: Default
+10.08.2020  19:42:37 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:42:37 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  19:42:37 : Logo1: Connecting...
+10.08.2020  19:42:37 : Logo2: Connecting...
+10.08.2020  19:42:38 : Logo1: Connected
+10.08.2020  19:42:38 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+10.08.2020  19:42:40 : Logo2: Connected
+10.08.2020  19:42:40 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+10.08.2020  19:42:51 : Redirected to: Vzorci
+10.08.2020  19:43:23 : Redirected to: Default
+10.08.2020  19:44:01 : Page refreshed.
+10.08.2020  19:44:26 : Page refreshed.
+10.08.2020  19:44:26 : Page refreshed.
+10.08.2020  19:44:31 : Page refreshed.
+10.08.2020  19:44:31 : Page refreshed.
+10.08.2020  19:45:09 : Redirected to: Vzorci
+10.08.2020  19:49:12 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:49:12 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  19:49:12 : Logo1: Connecting...
+10.08.2020  19:49:12 : Logo2: Connecting...
+10.08.2020  19:49:13 : Logo1: Connected
+10.08.2020  19:49:13 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+10.08.2020  19:49:14 : Logo2: Connected
+10.08.2020  19:49:14 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+10.08.2020  19:49:43 : Redirected to: Vzorci
+10.08.2020  19:49:49 : Redirected to: Default
+10.08.2020  19:49:53 : Redirected to: Vzorci
+10.08.2020  19:50:32 : Redirected to: Default
+10.08.2020  19:50:40 : Page refreshed.
+10.08.2020  19:50:40 : Page refreshed.
+10.08.2020  19:51:07 : Redirected to: Vzorci
+10.08.2020  19:51:56 : Redirected to: Default
+10.08.2020  19:52:02 : Redirected to: Vzorci
+10.08.2020  19:52:16 : Redirected to: Default
+10.08.2020  19:52:43 : Redirected to: Vzorci
+10.08.2020  19:57:38 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:57:38 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  19:57:38 : Logo1: Connecting...
+10.08.2020  19:57:38 : Logo2: Connecting...
+10.08.2020  19:57:58 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:57:58 : Logo1: Connecting...
+10.08.2020  19:57:58 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  19:57:58 : Logo2: Connecting...
+10.08.2020  19:59:08 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  19:59:08 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  19:59:08 : Logo1: Connecting...
+10.08.2020  19:59:08 : Logo2: Connecting...
+10.08.2020  20:02:35 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  20:02:35 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  20:02:35 : Logo1: Connecting...
+10.08.2020  20:02:35 : Logo2: Connecting...
+10.08.2020  20:12:18 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  20:12:18 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  20:12:18 : Logo1: Connecting...
+10.08.2020  20:12:18 : Logo2: Connecting...
+10.08.2020  20:12:19 : Logo1: Connected
+10.08.2020  20:12:19 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+10.08.2020  20:12:20 : Logo2: Connected
+10.08.2020  20:12:20 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+10.08.2020  20:16:10 : Logo1: Watchdog error - Watchdog does not change
+10.08.2020  20:16:10 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.08.2020  20:16:11 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  20:16:13 : Logo1: Running connection diagnostics...
+10.08.2020  20:16:13 : Logo1:   -Ping successful at: 192.168.1.200
+10.08.2020  20:16:14 : Logo1: Connected again
+10.08.2020  20:16:29 : Redirected to: Vzorci
+10.08.2020  20:16:57 : Redirected to: Default
+10.08.2020  20:20:14 : Logo1: Connecting...
+10.08.2020  20:20:14 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  20:20:14 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  20:20:14 : Logo2: Connecting...
+10.08.2020  20:20:15 : Logo1: Connected
+10.08.2020  20:20:15 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+10.08.2020  20:20:17 : Logo2: Connected
+10.08.2020  20:20:17 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+10.08.2020  20:20:28 : Redirected to: Vzorci
+10.08.2020  20:21:41 : Redirected to: Default
+10.08.2020  20:21:48 : Page refreshed.
+10.08.2020  20:21:48 : Page refreshed.
+10.08.2020  20:21:51 : Redirected to: Vzorci
+10.08.2020  20:24:14 : Read from PLC failed. Address: VW700, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  20:24:14 : Read from PLC failed. Address: bit at 120, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+10.08.2020  20:24:14 : Logo2: Watchdog error - Watchdog does not change
+10.08.2020  20:24:14 : Logo2: Connection error: Watchdog error - Watchdog does not change
+10.08.2020  20:24:14 : Logo1: Watchdog error - Watchdog does not change
+10.08.2020  20:24:14 : Logo1: Connection error: Watchdog error - Watchdog does not change
+10.08.2020  20:24:15 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  20:24:15 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  20:24:17 : Logo1: Running connection diagnostics...
+10.08.2020  20:24:17 : Logo2:   -Ping successful at: 192.168.1.201
+10.08.2020  20:24:17 : Logo1: Running connection diagnostics...
+10.08.2020  20:24:17 : Logo1:   -Ping successful at: 192.168.1.200
+10.08.2020  20:24:17 : Logo2: Connected again
+10.08.2020  20:24:18 : Logo1: Connected again

@@ -17,6 +17,7 @@ namespace WebApplication1
         public PlcVars.Bit Avtomat_read;
         public PlcVars.Bit CakanjeMateriala;
         public PlcVars.Bit CakanjeUkaza;
+        public PlcVars.Bit Halt;
 
         public PlcVars.Bit ZigZag; public PlcVars.Bit RobX1; public PlcVars.Bit RobY1; public PlcVars.Bit RobX2; public PlcVars.Bit RobY2;
         public PlcVars.Word XImpulses; public PlcVars.Word YImpulses; public PlcVars.Word ImpulsesDisplayVal; public PlcVars.Word ImpulsesDisplayValRead;
@@ -81,7 +82,8 @@ namespace WebApplication1
             Rocno_read = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(2, 0), "ROČNI NAČIN") { SyncEvery_X_Time = 3 };
             CakanjeMateriala = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(4, 0), "ČAKANJE MATERIALA") { SyncEvery_X_Time = 3 };
             CakanjeUkaza = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(5, 0), "ČAKANJE UKAZA") { SyncEvery_X_Time = 3 };
-            
+            Halt = new PlcVars.Bit(this, new PlcVars.BitAddress(6,0), true) { SyncEvery_X_Time = 1 }; ;
+
             XImpulses = new PlcVars.Word(this, new PlcVars.WordAddress(210), true) { SyncEvery_X_Time = 3 };
             YImpulses = new PlcVars.Word(this, new PlcVars.WordAddress(212), true) { SyncEvery_X_Time = 3 };
            ImpulsesDisplayVal = new PlcVars.Word(this, new PlcVars.WordAddress(214), true) { SyncEvery_X_Time = 3 };

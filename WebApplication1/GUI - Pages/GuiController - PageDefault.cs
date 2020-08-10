@@ -539,11 +539,14 @@ namespace WebApplication1
 
             private void BtnStop_Click(object sender, ImageClickEventArgs e)
             {
+                
+                Val.Kontrola.StopPatern();
                 Val.logocontroler.Prop1.Stop.SendPulse();
             }
 
             private void BtnStart_Click(object sender, ImageClickEventArgs e)
             {
+                Val.Kontrola.StopPatern();
                 Val.logocontroler.Prop1.Start.SendPulse();
             }
 

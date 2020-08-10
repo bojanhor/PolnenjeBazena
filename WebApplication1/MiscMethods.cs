@@ -94,6 +94,11 @@ namespace WebApplication1
 
             // Tries to stop thread by setting CanelationPending bool you must use in your code, 
             //if that is not responsive thread is aborted after 20 attempts for 15ms
+
+            public void ForceAbort()
+            {
+                Thread.Abort();
+            }
             public string Stop()
             {
                 return Stop(20,  15);
