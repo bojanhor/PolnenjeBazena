@@ -4198,3 +4198,639 @@
 06.08.2020  19:38:27 : Page refreshed.
 06.08.2020  19:38:27 : Page refreshed.
 06.08.2020  19:38:40 : Redirected to: Default
+07.08.2020  16:33:49 : Logo1: Connecting...
+07.08.2020  16:33:49 : Logo2: Connecting...
+07.08.2020  16:33:50 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+07.08.2020  16:33:50 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+07.08.2020  16:33:50 : Logo1: Connected
+07.08.2020  16:33:50 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+07.08.2020  16:33:51 : Logo2: Connected
+07.08.2020  16:33:51 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+07.08.2020  16:35:34 : Redirected to: Vzorci
+07.08.2020  16:37:29 : Redirected to: Default
+07.08.2020  16:37:55 : Redirected to: Vzorci
+07.08.2020  16:38:02 : Redirected to: Default
+07.08.2020  16:41:46 : Redirected to: Vzorci
+07.08.2020  16:41:46 : Redirected to: Default
+07.08.2020  16:50:13 : Redirected to: Vzorci
+07.08.2020  16:50:18 : Page refreshed.
+07.08.2020  16:50:18 : Page refreshed.
+07.08.2020  16:50:20 : Redirected to: Default
+07.08.2020  16:51:11 : Redirected to: Vzorci
+07.08.2020  16:51:13 : Redirected to: Default
+07.08.2020  16:51:24 : Redirected to: Vzorci
+07.08.2020  16:51:27 : Redirected to: Default
+07.08.2020  16:52:02 : Redirected to: Vzorci
+07.08.2020  16:52:05 : Redirected to: Default
+07.08.2020  16:53:14 : Redirected to: Vzorci
+07.08.2020  16:53:16 : Redirected to: Default
+07.08.2020  16:55:05 : Redirected to: Vzorci
+07.08.2020  16:55:06 : Redirected to: Default
+10.08.2020  14:37:06 : Logo1: Connecting...
+10.08.2020  14:37:06 : Logo2: Connecting...
+10.08.2020  14:37:07 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  14:37:07 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  14:37:07 : Logo1: Connected
+10.08.2020  14:37:07 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.08.2020  14:37:08 : Logo2: Connected
+10.08.2020  14:37:08 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+10.08.2020  14:37:49 : Logo1: Read-Write cycle is taking 172ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  14:37:51 : Logo1: Read-Write cycle is taking 60ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  14:50:52 : Logo1: Read-Write cycle is taking 60ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  14:50:52 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  14:50:53 : Logo1: Read-Write cycle is taking 83ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  14:50:54 : Logo1: Read-Write cycle is taking 82ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  14:50:55 : Logo1: Read-Write cycle is taking 81ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  14:50:56 : Logo1: Read-Write cycle is taking 79ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  14:50:57 : Logo1: Read-Write cycle is taking 93ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  14:50:58 : Logo1: Read-Write cycle is taking 73ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  14:51:00 : Logo1: Read-Write cycle is taking 88ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  15:08:44 : Logo1: Connecting...
+10.08.2020  15:08:44 : Logo2: Connecting...
+10.08.2020  15:08:45 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  15:08:45 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  15:08:45 : Logo1: Connected
+10.08.2020  15:08:45 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.08.2020  15:08:46 : Logo2: Connected
+10.08.2020  15:08:46 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+10.08.2020  15:25:01 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  15:25:01 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  15:25:01 : Logo1: Connecting...
+10.08.2020  15:25:01 : Logo2: Connecting...
+10.08.2020  15:25:02 : Logo1: Connected
+10.08.2020  15:25:02 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.08.2020  15:25:03 : Logo2: Connected
+10.08.2020  15:25:03 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+10.08.2020  15:25:09 : Logo1: Read-Write cycle is taking 60ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  15:25:22 : Logo1: Read-Write cycle is taking 67ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  15:26:22 : Logo1: Read-Write cycle is taking 184ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  15:28:25 : Logo1: Read-Write cycle is taking 191ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  15:31:45 : Logo1: Read-Write cycle is taking 172ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  15:48:41 : Logo1: Connecting...
+10.08.2020  15:48:41 : Logo2: Connecting...
+10.08.2020  15:48:42 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  15:48:42 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  15:48:44 : Logo1: TCP : Connection Error
+10.08.2020  15:48:44 : Logo1: Running connection diagnostics...
+10.08.2020  15:48:45 : Logo2: TCP : Connection Error
+10.08.2020  15:48:45 : Logo1: Running connection diagnostics...
+10.08.2020  15:48:47 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  15:48:48 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  15:48:50 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:48:50 : Logo1: CLI : Client not connected
+10.08.2020  15:48:50 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:48:51 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:48:51 : Logo2: CLI : Client not connected
+10.08.2020  15:48:51 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:48:53 : Logo1: Running connection diagnostics...
+10.08.2020  15:48:54 : Logo1: Running connection diagnostics...
+10.08.2020  15:48:56 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:48:57 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  15:48:58 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:48:58 : Logo1: Running connection diagnostics...
+10.08.2020  15:49:00 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:49:00 : Logo1: Running connection diagnostics...
+10.08.2020  15:49:15 : Logo1: Connecting...
+10.08.2020  15:49:15 : Logo2: Connecting...
+10.08.2020  15:49:16 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  15:49:16 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  15:49:18 : Logo1: TCP : Connection Error
+10.08.2020  15:49:18 : Logo1: Running connection diagnostics...
+10.08.2020  15:49:19 : Logo2: TCP : Connection Error
+10.08.2020  15:49:19 : Logo1: Running connection diagnostics...
+10.08.2020  15:49:22 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  15:49:22 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:49:24 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:49:24 : Logo1: CLI : Client not connected
+10.08.2020  15:49:24 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:49:25 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:49:25 : Logo2: CLI : Client not connected
+10.08.2020  15:49:25 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:49:27 : Logo1: Running connection diagnostics...
+10.08.2020  15:49:28 : Logo1: Running connection diagnostics...
+10.08.2020  15:49:30 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:49:31 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:49:33 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:49:33 : Logo1: Running connection diagnostics...
+10.08.2020  15:49:33 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:49:33 : Logo1: Running connection diagnostics...
+10.08.2020  15:49:36 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  15:49:37 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  15:49:39 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:49:39 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.08.2020  15:49:39 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:49:39 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:49:39 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+10.08.2020  15:49:39 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:49:42 : Logo1: Running connection diagnostics...
+10.08.2020  15:49:42 : Logo1: Running connection diagnostics...
+10.08.2020  15:49:45 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:49:45 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:49:47 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:49:47 : Logo1: Running connection diagnostics...
+10.08.2020  15:49:48 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:49:48 : Logo1: Running connection diagnostics...
+10.08.2020  15:49:51 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:49:51 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  15:49:51 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:49:51 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:49:51 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:49:51 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:49:54 : Logo1: Running connection diagnostics...
+10.08.2020  15:49:54 : Logo1: Running connection diagnostics...
+10.08.2020  15:49:57 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:49:57 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:49:58 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:49:58 : Logo1: Running connection diagnostics...
+10.08.2020  15:49:58 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:49:58 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:01 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:50:01 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:50:01 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:50:01 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:50:01 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:50:01 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:50:04 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:04 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:07 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:50:07 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:50:08 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:50:08 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:08 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:50:08 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:11 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:50:11 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:50:11 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:50:11 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:50:11 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:50:11 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:50:14 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:14 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:17 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:50:17 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:50:18 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:50:18 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:18 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:50:18 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:21 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:50:21 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:50:21 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:50:21 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:50:21 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:50:21 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:50:24 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:24 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:27 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:50:27 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:50:28 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:50:28 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:28 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:50:28 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:31 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:50:31 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:50:31 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:50:31 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:50:31 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:50:31 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:50:34 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:34 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:37 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:50:37 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:50:38 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:50:38 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:38 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:50:38 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:41 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:50:41 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:50:41 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:50:41 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:50:41 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:50:41 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:50:44 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:44 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:47 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:50:47 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:50:48 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:50:48 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:48 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:50:48 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:51 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:50:51 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:50:54 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:50:54 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:50:54 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:50:54 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:50:57 : Logo1: Running connection diagnostics...
+10.08.2020  15:50:57 : Logo1: Running connection diagnostics...
+10.08.2020  15:51:00 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:51:00 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:51:02 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:51:02 : Logo1: Running connection diagnostics...
+10.08.2020  15:51:02 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:51:02 : Logo1: Running connection diagnostics...
+10.08.2020  15:51:06 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  15:51:06 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  15:51:08 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:51:08 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:51:08 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:51:08 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:51:11 : Logo1: Running connection diagnostics...
+10.08.2020  15:51:11 : Logo1: Running connection diagnostics...
+10.08.2020  15:51:14 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:51:14 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:51:17 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:51:17 : Logo1: Running connection diagnostics...
+10.08.2020  15:51:17 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:51:17 : Logo1: Running connection diagnostics...
+10.08.2020  15:51:20 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  15:51:20 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  15:51:23 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:51:23 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:51:23 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:51:23 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:51:26 : Logo1: Running connection diagnostics...
+10.08.2020  15:51:26 : Logo1: Running connection diagnostics...
+10.08.2020  15:51:29 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:51:29 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:51:40 : Logo1: Connecting...
+10.08.2020  15:51:40 : Logo2: Connecting...
+10.08.2020  15:51:41 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  15:51:41 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  15:51:43 : Logo1: TCP : Connection Error
+10.08.2020  15:51:43 : Logo1: Running connection diagnostics...
+10.08.2020  15:51:44 : Logo2: TCP : Connection Error
+10.08.2020  15:51:44 : Logo1: Running connection diagnostics...
+10.08.2020  15:51:46 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  15:51:48 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  15:51:49 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:51:49 : Logo1: CLI : Client not connected
+10.08.2020  15:51:49 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:51:50 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:51:50 : Logo2: CLI : Client not connected
+10.08.2020  15:51:50 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:51:52 : Logo1: Running connection diagnostics...
+10.08.2020  15:51:53 : Logo1: Running connection diagnostics...
+10.08.2020  15:53:31 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  15:53:31 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  15:53:31 : Logo1: Connecting...
+10.08.2020  15:53:31 : Logo2: Connecting...
+10.08.2020  15:53:34 : Logo1: TCP : Connection Error
+10.08.2020  15:53:34 : Logo1: Running connection diagnostics...
+10.08.2020  15:53:35 : Logo2: TCP : Connection Error
+10.08.2020  15:53:35 : Logo1: Running connection diagnostics...
+10.08.2020  15:53:38 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  15:53:39 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  15:53:40 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:53:40 : Logo1: CLI : Client not connected
+10.08.2020  15:53:40 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:53:41 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:53:41 : Logo2: CLI : Client not connected
+10.08.2020  15:53:41 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:53:43 : Logo1: Running connection diagnostics...
+10.08.2020  15:53:44 : Logo1: Running connection diagnostics...
+10.08.2020  15:53:46 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:53:48 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  15:53:49 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:53:49 : Logo1: Running connection diagnostics...
+10.08.2020  15:53:50 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:53:50 : Logo1: Running connection diagnostics...
+10.08.2020  15:53:52 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  15:53:54 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  15:53:55 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:53:55 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.08.2020  15:53:55 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:53:56 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:53:56 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+10.08.2020  15:53:56 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:53:58 : Logo1: Running connection diagnostics...
+10.08.2020  15:53:59 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:01 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:54:02 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:54:03 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:54:03 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:05 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:54:05 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:07 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  15:54:07 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:54:07 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:54:08 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  15:54:09 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:54:09 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:54:10 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:12 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:13 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:54:14 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:54:14 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:15 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:54:15 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:54:15 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:17 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:54:17 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:54:17 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:54:18 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:54:19 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:54:19 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:54:20 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:22 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:23 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:54:24 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:54:24 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:25 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:54:25 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:54:25 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:27 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:54:27 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:54:27 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:54:28 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:54:29 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:54:29 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:54:30 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:32 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:33 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:54:34 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:54:34 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:35 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:54:35 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:54:35 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:37 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:54:37 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:54:37 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:54:38 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:54:39 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:54:39 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:54:40 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:42 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:43 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:54:44 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:54:44 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:45 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:54:45 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:54:45 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:47 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:54:47 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:54:47 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:54:48 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:54:49 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:54:49 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:54:50 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:52 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:53 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:54:54 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:54:54 : Logo1: Running connection diagnostics...
+10.08.2020  15:54:55 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:54:57 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  15:54:57 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:54:57 : Logo1: Running connection diagnostics...
+10.08.2020  15:55:00 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:55:00 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:55:01 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  15:55:03 : Logo1: Running connection diagnostics...
+10.08.2020  15:55:03 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:55:03 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:55:06 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:55:06 : Logo1: Running connection diagnostics...
+10.08.2020  15:55:08 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:55:08 : Logo1: Running connection diagnostics...
+10.08.2020  15:55:09 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:55:12 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  15:55:12 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:55:12 : Logo1: Running connection diagnostics...
+10.08.2020  15:55:14 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:55:14 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:55:15 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  15:55:17 : Logo1: Running connection diagnostics...
+10.08.2020  15:55:18 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:55:18 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:55:20 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  15:55:21 : Logo1: Running connection diagnostics...
+10.08.2020  15:55:23 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:55:23 : Logo1: Running connection diagnostics...
+10.08.2020  15:55:24 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  15:55:26 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  15:55:26 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:55:26 : Logo1: Running connection diagnostics...
+10.08.2020  15:55:29 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:55:29 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:55:30 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  15:55:46 : Logo1: Connecting...
+10.08.2020  15:55:46 : Logo2: Connecting...
+10.08.2020  15:55:47 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  15:55:47 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  15:55:49 : Logo1: TCP : Connection Error
+10.08.2020  15:55:49 : Logo1: Running connection diagnostics...
+10.08.2020  15:55:50 : Logo2: TCP : Connection Error
+10.08.2020  15:55:50 : Logo1: Running connection diagnostics...
+10.08.2020  15:55:52 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  15:55:53 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  15:55:54 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  15:55:54 : Logo1: CLI : Client not connected
+10.08.2020  15:55:54 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  15:55:56 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  15:55:56 : Logo2: CLI : Client not connected
+10.08.2020  15:55:56 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  15:55:57 : Logo1: Running connection diagnostics...
+10.08.2020  15:55:59 : Logo1: Running connection diagnostics...
+10.08.2020  16:13:07 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  16:13:07 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  16:13:07 : Logo1: Connecting...
+10.08.2020  16:13:07 : Logo2: Connecting...
+10.08.2020  16:13:10 : Logo1: TCP : Connection Error
+10.08.2020  16:13:10 : Logo1: Running connection diagnostics...
+10.08.2020  16:13:11 : Logo2: TCP : Connection Error
+10.08.2020  16:13:11 : Logo1: Running connection diagnostics...
+10.08.2020  16:13:13 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  16:13:14 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  16:13:16 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  16:13:16 : Logo1: CLI : Client not connected
+10.08.2020  16:13:16 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  16:13:17 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  16:13:17 : Logo2: CLI : Client not connected
+10.08.2020  16:13:17 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  16:13:19 : Logo1: Running connection diagnostics...
+10.08.2020  16:13:20 : Logo1: Running connection diagnostics...
+10.08.2020  16:13:22 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  16:13:23 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  16:13:24 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  16:13:24 : Logo1: Running connection diagnostics...
+10.08.2020  16:13:26 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  16:13:26 : Logo1: Running connection diagnostics...
+10.08.2020  16:13:28 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  16:13:29 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  16:13:30 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  16:13:30 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.08.2020  16:13:30 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  16:13:32 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  16:13:32 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+10.08.2020  16:13:32 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  16:13:33 : Logo1: Running connection diagnostics...
+10.08.2020  16:13:35 : Logo1: Running connection diagnostics...
+10.08.2020  16:13:36 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  16:13:38 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  16:13:39 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  16:13:39 : Logo1: Running connection diagnostics...
+10.08.2020  16:13:40 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  16:13:40 : Logo1: Running connection diagnostics...
+10.08.2020  16:13:42 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  16:13:44 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  16:13:45 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  16:13:45 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  16:13:46 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  16:13:46 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  16:13:48 : Logo1: Running connection diagnostics...
+10.08.2020  16:13:49 : Logo1: Running connection diagnostics...
+10.08.2020  16:13:51 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  16:13:52 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  16:13:53 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  16:13:53 : Logo1: Running connection diagnostics...
+10.08.2020  16:13:55 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  16:13:55 : Logo1: Running connection diagnostics...
+10.08.2020  16:13:57 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  16:13:58 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  16:13:59 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  16:13:59 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  16:14:01 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  16:14:01 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  16:14:02 : Logo1: Running connection diagnostics...
+10.08.2020  16:14:04 : Logo1: Running connection diagnostics...
+10.08.2020  16:14:05 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  16:14:07 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  16:14:08 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  16:14:08 : Logo1: Running connection diagnostics...
+10.08.2020  16:14:09 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  16:14:09 : Logo1: Running connection diagnostics...
+10.08.2020  16:14:11 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  16:14:13 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  16:14:14 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  16:14:14 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  16:14:15 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  16:14:15 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  16:14:17 : Logo1: Running connection diagnostics...
+10.08.2020  16:14:18 : Logo1: Running connection diagnostics...
+10.08.2020  16:14:20 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+10.08.2020  16:14:21 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+10.08.2020  16:14:22 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  16:14:22 : Logo1: Running connection diagnostics...
+10.08.2020  16:14:24 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  16:14:24 : Logo1: Running connection diagnostics...
+10.08.2020  16:14:26 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  16:14:27 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  16:14:27 : Logo1: Connected again
+10.08.2020  16:14:28 : Logo2: Connected again
+10.08.2020  16:15:40 : Logo1: Read-Write cycle is taking 63ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  16:15:40 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  16:15:57 : Logo1: Read-Write cycle is taking 62ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  16:16:31 : Logo1: Read-Write cycle is taking 60ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  16:16:40 : Logo1: Read-Write cycle is taking 82ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  16:17:18 : Logo1: Read-Write cycle is taking 63ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  16:17:19 : Logo1: Read-Write cycle is taking 87ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  16:17:29 : Logo1: Read-Write cycle is taking 61ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  16:17:29 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  16:17:30 : Logo1: Read-Write cycle is taking 69ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  16:26:42 : Logo1: Connecting...
+10.08.2020  16:26:42 : Logo2: Connecting...
+10.08.2020  16:26:43 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  16:26:43 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  16:26:43 : Logo1: Connected
+10.08.2020  16:26:43 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.08.2020  16:26:44 : Logo2: Connected
+10.08.2020  16:26:44 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+10.08.2020  17:12:39 : Logo1: Connecting...
+10.08.2020  17:12:39 : Logo2: Connecting...
+10.08.2020  17:12:40 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  17:12:40 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  17:12:40 : Logo1: Connected
+10.08.2020  17:12:41 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.08.2020  17:12:41 : Logo2: Connected
+10.08.2020  17:12:41 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+10.08.2020  17:53:39 : Logo1: Read-Write cycle is taking 92ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:10:21 : Logo1: Read-Write cycle is taking 61ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:10:23 : Logo1: Read-Write cycle is taking 63ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:10:25 : Logo1: Read-Write cycle is taking 77ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:11:05 : Logo1: Read-Write cycle is taking 67ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:11:06 : Logo1: Read-Write cycle is taking 71ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:40:39 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  18:40:39 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  18:40:39 : Logo1: Connecting...
+10.08.2020  18:40:39 : Logo2: Connecting...
+10.08.2020  18:40:40 : Logo1: Connected
+10.08.2020  18:40:40 : Logo1: Watchdog started successfully - Period (Frequency) is 60ms
+10.08.2020  18:40:41 : Logo2: Connected
+10.08.2020  18:40:41 : Logo2: Watchdog started successfully - Period (Frequency) is 60ms
+10.08.2020  18:40:49 : Logo1: Read-Write cycle is taking 78ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:40:51 : Logo1: Read-Write cycle is taking 165ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:40:52 : Logo1: Read-Write cycle is taking 157ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:40:54 : Logo1: Read-Write cycle is taking 188ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:40:58 : Logo1: Read-Write cycle is taking 103ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:40:59 : Logo1: Read-Write cycle is taking 108ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:41:00 : Logo1: Read-Write cycle is taking 66ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:41:01 : Logo1: Read-Write cycle is taking 173ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:41:01 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  18:41:04 : Logo1: Read-Write cycle is taking 101ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:41:05 : Logo1: Read-Write cycle is taking 71ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:41:06 : Logo1: Read-Write cycle is taking 86ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:41:09 : Logo1: Read-Write cycle is taking 61ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:41:12 : Logo1: Read-Write cycle is taking 61ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:41:14 : Logo1: Read-Write cycle is taking 72ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:41:16 : Logo1: Read-Write cycle is taking 65ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:41:18 : Logo1: Read-Write cycle is taking 64ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:41:22 : Logo1: Read-Write cycle is taking 98ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:41:22 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  18:41:23 : Logo1: Read-Write cycle is taking 83ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:41:27 : Logo1: Read-Write cycle is taking 74ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:41:57 : Logo1: Read-Write cycle is taking 79ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:42:08 : Logo1: Read-Write cycle is taking 70ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:42:28 : Logo1: Read-Write cycle is taking 93ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:42:31 : Logo1: Read-Write cycle is taking 61ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:42:36 : Logo1: Read-Write cycle is taking 74ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:42:46 : Logo1: Read-Write cycle is taking 157ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:42:57 : Logo1: Read-Write cycle is taking 80ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:43:17 : Logo1: Read-Write cycle is taking 75ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:43:46 : Logo1: Read-Write cycle is taking 61ms to complete (Cycle is set to be 60ms ). Please extend Read-Write cycle
+10.08.2020  18:43:49 : Read from PLC failed. Address: bit at 3110, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  18:43:49 : Read from PLC failed. Address: bit at 120, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+10.08.2020  18:43:49 : Read from PLC failed. Address: bit at 2000, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  18:43:49 : Read from PLC failed. Address: bit at 3140, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  18:43:49 : Read from PLC failed. Address: bit at 2020, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  18:43:49 : Read from PLC failed. Address: bit at 2040, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  18:43:49 : Read from PLC failed. Address: bit at 80, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+10.08.2020  18:43:49 : Read from PLC failed. Address: bit at 3240, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  18:43:49 : Logo2: CLI : Client not connected
+10.08.2020  18:43:49 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  18:43:49 : Read from PLC failed. Address: bit at 340, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+10.08.2020  18:43:49 : Read from PLC failed. Address: bit at 360, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+10.08.2020  18:43:49 : Read from PLC failed. Address: bit at 140, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+10.08.2020  18:43:50 : Read from PLC failed. Address: bit at 200, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  18:43:50 : Read from PLC failed. Address: bit at 240, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  18:43:50 : Read from PLC failed. Address: bit at 3160, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  18:43:50 : Read from PLC failed. Address: bit at 3190, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  18:43:50 : Read from PLC failed. Address: bit at 10, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  18:43:50 : Read from PLC failed. Address: bit at 40, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  18:43:50 : Read from PLC failed. Address: bit at 710, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  18:43:50 : Read from PLC failed. Address: VW214, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+10.08.2020  18:43:50 : Read from PLC failed. Address: bit at 280, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  18:43:50 : Read from PLC failed. Address: bit at 320, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+10.08.2020  18:43:50 : Read from PLC failed. Address: bit at 540, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+10.08.2020  18:43:50 : Read from PLC failed. Address: bit at 910, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+10.08.2020  18:43:50 : Read from PLC failed. Address: VW106, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+10.08.2020  18:43:50 : Read from PLC failed. Address: bit at 440, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+10.08.2020  18:43:50 : Read from PLC failed. Address: VW110, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+10.08.2020  18:43:50 : Logo1: CLI : Client not connected
+10.08.2020  18:43:50 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  18:43:50 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+10.08.2020  18:43:50 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+10.08.2020  18:43:52 : Logo1: Running connection diagnostics...
+10.08.2020  18:43:53 : Logo1: Running connection diagnostics...
+10.08.2020  18:43:56 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:43:56 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:43:58 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:43:58 : Logo1: Running connection diagnostics...
+10.08.2020  18:43:59 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:43:59 : Logo1: Running connection diagnostics...
+10.08.2020  18:44:02 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+10.08.2020  18:44:02 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+10.08.2020  18:44:04 : Logo2: Connection failed. Trying to reconnect
+10.08.2020  18:44:04 : Logo2: Connection error: CLI : Client not connected
+10.08.2020  18:44:05 : Logo1: Connection failed. Trying to reconnect
+10.08.2020  18:44:05 : Logo1: Connection error: CLI : Client not connected
+10.08.2020  18:44:07 : Logo1: Running connection diagnostics...
+10.08.2020  18:44:08 : Logo1: Running connection diagnostics...
