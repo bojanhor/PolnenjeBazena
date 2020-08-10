@@ -931,25 +931,7 @@ namespace WebApplication1
                     "Correct the " + searchValue + " value in config or call your support administrator. ");
             }
         }
-
-        public static int GetBazenTypeCnt()
-        {
-            var searchValue = "BazenTypeCnt";
-
-            try
-            {
-                var buff = XmlBazen.Element("searchValue").ToString();
-                var n = Convert.ToInt32(buff);
-                return n;
-            }
-            catch (Exception)
-            {
-                throw new Exception(searchValue + " value in config file is not valid " + searchValue + " value. " + 
-                    "Correct the " + searchValue + " value in config or call your support administrator. " +
-                    "Value must be more than 0 and less than or equal to 20.");
-            }
-        }
-
+        
         public static string GetBazenTypeName(short index)
         {
             var searchValue = "BazenType";
@@ -1016,6 +998,56 @@ namespace WebApplication1
                 throw new Exception(searchValue + " value in config file is not valid " + searchValue + " value. " +
                     "Correct the " + searchValue + " value in config or call your support administrator. " +
                     "Index must be more than 0 and less than or equal to 20. Value in xml must be positive number.");
+            }
+        }
+
+        public static int GetXStep()
+        {
+            var searchValue = "X_Step";
+
+            try
+            {
+               
+                var buff = XmlBazen.Element(searchValue).Value;
+                var n = Convert.ToInt32(buff);
+
+                if (n < 1 || n > 99)
+                {
+                    throw new Exception();
+                }
+
+                return n;
+            }
+            catch (Exception)
+            {
+                throw new Exception(searchValue + " value in config file is not valid " + searchValue + " value. " +
+                    "Correct the " + searchValue + " value in config or call your support administrator. " +
+                    "Value must be more than 0 and less than or equal to 99.");
+            }
+        }
+
+        public static int GetYStep()
+        {
+            var searchValue = "Y_Step";
+
+            try
+            {
+
+                var buff = XmlBazen.Element(searchValue).Value;
+                var n = Convert.ToInt32(buff);
+
+                if (n < 1 || n > 99)
+                {
+                    throw new Exception();
+                }
+
+                return n;
+            }
+            catch (Exception)
+            {
+                throw new Exception(searchValue + " value in config file is not valid " + searchValue + " value. " +
+                    "Correct the " + searchValue + " value in config or call your support administrator. " +
+                    "Value must be more than 0 and less than or equal to 99.");
             }
         }
 

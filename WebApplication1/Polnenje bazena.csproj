@@ -474,6 +474,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="GUI - Pages Custom\GuiController - UpNastavitve.cs" />
     <Compile Include="GUI - Pages\GuiController - PageVzorci.cs" />
+    <Compile Include="Kontrola.cs" />
     <Compile Include="Pages\Vzorci.aspx.cs">
       <DependentUpon>Vzorci.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -488,6 +489,7 @@
     <Compile Include="Pages\UpNastavitve.aspx.designer.cs">
       <DependentUpon>UpNastavitve.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PC_WD.cs" />
     <Compile Include="StanjeProcesa.cs" />
     <Compile Include="GUI - Pages Custom\GuiController - EmptyTemplate.cs" />
     <Compile Include="LogoControl\Change\Prop3.cs" />

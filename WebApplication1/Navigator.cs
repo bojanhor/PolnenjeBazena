@@ -630,31 +630,10 @@ namespace WebApplication1
 
         public static void MessageBox(string message)
         {
-            try
-            {
-                if (!messagePending)
-                {
-                    var scriptLoader = ScriptLoader.GetInstance(null);
-                    if (scriptLoader != null)
-                    {
-                        var script = "alert('" + message + "');";
-                        scriptLoader.RegisterScriptOnPageLoad("Info", script);                       
-                    }
-                    messagePending = true;
-                    Refresh();
-                }
-                else
-                {
-                    messagePending = false;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Messagebox can not be shown. This error is displayed insted. ERROR MESSAGE: " + message + ". Reason for messagebox failure:" + ex.Message);
-            }  
-            
+            var page = GetCurrentPage();
+            ScriptManager.RegisterClientScriptBlock(page, page.GetType(), "Sporočilo", "alert('"+ message + "');", true);
         }
-
+                
         static void addMetaNoIndex(Page page)
         {
             if (!Settings.PreventSearchEnginesFromIndexing)

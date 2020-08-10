@@ -189,7 +189,7 @@ namespace WebApplication1
 
                     top += dif + 2; gb1.Controls.Add(btnStop);
 
-                    btnAuto = new GControls.OnOffButton("Auto", 1, prop1.Man_AutoReadState.Value_bool, new Helper.Position(top, left, size), GControls.OnOffButton.Type.WithText);
+                    btnAuto = new GControls.OnOffButton("Pavza / Auto", 1, prop1.Man_AutoReadState.Value_bool, new Helper.Position(top, left, size), GControls.OnOffButton.Type.WithText);
                     btnAuto.button.Click += BtnAuto_Click1;
                     top += dif; OthersUP.Controls_Add(btnAuto);
 
