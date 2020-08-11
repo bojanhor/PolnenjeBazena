@@ -373,8 +373,7 @@ namespace WebApplication1
 
                     if (prop1.Ustavljeno.Value_bool)
                     {
-                        StopPatern();
-                        stopMoving();
+                        StopPatern();                        
                     }
 
                    
@@ -873,6 +872,7 @@ namespace WebApplication1
                 if (!isUp())
                 {
                     prop1.AutoDirY2.Value_bool = true;
+                    prop1.AutoDirY1.Value_bool = false;
                     waitForUp();
                 }
             }
@@ -885,6 +885,7 @@ namespace WebApplication1
                 if (!isDwn())
                 {
                     prop1.AutoDirY1.Value_bool = true;
+                    prop1.AutoDirY2.Value_bool = false;
                     waitForDwn();
                 }
             }
@@ -897,6 +898,7 @@ namespace WebApplication1
                 if (!isLft())
                 {
                     prop1.AutoDirX1.Value_bool = true;
+                    prop1.AutoDirX2.Value_bool = false;
                     waitForLft();
                 }
             }
@@ -909,6 +911,7 @@ namespace WebApplication1
                 if (!isRght())
                 {
                     prop1.AutoDirX2.Value_bool = true;
+                    prop1.AutoDirX1.Value_bool = false;
                     waitForRght();
                 }
             }
@@ -921,6 +924,7 @@ namespace WebApplication1
                 if (!isUp())
                 {
                     prop1.AutoDirY2.Value_bool = true;
+                    prop1.AutoDirY1.Value_bool = false;
                 }
             }
         }
@@ -932,6 +936,7 @@ namespace WebApplication1
                 if (!isDwn())
                 {
                     prop1.AutoDirY1.Value_bool = true;
+                    prop1.AutoDirY2.Value_bool = false;
                 }
             }
         }
@@ -943,6 +948,7 @@ namespace WebApplication1
                 if (!isLft())
                 {
                     prop1.AutoDirX1.Value_bool = true;
+                    prop1.AutoDirX2.Value_bool = false;
                 }
             }
         }
@@ -954,6 +960,7 @@ namespace WebApplication1
                 if (!isRght())
                 {
                     prop1.AutoDirX2.Value_bool = true;
+                    prop1.AutoDirX1.Value_bool = false;
                 }
             }
         }
