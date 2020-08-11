@@ -370,12 +370,7 @@ namespace WebApplication1
                     {
                         stopRght();
                     }
-
-                    if (prop1.Ustavljeno.Value_bool)
-                    {
-                        StopPatern();                        
-                    }
-
+                                        
                    
                     Thread.Sleep(150);
                 }
