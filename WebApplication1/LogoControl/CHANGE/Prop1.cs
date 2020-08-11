@@ -10,7 +10,7 @@ namespace WebApplication1
     public class Prop1 : PropComm
     {
         //PC Watchdog
-        public PlcVars.Word PCWD;
+        public PlcVars.Bit PCWD;
 
         public PlcVars.Bit Ustavljeno;
         public PlcVars.Bit Rocno_read;
@@ -67,8 +67,8 @@ namespace WebApplication1
         public Prop1(Sharp7.S7Client client):base(client)
         {
             //PC Watchdog
-            PCWD = new PlcVars.Word(this, new PlcVars.WordAddress(796), true);
-
+            PCWD = new PlcVars.Bit(this, new PlcVars.BitAddress(796,0), true) {SyncEvery_X_Time = 1 };
+            
             // Alarms
             AlarmInit = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(315, 0), "NAPAKA Inicializacije!", false, true) { SyncEvery_X_Time = 3 };
             CriticalMalfunction = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(316, 0), "Napaka končnih stikal X!", false, true) { SyncEvery_X_Time = 3 };
