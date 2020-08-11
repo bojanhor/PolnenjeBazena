@@ -21,6 +21,7 @@ namespace WebApplication1
 
         public PlcVars.Bit ZigZag; public PlcVars.Bit RobX1; public PlcVars.Bit RobY1; public PlcVars.Bit RobX2; public PlcVars.Bit RobY2;
         public PlcVars.Word XImpulses; public PlcVars.Word YImpulses; public PlcVars.Word ImpulsesDisplayVal; public PlcVars.Word ImpulsesDisplayValRead;
+        public PlcVars.Word XPos; public PlcVars.Word YPos;
 
         public PlcVars.Bit Start; public PlcVars.Bit Stop;
 
@@ -86,7 +87,11 @@ namespace WebApplication1
 
             XImpulses = new PlcVars.Word(this, new PlcVars.WordAddress(210), true) { SyncEvery_X_Time = 3 };
             YImpulses = new PlcVars.Word(this, new PlcVars.WordAddress(212), true) { SyncEvery_X_Time = 3 };
-           ImpulsesDisplayVal = new PlcVars.Word(this, new PlcVars.WordAddress(214), true) { SyncEvery_X_Time = 3 };
+
+            XPos = new PlcVars.Word(this, new PlcVars.WordAddress(310), false) { SyncEvery_X_Time = 1 };
+            YPos = new PlcVars.Word(this, new PlcVars.WordAddress(312), false) { SyncEvery_X_Time = 1 };
+
+            ImpulsesDisplayVal = new PlcVars.Word(this, new PlcVars.WordAddress(214), true) { SyncEvery_X_Time = 3 };
             ImpulsesDisplayValRead = new PlcVars.Word(this, new PlcVars.WordAddress(216), false) { SyncEvery_X_Time = 3 };
 
             Start = new PlcVars.Bit(this, new PlcVars.BitAddress(10, 0), true) { SyncEvery_X_Time = 2 };
@@ -113,10 +118,10 @@ namespace WebApplication1
             AutoDirY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(44, 0), true);
             AutoDirY2 = new PlcVars.Bit(this, new PlcVars.BitAddress(46, 0), true);
 
-            ReadKSX1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(50, 0), "Končna pozicija X1", false, false, false);
-            ReadKSX2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(52, 0), "Končna pozicija X2", false, false, false);
-            ReadKSY1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(54, 0), "Končna pozicija Y1", false, false, false);
-            ReadKSY2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(56, 0), "Končna pozicija Y2", false, false, false);
+            ReadKSX1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(50, 0), "Končna pozicija X1", false, false, false) { SyncEvery_X_Time = 1 }; ;
+            ReadKSX2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(52, 0), "Končna pozicija X2", false, false, false) { SyncEvery_X_Time = 1 }; ;
+            ReadKSY1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(54, 0), "Končna pozicija Y1", false, false, false) { SyncEvery_X_Time = 1 }; ;
+            ReadKSY2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(56, 0), "Končna pozicija Y2", false, false, false) { SyncEvery_X_Time = 1 }; ;
 
             
             JoyStickCommandX1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(90, 0),"Ročni pomik X1" , false, false, true) { SyncEvery_X_Time = 3 };

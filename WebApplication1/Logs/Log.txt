@@ -9606,3 +9606,940 @@
 11.08.2020  06:37:42 : Logo2: Connection failed. Trying to reconnect
 11.08.2020  06:37:42 : Logo2: Connection error: CLI : Client not connected
 11.08.2020  06:37:45 : Logo1: Running connection diagnostics...
+11.08.2020  07:12:46 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  07:12:46 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  07:12:46 : Logo1: Connecting...
+11.08.2020  07:12:46 : Logo2: Connecting...
+11.08.2020  07:12:48 : Logo1: Connected
+11.08.2020  07:12:48 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  07:12:48 : Logo2: Connected
+11.08.2020  07:12:49 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  07:13:07 : Redirected to: Vzorci
+11.08.2020  07:13:39 : Logo1: Read-Write cycle is taking 224ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  07:14:01 : Logo1: Read-Write cycle is taking 207ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  07:15:05 : Logo1: Read-Write cycle is taking 209ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  07:15:25 : Redirected to: Default
+11.08.2020  07:15:38 : Logo1: Read-Write cycle is taking 217ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  07:15:39 : Redirected to: Vzorci
+11.08.2020  07:15:51 : Redirected to: Default
+11.08.2020  07:15:54 : Redirected to: Vzorci
+11.08.2020  07:17:01 : Logo1: Read-Write cycle is taking 207ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  07:17:21 : Redirected to: Default
+11.08.2020  07:17:31 : Redirected to: Vzorci
+11.08.2020  07:17:42 : Logo1: Read-Write cycle is taking 209ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  07:17:44 : Redirected to: Default
+11.08.2020  07:17:54 : Logo1: Read-Write cycle is taking 219ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  07:17:56 : Redirected to: Vzorci
+11.08.2020  07:19:31 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  07:19:31 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  07:19:31 : Logo1: Connecting...
+11.08.2020  07:19:31 : Logo2: Connecting...
+11.08.2020  07:19:33 : Logo1: Connected
+11.08.2020  07:19:33 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  07:19:34 : Logo2: Connected
+11.08.2020  07:19:34 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  07:19:42 : Logo1: Read-Write cycle is taking 209ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  07:19:42 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  07:20:01 : Redirected to: Vzorci
+11.08.2020  07:20:16 : Logo1: Read-Write cycle is taking 224ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  07:20:32 : Read from PLC failed. Address: bit at 2000, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  07:20:32 : Read from PLC failed. Address: bit at 3220, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  07:20:41 : Logo2: TCP : Error receiving Data
+11.08.2020  07:20:41 : Read from PLC failed. Address: bit at 2040, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  07:20:43 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  07:20:43 : Logo2: Connection error: TCP : Error receiving Data
+11.08.2020  07:20:51 : Logo1: Running connection diagnostics...
+11.08.2020  07:20:51 : Read from PLC failed. Address: bit at 300, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+11.08.2020  07:20:51 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  07:20:51 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  07:20:52 : Logo2:   -Ping successful at: 192.168.1.201
+11.08.2020  07:20:53 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  07:20:54 : Logo1: Running connection diagnostics...
+11.08.2020  07:20:55 : Logo2: Connected again
+11.08.2020  07:20:57 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  07:21:07 : Read from PLC failed. Address: VW702, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  07:21:07 : Logo2: Watchdog error - Watchdog does not change
+11.08.2020  07:21:08 : Logo2: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  07:21:08 : Logo1: Connected again
+11.08.2020  07:21:11 : Logo1: Running connection diagnostics...
+11.08.2020  07:21:11 : Logo2:   -Ping successful at: 192.168.1.201
+11.08.2020  07:21:11 : Logo2: Connected again
+11.08.2020  07:21:15 : Redirected to: Default
+11.08.2020  07:21:19 : Redirected to: Vzorci
+11.08.2020  07:21:28 : Read from PLC failed. Address: VW700, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  07:21:31 : Read from PLC failed. Address: bit at 120, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+11.08.2020  07:21:31 : Logo2: TCP : Error receiving Data
+11.08.2020  07:21:31 : Logo2: Connection error: TCP : Error receiving Data
+11.08.2020  07:21:31 : Write to PLC failed. Address: bit at 80, Read Error type: OK, Write Error type: ISO : Invalid PDU received, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+11.08.2020  07:21:31 : Read from PLC failed. Address: bit at 340, Read Error type: ISO : Invalid Buffer passed to Send/Receive, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+11.08.2020  07:21:31 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  07:21:31 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  07:21:32 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  07:21:32 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  07:21:34 : Logo1: Running connection diagnostics...
+11.08.2020  07:21:34 : Logo2:   -Ping successful at: 192.168.1.201
+11.08.2020  07:21:34 : Logo1: Running connection diagnostics...
+11.08.2020  07:21:34 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  07:21:35 : Logo2: Connected again
+11.08.2020  07:21:35 : Logo1: Connected again
+11.08.2020  07:21:46 : Read from PLC failed. Address: bit at 300, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+11.08.2020  07:21:48 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  07:21:48 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  07:21:49 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  07:21:51 : Logo1: Running connection diagnostics...
+11.08.2020  07:21:51 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  07:21:52 : Logo1: Connected again
+11.08.2020  07:22:45 : Read from PLC failed. Address: bit at 10, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  07:22:48 : Read from PLC failed. Address: bit at 360, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+11.08.2020  07:22:49 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  07:22:49 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  07:22:49 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  07:22:52 : Logo1: Running connection diagnostics...
+11.08.2020  07:22:52 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  07:22:52 : Logo1: Connected again
+11.08.2020  07:23:17 : Read from PLC failed. Address: VW216, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  07:23:17 : Read from PLC failed. Address: VW702, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  07:23:17 : Logo2: Watchdog error - Watchdog does not change
+11.08.2020  07:23:17 : Logo2: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  07:23:17 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  07:23:17 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  07:23:18 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  07:23:18 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  07:23:20 : Logo1: Running connection diagnostics...
+11.08.2020  07:23:20 : Logo1: Running connection diagnostics...
+11.08.2020  07:23:20 : Logo2:   -Ping successful at: 192.168.1.201
+11.08.2020  07:23:20 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  07:23:21 : Logo1: Connected again
+11.08.2020  07:23:21 : Logo2: Connected again
+11.08.2020  07:24:19 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  07:24:19 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  07:24:19 : Logo1: Connecting...
+11.08.2020  07:24:19 : Logo2: Connecting...
+11.08.2020  07:24:20 : Logo1: Connected
+11.08.2020  07:24:20 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  07:24:21 : Logo2: Connected
+11.08.2020  07:24:21 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  07:27:33 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  07:27:33 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  07:27:33 : Logo1: Connecting...
+11.08.2020  07:27:33 : Logo2: Connecting...
+11.08.2020  07:27:34 : Logo1: Connected
+11.08.2020  07:27:34 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  07:27:35 : Logo2: Connected
+11.08.2020  07:27:35 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  07:27:44 : Redirected to: Vzorci
+11.08.2020  07:28:21 : Read from PLC failed. Address: bit at 2000, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  07:28:23 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  07:28:23 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  07:28:24 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  07:28:26 : Logo1: Running connection diagnostics...
+11.08.2020  07:28:26 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  07:28:27 : Logo1: Connected again
+11.08.2020  07:29:41 : Read from PLC failed. Address: bit at 300, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+11.08.2020  07:29:41 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  07:29:41 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  07:29:42 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  07:29:44 : Logo1: Running connection diagnostics...
+11.08.2020  07:29:44 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  07:29:44 : Logo1: Connected again
+11.08.2020  07:30:21 : Read from PLC failed. Address: bit at 3230, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  07:30:21 : Logo2: Watchdog error - Watchdog does not change
+11.08.2020  07:30:21 : Logo2: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  07:30:22 : Read from PLC failed. Address: bit at 740, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  07:30:22 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  07:30:27 : Logo1: Running connection diagnostics...
+11.08.2020  07:30:27 : Read from PLC failed. Address: bit at 1660, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  07:30:27 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  07:30:27 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  07:30:43 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  07:30:43 : Logo1: Running connection diagnostics...
+11.08.2020  07:30:53 : Logo2:   -Ping successful at: 192.168.1.201
+11.08.2020  07:30:53 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  07:30:54 : Logo2: Connected again
+11.08.2020  07:30:54 : Logo1: Connected again
+11.08.2020  07:30:54 : Redirected to: Default
+11.08.2020  07:30:55 : Redirected to: Default
+11.08.2020  07:30:58 : Read from PLC failed. Address: bit at 80, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+11.08.2020  07:30:59 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  07:30:59 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  07:30:59 : Page visited: /Pages/Default... Exception of type 'System.Web.HttpUnhandledException' was thrown. Internal error inside class constructor (Page: Default): Internal error inside Kontrola(HtmlGenericControl) method. BazenType value in config file is not valid BazenType value. Correct the BazenType value in config or call your support administrator. Index must be more than 0 and less than or equal to 20.... Stack trace:    at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_default_aspx.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
+   at System.Web.HttpApplication.StepInvoker.<>c__DisplayClass4_0.<Invoke>b__0()
+   at Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)
+   at System.Web.HttpApplication.<>c__DisplayClass284_0.<OnExecuteRequestStep>b__0(Action nextStepAction)
+   at System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+11.08.2020  07:31:00 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  07:31:01 : Redirected to: Default
+11.08.2020  07:31:02 : Logo1: Running connection diagnostics...
+11.08.2020  07:31:02 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  07:31:02 : Logo1: Connected again
+11.08.2020  07:31:02 : Redirected to: Default
+11.08.2020  07:31:14 : Redirected to: Vzorci
+11.08.2020  07:32:09 : Logo2: TCP : Error receiving Data
+11.08.2020  07:32:09 : Logo2: Connection error: TCP : Error receiving Data
+11.08.2020  07:36:24 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  07:36:24 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  07:36:24 : Logo1: Connecting...
+11.08.2020  07:36:24 : Logo2: Connecting...
+11.08.2020  07:36:25 : Logo1: Connected
+11.08.2020  07:36:26 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  07:36:27 : Logo2: Connected
+11.08.2020  07:36:27 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  07:36:30 : Redirected to: Vzorci
+11.08.2020  07:52:56 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  07:52:56 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  07:52:56 : Logo1: Connecting...
+11.08.2020  07:52:56 : Logo2: Connecting...
+11.08.2020  07:52:57 : Logo1: Connected
+11.08.2020  07:52:57 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  07:52:58 : Logo2: Connected
+11.08.2020  07:52:58 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  07:53:21 : Redirected to: Vzorci
+11.08.2020  07:54:41 : Read from PLC failed. Address: VW700, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  07:54:41 : Logo2: Watchdog error - Watchdog does not change
+11.08.2020  07:54:41 : Read from PLC failed. Address: bit at 220, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  07:54:41 : Logo2: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  07:54:42 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  07:55:35 : Logo1: Running connection diagnostics...
+11.08.2020  07:55:35 : Logo2:   -Ping successful but connection is poor: 192.168.1.201
+11.08.2020  07:55:36 : Logo2: Connected again
+11.08.2020  07:55:37 : Read from PLC failed. Address: bit at 1650, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  07:55:41 : Logo1: TCP : Error receiving Data
+11.08.2020  07:55:41 : Logo1: Connection error: TCP : Error receiving Data
+11.08.2020  07:55:42 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  07:55:44 : Logo1: Running connection diagnostics...
+11.08.2020  07:55:44 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  07:55:45 : Logo1: Connected again
+11.08.2020  07:55:48 : Redirected to: Default
+11.08.2020  07:55:50 : Redirected to: Vzorci
+11.08.2020  07:56:22 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: TCP : Error receiving Data, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+11.08.2020  07:56:26 : Read from PLC failed. Address: bit at 3120, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  07:56:26 : Read from PLC failed. Address: bit at 60, Read Error type: ISO : Invalid Buffer passed to Send/Receive, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+11.08.2020  07:56:30 : Logo2: Watchdog error - Watchdog does not change
+11.08.2020  07:56:32 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  07:56:32 : Logo2: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  07:56:54 : Logo1: Running connection diagnostics...
+11.08.2020  07:56:54 : Read from PLC failed. Address: bit at 50, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  07:56:54 : Logo2:   -Ping successful at: 192.168.1.201
+11.08.2020  07:56:54 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  07:56:54 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  07:56:55 : Logo2: Connected again
+11.08.2020  07:56:55 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  07:56:57 : Logo1: Running connection diagnostics...
+11.08.2020  07:56:57 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  07:56:58 : Logo1: Connected again
+11.08.2020  07:57:07 : Redirected to: Default
+11.08.2020  07:57:08 : Redirected to: Vzorci
+11.08.2020  07:58:40 : Logo2: TCP : Error receiving Data
+11.08.2020  07:58:45 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  07:58:45 : Logo1: TCP : Error receiving Data
+11.08.2020  07:58:45 : Logo1: Connection error: TCP : Error receiving Data
+11.08.2020  07:58:45 : Logo2: Connection error: TCP : Error receiving Data
+11.08.2020  07:58:46 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  08:02:31 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  08:02:31 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  08:02:31 : Logo1: Connecting...
+11.08.2020  08:02:31 : Logo2: Connecting...
+11.08.2020  08:02:32 : Logo1: Connected
+11.08.2020  08:02:32 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  08:02:33 : Logo2: Connected
+11.08.2020  08:02:33 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  08:02:35 : Redirected to: Vzorci
+11.08.2020  08:04:58 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  08:04:58 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  08:04:58 : Logo1: Connecting...
+11.08.2020  08:04:58 : Logo2: Connecting...
+11.08.2020  08:04:59 : Logo1: Connected
+11.08.2020  08:04:59 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  08:05:01 : Redirected to: Vzorci
+11.08.2020  08:05:01 : Logo2: Connected
+11.08.2020  08:05:01 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  08:06:10 : Read from PLC failed. Address: bit at 1670, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  08:07:25 : Logo1: Connecting...
+11.08.2020  08:07:25 : Logo2: Connecting...
+11.08.2020  08:07:26 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  08:07:26 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  08:07:26 : Logo1: Connected
+11.08.2020  08:07:26 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  08:07:27 : Logo2: Connected
+11.08.2020  08:07:27 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  08:07:51 : Redirected to: Vzorci
+11.08.2020  08:10:14 : Read from PLC failed. Address: VW700, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  08:10:14 : Logo2: Watchdog error - Watchdog does not change
+11.08.2020  08:10:14 : Logo2: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  08:10:14 : Read from PLC failed. Address: bit at 120, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+11.08.2020  08:10:14 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  08:10:14 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  08:10:14 : Redirected to: Default
+11.08.2020  08:10:14 : Redirected to: Default
+11.08.2020  08:10:14 : Redirected to: MasterMenu
+11.08.2020  08:10:15 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  08:10:15 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  08:10:15 : Redirected to: MasterMenu
+11.08.2020  08:10:15 : Redirected to: Default
+11.08.2020  08:10:15 : Redirected to: Default
+11.08.2020  08:10:15 : Redirected to: Default
+11.08.2020  08:10:15 : Redirected to: Default
+11.08.2020  08:10:16 : Redirected to: Default
+11.08.2020  08:10:17 : Redirected to: MasterMenu
+11.08.2020  08:10:17 : Logo1: Running connection diagnostics...
+11.08.2020  08:10:17 : Logo2:   -Ping successful at: 192.168.1.201
+11.08.2020  08:10:17 : Logo1: Running connection diagnostics...
+11.08.2020  08:10:17 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  08:10:17 : Redirected to: Vzorci
+11.08.2020  08:10:17 : Redirected to: MasterMenu
+11.08.2020  08:10:17 : Logo2: Connected again
+11.08.2020  08:10:17 : Logo1: Connected again
+11.08.2020  08:10:18 : Redirected to: MasterMenu
+11.08.2020  08:10:24 : Redirected to: Default
+11.08.2020  08:10:27 : Redirected to: Vzorci
+11.08.2020  08:11:27 : Redirected to: Default
+11.08.2020  08:13:35 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  08:13:35 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  08:13:36 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  08:13:38 : Logo1: Running connection diagnostics...
+11.08.2020  08:13:38 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  08:13:39 : Logo1: Connected again
+11.08.2020  08:13:39 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+11.08.2020  08:13:39 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  08:13:42 : Logo1: Running connection diagnostics...
+11.08.2020  08:13:42 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  08:13:43 : Logo1: Connected again
+11.08.2020  08:13:45 : Redirected to: Vzorci
+11.08.2020  08:16:08 : Read from PLC failed. Address: bit at 140, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+11.08.2020  08:16:08 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  08:16:08 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  08:16:09 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  08:16:11 : Logo1: Running connection diagnostics...
+11.08.2020  08:16:11 : Logo1:   -Ping successful but connection is poor: 192.168.1.200
+11.08.2020  08:16:12 : Logo1: Connected again
+11.08.2020  08:18:09 : Redirected to: MasterMenu
+11.08.2020  08:18:12 : Redirected to: UpNastavitve
+11.08.2020  08:18:12 : Redirected to: Advanced
+11.08.2020  08:18:13 : Redirected to: Editor
+11.08.2020  08:18:33 : ConfigFile was changed, by user.
+11.08.2020  08:18:33 : Page refreshed.
+11.08.2020  08:18:35 : ConfigFile was changed, by user.
+11.08.2020  08:18:35 : Page refreshed.
+11.08.2020  08:18:36 : Page refreshed.
+11.08.2020  08:18:38 : Redirected to: Default
+11.08.2020  08:30:59 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  08:30:59 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  08:30:59 : Logo1: Connecting...
+11.08.2020  08:30:59 : Logo2: Connecting...
+11.08.2020  08:31:00 : Logo1: Connected
+11.08.2020  08:31:00 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  08:31:01 : Logo2: Connected
+11.08.2020  08:31:01 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  08:31:04 : Redirected to: Vzorci
+11.08.2020  08:31:07 : Redirected to: Default
+11.08.2020  08:31:08 : Redirected to: Vzorci
+11.08.2020  08:31:14 : Redirected to: Default
+11.08.2020  08:31:18 : Redirected to: Vzorci
+11.08.2020  08:32:44 : Redirected to: Default
+11.08.2020  08:33:12 : Page refreshed.
+11.08.2020  08:33:12 : Page refreshed.
+11.08.2020  08:33:25 : Page refreshed.
+11.08.2020  08:33:25 : Page refreshed.
+11.08.2020  08:33:28 : Redirected to: Vzorci
+11.08.2020  08:35:56 : Redirected to: Default
+11.08.2020  08:38:46 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+11.08.2020  08:38:46 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  08:38:46 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  08:38:47 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  08:38:49 : Logo1: Running connection diagnostics...
+11.08.2020  08:38:49 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  08:38:50 : Logo1: Connected again
+11.08.2020  08:38:50 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+11.08.2020  08:38:50 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  08:38:53 : Logo1: Running connection diagnostics...
+11.08.2020  08:38:53 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  08:38:53 : Logo1: Connected again
+11.08.2020  08:38:53 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+11.08.2020  08:38:54 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  08:38:57 : Logo1: Running connection diagnostics...
+11.08.2020  08:38:57 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  08:38:57 : Logo1: Connected again
+11.08.2020  08:38:57 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+11.08.2020  08:38:57 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  08:39:00 : Logo1: Running connection diagnostics...
+11.08.2020  08:39:00 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  08:39:01 : Logo1: Connected again
+11.08.2020  08:39:01 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+11.08.2020  08:39:01 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  08:39:04 : Logo1: Running connection diagnostics...
+11.08.2020  08:39:04 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  08:39:04 : Logo1: Connected again
+11.08.2020  08:39:05 : Redirected to: Vzorci
+11.08.2020  08:40:32 : Redirected to: Default
+11.08.2020  08:40:35 : Page refreshed.
+11.08.2020  08:40:35 : Page refreshed.
+11.08.2020  08:41:17 : Redirected to: Vzorci
+11.08.2020  08:43:58 : Redirected to: MasterMenu
+11.08.2020  08:43:59 : Redirected to: UpNastavitve
+11.08.2020  08:43:59 : Redirected to: Advanced
+11.08.2020  08:44:00 : Redirected to: Editor
+11.08.2020  08:49:04 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  08:49:04 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  08:49:04 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  08:49:07 : Logo1: Running connection diagnostics...
+11.08.2020  08:49:07 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  08:49:07 : Logo1: Connected again
+11.08.2020  08:49:11 : Redirected to: Default
+11.08.2020  08:49:23 : Redirected to: Vzorci
+11.08.2020  08:51:55 : Redirected to: Default
+11.08.2020  09:00:50 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+11.08.2020  09:00:50 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  09:00:50 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  09:00:50 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  09:00:53 : Logo1: Running connection diagnostics...
+11.08.2020  09:00:53 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  09:00:54 : Logo1: Connected again
+11.08.2020  09:01:11 : Redirected to: Vzorci
+11.08.2020  09:02:53 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  09:02:53 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  09:02:54 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  09:02:56 : Logo1: Running connection diagnostics...
+11.08.2020  09:02:56 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  09:02:57 : Logo1: Connected again
+11.08.2020  09:02:57 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+11.08.2020  09:02:59 : Read from PLC failed. Address: bit at 2000, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  09:03:01 : Read from PLC failed. Address: bit at 2020, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  09:03:01 : Redirected to: Default
+11.08.2020  09:03:03 : Read from PLC failed. Address: bit at 2040, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  09:03:05 : Read from PLC failed. Address: bit at 740, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  09:03:07 : Read from PLC failed. Address: bit at 140, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+11.08.2020  09:03:09 : Read from PLC failed. Address: bit at 200, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  09:03:11 : Read from PLC failed. Address: bit at 240, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  09:03:13 : Read from PLC failed. Address: bit at 3160, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  09:03:26 : Logo1: Connecting...
+11.08.2020  09:03:26 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  09:03:26 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  09:03:26 : Logo2: Connecting...
+11.08.2020  09:03:27 : Logo1: Connected
+11.08.2020  09:03:27 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  09:03:28 : Logo2: Connected
+11.08.2020  09:03:28 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  09:03:42 : Redirected to: Vzorci
+11.08.2020  09:06:00 : Redirected to: Default
+11.08.2020  09:12:21 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  09:12:21 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  09:12:22 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  09:12:24 : Logo1: Running connection diagnostics...
+11.08.2020  09:12:24 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  09:12:25 : Logo1: Connected again
+11.08.2020  09:12:25 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+11.08.2020  09:12:25 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  09:12:28 : Logo1: Running connection diagnostics...
+11.08.2020  09:12:28 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  09:12:29 : Logo1: Connected again
+11.08.2020  09:12:32 : Redirected to: Vzorci
+11.08.2020  09:14:28 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  09:14:28 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  09:14:28 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  09:14:31 : Logo1: Running connection diagnostics...
+11.08.2020  09:14:31 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  09:14:31 : Logo1: Connected again
+11.08.2020  09:14:43 : Redirected to: Default
+11.08.2020  09:14:50 : Redirected to: Vzorci
+11.08.2020  09:15:13 : Redirected to: Default
+11.08.2020  09:15:16 : Page refreshed.
+11.08.2020  09:15:16 : Page refreshed.
+11.08.2020  09:15:19 : Page refreshed.
+11.08.2020  09:15:19 : Page refreshed.
+11.08.2020  09:15:31 : Page refreshed.
+11.08.2020  09:15:31 : Page refreshed.
+11.08.2020  09:15:33 : Redirected to: Vzorci
+11.08.2020  09:15:38 : Redirected to: Default
+11.08.2020  09:15:42 : Redirected to: Vzorci
+11.08.2020  09:15:57 : Redirected to: Default
+11.08.2020  09:16:01 : Page refreshed.
+11.08.2020  09:16:01 : Page refreshed.
+11.08.2020  09:16:04 : Page refreshed.
+11.08.2020  09:16:04 : Page refreshed.
+11.08.2020  09:16:13 : Redirected to: Vzorci
+11.08.2020  09:16:37 : Redirected to: Default
+11.08.2020  09:17:01 : Redirected to: Vzorci
+11.08.2020  09:17:35 : Redirected to: Default
+11.08.2020  09:18:17 : Redirected to: MasterMenu
+11.08.2020  09:18:17 : Redirected to: UpNastavitve
+11.08.2020  09:18:17 : Redirected to: Advanced
+11.08.2020  09:18:19 : Redirected to: Editor
+11.08.2020  09:18:38 : ConfigFile was changed, by user.
+11.08.2020  09:18:38 : Page refreshed.
+11.08.2020  09:18:40 : Redirected to: Default
+11.08.2020  09:18:44 : Page refreshed.
+11.08.2020  09:18:44 : Page refreshed.
+11.08.2020  09:18:47 : Page refreshed.
+11.08.2020  09:18:47 : Page refreshed.
+11.08.2020  09:23:28 : Redirected to: MasterMenu
+11.08.2020  09:23:29 : Redirected to: UpNastavitve
+11.08.2020  09:23:29 : Redirected to: Advanced
+11.08.2020  09:23:31 : Redirected to: Editor
+11.08.2020  09:23:50 : ConfigFile was changed, by user.
+11.08.2020  09:23:50 : Page refreshed.
+11.08.2020  09:23:51 : Redirected to: Default
+11.08.2020  09:23:54 : Page refreshed.
+11.08.2020  09:23:54 : Page refreshed.
+11.08.2020  09:23:56 : Page refreshed.
+11.08.2020  09:23:56 : Page refreshed.
+11.08.2020  09:24:05 : Redirected to: Vzorci
+11.08.2020  09:24:18 : Redirected to: Default
+11.08.2020  09:26:36 : Redirected to: MasterMenu
+11.08.2020  09:26:37 : Redirected to: UpNastavitve
+11.08.2020  09:26:37 : Redirected to: Advanced
+11.08.2020  09:26:39 : Redirected to: Editor
+11.08.2020  09:26:54 : ConfigFile was changed, by user.
+11.08.2020  09:26:54 : Page refreshed.
+11.08.2020  09:27:18 : ConfigFile was changed, by user.
+11.08.2020  09:27:18 : Page refreshed.
+11.08.2020  09:27:19 : Redirected to: Default
+11.08.2020  09:27:26 : Redirected to: Vzorci
+11.08.2020  09:53:27 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  09:53:27 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  09:53:27 : Logo1: Connecting...
+11.08.2020  09:53:27 : Logo2: Connecting...
+11.08.2020  09:53:28 : Logo1: Connected
+11.08.2020  09:53:28 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  09:53:30 : Logo2: Connected
+11.08.2020  09:53:30 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  09:53:36 : Redirected to: Vzorci
+11.08.2020  09:57:19 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  09:57:19 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  09:57:19 : Logo1: Connecting...
+11.08.2020  09:57:19 : Logo2: Connecting...
+11.08.2020  09:57:20 : Logo1: Connected
+11.08.2020  09:57:20 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  09:57:21 : Logo2: Connected
+11.08.2020  09:57:21 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  09:57:26 : Redirected to: Vzorci
+11.08.2020  09:57:38 : Redirected to: Default
+11.08.2020  11:45:19 : Redirected to: Vzorci
+11.08.2020  11:48:18 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  11:48:18 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  11:48:18 : Logo1: Connecting...
+11.08.2020  11:48:18 : Logo2: Connecting...
+11.08.2020  11:48:19 : Logo1: Connected
+11.08.2020  11:48:19 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  11:48:20 : Logo2: Connected
+11.08.2020  11:48:20 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  11:48:23 : Redirected to: Vzorci
+11.08.2020  11:50:36 : Read from PLC failed. Address: bit at 520, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  11:50:36 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  11:50:36 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  11:50:37 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  11:50:39 : Logo1: Running connection diagnostics...
+11.08.2020  11:50:39 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  11:50:40 : Logo1: Connected again
+11.08.2020  11:50:53 : Redirected to: Default
+11.08.2020  11:50:54 : Redirected to: Default
+11.08.2020  11:51:00 : Redirected to: Vzorci
+11.08.2020  11:52:45 : Read from PLC failed. Address: VW702, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  11:52:45 : Logo2: Watchdog error - Watchdog does not change
+11.08.2020  11:52:45 : Read from PLC failed. Address: bit at 120, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+11.08.2020  11:52:45 : Logo2: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  11:52:45 : Write to PLC failed. Address: bit at 330, Read Error type: OK, Write Error type: ISO : Invalid PDU received, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+11.08.2020  11:52:45 : Read from PLC failed. Address: bit at 360, Read Error type: ISO : Invalid Buffer passed to Send/Receive, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+11.08.2020  11:52:45 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  11:52:45 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  11:52:46 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  11:52:46 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  11:52:48 : Logo1: Running connection diagnostics...
+11.08.2020  11:52:48 : Logo2:   -Ping successful at: 192.168.1.201
+11.08.2020  11:52:48 : Logo1: Running connection diagnostics...
+11.08.2020  11:52:48 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  11:52:48 : Logo2: Connected again
+11.08.2020  11:52:48 : Logo1: Connected again
+11.08.2020  11:52:58 : Redirected to: Default
+11.08.2020  11:53:05 : Redirected to: Vzorci
+11.08.2020  11:53:14 : Write to PLC failed. Address: bit at 60, Read Error type: OK, Write Error type: TCP : Error receiving Data, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+11.08.2020  11:53:25 : Read from PLC failed. Address: VW312, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  11:53:25 : Write to PLC failed. Address: bit at 330, Read Error type: OK, Write Error type: ISO : Invalid PDU received, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+11.08.2020  11:53:25 : Read from PLC failed. Address: bit at 1650, Read Error type: ISO : Invalid Buffer passed to Send/Receive, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  11:53:25 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  11:53:25 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  11:53:26 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  11:53:28 : Logo1: Running connection diagnostics...
+11.08.2020  11:53:28 : Redirected to: Default
+11.08.2020  11:53:28 : Logo1:   -Ping successful but connection is poor: 192.168.1.200
+11.08.2020  11:53:29 : Logo1: Connected again
+11.08.2020  11:53:31 : Redirected to: Vzorci
+11.08.2020  11:56:00 : Read from PLC failed. Address: bit at 1640, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  11:58:41 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  11:58:41 : Logo1: Connecting...
+11.08.2020  11:58:41 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  11:58:41 : Logo2: Connecting...
+11.08.2020  11:58:42 : Logo1: Connected
+11.08.2020  11:58:42 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  11:58:43 : Logo2: Connected
+11.08.2020  11:58:43 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  11:58:46 : Redirected to: Vzorci
+11.08.2020  11:59:02 : Read from PLC failed. Address: VW310, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  11:59:02 : Write to PLC failed. Address: bit at 460, Read Error type: OK, Write Error type: ISO : Invalid PDU received, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+11.08.2020  11:59:02 : Read from PLC failed. Address: bit at 500, Read Error type: ISO : Invalid Buffer passed to Send/Receive, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  11:59:02 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  11:59:02 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  11:59:03 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  11:59:05 : Logo1: Running connection diagnostics...
+11.08.2020  11:59:05 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  11:59:06 : Logo1: Connected again
+11.08.2020  12:01:35 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  12:01:35 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  12:01:35 : Logo1: Connecting...
+11.08.2020  12:01:35 : Logo2: Connecting...
+11.08.2020  12:01:36 : Logo1: Connected
+11.08.2020  12:01:37 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  12:01:38 : Logo2: Connected
+11.08.2020  12:01:38 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  12:01:39 : Redirected to: Vzorci
+11.08.2020  12:03:39 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  12:03:39 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  12:03:39 : Logo1: Connecting...
+11.08.2020  12:03:39 : Logo2: Connecting...
+11.08.2020  12:03:40 : Logo1: Connected
+11.08.2020  12:03:40 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  12:03:41 : Logo2: Connected
+11.08.2020  12:03:41 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  12:03:57 : Redirected to: Vzorci
+11.08.2020  12:06:52 : Logo1: Read-Write cycle is taking 224ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  12:07:48 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  12:07:48 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  12:07:48 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  12:07:51 : Logo1: Running connection diagnostics...
+11.08.2020  12:07:51 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  12:07:51 : Logo1: Connected again
+11.08.2020  12:08:06 : Redirected to: Default
+11.08.2020  12:08:10 : Redirected to: Vzorci
+11.08.2020  12:08:12 : Redirected to: Default
+11.08.2020  12:08:21 : Redirected to: Vzorci
+11.08.2020  12:11:59 : Redirected to: Default
+11.08.2020  12:12:00 : Redirected to: Default
+11.08.2020  12:12:02 : Redirected to: Default
+11.08.2020  12:22:43 : Logo1: Read-Write cycle is taking 439ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  12:22:43 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  12:22:47 : Logo1: Read-Write cycle is taking 187ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  12:22:49 : Logo1: Read-Write cycle is taking 378ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  12:25:04 : Logo1: Read-Write cycle is taking 328ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  12:25:43 : Read from PLC failed. Address: bit at 100, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+11.08.2020  12:25:45 : Read from PLC failed. Address: bit at 160, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+11.08.2020  12:25:47 : Read from PLC failed. Address: bit at 220, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  12:25:49 : Read from PLC failed. Address: bit at 260, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  12:25:51 : Read from PLC failed. Address: bit at 3150, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  12:25:53 : Read from PLC failed. Address: bit at 3180, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  12:25:55 : Read from PLC failed. Address: bit at 3210, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  12:25:57 : Read from PLC failed. Address: bit at 40, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  12:25:59 : Read from PLC failed. Address: VW212, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+11.08.2020  12:26:01 : Read from PLC failed. Address: bit at 130, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  12:26:01 : Read from PLC failed. Address: bit at 300, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+11.08.2020  12:26:01 : Read from PLC failed. Address: bit at 910, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+11.08.2020  12:26:01 : Read from PLC failed. Address: VW106, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+11.08.2020  12:26:01 : Read from PLC failed. Address: bit at 1670, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  12:26:01 : Read from PLC failed. Address: bit at 350, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+11.08.2020  12:26:01 : Read from PLC failed. Address: bit at 1640, Read Error type: CLI : Client not connected, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+11.08.2020  12:26:01 : Logo1: CLI : Client not connected
+11.08.2020  12:26:01 : Logo1: Connection error: CLI : Client not connected
+11.08.2020  12:26:02 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  12:26:04 : Logo1: Running connection diagnostics...
+11.08.2020  12:26:04 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  12:26:05 : Logo1: Connected again
+11.08.2020  12:31:07 : Logo1: Read-Write cycle is taking 203ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  12:31:07 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  12:31:30 : Logo1: Read-Write cycle is taking 140ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  12:31:34 : Logo1: Read-Write cycle is taking 202ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  12:31:36 : Logo1: Read-Write cycle is taking 124ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  12:32:49 : Logo1: Read-Write cycle is taking 218ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  12:34:04 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  12:34:04 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  12:34:04 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  12:34:07 : Logo1: Running connection diagnostics...
+11.08.2020  12:34:07 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  12:34:07 : Logo1: Connected again
+11.08.2020  12:34:10 : Logo1: Read-Write cycle is taking 183ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  12:35:39 : Page refreshed.
+11.08.2020  12:35:39 : Page refreshed.
+11.08.2020  12:36:38 : Redirected to: Vzorci
+11.08.2020  12:36:47 : Redirected to: Default
+11.08.2020  12:37:08 : Redirected to: Vzorci
+11.08.2020  12:37:20 : Redirected to: Default
+11.08.2020  12:40:15 : Page refreshed.
+11.08.2020  12:40:15 : Page refreshed.
+11.08.2020  12:40:32 : Page refreshed.
+11.08.2020  12:40:32 : Page refreshed.
+11.08.2020  12:40:55 : Redirected to: MasterMenu
+11.08.2020  12:40:56 : Redirected to: UpNastavitve
+11.08.2020  12:40:56 : Redirected to: Advanced
+11.08.2020  12:40:58 : Redirected to: Editor
+11.08.2020  12:42:18 : ConfigFile was changed, by user.
+11.08.2020  12:42:18 : Page refreshed.
+11.08.2020  12:42:19 : Page refreshed.
+11.08.2020  12:42:21 : Redirected to: Default
+11.08.2020  12:42:32 : Logo2: Read-Write cycle is taking 493ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  12:42:37 : Page refreshed.
+11.08.2020  12:42:37 : Page refreshed.
+11.08.2020  12:42:48 : Page refreshed.
+11.08.2020  12:42:48 : Page refreshed.
+11.08.2020  12:43:02 : Page refreshed.
+11.08.2020  12:43:02 : Page refreshed.
+11.08.2020  12:43:10 : Page refreshed.
+11.08.2020  12:43:10 : Page refreshed.
+11.08.2020  12:43:15 : Page refreshed.
+11.08.2020  12:43:15 : Page refreshed.
+11.08.2020  12:43:23 : Page refreshed.
+11.08.2020  12:43:30 : Page refreshed.
+11.08.2020  12:43:30 : Page refreshed.
+11.08.2020  12:44:12 : Page refreshed.
+11.08.2020  12:44:12 : Page refreshed.
+11.08.2020  12:44:23 : Page refreshed.
+11.08.2020  12:44:23 : Page refreshed.
+11.08.2020  12:45:01 : Page refreshed.
+11.08.2020  12:45:01 : Page refreshed.
+11.08.2020  12:45:06 : Page refreshed.
+11.08.2020  12:45:06 : Page refreshed.
+11.08.2020  12:45:10 : Page refreshed.
+11.08.2020  12:45:10 : Page refreshed.
+11.08.2020  12:45:15 : Page refreshed.
+11.08.2020  12:45:15 : Page refreshed.
+11.08.2020  12:45:25 : Redirected to: MasterMenu
+11.08.2020  12:45:26 : Redirected to: UpNastavitve
+11.08.2020  12:45:26 : Redirected to: Advanced
+11.08.2020  12:45:30 : Redirected to: Editor
+11.08.2020  12:45:40 : ConfigFile was changed, by user.
+11.08.2020  12:45:40 : Page refreshed.
+11.08.2020  12:45:42 : Page refreshed.
+11.08.2020  12:45:43 : ConfigFile was changed, by user.
+11.08.2020  12:45:43 : Page refreshed.
+11.08.2020  12:45:44 : Page refreshed.
+11.08.2020  12:45:45 : Redirected to: Default
+11.08.2020  12:50:54 : Logo1: Connecting...
+11.08.2020  12:50:54 : Logo2: Connecting...
+11.08.2020  12:50:55 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  12:50:55 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  12:50:55 : Logo1: Connected
+11.08.2020  12:50:55 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  12:50:56 : Logo2: Connected
+11.08.2020  12:50:56 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  12:51:26 : Page refreshed.
+11.08.2020  12:51:26 : Page refreshed.
+11.08.2020  12:51:49 : Redirected to: MasterMenu
+11.08.2020  12:51:50 : Redirected to: UpNastavitve
+11.08.2020  12:51:50 : Redirected to: Advanced
+11.08.2020  12:52:07 : Redirected to: Editor
+11.08.2020  12:52:07 : Redirected to: Editor
+11.08.2020  12:52:08 : Redirected to: Editor
+11.08.2020  12:52:20 : ConfigFile was changed, by user.
+11.08.2020  12:52:20 : Page refreshed.
+11.08.2020  12:52:20 : ConfigFile was changed, by user.
+11.08.2020  12:52:20 : Page refreshed.
+11.08.2020  12:52:22 : Redirected to: Default
+11.08.2020  12:52:23 : Logo1: Read-Write cycle is taking 214ms to complete (Cycle is set to be 100ms ). Please extend Read-Write cycle
+11.08.2020  12:52:23 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  12:52:27 : Page refreshed.
+11.08.2020  12:52:27 : Page refreshed.
+11.08.2020  12:52:34 : Page refreshed.
+11.08.2020  12:52:34 : Page refreshed.
+11.08.2020  12:52:43 : Page refreshed.
+11.08.2020  12:52:43 : Page refreshed.
+11.08.2020  12:52:54 : Page refreshed.
+11.08.2020  12:52:54 : Page refreshed.
+11.08.2020  12:53:12 : Page refreshed.
+11.08.2020  12:53:12 : Page refreshed.
+11.08.2020  12:53:23 : Page refreshed.
+11.08.2020  12:53:23 : Page refreshed.
+11.08.2020  12:53:34 : Page refreshed.
+11.08.2020  12:53:34 : Page refreshed.
+11.08.2020  12:54:29 : Redirected to: MasterMenu
+11.08.2020  12:54:30 : Redirected to: UpNastavitve
+11.08.2020  12:54:30 : Redirected to: Advanced
+11.08.2020  12:54:34 : Redirected to: Editor
+11.08.2020  12:54:34 : Redirected to: Editor
+11.08.2020  12:54:44 : ConfigFile was changed, by user.
+11.08.2020  12:54:44 : Page refreshed.
+11.08.2020  12:54:45 : Page refreshed.
+11.08.2020  12:54:47 : Redirected to: Default
+11.08.2020  12:54:52 : Page refreshed.
+11.08.2020  12:54:52 : Page refreshed.
+11.08.2020  12:54:57 : Page refreshed.
+11.08.2020  12:54:57 : Page refreshed.
+11.08.2020  12:56:32 : Redirected to: MasterMenu
+11.08.2020  12:56:33 : Redirected to: UpNastavitve
+11.08.2020  12:56:33 : Redirected to: Advanced
+11.08.2020  12:56:39 : Redirected to: Editor
+11.08.2020  12:57:00 : ConfigFile was changed, by user.
+11.08.2020  12:57:00 : Page refreshed.
+11.08.2020  12:57:06 : ConfigFile was changed, by user.
+11.08.2020  12:57:06 : Page refreshed.
+11.08.2020  12:57:09 : Page refreshed.
+11.08.2020  12:57:10 : Redirected to: Default
+11.08.2020  12:58:39 : Logo2: Watchdog error - Watchdog does not change
+11.08.2020  12:58:39 : Logo2: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  12:58:40 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  12:58:42 : Logo1: Running connection diagnostics...
+11.08.2020  12:58:42 : Logo2:   -Ping successful at: 192.168.1.201
+11.08.2020  12:58:42 : Logo2: Connected again
+11.08.2020  12:58:58 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  12:58:58 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  12:58:59 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  12:59:01 : Logo1: Running connection diagnostics...
+11.08.2020  12:59:01 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  12:59:02 : Logo1: Connected again
+11.08.2020  13:03:23 : Redirected to: MasterMenu
+11.08.2020  13:03:25 : Redirected to: UpNastavitve
+11.08.2020  13:03:25 : Redirected to: Advanced
+11.08.2020  13:03:27 : Redirected to: Editor
+11.08.2020  13:03:44 : ConfigFile was changed, by user.
+11.08.2020  13:03:44 : Page refreshed.
+11.08.2020  13:03:46 : Redirected to: Default
+11.08.2020  13:03:55 : Page refreshed.
+11.08.2020  13:03:55 : Page refreshed.
+11.08.2020  13:04:00 : Page refreshed.
+11.08.2020  13:04:00 : Page refreshed.
+11.08.2020  13:04:35 : Redirected to: MasterMenu
+11.08.2020  13:04:43 : Redirected to: UpNastavitve
+11.08.2020  13:04:43 : Redirected to: Advanced
+11.08.2020  13:04:48 : Redirected to: Editor
+11.08.2020  13:04:57 : ConfigFile was changed, by user.
+11.08.2020  13:04:57 : Page refreshed.
+11.08.2020  13:04:58 : ConfigFile was changed, by user.
+11.08.2020  13:04:58 : Page refreshed.
+11.08.2020  13:04:59 : Redirected to: Default
+11.08.2020  13:05:03 : Page refreshed.
+11.08.2020  13:05:03 : Page refreshed.
+11.08.2020  13:05:24 : Page refreshed.
+11.08.2020  13:05:24 : Page refreshed.
+11.08.2020  13:06:12 : Redirected to: Vzorci
+11.08.2020  13:06:53 : Redirected to: Default
+11.08.2020  13:06:57 : Redirected to: Vzorci
+11.08.2020  13:07:04 : Redirected to: Default
+11.08.2020  13:07:08 : Redirected to: Vzorci
+11.08.2020  13:07:21 : Redirected to: Default
+11.08.2020  13:07:52 : Page refreshed.
+11.08.2020  13:07:52 : Page refreshed.
+11.08.2020  13:32:18 : Redirected to: Vzorci
+11.08.2020  13:33:26 : Redirected to: Advanced
+11.08.2020  13:33:34 : Redirected to: Default
+11.08.2020  13:33:47 : Redirected to: Vzorci
+11.08.2020  13:36:14 : Redirected to: Advanced
+11.08.2020  13:36:19 : Redirected to: Default
+11.08.2020  13:36:55 : Redirected to: Vzorci
+11.08.2020  13:38:27 : Redirected to: MasterMenu
+11.08.2020  13:38:28 : Redirected to: UpNastavitve
+11.08.2020  13:38:28 : Redirected to: Advanced
+11.08.2020  13:38:32 : Redirected to: Editor
+11.08.2020  13:38:57 : ConfigFile was changed, by user.
+11.08.2020  13:38:57 : Page refreshed.
+11.08.2020  13:39:00 : Redirected to: Default
+11.08.2020  13:39:43 : Redirected to: Vzorci
+11.08.2020  13:39:45 : Redirected to: Default
+11.08.2020  13:39:50 : Page refreshed.
+11.08.2020  13:39:50 : Page refreshed.
+11.08.2020  13:39:53 : Page refreshed.
+11.08.2020  13:39:53 : Page refreshed.
+11.08.2020  13:41:20 : Redirected to: Vzorci
+11.08.2020  13:41:25 : Redirected to: Default
+11.08.2020  13:41:28 : Redirected to: MasterMenu
+11.08.2020  13:41:29 : Redirected to: UpNastavitve
+11.08.2020  13:41:29 : Redirected to: Advanced
+11.08.2020  13:41:34 : Redirected to: Editor
+11.08.2020  13:42:13 : Redirected to: Default
+11.08.2020  13:42:18 : Redirected to: Vzorci
+11.08.2020  13:44:00 : Redirected to: Default
+11.08.2020  13:44:02 : Redirected to: MasterMenu
+11.08.2020  13:44:04 : Redirected to: UpNastavitve
+11.08.2020  13:44:04 : Redirected to: Advanced
+11.08.2020  13:44:09 : Redirected to: Editor
+11.08.2020  13:44:10 : Redirected to: Editor
+11.08.2020  13:44:32 : ConfigFile was changed, by user.
+11.08.2020  13:44:33 : Page refreshed.
+11.08.2020  13:44:35 : Redirected to: Default
+11.08.2020  13:45:08 : Page refreshed.
+11.08.2020  13:45:08 : Page refreshed.
+11.08.2020  13:45:14 : Page refreshed.
+11.08.2020  13:45:14 : Page refreshed.
+11.08.2020  13:48:05 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+11.08.2020  13:48:06 : Logo1: Watchdog error - Watchdog does not change
+11.08.2020  13:48:06 : Logo1: Connection error: Watchdog error - Watchdog does not change
+11.08.2020  13:48:06 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  13:48:09 : Logo1: Running connection diagnostics...
+11.08.2020  13:48:09 : Logo1:   -Ping successful at: 192.168.1.200
+11.08.2020  13:48:09 : Logo1: Connected again
+11.08.2020  13:49:40 : Redirected to: Vzorci
+11.08.2020  13:49:46 : Redirected to: Default
+11.08.2020  13:51:53 : Redirected to: Vzorci
+11.08.2020  13:51:58 : Redirected to: Default
+11.08.2020  13:53:00 : Redirected to: Vzorci
+11.08.2020  13:54:50 : Redirected to: Default
+11.08.2020  13:54:53 : Redirected to: Vzorci
+11.08.2020  13:56:22 : Redirected to: Default
+11.08.2020  13:59:42 : Redirected to: MasterMenu
+11.08.2020  13:59:43 : Redirected to: UpNastavitve
+11.08.2020  13:59:43 : Redirected to: Advanced
+11.08.2020  13:59:51 : Redirected to: Editor
+11.08.2020  13:59:59 : ConfigFile was changed, by user.
+11.08.2020  13:59:59 : Page refreshed.
+11.08.2020  14:00:01 : ConfigFile was changed, by user.
+11.08.2020  14:00:01 : Page refreshed.
+11.08.2020  14:00:02 : Redirected to: Default
+11.08.2020  14:00:07 : Redirected to: Vzorci
+11.08.2020  14:00:11 : Redirected to: Default
+11.08.2020  14:00:25 : Page refreshed.
+11.08.2020  14:00:25 : Page refreshed.
+11.08.2020  14:00:29 : Page refreshed.
+11.08.2020  14:00:29 : Page refreshed.
+11.08.2020  14:01:25 : Redirected to: Vzorci
+11.08.2020  14:06:52 : Redirected to: Default
+11.08.2020  14:11:42 : Redirected to: Vzorci
+11.08.2020  14:22:11 : Redirected to: Default
+11.08.2020  14:23:42 : Redirected to: Vzorci
+11.08.2020  14:36:23 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  14:36:23 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  14:36:23 : Logo1: Connecting...
+11.08.2020  14:36:23 : Logo2: Connecting...
+11.08.2020  14:36:24 : Logo1: Connected
+11.08.2020  14:36:25 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  14:36:25 : Logo2: Connected
+11.08.2020  14:36:25 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  14:36:33 : Redirected to: Vzorci
+11.08.2020  14:36:36 : Redirected to: Default
+11.08.2020  14:37:50 : Redirected to: Vzorci
+11.08.2020  14:37:57 : Redirected to: Default
+11.08.2020  14:38:03 : Redirected to: Vzorci
+11.08.2020  14:38:10 : Redirected to: Default
+11.08.2020  14:38:20 : Redirected to: Vzorci
+11.08.2020  14:38:24 : Redirected to: Default
+11.08.2020  14:38:34 : Redirected to: Vzorci
+11.08.2020  14:38:38 : Redirected to: Default
+11.08.2020  14:39:38 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  14:39:38 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  14:39:38 : Logo1: Connecting...
+11.08.2020  14:39:38 : Logo2: Connecting...
+11.08.2020  14:39:38 : Fatal error:System.InvalidOperationException: Collection was modified; enumeration operation may not execute.
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   at System.Collections.Generic.List`1.Enumerator.MoveNext()
+   at WebApplication1.StanjeProcesa.SporocilniSistem_method() in C:\Users\Jerin\Documents\GitHub\PolnenjeBazena\WebApplication1\StanjeProcesa.cs:line 79
+   at WebApplication1.StanjeProcesa.<.ctor>b__6_0() in C:\Users\Jerin\Documents\GitHub\PolnenjeBazena\WebApplication1\StanjeProcesa.cs:line 20
+   at System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+11.08.2020  14:39:56 : Logo1: Connecting...
+11.08.2020  14:39:56 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+11.08.2020  14:39:56 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+11.08.2020  14:39:56 : Logo2: Connecting...
+11.08.2020  14:39:57 : Logo1: Connected
+11.08.2020  14:39:57 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  14:39:58 : Logo2: Connected
+11.08.2020  14:39:58 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+11.08.2020  14:40:14 : Redirected to: Vzorci
+11.08.2020  14:40:22 : Redirected to: Default

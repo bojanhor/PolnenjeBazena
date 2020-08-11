@@ -36,7 +36,7 @@ namespace WebApplication1
         public bool EnKrogInProcess 
         { get { return _EnKrogInProcess; } set { _EnKrogInProcess = value; } }
 
-        Patern Current;
+        public Patern Current;
         int MaxWaitTime_s = 60;
         int X_Steps = XmlController.GetXStep();
         int Y_Steps = XmlController.GetYStep();
@@ -203,10 +203,11 @@ namespace WebApplication1
         // advanced helper methods
         void doZigZag()
         {
-            StopPatern();
+            var paternName = "ZigZag";
+            
             Action Action = new Action(() => ZigZagPatern_method());
-            Patern Patern = new Patern("ZigZag", Action);
-            Current = Patern;
+            Patern Patern = new Patern(paternName, Action, this);
+            
 
             ZigzagInProcess = true;
 
@@ -214,10 +215,11 @@ namespace WebApplication1
 
         void doZigZagzRobom()
         {
-            StopPatern();
+            var paternName = "ZigZagzRobom";
+            
             Action Action = new Action(() => ZigZagzRobomn_method());
-            Patern Patern = new Patern("ZigZagzRobom", Action);
-            Current = Patern;
+            Patern Patern = new Patern(paternName, Action, this);
+            
 
             ZigzagzRobomInProcess = true;
 
@@ -225,10 +227,11 @@ namespace WebApplication1
 
         void doRobX1()
         {
+            var paternName = "RobX1";
             StopPatern();
             Action Action = new Action(() => RobX1_method());
-            Patern Patern = new Patern("RobX1", Action);
-            Current = Patern;
+            Patern Patern = new Patern(paternName, Action, this);
+            
 
             RobX1InProcess = true;
 
@@ -236,20 +239,22 @@ namespace WebApplication1
 
         void doRobX2()
         {
-            StopPatern();
+            var paternName = "RobX2";
+            
             Action Action = new Action(() => RobX2_method());
-            Patern Patern = new Patern("RobX1", Action);
-            Current = Patern;
+            Patern Patern = new Patern(paternName, Action, this);
+            
     
             RobX2InProcess = true;
 
         }
         void doRobY1()
         {
-            StopPatern();
+            var paternName = "RobY1";
+            
             Action Action = new Action(() => RobY1_method());
-            Patern Patern = new Patern("RobY1", Action);
-            Current = Patern;
+            Patern Patern = new Patern(paternName, Action, this);
+            
 
             RobY1InProcess = true;
 
@@ -257,10 +262,11 @@ namespace WebApplication1
 
         void doRobY2()
         {
-            StopPatern();
+            var paternName = "RobY2";
+            
             Action Action = new Action(() => RobY2_method());
-            Patern Patern = new Patern("RobY2", Action);
-            Current = Patern;
+            Patern Patern = new Patern(paternName, Action, this);
+            
 
             RobY2InProcess = true;
 
@@ -268,10 +274,11 @@ namespace WebApplication1
 
         void doOneCircle()
         {
-            StopPatern();
+            var paternName = "OneCircle";
+            
             Action Action = new Action(() => OneCircle_method());
-            Patern Patern = new Patern("OneCircle", Action);
-            Current = Patern;
+            Patern Patern = new Patern(paternName, Action, this);
+            
 
             EnKrogInProcess = true;
 
@@ -279,10 +286,11 @@ namespace WebApplication1
 
         void doCircles()
         {
-            StopPatern();
+            var paternName = "Circling";
+            
             Action Action = new Action(() => Circling_method());
-            Patern Patern = new Patern("Circling", Action);
-            Current = Patern;
+            Patern Patern = new Patern(paternName, Action, this);
+            
             
             KrozenjeInProcess = true;
           
@@ -678,14 +686,15 @@ namespace WebApplication1
                 impulses = 1; // safety check value
             }
 
-            var currentPosY = prop1.YImpulses.Value_short;
+            var currentPosY = prop1.YPos.Value_short;
             var targetPosY = currentPosY + impulses;
             DateTime dtStart = DateTime.Now;
             DateTime dtStop = dtStart.AddSeconds(MaxWaitTime_s);
+            goUp_NoWait();
+
             while (true)
             {
-                currentPosY = prop1.YImpulses.Value_short; // update current position
-
+                currentPosY = prop1.YPos.Value_short; // update current position
                 if (currentPosY >= targetPosY)
                 {
                     stopUp();
@@ -717,14 +726,15 @@ namespace WebApplication1
                 impulses = 1; // safety check value
             }
 
-            var currentPosY = prop1.YImpulses.Value_short;
+            var currentPosY = prop1.YPos.Value_short;
             var targetPosY = currentPosY - impulses;
             DateTime dtStart = DateTime.Now;
             DateTime dtStop = dtStart.AddSeconds(MaxWaitTime_s);
+            goDwn_NoWait();
+
             while (true)
             {
-                currentPosY = prop1.YImpulses.Value_short; // update current position
-
+                currentPosY = prop1.YPos.Value_short; // update current position
                 if (currentPosY <= targetPosY)
                 {
                     stopDwn();
@@ -757,14 +767,15 @@ namespace WebApplication1
                 impulses = 1; // safety check value
             }
 
-            var currentPosX = prop1.XImpulses.Value_short;
+            var currentPosX = prop1.XPos.Value_short;
             var targetPosX = currentPosX + impulses;
             DateTime dtStart = DateTime.Now;
             DateTime dtStop = dtStart.AddSeconds(MaxWaitTime_s);
+            goRght_NoWait();
+
             while (true)
             {
-                currentPosX = prop1.XImpulses.Value_short; // update current position
-
+                currentPosX = prop1.XPos.Value_short; // update current position
                 if (currentPosX >= targetPosX)
                 {
                     stopRght();
@@ -796,14 +807,15 @@ namespace WebApplication1
                 impulses = 1; // safety check value
             }
 
-            var currentPosX = prop1.XImpulses.Value_short;
+            var currentPosX = prop1.XPos.Value_short;
             var targetPosX = currentPosX - impulses;
             DateTime dtStart = DateTime.Now;
             DateTime dtStop = dtStart.AddSeconds(MaxWaitTime_s);
+            goLft_NoWait();
+
             while (true)
             {
-                currentPosX = prop1.XImpulses.Value_short; // update current position
-
+                currentPosX = prop1.XPos.Value_short; // update current position
                 if (currentPosX <= targetPosX)
                 {
                     stopLft();
@@ -1000,7 +1012,7 @@ namespace WebApplication1
             return prop1.ReadKSX2.Value_bool;
         }
 
-        void updateSteps()
+        public void updateSteps()
         {
             X_Steps = XmlController.GetXStep();
             Y_Steps = XmlController.GetYStep();
@@ -1016,13 +1028,28 @@ namespace WebApplication1
     {
         Misc.SmartThread paternThread;
         ThreadStart ts;
+        public string Name = "";
 
-        public Patern(string PaternName, Action action)
+        public Patern(string PaternName, Action action, Kontrola kontrola)
         {
+            Name = PaternName;
+            kontrola.StopPatern();
+
+            if (kontrola.Current != null && kontrola.Current.Name == Name)
+            {
+                Val.logocontroler.Prop1.Halt.SendPulse();
+                kontrola.Current = null;
+                return;
+            }
+            Val.logocontroler.Prop1.Start.SendPulse();
+
+            kontrola.Current = this;
+            kontrola.updateSteps();
+
             ts = new ThreadStart(action);
             paternThread = new Misc.SmartThread(ts);
             paternThread.Start(PaternName, ApartmentState.MTA, true);
-
+            
         }
 
         public void Stop()
