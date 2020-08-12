@@ -17,7 +17,7 @@ namespace WebApplication1
         bool _RobY2InProcess = false;
         bool _KrozenjeInProcess = false;
         bool _EnKrogInProcess = false;
-        bool permissionToRunLocal = false;
+     
 
         public bool ZigzagInProcess 
         { get { return _ZigzagInProcess; } set { _ZigzagInProcess = value; } }
@@ -355,7 +355,7 @@ namespace WebApplication1
             }
 
             prop1 = Val.logocontroler.Prop1;
-            permissionToRunLocal = true;
+           
             try
             {
                 while (true)

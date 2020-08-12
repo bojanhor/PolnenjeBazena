@@ -15,10 +15,10 @@ namespace WebApplication1
     {
         public class PageVzorci : Dsps
         {
-            string general_err_start_msg = "Sart ni mogoč. Preverite da je gumb AUTO vključen in da ni izpisanih ostalih napak na glavnem zaslonu.";
+            
 
             readonly Page thisPage;
-            readonly string Name;
+            
             readonly Prop1 prop1 = Val.logocontroler.Prop1;
             readonly Prop2 prop2 = Val.logocontroler.Prop2;
             readonly System.Web.SessionState.HttpSessionState session;
@@ -33,7 +33,7 @@ namespace WebApplication1
             GControls.ImageButtonWithID Krozenje;
             GControls.ImageButtonWithID Krog;
 
-            GControls.SuperLabel lbl_PolnenjeRobu; GControls.SuperLabel lbl_PolnenjeZigZag; GControls.SuperLabel lbl_PolnenjeZigZagzRobom;
+            GControls.SuperLabel lbl_PolnenjeRobu; GControls.SuperLabel lbl_PolnenjeZigZag;
             public GControls.SuperLabel Opozorilo;
             GControls.DropDownList_1_30 TimeZigY;
 

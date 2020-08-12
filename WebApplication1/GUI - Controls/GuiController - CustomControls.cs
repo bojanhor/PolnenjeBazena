@@ -1450,7 +1450,7 @@ namespace WebApplication1
 
             public class DropDownListForDimmerLUX : DropDown
             {
-                static readonly Datasourcer.DimmerSelectorDatasource datasource = new Datasourcer.DimmerSelectorDatasource();
+                static readonly Datasourcer.DimmerSelectorDatasource datasource = new Datasourcer.DimmerSelectorDatasource(10,0,100);
 
 
                 public DropDownListForDimmerLUX(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
@@ -1468,7 +1468,7 @@ namespace WebApplication1
 
             public class DropDownListForDimmerRPM : DropDown
             {
-                static readonly Datasourcer.DimmerSelectorDatasource datasource = new Datasourcer.DimmerSelectorDatasource();
+                static readonly Datasourcer.DimmerSelectorDatasource datasource = new Datasourcer.DimmerSelectorDatasource(10, 30,80);
 
 
                 public DropDownListForDimmerRPM(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)

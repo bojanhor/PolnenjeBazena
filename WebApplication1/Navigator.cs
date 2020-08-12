@@ -18,7 +18,7 @@ namespace WebApplication1
 
         static WarningManagerWebControl WarningManagerWebControl_;
 
-        static bool messagePending;
+        
         public static List<LoginTryData> LoginTryDataList = new List<LoginTryData>();
 
         static bool firstRequestover = false; // flag indicates if site is runned one cycle

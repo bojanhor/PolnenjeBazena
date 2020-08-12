@@ -21,15 +21,16 @@ namespace WebApplication1
 
         public PlcVars.Bit ZigZag; public PlcVars.Bit ZigZagzRobom;
         public PlcVars.Bit RobX1; public PlcVars.Bit RobY1; public PlcVars.Bit RobX2; public PlcVars.Bit RobY2;
-        public PlcVars.Word XImpulses; public PlcVars.Word YImpulses; public PlcVars.Word ImpulsesDisplayVal; public PlcVars.Word ImpulsesDisplayValRead;
+        public PlcVars.Word XImpulses; public PlcVars.Word YImpulses; public PlcVars.Word XImpulses2; public PlcVars.Word YImpulses2;
+        public PlcVars.Word ImpulsesDisplayVal; public PlcVars.Word ImpulsesDisplayValRead;
         public PlcVars.Word XPos; public PlcVars.Word YPos;
 
         public PlcVars.Bit Start; public PlcVars.Bit Stop;
 
         public PlcVars.Bit Man_AutoReadState;
 
-        public PlcVars.Bit Auto;
-        public PlcVars.Bit ResetPulse;
+        public PlcVars.Bit Auto;        
+        public PlcVars.Bit Inicializacija;
 
         public PlcVars.Bit DirX1; public PlcVars.Bit DirX2; public PlcVars.Bit DirY1; public PlcVars.Bit DirY2;
 
@@ -69,9 +70,9 @@ namespace WebApplication1
         {
             //PC Watchdog
             PCWD = new PlcVars.Word(this, new PlcVars.WordAddress(796), true) {SyncEvery_X_Time = 1 };
-            
+
             // Alarms
-            
+            AlarmInit = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(315, 0), "NAPAKA INICIALIZACIJE!", false, true) { SyncEvery_X_Time = 5 };
             CriticalMalfunction = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(316, 0), "Napaka končnih stikal X!", false, true) { SyncEvery_X_Time = 5 };
             CriticalMalfunction = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(317, 0), "Napaka končnih stikal Y!", false, true) { SyncEvery_X_Time = 5 };
             Starting = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(318, 0), "Zaganjanje naprave...", false, true) { SyncEvery_X_Time = 4 };
@@ -84,10 +85,13 @@ namespace WebApplication1
             Rocno_read = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(2, 0), "ROČNI NAČIN") { SyncEvery_X_Time = 3 };
             CakanjeMateriala = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(4, 0), "ČAKANJE MATERIALA") { SyncEvery_X_Time = 3 };
             CakanjeUkaza = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(5, 0), "ČAKANJE UKAZA") { SyncEvery_X_Time = 3 };
-            Halt = new PlcVars.Bit(this, new PlcVars.BitAddress(6,0), true) { SyncEvery_X_Time = 1 }; ;
+            Halt = new PlcVars.Bit(this, new PlcVars.BitAddress(6,0), true) { SyncEvery_X_Time = 1 };
 
             XImpulses = new PlcVars.Word(this, new PlcVars.WordAddress(210), true) { SyncEvery_X_Time = 3 };
             YImpulses = new PlcVars.Word(this, new PlcVars.WordAddress(212), true) { SyncEvery_X_Time = 3 };
+
+            XImpulses2 = new PlcVars.Word(this, new PlcVars.WordAddress(218), true) { SyncEvery_X_Time = 3 };
+            YImpulses2 = new PlcVars.Word(this, new PlcVars.WordAddress(220), true) { SyncEvery_X_Time = 3 };
 
             XPos = new PlcVars.Word(this, new PlcVars.WordAddress(310), false) { SyncEvery_X_Time = 1 };
             YPos = new PlcVars.Word(this, new PlcVars.WordAddress(312), false) { SyncEvery_X_Time = 1 };
@@ -101,7 +105,8 @@ namespace WebApplication1
             Man_AutoReadState = new PlcVars.Bit(this, new PlcVars.BitAddress(13, 0), false) { SyncEvery_X_Time = 3 };
 
             Auto = new PlcVars.Bit(this, new PlcVars.BitAddress(14, 0), true) { SyncEvery_X_Time = 2 };
-            
+            Inicializacija = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(15, 0), "--- INICIALIZACIJA ---") { SyncEvery_X_Time = 3 };
+
             DirX1 = new PlcVars.Bit(this, new PlcVars.BitAddress(20, 0), false) { SyncEvery_X_Time = 2 };
             DirX2 = new PlcVars.Bit(this, new PlcVars.BitAddress(22, 0), false) { SyncEvery_X_Time = 2 };
             DirY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(24, 0), false) { SyncEvery_X_Time = 2 };

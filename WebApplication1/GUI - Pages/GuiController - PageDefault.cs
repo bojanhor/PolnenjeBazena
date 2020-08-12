@@ -233,7 +233,7 @@ namespace WebApplication1
                     gb1.Controls.Add(gb2);
 
                     // speedSel
-                    spdlbl = new GControls.SuperLabel("Hitrost:", 64, 15, 20, 10) { FontSize = 1.2F }; ;
+                    spdlbl = new GControls.SuperLabel("Hitrost:", 64, 15, 20, 10) { FontSize = 1.2F };
                     speed = new GControls.DropDownListForDimmerRPM("Speedsel", prop1.SpeedRead.Value_string, 67, 2, 5, 1.5F, false, false);
                     speed.SaveClicked += Speed_SaveClicked;
                     OthersUP.Controls_Add(speed);
@@ -251,11 +251,19 @@ namespace WebApplication1
             private void BazenSel_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
             {
                 var selectedIndex = bazenSel.GetSelectedValue(); // gets index of selected dropdown item
+
                 var Ximpulses = XmlController.GetBazenTypeXImpulses(selectedIndex); // Gets value from XML about selected item
                 var Yimpulses = XmlController.GetBazenTypeYImpulses(selectedIndex);
 
+                var Ximpulses2 = XmlController.GetBazenTypeXImpulses2(selectedIndex); // Gets value from XML about selected item
+                var Yimpulses2 = XmlController.GetBazenTypeYImpulses2(selectedIndex);
+
                 prop1.XImpulses.Value_short = Ximpulses;
                 prop1.YImpulses.Value_short = Yimpulses;
+
+                prop1.XImpulses2.Value_short = Ximpulses2;
+                prop1.YImpulses2.Value_short = Yimpulses2;
+
                 prop1.ImpulsesDisplayVal.Value_short = selectedIndex;
             }
 

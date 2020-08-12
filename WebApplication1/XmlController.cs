@@ -966,7 +966,7 @@ namespace WebApplication1
                     throw new Exception();
                 }
 
-                var buff = XmlBazen.Element(searchValue + index + "_X_impulse").Value;
+                var buff = XmlBazen.Element(searchValue + index + "_X_impulseTo").Value;
                 var n = Convert.ToInt16(buff);
                 return n;
             }
@@ -989,7 +989,53 @@ namespace WebApplication1
                     throw new Exception();
                 }
 
-                var buff = XmlBazen.Element(searchValue + index + "_Y_impulse").Value;
+                var buff = XmlBazen.Element(searchValue + index + "_Y_impulseTo").Value;
+                var n = Convert.ToInt16(buff);
+                return n;
+            }
+            catch (Exception)
+            {
+                throw new Exception(searchValue + " value in config file is not valid " + searchValue + " value. " +
+                    "Correct the " + searchValue + " value in config or call your support administrator. " +
+                    "Index must be more than 0 and less than or equal to 20. Value in xml must be positive number.");
+            }
+        }
+
+        public static short GetBazenTypeXImpulses2(int index)
+        {
+            var searchValue = "BazenType";
+
+            try
+            {
+                if (index < 0 || index > 20)
+                {
+                    throw new Exception();
+                }
+
+                var buff = XmlBazen.Element(searchValue + index + "_X_impulseFrom").Value;
+                var n = Convert.ToInt16(buff);
+                return n;
+            }
+            catch (Exception)
+            {
+                throw new Exception(searchValue + " value in config file is not valid " + searchValue + " value. " +
+                    "Correct the " + searchValue + " value in config or call your support administrator. " +
+                    "Index must be more than 0 and less than or equal to 20. Value in xml must be positive number.");
+            }
+        }
+
+        public static short GetBazenTypeYImpulses2(int index)
+        {
+            var searchValue = "BazenType";
+
+            try
+            {
+                if (index < 0 || index > 20)
+                {
+                    throw new Exception();
+                }
+
+                var buff = XmlBazen.Element(searchValue + index + "_Y_impulseFrom").Value;
                 var n = Convert.ToInt16(buff);
                 return n;
             }

@@ -97,26 +97,22 @@ namespace WebApplication1
         {
             static string[] percents;
 
-            public DimmerSelectorDatasource()
+            public DimmerSelectorDatasource(int increment, int from, int to)
             {
-                GetDatasource();
+                GetDatasource(increment, from, to);
             }
 
-            public void GetDatasource()
-            {
-                GetDatasource(10);
-            }
-
-            public void GetDatasource(int increment)
+           
+            public void GetDatasource(int increment, int from, int to)
             {
 
-                percents = new string[100 / increment];
+                percents = new string[to / increment];
 
                 CreateRow(PropComm.NA, "0");
 
                 var buff = 0;
 
-                for (int i = 0; i < percents.Length + 1; i++)
+                for (int i = from; i < percents.Length + 1; i++)
                 {
                     CreateRow(buff + "%", buff.ToString());
                     buff += increment;
