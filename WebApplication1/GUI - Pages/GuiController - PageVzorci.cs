@@ -28,8 +28,12 @@ namespace WebApplication1
             public GControls.GroupBox gb_Rob; public GControls.GroupBox gb_ZigZag;
             List<GControls.ImageButtonWithID> RobList = new List<GControls.ImageButtonWithID>();
             GControls.ImageButtonWithID RobX1, RobY1, RobX2, RobY2;
+            GControls.ImageButtonWithID ZigZag_zRobom;
             GControls.ImageButtonWithID ZigZag;
-            GControls.SuperLabel lbl_PolnenjeRobu; GControls.SuperLabel lbl_PolnenjeZigZag;
+            GControls.ImageButtonWithID Krozenje;
+            GControls.ImageButtonWithID Krog;
+
+            GControls.SuperLabel lbl_PolnenjeRobu; GControls.SuperLabel lbl_PolnenjeZigZag; GControls.SuperLabel lbl_PolnenjeZigZagzRobom;
             public GControls.SuperLabel Opozorilo;
             GControls.DropDownList_1_30 TimeZigY;
 
@@ -59,21 +63,39 @@ namespace WebApplication1
 
 
                 gb_ZigZag = new GControls.GroupBox(20, 50, 40, 70);
+
                 lbl_PolnenjeZigZag = new GControls.SuperLabel("POLNENJE ZigZag", 5, 20, 50, 5) { FontSize = 1.5F };
                 gb_ZigZag.Controls.Add(lbl_PolnenjeZigZag);
                 ZigZag = new GControls.ImageButtonWithID("Zig", 0); if (prop1.ZigZag_read.Value_bool) { ZigZag.ImageUrl = "~/Pictures/Zig1_on.png"; } else { ZigZag.ImageUrl = "~/Pictures/Zig1.png"; };
                 gb_ZigZag.Controls.Add(ZigZag); SetControlAbsolutePos(ZigZag, top, left, size);
 
-                ZigZag.Click += ZigZag_Click;
+                ZigZag.Click += ZigZag_Click;                
+               
+                ZigZag_zRobom = new GControls.ImageButtonWithID("ZigzRobom", 0); if (prop1.ZigZagzRobom_read.Value_bool) { ZigZag_zRobom.ImageUrl = "~/Pictures/Zig1zRobom_on.png"; } else { ZigZag_zRobom.ImageUrl = "~/Pictures/Zig1zRobom.png"; };
+                gb_ZigZag.Controls.Add(ZigZag_zRobom); SetControlAbsolutePos(ZigZag_zRobom, top+ offset, left, size);
 
-
+                ZigZag_zRobom.Click += ZigZag_zRobom_Click;
+                              
+                                
                 Opozorilo = new GControls.SuperLabel("Pred začetkom dela preverite, da je izbran pravi bazen!", 13, 30, 60, 10) { FontSize = 1.5F };
                 Opozorilo.Style.Add(HtmlTextWriterStyle.Color, Settings.RedColorHtmlHumar);
                 Opozorilo.Style.Add(HtmlTextWriterStyle.FontWeight, "bold");
 
-
             }
 
+            private void ZigZag_zRobom_Click(object sender, ImageClickEventArgs e)
+            {
+                Val.Kontrola.StopPatern();
+                prop1.ZigZagzRobom.SendPulse();
+                if (Val.Kontrola.StartZigZagzRobom())
+                {
+                    //Navigator.Redirect("Default");
+                }
+                else
+                {
+                    //Navigator.MessageBox(general_err_start_msg);
+                }
+            }
 
             private void ZigZag_Click(object sender, ImageClickEventArgs e)
             {

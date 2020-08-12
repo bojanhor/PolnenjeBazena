@@ -75,27 +75,35 @@ namespace WebApplication1
         {
             while (true)
             {
-                                
-                foreach (var item in PlcVars.AllAlarmMessageVars)
+
+                try
                 {
-                    if (item != null)
+                    foreach (var item in PlcVars.AllAlarmMessageVars)
                     {
-                        if (item.Value == !item.InvertState)
+                        if (item != null)
                         {
-                            if (!DoesItExist(item.Message, SporocilaZaPrikaz))
+                            if (item.Value == !item.InvertState)
                             {
-                                SporocilaZaPrikaz.Add(item); // adds message to display if it does not exist yet   if alarm bool is == 1
-                            }                            
-                        }
-                        else
-                        {
-                            if (DoesItExist(item.Message, SporocilaZaPrikaz))
+                                if (!DoesItExist(item.Message, SporocilaZaPrikaz))
+                                {
+                                    SporocilaZaPrikaz.Add(item); // adds message to display if it does not exist yet   if alarm bool is == 1
+                                }
+                            }
+                            else
                             {
-                                SporocilaZaPrikaz.Remove(item);// removes message to display if it exists   if alarm bool is == 0
+                                if (DoesItExist(item.Message, SporocilaZaPrikaz))
+                                {
+                                    SporocilaZaPrikaz.Remove(item);// removes message to display if it exists   if alarm bool is == 0
+                                }
                             }
                         }
-                    }                    
+                    }
                 }
+                catch (Exception ex)
+                {
+                    SysLog.SetMessage("Napaka v sporočilnem sistemu: " + ex.Message);  
+                }
+                
 
                
                 Thread.Sleep(500);

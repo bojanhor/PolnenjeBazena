@@ -10752,3 +10752,109 @@
 11.08.2020  15:46:52 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
 11.08.2020  15:46:53 : Logo2: Connected
 11.08.2020  15:46:53 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+12.08.2020  09:56:34 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+12.08.2020  09:56:34 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+12.08.2020  09:56:34 : Logo1: Connecting...
+12.08.2020  09:56:34 : Logo2: Connecting...
+12.08.2020  09:56:35 : Logo1: Connected
+12.08.2020  09:56:35 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+12.08.2020  09:56:36 : Redirected to: Vzorci
+12.08.2020  09:56:38 : Logo2: TCP : Connection Error
+12.08.2020  09:56:38 : Logo1: Running connection diagnostics...
+12.08.2020  09:56:42 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+12.08.2020  09:56:44 : Logo2: Connection failed. Trying to reconnect
+12.08.2020  09:56:44 : Logo2: CLI : Client not connected
+12.08.2020  09:56:44 : Logo2: Connection error: CLI : Client not connected
+12.08.2020  09:59:44 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+12.08.2020  09:59:44 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+12.08.2020  09:59:44 : Logo1: Connecting...
+12.08.2020  09:59:44 : Logo2: Connecting...
+12.08.2020  09:59:45 : Logo1: Connected
+12.08.2020  09:59:45 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+12.08.2020  10:00:00 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+12.08.2020  10:00:00 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+12.08.2020  10:00:00 : Logo1: Connecting...
+12.08.2020  10:00:00 : Logo2: Connecting...
+12.08.2020  10:00:01 : Logo1: Connected
+12.08.2020  10:00:01 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+12.08.2020  10:00:02 : Redirected to: Vzorci
+12.08.2020  10:00:04 : Logo2: TCP : Connection Error
+12.08.2020  10:00:04 : Logo1: Running connection diagnostics...
+12.08.2020  10:00:07 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+12.08.2020  10:00:36 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+12.08.2020  10:00:36 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+12.08.2020  10:00:36 : Logo1: Connecting...
+12.08.2020  10:00:37 : Logo2: Connecting...
+12.08.2020  10:00:38 : Logo1: Connected
+12.08.2020  10:00:38 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+12.08.2020  10:00:38 : Redirected to: Vzorci
+12.08.2020  10:00:41 : Logo2: TCP : Connection Error
+12.08.2020  10:00:41 : Logo1: Running connection diagnostics...
+12.08.2020  10:00:44 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+12.08.2020  10:01:45 : Logo1: Connecting...
+12.08.2020  10:01:45 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+12.08.2020  10:01:45 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+12.08.2020  10:01:45 : Logo2: Connecting...
+12.08.2020  10:01:46 : Logo1: Connected
+12.08.2020  10:01:46 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+12.08.2020  10:01:49 : Logo2: TCP : Connection Error
+12.08.2020  10:01:49 : Logo1: Running connection diagnostics...
+12.08.2020  10:01:52 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+12.08.2020  10:01:54 : Logo2: Connection failed. Trying to reconnect
+12.08.2020  10:01:54 : Logo2: CLI : Client not connected
+12.08.2020  10:01:54 : Logo2: Connection error: CLI : Client not connected
+12.08.2020  10:01:57 : Logo1: Running connection diagnostics...
+12.08.2020  10:02:00 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+12.08.2020  10:02:03 : Logo2: Connection failed. Trying to reconnect
+12.08.2020  10:02:03 : Logo1: Running connection diagnostics...
+12.08.2020  10:02:56 : Napaka v sporočilnem sistemu: Collection was modified; enumeration operation may not execute.
+12.08.2020  10:02:56 : Logo1: Connecting...
+12.08.2020  10:02:56 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+12.08.2020  10:02:56 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+12.08.2020  10:02:56 : Logo2: Connecting...
+12.08.2020  10:02:57 : Logo1: Connected
+12.08.2020  10:02:57 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+12.08.2020  10:02:58 : Redirected to: Vzorci
+12.08.2020  10:03:00 : Logo2: TCP : Connection Error
+12.08.2020  10:03:00 : Logo1: Running connection diagnostics...
+12.08.2020  10:03:04 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+12.08.2020  10:03:06 : Logo2: Connection failed. Trying to reconnect
+12.08.2020  10:03:06 : Logo2: CLI : Client not connected
+12.08.2020  10:03:06 : Logo2: Connection error: CLI : Client not connected
+12.08.2020  10:03:09 : Logo1: Running connection diagnostics...
+12.08.2020  10:03:12 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+12.08.2020  10:03:15 : Logo2: Connection failed. Trying to reconnect
+12.08.2020  10:03:15 : Logo1: Running connection diagnostics...
+12.08.2020  10:03:18 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+12.08.2020  10:04:08 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+12.08.2020  10:04:08 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+12.08.2020  10:04:08 : Logo1: Connecting...
+12.08.2020  10:04:08 : Logo2: Connecting...
+12.08.2020  10:04:09 : Logo1: Connected
+12.08.2020  10:04:09 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+12.08.2020  10:04:10 : Redirected to: Vzorci
+12.08.2020  10:04:12 : Logo2: TCP : Connection Error
+12.08.2020  10:04:12 : Logo1: Running connection diagnostics...
+12.08.2020  10:04:15 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+12.08.2020  10:04:43 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+12.08.2020  10:04:43 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+12.08.2020  10:04:43 : Logo1: Connecting...
+12.08.2020  10:04:43 : Logo2: Connecting...
+12.08.2020  10:04:44 : Logo1: Connected
+12.08.2020  10:04:44 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+12.08.2020  10:04:45 : Redirected to: Vzorci
+12.08.2020  10:04:47 : Logo2: TCP : Connection Error
+12.08.2020  10:04:47 : Logo1: Running connection diagnostics...
+12.08.2020  10:04:50 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+12.08.2020  10:04:53 : Logo2: Connection failed. Trying to reconnect
+12.08.2020  10:04:53 : Logo2: CLI : Client not connected
+12.08.2020  10:04:53 : Logo2: Connection error: CLI : Client not connected
+12.08.2020  10:04:56 : Logo1: Running connection diagnostics...
+12.08.2020  10:04:59 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+12.08.2020  10:05:01 : Logo2: Connection failed. Trying to reconnect
+12.08.2020  10:05:01 : Logo1: Running connection diagnostics...
+12.08.2020  10:05:05 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+12.08.2020  10:05:07 : Logo2: Connection failed. Trying to reconnect
+12.08.2020  10:05:07 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+12.08.2020  10:05:07 : Logo2: Connection error: CLI : Client not connected
+12.08.2020  10:05:10 : Logo1: Running connection diagnostics...
