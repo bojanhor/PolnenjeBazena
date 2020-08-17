@@ -13,7 +13,7 @@ namespace WebApplication1
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Navigator.EveryPageProtocol("Meni", this, Session, TemplateClassID, false, true, true, true, true, true);
+            Navigator.EveryPageProtocol("Meni", this, Session, TemplateClassID, false, Navigator.PageLogoType.WithLogo, true, true, true, true);
             Val.guiController.PageMastermenu_ = new GuiController.PageMasterMenu(this);
            
             Initialise();

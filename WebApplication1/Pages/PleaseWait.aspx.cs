@@ -11,7 +11,7 @@ namespace WebApplication1.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Navigator.EveryPageProtocol("Please Wait", this, Session, TemplateClassID,false, true,false, false, false, false);
+            Navigator.EveryPageProtocol("Please Wait", this, Session, TemplateClassID,false, Navigator.PageLogoType.WithLogo, false, false, false, false);
 
             var top = 20;
             var left = 27;

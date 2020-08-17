@@ -12,7 +12,7 @@ namespace WebApplication1.Pages
               
         protected void Page_Load(object sender, EventArgs e)
         {
-            Navigator.EveryPageProtocol("Vzorci", this, Session, TemplateClass);
+            Navigator.EveryPageProtocol("Vzorci", this, Session, TemplateClass, true, Navigator.PageLogoType.WithEmtySpaceForLogo, true, true, true, true);
             Val.guiController.PageVzorci_ = new GuiController.PageVzorci(this, Session);         
 
 
@@ -25,7 +25,10 @@ namespace WebApplication1.Pages
             Val.guiController.PageVzorci_.UP.Controls_Add(Val.guiController.PageVzorci_.gb_ZigZag);
             TemplateClass.Controls.Add(Val.guiController.PageVzorci_.Opozorilo);
             TemplateClass.Controls.Add(Val.guiController.PageVzorci_.UP);
+            TemplateClass.Controls.Add(Val.guiController.PageVzorci_.GlobalControls);
         }
+
+        
                
         
         protected void Timer1_Tick(object sender, EventArgs e)

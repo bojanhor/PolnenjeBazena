@@ -11,7 +11,7 @@ namespace WebApplication1.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Navigator.EveryPageProtocol("Vpis", this, Session, TemplateClassID, false, true, false, false, true, false);
+            Navigator.EveryPageProtocol("Vpis", this, Session, TemplateClassID, false, Navigator.PageLogoType.WithLogo, false, false, true, false);
             Val.guiController.PageLogin_ = new GuiController.PageLogin(this, Session, TemplateClassID);           
             
         }

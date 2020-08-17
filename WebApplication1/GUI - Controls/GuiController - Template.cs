@@ -66,7 +66,7 @@ namespace WebApplication1
                     Environment.NewLine;
             }
 
-            public static void CreateBackground(Page thisPage, HtmlGenericControl TemplateClassID, bool hasLogo, bool hasHomeBtn)
+            public static void CreateBackground(Page thisPage, HtmlGenericControl TemplateClassID, Navigator.PageLogoType hasLogo, bool hasHomeBtn)
             {
                 try
                 {
@@ -87,9 +87,13 @@ namespace WebApplication1
                     TemplateImage.Attributes.Add("id", "BackGroundPic");
 
                     
-                    if (hasLogo)
+                    if (hasLogo == Navigator.PageLogoType.WithLogo)
                     {
                         TemplateImage.ImageUrl = "~/Pictures/TemplateImage.png";
+                    }
+                    else if (hasLogo == Navigator.PageLogoType.WithEmtySpaceForLogo)
+                    {
+                        TemplateImage.ImageUrl = "~/Pictures/TemplateImage_emptylogo.png";
                     }
                     else
                     {
@@ -114,14 +118,14 @@ namespace WebApplication1
 
             }
 
-            public void CreateTitleLabel(Page page, HtmlGenericControl TemplateClassID, bool hasLogo, string FriendlyPageName)
+            public void CreateTitleLabel(Page page, HtmlGenericControl TemplateClassID, Navigator.PageLogoType hasLogo, string FriendlyPageName)
             {
                 var LabelPagename = Val.guiController.Template_.PageName;                
                 SetControlAbsolutePos(LabelPagename, 17, 0, 100, 83);
                 LabelPagename.Text = FriendlyPageName;
 
                 HtmlGenericControl divPagename;
-                if (hasLogo)
+                if (hasLogo == Navigator.PageLogoType.WithLogo || hasLogo == Navigator.PageLogoType.WithEmtySpaceForLogo)
                 {
                     divPagename = DIV.CreateDivAbsolute("0%", "33%", "30%", "5%");
                 }
@@ -139,14 +143,14 @@ namespace WebApplication1
                 page.Controls.Add(divPagename);
             }
 
-            public void CreateBackButton(Page page, System.Web.SessionState.HttpSessionState session, HtmlGenericControl TemplateClassID, bool hasLogo)
+            public void CreateBackButton(Page page, System.Web.SessionState.HttpSessionState session, HtmlGenericControl TemplateClassID, Navigator.PageLogoType hasLogo)
             {
                 PrevButton = new ImageButton()
                 {
                     ImageUrl = "~/Pictures/prv.png",
                     Width = Unit.Percentage(1.6)
                 };
-                if (hasLogo)
+                if (hasLogo == Navigator.PageLogoType.WithLogo || hasLogo == Navigator.PageLogoType.WithEmtySpaceForLogo)
                 {
                     SetControlAbsolutePos(PrevButton, 0.8F, 30);
                 }
