@@ -37,7 +37,7 @@ namespace WebApplication1
             GControls.ImageButtonWithID btnStop;           
             GControls.OnOffButton btnTrak;
             GControls.ImageButtonWithID btnCirc;
-            GControls.DropDownListForBazenSel bazenSel;
+            public GControls.DropDownListForBazenSel bazenSel;
 
             // Semaphore
             GControls.GroupBox gb2;
@@ -74,27 +74,15 @@ namespace WebApplication1
             public PageDefault(Page _thisPage, System.Web.SessionState.HttpSessionState session)
             {
                 this.session = session;
-
-                if (SessionHelper.GetCurrentUser() == "Local") // prvi username v config
-                {
-                    ConvUP = new GControls.UpdatePanelFull("ConveyorUpdatePanel", Settings.Updateanimations);
-                    SemaphoreUP = new GControls.UpdatePanelFull("SemaphoreUP", Settings.UpdateValuesPCms / 3);
-                    OthersUP = new GControls.UpdatePanelFull("OthersUP", Settings.UpdateValuesPCms/2);
-                    JoystickUP = new GControls.UpdatePanelFull("JoystickUP", Settings.UpdateValuesPCms/2);
-                    WarningsUP = new GControls.UpdatePanelFull("WarningsUP", Settings.UpdateValuesPCms);
-                }
-                else
-                {
+               
                     ConvUP = new GControls.UpdatePanelFull("ConveyorUpdatePanel", Settings.UpdateValuesPCms);
                     SemaphoreUP = new GControls.UpdatePanelFull("SemaphoreUP", Settings.UpdateValuesPCms / 2);
                     OthersUP = new GControls.UpdatePanelFull("OthersUP", Settings.UpdateValuesPCms);
                     JoystickUP = new GControls.UpdatePanelFull("JoystickUP", Settings.UpdateValuesPCms);
                     WarningsUP = new GControls.UpdatePanelFull("WarningsUP", Settings.UpdateValuesPCms);
-                }
-
-                
                 
 
+                
 
                 try
                 {
@@ -179,7 +167,7 @@ namespace WebApplication1
                 try
                 {                    
 
-                    btnStart = new GControls.StartPauseButton("Start", 1, prop1.Man_AutoReadState.Value_bool, prop1.Start, prop1.Halt); 
+                    btnStart = new GControls.StartPauseButton("Start", 1, prop1.Man_AutoReadState.Value_bool, prop1.Start, prop1.Pause); 
                     SetControlAbsolutePos(btnStart, top, left, size);
                     top += dif; OthersUP.Controls_Add(btnStart);
 
@@ -245,23 +233,27 @@ namespace WebApplication1
 
             private void BazenSel_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
             {
-                var selectedIndex = bazenSel.GetSelectedValue(); // gets index of selected dropdown item
+                setHWLimits();
+            }
 
-                var Ximpulses = XmlController.GetBazenTypeXImpulses(selectedIndex); // Gets value from XML about selected item
-                var Yimpulses = XmlController.GetBazenTypeYImpulses(selectedIndex);
+           public void setHWLimits()
+            {
+                var selectedIndex = bazenSel.GetSelectedValue(); // gets index of selected dropdown item  
+                if (selectedIndex == 0)
+                {
+                    return;
+                }
 
-                var Ximpulses2 = XmlController.GetBazenTypeXImpulses2(selectedIndex); // Gets value from XML about selected item
-                var Yimpulses2 = XmlController.GetBazenTypeYImpulses2(selectedIndex);
+                Val.Kontrola.selectedBazen = selectedIndex;
 
-                prop1.XImpulses.Value_short = Ximpulses;
-                prop1.YImpulses.Value_short = Yimpulses;
+                prop1.XImpulses.Value_short = XmlController.GetBazenTypeXImpulses(selectedIndex); // Gets value from XML about selected item;
+                prop1.YImpulses.Value_short = XmlController.GetBazenTypeYImpulses(selectedIndex); ;
 
-                prop1.XImpulses2.Value_short = Ximpulses2;
-                prop1.YImpulses2.Value_short = Yimpulses2;
+                prop1.XImpulses2.Value_short = XmlController.GetBazenTypeXImpulses2(selectedIndex); // Gets value from XML about selected item;
+                prop1.YImpulses2.Value_short = XmlController.GetBazenTypeYImpulses2(selectedIndex); ;
 
                 prop1.ImpulsesDisplayVal.Value_short = selectedIndex;
             }
-
             
             void Stanje()
             {

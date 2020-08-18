@@ -9,6 +9,7 @@ namespace WebApplication1
     public class Kontrola
     {
         Prop1 prop1;
+        public short selectedBazen;
         bool _ZigzagInProcess = false;
         bool _ZigzagzRobomInProcess = false;
         bool _RobX1InProcess = false;
@@ -36,10 +37,11 @@ namespace WebApplication1
         public bool EnKrogInProcess 
         { get { return _EnKrogInProcess; } set { _EnKrogInProcess = value; } }
 
-        public Patern Current;
+        private Patern current;
+        public Patern Current 
+        { get { return current; } set { current = value; } }
+
         int MaxWaitTime_s = 60;
-        int X_Steps = XmlController.GetXStep();
-        int Y_Steps = XmlController.GetYStep();
 
         public Kontrola()
         {            
@@ -161,6 +163,7 @@ namespace WebApplication1
             while (true)
             {
                 buff = DecideZigZagPatern(buff);
+                Thread.Sleep(50); // safety
             }
 
         }
@@ -176,6 +179,7 @@ namespace WebApplication1
                 buff = DecideZigZagPatern(buff);
                 buff = DecideRobPaternForZigZag(buff);
                 buff = DecideZigZagPatern(buff);
+                Thread.Sleep(50); // safety
             }
 
         }
@@ -355,10 +359,11 @@ namespace WebApplication1
             }
 
             prop1 = Val.logocontroler.Prop1;
-           
+            int cnt = 0;
             try
             {
-                while (true)
+                
+                while(true)
                 {
                     if (isUp())
                     {
@@ -378,9 +383,21 @@ namespace WebApplication1
                     {
                         stopRght();
                     }
-                                        
-                   
-                    Thread.Sleep(150);
+
+                    if (cnt >= 5)
+                    {
+                        if (Val.guiController.PageDefault_ != null)
+                        {
+                            Val.guiController.PageDefault_.setHWLimits();
+                            cnt = 0;
+                        }
+                    }
+                    if (prop1.Ustavljeno.Value_bool)
+                    {
+
+                    }
+                    cnt++;
+                    Thread.Sleep(200);
                 }
             }
             catch (Exception ex)
@@ -426,7 +443,7 @@ namespace WebApplication1
                     goLft();
                     goUpFor();
                 }
-
+                Thread.Sleep(50); // safety
             }
         }
         PaternStartPos ZigZagCrossFromX2Y1()
@@ -455,7 +472,7 @@ namespace WebApplication1
                     goRght();
                     goUpFor();
                 }
-
+                Thread.Sleep(50); // safety
             }
 
         }
@@ -486,7 +503,7 @@ namespace WebApplication1
                     goUp();
                     goRghtFor();
                 }
-
+                Thread.Sleep(50); // safety
             }
 
         }
@@ -515,6 +532,7 @@ namespace WebApplication1
                     goRght();
                     goDwnFor();
                 }
+                Thread.Sleep(50); // safety
             }
 
         }
@@ -588,6 +606,7 @@ namespace WebApplication1
             {
                 goRght();
                 goLft();
+                Thread.Sleep(50); // safety
             }
 
         }
@@ -603,6 +622,7 @@ namespace WebApplication1
             {
                 goUp();
                 goDwn();
+                Thread.Sleep(50); // safety
             }
 
 
@@ -619,6 +639,7 @@ namespace WebApplication1
             {
                 goDwn();
                 goUp();
+                Thread.Sleep(50); // safety
             }
 
 
@@ -635,6 +656,7 @@ namespace WebApplication1
             {
                 goLft();
                 goRght();
+                Thread.Sleep(50); // safety
             }
 
 
@@ -668,6 +690,7 @@ namespace WebApplication1
                 goUp();
                 goLft();
                 goDwn();
+                Thread.Sleep(50); // safety
             }
 
         }
@@ -680,14 +703,8 @@ namespace WebApplication1
 
         void goUpFor()
         {
-            var impulses = Y_Steps;
-            if (impulses < 1)
-            {
-                impulses = 1; // safety check value
-            }
-
             var currentPosY = prop1.YPos.Value_short;
-            var targetPosY = currentPosY + impulses;
+            var targetPosY = currentPosY + XmlController.GetYStep();
             DateTime dtStart = DateTime.Now;
             DateTime dtStop = dtStart.AddSeconds(MaxWaitTime_s);
             goUp_NoWait();
@@ -720,14 +737,8 @@ namespace WebApplication1
 
         void goDwnFor()
         {
-            var impulses = Y_Steps;
-            if (impulses < 1)
-            {
-                impulses = 1; // safety check value
-            }
-
             var currentPosY = prop1.YPos.Value_short;
-            var targetPosY = currentPosY - impulses;
+            var targetPosY = currentPosY - XmlController.GetYStep();
             DateTime dtStart = DateTime.Now;
             DateTime dtStop = dtStart.AddSeconds(MaxWaitTime_s);
             goDwn_NoWait();
@@ -761,14 +772,9 @@ namespace WebApplication1
 
         void goRghtFor()
         {
-            var impulses = X_Steps;
-            if (impulses < 1)
-            {
-                impulses = 1; // safety check value
-            }
 
             var currentPosX = prop1.XPos.Value_short;
-            var targetPosX = currentPosX + impulses;
+            var targetPosX = currentPosX + XmlController.GetXStep();
             DateTime dtStart = DateTime.Now;
             DateTime dtStop = dtStart.AddSeconds(MaxWaitTime_s);
             goRght_NoWait();
@@ -801,14 +807,8 @@ namespace WebApplication1
 
         void goLftFor()
         {
-            var impulses = X_Steps;
-            if (impulses < 1)
-            {
-                impulses = 1; // safety check value
-            }
-
             var currentPosX = prop1.XPos.Value_short;
-            var targetPosX = currentPosX - impulses;
+            var targetPosX = currentPosX - XmlController.GetXStep();
             DateTime dtStart = DateTime.Now;
             DateTime dtStop = dtStart.AddSeconds(MaxWaitTime_s);
             goLft_NoWait();
@@ -1012,11 +1012,6 @@ namespace WebApplication1
             return prop1.ReadKSX2.Value_bool;
         }
 
-        public void updateSteps()
-        {
-            X_Steps = XmlController.GetXStep();
-            Y_Steps = XmlController.GetYStep();
-        }
     }
 
     enum PaternStartPos
@@ -1044,7 +1039,6 @@ namespace WebApplication1
             Val.logocontroler.Prop1.Start.SendPulse();
 
             kontrola.Current = this;
-            kontrola.updateSteps();
 
             ts = new ThreadStart(action);
             paternThread = new Misc.SmartThread(ts);
@@ -1056,6 +1050,7 @@ namespace WebApplication1
         {            
             paternThread.ForceAbort();
         }
+
 
     }
 }

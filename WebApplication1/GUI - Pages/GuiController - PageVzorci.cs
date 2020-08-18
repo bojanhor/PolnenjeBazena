@@ -35,7 +35,6 @@ namespace WebApplication1
 
             GControls.SuperLabel lbl_PolnenjeRobu; GControls.SuperLabel lbl_PolnenjeZigZag;
             public GControls.SuperLabel Opozorilo;
-            GControls.DropDownList_1_30 TimeZigY;
 
 
 
@@ -90,7 +89,7 @@ namespace WebApplication1
                 var prop = Val.logocontroler.Prop1;
 
                 GControls.UpdatePanelFull up = new GControls.UpdatePanelFull("up_startPause", Settings.UpdateValuesPCms);
-                GControls.StartPauseButton Start = new GControls.StartPauseButton("Stop", 0, prop.Man_AutoReadState.Value_bool, prop.Start, prop.Halt);
+                GControls.StartPauseButton Start = new GControls.StartPauseButton("Start", 0, prop.Man_AutoReadState.Value_bool, prop.Start, prop.Pause);
                 SetControlAbsolutePos(Start, 2, 2, 50);
 
                 GlobalControls = DIV.CreateDivAbsolute(1,1,20,20,"%");

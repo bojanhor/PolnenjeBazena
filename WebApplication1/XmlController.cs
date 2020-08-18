@@ -441,7 +441,7 @@ namespace WebApplication1
                     }
 
                     XmlControllerInitialized = true;
-                    System.Threading.Thread.Sleep(1); // mandatory wait
+                    System.Threading.Thread.Sleep(100); // mandatory wait
                 }
                 catch (Exception ex)
                 {

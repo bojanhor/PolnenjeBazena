@@ -90,7 +90,7 @@
 			<localTSAP>"03.00"</localTSAP>//
 			<remoteTSAP>"02.00"</remoteTSAP>//		
 			<watchdogAddress>800</watchdogAddress>//
-			<ReadWriteCycle>100</ReadWriteCycle>//
+			<ReadWriteCycle>150</ReadWriteCycle>//
 		</LOGO2>//
 	  //
 		<LOGO3>//
