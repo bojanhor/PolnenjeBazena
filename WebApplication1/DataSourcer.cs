@@ -106,13 +106,13 @@ namespace WebApplication1
             public void GetDatasource(int increment, int from, int to)
             {
 
-                percents = new string[to / increment];
+                percents = new string[(to-from) / increment];
 
                 CreateRow(PropComm.NA, "0");
 
-                var buff = 0;
+                var buff = from;
 
-                for (int i = from; i < percents.Length + 1; i++)
+                for (int i = 0; i < percents.Length + 1; i++)
                 {
                     CreateRow(buff + "%", buff.ToString());
                     buff += increment;
