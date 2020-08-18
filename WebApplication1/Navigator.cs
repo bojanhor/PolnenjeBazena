@@ -225,15 +225,15 @@ namespace WebApplication1
 
         public static void EveryPageProtocol(string FriendlyPageNamePage, Page _thisPage, HttpSessionState session, HtmlGenericControl TemplateClassID)
         {
-            EveryPageProtocol(FriendlyPageNamePage, _thisPage, session, TemplateClassID, true, true);
+            EveryPageProtocol(FriendlyPageNamePage, _thisPage, session, TemplateClassID, true, Navigator.PageLogoType.WithLogo);
         }
 
-        public static void EveryPageProtocol(string FriendlyPageNamePage, Page _thisPage, HttpSessionState session, HtmlGenericControl TemplateClassID, bool hasMenuBtn, bool hasLogo)
+        public static void EveryPageProtocol(string FriendlyPageNamePage, Page _thisPage, HttpSessionState session, HtmlGenericControl TemplateClassID, bool hasMenuBtn, PageLogoType hasLogo)
         {
             EveryPageProtocol(FriendlyPageNamePage, _thisPage, session, TemplateClassID, hasMenuBtn, hasLogo, true, true, true, true);
         }
 
-        public static void EveryPageProtocol(string FriendlyPageNamePage, Page _thisPage, HttpSessionState session, HtmlGenericControl TemplateClass, bool hasMenuBtn, bool hasLogo, bool hasBackBtn, bool hasHomeBtn, bool hasClock, bool hasWarningIcon)
+        public static void EveryPageProtocol(string FriendlyPageNamePage, Page _thisPage, HttpSessionState session, HtmlGenericControl TemplateClass, bool hasMenuBtn, PageLogoType hasLogo, bool hasBackBtn, bool hasHomeBtn, bool hasClock, bool hasWarningIcon)
         {
             // AddTitle
             addTabTitle(_thisPage, FriendlyPageNamePage);
@@ -648,6 +648,13 @@ namespace WebApplication1
         {
             string title = pageTtitle;
             page.Header.Title = char.ToUpper(title[0]) + title.Substring(1);
+        }
+
+        public enum PageLogoType
+        { 
+            WithLogo,
+            WithEmtySpaceForLogo,
+            NoLogo
         }
     }
 }

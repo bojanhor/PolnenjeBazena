@@ -33,9 +33,8 @@ namespace WebApplication1
             GControls.DropDownListForDimmerRPM speed;
 
             GControls.GroupBox gb1;
-            GControls.ImageButtonWithID btnStart;
-            GControls.ImageButtonWithID btnStop;
-            GControls.OnOffButton btnAuto;
+            GControls.StartPauseButton btnStart;
+            GControls.ImageButtonWithID btnStop;           
             GControls.OnOffButton btnTrak;
             GControls.ImageButtonWithID btnCirc;
             GControls.DropDownListForBazenSel bazenSel;
@@ -180,19 +179,15 @@ namespace WebApplication1
                 try
                 {                    
 
-                    btnStart = new GControls.ImageButtonWithID("Start", 1)
-                    { ImageUrl = ImageUrl("Start1") }; SetControlAbsolutePos(btnStart, top, left, size); btnStart.Click += BtnStart_Click;
-                    top += dif; gb1.Controls.Add(btnStart);
+                    btnStart = new GControls.StartPauseButton("Start", 1, prop1.Man_AutoReadState.Value_bool, prop1.Start, prop1.Halt); 
+                    SetControlAbsolutePos(btnStart, top, left, size);
+                    top += dif; OthersUP.Controls_Add(btnStart);
 
                     btnStop = new GControls.ImageButtonWithID("Stop", 1)
                     { ImageUrl = ImageUrl("Stop1") }; SetControlAbsolutePos(btnStop, top, left, size); btnStop.Click += BtnStop_Click;
 
                     top += dif + 2; gb1.Controls.Add(btnStop);
-
-                    btnAuto = new GControls.OnOffButton("Pavza / Auto", 1, prop1.Man_AutoReadState.Value_bool, new Helper.Position(top, left, size), GControls.OnOffButton.Type.WithText);
-                    btnAuto.button.Click += BtnAuto_Click1;
-                    top += dif; OthersUP.Controls_Add(btnAuto);
-
+                                        
                     btnTrak = new GControls.OnOffButton("Trak", 1, prop1.TrakRead.Value_bool, new Helper.Position(top, left, size), GControls.OnOffButton.Type.WithText);
                     btnTrak.button.Click += BtnTrak_Click;
                     top += dif; OthersUP.Controls_Add(btnTrak);
@@ -234,7 +229,7 @@ namespace WebApplication1
 
                     // speedSel
                     spdlbl = new GControls.SuperLabel("Hitrost:", 64, 15, 20, 10) { FontSize = 1.2F };
-                    speed = new GControls.DropDownListForDimmerRPM("Speedsel", prop1.SpeedRead.Value_string, 67, 2, 5, 1.5F, false, false);
+                    speed = new GControls.DropDownListForDimmerRPM("Speedsel", prop1.SpeedRead.Value_string, 67, 2, 5.9F, 1.5F, false, false);
                     speed.SaveClicked += Speed_SaveClicked;
                     OthersUP.Controls_Add(speed);
                     
@@ -542,7 +537,7 @@ namespace WebApplication1
 
             private void BtnTrak_Click(object sender, ImageClickEventArgs e)
             {
-                Val.logocontroler.Prop1.Trak_muss.ToggleValue();
+                Val.logocontroler.Prop1.Trak_muss.SendPulse();
             }
 
             private void BtnStop_Click(object sender, ImageClickEventArgs e)
@@ -551,13 +546,7 @@ namespace WebApplication1
                 Val.Kontrola.StopPatern();
                 Val.logocontroler.Prop1.Stop.SendPulse();
             }
-
-            private void BtnStart_Click(object sender, ImageClickEventArgs e)
-            {
-                Val.Kontrola.StopPatern();
-                Val.logocontroler.Prop1.Start.SendPulse();
-            }
-
+                       
 
         }
     }

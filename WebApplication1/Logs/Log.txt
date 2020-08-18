@@ -10858,3 +10858,1754 @@
 12.08.2020  10:05:07 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
 12.08.2020  10:05:07 : Logo2: Connection error: CLI : Client not connected
 12.08.2020  10:05:10 : Logo1: Running connection diagnostics...
+17.08.2020  08:04:01 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  08:04:01 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+17.08.2020  08:04:01 : Logo1: Connecting...
+17.08.2020  08:04:01 : Logo2: Connecting...
+17.08.2020  08:04:02 : Logo1: Connected
+17.08.2020  08:04:02 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  08:04:05 : Logo2: TCP : Connection Error
+17.08.2020  08:04:05 : Logo1: Running connection diagnostics...
+17.08.2020  08:04:09 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:04:11 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:04:11 : Logo2: CLI : Client not connected
+17.08.2020  08:04:11 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:04:14 : Logo1: Running connection diagnostics...
+17.08.2020  08:04:17 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:04:20 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:04:20 : Logo1: Running connection diagnostics...
+17.08.2020  08:04:23 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:04:26 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:04:26 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  08:04:26 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:04:26 : Redirected to: Vzorci
+17.08.2020  08:04:29 : Logo1: Running connection diagnostics...
+17.08.2020  08:04:32 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:04:34 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:04:34 : Logo1: Running connection diagnostics...
+17.08.2020  08:04:38 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:04:40 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:04:40 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:04:43 : Logo1: Running connection diagnostics...
+17.08.2020  08:04:46 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:04:49 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:04:49 : Logo1: Running connection diagnostics...
+17.08.2020  08:04:52 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:04:55 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:04:55 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:23:39 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  08:23:39 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+17.08.2020  08:23:39 : Logo1: Connecting...
+17.08.2020  08:23:39 : Logo2: Connecting...
+17.08.2020  08:23:40 : Logo1: Connected
+17.08.2020  08:23:40 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  08:23:43 : Logo2: TCP : Connection Error
+17.08.2020  08:23:43 : Logo1: Running connection diagnostics...
+17.08.2020  08:23:45 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:23:48 : Redirected to: Default
+17.08.2020  08:23:48 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:23:48 : Logo2: CLI : Client not connected
+17.08.2020  08:23:48 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:23:49 : Redirected to: Default
+17.08.2020  08:23:51 : Logo1: Running connection diagnostics...
+17.08.2020  08:43:17 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  08:43:17 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+17.08.2020  08:43:17 : Logo1: Connecting...
+17.08.2020  08:43:17 : Logo2: Connecting...
+17.08.2020  08:43:18 : Logo1: Connected
+17.08.2020  08:43:18 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  08:43:21 : Logo2: TCP : Connection Error
+17.08.2020  08:43:21 : Logo1: Running connection diagnostics...
+17.08.2020  08:43:23 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:43:26 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:43:26 : Logo2: CLI : Client not connected
+17.08.2020  08:43:26 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:43:29 : Logo1: Running connection diagnostics...
+17.08.2020  08:43:32 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:43:34 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:43:34 : Logo1: Running connection diagnostics...
+17.08.2020  08:43:38 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:43:40 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:43:40 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  08:43:40 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:43:43 : Logo1: Running connection diagnostics...
+17.08.2020  08:44:18 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  08:44:18 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+17.08.2020  08:44:18 : Logo1: Connecting...
+17.08.2020  08:44:18 : Logo2: Connecting...
+17.08.2020  08:44:19 : Logo1: Connected
+17.08.2020  08:44:19 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  08:44:23 : Logo2: TCP : Connection Error
+17.08.2020  08:44:23 : Logo1: Running connection diagnostics...
+17.08.2020  08:44:23 : Redirected to: Vzorci
+17.08.2020  08:44:26 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:44:28 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:44:28 : Logo2: CLI : Client not connected
+17.08.2020  08:44:28 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:44:31 : Logo1: Running connection diagnostics...
+17.08.2020  08:44:34 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:44:37 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:44:37 : Logo1: Running connection diagnostics...
+17.08.2020  08:44:40 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:44:43 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:44:43 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  08:44:43 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:44:46 : Logo1: Running connection diagnostics...
+17.08.2020  08:44:49 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:44:51 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:44:51 : Logo1: Running connection diagnostics...
+17.08.2020  08:44:55 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:44:57 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:44:57 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:45:00 : Logo1: Running connection diagnostics...
+17.08.2020  08:45:03 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:45:06 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:45:06 : Logo1: Running connection diagnostics...
+17.08.2020  08:45:09 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:45:12 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:45:12 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:45:15 : Logo1: Running connection diagnostics...
+17.08.2020  08:45:18 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:45:20 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:45:20 : Logo1: Running connection diagnostics...
+17.08.2020  08:45:24 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:45:26 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:45:26 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:45:29 : Logo1: Running connection diagnostics...
+17.08.2020  08:45:39 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  08:45:39 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+17.08.2020  08:45:39 : Logo1: Connecting...
+17.08.2020  08:45:39 : Logo2: Connecting...
+17.08.2020  08:45:40 : Logo1: Connected
+17.08.2020  08:45:40 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  08:45:42 : Redirected to: Vzorci
+17.08.2020  08:45:43 : Logo2: TCP : Connection Error
+17.08.2020  08:45:43 : Logo1: Running connection diagnostics...
+17.08.2020  08:45:46 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:45:48 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:45:48 : Logo2: CLI : Client not connected
+17.08.2020  08:45:48 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:45:51 : Logo1: Running connection diagnostics...
+17.08.2020  08:45:54 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:45:57 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:45:57 : Logo1: Running connection diagnostics...
+17.08.2020  08:46:00 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:46:03 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:46:03 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  08:46:03 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:46:06 : Logo1: Running connection diagnostics...
+17.08.2020  08:46:09 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:46:11 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:46:11 : Logo1: Running connection diagnostics...
+17.08.2020  08:46:15 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:46:17 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:46:17 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:46:20 : Logo1: Running connection diagnostics...
+17.08.2020  08:46:23 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:46:26 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:46:26 : Logo1: Running connection diagnostics...
+17.08.2020  08:46:29 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:46:32 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:46:32 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:46:35 : Logo1: Running connection diagnostics...
+17.08.2020  08:46:38 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:46:40 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:46:40 : Logo1: Running connection diagnostics...
+17.08.2020  08:47:06 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  08:47:06 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+17.08.2020  08:47:06 : Logo1: Connecting...
+17.08.2020  08:47:06 : Logo2: Connecting...
+17.08.2020  08:47:07 : Logo1: Connected
+17.08.2020  08:47:07 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  08:47:10 : Redirected to: Vzorci
+17.08.2020  08:47:10 : Logo2: TCP : Connection Error
+17.08.2020  08:47:10 : Logo1: Running connection diagnostics...
+17.08.2020  08:47:13 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:47:16 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:47:16 : Logo2: CLI : Client not connected
+17.08.2020  08:47:16 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:47:19 : Logo1: Running connection diagnostics...
+17.08.2020  08:47:22 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:47:24 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:47:24 : Logo1: Running connection diagnostics...
+17.08.2020  08:47:28 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:47:30 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:47:30 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  08:47:30 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:47:33 : Logo1: Running connection diagnostics...
+17.08.2020  08:47:36 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:47:39 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:47:39 : Logo1: Running connection diagnostics...
+17.08.2020  08:47:42 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:47:45 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:47:45 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:47:48 : Logo1: Running connection diagnostics...
+17.08.2020  08:47:51 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:47:53 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:47:53 : Logo1: Running connection diagnostics...
+17.08.2020  08:47:57 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:47:59 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:47:59 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:48:08 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  08:48:08 : Logo1: Connecting...
+17.08.2020  08:48:08 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+17.08.2020  08:48:08 : Logo2: Connecting...
+17.08.2020  08:48:09 : Logo1: Connected
+17.08.2020  08:48:09 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  08:48:12 : Redirected to: Vzorci
+17.08.2020  08:48:12 : Logo2: TCP : Connection Error
+17.08.2020  08:48:12 : Logo1: Running connection diagnostics...
+17.08.2020  08:48:15 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:48:18 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:48:18 : Logo2: CLI : Client not connected
+17.08.2020  08:48:18 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:48:21 : Logo1: Running connection diagnostics...
+17.08.2020  08:48:24 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:48:26 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:48:26 : Logo1: Running connection diagnostics...
+17.08.2020  08:48:30 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:48:32 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:48:32 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  08:48:32 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:48:35 : Logo1: Running connection diagnostics...
+17.08.2020  08:49:23 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  08:49:23 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+17.08.2020  08:49:23 : Napaka v sporočilnem sistemu: Collection was modified; enumeration operation may not execute.
+17.08.2020  08:49:23 : Logo1: Connecting...
+17.08.2020  08:49:23 : Logo2: Connecting...
+17.08.2020  08:49:24 : Logo1: Connected
+17.08.2020  08:49:24 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  08:49:27 : Logo2: TCP : Connection Error
+17.08.2020  08:49:27 : Logo1: Running connection diagnostics...
+17.08.2020  08:49:28 : Redirected to: Vzorci
+17.08.2020  08:49:30 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:49:33 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:49:33 : Logo2: CLI : Client not connected
+17.08.2020  08:49:33 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:49:36 : Logo1: Running connection diagnostics...
+17.08.2020  08:49:39 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:49:41 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:49:41 : Logo1: Running connection diagnostics...
+17.08.2020  08:49:45 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:49:47 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:49:47 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  08:49:47 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:49:50 : Logo1: Running connection diagnostics...
+17.08.2020  08:49:53 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:49:56 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:49:56 : Logo1: Running connection diagnostics...
+17.08.2020  08:49:59 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:50:02 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:50:02 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:50:05 : Logo1: Running connection diagnostics...
+17.08.2020  08:50:08 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:50:10 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:50:10 : Logo1: Running connection diagnostics...
+17.08.2020  08:50:14 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:50:16 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:50:16 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:50:19 : Logo1: Running connection diagnostics...
+17.08.2020  08:50:22 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:50:25 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:50:25 : Logo1: Running connection diagnostics...
+17.08.2020  08:50:28 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:50:31 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:50:31 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:50:34 : Logo1: Running connection diagnostics...
+17.08.2020  08:50:37 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:50:39 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:50:39 : Logo1: Running connection diagnostics...
+17.08.2020  08:50:43 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:50:45 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:50:45 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:50:48 : Logo1: Running connection diagnostics...
+17.08.2020  08:50:51 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:50:54 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:50:54 : Logo1: Running connection diagnostics...
+17.08.2020  08:50:57 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:51:00 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:51:00 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:51:03 : Logo1: Running connection diagnostics...
+17.08.2020  08:51:06 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:51:08 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:51:08 : Logo1: Running connection diagnostics...
+17.08.2020  08:51:12 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:51:14 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:51:14 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:51:17 : Logo1: Running connection diagnostics...
+17.08.2020  08:51:20 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:51:23 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:51:23 : Logo1: Running connection diagnostics...
+17.08.2020  08:51:26 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:51:29 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:51:29 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:51:32 : Logo1: Running connection diagnostics...
+17.08.2020  08:51:35 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:51:37 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:51:37 : Logo1: Running connection diagnostics...
+17.08.2020  08:51:41 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:51:43 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:51:43 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:51:46 : Logo1: Running connection diagnostics...
+17.08.2020  08:51:49 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:51:52 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:51:52 : Logo1: Running connection diagnostics...
+17.08.2020  08:51:55 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:51:58 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:51:58 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:52:01 : Logo1: Running connection diagnostics...
+17.08.2020  08:52:04 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:52:06 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:52:06 : Logo1: Running connection diagnostics...
+17.08.2020  08:52:10 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:52:12 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:52:12 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:52:15 : Logo1: Running connection diagnostics...
+17.08.2020  08:52:18 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:52:21 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:52:21 : Logo1: Running connection diagnostics...
+17.08.2020  08:52:24 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:52:27 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:52:27 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:52:30 : Logo1: Running connection diagnostics...
+17.08.2020  08:52:33 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:52:35 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:52:35 : Logo1: Running connection diagnostics...
+17.08.2020  08:52:39 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:52:41 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:52:41 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:52:44 : Logo1: Running connection diagnostics...
+17.08.2020  08:52:47 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:52:50 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:52:50 : Logo1: Running connection diagnostics...
+17.08.2020  08:52:53 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:52:56 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:52:56 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:52:59 : Logo1: Running connection diagnostics...
+17.08.2020  08:53:02 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:53:04 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:53:04 : Logo1: Running connection diagnostics...
+17.08.2020  08:53:08 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:53:10 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:53:10 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:53:13 : Logo1: Running connection diagnostics...
+17.08.2020  08:53:16 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:53:19 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:53:19 : Logo1: Running connection diagnostics...
+17.08.2020  08:53:22 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:53:25 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:53:25 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:53:28 : Logo1: Running connection diagnostics...
+17.08.2020  08:53:31 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:53:34 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:53:34 : Logo1: Running connection diagnostics...
+17.08.2020  08:53:37 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:53:40 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:53:40 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:53:43 : Logo1: Running connection diagnostics...
+17.08.2020  08:53:46 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:53:49 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:53:49 : Logo1: Running connection diagnostics...
+17.08.2020  08:53:52 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:53:55 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:53:55 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:53:58 : Logo1: Running connection diagnostics...
+17.08.2020  08:54:01 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:54:03 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:54:03 : Logo1: Running connection diagnostics...
+17.08.2020  08:54:07 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:54:09 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:54:09 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:54:12 : Logo1: Running connection diagnostics...
+17.08.2020  08:54:15 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:54:18 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:54:18 : Logo1: Running connection diagnostics...
+17.08.2020  08:54:21 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:54:24 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:54:24 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:54:27 : Logo1: Running connection diagnostics...
+17.08.2020  08:54:30 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  08:54:32 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:54:32 : Logo1: Running connection diagnostics...
+17.08.2020  08:54:36 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  08:54:38 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  08:54:38 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  08:54:41 : Logo1: Running connection diagnostics...
+17.08.2020  09:17:47 : Logo1: Connecting...
+17.08.2020  09:17:47 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  09:17:47 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+17.08.2020  09:17:47 : Logo2: Connecting...
+17.08.2020  09:17:48 : Logo1: Connected
+17.08.2020  09:17:48 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  09:17:51 : Logo2: TCP : Connection Error
+17.08.2020  09:17:51 : Logo1: Running connection diagnostics...
+17.08.2020  09:17:53 : Redirected to: Vzorci
+17.08.2020  09:17:53 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:17:56 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:17:56 : Logo2: CLI : Client not connected
+17.08.2020  09:17:56 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:17:58 : Redirected to: Default
+17.08.2020  09:17:59 : Logo1: Running connection diagnostics...
+17.08.2020  09:18:02 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:18:04 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:18:04 : Logo1: Running connection diagnostics...
+17.08.2020  09:18:08 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:18:10 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:18:10 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  09:18:10 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:18:13 : Logo1: Running connection diagnostics...
+17.08.2020  09:18:16 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:18:19 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:18:19 : Logo1: Running connection diagnostics...
+17.08.2020  09:18:22 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:18:25 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:18:25 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:18:28 : Logo1: Running connection diagnostics...
+17.08.2020  09:18:31 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:18:34 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:18:34 : Logo1: Running connection diagnostics...
+17.08.2020  09:18:37 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:18:40 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:18:40 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:18:43 : Logo1: Running connection diagnostics...
+17.08.2020  09:18:46 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:18:49 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:18:49 : Logo1: Running connection diagnostics...
+17.08.2020  09:18:52 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:18:55 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:18:55 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:18:55 : Redirected to: Vzorci
+17.08.2020  09:18:58 : Logo1: Running connection diagnostics...
+17.08.2020  09:19:01 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:19:03 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:19:03 : Logo1: Running connection diagnostics...
+17.08.2020  09:19:07 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:19:09 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:19:09 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:19:12 : Logo1: Running connection diagnostics...
+17.08.2020  09:19:15 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:19:18 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:19:18 : Logo1: Running connection diagnostics...
+17.08.2020  09:25:34 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  09:25:34 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+17.08.2020  09:25:34 : Logo1: Connecting...
+17.08.2020  09:25:34 : Logo2: Connecting...
+17.08.2020  09:25:35 : Logo1: Connected
+17.08.2020  09:25:35 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  09:25:38 : Logo2: TCP : Connection Error
+17.08.2020  09:25:38 : Logo1: Running connection diagnostics...
+17.08.2020  09:25:40 : Page refreshed.
+17.08.2020  09:25:41 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:25:43 : Page refreshed.
+17.08.2020  09:25:44 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:25:44 : Logo2: CLI : Client not connected
+17.08.2020  09:25:44 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:25:47 : Logo1: Running connection diagnostics...
+17.08.2020  09:43:39 : Logo1: Connecting...
+17.08.2020  09:43:39 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  09:43:39 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+17.08.2020  09:43:39 : Logo2: Connecting...
+17.08.2020  09:43:40 : Logo1: Connected
+17.08.2020  09:43:40 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  09:43:43 : Logo2: TCP : Connection Error
+17.08.2020  09:43:43 : Logo1: Running connection diagnostics...
+17.08.2020  09:43:46 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:43:48 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:43:48 : Logo2: CLI : Client not connected
+17.08.2020  09:43:48 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:43:51 : Logo1: Running connection diagnostics...
+17.08.2020  09:43:54 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:43:57 : Redirected to: Vzorci
+17.08.2020  09:43:57 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:43:57 : Logo1: Running connection diagnostics...
+17.08.2020  09:44:00 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:44:03 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:44:03 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  09:44:03 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:44:06 : Logo1: Running connection diagnostics...
+17.08.2020  09:44:07 : Redirected to: Default
+17.08.2020  09:44:09 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:44:11 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:44:11 : Logo1: Running connection diagnostics...
+17.08.2020  09:44:15 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:44:17 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:44:17 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:44:20 : Logo1: Running connection diagnostics...
+17.08.2020  09:44:23 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:44:24 : Redirected to: Vzorci
+17.08.2020  09:44:26 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:44:26 : Logo1: Running connection diagnostics...
+17.08.2020  09:44:27 : Redirected to: Default
+17.08.2020  09:44:29 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:44:29 : Redirected to: Vzorci
+17.08.2020  09:44:32 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:44:32 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:44:35 : Logo1: Running connection diagnostics...
+17.08.2020  09:44:36 : Redirected to: Default
+17.08.2020  09:44:38 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:44:40 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:44:40 : Logo1: Running connection diagnostics...
+17.08.2020  09:44:44 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:44:46 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:44:46 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:44:49 : Logo1: Running connection diagnostics...
+17.08.2020  09:44:52 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:44:55 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:44:55 : Logo1: Running connection diagnostics...
+17.08.2020  09:44:58 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:45:01 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:45:01 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:45:04 : Logo1: Running connection diagnostics...
+17.08.2020  09:45:07 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:45:09 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:45:09 : Logo1: Running connection diagnostics...
+17.08.2020  09:45:10 : Logo1: Watchdog error - Watchdog does not change
+17.08.2020  09:45:10 : Logo1: Connection error: Watchdog error - Watchdog does not change
+17.08.2020  09:45:11 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  09:45:13 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:45:13 : Logo1: Running connection diagnostics...
+17.08.2020  09:45:13 : Logo1:   -Ping successful at: 192.168.1.200
+17.08.2020  09:45:14 : Logo1: Connected again
+17.08.2020  09:45:15 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:45:15 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:45:16 : Redirected to: Vzorci
+17.08.2020  09:45:18 : Logo1: Running connection diagnostics...
+17.08.2020  09:45:19 : Redirected to: Default
+17.08.2020  09:45:21 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:45:24 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:45:24 : Logo1: Running connection diagnostics...
+17.08.2020  09:45:27 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:45:30 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:45:30 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:45:32 : Redirected to: Vzorci
+17.08.2020  09:45:33 : Logo1: Running connection diagnostics...
+17.08.2020  09:45:36 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:45:36 : Redirected to: Default
+17.08.2020  09:45:38 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:45:38 : Logo1: Running connection diagnostics...
+17.08.2020  09:45:38 : Redirected to: Vzorci
+17.08.2020  09:45:42 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:45:43 : Redirected to: Default
+17.08.2020  09:45:44 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:45:44 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:45:47 : Logo1: Running connection diagnostics...
+17.08.2020  09:45:50 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:45:53 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:45:53 : Logo1: Running connection diagnostics...
+17.08.2020  09:45:56 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:45:59 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:45:59 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:46:02 : Logo1: Running connection diagnostics...
+17.08.2020  09:46:05 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:46:07 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:46:07 : Logo1: Running connection diagnostics...
+17.08.2020  09:46:08 : Redirected to: Vzorci
+17.08.2020  09:46:11 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:46:13 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:46:13 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:46:16 : Logo1: Running connection diagnostics...
+17.08.2020  09:46:19 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:46:22 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:46:22 : Logo1: Running connection diagnostics...
+17.08.2020  09:46:25 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:46:28 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:46:28 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:46:31 : Logo1: Running connection diagnostics...
+17.08.2020  09:46:31 : Redirected to: Default
+17.08.2020  09:46:34 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:46:37 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:46:37 : Logo1: Running connection diagnostics...
+17.08.2020  09:46:40 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:46:43 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:46:43 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:46:46 : Logo1: Running connection diagnostics...
+17.08.2020  09:46:49 : Redirected to: Vzorci
+17.08.2020  09:46:49 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:46:52 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:46:52 : Logo1: Running connection diagnostics...
+17.08.2020  09:46:55 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:46:58 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:46:58 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:47:01 : Logo1: Running connection diagnostics...
+17.08.2020  09:47:04 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:47:06 : Redirected to: Default
+17.08.2020  09:47:06 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:47:06 : Logo1: Running connection diagnostics...
+17.08.2020  09:47:10 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:47:11 : Redirected to: Vzorci
+17.08.2020  09:47:12 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:47:12 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:47:15 : Redirected to: Default
+17.08.2020  09:47:15 : Logo1: Running connection diagnostics...
+17.08.2020  09:47:18 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:47:21 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:47:21 : Logo1: Running connection diagnostics...
+17.08.2020  09:47:24 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:47:27 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:47:27 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:47:30 : Logo1: Running connection diagnostics...
+17.08.2020  09:51:13 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  09:51:13 : Logo1: Connecting...
+17.08.2020  09:51:13 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+17.08.2020  09:51:13 : Logo2: Connecting...
+17.08.2020  09:51:14 : Logo1: Connected
+17.08.2020  09:51:14 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  09:51:17 : Logo2: TCP : Connection Error
+17.08.2020  09:51:17 : Logo1: Running connection diagnostics...
+17.08.2020  09:51:20 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:51:22 : Redirected to: Vzorci
+17.08.2020  09:51:22 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:51:22 : Logo2: CLI : Client not connected
+17.08.2020  09:51:22 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:51:24 : Redirected to: Default
+17.08.2020  09:51:25 : Logo1: Running connection diagnostics...
+17.08.2020  09:51:35 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  09:51:35 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+17.08.2020  09:51:35 : Logo1: Connecting...
+17.08.2020  09:51:35 : Logo2: Connecting...
+17.08.2020  09:51:36 : Logo1: Connected
+17.08.2020  09:51:36 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  09:51:39 : Logo2: TCP : Connection Error
+17.08.2020  09:51:39 : Logo1: Running connection diagnostics...
+17.08.2020  09:51:39 : Redirected to: Vzorci
+17.08.2020  09:51:42 : Redirected to: Default
+17.08.2020  09:51:42 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:51:45 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:51:45 : Logo2: CLI : Client not connected
+17.08.2020  09:51:45 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:53:38 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  09:53:38 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+17.08.2020  09:53:38 : Logo1: Connecting...
+17.08.2020  09:53:38 : Logo2: Connecting...
+17.08.2020  09:53:39 : Logo1: Connected
+17.08.2020  09:53:39 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  09:53:42 : Logo2: TCP : Connection Error
+17.08.2020  09:53:42 : Logo1: Running connection diagnostics...
+17.08.2020  09:53:45 : Redirected to: Vzorci
+17.08.2020  09:53:45 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:53:48 : Redirected to: Default
+17.08.2020  09:53:48 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:53:48 : Logo2: CLI : Client not connected
+17.08.2020  09:53:48 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:53:51 : Logo1: Running connection diagnostics...
+17.08.2020  09:53:54 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:53:56 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:53:56 : Logo1: Running connection diagnostics...
+17.08.2020  09:54:00 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:54:02 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:54:02 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  09:54:02 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:54:05 : Logo1: Running connection diagnostics...
+17.08.2020  09:54:08 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:54:11 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:54:11 : Logo1: Running connection diagnostics...
+17.08.2020  09:54:14 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:54:17 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:54:17 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:54:20 : Logo1: Running connection diagnostics...
+17.08.2020  09:54:23 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:54:25 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:54:25 : Logo1: Running connection diagnostics...
+17.08.2020  09:54:29 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:54:31 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:54:31 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:54:34 : Logo1: Running connection diagnostics...
+17.08.2020  09:54:37 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:54:40 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:54:40 : Logo1: Running connection diagnostics...
+17.08.2020  09:54:43 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:54:46 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:54:46 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:54:49 : Logo1: Running connection diagnostics...
+17.08.2020  09:54:52 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:54:54 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:54:54 : Logo1: Running connection diagnostics...
+17.08.2020  09:54:58 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:55:00 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:55:00 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:55:03 : Logo1: Running connection diagnostics...
+17.08.2020  09:55:06 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:55:09 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:55:09 : Logo1: Running connection diagnostics...
+17.08.2020  09:56:11 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  09:56:11 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+17.08.2020  09:56:11 : Logo1: Connecting...
+17.08.2020  09:56:12 : Logo2: Connecting...
+17.08.2020  09:56:12 : Logo1: Connected
+17.08.2020  09:56:13 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  09:56:16 : Logo2: TCP : Connection Error
+17.08.2020  09:56:16 : Logo1: Running connection diagnostics...
+17.08.2020  09:56:18 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:56:21 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:56:21 : Logo2: CLI : Client not connected
+17.08.2020  09:56:21 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:56:24 : Logo1: Running connection diagnostics...
+17.08.2020  09:56:27 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:56:29 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:56:29 : Logo1: Running connection diagnostics...
+17.08.2020  09:56:33 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:56:33 : Redirected to: Vzorci
+17.08.2020  09:56:35 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:56:35 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  09:56:35 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:56:38 : Logo1: Running connection diagnostics...
+17.08.2020  09:56:39 : Redirected to: Default
+17.08.2020  09:56:41 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:56:44 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:56:44 : Logo1: Running connection diagnostics...
+17.08.2020  09:56:47 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:56:50 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:56:50 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:56:53 : Logo1: Running connection diagnostics...
+17.08.2020  09:56:56 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:56:58 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:56:58 : Logo1: Running connection diagnostics...
+17.08.2020  09:57:01 : Redirected to: Vzorci
+17.08.2020  09:57:02 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:57:04 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:57:04 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:57:04 : Redirected to: Default
+17.08.2020  09:57:07 : Logo1: Running connection diagnostics...
+17.08.2020  09:57:10 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:57:13 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:57:13 : Logo1: Running connection diagnostics...
+17.08.2020  09:57:16 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:57:19 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:57:19 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:57:22 : Logo1: Running connection diagnostics...
+17.08.2020  09:57:25 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:57:27 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:57:27 : Logo1: Running connection diagnostics...
+17.08.2020  09:57:31 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:57:33 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:57:33 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:57:36 : Logo1: Running connection diagnostics...
+17.08.2020  09:57:39 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:57:42 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:57:42 : Logo1: Running connection diagnostics...
+17.08.2020  09:57:45 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:57:48 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:57:48 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:57:51 : Logo1: Running connection diagnostics...
+17.08.2020  09:57:54 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:57:56 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:57:56 : Logo1: Running connection diagnostics...
+17.08.2020  09:58:00 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:58:02 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:58:02 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:58:05 : Logo1: Running connection diagnostics...
+17.08.2020  09:58:08 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:58:11 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:58:11 : Logo1: Running connection diagnostics...
+17.08.2020  09:58:14 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:58:17 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:58:17 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:58:20 : Logo1: Running connection diagnostics...
+17.08.2020  09:58:23 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:58:25 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:58:25 : Logo1: Running connection diagnostics...
+17.08.2020  09:58:29 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:58:31 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:58:31 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:58:34 : Logo1: Running connection diagnostics...
+17.08.2020  09:58:37 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:58:40 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:58:40 : Logo1: Running connection diagnostics...
+17.08.2020  09:58:43 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:58:46 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:58:46 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:58:49 : Logo1: Running connection diagnostics...
+17.08.2020  09:58:52 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:58:54 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:58:54 : Logo1: Running connection diagnostics...
+17.08.2020  09:58:58 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:59:00 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:59:00 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:59:03 : Logo1: Running connection diagnostics...
+17.08.2020  09:59:06 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:59:09 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:59:09 : Logo1: Running connection diagnostics...
+17.08.2020  09:59:12 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:59:15 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:59:15 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:59:18 : Logo1: Running connection diagnostics...
+17.08.2020  09:59:21 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  09:59:23 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:59:23 : Logo1: Running connection diagnostics...
+17.08.2020  09:59:27 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:59:29 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:59:29 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:59:32 : Logo1: Running connection diagnostics...
+17.08.2020  09:59:36 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:59:38 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:59:38 : Logo1: Running connection diagnostics...
+17.08.2020  09:59:42 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:59:44 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:59:44 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  09:59:47 : Logo1: Running connection diagnostics...
+17.08.2020  09:59:51 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:59:53 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:59:53 : Logo1: Running connection diagnostics...
+17.08.2020  09:59:57 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  09:59:59 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  09:59:59 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:00:02 : Logo1: Running connection diagnostics...
+17.08.2020  10:00:05 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:00:08 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:00:08 : Logo1: Running connection diagnostics...
+17.08.2020  10:00:11 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:00:14 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:00:14 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:00:17 : Logo1: Running connection diagnostics...
+17.08.2020  10:00:20 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:00:22 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:00:22 : Logo1: Running connection diagnostics...
+17.08.2020  10:00:26 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:00:28 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:00:28 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:00:31 : Logo1: Running connection diagnostics...
+17.08.2020  10:00:34 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:00:37 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:00:37 : Logo1: Running connection diagnostics...
+17.08.2020  10:00:40 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:00:43 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:00:43 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:00:46 : Logo1: Running connection diagnostics...
+17.08.2020  10:00:49 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:00:51 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:00:51 : Logo1: Running connection diagnostics...
+17.08.2020  10:00:55 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:00:57 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:00:57 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:01:00 : Logo1: Running connection diagnostics...
+17.08.2020  10:01:03 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:01:06 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:01:06 : Logo1: Running connection diagnostics...
+17.08.2020  10:01:09 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:01:12 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:01:12 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:01:15 : Logo1: Running connection diagnostics...
+17.08.2020  10:01:18 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:01:20 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:01:20 : Logo1: Running connection diagnostics...
+17.08.2020  10:01:24 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:01:26 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:01:26 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:01:29 : Logo1: Running connection diagnostics...
+17.08.2020  10:01:32 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:01:35 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:01:35 : Logo1: Running connection diagnostics...
+17.08.2020  10:01:38 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:01:41 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:01:41 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:01:44 : Logo1: Running connection diagnostics...
+17.08.2020  10:01:47 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:01:49 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:01:49 : Logo1: Running connection diagnostics...
+17.08.2020  10:01:53 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:01:55 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:01:55 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:01:58 : Logo1: Running connection diagnostics...
+17.08.2020  10:02:01 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:02:04 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:02:04 : Logo1: Running connection diagnostics...
+17.08.2020  10:02:07 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:02:10 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:02:10 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:02:13 : Logo1: Running connection diagnostics...
+17.08.2020  10:02:16 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:02:18 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:02:18 : Logo1: Running connection diagnostics...
+17.08.2020  10:02:22 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:02:24 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:02:24 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:02:27 : Logo1: Running connection diagnostics...
+17.08.2020  10:02:30 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:02:33 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:02:33 : Logo1: Running connection diagnostics...
+17.08.2020  10:02:36 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:02:39 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:02:39 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:02:42 : Logo1: Running connection diagnostics...
+17.08.2020  10:02:45 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:02:47 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:02:47 : Logo1: Running connection diagnostics...
+17.08.2020  10:02:51 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:02:53 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:02:53 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:02:56 : Logo1: Running connection diagnostics...
+17.08.2020  10:02:59 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:03:02 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:03:02 : Logo1: Running connection diagnostics...
+17.08.2020  10:03:05 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:03:08 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:03:08 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:03:11 : Logo1: Running connection diagnostics...
+17.08.2020  10:03:14 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:03:16 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:03:16 : Logo1: Running connection diagnostics...
+17.08.2020  10:03:20 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:03:22 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:03:22 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:03:25 : Logo1: Running connection diagnostics...
+17.08.2020  10:03:28 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:03:31 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:03:31 : Logo1: Running connection diagnostics...
+17.08.2020  10:03:34 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:03:37 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:03:37 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:03:40 : Logo1: Running connection diagnostics...
+17.08.2020  10:03:43 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:03:46 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:03:46 : Logo1: Running connection diagnostics...
+17.08.2020  10:03:49 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:03:52 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:03:52 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:03:55 : Logo1: Running connection diagnostics...
+17.08.2020  10:03:58 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:04:01 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:04:01 : Logo1: Running connection diagnostics...
+17.08.2020  10:04:04 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:04:07 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:04:07 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:04:10 : Logo1: Running connection diagnostics...
+17.08.2020  10:04:13 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:04:15 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:04:15 : Logo1: Running connection diagnostics...
+17.08.2020  10:04:19 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:04:21 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:04:21 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:04:24 : Logo1: Running connection diagnostics...
+17.08.2020  10:04:27 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:04:30 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:04:30 : Logo1: Running connection diagnostics...
+17.08.2020  10:04:33 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:04:36 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:04:36 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:04:39 : Logo1: Running connection diagnostics...
+17.08.2020  10:04:42 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:04:44 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:04:44 : Logo1: Running connection diagnostics...
+17.08.2020  10:04:48 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:04:50 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:04:50 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:04:53 : Logo1: Running connection diagnostics...
+17.08.2020  10:04:56 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:04:59 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:04:59 : Logo1: Running connection diagnostics...
+17.08.2020  10:05:02 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:05:05 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:05:05 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:05:08 : Logo1: Running connection diagnostics...
+17.08.2020  10:05:11 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:05:13 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:05:13 : Logo1: Running connection diagnostics...
+17.08.2020  10:05:17 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:05:19 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:05:19 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:05:22 : Logo1: Running connection diagnostics...
+17.08.2020  10:05:25 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:05:28 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:05:28 : Logo1: Running connection diagnostics...
+17.08.2020  10:05:31 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:05:34 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:05:34 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:05:37 : Logo1: Running connection diagnostics...
+17.08.2020  10:05:40 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:05:43 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:05:43 : Logo1: Running connection diagnostics...
+17.08.2020  10:05:46 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:05:49 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:05:49 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:05:52 : Logo1: Running connection diagnostics...
+17.08.2020  10:05:55 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:05:58 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:05:58 : Logo1: Running connection diagnostics...
+17.08.2020  10:06:01 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:06:04 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:06:04 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:06:07 : Logo1: Running connection diagnostics...
+17.08.2020  10:06:10 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:06:12 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:06:12 : Logo1: Running connection diagnostics...
+17.08.2020  10:06:16 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:06:18 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:06:18 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:06:21 : Logo1: Running connection diagnostics...
+17.08.2020  10:06:24 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:06:27 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:06:27 : Logo1: Running connection diagnostics...
+17.08.2020  10:06:30 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:06:33 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:06:33 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:06:36 : Logo1: Running connection diagnostics...
+17.08.2020  10:06:39 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:06:41 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:06:41 : Logo1: Running connection diagnostics...
+17.08.2020  10:06:45 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:06:47 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:06:47 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:06:50 : Logo1: Running connection diagnostics...
+17.08.2020  10:06:54 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:06:56 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:06:56 : Logo1: Running connection diagnostics...
+17.08.2020  10:07:00 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:07:02 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:07:02 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:07:05 : Logo1: Running connection diagnostics...
+17.08.2020  10:07:08 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:07:11 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:07:11 : Logo1: Running connection diagnostics...
+17.08.2020  10:07:14 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:07:17 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:07:17 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:07:20 : Logo1: Running connection diagnostics...
+17.08.2020  10:07:23 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:07:25 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:07:25 : Logo1: Running connection diagnostics...
+17.08.2020  10:07:29 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:07:31 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:07:31 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:07:34 : Logo1: Running connection diagnostics...
+17.08.2020  10:07:37 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:07:40 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:07:40 : Logo1: Running connection diagnostics...
+17.08.2020  10:07:49 : Logo1: Connecting...
+17.08.2020  10:07:49 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  10:07:49 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+17.08.2020  10:07:49 : Logo2: Connecting...
+17.08.2020  10:07:50 : Logo1: Connected
+17.08.2020  10:07:50 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  10:07:53 : Logo2: TCP : Connection Error
+17.08.2020  10:07:53 : Logo1: Running connection diagnostics...
+17.08.2020  10:07:56 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:07:59 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:07:59 : Logo2: CLI : Client not connected
+17.08.2020  10:07:59 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:08:02 : Logo1: Running connection diagnostics...
+17.08.2020  10:08:05 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:08:07 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:08:07 : Logo1: Running connection diagnostics...
+17.08.2020  10:08:11 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:08:13 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:08:13 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  10:08:13 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:08:16 : Logo1: Running connection diagnostics...
+17.08.2020  10:08:19 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:08:21 : Logo1: Watchdog error - Watchdog does not change
+17.08.2020  10:08:21 : Logo1: Connection error: Watchdog error - Watchdog does not change
+17.08.2020  10:08:22 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:08:22 : Logo1: Running connection diagnostics...
+17.08.2020  10:08:22 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  10:08:24 : Logo1: Running connection diagnostics...
+17.08.2020  10:08:24 : Logo1:   -Ping successful at: 192.168.1.200
+17.08.2020  10:08:25 : Logo1: Connected again
+17.08.2020  10:08:25 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:08:28 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:08:28 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:08:31 : Logo1: Running connection diagnostics...
+17.08.2020  10:08:34 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:08:36 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:08:36 : Logo1: Running connection diagnostics...
+17.08.2020  10:08:40 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:08:42 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:08:42 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:08:45 : Logo1: Running connection diagnostics...
+17.08.2020  10:08:48 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:08:51 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:08:51 : Logo1: Running connection diagnostics...
+17.08.2020  10:08:54 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:08:57 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:08:57 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:09:00 : Logo1: Running connection diagnostics...
+17.08.2020  10:09:03 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:09:05 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:09:05 : Logo1: Running connection diagnostics...
+17.08.2020  10:09:09 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:09:11 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:09:11 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:09:14 : Logo1: Running connection diagnostics...
+17.08.2020  10:09:17 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:09:20 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:09:20 : Logo1: Running connection diagnostics...
+17.08.2020  10:09:23 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:09:26 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:09:26 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:09:29 : Logo1: Running connection diagnostics...
+17.08.2020  10:09:32 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:09:32 : Logo1: Watchdog error - Watchdog does not change
+17.08.2020  10:09:32 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  10:09:32 : Logo1: Connection error: Watchdog error - Watchdog does not change
+17.08.2020  10:09:34 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:09:34 : Logo1: Running connection diagnostics...
+17.08.2020  10:09:35 : Logo1: Running connection diagnostics...
+17.08.2020  10:09:35 : Logo1:   -Ping successful but connection is poor: 192.168.1.200
+17.08.2020  10:09:36 : Logo1: Connected again
+17.08.2020  10:09:38 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:09:40 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:09:40 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:09:43 : Logo1: Running connection diagnostics...
+17.08.2020  10:09:46 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:09:49 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:09:49 : Logo1: Running connection diagnostics...
+17.08.2020  10:09:52 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:09:55 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:09:55 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:09:58 : Logo1: Running connection diagnostics...
+17.08.2020  10:10:01 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:10:03 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:10:03 : Logo1: Running connection diagnostics...
+17.08.2020  10:10:07 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:10:09 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:10:09 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:10:12 : Logo1: Running connection diagnostics...
+17.08.2020  10:10:15 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:10:18 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:10:18 : Logo1: Running connection diagnostics...
+17.08.2020  10:10:21 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:10:24 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:10:24 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:10:27 : Logo1: Running connection diagnostics...
+17.08.2020  10:10:30 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:10:32 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:10:32 : Logo1: Running connection diagnostics...
+17.08.2020  10:10:36 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:10:38 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:10:38 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:10:41 : Logo1: Running connection diagnostics...
+17.08.2020  10:10:44 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:10:47 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:10:47 : Logo1: Running connection diagnostics...
+17.08.2020  10:10:50 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:10:52 : Logo1: Watchdog error - Watchdog does not change
+17.08.2020  10:10:52 : Logo1: Connection error: Watchdog error - Watchdog does not change
+17.08.2020  10:10:52 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  10:10:53 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:10:53 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:10:55 : Logo1: Running connection diagnostics...
+17.08.2020  10:10:55 : Logo1:   -Ping successful at: 192.168.1.200
+17.08.2020  10:10:56 : Logo1: Connected again
+17.08.2020  10:10:56 : Logo1: Running connection diagnostics...
+17.08.2020  10:10:59 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:11:01 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:11:01 : Logo1: Running connection diagnostics...
+17.08.2020  10:11:05 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:11:07 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:11:07 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:11:10 : Logo1: Running connection diagnostics...
+17.08.2020  10:11:13 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:11:16 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:11:16 : Logo1: Running connection diagnostics...
+17.08.2020  10:11:19 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:11:22 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:11:22 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:11:25 : Logo1: Running connection diagnostics...
+17.08.2020  10:11:28 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:11:30 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:11:30 : Logo1: Running connection diagnostics...
+17.08.2020  10:11:34 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:11:36 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:11:36 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:11:39 : Logo1: Running connection diagnostics...
+17.08.2020  10:11:42 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:11:45 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:11:45 : Logo1: Running connection diagnostics...
+17.08.2020  10:11:48 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:11:51 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:11:51 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:11:54 : Logo1: Running connection diagnostics...
+17.08.2020  10:11:57 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:11:59 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:11:59 : Logo1: Running connection diagnostics...
+17.08.2020  10:12:03 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:12:05 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:12:05 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:12:08 : Logo1: Running connection diagnostics...
+17.08.2020  10:12:11 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:12:14 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:12:14 : Logo1: Running connection diagnostics...
+17.08.2020  10:12:17 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:12:20 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:12:20 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:12:23 : Logo1: Running connection diagnostics...
+17.08.2020  10:12:26 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:12:28 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:12:28 : Logo1: Running connection diagnostics...
+17.08.2020  10:12:32 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:12:34 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:12:34 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:12:37 : Logo1: Running connection diagnostics...
+17.08.2020  10:12:40 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:12:43 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:12:43 : Logo1: Running connection diagnostics...
+17.08.2020  10:12:46 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:12:48 : Redirected to: Vzorci
+17.08.2020  10:12:49 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:12:49 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:12:52 : Redirected to: Default
+17.08.2020  10:12:52 : Logo1: Running connection diagnostics...
+17.08.2020  10:12:55 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:14:10 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  10:14:10 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+17.08.2020  10:14:10 : Logo1: Connecting...
+17.08.2020  10:14:10 : Logo2: Connecting...
+17.08.2020  10:14:11 : Logo1: Connected
+17.08.2020  10:14:11 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  10:14:14 : Logo2: TCP : Connection Error
+17.08.2020  10:14:14 : Logo1: Running connection diagnostics...
+17.08.2020  10:14:16 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:14:19 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:14:19 : Logo2: CLI : Client not connected
+17.08.2020  10:14:19 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:14:22 : Logo1: Running connection diagnostics...
+17.08.2020  10:14:25 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:14:27 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:14:27 : Logo1: Running connection diagnostics...
+17.08.2020  10:14:31 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:14:33 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:14:33 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  10:14:33 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:14:36 : Logo1: Running connection diagnostics...
+17.08.2020  10:14:39 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:14:42 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:14:42 : Logo1: Running connection diagnostics...
+17.08.2020  10:14:52 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  10:14:52 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+17.08.2020  10:14:52 : Logo1: Connecting...
+17.08.2020  10:14:52 : Logo2: Connecting...
+17.08.2020  10:14:53 : Logo1: Connected
+17.08.2020  10:14:53 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  10:14:56 : Logo2: TCP : Connection Error
+17.08.2020  10:14:56 : Logo1: Running connection diagnostics...
+17.08.2020  10:15:08 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:15:11 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:15:11 : Logo2: CLI : Client not connected
+17.08.2020  10:15:11 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:15:14 : Logo1: Running connection diagnostics...
+17.08.2020  10:15:16 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:15:19 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:15:19 : Logo1: Running connection diagnostics...
+17.08.2020  10:15:22 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:15:25 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:15:25 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  10:15:25 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:15:28 : Logo1: Running connection diagnostics...
+17.08.2020  10:15:31 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:15:33 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:15:33 : Logo1: Running connection diagnostics...
+17.08.2020  10:15:37 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:15:39 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:15:39 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:15:42 : Logo1: Running connection diagnostics...
+17.08.2020  10:15:45 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:15:48 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:15:48 : Logo1: Running connection diagnostics...
+17.08.2020  10:15:51 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:15:54 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:15:54 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:15:57 : Logo1: Running connection diagnostics...
+17.08.2020  10:16:00 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:16:02 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:16:02 : Logo1: Running connection diagnostics...
+17.08.2020  10:16:06 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:16:08 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:16:08 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:16:11 : Logo1: Running connection diagnostics...
+17.08.2020  10:16:14 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:16:17 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:16:17 : Logo1: Running connection diagnostics...
+17.08.2020  10:16:20 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:16:23 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:16:23 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:16:26 : Logo1: Running connection diagnostics...
+17.08.2020  10:16:29 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:16:31 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:16:31 : Logo1: Running connection diagnostics...
+17.08.2020  10:16:35 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:16:37 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:16:37 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:16:40 : Logo1: Running connection diagnostics...
+17.08.2020  10:16:43 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:16:46 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:16:46 : Logo1: Running connection diagnostics...
+17.08.2020  10:16:49 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:16:52 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:16:52 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:16:55 : Logo1: Running connection diagnostics...
+17.08.2020  10:16:58 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:17:00 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:17:00 : Logo1: Running connection diagnostics...
+17.08.2020  10:17:04 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:17:06 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:17:06 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:17:09 : Logo1: Running connection diagnostics...
+17.08.2020  10:17:12 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:17:15 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:17:15 : Logo1: Running connection diagnostics...
+17.08.2020  10:17:18 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:17:21 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:17:21 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:17:24 : Logo1: Running connection diagnostics...
+17.08.2020  10:17:27 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:17:29 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:17:29 : Logo1: Running connection diagnostics...
+17.08.2020  10:17:33 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:17:35 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:17:35 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:17:38 : Logo1: Running connection diagnostics...
+17.08.2020  10:17:41 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:17:44 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:17:44 : Logo1: Running connection diagnostics...
+17.08.2020  10:17:47 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:17:50 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:17:50 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:17:53 : Logo1: Running connection diagnostics...
+17.08.2020  10:17:56 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:17:58 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:17:58 : Logo1: Running connection diagnostics...
+17.08.2020  10:18:02 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:18:04 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:18:04 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:18:07 : Logo1: Running connection diagnostics...
+17.08.2020  10:18:10 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:18:13 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:18:13 : Logo1: Running connection diagnostics...
+17.08.2020  10:18:16 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:18:19 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:18:19 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:18:22 : Logo1: Running connection diagnostics...
+17.08.2020  10:18:25 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:18:28 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:18:28 : Logo1: Running connection diagnostics...
+17.08.2020  10:18:31 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:18:34 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:18:34 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:18:37 : Logo1: Running connection diagnostics...
+17.08.2020  10:18:40 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:18:42 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:18:42 : Logo1: Running connection diagnostics...
+17.08.2020  10:18:46 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:18:48 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:18:48 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:18:51 : Logo1: Running connection diagnostics...
+17.08.2020  10:18:54 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:18:57 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:18:57 : Logo1: Running connection diagnostics...
+17.08.2020  10:19:00 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:19:03 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:19:03 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:19:06 : Logo1: Running connection diagnostics...
+17.08.2020  10:19:09 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:19:11 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:19:11 : Logo1: Running connection diagnostics...
+17.08.2020  10:19:15 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:19:17 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:19:17 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:19:20 : Logo1: Running connection diagnostics...
+17.08.2020  10:19:23 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:19:26 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:19:26 : Logo1: Running connection diagnostics...
+17.08.2020  10:19:29 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:19:32 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:19:32 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:19:35 : Logo1: Running connection diagnostics...
+17.08.2020  10:19:38 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:19:40 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:19:40 : Logo1: Running connection diagnostics...
+17.08.2020  10:19:44 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:19:46 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:19:46 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:19:49 : Logo1: Running connection diagnostics...
+17.08.2020  10:19:52 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:19:55 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:19:55 : Logo1: Running connection diagnostics...
+17.08.2020  10:19:58 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:20:01 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:20:01 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:20:04 : Logo1: Running connection diagnostics...
+17.08.2020  10:20:07 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:20:09 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:20:09 : Logo1: Running connection diagnostics...
+17.08.2020  10:20:13 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:20:15 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:20:15 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:20:18 : Logo1: Running connection diagnostics...
+17.08.2020  10:20:21 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:20:24 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:20:24 : Logo1: Running connection diagnostics...
+17.08.2020  10:20:27 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:20:30 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:20:30 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:20:33 : Logo1: Running connection diagnostics...
+17.08.2020  10:20:36 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:20:38 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:20:38 : Logo1: Running connection diagnostics...
+17.08.2020  10:20:42 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:20:44 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:20:44 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:20:47 : Logo1: Running connection diagnostics...
+17.08.2020  10:20:50 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:20:53 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:20:53 : Logo1: Running connection diagnostics...
+17.08.2020  10:20:56 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:20:59 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:20:59 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:21:02 : Logo1: Running connection diagnostics...
+17.08.2020  10:21:05 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:21:07 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:21:07 : Logo1: Running connection diagnostics...
+17.08.2020  10:21:11 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:21:13 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:21:13 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:21:16 : Logo1: Running connection diagnostics...
+17.08.2020  10:21:19 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:21:22 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:21:22 : Logo1: Running connection diagnostics...
+17.08.2020  10:21:25 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:21:28 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:21:28 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:21:31 : Logo1: Running connection diagnostics...
+17.08.2020  10:21:34 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:21:36 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:21:36 : Logo1: Running connection diagnostics...
+17.08.2020  10:21:40 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:21:42 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:21:42 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:21:45 : Logo1: Running connection diagnostics...
+17.08.2020  10:21:48 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:21:51 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:21:51 : Logo1: Running connection diagnostics...
+17.08.2020  10:21:54 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:21:57 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:21:57 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:22:00 : Logo1: Running connection diagnostics...
+17.08.2020  10:22:03 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:22:05 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:22:05 : Logo1: Running connection diagnostics...
+17.08.2020  10:22:09 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:22:11 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:22:11 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:22:14 : Logo1: Running connection diagnostics...
+17.08.2020  10:22:17 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:22:20 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:22:20 : Logo1: Running connection diagnostics...
+17.08.2020  10:22:23 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:22:26 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:22:26 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:22:29 : Logo1: Running connection diagnostics...
+17.08.2020  10:22:32 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:22:34 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:22:34 : Logo1: Running connection diagnostics...
+17.08.2020  10:22:38 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:22:40 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:22:40 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:22:41 : Logo1: Watchdog error - Watchdog does not change
+17.08.2020  10:22:41 : Logo1: Connection error: Watchdog error - Watchdog does not change
+17.08.2020  10:22:41 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  10:22:43 : Logo1: Running connection diagnostics...
+17.08.2020  10:22:44 : Logo1: Running connection diagnostics...
+17.08.2020  10:22:44 : Logo1:   -Ping successful at: 192.168.1.200
+17.08.2020  10:22:44 : Logo1: Connected again
+17.08.2020  10:22:46 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:22:49 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:22:49 : Logo1: Running connection diagnostics...
+17.08.2020  10:22:52 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:22:55 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:22:55 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:22:58 : Logo1: Running connection diagnostics...
+17.08.2020  10:23:01 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:23:10 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  10:23:10 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+17.08.2020  10:23:10 : Logo1: Connecting...
+17.08.2020  10:23:10 : Logo2: Connecting...
+17.08.2020  10:23:11 : Logo1: Connected
+17.08.2020  10:23:11 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  10:23:14 : Logo2: TCP : Connection Error
+17.08.2020  10:23:14 : Logo1: Running connection diagnostics...
+17.08.2020  10:23:17 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:23:20 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:23:20 : Logo2: CLI : Client not connected
+17.08.2020  10:23:20 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:23:23 : Logo1: Running connection diagnostics...
+17.08.2020  10:23:26 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:23:28 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:23:28 : Logo1: Running connection diagnostics...
+17.08.2020  10:23:32 : Redirected to: Vzorci
+17.08.2020  10:23:32 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:23:34 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:23:34 : Logo2: Watchdog started successfully - Period (Frequency) is 100ms
+17.08.2020  10:23:34 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:23:35 : Redirected to: Default
+17.08.2020  10:23:37 : Logo1: Running connection diagnostics...
+17.08.2020  10:23:40 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:23:43 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:23:43 : Logo1: Running connection diagnostics...
+17.08.2020  10:23:46 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:23:49 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:23:49 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:23:52 : Logo1: Running connection diagnostics...
+17.08.2020  10:23:55 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:23:57 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:23:57 : Logo1: Running connection diagnostics...
+17.08.2020  10:24:01 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:24:03 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:24:03 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:24:06 : Logo1: Running connection diagnostics...
+17.08.2020  10:24:09 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:24:12 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:24:12 : Logo1: Running connection diagnostics...
+17.08.2020  10:24:15 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:24:18 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:24:18 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:24:21 : Logo1: Running connection diagnostics...
+17.08.2020  10:24:24 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:24:26 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:24:26 : Logo1: Running connection diagnostics...
+17.08.2020  10:24:30 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:24:32 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:24:32 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:24:35 : Logo1: Running connection diagnostics...
+17.08.2020  10:24:38 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:24:40 : Redirected to: Vzorci
+17.08.2020  10:24:41 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:24:41 : Logo1: Running connection diagnostics...
+17.08.2020  10:24:44 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:24:47 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:24:47 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:24:50 : Logo1: Running connection diagnostics...
+17.08.2020  10:24:53 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:24:55 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:24:55 : Logo1: Running connection diagnostics...
+17.08.2020  10:24:59 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:25:01 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:25:01 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:25:04 : Logo1: Running connection diagnostics...
+17.08.2020  10:25:07 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:25:10 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:25:10 : Logo1: Running connection diagnostics...
+17.08.2020  10:25:13 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:25:16 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:25:16 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:25:19 : Logo1: Running connection diagnostics...
+17.08.2020  10:25:19 : Logo1: Watchdog error - Watchdog does not change
+17.08.2020  10:25:19 : Logo1: Connection error: Watchdog error - Watchdog does not change
+17.08.2020  10:25:19 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+17.08.2020  10:25:22 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:25:22 : Logo1: Running connection diagnostics...
+17.08.2020  10:25:22 : Logo1:   -Ping successful at: 192.168.1.200
+17.08.2020  10:25:23 : Logo1: Connected again
+17.08.2020  10:25:24 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:25:24 : Logo1: Running connection diagnostics...
+17.08.2020  10:25:26 : Redirected to: Default
+17.08.2020  10:25:28 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:25:30 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:25:30 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:25:32 : Redirected to: Vzorci
+17.08.2020  10:25:33 : Logo1: Running connection diagnostics...
+17.08.2020  10:25:36 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:25:38 : Redirected to: Default
+17.08.2020  10:25:39 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:25:39 : Logo1: Running connection diagnostics...
+17.08.2020  10:25:42 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:25:45 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:25:45 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:25:48 : Logo1: Running connection diagnostics...
+17.08.2020  10:25:51 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:25:53 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:25:53 : Logo1: Running connection diagnostics...
+17.08.2020  10:25:57 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:25:59 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:25:59 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:26:02 : Logo1: Running connection diagnostics...
+17.08.2020  10:26:05 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:26:08 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:26:08 : Logo1: Running connection diagnostics...
+17.08.2020  10:26:11 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:26:14 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:26:14 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:26:17 : Logo1: Running connection diagnostics...
+17.08.2020  10:26:20 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:26:22 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:26:22 : Logo1: Running connection diagnostics...
+17.08.2020  10:26:26 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:26:28 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:26:28 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:26:31 : Logo1: Running connection diagnostics...
+17.08.2020  10:26:34 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:26:37 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:26:37 : Logo1: Running connection diagnostics...
+17.08.2020  10:26:40 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:26:43 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:26:43 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:26:46 : Logo1: Running connection diagnostics...
+17.08.2020  10:26:49 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:26:51 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:26:51 : Logo1: Running connection diagnostics...
+17.08.2020  10:26:55 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:26:57 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:26:57 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:27:00 : Logo1: Running connection diagnostics...
+17.08.2020  10:27:03 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:27:06 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:27:06 : Logo1: Running connection diagnostics...
+17.08.2020  10:27:09 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:27:12 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:27:12 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:27:15 : Logo1: Running connection diagnostics...
+17.08.2020  10:27:18 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:27:20 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:27:20 : Logo1: Running connection diagnostics...
+17.08.2020  10:27:24 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:27:26 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:27:26 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:27:29 : Logo1: Running connection diagnostics...
+17.08.2020  10:27:32 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:27:35 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:27:35 : Logo1: Running connection diagnostics...
+17.08.2020  10:27:38 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:27:41 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:27:41 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:27:44 : Logo1: Running connection diagnostics...
+17.08.2020  10:27:47 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:27:49 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:27:49 : Logo1: Running connection diagnostics...
+17.08.2020  10:27:53 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:27:55 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:27:55 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:27:58 : Logo1: Running connection diagnostics...
+17.08.2020  10:28:01 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:28:04 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:28:04 : Logo1: Running connection diagnostics...
+17.08.2020  10:28:07 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:28:10 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:28:10 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:28:13 : Logo1: Running connection diagnostics...
+17.08.2020  10:28:16 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:28:18 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:28:18 : Logo1: Running connection diagnostics...
+17.08.2020  10:28:22 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:28:24 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:28:24 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:28:27 : Logo1: Running connection diagnostics...
+17.08.2020  10:28:30 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:28:33 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:28:33 : Logo1: Running connection diagnostics...
+17.08.2020  10:28:36 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:28:39 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:28:39 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:28:42 : Logo1: Running connection diagnostics...
+17.08.2020  10:28:45 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:28:47 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:28:47 : Logo1: Running connection diagnostics...
+17.08.2020  10:28:51 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:28:53 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:28:53 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:28:56 : Logo1: Running connection diagnostics...
+17.08.2020  10:28:59 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:29:02 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:29:02 : Logo1: Running connection diagnostics...
+17.08.2020  10:29:05 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:29:08 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:29:08 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:29:11 : Logo1: Running connection diagnostics...
+17.08.2020  10:29:14 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:29:16 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:29:16 : Logo1: Running connection diagnostics...
+17.08.2020  10:29:20 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:29:22 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:29:22 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:29:25 : Logo1: Running connection diagnostics...
+17.08.2020  10:29:28 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:29:31 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:29:31 : Logo1: Running connection diagnostics...
+17.08.2020  10:29:34 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:29:37 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:29:37 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:29:40 : Logo1: Running connection diagnostics...
+17.08.2020  10:29:43 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:29:46 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:29:46 : Logo1: Running connection diagnostics...
+17.08.2020  10:29:49 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:29:52 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:29:52 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:29:55 : Logo1: Running connection diagnostics...
+17.08.2020  10:29:58 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:30:01 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:30:01 : Logo1: Running connection diagnostics...
+17.08.2020  10:30:04 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:30:07 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:30:07 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:30:10 : Logo1: Running connection diagnostics...
+17.08.2020  10:30:13 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:30:15 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:30:15 : Logo1: Running connection diagnostics...
+17.08.2020  10:30:19 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:30:21 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:30:21 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:30:24 : Logo1: Running connection diagnostics...
+17.08.2020  10:30:27 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:30:30 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:30:30 : Logo1: Running connection diagnostics...
+17.08.2020  10:30:33 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:30:36 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:30:36 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:30:39 : Logo1: Running connection diagnostics...
+17.08.2020  10:30:42 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:30:44 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:30:44 : Logo1: Running connection diagnostics...
+17.08.2020  10:30:48 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:30:50 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:30:50 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:30:53 : Logo1: Running connection diagnostics...
+17.08.2020  10:30:56 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:30:59 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:30:59 : Logo1: Running connection diagnostics...
+17.08.2020  10:31:02 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:31:05 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:31:05 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:31:08 : Logo1: Running connection diagnostics...
+17.08.2020  10:31:11 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:31:13 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:31:13 : Logo1: Running connection diagnostics...
+17.08.2020  10:31:17 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:31:19 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:31:19 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:31:22 : Logo1: Running connection diagnostics...
+17.08.2020  10:31:25 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:31:28 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:31:28 : Logo1: Running connection diagnostics...
+17.08.2020  10:31:31 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:31:34 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:31:34 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:31:37 : Logo1: Running connection diagnostics...
+17.08.2020  10:31:40 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:31:43 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:31:43 : Logo1: Running connection diagnostics...
+17.08.2020  10:31:46 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:31:49 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:31:49 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:31:52 : Logo1: Running connection diagnostics...
+17.08.2020  10:31:55 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:31:58 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:31:58 : Logo1: Running connection diagnostics...
+17.08.2020  10:32:01 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:32:04 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:32:04 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:32:07 : Logo1: Running connection diagnostics...
+17.08.2020  10:32:10 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:32:12 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:32:12 : Logo1: Running connection diagnostics...
+17.08.2020  10:32:16 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:32:18 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:32:18 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:32:21 : Logo1: Running connection diagnostics...
+17.08.2020  10:32:24 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:32:27 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:32:27 : Logo1: Running connection diagnostics...
+17.08.2020  10:32:30 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+17.08.2020  10:32:33 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:32:33 : Logo2: Connection error: CLI : Client not connected
+17.08.2020  10:32:36 : Logo1: Running connection diagnostics...
+17.08.2020  10:32:39 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+17.08.2020  10:32:41 : Logo2: Connection failed. Trying to reconnect
+17.08.2020  10:32:41 : Logo1: Running connection diagnostics...

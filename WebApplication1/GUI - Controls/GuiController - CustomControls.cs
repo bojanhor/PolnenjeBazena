@@ -83,6 +83,7 @@ namespace WebApplication1
                 {
                     btnID = btnID_;
                     this.ID = ID_prefix + btnID;
+                    
                 }
             }
 
@@ -1836,6 +1837,62 @@ namespace WebApplication1
                 }
             }
 
+            public class StartPauseButton : ImageButtonWithID
+            {
+                readonly string imagePause = "~/Pictures/Pause1.png";
+                readonly string imageStart = "~/Pictures/Start1.png";
+                bool readStateLast = false;
+
+                PlcVars.Bit sendPulseToStart;
+                PlcVars.Bit sendPulseToPause;
+
+                GControls.UpdatePanelFull up;
+
+                /// <summary>
+                /// Control must be added inside updatepanel
+                /// </summary>
+                /// <param name="idPrefix"></param>
+                /// <param name="IDnumber"></param>
+                public StartPauseButton(string idPrefix, int IDnumber, bool readState_started, PlcVars.Bit sendPulseToStart, PlcVars.Bit sendPulseToPause):base(idPrefix, IDnumber)
+                {                    
+                    if (readState_started)
+                    {
+                        ImageUrl = imagePause;
+                        readStateLast = true;
+                    }
+                    else
+                    {
+                        ImageUrl = imageStart;
+                        readStateLast = false;
+                    }
+
+                    this.sendPulseToStart = sendPulseToStart;
+                    this.sendPulseToPause = sendPulseToPause;
+
+                    this.Click += StartPauseButton_Click;
+
+                }
+
+                private void StartPauseButton_Click(object sender, ImageClickEventArgs e)
+                {
+                    if (readStateLast) // curently running --> will set pause command
+                    {
+                        if (sendPulseToPause != null)
+                        {
+                            sendPulseToPause.SendPulse();
+                        }
+                        
+                    }
+                    else
+                    {
+                        if (sendPulseToStart != null)
+                        {
+                            sendPulseToStart.SendPulse();
+                        }
+                    }
+                }
+            }
+
             public class LogMeIn : HtmlGenericControl
             {
                 readonly Label Title;
@@ -2070,6 +2127,7 @@ namespace WebApplication1
                     ContentTemplateContainer.Controls.Add(Timer);
                     Triggers.Add(ap);
                     this.UpdateMode = UpdatePanelUpdateMode.Conditional;
+                                       
                 }
 
                 public void Controls_Add(Control c)

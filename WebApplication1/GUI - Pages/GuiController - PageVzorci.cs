@@ -25,7 +25,7 @@ namespace WebApplication1
             public GControls.UpdatePanelFull UP = new GControls.UpdatePanelFull("PageUpdatePanel", Settings.UpdateValuesPCms);
 
 
-            public GControls.GroupBox gb_Rob; public GControls.GroupBox gb_ZigZag;
+            public GControls.GroupBox gb_Rob; public GControls.GroupBox gb_ZigZag; public HtmlGenericControl GlobalControls;
             List<GControls.ImageButtonWithID> RobList = new List<GControls.ImageButtonWithID>();
             GControls.ImageButtonWithID RobX1, RobY1, RobX2, RobY2;
             GControls.ImageButtonWithID ZigZag_zRobom;
@@ -81,6 +81,21 @@ namespace WebApplication1
                 Opozorilo.Style.Add(HtmlTextWriterStyle.Color, Settings.RedColorHtmlHumar);
                 Opozorilo.Style.Add(HtmlTextWriterStyle.FontWeight, "bold");
 
+                CreateGlobalControls();
+
+            }
+
+            public void CreateGlobalControls()
+            {
+                var prop = Val.logocontroler.Prop1;
+
+                GControls.UpdatePanelFull up = new GControls.UpdatePanelFull("up_startPause", Settings.UpdateValuesPCms);
+                GControls.StartPauseButton Start = new GControls.StartPauseButton("Stop", 0, prop.Man_AutoReadState.Value_bool, prop.Start, prop.Halt);
+                SetControlAbsolutePos(Start, 2, 2, 50);
+
+                GlobalControls = DIV.CreateDivAbsolute(1,1,20,20,"%");
+                up.Controls_Add(Start);
+                GlobalControls.Controls.Add(up);
             }
 
             private void ZigZag_zRobom_Click(object sender, ImageClickEventArgs e)

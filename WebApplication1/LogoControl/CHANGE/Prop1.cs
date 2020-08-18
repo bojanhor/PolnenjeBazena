@@ -39,7 +39,7 @@ namespace WebApplication1
 
         public PlcVars.Bit TrakRead;
 
-        public PlcVars.AlarmBit Trak_muss;
+        public PlcVars.Bit Trak_muss;
 
         public PlcVars.AlarmBit SymPrisotMat;
         public PlcVars.Bit ReadPrisotMat;
@@ -113,7 +113,7 @@ namespace WebApplication1
             DirY2 = new PlcVars.Bit(this, new PlcVars.BitAddress(26, 0), false) { SyncEvery_X_Time = 2 };
             TrakRead = new PlcVars.Bit(this, new PlcVars.BitAddress(28, 0), false) { SyncEvery_X_Time = 3 };
 
-            Trak_muss = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(29, 0),"Trak je prisilno vključen", false, false, true) { SyncEvery_X_Time = 3 };
+            Trak_muss = new PlcVars.Bit(this, new PlcVars.BitAddress(29, 0), true) { SyncEvery_X_Time = 3 };
 
             SymPrisotMat = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(30, 0),"Vključena je simulacija materiala!", false, false, true) { SyncEvery_X_Time = 3 };
             ReadPrisotMat = new PlcVars.Bit(this, new PlcVars.BitAddress(32, 0), false) { SyncEvery_X_Time = 3 };

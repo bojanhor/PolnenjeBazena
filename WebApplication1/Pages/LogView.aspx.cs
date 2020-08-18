@@ -11,7 +11,7 @@ namespace WebApplication1.Pages
     {        
         protected void Page_Load(object sender, EventArgs e)
         {
-            Navigator.EveryPageProtocol("Pogled dnevnika", this, Session, TemplateClassID, true, false);
+            Navigator.EveryPageProtocol("Pogled dnevnika", this, Session, TemplateClassID, true, Navigator.PageLogoType.NoLogo);
             Val.guiController.PageLogView_ = new GuiController.PageLogView();            
                        
             Initialise();

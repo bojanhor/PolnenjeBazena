@@ -12,7 +12,7 @@ namespace WebApplication1.Pages
               
         protected void Page_Load(object sender, EventArgs e)
         {
-            Navigator.EveryPageProtocol("Uporabniske Nastavitve", this, Session, TemplateClassID, true, false, true, true, true, true);
+            Navigator.EveryPageProtocol("Uporabniske Nastavitve", this, Session, TemplateClassID, true, Navigator.PageLogoType.NoLogo, true, true, true, true);
             Val.guiController.UpNastavitve_ = new GuiController.PageUpNastavitve(this, Session);           
 
 
