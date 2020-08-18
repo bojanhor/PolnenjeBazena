@@ -25,7 +25,9 @@ namespace WebApplication1
         public Prop3 Prop3 { get; set; }
         public Prop4 Prop4 { get; set; }
         public Prop5 Prop5 { get; set; }
-       
+
+        public PropComm[] Props = new PropComm[Settings.Devices + 1];
+
         public S7Client[] LOGO = new S7Client[Settings.Devices + 1];
 
         public Connection[] LOGOConnection = new Connection[Settings.Devices + 1];
@@ -155,7 +157,7 @@ namespace WebApplication1
                 time1 = DateTime.Now;
                 while (true)
                 {
-
+                   
                     if (forceRefresh[device] > 0) // force refresh values with minimum delay - int value represents how many cycles value will be forced to refresh
                     {
                         forceRefresh[device] -= 1;
@@ -169,6 +171,10 @@ namespace WebApplication1
                         if (LOGOConnection[device].connectionStatusLOGO == Connection.Status.Connected ||
                             LOGOConnection[device].connectionStatusLOGO == Connection.Status.Warning)
                         {
+                            // 
+                            LOGO[device].S7PLCbuffer.ReadPLCtoBuffer(); // READs WHOLE PLC TO BUFFER
+                                                                        //
+
                             switch (device)
                             {
                                 case 1: Prop1.SyncVars(); break;
@@ -176,11 +182,12 @@ namespace WebApplication1
                                 case 3: Prop3.SyncVars(); break;
                                 case 4: Prop4.SyncVars(); break;
                                 case 5: Prop5.SyncVars(); break;
-                               
+
                                 default:
                                     WL("Internal Error: Switch statement does not support this device", -2); LOGOConnection[device].connectionStatusLOGO = Connection.Status.Error; break;
 
                             }
+
                         }
                         else
                         {
@@ -323,7 +330,7 @@ namespace WebApplication1
             {
                 // watchdog function
 
-                thisValue = Connection.PLCread(Client, typeAndAdress, out err);
+                thisValue = Connection.BufferRead(Client, typeAndAdress, out err);
                 if (err != 0 || thisValue <= 0) // if there is an error
                 {
                     previousValue = thisValue;
@@ -389,7 +396,7 @@ namespace WebApplication1
 
         private void RunDiagnostics(int device)
         {
-            WL("Running connection diagnostics...",1);
+            WL("Running connection diagnostics...",device);
 
             Ping(device);
             
@@ -413,18 +420,11 @@ namespace WebApplication1
                     }
 
                     Watchdog_PC_value++;
-                    //FormControl.bt1.Prop1.Watchdog_PC_value.Value = (short)Watchdog_PC_value;
+                    
                     if (firstpass)
-                    {
-                        //if (Settings.InvokeRequired)
-                        //{
-                        //    Settings.Invoke(new MethodInvoker(delegate { WL("PC Watchdog is now running", 0); }));
-                        //}
-                        //else
-                        //{
+                    {                       
                         WL("PC Watchdog is now running", 0);
-                        //}
-
+                       
                         firstpass = false;
                     }
 

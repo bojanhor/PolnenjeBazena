@@ -96,7 +96,7 @@ namespace WebApplication1
         public abstract class PlcType
         {            
             public Sharp7.S7Client Client;
-            
+           
             private ushort _syncEvery_X_Time = 1;
             public ushort SyncEvery_X_Time // set to 1 for syncing to occur every loop -- 0 = turn sync off -- 2 = every 2nd loop...
             {
@@ -110,7 +110,7 @@ namespace WebApplication1
             {
                 // adding base types of all variables to list "sorted" by prop to efficiently call sync procedure
                 this_prop.AutoSync.Add(this);                
-                Client = this_prop.Client;
+                Client = this_prop.Client;                
             }
                         
             public abstract void SyncWithPLC();            
@@ -137,12 +137,14 @@ namespace WebApplication1
 
             }
 
+            
+
             public void AddWarningMonitor(object valueToTrigerWarning, WarningManager.WarningTriggerCondition Condition, string WarningMessage)
             {
                 WarningManager.AddWarningTrackerFromPLCVar(this, valueToTrigerWarning, Condition, WarningMessage);
             }
         }
-        
+                        
         
         public class Word : PlcType
         {
@@ -249,7 +251,7 @@ namespace WebApplication1
                 {
                     if (Client != null)
                     {
-                        buffRead = Connection.PLCread(Client, _TypeAndAdress, out ErrRead);
+                        buffRead = Connection.BufferRead(Client, _TypeAndAdress, out ErrRead);
                         if (ErrRead == 0 && buffRead != null)
                         {
                             PLCval = buffRead; buffRead = null;
@@ -451,7 +453,7 @@ namespace WebApplication1
                 {
                     if (Client != null)
                     {
-                        buffRead = (byte)Connection.PLCread(Client, _TypeAndAdress, out ErrRead);
+                        buffRead = (byte)Connection.BufferRead(Client, _TypeAndAdress, out ErrRead);
                         if (ErrRead == 0 && buffRead != null)
                         {
                             PLCval = buffRead; buffRead = null;
@@ -647,7 +649,7 @@ namespace WebApplication1
                 {
                     if (_Client != null)
                     {
-                        buffRead = Connection.PLCread(_Client, _TypeAndAdress, out ErrRead);
+                        buffRead = Connection.BufferRead(_Client, _TypeAndAdress, out ErrRead);
                         if (ErrRead == 0 && buffRead != null)
                         {
                             PLCval = buffRead; buffRead = null;
@@ -822,7 +824,7 @@ namespace WebApplication1
                 {
                     if (_Client != null)
                     {
-                        buffRead = Connection.PLCread(_Client, _TypeAndAdress, out ErrRead);
+                        buffRead = Connection.BufferRead(_Client, _TypeAndAdress, out ErrRead);
                         if (ErrRead == 0 && buffRead != null) { PLCval = buffRead; buffRead = null; }
                     }
                     else
@@ -1046,7 +1048,7 @@ namespace WebApplication1
                 {
                     if (_Client != null)
                     {
-                        buffRead = Connection.PLCread(_Client, _TypeAndAdress, out ErrRead);
+                        buffRead = Connection.BufferRead(_Client, _TypeAndAdress, out ErrRead);
                         if (ErrRead == 0 && buffRead != null) { PLCval = buffRead; buffRead = null; }
                         else
                         {
@@ -1262,7 +1264,7 @@ namespace WebApplication1
                 {
                     if (_Client != null)
                     {
-                        buffRead = Connection.PLCread(_Client, _TypeAndAdress, out ErrRead);
+                        buffRead = Connection.BufferRead(_Client, _TypeAndAdress, out ErrRead);
                         if (ErrRead == 0 && buffRead != null) { if (buffRead > 0) { PLCval = true; } else { PLCval = false; } buffRead = null; }
                         else
                         {
@@ -1438,7 +1440,7 @@ namespace WebApplication1
             {
                 if (_Client != null)
                 {
-                    buffRead = Connection.PLCread(_Client, _TypeAndAdress, out ErrRead);
+                    buffRead = Connection.BufferRead(_Client, _TypeAndAdress, out ErrRead);
                     if (ErrRead == 0 && buffRead != null) { PLCval = buffRead; buffRead = null; }
                 }
                 else

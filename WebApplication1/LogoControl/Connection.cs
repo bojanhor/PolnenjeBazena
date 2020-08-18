@@ -144,12 +144,13 @@ namespace WebApplication1
                 
 
         // Read from PLC
-        public static short PLCread(S7Client Client, PlcVars.PlcAddress typeAndAdress, out int errCode)
+        public static short BufferRead(S7Client Client, PlcVars.PlcAddress typeAndAdress, out int errCode)
         {            
             short value = 0;
             try
-            {                                         
-                byte[] b = new byte[6];  // temporary array for writing
+            {
+                byte[] b = Client.S7PLCbuffer.GetBuffer();
+                errCode = Client.S7PLCbuffer.GetError();
 
                 // In case if you want to read bit value
                 if (typeAndAdress is PlcVars.BitAddress)
@@ -159,9 +160,8 @@ namespace WebApplication1
 
 
                     try
-                    {                        
-                        errCode = Client.DBRead(1, bitAdress.GetAddress(), 1, b);                        
-                        boolval = S7.GetBitAt(b, 0, bitAdress.GetSubAddress());
+                    {                          
+                        boolval = S7.GetBitAt(b, bitAdress.Address, bitAdress.GetSubAddress());
                         if (boolval) { return 1; } return 0;
                     }
                     catch (Exception)
@@ -175,9 +175,8 @@ namespace WebApplication1
                 else if (typeAndAdress is PlcVars.DoubleWordAddress)
                 {                    
                     try
-                    {                       
-                        errCode = Client.DBRead(1, typeAndAdress.GetAddress(), 4, b);
-                        value = (short)Convert.ToInt32(S7.GetDWordAt(b, 0));
+                    {  
+                        value = (short)Convert.ToInt32(S7.GetDWordAt(b, typeAndAdress.Address));
                     }
                     catch
                     {
@@ -191,9 +190,8 @@ namespace WebApplication1
                 else if (typeAndAdress is PlcVars.WordAddress)
                 {
                     try
-                    {
-                        errCode = Client.DBRead(1, typeAndAdress.GetAddress(), 2, b);
-                        value = (short)(S7.GetWordAt(b, 0));
+                    {                        
+                        value = (short)(S7.GetWordAt(b, typeAndAdress.Address));
                     }
                     catch
                     {
@@ -205,8 +203,7 @@ namespace WebApplication1
                 else if (typeAndAdress is PlcVars.ByteAddress)
                 {
                     try
-                    {
-                        errCode = Client.DBRead(1, typeAndAdress.GetAddress(), 1, b);
+                    {                        
                         value = S7.GetByteAt(b, 0);
                     }
                     catch

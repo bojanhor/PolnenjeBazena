@@ -2146,6 +2146,7 @@ namespace Sharp7
         {
             CreateSocket();
             deviceID = device;
+            this.S7PLCbuffer = new PLCBuffer(this);
         }
 
         ~S7Client()
@@ -3826,6 +3827,51 @@ namespace Sharp7
             {
                 return (Socket != null) && (Socket.Connected);
             }
+        }
+
+
+        #endregion
+
+        // added later by Humar sistemi
+        #region SyncHelpers
+
+        public PLCBuffer S7PLCbuffer;
+        public class PLCBuffer
+        {
+            int errCode = 0;
+            readonly static int length = 850;
+            byte[] byteBuffer = new byte[length];
+            S7Client Client;
+
+            public PLCBuffer(S7Client Client)
+            {
+                this.Client = Client;
+            }
+
+            public byte[] ReadPLCtoBuffer()
+            {
+                try
+                {
+                    errCode = Client.DBRead(1, 0, length, byteBuffer);
+                }
+                catch (Exception)
+                {
+                    errCode = Sharp7.S7Consts.err_Read;
+                }
+
+                return byteBuffer;
+            }
+
+            public byte[] GetBuffer()
+            {
+                return byteBuffer;
+            }
+
+            public int GetError()
+            {
+                return errCode;
+            }
+
         }
 
 
