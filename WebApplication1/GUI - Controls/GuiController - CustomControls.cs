@@ -344,26 +344,32 @@ namespace WebApplication1
                 string menuID;
 
 
-                public ButtonWithLabel_SelectMenu(string Name, Datasourcer.Datasource dataSource, string ID, string text, float FontSize, Timer updateTimer, bool wideMode)
+                public ButtonWithLabel_SelectMenu(string Name, Datasourcer.Datasource dataSource, string ID, string text, float FontSize, Timer updateTimer, bool wideMode, bool enabled)
                 {
                     button = new TransparentButton("menu_" + Name.Replace(" ", "") + "_" + ID);
-                    Ctor(Name, dataSource, ID, text, FontSize, updateTimer, wideMode);
+                    Ctor(Name, dataSource, ID, text, FontSize, updateTimer, wideMode, enabled);
                 }
 
 
-                void Ctor(string Name, Datasourcer.Datasource dataSource, string ID, string text, float FontSize, Timer updateTimer, bool wideMode)
+                void Ctor(string Name, Datasourcer.Datasource dataSource, string ID, string text, float FontSize, Timer updateTimer, bool wideMode, bool enabled)
                 {
 
                     _text = text;
                     menuID = ID;
 
+                    
+                    if (enabled)
+                    {
+                        Image.ImageUrl = wideMode ? "~/Pictures/EmptyBtnWide.png" : "~/Pictures/EmptyBtn.png";
+                    }
+                    else
+                    {
+                        Image.ImageUrl = wideMode ? "~/Pictures/EmptyBtnWide_disabled.png" : "~/Pictures/EmptyBtn_disabled.png";
+                    }
 
-                    Image.ImageUrl = wideMode ? "~/Pictures/EmptyBtnWide.png" : "~/Pictures/EmptyBtn.png";
-                    SetControlAbsolutePos(Image, 0, 0, 100, 100);
-                    SetControlAbsolutePos(button, 0, 0, 100, 100);
+                    SetControlAbsolutePos(Image, 0, 0, 100, 100); SetControlAbsolutePos(button, 0, 0, 100, 100);
 
-                    button.Style.Add(HtmlTextWriterStyle.BackgroundColor, "transparent");
-                    button.ID = menuID + "_btn";
+                    button.Style.Add(HtmlTextWriterStyle.BackgroundColor, "transparent"); button.ID = menuID + "_btn";
 
                     if (Name != null)
                     {
@@ -377,11 +383,12 @@ namespace WebApplication1
 
                     Controls.Add(Image);
                     Controls.Add(CreateLabelInside(text, this, 30, 10, FontSize, true, true, Settings.LightBlackColor));
-                    Controls.Add(button);
+                    Controls.Add(button); Controls.Add(submenu);
 
-                    Controls.Add(submenu);
-
-                    button.Click += (sender, e) => Button_Click(sender, e, updateTimer); // OnClick Event
+                    if (enabled)
+                    {
+                        button.Click += (sender, e) => Button_Click(sender, e, updateTimer); // OnClick Event
+                    }                    
 
                 }
 
@@ -1269,7 +1276,7 @@ namespace WebApplication1
 
                 public DropDown(string LableTitle, Datasourcer.Datasource dataSource, string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
                 {
-                    SetDropdown(LableTitle, dataSource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, wideMode);
+                    SetDropdown(LableTitle, dataSource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, wideMode, true);
                 }
 
                 public DropDown(string LableTitle, Datasourcer.Datasource dataSource, string ID, bool? PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
@@ -1279,12 +1286,26 @@ namespace WebApplication1
                     {
                         buff = PlcTextValue.ToString();
                     }
-                    SetDropdown(LableTitle, dataSource, ID, buff, top, left, size, fontSize, selfUpdatable, wideMode);
+                    SetDropdown(LableTitle, dataSource, ID, buff, top, left, size, fontSize, selfUpdatable, wideMode, true);
                 }
 
-                void SetDropdown(string LableTitle, Datasourcer.Datasource dataSource, string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
+                public DropDown(string LableTitle, Datasourcer.Datasource dataSource, string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode, bool enabled)
                 {
+                    SetDropdown(LableTitle, dataSource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, wideMode, enabled);
+                }
 
+                public DropDown(string LableTitle, Datasourcer.Datasource dataSource, string ID, bool? PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode, bool enabled)
+                {
+                    string buff = null;
+                    if (PlcTextValue != null)
+                    {
+                        buff = PlcTextValue.ToString();
+                    }
+                    SetDropdown(LableTitle, dataSource, ID, buff, top, left, size, fontSize, selfUpdatable, wideMode, enabled);
+                }
+
+                void SetDropdown(string LableTitle, Datasourcer.Datasource dataSource, string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode, bool enabled)
+                {
                     this.ID = ID;
 
                     DataSource = dataSource;
@@ -1303,7 +1324,7 @@ namespace WebApplication1
 
                     try
                     {
-                        Button_Outside = new ButtonWithLabel_SelectMenu(LableTitle, DataSource, ID + "_s", ManageSelectedItem(PlcTextValue), fontSize, UpdateTimer, wideMode)
+                        Button_Outside = new ButtonWithLabel_SelectMenu(LableTitle, DataSource, ID + "_s", ManageSelectedItem(PlcTextValue), fontSize, UpdateTimer, wideMode, enabled)
                         {
                             ID = ID + "_dd"
                         };
@@ -1313,8 +1334,11 @@ namespace WebApplication1
                         throw new Exception("Error initialising Submenu. Error info: " + ex.Message);
                     }
 
-
-                    SaveClicked += DropDown_SaveClicked;
+                    if (enabled)
+                    {
+                        SaveClicked += DropDown_SaveClicked;
+                    }
+                    
 
                     ctc = updatePanel.ContentTemplateContainer;
                     ctc.Controls.Add(SetControlAbsolutePos(Button_Outside, 0, 0, 100, 100));
@@ -1495,8 +1519,8 @@ namespace WebApplication1
                 static readonly Datasourcer.BazenSelectorDatasource datasource = new Datasourcer.BazenSelectorDatasource();
 
 
-                public DropDownListForBazenSel(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
-                    : base("Izberite bazen:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, wideMode)
+                public DropDownListForBazenSel(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode, bool enabled)
+                    : base("Izberite bazen:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, wideMode, enabled)
                 {
                     Ctor();
                 }
@@ -1845,8 +1869,7 @@ namespace WebApplication1
 
                 PlcVars.Bit sendPulseToStart;
                 PlcVars.Bit sendPulseToPause;
-
-                GControls.UpdatePanelFull up;
+                             
 
                 /// <summary>
                 /// Control must be added inside updatepanel

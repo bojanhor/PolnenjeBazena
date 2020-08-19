@@ -10,37 +10,9 @@ namespace WebApplication1
     {
         Prop1 prop1;
         public short selectedBazen;
-        bool _ZigzagInProcess = false;
-        bool _ZigzagzRobomInProcess = false;
-        bool _RobX1InProcess = false;
-        bool _RobY1InProcess = false;
-        bool _RobX2InProcess = false;
-        bool _RobY2InProcess = false;
-        bool _KrozenjeInProcess = false;
-        bool _EnKrogInProcess = false;
-     
 
-        public bool ZigzagInProcess 
-        { get { return _ZigzagInProcess; } set { _ZigzagInProcess = value; } }
-        public bool ZigzagzRobomInProcess 
-        { get { return _ZigzagzRobomInProcess; } set { _ZigzagzRobomInProcess = value; } }
-        public bool RobX1InProcess 
-        { get { return _RobX1InProcess; } set { _RobX1InProcess = value; } }
-        public bool RobY1InProcess 
-        { get { return _RobY1InProcess; } set { _RobY1InProcess = value; } }
-        public bool RobX2InProcess 
-        { get { return _RobX2InProcess; } set { _RobX2InProcess = value; } }
-        public bool RobY2InProcess 
-        { get { return _RobY2InProcess; } set { _RobY2InProcess = value; } }
-        public bool KrozenjeInProcess
-        { get { return _KrozenjeInProcess; } set { _KrozenjeInProcess = value; } }
-        public bool EnKrogInProcess 
-        { get { return _EnKrogInProcess; } set { _EnKrogInProcess = value; } }
-
-        private Patern current;
-        public Patern Current 
-        { get { return current; } set { current = value; } }
-
+        public Patern Current;
+        
         int MaxWaitTime_s = 60;
 
         public Kontrola()
@@ -127,6 +99,55 @@ namespace WebApplication1
             }
         }
 
+        public bool StartRobSKrozenjemX1()
+        {
+            if (permisionToRun())
+            {
+                doKrozniRobX1();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool StartRobSKrozenjemX2()
+        {
+            if (permisionToRun())
+            {
+                doKrozniRobX2();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool StartRobSKrozenjemY1()
+        {
+            if (permisionToRun())
+            {
+                doKrozniRobY1();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool StartRobSKrozenjemY2()
+        {
+            if (permisionToRun())
+            {
+                doKrozniRobY2();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public bool StartCircling()
         {
             if (permisionToRun())
@@ -140,19 +161,7 @@ namespace WebApplication1
             }
         }
 
-        public bool StartOneCircle()
-        {
-            if (permisionToRun())
-            {
-                doOneCircle();
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
+       
         // Patern Methods
         void ZigZagPatern_method()
         {
@@ -191,16 +200,7 @@ namespace WebApplication1
             if (Current != null)
             {
                 Current.Stop();
-            }
-
-             ZigzagInProcess = false;
-             ZigzagzRobomInProcess = false;
-             RobX1InProcess = false;
-             RobY1InProcess = false;
-             RobX2InProcess = false;
-             RobY2InProcess = false;
-             KrozenjeInProcess = false;
-             EnKrogInProcess = false;
+            }                        
         }
 
 
@@ -211,9 +211,6 @@ namespace WebApplication1
             
             Action Action = new Action(() => ZigZagPatern_method());
             Patern Patern = new Patern(paternName, Action, this);
-            
-
-            ZigzagInProcess = true;
 
         }
 
@@ -223,9 +220,6 @@ namespace WebApplication1
             
             Action Action = new Action(() => ZigZagzRobomn_method());
             Patern Patern = new Patern(paternName, Action, this);
-            
-
-            ZigzagzRobomInProcess = true;
 
         }
 
@@ -235,10 +229,6 @@ namespace WebApplication1
             StopPatern();
             Action Action = new Action(() => RobX1_method());
             Patern Patern = new Patern(paternName, Action, this);
-            
-
-            RobX1InProcess = true;
-
         }
 
         void doRobX2()
@@ -247,10 +237,6 @@ namespace WebApplication1
             
             Action Action = new Action(() => RobX2_method());
             Patern Patern = new Patern(paternName, Action, this);
-            
-    
-            RobX2InProcess = true;
-
         }
         void doRobY1()
         {
@@ -258,10 +244,6 @@ namespace WebApplication1
             
             Action Action = new Action(() => RobY1_method());
             Patern Patern = new Patern(paternName, Action, this);
-            
-
-            RobY1InProcess = true;
-
         }
 
         void doRobY2()
@@ -270,10 +252,35 @@ namespace WebApplication1
             
             Action Action = new Action(() => RobY2_method());
             Patern Patern = new Patern(paternName, Action, this);
-            
+        }
 
-            RobY2InProcess = true;
+        void doKrozniRobX1()
+        {
+            var paternName = "KrozniRobX1";
 
+            Action Action = new Action(() => KrozniRobX1_method());
+            Patern Patern = new Patern(paternName, Action, this);
+        }
+        void doKrozniRobX2()
+        {
+            var paternName = "KrozniRobX2";
+
+            Action Action = new Action(() => KrozniRobX2_method());
+            Patern Patern = new Patern(paternName, Action, this);
+        }
+        void doKrozniRobY1()
+        {
+            var paternName = "KrozniRobY1";
+
+            Action Action = new Action(() => KrozniRobY1_method());
+            Patern Patern = new Patern(paternName, Action, this);
+        }
+        void doKrozniRobY2()
+        {
+            var paternName = "KrozniRobY2";
+
+            Action Action = new Action(() => KrozniRobY2_method());
+            Patern Patern = new Patern(paternName, Action, this);
         }
 
         void doOneCircle()
@@ -282,9 +289,6 @@ namespace WebApplication1
             
             Action Action = new Action(() => OneCircle_method());
             Patern Patern = new Patern(paternName, Action, this);
-            
-
-            EnKrogInProcess = true;
 
         }
 
@@ -294,10 +298,6 @@ namespace WebApplication1
             
             Action Action = new Action(() => Circling_method());
             Patern Patern = new Patern(paternName, Action, this);
-            
-            
-            KrozenjeInProcess = true;
-          
         }
 
 
@@ -392,10 +392,13 @@ namespace WebApplication1
                             cnt = 0;
                         }
                     }
+
                     if (prop1.Ustavljeno.Value_bool)
                     {
 
                     }
+
+
                     cnt++;
                     Thread.Sleep(200);
                 }
@@ -656,6 +659,82 @@ namespace WebApplication1
             {
                 goLft();
                 goRght();
+                Thread.Sleep(50); // safety
+            }
+
+
+        }
+
+        void KrozniRobY1_method()
+        {
+            goDwn_NoWait();
+            goLft_NoWait();
+
+            waitForDwn();
+            waitForLft();
+
+            while (true)
+            {
+                goRght();
+                goUpFor();
+                goLft();
+                goDwn();
+                Thread.Sleep(50); // safety
+            }
+
+        }
+        void KrozniRobX2_method()
+        {
+            goDwn_NoWait();
+            goRght_NoWait();
+
+            waitForDwn();
+            waitForRght();
+
+            while (true)
+            {
+                goUp();
+                goLftFor();
+                goDwn();
+                goRght();
+                Thread.Sleep(50); // safety
+            }
+
+
+        }
+        void KrozniRobX1_method()
+        {
+            goUp_NoWait();
+            goLft_NoWait();
+
+            waitForUp();
+            waitForLft();
+
+            while (true)
+            {
+                goDwn();
+                goRghtFor();
+                goUp();
+                goLft();
+                Thread.Sleep(50); // safety
+            }
+
+
+        }
+        void KrozniRobY2_method()
+        {
+            goUp_NoWait();
+            goRght_NoWait();
+
+            waitForUp();
+            waitForRght();
+
+            while (true)
+            {
+                goLft();
+                goDwnFor();
+                goRght();
+                goUp();
                 Thread.Sleep(50); // safety
             }
 

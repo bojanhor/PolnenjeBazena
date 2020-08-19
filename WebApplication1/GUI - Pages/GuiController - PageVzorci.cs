@@ -28,10 +28,10 @@ namespace WebApplication1
             public GControls.GroupBox gb_Rob; public GControls.GroupBox gb_ZigZag; public HtmlGenericControl GlobalControls;
             List<GControls.ImageButtonWithID> RobList = new List<GControls.ImageButtonWithID>();
             GControls.ImageButtonWithID RobX1, RobY1, RobX2, RobY2;
+            GControls.ImageButtonWithID CircX1, CircY1, CircX2, CircY2;
             GControls.ImageButtonWithID ZigZag_zRobom;
             GControls.ImageButtonWithID ZigZag;
             GControls.ImageButtonWithID Krozenje;
-            GControls.ImageButtonWithID Krog;
 
             GControls.SuperLabel lbl_PolnenjeRobu; GControls.SuperLabel lbl_PolnenjeZigZag;
             public GControls.SuperLabel Opozorilo;
@@ -42,23 +42,47 @@ namespace WebApplication1
             {
                 this.session = session;
                 this.thisPage = _thisPage;
-                RobX1 = new GControls.ImageButtonWithID("X1", 0); if (prop1.RobX1_read.Value_bool) { RobX1.ImageUrl = "~/Pictures/CircX1.png"; } else { RobX1.ImageUrl = "~/Pictures/CircX1_off.png"; };
-                RobY1 = new GControls.ImageButtonWithID("Y1", 0); if (prop1.RobY1_read.Value_bool) { RobY1.ImageUrl = "~/Pictures/CircY1.png"; } else { RobY1.ImageUrl = "~/Pictures/CircY1_off.png"; };
-                RobX2 = new GControls.ImageButtonWithID("X2", 0); if (prop1.RobX2_read.Value_bool) { RobX2.ImageUrl = "~/Pictures/CircX2.png"; } else { RobX2.ImageUrl = "~/Pictures/CircX2_off.png"; };
-                RobY2 = new GControls.ImageButtonWithID("Y2", 0); if (prop1.RobY2_read.Value_bool) { RobY2.ImageUrl = "~/Pictures/CircY2.png"; } else { RobY2.ImageUrl = "~/Pictures/CircY2_off.png"; };
 
+                RobX1 = new GControls.ImageButtonWithID("X1e", 0); if (prop1.RobX1_read.Value_bool) { RobX1.ImageUrl = "~/Pictures/EdgeX1.png"; } else { RobX1.ImageUrl = "~/Pictures/EdgeX1_off.png"; };
+                RobY1 = new GControls.ImageButtonWithID("Y1e", 0); if (prop1.RobY1_read.Value_bool) { RobY1.ImageUrl = "~/Pictures/EdgeY1.png"; } else { RobY1.ImageUrl = "~/Pictures/EdgeY1_off.png"; };
+                RobX2 = new GControls.ImageButtonWithID("X2e", 0); if (prop1.RobX2_read.Value_bool) { RobX2.ImageUrl = "~/Pictures/EdgeX2.png"; } else { RobX2.ImageUrl = "~/Pictures/EdgeX2_off.png"; };
+                RobY2 = new GControls.ImageButtonWithID("Y2e", 0); if (prop1.RobY2_read.Value_bool) { RobY2.ImageUrl = "~/Pictures/EdgeY2.png"; } else { RobY2.ImageUrl = "~/Pictures/EdgeY2_off.png"; };
+
+                CircX1 = new GControls.ImageButtonWithID("X1c", 0); if (prop1.CircX1_read.Value_bool) { CircX1.ImageUrl = "~/Pictures/CircX1.png"; } else { CircX1.ImageUrl = "~/Pictures/CircX1_off.png"; };
+                CircY1 = new GControls.ImageButtonWithID("Y1c", 0); if (prop1.CircY1_read.Value_bool) { CircY1.ImageUrl = "~/Pictures/CircY1.png"; } else { CircY1.ImageUrl = "~/Pictures/CircY1_off.png"; };
+                CircX2 = new GControls.ImageButtonWithID("X2c", 0); if (prop1.CircX2_read.Value_bool) { CircX2.ImageUrl = "~/Pictures/CircX2.png"; } else { CircX2.ImageUrl = "~/Pictures/CircX2_off.png"; };
+                CircY2 = new GControls.ImageButtonWithID("Y2c", 0); if (prop1.CircY2_read.Value_bool) { CircY2.ImageUrl = "~/Pictures/CircY2.png"; } else { CircY2.ImageUrl = "~/Pictures/CircY2_off.png"; };
+
+                Krozenje = new GControls.ImageButtonWithID("Krozenje", 0); if (prop1.RobX1_read.Value_bool) { Krozenje.ImageUrl = "~/Pictures/Circ1_on.png"; } else { Krozenje.ImageUrl = "~/Pictures/Circ1.png"; };
+               
                 RobList.Add(RobX1); RobList.Add(RobY1); RobList.Add(RobX2); RobList.Add(RobY2);
+                RobList.Add(CircX1); RobList.Add(CircY1); RobList.Add(CircX2); RobList.Add(CircY2);
+
                 gb_Rob = new GControls.GroupBox(20, 5, 40, 70);
 
                 lbl_PolnenjeRobu = new GControls.SuperLabel("POLNENJE ROBU", 5, 20, 50, 5) { FontSize = 1.5F }; gb_Rob.Controls.Add(lbl_PolnenjeRobu);
 
-                var top = 13; var offset = 20; var left = 20; var buff = 0; var size = 30;
-                foreach (var item in RobList)
+                var top = 13; var offset = 20; var left = 5; var buff = 0; var size = 30;
+                GControls.ImageButtonWithID item;
+
+                for (int i = 0; i < 4; i++)
                 {
+                    item = RobList[i];
+                    gb_Rob.Controls.Add(item); SetControlAbsolutePos(item, top + buff, left, size); buff += offset;
+                }
+                
+                left = 35;  buff = 0;
+                for (int i = 4; i < 8; i++)
+                {
+                    item = RobList[i];
                     gb_Rob.Controls.Add(item); SetControlAbsolutePos(item, top + buff, left, size); buff += offset;
                 }
 
+                gb_Rob.Controls.Add(Krozenje); SetControlAbsolutePos(Krozenje, top + buff, 35, size);
+
                 RobX1.Click += RobX1_Click; RobY1.Click += RobY1_Click; RobX2.Click += RobX2_Click; RobY2.Click += RobY2_Click;
+                CircX1.Click += CircX1_Click; CircY1.Click += CircY1_Click; CircX2.Click += CircX2_Click; CircY2.Click += CircY2_Click;
+                Krozenje.Click += Krozenje_Click;
 
 
                 gb_ZigZag = new GControls.GroupBox(20, 50, 40, 70);
@@ -82,6 +106,79 @@ namespace WebApplication1
 
                 CreateGlobalControls();
 
+            }
+
+            private void Krozenje_Click(object sender, ImageClickEventArgs e)
+            {
+                Val.Kontrola.StopPatern();
+                prop1.Krozenje.SendPulse();
+
+                if (Val.Kontrola.StartCircling())
+                {
+                    //Navigator.Redirect("Default");
+                }
+                else
+                {
+                    //Navigator.MessageBox(general_err_start_msg);
+                }
+            }
+
+            private void CircY2_Click(object sender, ImageClickEventArgs e)
+            {
+                Val.Kontrola.StopPatern();
+                prop1.KrozniRobY2.SendPulse();
+
+                if (Val.Kontrola.StartRobSKrozenjemY2())
+                {
+                    //Navigator.Redirect("Default");
+                }
+                else
+                {
+                    //Navigator.MessageBox(general_err_start_msg);
+                }
+
+            }
+
+            private void CircX2_Click(object sender, ImageClickEventArgs e)
+            {
+                Val.Kontrola.StopPatern();
+                prop1.KrozniRobX2.SendPulse();
+                if (Val.Kontrola.StartRobSKrozenjemX2())
+                {
+                    //Navigator.Redirect("Default");
+                }
+                else
+                {
+                    //Navigator.MessageBox(general_err_start_msg);
+                }
+            }
+
+            private void CircY1_Click(object sender, ImageClickEventArgs e)
+            {
+                Val.Kontrola.StopPatern();
+                prop1.KrozniRobY1.SendPulse();
+                if (Val.Kontrola.StartRobSKrozenjemY1())
+                {
+                    //Navigator.Redirect("Default");
+                }
+                else
+                {
+                    //Navigator.MessageBox(general_err_start_msg);
+                }
+            }
+
+            private void CircX1_Click(object sender, ImageClickEventArgs e)
+            {
+                Val.Kontrola.StopPatern();
+                prop1.KrozniRobX1.SendPulse();
+                if (Val.Kontrola.StartRobSKrozenjemX1())
+                {
+                    //Navigator.Redirect("Default");
+                }
+                else
+                {
+                    //Navigator.MessageBox(general_err_start_msg);
+                }
             }
 
             public void CreateGlobalControls()

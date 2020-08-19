@@ -35,10 +35,7 @@ namespace WebApplication1
             MainSupplyErr = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(323, 0), "Napaka Napajalne napetosti!", false, true) { SyncEvery_X_Time = 3 };
             GobaNC = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(324, 0), "AKTIVIRANA JE GOBASTA TIPKA (NC)!", false, true) { SyncEvery_X_Time = 3 };
             GobaNO = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(325, 0), "AKTIVIRANA JE GOBASTA TIPKA (NO)!", false, true) { SyncEvery_X_Time = 3 };
-
-            // PositionSimulation            
-            PosX = new PlcVars.Word(this, new PlcVars.WordAddress(700), false);
-            PosY = new PlcVars.Word(this, new PlcVars.WordAddress(702), false);
+                       
         }
 
     }

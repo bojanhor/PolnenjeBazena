@@ -187,7 +187,7 @@ namespace WebApplication1
 
                     bazenSel = new GControls.DropDownListForBazenSel("bazenSel", 
                         GControls.DropDownListForBazenSel.GetSelectedText(prop1.ImpulsesDisplayValRead.Value_short), 
-                        top+1, left+1, size/8.55F, 1.3F, false, false);      
+                        top+1, left+1, size/8.55F, 1.3F, false, false, prop1.Ustavljeno.Value_bool);      
                     
                     bazenSel.Style.Add(HtmlTextWriterStyle.ZIndex, "10");
                     OthersUP.Controls_Add(bazenSel);
@@ -388,10 +388,10 @@ namespace WebApplication1
 
             void Trak()
             {
-                var cor_YHigher = 48; var cor_Yrange = 0.70F; var cor_Xrange = 0.6F;
+                var cor_YHigher = 45; var cor_Yrange = 0.9F; var cor_Xrange = 0.9F;
 
-                float posx = prop2.PosX.Value_short; posx *= cor_Xrange; // start position of conveyor simulation
-                float posy = prop2.PosY.Value_short; posy = (posy + cor_YHigher) * cor_Yrange; // start position of conveyor simulation
+                float posx = prop1.XPos.Value_short; posx *= cor_Xrange; // start position of conveyor simulation
+                float posy = prop1.YPos.Value_short; posy = (posy + cor_YHigher) * cor_Yrange; // start position of conveyor simulation
 
                 try
                 {
@@ -402,7 +402,11 @@ namespace WebApplication1
 
                     gb_Conveyor = new GControls.GroupBox(0, 0, 100, 100);
 
-                    //gc.Controls.Add(new Label() { Text = "X:" +posx.ToString() +" Y:" + (100 - posy).ToString() });
+                    var coordinates = new Label() { Text = "X:" + prop1.XPos.Value_string + " Y:" + (prop1.XPos.Value_string), ForeColor = System.Drawing.Color.Gray};
+                    SetControlAbsolutePos(coordinates, 1, 1, 20,5);
+                    coordinates.Style.Add(HtmlTextWriterStyle.FontSize, "0.7vw");
+
+                    gb_Conveyor.Controls.Add(coordinates);
                     gb_Conveyor.Controls.Add(conveyor);
                     divConveyor.Controls.Add(gb_Conveyor);
                 }
@@ -521,12 +525,7 @@ namespace WebApplication1
             {
                 Navigator.Redirect("Vzorci");
             }
-
-            private void BtnAuto_Click1(object sender, ImageClickEventArgs e)
-            {
-                Val.logocontroler.Prop1.Auto.SendPulse();
-            }
-
+            
             private void BtnTrak_Click(object sender, ImageClickEventArgs e)
             {
                 Val.logocontroler.Prop1.Trak_muss.SendPulse();

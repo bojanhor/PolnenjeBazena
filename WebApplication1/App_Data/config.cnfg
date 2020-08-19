@@ -32,7 +32,7 @@
 
   <GUI>
   //
-  <scaleGuiFactorX>99</scaleGuiFactorX>						// Gui Scaling Factor (size of user interface) (example 99)
+  <scaleGuiFactorX>98</scaleGuiFactorX>						// Gui Scaling Factor (size of user interface) (example 99)
   <scaleGuiFactorY>47</scaleGuiFactorY>						// Gui Scaling Factor (size of user interface) (example 47)
   //
   <HowManyDDMenuItems>2</HowManyDDMenuItems>					// How many Menu items is showed in DROPDOWN menu

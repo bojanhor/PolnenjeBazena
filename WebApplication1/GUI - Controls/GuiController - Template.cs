@@ -110,9 +110,9 @@ namespace WebApplication1
 
                     TemplateClassID.Controls.Add(TemplateImage);
                 }
-                catch (Exception )
+                catch (Exception ex)
                 {
-                    throw ;
+                    throw new Exception("CreateBackground() method reported an error: "+ ex.Message);
                 }
                 
 
