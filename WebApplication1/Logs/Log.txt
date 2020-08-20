@@ -15560,3 +15560,728 @@
 19.08.2020  15:17:59 : Logo2: Connection failed. Trying to reconnect
 19.08.2020  15:17:59 : Logo2: Connection error: Watchdog error - Watchdog does not change
 19.08.2020  15:18:02 : Logo2: Running connection diagnostics...
+20.08.2020  11:04:50 : Logo1: Connecting...
+20.08.2020  11:04:50 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+20.08.2020  11:04:50 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+20.08.2020  11:04:50 : Logo2: Connecting...
+20.08.2020  11:04:51 : Logo1: Connected
+20.08.2020  11:04:51 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+20.08.2020  11:04:53 : Redirected to: Vzorci
+20.08.2020  11:04:54 : Logo2: TCP : Connection Error
+20.08.2020  11:04:54 : Logo2: Running connection diagnostics...
+20.08.2020  11:04:57 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:04:59 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:04:59 : Logo2: Watchdog error - Watchdog does not change
+20.08.2020  11:04:59 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:05:02 : Logo2: Running connection diagnostics...
+20.08.2020  11:05:05 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:05:08 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:05:08 : Logo2: Running connection diagnostics...
+20.08.2020  11:05:11 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:05:14 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:05:14 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+20.08.2020  11:05:14 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:05:17 : Logo2: Running connection diagnostics...
+20.08.2020  11:05:20 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:05:22 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:05:22 : Logo2: Running connection diagnostics...
+20.08.2020  11:05:26 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:05:28 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:05:28 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:05:31 : Logo2: Running connection diagnostics...
+20.08.2020  11:05:34 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:05:37 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:05:37 : Logo2: Running connection diagnostics...
+20.08.2020  11:05:40 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:05:43 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:05:43 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:05:53 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+20.08.2020  11:05:53 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+20.08.2020  11:05:53 : Logo1: Connecting...
+20.08.2020  11:05:53 : Logo2: Connecting...
+20.08.2020  11:05:54 : Logo1: Connected
+20.08.2020  11:05:54 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+20.08.2020  11:05:57 : Logo2: TCP : Connection Error
+20.08.2020  11:05:57 : Logo2: Running connection diagnostics...
+20.08.2020  11:05:57 : Redirected to: Vzorci
+20.08.2020  11:06:00 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:06:03 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:06:03 : Logo2: Watchdog error - Watchdog does not change
+20.08.2020  11:06:03 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:06:06 : Logo2: Running connection diagnostics...
+20.08.2020  11:06:09 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:06:11 : Redirected to: Default
+20.08.2020  11:06:11 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:06:11 : Logo2: Running connection diagnostics...
+20.08.2020  11:06:15 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:06:17 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:06:17 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+20.08.2020  11:06:17 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:06:20 : Logo2: Running connection diagnostics...
+20.08.2020  11:06:23 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:06:26 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:06:26 : Logo2: Running connection diagnostics...
+20.08.2020  11:06:29 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:06:32 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:06:32 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:06:35 : Logo2: Running connection diagnostics...
+20.08.2020  11:06:38 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:06:41 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:06:41 : Logo2: Running connection diagnostics...
+20.08.2020  11:06:44 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:06:47 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:06:47 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:06:50 : Logo2: Running connection diagnostics...
+20.08.2020  11:06:53 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:06:56 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:06:56 : Logo2: Running connection diagnostics...
+20.08.2020  11:06:59 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:07:02 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:07:02 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:07:05 : Logo2: Running connection diagnostics...
+20.08.2020  11:07:08 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:07:10 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:07:10 : Logo2: Running connection diagnostics...
+20.08.2020  11:07:14 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:07:16 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:07:16 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:07:19 : Logo2: Running connection diagnostics...
+20.08.2020  11:07:22 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:07:25 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:07:25 : Logo2: Running connection diagnostics...
+20.08.2020  11:07:28 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:07:31 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:07:31 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:07:34 : Logo2: Running connection diagnostics...
+20.08.2020  11:07:37 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:07:39 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:07:39 : Logo2: Running connection diagnostics...
+20.08.2020  11:07:43 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:07:45 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:07:45 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:07:48 : Logo2: Running connection diagnostics...
+20.08.2020  11:07:51 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:07:54 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:07:54 : Logo2: Running connection diagnostics...
+20.08.2020  11:07:57 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:08:00 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:08:00 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:08:03 : Logo2: Running connection diagnostics...
+20.08.2020  11:08:06 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:08:08 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:08:08 : Logo2: Running connection diagnostics...
+20.08.2020  11:08:12 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:08:14 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:08:14 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:08:17 : Logo2: Running connection diagnostics...
+20.08.2020  11:08:20 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:08:23 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:08:23 : Logo2: Running connection diagnostics...
+20.08.2020  11:08:26 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:08:29 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:08:29 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:08:32 : Logo2: Running connection diagnostics...
+20.08.2020  11:08:35 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:08:38 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:08:38 : Logo2: Running connection diagnostics...
+20.08.2020  11:08:41 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:08:44 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:08:44 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:08:47 : Logo2: Running connection diagnostics...
+20.08.2020  11:08:50 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:08:53 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:08:53 : Logo2: Running connection diagnostics...
+20.08.2020  11:08:56 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:08:59 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:08:59 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:09:02 : Logo2: Running connection diagnostics...
+20.08.2020  11:09:05 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:09:07 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:09:07 : Logo2: Running connection diagnostics...
+20.08.2020  11:09:11 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:09:13 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:09:13 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:09:16 : Logo2: Running connection diagnostics...
+20.08.2020  11:09:19 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:09:22 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:09:22 : Logo2: Running connection diagnostics...
+20.08.2020  11:09:25 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:09:28 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:09:28 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:09:31 : Logo2: Running connection diagnostics...
+20.08.2020  11:09:34 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:09:36 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:09:36 : Logo2: Running connection diagnostics...
+20.08.2020  11:09:40 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:09:42 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:09:42 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:09:45 : Logo2: Running connection diagnostics...
+20.08.2020  11:09:48 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:09:51 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:09:51 : Logo2: Running connection diagnostics...
+20.08.2020  11:09:54 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:09:57 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:09:57 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:10:00 : Logo2: Running connection diagnostics...
+20.08.2020  11:10:03 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:10:05 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:10:05 : Logo2: Running connection diagnostics...
+20.08.2020  11:10:09 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:10:11 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:10:11 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:10:14 : Logo2: Running connection diagnostics...
+20.08.2020  11:10:17 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:10:20 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:10:20 : Logo2: Running connection diagnostics...
+20.08.2020  11:10:23 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:10:26 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:10:26 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:10:29 : Logo2: Running connection diagnostics...
+20.08.2020  11:10:32 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:10:35 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:10:35 : Logo2: Running connection diagnostics...
+20.08.2020  11:10:38 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:10:41 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:10:41 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:10:44 : Logo2: Running connection diagnostics...
+20.08.2020  11:10:47 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:10:50 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:10:50 : Logo2: Running connection diagnostics...
+20.08.2020  11:10:53 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:10:56 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:10:56 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:10:59 : Logo2: Running connection diagnostics...
+20.08.2020  11:11:02 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:11:04 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:11:04 : Logo2: Running connection diagnostics...
+20.08.2020  11:11:08 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:11:10 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:11:10 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:11:13 : Logo2: Running connection diagnostics...
+20.08.2020  11:11:16 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:11:19 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:11:19 : Logo2: Running connection diagnostics...
+20.08.2020  11:11:22 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:11:25 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:11:25 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:11:28 : Logo2: Running connection diagnostics...
+20.08.2020  11:11:31 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:11:33 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:11:33 : Logo2: Running connection diagnostics...
+20.08.2020  11:11:37 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:11:39 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:11:39 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:11:42 : Logo2: Running connection diagnostics...
+20.08.2020  11:11:45 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:11:48 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:11:48 : Logo2: Running connection diagnostics...
+20.08.2020  11:11:51 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:11:54 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:11:54 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:11:57 : Logo2: Running connection diagnostics...
+20.08.2020  11:12:00 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:12:02 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:12:02 : Logo2: Running connection diagnostics...
+20.08.2020  11:12:06 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:12:08 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:12:08 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:12:11 : Logo2: Running connection diagnostics...
+20.08.2020  11:12:14 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:12:17 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:12:17 : Logo2: Running connection diagnostics...
+20.08.2020  11:12:20 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:12:23 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:12:23 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:12:26 : Logo2: Running connection diagnostics...
+20.08.2020  11:12:29 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:12:31 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:12:31 : Logo2: Running connection diagnostics...
+20.08.2020  11:12:35 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:12:37 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:12:37 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:12:40 : Logo2: Running connection diagnostics...
+20.08.2020  11:12:43 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:12:46 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:12:46 : Logo2: Running connection diagnostics...
+20.08.2020  11:12:49 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:12:50 : Logo1: Watchdog error - Watchdog does not change
+20.08.2020  11:12:50 : Logo1: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:12:50 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+20.08.2020  11:12:52 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:12:52 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:12:53 : Logo1: Running connection diagnostics...
+20.08.2020  11:12:53 : Logo1:   -Ping successful at: 192.168.1.200
+20.08.2020  11:12:53 : Logo1: Connected again
+20.08.2020  11:12:53 : Logo1: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:12:55 : Logo2: Running connection diagnostics...
+20.08.2020  11:12:56 : Logo1: Running connection diagnostics...
+20.08.2020  11:12:56 : Logo1:   -Ping successful at: 192.168.1.200
+20.08.2020  11:12:57 : Logo1: Connected again
+20.08.2020  11:12:57 : Logo1: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:12:58 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:13:00 : Logo1: Running connection diagnostics...
+20.08.2020  11:13:00 : Logo1:   -Ping successful at: 192.168.1.200
+20.08.2020  11:13:00 : Logo1: Connected again
+20.08.2020  11:13:00 : Logo1: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:13:00 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:13:00 : Logo2: Running connection diagnostics...
+20.08.2020  11:13:03 : Logo1: Running connection diagnostics...
+20.08.2020  11:13:03 : Logo1:   -Ping successful at: 192.168.1.200
+20.08.2020  11:13:04 : Logo1: Connected again
+20.08.2020  11:13:04 : Logo1: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:13:04 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:13:06 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:13:06 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:13:07 : Logo1: Running connection diagnostics...
+20.08.2020  11:13:07 : Logo1:   -Ping successful at: 192.168.1.200
+20.08.2020  11:13:07 : Logo1: Connected again
+20.08.2020  11:13:09 : Logo2: Running connection diagnostics...
+20.08.2020  11:14:53 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+20.08.2020  11:14:53 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+20.08.2020  11:14:53 : Logo1: Connecting...
+20.08.2020  11:14:53 : Logo2: Connecting...
+20.08.2020  11:14:54 : Logo1: Connected
+20.08.2020  11:14:54 : Logo1: Watchdog started successfully - Period (Frequency) is 5ms
+20.08.2020  11:14:54 : Logo1: Watchdog error - Watchdog does not change
+20.08.2020  11:14:54 : Logo1: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:14:57 : Logo2: TCP : Connection Error
+20.08.2020  11:14:57 : Logo2: Running connection diagnostics...
+20.08.2020  11:14:57 : Logo1: Running connection diagnostics...
+20.08.2020  11:14:57 : Logo1:   -Ping successful at: 192.168.1.200
+20.08.2020  11:14:57 : Redirected to: MasterMenu
+20.08.2020  11:14:57 : Logo1: Connected again
+20.08.2020  11:14:57 : Logo1: Watchdog error - Watchdog does not change
+20.08.2020  11:14:57 : Logo1: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:14:58 : Redirected to: UpNastavitve
+20.08.2020  11:14:58 : Redirected to: Advanced
+20.08.2020  11:14:59 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:15:00 : Logo1: Running connection diagnostics...
+20.08.2020  11:15:00 : Logo1:   -Ping successful at: 192.168.1.200
+20.08.2020  11:15:01 : Logo1: Connected again
+20.08.2020  11:15:01 : Logo1: Read-Write cycle is taking 3557ms to complete (Cycle is set to be 5ms ). Please extend Read-Write cycle
+20.08.2020  11:15:01 : Logo1: Watchdog error - Watchdog does not change
+20.08.2020  11:15:01 : Logo1: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:15:02 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:15:02 : Logo2: Watchdog error - Watchdog does not change
+20.08.2020  11:15:02 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:15:04 : Logo1: Running connection diagnostics...
+20.08.2020  11:15:04 : Logo1:   -Ping successful at: 192.168.1.200
+20.08.2020  11:15:04 : Logo1: Connected again
+20.08.2020  11:15:04 : Logo1: Watchdog error - Watchdog does not change
+20.08.2020  11:15:04 : Logo1: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:15:05 : Logo2: Running connection diagnostics...
+20.08.2020  11:15:07 : Logo1: Running connection diagnostics...
+20.08.2020  11:15:08 : Logo1:   -Ping successful at: 192.168.1.200
+20.08.2020  11:15:08 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:15:08 : Logo1: Connected again
+20.08.2020  11:15:08 : Logo1: Read-Write cycle is taking 7ms to complete (Cycle is set to be 5ms ). Please extend Read-Write cycle
+20.08.2020  11:15:08 : Logo1: Watchdog error - Watchdog does not change
+20.08.2020  11:15:08 : Logo1: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:15:10 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:15:10 : Logo2: Running connection diagnostics...
+20.08.2020  11:15:11 : Logo1: Running connection diagnostics...
+20.08.2020  11:15:11 : Logo1:   -Ping successful at: 192.168.1.200
+20.08.2020  11:15:12 : Logo1: Connected again
+20.08.2020  11:15:12 : Logo1: Watchdog error - Watchdog does not change
+20.08.2020  11:15:12 : Logo1: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:15:14 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:15:15 : Logo1: Running connection diagnostics...
+20.08.2020  11:15:15 : Logo1:   -Ping successful at: 192.168.1.200
+20.08.2020  11:15:15 : Logo1: Connected again
+20.08.2020  11:15:15 : Logo1: Read-Write cycle is taking 7ms to complete (Cycle is set to be 5ms ). Please extend Read-Write cycle
+20.08.2020  11:15:15 : Logo1: Watchdog error - Watchdog does not change
+20.08.2020  11:15:15 : Logo1: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:15:16 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:15:16 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+20.08.2020  11:15:16 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:15:29 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+20.08.2020  11:15:29 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+20.08.2020  11:15:29 : Logo1: Connecting...
+20.08.2020  11:15:29 : Logo2: Connecting...
+20.08.2020  11:15:30 : Logo1: Connected
+20.08.2020  11:15:30 : Logo1: Watchdog started successfully - Period (Frequency) is 10ms
+20.08.2020  11:15:33 : Redirected to: MasterMenu
+20.08.2020  11:15:33 : Logo2: TCP : Connection Error
+20.08.2020  11:15:33 : Logo2: Running connection diagnostics...
+20.08.2020  11:15:34 : Redirected to: UpNastavitve
+20.08.2020  11:15:34 : Redirected to: Advanced
+20.08.2020  11:15:37 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:15:39 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:15:39 : Logo2: Watchdog error - Watchdog does not change
+20.08.2020  11:15:39 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:15:42 : Logo2: Running connection diagnostics...
+20.08.2020  11:15:45 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:15:48 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:15:48 : Logo2: Running connection diagnostics...
+20.08.2020  11:15:51 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:15:54 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:15:54 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+20.08.2020  11:15:54 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:15:57 : Logo2: Running connection diagnostics...
+20.08.2020  11:16:00 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:16:02 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:16:02 : Logo2: Running connection diagnostics...
+20.08.2020  11:16:06 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:16:35 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+20.08.2020  11:16:35 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+20.08.2020  11:16:35 : Logo1: Connecting...
+20.08.2020  11:16:35 : Logo2: Connecting...
+20.08.2020  11:16:36 : Logo1: Connected
+20.08.2020  11:16:36 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+20.08.2020  11:16:39 : Logo2: TCP : Connection Error
+20.08.2020  11:16:39 : Logo2: Running connection diagnostics...
+20.08.2020  11:16:42 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:16:45 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:16:45 : Logo2: Watchdog error - Watchdog does not change
+20.08.2020  11:16:45 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:16:48 : Logo2: Running connection diagnostics...
+20.08.2020  11:16:51 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:16:53 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:16:53 : Logo2: Running connection diagnostics...
+20.08.2020  11:16:57 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:16:59 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:16:59 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+20.08.2020  11:16:59 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:17:02 : Logo2: Running connection diagnostics...
+20.08.2020  11:17:05 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:17:08 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:17:08 : Logo2: Running connection diagnostics...
+20.08.2020  11:17:11 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:17:14 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:17:14 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:17:17 : Logo2: Running connection diagnostics...
+20.08.2020  11:17:20 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:17:22 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:17:22 : Logo2: Running connection diagnostics...
+20.08.2020  11:17:26 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:17:28 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:17:28 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:17:31 : Logo2: Running connection diagnostics...
+20.08.2020  11:17:34 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:17:37 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:17:37 : Logo2: Running connection diagnostics...
+20.08.2020  11:17:40 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:17:43 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:17:43 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:17:46 : Logo2: Running connection diagnostics...
+20.08.2020  11:17:49 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:17:51 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:17:51 : Logo2: Running connection diagnostics...
+20.08.2020  11:17:55 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:17:57 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:17:57 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:18:00 : Logo2: Running connection diagnostics...
+20.08.2020  11:18:03 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:18:06 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:18:06 : Logo2: Running connection diagnostics...
+20.08.2020  11:18:09 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:18:12 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:18:12 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:18:15 : Logo2: Running connection diagnostics...
+20.08.2020  11:18:18 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:18:20 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:18:20 : Logo2: Running connection diagnostics...
+20.08.2020  11:18:24 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:18:26 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:18:26 : Read from PLC failed. Address: bit at 3150, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:26 : Read from PLC failed. Address: bit at 3160, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:26 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:18:26 : Read from PLC failed. Address: bit at 3170, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:26 : Read from PLC failed. Address: bit at 3180, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:26 : Read from PLC failed. Address: bit at 3190, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:26 : Read from PLC failed. Address: bit at 3200, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:26 : Read from PLC failed. Address: bit at 3210, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:26 : Read from PLC failed. Address: bit at 10, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:26 : Read from PLC failed. Address: bit at 20, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 40, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 60, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: VW310, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: VW312, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: VW216, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 100, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 120, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 160, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 130, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 140, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 150, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 200, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 220, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 240, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 260, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 280, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 290, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 300, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 320, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 400, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 420, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 440, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 460, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 500, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 520, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 540, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 560, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 900, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 910, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 920, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 930, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: VW100, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: VW104, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: VW106, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: VW108, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 2000, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 2020, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 2040, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 740, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 80, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 1670, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 70, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 1680, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 330, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 340, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 350, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 360, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 630, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 640, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 650, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 660, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 670, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 1630, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 1640, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 1650, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 1660, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 1690, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 1700, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 1710, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 1720, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Read from PLC failed. Address: bit at 1730, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:27 : Logo1: TCP : Error sending Data
+20.08.2020  11:18:27 : Logo1: Connection error: TCP : Error sending Data
+20.08.2020  11:18:27 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+20.08.2020  11:18:29 : Logo2: Running connection diagnostics...
+20.08.2020  11:18:29 : Logo2: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+20.08.2020  11:18:29 : Logo2: Running connection diagnostics...
+20.08.2020  11:18:29 : Logo2: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+20.08.2020  11:18:29 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:18:30 : Logo1: Running connection diagnostics...
+20.08.2020  11:18:30 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+20.08.2020  11:18:30 : Logo1: Running connection diagnostics...
+20.08.2020  11:18:30 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+20.08.2020  11:18:30 : Logo1: Connection error: TCP : Error sending Data
+20.08.2020  11:18:32 : Logo2: Running connection diagnostics...
+20.08.2020  11:18:33 : Logo1: Running connection diagnostics...
+20.08.2020  11:18:33 : Logo1:   -Ping successful at: 192.168.1.200
+20.08.2020  11:18:33 : Logo1: Connected again
+20.08.2020  11:18:35 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:18:38 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:18:38 : Logo2: Running connection diagnostics...
+20.08.2020  11:18:41 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 3150, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 3160, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 3170, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 3180, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 3190, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 3200, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 3210, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 10, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 20, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 40, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 60, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:18:42 : Read from PLC failed. Address: VW310, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: VW312, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: VW216, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 100, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 120, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 160, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 130, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 140, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 150, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 200, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 220, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 240, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 260, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 280, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 290, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 300, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 320, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 400, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 420, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 440, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 460, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 500, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 520, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 540, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 560, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 900, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 910, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 920, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 930, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: VW100, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: VW104, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: VW106, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: VW108, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 2000, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 2020, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 2040, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 740, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 80, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 1670, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 70, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 1680, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 330, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 340, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 350, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 360, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 630, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 640, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 650, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 660, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 670, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 1630, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 1640, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 1650, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 1660, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 1690, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 1700, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 1710, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 1720, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Read from PLC failed. Address: bit at 1730, Read Error type: TCP : Error sending Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+20.08.2020  11:18:42 : Logo1: TCP : Error sending Data
+20.08.2020  11:18:42 : Logo1: Connection error: TCP : Error sending Data
+20.08.2020  11:18:43 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+20.08.2020  11:18:45 : Logo2: Running connection diagnostics...
+20.08.2020  11:18:45 : Logo2: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+20.08.2020  11:18:45 : Logo2: Running connection diagnostics...
+20.08.2020  11:18:45 : Logo2: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+20.08.2020  11:18:45 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:18:45 : Logo1: Running connection diagnostics...
+20.08.2020  11:18:45 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+20.08.2020  11:18:45 : Logo1: Running connection diagnostics...
+20.08.2020  11:18:45 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+20.08.2020  11:18:45 : Logo1: Connection error: TCP : Error sending Data
+20.08.2020  11:18:48 : Logo2: Running connection diagnostics...
+20.08.2020  11:18:48 : Logo1: Running connection diagnostics...
+20.08.2020  11:18:48 : Logo1:   -Ping successful at: 192.168.1.200
+20.08.2020  11:18:49 : Logo1: Connected again
+20.08.2020  11:18:51 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:19:01 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+20.08.2020  11:19:01 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+20.08.2020  11:19:01 : Logo1: Connecting...
+20.08.2020  11:19:01 : Logo2: Connecting...
+20.08.2020  11:19:02 : Logo1: Connected
+20.08.2020  11:19:02 : Logo1: Watchdog started successfully - Period (Frequency) is 10ms
+20.08.2020  11:19:05 : Logo2: TCP : Connection Error
+20.08.2020  11:19:05 : Logo2: Running connection diagnostics...
+20.08.2020  11:19:16 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+20.08.2020  11:19:16 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+20.08.2020  11:19:16 : Logo1: Connecting...
+20.08.2020  11:19:16 : Logo2: Connecting...
+20.08.2020  11:19:17 : Logo1: Connected
+20.08.2020  11:19:17 : Logo1: Watchdog started successfully - Period (Frequency) is 10ms
+20.08.2020  11:19:19 : Redirected to: MasterMenu
+20.08.2020  11:19:20 : Logo2: TCP : Connection Error
+20.08.2020  11:19:20 : Logo2: Running connection diagnostics...
+20.08.2020  11:19:21 : Redirected to: UpNastavitve
+20.08.2020  11:19:21 : Redirected to: Advanced
+20.08.2020  11:19:22 : Logo1: Watchdog error - Watchdog does not change
+20.08.2020  11:19:22 : Logo1: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:19:23 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+20.08.2020  11:19:23 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:19:25 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:19:25 : Logo2: Watchdog error - Watchdog does not change
+20.08.2020  11:19:25 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:19:25 : Logo1: Running connection diagnostics...
+20.08.2020  11:19:25 : Logo1:   -Ping successful at: 192.168.1.200
+20.08.2020  11:19:26 : Logo1: Connected again
+20.08.2020  11:19:28 : Logo1: Watchdog error - Watchdog does not change
+20.08.2020  11:19:28 : Logo1: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:19:28 : Logo2: Running connection diagnostics...
+20.08.2020  11:19:29 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+20.08.2020  11:19:31 : Logo1: Running connection diagnostics...
+20.08.2020  11:19:31 : Logo1:   -Ping successful at: 192.168.1.200
+20.08.2020  11:19:31 : Logo1: Connected again
+20.08.2020  11:19:31 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:19:32 : Logo1: Watchdog error - Watchdog does not change
+20.08.2020  11:19:32 : Logo1: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:19:33 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+20.08.2020  11:19:34 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:19:34 : Logo2: Running connection diagnostics...
+20.08.2020  11:19:35 : Logo1: Running connection diagnostics...
+20.08.2020  11:19:35 : Logo1:   -Ping successful at: 192.168.1.200
+20.08.2020  11:19:35 : Logo1: Connected again
+20.08.2020  11:19:36 : Logo1: Watchdog error - Watchdog does not change
+20.08.2020  11:19:36 : Logo1: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:19:37 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+20.08.2020  11:19:37 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:19:39 : Logo1: Running connection diagnostics...
+20.08.2020  11:19:40 : Logo1:   -Ping successful at: 192.168.1.200
+20.08.2020  11:19:40 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:19:40 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+20.08.2020  11:19:40 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:19:40 : Logo1: Connected again
+20.08.2020  11:19:43 : Logo2: Running connection diagnostics...
+20.08.2020  11:19:43 : Logo1: Watchdog error - Watchdog does not change
+20.08.2020  11:19:43 : Logo1: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:20:03 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+20.08.2020  11:20:03 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+20.08.2020  11:20:03 : Logo1: Connecting...
+20.08.2020  11:20:04 : Logo2: Connecting...
+20.08.2020  11:20:04 : Logo1: Connected
+20.08.2020  11:20:04 : Logo1: Watchdog started successfully - Period (Frequency) is 20ms
+20.08.2020  11:20:07 : Redirected to: MasterMenu
+20.08.2020  11:20:08 : Logo2: TCP : Connection Error
+20.08.2020  11:20:08 : Logo2: Running connection diagnostics...
+20.08.2020  11:20:08 : Redirected to: UpNastavitve
+20.08.2020  11:20:08 : Redirected to: Advanced
+20.08.2020  11:20:11 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:20:13 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:20:13 : Logo2: Watchdog error - Watchdog does not change
+20.08.2020  11:20:13 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:20:16 : Logo2: Running connection diagnostics...
+20.08.2020  11:20:19 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:20:22 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:20:22 : Logo2: Running connection diagnostics...
+20.08.2020  11:20:25 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:20:28 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:20:28 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+20.08.2020  11:20:28 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:20:31 : Logo2: Running connection diagnostics...
+20.08.2020  11:20:34 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:20:36 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:20:36 : Logo2: Running connection diagnostics...
+20.08.2020  11:20:40 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:20:42 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:20:42 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:20:45 : Logo2: Running connection diagnostics...
+20.08.2020  11:20:48 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:20:51 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:20:51 : Logo2: Running connection diagnostics...
+20.08.2020  11:21:03 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+20.08.2020  11:21:03 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+20.08.2020  11:21:03 : Logo1: Connecting...
+20.08.2020  11:21:03 : Logo2: Connecting...
+20.08.2020  11:21:04 : Logo1: Connected
+20.08.2020  11:21:04 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+20.08.2020  11:21:07 : Logo2: TCP : Connection Error
+20.08.2020  11:21:07 : Logo2: Running connection diagnostics...
+20.08.2020  11:21:11 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:21:13 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:21:13 : Logo2: Watchdog error - Watchdog does not change
+20.08.2020  11:21:13 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:21:16 : Logo2: Running connection diagnostics...
+20.08.2020  11:21:19 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:21:22 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:21:22 : Logo2: Running connection diagnostics...
+20.08.2020  11:21:25 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+20.08.2020  11:21:28 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:21:28 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+20.08.2020  11:21:28 : Logo2: Connection error: Watchdog error - Watchdog does not change
+20.08.2020  11:21:31 : Page refreshed.
+20.08.2020  11:21:31 : Page refreshed.
+20.08.2020  11:21:31 : Logo2: Running connection diagnostics...
+20.08.2020  11:21:34 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+20.08.2020  11:21:34 : Page refreshed.
+20.08.2020  11:21:34 : Page refreshed.
+20.08.2020  11:21:36 : Logo2: Connection failed. Trying to reconnect
+20.08.2020  11:21:36 : Logo2: Running connection diagnostics...
