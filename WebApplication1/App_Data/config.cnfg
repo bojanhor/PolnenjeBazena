@@ -8,7 +8,7 @@
 	</GENERAL>//
 
   <Bazeni>// 
-		<X_Step>8</X_Step>//			ZigZag vzorec - korak X
+    <X_Step>8</X_Step>//			ZigZag vzorec - korak X
     <Y_Step>10</Y_Step>//			ZigZag vzorec - korak Y
     //
     <BazenType1_Name>1-8(m)</BazenType1_Name> //
@@ -32,7 +32,7 @@
 
   <GUI>
   //
-  <scaleGuiFactorX>98</scaleGuiFactorX>						// Gui Scaling Factor (size of user interface) (example 99)
+  <scaleGuiFactorX>99</scaleGuiFactorX>						// Gui Scaling Factor (size of user interface) (example 99)
   <scaleGuiFactorY>47</scaleGuiFactorY>						// Gui Scaling Factor (size of user interface) (example 47)
   //
   <HowManyDDMenuItems>2</HowManyDDMenuItems>					// How many Menu items is showed in DROPDOWN menu
@@ -69,8 +69,7 @@
 </GUI>
 		//			
 	<CONNECTION>// Server restart required after changing this group
-		<LOGO1>//
-			<show>true</show>			// indicates if tabpage is shown on GUI 
+		<LOGO1>//			
 			<enabled>true</enabled>			// indicates if device is enabled - (gui, communication ...) 
 			<devicename>LOGO1</devicename>		// Showname
 			<showname>Polnenje</showname>   //
@@ -81,9 +80,8 @@
 			<ReadWriteCycle>100</ReadWriteCycle>		// value in miliseconds - frequency at which data aquisition is preformed - read, action, write, delay. (watchdog is also bound at this frequency)
 		</LOGO1>//
 	  //
-		<LOGO2>//
-			<show>true</show>//
-			<enabled>true</enabled>//
+		<LOGO2>//			
+			<enabled>false</enabled>//
 			<devicename>LOGO2</devicename>//
 			<showname>Varnostne funkcije</showname>//
 			<serverIP>192.168.1.201</serverIP>//
@@ -93,8 +91,7 @@
 			<ReadWriteCycle>150</ReadWriteCycle>//
 		</LOGO2>//
 	  //
-		<LOGO3>//
-			<show>true</show>//
+		<LOGO3>//			
 			<enabled>false</enabled>//
 			<devicename>LOGO3</devicename>//
 			<showname>Vrata</showname>//
@@ -105,8 +102,7 @@
 			<ReadWriteCycle>500</ReadWriteCycle>//
 		</LOGO3>//
 	  //
-		<LOGO4>//
-			<show>true</show>//
+		<LOGO4>//			
 			<enabled>false</enabled>//
 			<devicename>LOGO4</devicename>//
 			<showname>Mešalo</showname>//
@@ -117,8 +113,7 @@
 			<ReadWriteCycle>500</ReadWriteCycle>//
 		</LOGO4>//
 	  //
-		<LOGO5>//
-			<show>true</show>//
+		<LOGO5>//			
 			<enabled>false</enabled>//
 			<devicename>LOGO5</devicename>//
 			<showname>LOGO1</showname>//

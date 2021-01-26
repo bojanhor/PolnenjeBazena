@@ -1910,7 +1910,16 @@ namespace WebApplication1
                     {
                         if (sendPulseToStart != null)
                         {
-                            sendPulseToStart.SendPulse();
+                            
+                            if (Val.logocontroler.LOGOConnection[1].connectionStatusLOGO != Connection.Status.Connected)
+                            {
+                                Navigator.messageToUser.ShowMessage("Napaka povezave!", "Pred začetkom dela mora biti krmilnik povezan. Preverite povezavo do naprave.");
+
+                            }
+                            else
+                            {
+                                sendPulseToStart.SendPulse();
+                            }
                         }
                     }
                 }

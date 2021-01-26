@@ -300,7 +300,7 @@ namespace WebApplication1
                         if (IfDisconnectProcedure(device)) { return; }
 
                         LOGOConnection[device].errcodeLOGO = errCode;
-                        Val.watchdog[device] = progress;
+                       PropComm.SetWatchdogValue(progress, device);
 
 
                         if (IfDisconnectProcedure(device)) { return; }

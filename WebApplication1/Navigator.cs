@@ -15,6 +15,7 @@ namespace WebApplication1
         static bool Initialized = false;
 
         static GuiController.GControls.PleaseWaitBanner PleaseWaitBanner;
+        public static MessageToUser messageToUser = new MessageToUser();
 
         static WarningManagerWebControl WarningManagerWebControl_;
 
@@ -281,12 +282,18 @@ namespace WebApplication1
                 Clock(TemplateClass);
             }
 
+            // Please Wait banner
+            PleaseWait(TemplateClass);
+            ShowWarning(TemplateClass, hasWarningIcon);
+            ShowMessageToUser(TemplateClass);
+
             // auto refresh page
             if (Settings.autoRefreshPageEvery_s != 0)
             {
                 _thisPage.Response.AppendHeader("Refresh", Settings.autoRefreshPageEvery_s.ToString());
             }
 
+            
             // font set
             Style style = new Style();
             style.Font.Name = Settings.DefaultFont;
@@ -300,15 +307,10 @@ namespace WebApplication1
             {
                 return;
             }
-
+          
             // Page history for back button
             PageHistoryManage(_thisPage, session);                        
-
-            // Please Wait banner
-            PleaseWait(TemplateClass);
-
-            ShowWarning(TemplateClass, hasWarningIcon);
-
+            
             FirstRequestOver();
         }
 
@@ -352,6 +354,19 @@ namespace WebApplication1
                 TemplateClass.Controls.Add(WarningManagerWebControl_);
             }
 
+        }
+        static void ShowMessageToUser(HtmlGenericControl TemplateClass)
+        {
+            if (messageToUser.Show)
+            {                
+                TemplateClass.Controls.Add(messageToUser);
+                messageToUser.Okbtn.button.Click += Button_Click;
+            }
+        }
+
+        private static void Button_Click(object sender, ImageClickEventArgs e)
+        {
+            messageToUser.Button_Click(sender, e); // workaround event wasnt firing by itself
         }
 
         static void PleaseWait(HtmlGenericControl TemplateClass)
@@ -444,7 +459,7 @@ namespace WebApplication1
         static void Clock(HtmlGenericControl TemplateClass)
         {
             GuiController.GControls.UpdatePanelFull clkUpdt = new GuiController.GControls.UpdatePanelFull("clkUpdt", 5000);
-            HtmlGenericControl div = GuiController.DIV.CreateDivAbsolute(0.7F, 90, 10, 3, "vw");
+            HtmlGenericControl div = GuiController.DIV.CreateDivAbsolute(0.7F, 88, 9, 3, "vw");
             div.ID = "clk";
             GuiController.GControls.SuperLabel clk = new GuiController.GControls.SuperLabel(
                Helper.getClockValue(), 0, 0, 100, 100); clk.FontWeightBold = true;

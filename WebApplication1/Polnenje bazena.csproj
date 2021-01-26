@@ -529,6 +529,7 @@
     <Compile Include="GUI - Pages Custom\GuiController - UpNastavitve.cs" />
     <Compile Include="GUI - Pages\GuiController - PageVzorci.cs" />
     <Compile Include="Kontrola.cs" />
+    <Compile Include="MessageToUser.cs" />
     <Compile Include="Pages\Vzorci.aspx.cs">
       <DependentUpon>Vzorci.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

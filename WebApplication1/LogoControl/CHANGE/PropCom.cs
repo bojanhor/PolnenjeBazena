@@ -15,6 +15,7 @@ namespace WebApplication1
         public AutoSync AutoSync = new AutoSync();
         bool firstSync = true;
         int poolCnt = 1;
+        private static string[] WatchdogValues = new string[Settings.Devices + 1];
 
         public PlcVars.LogoClock LogoClock;
 
@@ -167,6 +168,37 @@ namespace WebApplication1
 
             return false;
         }
+
+        public static void SetWatchdogValue(string Value, int deviceNum)
+        {
+            WatchdogValues[deviceNum] = Value;
+        }
+        public static string GetWatchdogValue(int deviceNum)
+        {
+            try
+            {
+                return WatchdogValues[deviceNum];
+            }
+            catch
+            {
+                return PropComm.NA;
+            }
+            
+        }
+
+        public static int GetWatchdogNumDevices()
+        {
+            try
+            {
+                return WatchdogValues.Length;
+            }
+            catch
+            {
+                return 0;
+            }
+
+        }
+
     }
 
     public class AutoSync
@@ -189,6 +221,8 @@ namespace WebApplication1
         {
             VarsList.Add(var);
         }
+
+      
     }
 
 }

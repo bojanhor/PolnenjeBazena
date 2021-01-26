@@ -136,9 +136,12 @@ namespace WebApplication1
                                 throw new Exception("File.Copy(tempLogFilePath, LogFilePath) reported an error: " + ex.Message);
                             }
 
+
+                            SetPermissions(tempLogFilePath);
+
+
                             try
                             {
-                                SetPermissions(tempLogFilePath);
                                 File.Delete(tempLogFilePath);
                             }
                             catch (Exception ex)
@@ -257,8 +260,7 @@ namespace WebApplication1
             }
 
             void WriteLogAsync()
-            {
-                
+            {                
                 while (true)
                 {
                     
@@ -293,7 +295,7 @@ namespace WebApplication1
                         FileCorupted = true;
                     }
 
-                    Thread.Sleep(500); // check every half second cca
+                    Thread.Sleep(300); // check every half second cca
                 }
             }
 
@@ -366,19 +368,27 @@ namespace WebApplication1
 
         public static void AddFileSecurity_Delete(string fileName)
         {
-            // get acount name
-            var account = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            try
+            {
+                // get acount name
+                var account = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
 
-            // Get a FileSecurity object that represents the
-            // current security settings.
-            FileSecurity fSecurity = File.GetAccessControl(fileName);
+                // Get a FileSecurity object that represents the
+                // current security settings.
+                FileSecurity fSecurity = File.GetAccessControl(fileName);
 
-            // Add the FileSystemAccessRule to the security settings.
-            fSecurity.AddAccessRule(new FileSystemAccessRule(account,
-                FileSystemRights.Delete, AccessControlType.Allow));            
+                // Add the FileSystemAccessRule to the security settings.
+                fSecurity.AddAccessRule(new FileSystemAccessRule(account,
+                    FileSystemRights.Delete, AccessControlType.Allow));
 
-            // Set the new access settings.
-            File.SetAccessControl(fileName, fSecurity);
+                // Set the new access settings.
+                File.SetAccessControl(fileName, fSecurity);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("AddFileSecurity_Delete() is reporting ptoblem: " + ex.Message);
+            }
+           
         }
                 
         public static void SetMessage(string message)
