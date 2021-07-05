@@ -402,7 +402,7 @@ namespace WebApplication1
 
                     gb_Conveyor = new GControls.GroupBox(0, 0, 100, 100);
 
-                    var coordinates = new Label() { Text = "X:" + prop1.XPos.Value_string + " Y:" + (prop1.XPos.Value_string), ForeColor = System.Drawing.Color.Gray};
+                    var coordinates = new Label() { Text = "X:" + prop1.XPos.Value_string + " Y:" + (prop1.YPos.Value_string), ForeColor = System.Drawing.Color.Gray};
                     SetControlAbsolutePos(coordinates, 1, 1, 20,5);
                     coordinates.Style.Add(HtmlTextWriterStyle.FontSize, "0.7vw");
 
