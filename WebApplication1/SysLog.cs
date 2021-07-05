@@ -11,6 +11,7 @@ namespace WebApplication1
     public class SysLog
     {      
         public static MessageManager Message;
+        private static bool FileCorupted = false;
 
         public class MessageManager : Dsps
         {
@@ -112,8 +113,8 @@ namespace WebApplication1
                         }
                         
                     }
-
-                    LogFilePath = LogFolderPath + "\\" + "Log.txt";
+                   
+                    LogFilePath = LogFolderPath + "\\" + "Log" + GetLatestLogNumber() + ".txt";
                     tempLogFilePath = LogFolderPath + "\\" + "Log_tmp.txt";
 
                     if (!ifFileExists(tempLogFilePath))
@@ -135,9 +136,12 @@ namespace WebApplication1
                                 throw new Exception("File.Copy(tempLogFilePath, LogFilePath) reported an error: " + ex.Message);
                             }
 
+
+                            SetPermissions(tempLogFilePath);
+
+
                             try
                             {
-                                SetPermissions(tempLogFilePath);
                                 File.Delete(tempLogFilePath);
                             }
                             catch (Exception ex)
@@ -190,8 +194,24 @@ namespace WebApplication1
             {
                 try
                 {
+                    if (!Path.GetFileName(FilePath).Contains("_tmp"))
+                    {
+                        var num = GetLatestLogNumber();
+                        var tmp = Path.GetFileName(FilePath);
+                        tmp = tmp.Replace(num.ToString(), "");
+                        tmp = tmp.Replace(".txt", "");
+                        if (FileCorupted)
+                        {
+                            num++;
+                        }                        
+                        FilePath = tmp + num + ".txt";
+                        FilePath = LogFolderPath + "\\" + FilePath;
+
+                    }
+                                        
                     FileStream fs = File.Create(FilePath, 32768, FileOptions.WriteThrough);
                     fs.Close();
+                    LogFilePath = FilePath;
                 }
                 catch (Exception ex)
                 {
@@ -240,12 +260,18 @@ namespace WebApplication1
             }
 
             void WriteLogAsync()
-            {
-                
+            {                
                 while (true)
                 {
+                    
                     try
                     {
+                        if (FileCorupted)
+                        {                            
+                            CreateFile(LogFilePath);
+                            FileCorupted = false;
+                        }
+
                         if (PendingMessages.Count > 0)
                         {
                             StreamWriter s = new StreamWriter(LogFilePath, true);
@@ -266,15 +292,62 @@ namespace WebApplication1
                     catch (Exception ex)
                     {
                         var message = "ERROR WRITING TO FILE! " + ex.Message;
-                        Navigator.MessageBox(message);
-                        Message.SetMessage(message, true);
-                        throw new Exception(message);
+                        FileCorupted = true;
                     }
 
-                    Thread.Sleep(500); // check every half second cca
+                    Thread.Sleep(300); // check every half second cca
                 }
             }
+
+            public static int GetLatestLogNumber()
+            {
+                string[] Paths;
+                int last = 0;
+                List<string> files = new List<string>();
+
+                try
+                {
+                    Paths = Directory.GetFiles(LogFolderPath, "*.txt", SearchOption.TopDirectoryOnly);
+                    foreach (var item in Paths)
+                    {
+                        files.Add(Path.GetFileName(item));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("GetLatestLogNumber() Reports an error while retrieving files: " +ex.Message );
+                }
+                
+
+                
+
+                foreach (var item in files)
+                {                 
+                    if (item.Contains("Log"))
+                    {
+                        try
+                        {
+                            var buff = item;
+                            buff = buff.Replace("Log", "");
+                            buff = buff.Replace(".txt", "");
+                            var num = Convert.ToInt32(buff);
+
+                            if (num > last)
+                            {
+                                last = num;
+                            }
+
+                        }
+                        catch (Exception)
+                        { }                        
+                    }
+                }
+
+                return last;
+            }
         }
+
+       
 
         static void SetPermissions(string path)
         {
@@ -295,19 +368,27 @@ namespace WebApplication1
 
         public static void AddFileSecurity_Delete(string fileName)
         {
-            // get acount name
-            var account = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            try
+            {
+                // get acount name
+                var account = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
 
-            // Get a FileSecurity object that represents the
-            // current security settings.
-            FileSecurity fSecurity = File.GetAccessControl(fileName);
+                // Get a FileSecurity object that represents the
+                // current security settings.
+                FileSecurity fSecurity = File.GetAccessControl(fileName);
 
-            // Add the FileSystemAccessRule to the security settings.
-            fSecurity.AddAccessRule(new FileSystemAccessRule(account,
-                FileSystemRights.Delete, AccessControlType.Allow));            
+                // Add the FileSystemAccessRule to the security settings.
+                fSecurity.AddAccessRule(new FileSystemAccessRule(account,
+                    FileSystemRights.Delete, AccessControlType.Allow));
 
-            // Set the new access settings.
-            File.SetAccessControl(fileName, fSecurity);
+                // Set the new access settings.
+                File.SetAccessControl(fileName, fSecurity);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("AddFileSecurity_Delete() is reporting ptoblem: " + ex.Message);
+            }
+           
         }
                 
         public static void SetMessage(string message)

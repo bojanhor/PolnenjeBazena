@@ -78,7 +78,7 @@ namespace WebApplication1
                     gb_Rob.Controls.Add(item); SetControlAbsolutePos(item, top + buff, left, size); buff += offset;
                 }
 
-                gb_Rob.Controls.Add(Krozenje); SetControlAbsolutePos(Krozenje, top + buff, 35, size);
+                gb_Rob.Controls.Add(Krozenje); SetControlAbsolutePos(Krozenje, top, 65, size);
 
                 RobX1.Click += RobX1_Click; RobY1.Click += RobY1_Click; RobX2.Click += RobX2_Click; RobY2.Click += RobY2_Click;
                 CircX1.Click += CircX1_Click; CircY1.Click += CircY1_Click; CircX2.Click += CircX2_Click; CircY2.Click += CircY2_Click;

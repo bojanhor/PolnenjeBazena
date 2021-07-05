@@ -143,7 +143,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Index.html" />
-    <Content Include="Logs\Log.txt" />
+    <Content Include="Logs\Log1.txt" />
     <Content Include="Pages\Vzorci.aspx" />
     <Content Include="Pages\UpNastavitve.aspx" />
     <Content Include="Pages\Template.aspx" />
@@ -529,6 +529,7 @@
     <Compile Include="GUI - Pages Custom\GuiController - UpNastavitve.cs" />
     <Compile Include="GUI - Pages\GuiController - PageVzorci.cs" />
     <Compile Include="Kontrola.cs" />
+    <Compile Include="MessageToUser.cs" />
     <Compile Include="Pages\Vzorci.aspx.cs">
       <DependentUpon>Vzorci.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

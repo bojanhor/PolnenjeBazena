@@ -17,8 +17,8 @@ namespace WebApplication1
         public static Kontrola Kontrola;
         public static PC_WD PCWD;
         public static WarningManager WarningManager;
-        public static GuiController guiController;        
-        public static string[] watchdog = new string[Settings.Devices + 1];
+        public static GuiController guiController;      
+        
         public static string ScrolToBottomTextboxScript;
         public static string CantStartPatern;
         public static string RetainPositionTextboxScript;
@@ -55,17 +55,16 @@ namespace WebApplication1
 
         public static void InitializeWDTable(int device)
         {
-            if (watchdog[device] != null)
-            {
+          
                 if (XmlController.GetEnabledLogo(device))
                 {
-                    watchdog[device] = "Not running";
+                PropComm.SetWatchdogValue("Not running", device);
                 }
                 else
                 {
-                    watchdog[device] = "Disabled";
+                    PropComm.SetWatchdogValue("Disabled", device);
                 }
-            }
+            
         }
                                
       

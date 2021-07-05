@@ -13,11 +13,19 @@ namespace WebApplication1.Pages
 
 
         protected void Page_Load(object sender, EventArgs e)
-        {            
-            Navigator.EveryPageProtocol("Dobrodošli", this, Session, TemplateClassID, true, Navigator.PageLogoType.WithLogo, false, true, true, true);
+        {
+            try
+            {
+                Navigator.EveryPageProtocol("Dobrodošli", this, Session, TemplateClassID, true, Navigator.PageLogoType.WithLogo, false, true, true, true);
 
-            Val.guiController.PageDefault_ = new GuiController.PageDefault(this, Session);
-            Initialise();
+                Val.guiController.PageDefault_ = new GuiController.PageDefault(this, Session);
+                Initialise();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            
 
         }
 

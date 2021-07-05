@@ -16,7 +16,6 @@ namespace WebApplication1
         public PlcVars.Bit Rocno_read;
         public PlcVars.Bit Avtomat_read;
         public PlcVars.Bit CakanjeMateriala;
-        public PlcVars.Bit CakanjeUkaza;
         public PlcVars.Bit Halt;
 
         public PlcVars.Bit ZigZag; public PlcVars.Bit ZigZagzRobom;
@@ -89,7 +88,7 @@ namespace WebApplication1
             Ustavljeno = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(1, 0), "USTAVLJENO", false, true) ;
             Rocno_read = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(2, 0), "ROČNI NAČIN") ;
             CakanjeMateriala = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(4, 0), "ČAKANJE MATERIALA") ;
-            CakanjeUkaza = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(5, 0), "ČAKANJE UKAZA") ;
+           
             Halt = new PlcVars.Bit(this, new PlcVars.BitAddress(6,0), true) ;
 
             XImpulses = new PlcVars.Word(this, new PlcVars.WordAddress(210), true) ;
