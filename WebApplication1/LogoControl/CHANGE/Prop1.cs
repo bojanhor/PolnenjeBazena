@@ -54,6 +54,8 @@ namespace WebApplication1
                              
         public PlcVars.Bit JoyStickCommandX1; public PlcVars.Bit JoyStickCommandX2; public PlcVars.Bit JoyStickCommandY1; public PlcVars.Bit JoyStickCommandY2;
 
+        public PlcVars.AlarmBit ReadJoyStickCommandX1; public PlcVars.AlarmBit ReadJoyStickCommandX2; public PlcVars.AlarmBit ReadJoyStickCommandY1; public PlcVars.AlarmBit ReadJoyStickCommandY2;
+        public PlcVars.AlarmBit ReadJoyStickCommandActive;
         public PlcVars.Word SpeedX; public PlcVars.Word SpeedY;
 
         public PlcVars.Word SpeedSet; public PlcVars.Word SpeedRead;
@@ -112,10 +114,10 @@ namespace WebApplication1
             Auto = new PlcVars.Bit(this, new PlcVars.BitAddress(14, 0), true) ;
             Inicializacija = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(15, 0), "--- INICIALIZACIJA ---") ;
 
-            DirX1 = new PlcVars.Bit(this, new PlcVars.BitAddress(20, 0), false) ;
-            DirX2 = new PlcVars.Bit(this, new PlcVars.BitAddress(22, 0), false) ;
-            DirY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(24, 0), false) ;
-            DirY2 = new PlcVars.Bit(this, new PlcVars.BitAddress(26, 0), false) ;
+            DirX1 = new PlcVars.Bit(this, new PlcVars.BitAddress(20, 0), false) ;   // read data - motor runing direction X1
+            DirX2 = new PlcVars.Bit(this, new PlcVars.BitAddress(22, 0), false);    // read data - motor runing direction X2
+            DirY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(24, 0), false);    // read data - motor runing direction Y1
+            DirY2 = new PlcVars.Bit(this, new PlcVars.BitAddress(26, 0), false);    // read data - motor runing direction Y2
             TrakRead = new PlcVars.Bit(this, new PlcVars.BitAddress(28, 0), false) ;
 
             Trak_muss = new PlcVars.Bit(this, new PlcVars.BitAddress(29, 0), true) ;
@@ -123,21 +125,26 @@ namespace WebApplication1
             SymPrisotMat = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(30, 0),"Vključena je simulacija materiala!", false, false, true) ;
             ReadPrisotMat = new PlcVars.Bit(this, new PlcVars.BitAddress(32, 0), false) ;
 
-            AutoDirX1 = new PlcVars.Bit(this, new PlcVars.BitAddress(40, 0), true);
-            AutoDirX2 = new PlcVars.Bit(this, new PlcVars.BitAddress(42, 0), true);
-            AutoDirY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(44, 0), true);
-            AutoDirY2 = new PlcVars.Bit(this, new PlcVars.BitAddress(46, 0), true);
+            AutoDirX1 = new PlcVars.Bit(this, new PlcVars.BitAddress(40, 0), true); // writable - send command to move
+            AutoDirX2 = new PlcVars.Bit(this, new PlcVars.BitAddress(42, 0), true); // writable - send command to move
+            AutoDirY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(44, 0), true); // writable - send command to move
+            AutoDirY2 = new PlcVars.Bit(this, new PlcVars.BitAddress(46, 0), true); // writable - send command to move
 
-            ReadKSX1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(50, 0), "Končna pozicija X1", false, false, false) ; ;
-            ReadKSX2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(52, 0), "Končna pozicija X2", false, false, false) ; ;
-            ReadKSY1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(54, 0), "Končna pozicija Y1", false, false, false) ; ;
-            ReadKSY2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(56, 0), "Končna pozicija Y2", false, false, false) ; ;
-
+            ReadKSX1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(50, 0), "Končna pozicija X1", false, false, false) ;
+            ReadKSX2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(52, 0), "Končna pozicija X2", false, false, false) ;
+            ReadKSY1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(54, 0), "Končna pozicija Y1", false, false, false) ;
+            ReadKSY2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(56, 0), "Končna pozicija Y2", false, false, false) ;
             
-            JoyStickCommandX1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(90, 0),"Ročni pomik X1" , false, false, true) ;
-            JoyStickCommandX2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(91, 0), "Ročni pomik X2", false, false, true) ;
-            JoyStickCommandY1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(92, 0), "Ročni pomik Y1", false, false, true) ;
-            JoyStickCommandY2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(93, 0), "Ročni pomik Y2", false, false, true) ;
+            JoyStickCommandX1 = new PlcVars.Bit(this, new PlcVars.BitAddress(90, 0), true) ;   // writable - joystick direction command
+            JoyStickCommandX2 = new PlcVars.Bit(this, new PlcVars.BitAddress(91, 0), true);    // writable - joystick direction command
+            JoyStickCommandY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(92, 0), true);    // writable - joystick direction command
+            JoyStickCommandY2 = new PlcVars.Bit(this, new PlcVars.BitAddress(93, 0), true);    // writable - joystick direction command
+
+            ReadJoyStickCommandX1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(94, 0), "Ročni pomik X1", false, false, false);   // indicator of manual movement
+            ReadJoyStickCommandX2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(95, 0), "Ročni pomik X2", false, false, false);   // indicator of manual movement
+            ReadJoyStickCommandY1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(96, 0), "Ročni pomik Y1", false, false, false);   // indicator of manual movement
+            ReadJoyStickCommandY2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(97, 0), "Ročni pomik Y2", false, false, false);   // indicator of manual movement
+            ReadJoyStickCommandActive = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(97, 0), "Daljinsko upravljanje aktivno", false, false, false);   // indicator of physical joystick active
 
             SpeedX = new PlcVars.Word(this, new PlcVars.WordAddress(100), false) ;
             SpeedY = new PlcVars.Word(this, new PlcVars.WordAddress(104), false) ;

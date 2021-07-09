@@ -78,11 +78,9 @@ namespace WebApplication1
                     ConvUP = new GControls.UpdatePanelFull("ConveyorUpdatePanel", Settings.UpdateValuesPCms);
                     SemaphoreUP = new GControls.UpdatePanelFull("SemaphoreUP", Settings.UpdateValuesPCms / 2);
                     OthersUP = new GControls.UpdatePanelFull("OthersUP", Settings.UpdateValuesPCms);
-                    JoystickUP = new GControls.UpdatePanelFull("JoystickUP", Settings.UpdateValuesPCms);
+                    JoystickUP = new GControls.UpdatePanelFull("JoystickUP", Settings.UpdateValuesJoystick);
                     WarningsUP = new GControls.UpdatePanelFull("WarningsUP", Settings.UpdateValuesPCms);
-                
-
-                
+                                
 
                 try
                 {
@@ -324,22 +322,22 @@ namespace WebApplication1
                     buff3 = picname + "prv";
                     buff4 = picname + "nxt";
 
-                    if (prop1.JoyStickCommandY2.Value_bool)
+                    if (prop1.ReadJoyStickCommandY2.Value_bool)
                     {
                         buff1 += "_press";
                     }
 
-                    if (prop1.JoyStickCommandY1.Value_bool)
+                    if (prop1.ReadJoyStickCommandY1.Value_bool)
                     {
                         buff2 += "_press";
                     }
 
-                    if (prop1.JoyStickCommandX1.Value_bool)
+                    if (prop1.ReadJoyStickCommandX1.Value_bool)
                     {
                         buff3 += "_press";
                     }
 
-                    if (prop1.JoyStickCommandX2.Value_bool)
+                    if (prop1.ReadJoyStickCommandX2.Value_bool)
                     {
                         buff4 += "_press";
                     }

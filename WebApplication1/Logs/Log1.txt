@@ -3309,3 +3309,20 @@ Parameter name: updatePanel Stack trace:    at System.Web.UI.PageRequestManager.
 05.07.2021  08:37:21 : Logo1: Connection error: Watchdog error - Watchdog does not change
 05.07.2021  08:37:24 : Logo1: Running connection diagnostics...
 05.07.2021  08:37:27 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  07:41:07 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+09.07.2021  07:41:07 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+09.07.2021  07:41:07 : Logo1: Connecting...
+09.07.2021  07:41:10 : Logo1: TCP : Connection Error
+09.07.2021  07:41:10 : Logo1: Running connection diagnostics...
+09.07.2021  07:41:13 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  07:41:14 : Redirected to: MasterMenu
+09.07.2021  07:41:15 : Redirected to: UpNastavitve
+09.07.2021  07:41:15 : Redirected to: Advanced
+09.07.2021  07:41:16 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  07:41:16 : Logo1: Watchdog error - Watchdog does not change
+09.07.2021  07:41:16 : Logo1: Connection error: Watchdog error - Watchdog does not change
+09.07.2021  07:41:19 : Logo1: Running connection diagnostics...
+09.07.2021  07:41:22 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  07:41:22 : Redirected to: Editor
+09.07.2021  07:41:24 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  07:41:24 : Logo1: Running connection diagnostics...

@@ -16,6 +16,8 @@ namespace WebApplication1
 
         public static readonly int UpdateValuesPCms = 300;          // Frekvenca osveževanja vrednosti
 
+        public static readonly int UpdateValuesJoystick = 500;      // Frekvenca osveževanja gumbov za joystick
+
         public static readonly int Updateanimations = 80;          // Frekvenca osveževanja vrednosti za animacije
 
         public static readonly int Devices = 5;                      // how many devices supported (do not change)        
@@ -44,8 +46,8 @@ namespace WebApplication1
 
         public static readonly uint logFileMaxSizeKB = 4000;
 
-        public static readonly uint MaxLoginTriesIP = 10;            // IP address is blocked after x failed attempts
-        public static readonly uint MaxLoginTriesUser = 5;            // User is blocked after x failed attempts
+        public static readonly uint MaxLoginTriesIP = 15;            // IP address is blocked after x failed attempts
+        public static readonly uint MaxLoginTriesUser = 10;            // User is blocked after x failed attempts
 
         // less important (not very significant)
 
