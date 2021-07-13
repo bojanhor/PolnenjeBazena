@@ -81,7 +81,7 @@
 		</LOGO1>//
 	  //
 		<LOGO2>//			
-			<enabled>false</enabled>//
+			<enabled>true</enabled>//
 			<devicename>LOGO2</devicename>//
 			<showname>Varnostne funkcije</showname>//
 			<serverIP>192.168.1.201</serverIP>//

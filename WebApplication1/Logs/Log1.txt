@@ -3326,3 +3326,587 @@ Parameter name: updatePanel Stack trace:    at System.Web.UI.PageRequestManager.
 09.07.2021  07:41:22 : Redirected to: Editor
 09.07.2021  07:41:24 : Logo1: Connection failed. Trying to reconnect
 09.07.2021  07:41:24 : Logo1: Running connection diagnostics...
+09.07.2021  13:52:27 : Logo1: Connecting...
+09.07.2021  13:52:28 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+09.07.2021  13:52:28 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+09.07.2021  13:52:28 : Logo1: Connected
+09.07.2021  13:52:28 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+09.07.2021  13:52:42 : Redirected to: MasterMenu
+09.07.2021  13:52:44 : Redirected to: UpNastavitve
+09.07.2021  13:52:44 : Redirected to: Advanced
+09.07.2021  13:53:08 : Redirected to: Editor
+09.07.2021  13:53:17 : ConfigFile was changed, by user.
+09.07.2021  13:53:18 : Page refreshed.
+09.07.2021  13:53:19 : Redirected to: Default
+09.07.2021  13:53:23 : Redirected to: MasterMenu
+09.07.2021  13:53:24 : Redirected to: UpNastavitve
+09.07.2021  13:53:24 : Redirected to: Advanced
+09.07.2021  13:53:26 : Redirected to: Default
+09.07.2021  13:53:34 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+09.07.2021  13:53:34 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+09.07.2021  13:53:34 : Logo1: Connecting...
+09.07.2021  13:53:34 : Logo2: Connecting...
+09.07.2021  13:53:35 : Logo1: Connected
+09.07.2021  13:53:35 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+09.07.2021  13:53:36 : Logo2: Connected
+09.07.2021  13:53:36 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+09.07.2021  13:54:05 : Page refreshed.
+09.07.2021  13:54:05 : Page refreshed.
+09.07.2021  13:54:17 : Page refreshed.
+09.07.2021  13:54:17 : Page refreshed.
+09.07.2021  13:55:21 : Redirected to: MasterMenu
+09.07.2021  13:55:23 : Redirected to: UpNastavitve
+09.07.2021  13:55:23 : Redirected to: Advanced
+09.07.2021  13:55:28 : Redirected to: Editor
+09.07.2021  13:55:29 : Redirected to: Editor
+09.07.2021  13:56:15 : Logo1: Connecting...
+09.07.2021  13:56:15 : Logo2: Connecting...
+09.07.2021  13:56:16 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+09.07.2021  13:56:16 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+09.07.2021  13:56:16 : Logo1: Connected
+09.07.2021  13:56:16 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+09.07.2021  13:56:17 : Logo2: Connected
+09.07.2021  13:56:17 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+09.07.2021  13:57:02 : Logo1: Connecting...
+09.07.2021  13:57:02 : Logo2: Connecting...
+09.07.2021  13:57:03 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+09.07.2021  13:57:03 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+09.07.2021  13:57:03 : Logo1: Connected
+09.07.2021  13:57:03 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+09.07.2021  13:57:04 : Logo2: Connected
+09.07.2021  13:57:04 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+09.07.2021  13:57:18 : Logo1: Connecting...
+09.07.2021  13:57:18 : Logo2: Connecting...
+09.07.2021  13:57:19 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+09.07.2021  13:57:19 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+09.07.2021  13:57:19 : Logo1: Connected
+09.07.2021  13:57:19 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+09.07.2021  13:57:20 : Logo2: Connected
+09.07.2021  13:57:20 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+09.07.2021  13:57:52 : Redirected to: Vzorci
+09.07.2021  13:57:55 : Redirected to: Default
+09.07.2021  13:59:27 : Logo1: Connecting...
+09.07.2021  13:59:27 : Logo2: Connecting...
+09.07.2021  13:59:28 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+09.07.2021  13:59:28 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+09.07.2021  13:59:28 : Logo1: Connected
+09.07.2021  13:59:28 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+09.07.2021  13:59:29 : Logo2: Connected
+09.07.2021  13:59:29 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+09.07.2021  13:59:31 : Redirected to: MasterMenu
+09.07.2021  13:59:33 : Redirected to: UpNastavitve
+09.07.2021  13:59:33 : Redirected to: Advanced
+09.07.2021  13:59:44 : Redirected to: Default
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 3110, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 3140, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 3240, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Logo2: TCP : Error receiving Data
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 3150, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 3160, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 3170, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 3180, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 3190, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 3200, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 3210, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 10, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 20, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 40, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 60, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: VW310, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: VW312, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: VW216, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 100, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 120, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 160, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 130, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 140, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 150, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Logo2: Connection error: TCP : Error receiving Data
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 200, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 220, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 240, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 260, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 280, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 290, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 300, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 320, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 400, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 420, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 440, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 460, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 500, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 520, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 540, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 560, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 900, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 910, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 920, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 930, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 940, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 950, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 960, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 970, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 970, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: VW100, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: VW104, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: VW106, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: VW108, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 2000, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 2020, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 2040, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 740, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 80, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 1670, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 70, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 1680, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 330, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 340, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 350, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 360, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 630, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 640, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 650, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 660, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 670, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 1630, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 1640, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 1650, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 1660, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 1690, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 1700, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 1710, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 1720, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Read from PLC failed. Address: bit at 1730, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:00:56 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+09.07.2021  14:00:56 : Logo1: TCP : Error receiving Data
+09.07.2021  14:00:56 : Logo1: Connection error: TCP : Error receiving Data
+09.07.2021  14:00:57 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+09.07.2021  14:00:59 : Logo2: Running connection diagnostics...
+09.07.2021  14:00:59 : Logo1: Running connection diagnostics...
+09.07.2021  14:01:02 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+09.07.2021  14:01:02 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+09.07.2021  14:01:05 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:01:05 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:01:05 : Logo1: Running connection diagnostics...
+09.07.2021  14:01:05 : Logo2: Running connection diagnostics...
+09.07.2021  14:01:08 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:01:08 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:01:09 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:01:09 : Logo1: Connection error: TCP : Error receiving Data
+09.07.2021  14:01:09 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:01:09 : Logo2: Connection error: TCP : Error receiving Data
+09.07.2021  14:01:12 : Logo2: Running connection diagnostics...
+09.07.2021  14:01:12 : Logo1: Running connection diagnostics...
+09.07.2021  14:01:15 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:01:15 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:01:15 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:01:15 : Logo1: Running connection diagnostics...
+09.07.2021  14:01:15 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:01:15 : Logo2: Running connection diagnostics...
+09.07.2021  14:01:16 : Redirected to: MasterMenu
+09.07.2021  14:01:17 : Redirected to: UpNastavitve
+09.07.2021  14:01:17 : Redirected to: Advanced
+09.07.2021  14:01:18 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:01:18 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:01:18 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:01:18 : Logo1: Connection error: TCP : Error receiving Data
+09.07.2021  14:01:18 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:01:18 : Logo2: Connection error: TCP : Error receiving Data
+09.07.2021  14:01:21 : Logo1: Running connection diagnostics...
+09.07.2021  14:01:21 : Logo2: Running connection diagnostics...
+09.07.2021  14:01:24 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:01:24 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:01:25 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:01:25 : Logo1: Running connection diagnostics...
+09.07.2021  14:01:25 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:01:25 : Logo2: Running connection diagnostics...
+09.07.2021  14:01:28 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:01:28 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:01:28 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:01:28 : Logo1: Connection error: TCP : Error receiving Data
+09.07.2021  14:01:28 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:01:28 : Logo2: Connection error: TCP : Error receiving Data
+09.07.2021  14:01:31 : Logo1: Running connection diagnostics...
+09.07.2021  14:01:31 : Logo2: Running connection diagnostics...
+09.07.2021  14:01:34 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:01:34 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:01:35 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:01:35 : Logo2: Running connection diagnostics...
+09.07.2021  14:01:35 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:01:35 : Logo1: Running connection diagnostics...
+09.07.2021  14:01:38 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:01:38 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:01:38 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:01:38 : Logo2: Connection error: TCP : Error receiving Data
+09.07.2021  14:01:38 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:01:38 : Logo1: Connection error: TCP : Error receiving Data
+09.07.2021  14:01:41 : Logo1: Running connection diagnostics...
+09.07.2021  14:01:41 : Logo2: Running connection diagnostics...
+09.07.2021  14:01:44 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:01:44 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:01:45 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:01:45 : Logo2: Running connection diagnostics...
+09.07.2021  14:01:45 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:01:45 : Logo1: Running connection diagnostics...
+09.07.2021  14:01:48 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:01:48 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:01:48 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:01:48 : Logo1: Connection error: TCP : Error receiving Data
+09.07.2021  14:01:48 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:01:48 : Logo2: Connection error: TCP : Error receiving Data
+09.07.2021  14:01:51 : Redirected to: Default
+09.07.2021  14:01:51 : Logo1: Running connection diagnostics...
+09.07.2021  14:01:51 : Logo2: Running connection diagnostics...
+09.07.2021  14:01:51 : Redirected to: Default
+09.07.2021  14:01:54 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:01:54 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:01:55 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:01:55 : Logo2: Running connection diagnostics...
+09.07.2021  14:01:55 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:01:55 : Logo1: Running connection diagnostics...
+09.07.2021  14:01:58 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:01:58 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:01:58 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:01:58 : Logo2: Connection error: TCP : Error receiving Data
+09.07.2021  14:01:58 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:01:58 : Logo1: Connection error: TCP : Error receiving Data
+09.07.2021  14:02:01 : Logo1: Running connection diagnostics...
+09.07.2021  14:02:01 : Logo2: Running connection diagnostics...
+09.07.2021  14:02:04 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:02:04 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:02:05 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:02:05 : Logo1: Running connection diagnostics...
+09.07.2021  14:02:05 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:02:05 : Logo2: Running connection diagnostics...
+09.07.2021  14:02:07 : Logo2:   -Ping successful but connection is poor: 192.168.1.201
+09.07.2021  14:02:07 : Logo1:   -Ping successful but connection is poor: 192.168.1.200
+09.07.2021  14:02:07 : Logo2: Connected again
+09.07.2021  14:02:07 : Logo1: Connected again
+09.07.2021  14:02:07 : Logo2: Connection error: TCP : Error receiving Data
+09.07.2021  14:02:07 : Logo1: Connection error: TCP : Error receiving Data
+09.07.2021  14:02:10 : Logo2: Running connection diagnostics...
+09.07.2021  14:02:10 : Logo2:   -Ping successful at: 192.168.1.201
+09.07.2021  14:02:10 : Logo1: Running connection diagnostics...
+09.07.2021  14:02:10 : Logo1:   -Ping successful at: 192.168.1.200
+09.07.2021  14:02:11 : Logo2: Connected again
+09.07.2021  14:02:11 : Logo1: Connected again
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 3150, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 3160, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 3170, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 3180, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 3190, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 3200, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 3210, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 10, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 20, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 40, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 60, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: VW310, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: VW312, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: VW216, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 100, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 120, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 160, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 3130, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 3230, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Logo2: TCP : Error receiving Data
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 130, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 140, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 150, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Logo2: Connection error: TCP : Error receiving Data
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 200, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 220, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 240, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 260, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 280, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 290, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 300, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 320, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 400, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 420, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 440, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 460, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 500, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 520, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 540, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 560, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 900, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 910, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 920, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 930, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 940, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 950, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 960, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 970, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 970, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: VW100, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: VW104, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: VW106, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: VW108, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 2000, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 2020, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 2040, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 740, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 80, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 1670, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 70, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 1680, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 330, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 340, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 350, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 360, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 630, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 640, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 650, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 660, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 670, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+09.07.2021  14:13:51 : Read from PLC failed. Address: bit at 1630, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:52 : Read from PLC failed. Address: bit at 1640, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:52 : Read from PLC failed. Address: bit at 1650, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:52 : Read from PLC failed. Address: bit at 1660, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:52 : Read from PLC failed. Address: bit at 1690, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:52 : Read from PLC failed. Address: bit at 1700, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:52 : Read from PLC failed. Address: bit at 1710, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:52 : Read from PLC failed. Address: bit at 1720, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:52 : Read from PLC failed. Address: bit at 1730, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+09.07.2021  14:13:52 : Logo1: TCP : Error receiving Data
+09.07.2021  14:13:52 : Logo1: Connection error: TCP : Error receiving Data
+09.07.2021  14:13:52 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+09.07.2021  14:13:54 : Logo2: Running connection diagnostics...
+09.07.2021  14:13:55 : Logo1: Running connection diagnostics...
+09.07.2021  14:13:58 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+09.07.2021  14:13:58 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+09.07.2021  14:14:00 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:14:00 : Logo1: Running connection diagnostics...
+09.07.2021  14:14:00 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:14:00 : Logo2: Running connection diagnostics...
+09.07.2021  14:14:04 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:14:04 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:14:04 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:14:04 : Logo1: Connection error: TCP : Error receiving Data
+09.07.2021  14:14:04 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:14:04 : Logo2: Connection error: TCP : Error receiving Data
+09.07.2021  14:14:07 : Logo2: Running connection diagnostics...
+09.07.2021  14:14:07 : Logo1: Running connection diagnostics...
+09.07.2021  14:14:10 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:14:10 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:14:11 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:14:11 : Logo1: Running connection diagnostics...
+09.07.2021  14:14:11 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:14:11 : Logo2: Running connection diagnostics...
+09.07.2021  14:14:14 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:14:14 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:14:14 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:14:14 : Logo2: Connection error: TCP : Error receiving Data
+09.07.2021  14:14:14 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:14:14 : Logo1: Connection error: TCP : Error receiving Data
+09.07.2021  14:14:17 : Logo1: Running connection diagnostics...
+09.07.2021  14:14:17 : Logo2: Running connection diagnostics...
+09.07.2021  14:14:20 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:14:20 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:14:21 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:14:21 : Logo1: Running connection diagnostics...
+09.07.2021  14:14:21 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:14:21 : Logo2: Running connection diagnostics...
+09.07.2021  14:14:24 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:14:24 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:14:24 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:14:24 : Logo1: Connection error: TCP : Error receiving Data
+09.07.2021  14:14:24 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:14:24 : Logo2: Connection error: TCP : Error receiving Data
+09.07.2021  14:14:27 : Logo1: Running connection diagnostics...
+09.07.2021  14:14:27 : Logo2: Running connection diagnostics...
+09.07.2021  14:14:30 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:14:30 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:14:31 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:14:31 : Logo2: Running connection diagnostics...
+09.07.2021  14:14:31 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:14:31 : Logo1: Running connection diagnostics...
+09.07.2021  14:14:34 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:14:34 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:14:34 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:14:34 : Logo2: Connection error: TCP : Error receiving Data
+09.07.2021  14:14:34 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:14:34 : Logo1: Connection error: TCP : Error receiving Data
+09.07.2021  14:14:37 : Logo2: Running connection diagnostics...
+09.07.2021  14:14:37 : Logo1: Running connection diagnostics...
+09.07.2021  14:14:40 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:14:40 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:14:41 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:14:41 : Logo1: Running connection diagnostics...
+09.07.2021  14:14:41 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:14:41 : Logo2: Running connection diagnostics...
+09.07.2021  14:14:44 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:14:44 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:14:44 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:14:44 : Logo2: Connection error: TCP : Error receiving Data
+09.07.2021  14:14:44 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:14:44 : Logo1: Connection error: TCP : Error receiving Data
+09.07.2021  14:14:47 : Logo1: Running connection diagnostics...
+09.07.2021  14:14:47 : Logo2: Running connection diagnostics...
+09.07.2021  14:14:50 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:14:50 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:14:51 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:14:51 : Logo2: Running connection diagnostics...
+09.07.2021  14:14:51 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:14:51 : Logo1: Running connection diagnostics...
+09.07.2021  14:14:54 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+09.07.2021  14:14:54 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+09.07.2021  14:14:54 : Logo1: Connection failed. Trying to reconnect
+09.07.2021  14:14:54 : Logo1: Connection error: TCP : Error receiving Data
+09.07.2021  14:14:54 : Logo2: Connection failed. Trying to reconnect
+09.07.2021  14:14:54 : Logo2: Connection error: TCP : Error receiving Data
+09.07.2021  14:14:57 : Logo1: Running connection diagnostics...
+09.07.2021  14:14:57 : Logo2: Running connection diagnostics...
+09.07.2021  14:14:57 : Logo2:   -Ping successful at: 192.168.1.201
+09.07.2021  14:14:57 : Logo1:   -Ping successful at: 192.168.1.200
+09.07.2021  14:14:58 : Logo2: Connected again
+09.07.2021  14:14:58 : Logo1: Connected again
+09.07.2021  14:25:31 : Page refreshed.
+09.07.2021  14:25:31 : Page refreshed.
+09.07.2021  14:25:36 : Page refreshed.
+09.07.2021  14:25:36 : Page refreshed.
+09.07.2021  14:26:30 : Page refreshed.
+09.07.2021  14:26:30 : Page refreshed.
+13.07.2021  08:35:14 : Read from PLC failed. Address: bit at 3110, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:14 : Read from PLC failed. Address: bit at 3140, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:14 : Read from PLC failed. Address: bit at 3240, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo2. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:14 : Logo2: TCP : Error receiving Data
+13.07.2021  08:35:14 : Logo2: Connection error: TCP : Error receiving Data
+13.07.2021  08:35:14 : Read from PLC failed. Address: bit at 3150, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:14 : Read from PLC failed. Address: bit at 3160, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:14 : Read from PLC failed. Address: bit at 3170, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:14 : Read from PLC failed. Address: bit at 3180, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:14 : Read from PLC failed. Address: bit at 3190, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:14 : Read from PLC failed. Address: bit at 3200, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:14 : Read from PLC failed. Address: bit at 3210, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:14 : Read from PLC failed. Address: bit at 10, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:14 : Read from PLC failed. Address: bit at 20, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:14 : Read from PLC failed. Address: bit at 40, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:14 : Read from PLC failed. Address: bit at 60, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:14 : Read from PLC failed. Address: VW310, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:14 : Read from PLC failed. Address: VW312, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:14 : Read from PLC failed. Address: VW216, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:14 : Read from PLC failed. Address: bit at 100, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:14 : Read from PLC failed. Address: bit at 120, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:14 : Read from PLC failed. Address: bit at 160, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:14 : Read from PLC failed. Address: bit at 130, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:15 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+13.07.2021  08:35:15 : Read from PLC failed. Address: bit at 140, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:16 : Read from PLC failed. Address: bit at 150, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 200, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 220, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 240, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 260, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 280, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 290, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 300, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 320, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 400, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 420, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 440, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 460, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 500, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 520, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 540, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Logo2: Running connection diagnostics...
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 560, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 900, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 910, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 920, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 930, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 940, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 950, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 960, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 970, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 970, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: VW100, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: VW104, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: VW106, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:17 : Read from PLC failed. Address: VW108, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 2000, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 2020, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 2040, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 740, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 80, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:17 : Read from PLC failed. Address: bit at 1670, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:17 : Logo2: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+13.07.2021  08:35:17 : Logo2: Running connection diagnostics...
+13.07.2021  08:35:17 : Logo2: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+13.07.2021  08:35:17 : Logo2: Connection error: TCP : Error receiving Data
+13.07.2021  08:35:18 : Read from PLC failed. Address: bit at 70, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:18 : Read from PLC failed. Address: bit at 1680, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:18 : Read from PLC failed. Address: bit at 330, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:18 : Read from PLC failed. Address: bit at 340, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:18 : Read from PLC failed. Address: bit at 350, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:18 : Read from PLC failed. Address: bit at 360, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:18 : Read from PLC failed. Address: bit at 630, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:18 : Read from PLC failed. Address: bit at 640, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:18 : Read from PLC failed. Address: bit at 650, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:18 : Read from PLC failed. Address: bit at 660, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:18 : Read from PLC failed. Address: bit at 670, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+13.07.2021  08:35:18 : Read from PLC failed. Address: bit at 1630, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:18 : Read from PLC failed. Address: bit at 1640, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:18 : Read from PLC failed. Address: bit at 1650, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:18 : Read from PLC failed. Address: bit at 1660, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:18 : Read from PLC failed. Address: bit at 1690, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:18 : Read from PLC failed. Address: bit at 1700, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:18 : Read from PLC failed. Address: bit at 1710, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:18 : Read from PLC failed. Address: bit at 1720, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:18 : Read from PLC failed. Address: bit at 1730, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+13.07.2021  08:35:18 : Logo1: TCP : Error receiving Data
+13.07.2021  08:35:18 : Logo1: Connection error: TCP : Error receiving Data
+13.07.2021  08:35:18 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+13.07.2021  08:35:21 : Logo2: Running connection diagnostics...
+13.07.2021  08:35:21 : Logo2: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+13.07.2021  08:35:21 : Logo2: Running connection diagnostics...
+13.07.2021  08:35:21 : Logo2: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+13.07.2021  08:35:21 : Logo2: Connection error: TCP : Error receiving Data
+13.07.2021  08:35:21 : Logo1: Running connection diagnostics...
+13.07.2021  08:35:21 : Logo1: Error: R/W Cycle manager stopped. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+13.07.2021  08:35:21 : Logo1: Running connection diagnostics...
+13.07.2021  08:35:21 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+13.07.2021  08:35:21 : Logo1: Connection error: TCP : Error receiving Data
+13.07.2021  08:35:24 : Logo2: Running connection diagnostics...
+13.07.2021  08:35:24 : Logo1: Running connection diagnostics...
+13.07.2021  08:35:26 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+13.07.2021  08:35:27 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+13.07.2021  08:35:29 : Logo2: Connection failed. Trying to reconnect
+13.07.2021  08:35:29 : Logo2: Running connection diagnostics...
+13.07.2021  08:35:29 : Logo1: Connection failed. Trying to reconnect
+13.07.2021  08:35:29 : Logo1: Running connection diagnostics...
+13.07.2021  08:35:32 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+13.07.2021  08:35:33 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+13.07.2021  08:35:35 : Logo2: Connection failed. Trying to reconnect
+13.07.2021  08:35:35 : Logo2: Connection error: TCP : Error receiving Data
+13.07.2021  08:35:35 : Logo1: Connection failed. Trying to reconnect
+13.07.2021  08:35:35 : Logo1: Connection error: TCP : Error receiving Data
+13.07.2021  08:35:38 : Logo2: Running connection diagnostics...
+13.07.2021  08:35:38 : Logo1: Running connection diagnostics...
+13.07.2021  08:35:41 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+13.07.2021  08:35:41 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+13.07.2021  08:35:43 : Logo2: Connection failed. Trying to reconnect
+13.07.2021  08:35:43 : Logo2: Running connection diagnostics...
+13.07.2021  08:35:44 : Logo1: Connection failed. Trying to reconnect
+13.07.2021  08:35:44 : Logo1: Running connection diagnostics...
+13.07.2021  08:35:47 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+13.07.2021  08:35:47 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+13.07.2021  08:35:49 : Logo2: Connection failed. Trying to reconnect
+13.07.2021  08:35:49 : Logo2: Connection error: TCP : Error receiving Data
+13.07.2021  08:35:50 : Logo1: Connection failed. Trying to reconnect
+13.07.2021  08:35:50 : Logo1: Connection error: TCP : Error receiving Data
+13.07.2021  08:35:52 : Logo2: Running connection diagnostics...
+13.07.2021  08:35:53 : Logo1: Running connection diagnostics...
+13.07.2021  08:35:55 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+13.07.2021  08:35:56 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+13.07.2021  08:35:58 : Logo2: Connection failed. Trying to reconnect
+13.07.2021  08:35:58 : Logo2: Running connection diagnostics...
+13.07.2021  08:35:58 : Logo1: Connection failed. Trying to reconnect
+13.07.2021  08:35:58 : Logo1: Running connection diagnostics...
+13.07.2021  08:36:01 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+13.07.2021  08:36:02 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+13.07.2021  08:36:04 : Logo2: Connection failed. Trying to reconnect
+13.07.2021  08:36:04 : Logo2: Connection error: TCP : Error receiving Data
+13.07.2021  08:36:04 : Logo1: Connection failed. Trying to reconnect
+13.07.2021  08:36:04 : Logo1: Connection error: TCP : Error receiving Data
