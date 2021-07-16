@@ -14,11 +14,11 @@ namespace WebApplication1
 
         public static readonly byte autoRefreshPageEvery_s = 60;       // refreshes page automatically every __ seconds ( use 0 to disable )
 
-        public static readonly int UpdateValuesPCms = 500;          // Frekvenca osveževanja vrednosti
+        public static readonly int UpdateValuesPCms = 1000;          // Frekvenca osveževanja vrednosti
 
         public static readonly int UpdateValuesJoystick = 500;      // Frekvenca osveževanja gumbov za joystick
 
-        public static readonly int Updateanimations = 200;          // Frekvenca osveževanja vrednosti za animacije
+        public static readonly int Updateanimations = 300;          // Frekvenca osveževanja vrednosti za animacije
 
         public static readonly int Devices = 5;                      // how many devices supported (do not change)        
 

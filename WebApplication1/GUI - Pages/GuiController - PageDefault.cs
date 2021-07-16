@@ -31,6 +31,7 @@ namespace WebApplication1
             public HtmlGenericControl divMaster;
             public HtmlGenericControl divConveyor;
             GControls.DropDownListForDimmerRPM speed;
+            GControls.DropDownListForDimmerRPM speedTrak;
 
             GControls.GroupBox gb1;
             GControls.StartPauseButton btnStart;
@@ -47,6 +48,7 @@ namespace WebApplication1
 
             //
             GControls.SuperLabel spdlbl;
+            GControls.SuperLabel spdlblTrak;
 
 
             // stanje
@@ -214,12 +216,21 @@ namespace WebApplication1
                     gb1.Controls.Add(gb2);
 
                     // speedSel
-                    spdlbl = new GControls.SuperLabel("Hitrost:", 64, 15, 20, 10) { FontSize = 1.2F };
+                    spdlbl = new GControls.SuperLabel("Premikanje:", 66, 15, 20, 10) { FontSize = 0.8F };
                     speed = new GControls.DropDownListForDimmerRPM("Speedsel", prop1.SpeedRead.Value_string, 67, 2, 5.9F, 1.5F, false, false);
                     speed.SaveClicked += Speed_SaveClicked;
+                    OthersUP.Controls_Add(spdlbl);
                     OthersUP.Controls_Add(speed);
-                    
-                    
+
+                    // speed trak
+                    spdlblTrak = new GControls.SuperLabel("Trak:", 82, 15, 20, 10) { FontSize = 0.8F };
+                    speedTrak = new GControls.DropDownListForDimmerRPM("SpeedselCon", prop1.SpeedSetTrak.Value_string, 83, 2, 5.9F, 1.5F, false, false);
+                    speedTrak.SaveClicked += SpeedTrak_SaveClicked;
+                    OthersUP.Controls_Add(spdlblTrak); 
+                    OthersUP.Controls_Add(speedTrak);
+
+
+
                 }
                 catch (Exception ex)
                 {
@@ -228,6 +239,8 @@ namespace WebApplication1
                 }
 
             }
+
+          
 
             private void BazenSel_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
             {
@@ -510,6 +523,11 @@ namespace WebApplication1
             private void Speed_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
             {
                 Val.logocontroler.Prop1.SpeedSet.Value_short = speed.GetSelectedValue();
+            }
+
+            private void SpeedTrak_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
+            {
+                Val.logocontroler.Prop1.SpeedSetTrak.Value_short = speedTrak.GetSelectedValue();
             }
 
 

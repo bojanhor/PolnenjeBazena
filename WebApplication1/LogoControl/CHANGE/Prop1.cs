@@ -10,7 +10,7 @@ namespace WebApplication1
     public class Prop1 : PropComm
     {
         //PC Watchdog
-        public PlcVars.Word PCWD;
+        public PlcVars.Word PCWD; public PlcVars.AlarmBit PCWDFAIL;
 
         public PlcVars.Bit Ustavljeno;
         public PlcVars.Bit Rocno_read;
@@ -27,7 +27,8 @@ namespace WebApplication1
         public PlcVars.Word ImpulsesDisplayVal; public PlcVars.Word ImpulsesDisplayValRead;
         public PlcVars.Word XPos; public PlcVars.Word YPos;
 
-        public PlcVars.Bit Start; public PlcVars.Bit Stop; public PlcVars.Bit Pause;
+        public PlcVars.Bit Start; public PlcVars.Bit Stop; public PlcVars.Bit Pause; public PlcVars.Bit StartInit;
+        public PlcVars.Bit Initialized; public PlcVars.AlarmBit NotInitialized;
 
         public PlcVars.Bit Man_AutoReadState;
 
@@ -59,7 +60,8 @@ namespace WebApplication1
         public PlcVars.Word SpeedX; public PlcVars.Word SpeedY;
 
         public PlcVars.Word SpeedSet; public PlcVars.Word SpeedRead;
-        
+        public PlcVars.Word SpeedSetTrak;
+
         public PlcVars.Bit SemaforGn; public PlcVars.Bit SemaforRd; public PlcVars.Bit SemaforYe;
 
         // Alarms
@@ -75,7 +77,8 @@ namespace WebApplication1
         public Prop1(Sharp7.S7Client client):base(client)
         {
             //PC Watchdog
-            PCWD = new PlcVars.Word(this, new PlcVars.WordAddress(796), true) {SyncEvery_X_Time = 2 };
+            PCWD = new PlcVars.Word(this, new PlcVars.WordAddress(796), true) { SyncEvery_X_Time = 2 };
+            PCWDFAIL = new  PlcVars.AlarmBit(this, new PlcVars.BitAddress(792,0),"Krmilnik ni zaznal Računalnika!", false, true);
 
             // Alarms
             AlarmInit = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(315, 0), "NAPAKA INICIALIZACIJE!", false, true) ;
@@ -108,6 +111,10 @@ namespace WebApplication1
             Start = new PlcVars.Bit(this, new PlcVars.BitAddress(10, 0), true) ;
             Stop = new PlcVars.Bit(this, new PlcVars.BitAddress(12, 0), true) ;
             Pause = new PlcVars.Bit(this, new PlcVars.BitAddress(16, 0), true) ;
+            StartInit = new PlcVars.Bit(this, new PlcVars.BitAddress(17, 0), true);
+
+            Initialized = new PlcVars.Bit(this, new PlcVars.BitAddress(18, 0), false);
+            NotInitialized = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(19,0), "Naprava ni inicializirana");
 
             Man_AutoReadState = new PlcVars.Bit(this, new PlcVars.BitAddress(13, 0), false) ;
 
@@ -144,14 +151,16 @@ namespace WebApplication1
             ReadJoyStickCommandX2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(95, 0), "Ročni pomik X2", false, false, false);   // indicator of manual movement
             ReadJoyStickCommandY1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(96, 0), "Ročni pomik Y1", false, false, false);   // indicator of manual movement
             ReadJoyStickCommandY2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(97, 0), "Ročni pomik Y2", false, false, false);   // indicator of manual movement
-            ReadJoyStickCommandActive = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(97, 0), "Daljinsko upravljanje aktivno", false, false, false);   // indicator of physical joystick active
+            ReadJoyStickCommandActive = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(98, 0), "Daljinsko upravljanje aktivno", false, false, false);   // indicator of physical joystick active
 
             SpeedX = new PlcVars.Word(this, new PlcVars.WordAddress(100), false) ;
             SpeedY = new PlcVars.Word(this, new PlcVars.WordAddress(104), false) ;
 
             SpeedSet = new PlcVars.Word(this, new PlcVars.WordAddress(106), true) ;
             SpeedRead = new PlcVars.Word(this, new PlcVars.WordAddress(108), false) ;
-                       
+
+            SpeedSetTrak = new PlcVars.Word(this, new PlcVars.WordAddress(226), true);
+
             SemaforGn = new PlcVars.Bit(this, new PlcVars.BitAddress(200, 0), false);
             SemaforRd = new PlcVars.Bit(this, new PlcVars.BitAddress(202, 0), false);
             SemaforYe = new PlcVars.Bit(this, new PlcVars.BitAddress(204, 0), false);

@@ -3,7 +3,7 @@
 		<UserActionsFilePath>C:\VS Projekti v delu\WebApplication1\WebApplication1\</UserActionsFilePath> // CSV Log of user actions		
 		<WatchdogRetries>5</WatchdogRetries>	// how many times watchdog retries to get value from PLC before error is shown and reconection is invoked
 		<AutoConnect>True</AutoConnect>         // autoconnect at startup		
-		<AddressPC_WD>W 278</AddressPC_WD> // program will generate watchdog counter on specified profinet address (type is word; example value: "W 278")		
+		<AddressPC_WD>W 796</AddressPC_WD> // program will generate watchdog counter on specified profinet address (type is word; example value: "W 278")		
 		<debugToConsole>true</debugToConsole>					// debug writeline to VS console (ne spreminjaj)	
 	</GENERAL>//
 
