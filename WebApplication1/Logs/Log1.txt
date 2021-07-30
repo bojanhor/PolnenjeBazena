@@ -5593,3 +5593,100 @@ Parameter name: updatePanel Stack trace:    at System.Web.UI.PageRequestManager.
 16.07.2021  17:04:05 : Redirected to: Vzorci
 16.07.2021  17:04:14 : Redirected to: Default
 16.07.2021  17:04:16 : Redirected to: Vzorci
+30.07.2021  08:28:18 : Logo1: Connecting...
+30.07.2021  08:28:18 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+30.07.2021  08:28:18 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+30.07.2021  08:28:18 : Logo2: Connecting...
+30.07.2021  08:28:19 : Logo1: Connected
+30.07.2021  08:28:19 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+30.07.2021  08:28:20 : Logo2: Connected
+30.07.2021  08:28:20 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+30.07.2021  08:31:30 : Logo2: Watchdog error - Watchdog does not change
+30.07.2021  08:31:30 : Logo2: Connection error: Watchdog error - Watchdog does not change
+30.07.2021  08:31:31 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+30.07.2021  08:31:33 : Logo2: Running connection diagnostics...
+30.07.2021  08:31:33 : Logo2:   -Ping successful at: 192.168.1.201
+30.07.2021  08:31:34 : Logo2: Connected again
+30.07.2021  08:32:36 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+30.07.2021  08:32:36 : Logo1: Watchdog error - Watchdog does not change
+30.07.2021  08:32:36 : Logo1: Connection error: Watchdog error - Watchdog does not change
+30.07.2021  08:32:37 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+30.07.2021  08:32:39 : Logo1: Running connection diagnostics...
+30.07.2021  08:32:39 : Logo1:   -Ping successful at: 192.168.1.200
+30.07.2021  08:32:40 : Logo1: Connected again
+30.07.2021  08:32:40 : Logo1: Connection error: Watchdog error - Watchdog does not change
+30.07.2021  08:32:43 : Logo1: Running connection diagnostics...
+30.07.2021  08:32:43 : Logo1:   -Ping successful at: 192.168.1.200
+30.07.2021  08:32:43 : Logo1: Connected again
+30.07.2021  08:34:37 : Page refreshed.
+30.07.2021  08:34:37 : Page refreshed.
+30.07.2021  08:34:47 : Page refreshed.
+30.07.2021  08:34:47 : Page refreshed.
+30.07.2021  08:34:51 : Page refreshed.
+30.07.2021  08:34:51 : Page refreshed.
+30.07.2021  08:34:56 : Page refreshed.
+30.07.2021  08:34:56 : Page refreshed.
+30.07.2021  08:35:01 : Page refreshed.
+30.07.2021  08:35:01 : Page refreshed.
+30.07.2021  08:35:07 : Page refreshed.
+30.07.2021  08:35:07 : Page refreshed.
+30.07.2021  08:35:17 : Page refreshed.
+30.07.2021  08:35:17 : Page refreshed.
+30.07.2021  08:35:32 : Page refreshed.
+30.07.2021  08:35:32 : Page refreshed.
+30.07.2021  08:38:38 : Logo1: Watchdog error - Watchdog does not change
+30.07.2021  08:38:38 : Logo1: Connection error: Watchdog error - Watchdog does not change
+30.07.2021  08:38:38 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+30.07.2021  08:38:41 : Logo1: Running connection diagnostics...
+30.07.2021  08:38:41 : Logo1:   -Ping successful at: 192.168.1.200
+30.07.2021  08:38:42 : Logo1: Connected again
+30.07.2021  08:38:42 : Logo1: Connection error: Watchdog error - Watchdog does not change
+30.07.2021  08:38:45 : Logo1: Running connection diagnostics...
+30.07.2021  08:38:45 : Logo1:   -Ping successful at: 192.168.1.200
+30.07.2021  08:38:45 : Logo1: Connected again
+30.07.2021  08:39:47 : Redirected to: Vzorci
+30.07.2021  08:44:14 : Logo1: Watchdog error - Watchdog does not change
+30.07.2021  08:44:14 : Logo1: Connection error: Watchdog error - Watchdog does not change
+30.07.2021  08:44:15 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+30.07.2021  08:44:17 : Logo1: Running connection diagnostics...
+30.07.2021  08:44:17 : Logo1:   -Ping successful at: 192.168.1.200
+30.07.2021  08:44:17 : Logo1: Connected again
+30.07.2021  08:44:17 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+30.07.2021  08:44:17 : Logo1: Connection error: Watchdog error - Watchdog does not change
+30.07.2021  08:44:20 : Logo1: Running connection diagnostics...
+30.07.2021  08:44:20 : Logo1:   -Ping successful at: 192.168.1.200
+30.07.2021  08:44:21 : Logo1: Connected again
+30.07.2021  08:44:26 : Redirected to: Default
+30.07.2021  08:50:04 : Redirected to: Vzorci
+30.07.2021  08:52:04 : Redirected to: Default
+30.07.2021  08:52:15 : Redirected to: Vzorci
+30.07.2021  08:57:08 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+30.07.2021  08:57:08 : Logo1: Watchdog error - Watchdog does not change
+30.07.2021  08:57:08 : Logo1: Connection error: Watchdog error - Watchdog does not change
+30.07.2021  08:57:09 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+30.07.2021  08:57:11 : Logo1: Running connection diagnostics...
+30.07.2021  08:57:11 : Logo1:   -Ping successful at: 192.168.1.200
+30.07.2021  08:57:12 : Logo1: Connected again
+30.07.2021  08:57:12 : Write to PLC failed. Address: VW210, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+30.07.2021  08:57:12 : Write to PLC failed. Address: VW212, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+30.07.2021  08:57:12 : Write to PLC failed. Address: VW214, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+30.07.2021  08:57:12 : Logo1: Connection error: Watchdog error - Watchdog does not change
+30.07.2021  08:57:15 : Logo1: Running connection diagnostics...
+30.07.2021  08:57:15 : Logo1:   -Ping successful at: 192.168.1.200
+30.07.2021  08:57:15 : Logo1: Connected again
+30.07.2021  08:57:19 : Redirected to: Default
+30.07.2021  08:57:21 : Redirected to: Vzorci
+30.07.2021  09:00:02 : Logo1: Watchdog error - Watchdog does not change
+30.07.2021  09:00:02 : Logo1: Connection error: Watchdog error - Watchdog does not change
+30.07.2021  09:00:03 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+30.07.2021  09:00:05 : Logo1: Running connection diagnostics...
+30.07.2021  09:00:05 : Logo1:   -Ping successful at: 192.168.1.200
+30.07.2021  09:00:06 : Logo1: Connected again
+30.07.2021  09:00:06 : Write to PLC failed. Address: VW210, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+30.07.2021  09:00:06 : Write to PLC failed. Address: VW212, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+30.07.2021  09:00:06 : Write to PLC failed. Address: VW214, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+30.07.2021  09:00:06 : Logo1: Connection error: Watchdog error - Watchdog does not change
+30.07.2021  09:00:09 : Logo1: Running connection diagnostics...
+30.07.2021  09:00:09 : Logo1:   -Ping successful at: 192.168.1.200
+30.07.2021  09:00:09 : Logo1: Connected again
+30.07.2021  09:01:10 : Redirected to: Default
