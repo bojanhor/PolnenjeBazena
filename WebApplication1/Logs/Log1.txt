@@ -3190,3 +3190,15 @@ Parameter name: updatePanel Stack trace:    at System.Web.UI.PageRequestManager.
 26.01.2021  11:08:45 : Logo1: Connection failed. Trying to reconnect
 26.01.2021  11:08:45 : Logo1: Connection error: Watchdog error - Watchdog does not change
 26.01.2021  11:08:46 : Page refreshed.
+05.07.2021  13:02:46 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+05.07.2021  13:02:46 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+05.07.2021  13:02:46 : Logo1: Connecting...
+05.07.2021  13:02:50 : Logo1: TCP : Connection Error
+05.07.2021  13:02:50 : Logo1: Running connection diagnostics...
+05.07.2021  13:02:50 : Redirected to: Vzorci
+05.07.2021  13:02:53 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+05.07.2021  13:02:55 : Logo1: Connection failed. Trying to reconnect
+05.07.2021  13:02:55 : Logo1: Watchdog error - Watchdog does not change
+05.07.2021  13:02:55 : Logo1: Connection error: Watchdog error - Watchdog does not change
+05.07.2021  13:02:58 : Redirected to: Default
+05.07.2021  13:02:58 : Logo1: Running connection diagnostics...
