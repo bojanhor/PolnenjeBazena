@@ -1493,7 +1493,7 @@ namespace WebApplication1
 
             public class DropDownListForDimmerRPM : DropDown
             {
-                static readonly Datasourcer.DimmerSelectorDatasource datasource = new Datasourcer.DimmerSelectorDatasource(10, 30,80);
+                static readonly Datasourcer.DimmerSelectorDatasource datasource = new Datasourcer.DimmerSelectorDatasource(10, 30,100);
 
 
                 public DropDownListForDimmerRPM(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)

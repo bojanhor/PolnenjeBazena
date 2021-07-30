@@ -33,7 +33,8 @@ namespace WebApplication1
                         buff++;
                         if (buff > 3)
                         {
-                            Val.logocontroler.Prop1.PCWD.Value_short = 0;                            
+                            Val.logocontroler.Prop1.PCWD.Value_short = 0;
+                            buff = 0;
                         }
                         else
                         {

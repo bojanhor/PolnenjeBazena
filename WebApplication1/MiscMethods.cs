@@ -286,7 +286,7 @@ namespace WebApplication1
                 Time1_fixed = DateTime.Now;
             }
 
-            private bool CheckNow()
+            public bool CheckNow()
             {
                 Time2_chk = DateTime.Now;
                 buff= (Time2_chk - Time1_fixed).TotalMilliseconds;

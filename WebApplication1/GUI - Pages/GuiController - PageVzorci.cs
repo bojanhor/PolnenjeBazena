@@ -110,7 +110,7 @@ namespace WebApplication1
 
             private void Krozenje_Click(object sender, ImageClickEventArgs e)
             {
-                Val.Kontrola.StopPatern();
+                prestartProcedure();
                 prop1.Krozenje.SendPulse();
 
                 if (Val.Kontrola.StartCircling())
@@ -125,7 +125,7 @@ namespace WebApplication1
 
             private void CircY2_Click(object sender, ImageClickEventArgs e)
             {
-                Val.Kontrola.StopPatern();
+                prestartProcedure();
                 prop1.KrozniRobY2.SendPulse();
 
                 if (Val.Kontrola.StartRobSKrozenjemY2())
@@ -141,7 +141,7 @@ namespace WebApplication1
 
             private void CircX2_Click(object sender, ImageClickEventArgs e)
             {
-                Val.Kontrola.StopPatern();
+                prestartProcedure();
                 prop1.KrozniRobX2.SendPulse();
                 if (Val.Kontrola.StartRobSKrozenjemX2())
                 {
@@ -155,7 +155,7 @@ namespace WebApplication1
 
             private void CircY1_Click(object sender, ImageClickEventArgs e)
             {
-                Val.Kontrola.StopPatern();
+                prestartProcedure();
                 prop1.KrozniRobY1.SendPulse();
                 if (Val.Kontrola.StartRobSKrozenjemY1())
                 {
@@ -169,7 +169,7 @@ namespace WebApplication1
 
             private void CircX1_Click(object sender, ImageClickEventArgs e)
             {
-                Val.Kontrola.StopPatern();
+                prestartProcedure();
                 prop1.KrozniRobX1.SendPulse();
                 if (Val.Kontrola.StartRobSKrozenjemX1())
                 {
@@ -196,7 +196,7 @@ namespace WebApplication1
 
             private void ZigZag_zRobom_Click(object sender, ImageClickEventArgs e)
             {
-                Val.Kontrola.StopPatern();
+                prestartProcedure();
                 prop1.ZigZagzRobom.SendPulse();
                 if (Val.Kontrola.StartZigZagzRobom())
                 {
@@ -211,7 +211,7 @@ namespace WebApplication1
             private void ZigZag_Click(object sender, ImageClickEventArgs e)
             {
                 
-                Val.Kontrola.StopPatern();
+                prestartProcedure();
                 prop1.ZigZag.SendPulse();
                 if (Val.Kontrola.StartZigZag())
                 {                    
@@ -226,7 +226,7 @@ namespace WebApplication1
             private void RobY2_Click(object sender, ImageClickEventArgs e)
             {
                 
-                Val.Kontrola.StopPatern();
+                prestartProcedure();
                 prop1.RobY2.SendPulse();
                 if (Val.Kontrola.StartRobY2())
                 {
@@ -242,7 +242,7 @@ namespace WebApplication1
             private void RobX2_Click(object sender, ImageClickEventArgs e)
             {
                 
-                Val.Kontrola.StopPatern();
+                prestartProcedure();
                 prop1.RobX2.SendPulse();
                 if (Val.Kontrola.StartRobX2())
                 {
@@ -258,7 +258,7 @@ namespace WebApplication1
             private void RobY1_Click(object sender, ImageClickEventArgs e)
             {
                 
-                Val.Kontrola.StopPatern();
+                prestartProcedure();
                 prop1.RobY1.SendPulse();
                 if (Val.Kontrola.StartRobY1())
                 {
@@ -274,7 +274,7 @@ namespace WebApplication1
             private void RobX1_Click(object sender, ImageClickEventArgs e)
             {
                 
-                Val.Kontrola.StopPatern();
+                prestartProcedure();
                 prop1.RobX1.SendPulse();
                 if (Val.Kontrola.StartRobX1())
                 {
@@ -285,6 +285,17 @@ namespace WebApplication1
                 {
                     //Navigator.MessageBox(general_err_start_msg);
                 }
+            }
+
+            void prestartProcedure()
+            {
+                Val.Kontrola.StopPatern();
+
+                if (!prop1.Initialized.Value_bool)
+                {
+                    prop1.StartInit.SendPulse();
+                }
+
             }
         }
     }
