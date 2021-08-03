@@ -217,14 +217,14 @@ namespace WebApplication1
 
                     // speedSel
                     spdlbl = new GControls.SuperLabel("Premikanje:", 66, 15, 20, 10) { FontSize = 0.8F };
-                    speed = new GControls.DropDownListForDimmerRPM("Speedsel", prop1.SpeedRead.Value_string, 67, 2, 5.9F, 1.5F, false, false);
+                    speed = new GControls.DropDownListForDimmerRPM("Speedsel", prop1.SpeedRead.Value_string, 67, 2, 5.9F, 1.5F, false, false, 30,80,10);
                     speed.SaveClicked += Speed_SaveClicked;
                     OthersUP.Controls_Add(spdlbl);
                     OthersUP.Controls_Add(speed);
 
                     // speed trak
                     spdlblTrak = new GControls.SuperLabel("Trak:", 82, 15, 20, 10) { FontSize = 0.8F };
-                    speedTrak = new GControls.DropDownListForDimmerRPM("SpeedselCon", prop1.SpeedSetTrak.Value_string, 83, 2, 5.9F, 1.5F, false, false);
+                    speedTrak = new GControls.DropDownListForDimmerRPM("SpeedselCon", prop1.SpeedSetTrak.Value_string, 83, 2, 5.9F, 1.5F, false, false, 50,80,10);
                     speedTrak.SaveClicked += SpeedTrak_SaveClicked;
                     OthersUP.Controls_Add(spdlblTrak); 
                     OthersUP.Controls_Add(speedTrak);

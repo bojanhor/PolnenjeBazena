@@ -1493,12 +1493,11 @@ namespace WebApplication1
 
             public class DropDownListForDimmerRPM : DropDown
             {
-                static readonly Datasourcer.DimmerSelectorDatasource datasource = new Datasourcer.DimmerSelectorDatasource(10, 30,100);
-
-
-                public DropDownListForDimmerRPM(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode)
-                    : base("Izberite obrate:", datasource, ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, wideMode)
+                static Datasourcer.DimmerSelectorDatasource datasource = new Datasourcer.DimmerSelectorDatasource(10, 30,100);
+                public DropDownListForDimmerRPM(string ID, string PlcTextValue, float top, float left, float size, float fontSize, bool selfUpdatable, bool wideMode, int rpmFrom, int rpmTo, int rpmIncrement)
+                      : base("Izberite obrate:", datasourcePopulate(rpmIncrement,rpmFrom,rpmTo), ID, PlcTextValue, top, left, size, fontSize, selfUpdatable, wideMode)
                 {
+                    
                     Ctor();
                 }
 
@@ -1507,6 +1506,13 @@ namespace WebApplication1
                     DataSource = datasource;
                     Button_Outside.DataBind();
                 }
+
+                static Datasourcer.DimmerSelectorDatasource datasourcePopulate(int rpmIncrement, int rpmFrom, int rpmTo)
+                {
+                    datasource = new Datasourcer.DimmerSelectorDatasource(rpmIncrement, rpmFrom, rpmTo);
+                    return datasource;
+                }
+
 
                 new public short GetSelectedValue()
                 {

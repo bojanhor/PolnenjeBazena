@@ -53,7 +53,7 @@ namespace WebApplication1
                 CircX2 = new GControls.ImageButtonWithID("X2c", 0); if (prop1.CircX2_read.Value_bool) { CircX2.ImageUrl = "~/Pictures/CircX2.png"; } else { CircX2.ImageUrl = "~/Pictures/CircX2_off.png"; };
                 CircY2 = new GControls.ImageButtonWithID("Y2c", 0); if (prop1.CircY2_read.Value_bool) { CircY2.ImageUrl = "~/Pictures/CircY2.png"; } else { CircY2.ImageUrl = "~/Pictures/CircY2_off.png"; };
 
-                Krozenje = new GControls.ImageButtonWithID("Krozenje", 0); if (prop1.RobX1_read.Value_bool) { Krozenje.ImageUrl = "~/Pictures/Circ1_on.png"; } else { Krozenje.ImageUrl = "~/Pictures/Circ1.png"; };
+                Krozenje = new GControls.ImageButtonWithID("Krozenje", 0); if (prop1.Krozenje_read.Value_bool) { Krozenje.ImageUrl = "~/Pictures/Circ1_on.png"; } else { Krozenje.ImageUrl = "~/Pictures/Circ1.png"; };
                
                 RobList.Add(RobX1); RobList.Add(RobY1); RobList.Add(RobX2); RobList.Add(RobY2);
                 RobList.Add(CircX1); RobList.Add(CircY1); RobList.Add(CircX2); RobList.Add(CircY2);
@@ -289,6 +289,7 @@ namespace WebApplication1
 
             void prestartProcedure()
             {
+                prop1.Auto.SendPulse();
                 Val.Kontrola.StopPatern();
 
                 if (!prop1.Initialized.Value_bool)

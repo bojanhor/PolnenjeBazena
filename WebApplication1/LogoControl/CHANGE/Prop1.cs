@@ -111,7 +111,7 @@ namespace WebApplication1
             Start = new PlcVars.Bit(this, new PlcVars.BitAddress(10, 0), true) ;
             Stop = new PlcVars.Bit(this, new PlcVars.BitAddress(12, 0), true) ;
             Pause = new PlcVars.Bit(this, new PlcVars.BitAddress(16, 0), true) ;
-            StartInit = new PlcVars.Bit(this, new PlcVars.BitAddress(17, 0), true);
+            StartInit = new PlcVars.Bit(this, new PlcVars.BitAddress(17, 0), true); 
 
             Initialized = new PlcVars.Bit(this, new PlcVars.BitAddress(18, 0), false);
             NotInitialized = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(19,0), "Naprava ni inicializirana");

@@ -21,22 +21,10 @@ namespace WebApplication1
             MovementAutoResolver.Start("MovementAutoResolver", true);
         }
 
-        public void WaitForInit()
-        {
-            return;
-            Misc.LoopTiming time = new Misc.LoopTiming(6000,Settings.defaultCheckTimingInterval);
-
-            while (!prop1.Initialized.Value_bool)
-            {
-                if (!time.CheckNow())
-                { break; }
-                
-            }
-        }
-
+     
         public bool StartZigZag()
         {
-            WaitForInit();
+           
             if (permisionToRun())
             {
                 doZigZag();
@@ -50,7 +38,7 @@ namespace WebApplication1
 
         public bool StartZigZagzRobom()
         {
-            WaitForInit();
+          
             if (permisionToRun())
             {
                 doZigZagzRobom();
@@ -64,7 +52,7 @@ namespace WebApplication1
 
         public bool StartRobX1()
         {
-            WaitForInit();
+            
             if (permisionToRun())
             {
                 doRobX1();
@@ -78,7 +66,7 @@ namespace WebApplication1
 
         public bool StartRobX2()
         {
-            WaitForInit();
+            
             if (permisionToRun())
             {
                 doRobX2();
@@ -92,7 +80,7 @@ namespace WebApplication1
 
         public bool StartRobY1()
         {
-            WaitForInit();
+            
             if (permisionToRun())
             {
                 doRobY1();
@@ -106,7 +94,7 @@ namespace WebApplication1
 
         public bool StartRobY2()
         {
-            WaitForInit();
+            
             if (permisionToRun())
             {
                 doRobY2();
@@ -120,7 +108,7 @@ namespace WebApplication1
 
         public bool StartRobSKrozenjemX1()
         {
-            WaitForInit();
+            
 
             if (permisionToRun())
             {
@@ -134,7 +122,6 @@ namespace WebApplication1
         }
         public bool StartRobSKrozenjemX2()
         {
-            WaitForInit();
 
             if (permisionToRun())
             {
@@ -148,7 +135,7 @@ namespace WebApplication1
         }
         public bool StartRobSKrozenjemY1()
         {
-            WaitForInit();
+           
 
             if (permisionToRun())
             {
@@ -162,7 +149,7 @@ namespace WebApplication1
         }
         public bool StartRobSKrozenjemY2()
         {
-            WaitForInit();
+          
 
             if (permisionToRun())
             {
@@ -192,7 +179,6 @@ namespace WebApplication1
         // Patern Methods
         void ZigZagPatern_method()
         {
-            WaitForInit();
 
             InitZigZag();
 
