@@ -7789,3 +7789,57 @@ Parameter name: updatePanel Stack trace:    at System.Web.UI.PageRequestManager.
 04.08.2021  09:13:01 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
 04.08.2021  09:13:01 : Logo1: Connection failed. Trying to reconnect
 04.08.2021  09:13:01 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  12:49:11 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+04.08.2021  12:49:11 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+04.08.2021  12:49:11 : Logo1: Connecting...
+04.08.2021  12:49:11 : Logo2: Connecting...
+04.08.2021  12:49:12 : Logo1: Connected
+04.08.2021  12:49:12 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+04.08.2021  12:49:13 : Logo2: Connected
+04.08.2021  12:49:13 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+04.08.2021  12:49:23 : Page refreshed.
+04.08.2021  12:49:29 : Page refreshed.
+04.08.2021  12:49:29 : Page refreshed.
+04.08.2021  12:49:33 : Page refreshed.
+04.08.2021  12:49:33 : Page refreshed.
+04.08.2021  12:49:37 : Page refreshed.
+04.08.2021  12:49:37 : Page refreshed.
+04.08.2021  12:49:41 : Page refreshed.
+04.08.2021  12:49:41 : Page refreshed.
+04.08.2021  12:49:55 : Page refreshed.
+04.08.2021  12:49:55 : Page refreshed.
+04.08.2021  12:49:58 : Page refreshed.
+04.08.2021  12:49:58 : Page refreshed.
+04.08.2021  12:50:01 : Page refreshed.
+04.08.2021  12:50:01 : Page refreshed.
+04.08.2021  12:52:27 : Logo1: Connecting...
+04.08.2021  12:52:28 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+04.08.2021  12:52:28 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+04.08.2021  12:52:28 : Logo2: Connecting...
+04.08.2021  12:52:29 : Logo1: Connected
+04.08.2021  12:52:29 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+04.08.2021  12:52:30 : Logo2: Connected
+04.08.2021  12:52:30 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+04.08.2021  12:54:14 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+04.08.2021  12:54:14 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+04.08.2021  12:54:14 : Logo1: Connecting...
+04.08.2021  12:54:14 : Logo2: Connecting...
+04.08.2021  12:54:15 : Logo1: Connected
+04.08.2021  12:54:15 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+04.08.2021  12:54:16 : Logo2: Connected
+04.08.2021  12:54:16 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+04.08.2021  12:54:30 : Page refreshed.
+04.08.2021  12:54:36 : Redirected to: Vzorci
+04.08.2021  12:54:38 : Redirected to: MasterMenu
+04.08.2021  13:06:17 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+04.08.2021  13:06:17 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+04.08.2021  13:06:17 : Logo1: Connecting...
+04.08.2021  13:06:17 : Logo2: Connecting...
+04.08.2021  13:06:18 : Logo1: Connected
+04.08.2021  13:06:18 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+04.08.2021  13:06:19 : Logo2: Connected
+04.08.2021  13:06:19 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+04.08.2021  13:06:25 : Page refreshed.
+04.08.2021  13:06:29 : Page refreshed.
+04.08.2021  13:06:34 : Page refreshed.
+04.08.2021  13:06:34 : Page refreshed.

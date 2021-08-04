@@ -187,7 +187,7 @@ namespace WebApplication1
 
                     bazenSel = new GControls.DropDownListForBazenSel("bazenSel", 
                         GControls.DropDownListForBazenSel.GetSelectedText(prop1.ImpulsesDisplayValRead.Value_short), 
-                        top+1, left+1, size/8.55F, 1.3F, false, false, prop1.Ustavljeno.Value_bool);      
+                        top+1, left+1, size/8.55F, 1.3F, true, false, prop1.Ustavljeno.Value_bool);      
                     
                     bazenSel.Style.Add(HtmlTextWriterStyle.ZIndex, "10");
                     OthersUP.Controls_Add(bazenSel);
@@ -224,7 +224,7 @@ namespace WebApplication1
 
                     // speed trak
                     spdlblTrak = new GControls.SuperLabel("Trak:", 82, 15, 20, 10) { FontSize = 0.8F };
-                    speedTrak = new GControls.DropDownListForDimmerRPM("SpeedselCon", prop1.SpeedSetTrak.Value_string, 83, 2, 5.9F, 1.5F, false, false, 50,80,10);
+                    speedTrak = new GControls.DropDownListForDimmerRPM("SpeedselCon", prop1.SpeedSetTrak.Value_string, 83, 2, 5.9F, 1.5F, false, false, 60,80,10);
                     speedTrak.SaveClicked += SpeedTrak_SaveClicked;
                     OthersUP.Controls_Add(spdlblTrak); 
                     OthersUP.Controls_Add(speedTrak);
