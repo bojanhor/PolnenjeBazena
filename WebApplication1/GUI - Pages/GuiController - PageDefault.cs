@@ -531,12 +531,6 @@ namespace WebApplication1
             }
 
 
-
-            private void BtnZig_Click(object sender, ImageClickEventArgs e)
-            {
-                Val.logocontroler.Prop1.ZigZag.SendPulse();
-            }
-
             private void BtnCirc_Click(object sender, ImageClickEventArgs e)
             {
                 Navigator.Redirect("Vzorci");

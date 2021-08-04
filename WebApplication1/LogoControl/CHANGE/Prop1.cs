@@ -18,11 +18,6 @@ namespace WebApplication1
         public PlcVars.Bit CakanjeMateriala;
         public PlcVars.Bit Halt;
 
-        public PlcVars.Bit ZigZag; public PlcVars.Bit ZigZagzRobom;
-        public PlcVars.Bit RobX1; public PlcVars.Bit RobY1; public PlcVars.Bit RobX2; public PlcVars.Bit RobY2;
-        public PlcVars.Bit KrozniRobX1; public PlcVars.Bit KrozniRobY1; public PlcVars.Bit KrozniRobX2; public PlcVars.Bit KrozniRobY2;
-        public PlcVars.Bit Krozenje;
-
         public PlcVars.Word XImpulses; public PlcVars.Word YImpulses; public PlcVars.Word XImpulses2; public PlcVars.Word YImpulses2;
         public PlcVars.Word ImpulsesDisplayVal; public PlcVars.Word ImpulsesDisplayValRead;
         public PlcVars.Word XPos; public PlcVars.Word YPos;
@@ -37,11 +32,7 @@ namespace WebApplication1
 
         public PlcVars.Bit DirX1; public PlcVars.Bit DirX2; public PlcVars.Bit DirY1; public PlcVars.Bit DirY2;
 
-        public PlcVars.AlarmBit ZigZag_read; public PlcVars.AlarmBit ZigZagzRobom_read;
-        public PlcVars.AlarmBit RobX1_read; public PlcVars.AlarmBit RobX2_read; public PlcVars.AlarmBit RobY1_read; public PlcVars.AlarmBit RobY2_read;
-        public PlcVars.AlarmBit CircX1_read; public PlcVars.AlarmBit CircX2_read; public PlcVars.AlarmBit CircY1_read; public PlcVars.AlarmBit CircY2_read;
-        public PlcVars.AlarmBit Krozenje_read;
-
+        
         public PlcVars.Bit TrakRead;
 
         public PlcVars.Bit Trak_muss;
@@ -72,6 +63,10 @@ namespace WebApplication1
 
         // Kontrola 
         public PlcVars.Bit PermissionToRun;
+
+        public PlcVars.Bit Polnenje_RobX1, Polnenje_RobX2, Polnenje_RobY1, Polnenje_RobY2,
+            Polnenje_RobKroznoX1, Polnenje_RobKroznoX2, Polnenje_RobKroznoY1, Polnenje_RobKroznoY2,
+            Polnenje_Krozno, Polnenje_ZigZag, Polnenje_ZigZagsKrogom;
 
 
         public Prop1(Sharp7.S7Client client):base(client)
@@ -168,35 +163,17 @@ namespace WebApplication1
             // Kontrola 
             PermissionToRun = new PlcVars.Bit(this, new PlcVars.BitAddress(74, 0), false);
 
-            ZigZag = new PlcVars.Bit(this, new PlcVars.BitAddress(8, 0), true) ;
-            ZigZag_read = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(167, 0), "AKTIVEN PROCES: ZigZag") ;
-
-            ZigZagzRobom = new PlcVars.Bit(this, new PlcVars.BitAddress(7, 0), true) ;
-            ZigZagzRobom_read = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(168, 0), "AKTIVEN PROCES: ZigZag") ;
-
-            RobX1 = new PlcVars.Bit(this, new PlcVars.BitAddress(33,0),true) ; 
-            RobX2 = new PlcVars.Bit(this, new PlcVars.BitAddress(34, 0), true) ; 
-            RobY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(35, 0), true) ; 
-            RobY2 = new PlcVars.Bit(this, new PlcVars.BitAddress(36, 0), true) ;
-
-            KrozniRobX1 = new PlcVars.Bit(this, new PlcVars.BitAddress(63, 0), true);
-            KrozniRobX2 = new PlcVars.Bit(this, new PlcVars.BitAddress(64, 0), true);
-            KrozniRobY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(65, 0), true);
-            KrozniRobY2 = new PlcVars.Bit(this, new PlcVars.BitAddress(66, 0), true);
-
-            Krozenje = new PlcVars.Bit(this, new PlcVars.BitAddress(67, 0), true);
-
-            RobX1_read = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(163, 0), "AKTIVEN PROCES: Polnenje robu X1") ;
-            RobX2_read = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(164, 0), "AKTIVEN PROCES: Polnenje robu X2") ;
-            RobY1_read = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(165, 0), "AKTIVEN PROCES: Polnenje robu Y1") ;
-            RobY2_read = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(166, 0), "AKTIVEN PROCES: Polnenje robu Y2") ;
-
-            CircX1_read = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(169, 0), "AKTIVEN PROCES: Krožno polnenje robu X1") ;
-            CircX2_read = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(170, 0), "AKTIVEN PROCES: Krožno polnenje robu X2") ;
-            CircY1_read = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(171, 0), "AKTIVEN PROCES: Krožno polnenje robu Y1") ;
-            CircY2_read = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(172, 0), "AKTIVEN PROCES: Krožno polnenje robu Y2") ;
-
-            Krozenje_read = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(173, 0), "AKTIVEN PROCES: Krožno polnenje robu");
+            Polnenje_RobX1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(402, 0), "Polnenje Robu X1", false, false, true);
+            Polnenje_RobX2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(403, 0), "Polnenje Robu X2", false, false, true);
+            Polnenje_RobY1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(404, 0), "Polnenje Robu Y1", false, false, true);
+            Polnenje_RobY2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(405, 0), "Polnenje Robu Y2", false, false, true);
+            Polnenje_RobKroznoX1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(406, 0), "Krožno Polnenje Robu X1", false, false, true);
+            Polnenje_RobKroznoX2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(407, 0), "Krožno Polnenje Robu X2", false, false, true);
+            Polnenje_RobKroznoY1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(408, 0), "Krožno Polnenje Robu Y1", false, false, true);
+            Polnenje_RobKroznoY2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(409, 0), "Krožno Polnenje Robu Y2", false, false, true);
+            Polnenje_Krozno = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(410, 0), "Krožno Polnenje", false, false, true);
+            Polnenje_ZigZag = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(411, 0), "Polnenje ZigZag", false, false, true);
+            Polnenje_ZigZagsKrogom = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(412, 0), "Polnenje ZigZag s Kroženjem", false, false, true);
 
         }
 

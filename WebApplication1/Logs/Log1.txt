@@ -7364,3 +7364,428 @@ Parameter name: updatePanel Stack trace:    at System.Web.UI.PageRequestManager.
 03.08.2021  15:12:51 : Page refreshed.
 03.08.2021  15:12:55 : Page refreshed.
 03.08.2021  15:12:55 : Page refreshed.
+04.08.2021  08:52:03 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+04.08.2021  08:52:03 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+04.08.2021  08:52:03 : Logo1: Connecting...
+04.08.2021  08:52:03 : Logo2: Connecting...
+04.08.2021  08:52:06 : Logo1: TCP : Connection Error
+04.08.2021  08:52:06 : Logo1: Running connection diagnostics...
+04.08.2021  08:52:07 : Logo2: TCP : Connection Error
+04.08.2021  08:52:07 : Logo2: Running connection diagnostics...
+04.08.2021  08:52:08 : Page refreshed.
+04.08.2021  08:52:09 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  08:52:10 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  08:52:12 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  08:52:12 : Logo1: Watchdog error - Watchdog does not change
+04.08.2021  08:52:12 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  08:52:12 : Page refreshed.
+04.08.2021  09:02:23 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+04.08.2021  09:02:23 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+04.08.2021  09:02:23 : Logo1: Connecting...
+04.08.2021  09:02:23 : Logo2: Connecting...
+04.08.2021  09:02:26 : Logo1: TCP : Connection Error
+04.08.2021  09:02:26 : Logo1: Running connection diagnostics...
+04.08.2021  09:02:27 : Logo2: TCP : Connection Error
+04.08.2021  09:02:27 : Logo2: Running connection diagnostics...
+04.08.2021  09:02:29 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:02:30 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:02:32 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:02:32 : Logo1: Watchdog error - Watchdog does not change
+04.08.2021  09:02:32 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:02:33 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:02:33 : Logo2: Watchdog error - Watchdog does not change
+04.08.2021  09:02:33 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:02:35 : Logo1: Running connection diagnostics...
+04.08.2021  09:02:36 : Logo2: Running connection diagnostics...
+04.08.2021  09:02:38 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:02:39 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:02:40 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:02:40 : Logo1: Running connection diagnostics...
+04.08.2021  09:02:42 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:02:42 : Logo2: Running connection diagnostics...
+04.08.2021  09:02:44 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:02:45 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:02:46 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:02:46 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+04.08.2021  09:02:46 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:02:48 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:02:48 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+04.08.2021  09:02:48 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:02:49 : Logo1: Running connection diagnostics...
+04.08.2021  09:02:51 : Logo2: Running connection diagnostics...
+04.08.2021  09:02:52 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:02:54 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:02:55 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:02:55 : Logo1: Running connection diagnostics...
+04.08.2021  09:02:56 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:02:56 : Logo2: Running connection diagnostics...
+04.08.2021  09:02:58 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:03:00 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:03:01 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:03:01 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:03:01 : Redirected to: Vzorci
+04.08.2021  09:06:09 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+04.08.2021  09:06:09 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+04.08.2021  09:06:09 : Logo1: Connecting...
+04.08.2021  09:06:09 : Logo2: Connecting...
+04.08.2021  09:06:11 : Redirected to: Vzorci
+04.08.2021  09:06:12 : Logo1: TCP : Connection Error
+04.08.2021  09:06:12 : Logo1: Running connection diagnostics...
+04.08.2021  09:06:13 : Logo2: TCP : Connection Error
+04.08.2021  09:06:13 : Logo2: Running connection diagnostics...
+04.08.2021  09:06:15 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:06:16 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:06:17 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:06:17 : Logo1: Watchdog error - Watchdog does not change
+04.08.2021  09:06:17 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:06:19 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:06:19 : Logo2: Watchdog error - Watchdog does not change
+04.08.2021  09:06:19 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:06:20 : Logo1: Running connection diagnostics...
+04.08.2021  09:06:21 : Redirected to: Default
+04.08.2021  09:06:22 : Logo2: Running connection diagnostics...
+04.08.2021  09:06:23 : Page refreshed.
+04.08.2021  09:06:23 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:06:24 : Page refreshed.
+04.08.2021  09:06:25 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:06:26 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:06:26 : Logo1: Running connection diagnostics...
+04.08.2021  09:06:27 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:06:27 : Logo2: Running connection diagnostics...
+04.08.2021  09:06:29 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:06:31 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:06:32 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:06:32 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+04.08.2021  09:06:32 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:06:33 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:06:33 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+04.08.2021  09:06:33 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:06:35 : Logo1: Running connection diagnostics...
+04.08.2021  09:06:36 : Logo2: Running connection diagnostics...
+04.08.2021  09:06:38 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:06:39 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:06:40 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:06:40 : Logo1: Running connection diagnostics...
+04.08.2021  09:06:42 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:06:42 : Logo2: Running connection diagnostics...
+04.08.2021  09:06:44 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:06:45 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:06:46 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:06:46 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:06:48 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:06:48 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:06:49 : Logo1: Running connection diagnostics...
+04.08.2021  09:06:51 : Logo2: Running connection diagnostics...
+04.08.2021  09:06:52 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:06:54 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:06:55 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:06:55 : Logo1: Running connection diagnostics...
+04.08.2021  09:06:56 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:06:56 : Logo2: Running connection diagnostics...
+04.08.2021  09:06:58 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:07:00 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:07:01 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:07:01 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:07:02 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:07:02 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:07:04 : Logo1: Running connection diagnostics...
+04.08.2021  09:07:05 : Logo2: Running connection diagnostics...
+04.08.2021  09:07:07 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:07:08 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:07:09 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:07:09 : Logo1: Running connection diagnostics...
+04.08.2021  09:07:11 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:07:11 : Logo2: Running connection diagnostics...
+04.08.2021  09:07:13 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:07:14 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:07:15 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:07:15 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:07:17 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:07:17 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:07:18 : Logo1: Running connection diagnostics...
+04.08.2021  09:07:20 : Logo2: Running connection diagnostics...
+04.08.2021  09:07:21 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:07:23 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:07:24 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:07:24 : Logo1: Running connection diagnostics...
+04.08.2021  09:07:25 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:07:25 : Logo2: Running connection diagnostics...
+04.08.2021  09:07:27 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:07:29 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:07:30 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:07:30 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:07:31 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:07:31 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:07:33 : Logo1: Running connection diagnostics...
+04.08.2021  09:07:34 : Logo2: Running connection diagnostics...
+04.08.2021  09:07:36 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:07:37 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:07:38 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:07:38 : Logo1: Running connection diagnostics...
+04.08.2021  09:07:40 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:07:40 : Logo2: Running connection diagnostics...
+04.08.2021  09:07:42 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:07:43 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:07:44 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:07:44 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:07:45 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:07:45 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:07:47 : Logo1: Running connection diagnostics...
+04.08.2021  09:07:48 : Logo2: Running connection diagnostics...
+04.08.2021  09:07:50 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:07:52 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:07:53 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:07:53 : Logo1: Running connection diagnostics...
+04.08.2021  09:07:54 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:07:54 : Logo2: Running connection diagnostics...
+04.08.2021  09:07:56 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:07:58 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:07:59 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:07:59 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:08:00 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:08:00 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:08:02 : Logo1: Running connection diagnostics...
+04.08.2021  09:08:03 : Logo2: Running connection diagnostics...
+04.08.2021  09:08:05 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:08:06 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:08:08 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:08:08 : Logo1: Running connection diagnostics...
+04.08.2021  09:08:09 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:08:09 : Logo2: Running connection diagnostics...
+04.08.2021  09:08:11 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:08:12 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:08:14 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:08:14 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:08:14 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:08:14 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:08:17 : Logo1: Running connection diagnostics...
+04.08.2021  09:08:17 : Logo2: Running connection diagnostics...
+04.08.2021  09:08:20 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:08:20 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:08:23 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:08:23 : Logo2: Running connection diagnostics...
+04.08.2021  09:08:23 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:08:23 : Logo1: Running connection diagnostics...
+04.08.2021  09:08:26 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:08:26 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:08:29 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:08:29 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:08:29 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:08:29 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:08:32 : Logo1: Running connection diagnostics...
+04.08.2021  09:08:32 : Logo2: Running connection diagnostics...
+04.08.2021  09:08:35 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:08:35 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:08:37 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:08:37 : Logo2: Running connection diagnostics...
+04.08.2021  09:08:37 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:08:37 : Logo1: Running connection diagnostics...
+04.08.2021  09:08:41 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:08:41 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:08:43 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:08:43 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:08:43 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:08:43 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:08:46 : Logo1: Running connection diagnostics...
+04.08.2021  09:08:46 : Logo2: Running connection diagnostics...
+04.08.2021  09:08:49 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:08:49 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:08:52 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:08:52 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:08:52 : Logo1: Running connection diagnostics...
+04.08.2021  09:08:52 : Logo2: Running connection diagnostics...
+04.08.2021  09:08:55 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:08:55 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:08:58 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:08:58 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:08:58 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:08:58 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:09:01 : Logo2: Running connection diagnostics...
+04.08.2021  09:09:01 : Logo1: Running connection diagnostics...
+04.08.2021  09:09:04 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:09:04 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:09:06 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:09:06 : Logo1: Running connection diagnostics...
+04.08.2021  09:09:06 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:09:06 : Logo2: Running connection diagnostics...
+04.08.2021  09:09:10 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:09:10 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:09:12 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:09:12 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:09:12 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:09:12 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:09:15 : Logo2: Running connection diagnostics...
+04.08.2021  09:09:15 : Logo1: Running connection diagnostics...
+04.08.2021  09:09:18 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:09:18 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:09:21 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:09:21 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:09:21 : Logo2: Running connection diagnostics...
+04.08.2021  09:09:21 : Logo1: Running connection diagnostics...
+04.08.2021  09:09:24 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:09:24 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:09:27 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:09:27 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:09:27 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:09:27 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:09:30 : Logo2: Running connection diagnostics...
+04.08.2021  09:09:30 : Logo1: Running connection diagnostics...
+04.08.2021  09:09:33 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:09:33 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:09:35 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:09:35 : Logo1: Running connection diagnostics...
+04.08.2021  09:09:35 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:09:35 : Logo2: Running connection diagnostics...
+04.08.2021  09:10:43 : Logo1: Connecting...
+04.08.2021  09:10:43 : Logo2: Connecting...
+04.08.2021  09:10:44 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+04.08.2021  09:10:44 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+04.08.2021  09:10:44 : Redirected to: Vzorci
+04.08.2021  09:10:45 : Page refreshed.
+04.08.2021  09:10:46 : Logo1: TCP : Connection Error
+04.08.2021  09:10:46 : Logo1: Running connection diagnostics...
+04.08.2021  09:10:47 : Logo2: TCP : Connection Error
+04.08.2021  09:10:47 : Logo2: Running connection diagnostics...
+04.08.2021  09:10:48 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:10:50 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:10:51 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:10:51 : Logo1: Watchdog error - Watchdog does not change
+04.08.2021  09:10:51 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:10:52 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:10:52 : Logo2: Watchdog error - Watchdog does not change
+04.08.2021  09:10:52 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:10:54 : Logo1: Running connection diagnostics...
+04.08.2021  09:10:55 : Page refreshed.
+04.08.2021  09:10:55 : Logo2: Running connection diagnostics...
+04.08.2021  09:10:57 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:10:57 : Redirected to: Default
+04.08.2021  09:10:58 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:10:59 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:10:59 : Logo1: Running connection diagnostics...
+04.08.2021  09:11:01 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:11:01 : Logo2: Running connection diagnostics...
+04.08.2021  09:11:03 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:11:04 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:11:05 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:11:05 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+04.08.2021  09:11:05 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:11:07 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:11:07 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+04.08.2021  09:11:07 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:11:08 : Logo1: Running connection diagnostics...
+04.08.2021  09:11:10 : Logo2: Running connection diagnostics...
+04.08.2021  09:11:11 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:11:13 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:11:14 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:11:14 : Logo1: Running connection diagnostics...
+04.08.2021  09:11:15 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:11:15 : Logo2: Running connection diagnostics...
+04.08.2021  09:11:17 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:11:19 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:11:20 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:11:20 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:11:21 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:11:21 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:11:23 : Logo1: Running connection diagnostics...
+04.08.2021  09:11:24 : Redirected to: Vzorci
+04.08.2021  09:11:24 : Logo2: Running connection diagnostics...
+04.08.2021  09:11:25 : Page refreshed.
+04.08.2021  09:11:26 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:11:26 : Page refreshed.
+04.08.2021  09:11:27 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:11:28 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:11:28 : Logo1: Running connection diagnostics...
+04.08.2021  09:11:30 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:11:30 : Logo2: Running connection diagnostics...
+04.08.2021  09:11:30 : Redirected to: Default
+04.08.2021  09:11:32 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:11:33 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:11:34 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:11:34 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:11:36 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:11:36 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:11:37 : Logo1: Running connection diagnostics...
+04.08.2021  09:11:39 : Logo2: Running connection diagnostics...
+04.08.2021  09:11:40 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:11:42 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:11:43 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:11:43 : Logo1: Running connection diagnostics...
+04.08.2021  09:11:44 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:11:44 : Logo2: Running connection diagnostics...
+04.08.2021  09:11:46 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:11:48 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:11:49 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:11:49 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:11:50 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:11:50 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:11:52 : Logo1: Running connection diagnostics...
+04.08.2021  09:11:53 : Logo2: Running connection diagnostics...
+04.08.2021  09:11:55 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:11:56 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:11:57 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:11:57 : Logo1: Running connection diagnostics...
+04.08.2021  09:11:59 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:11:59 : Logo2: Running connection diagnostics...
+04.08.2021  09:12:01 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:12:02 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:12:03 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:12:03 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:12:05 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:12:05 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:12:06 : Logo1: Running connection diagnostics...
+04.08.2021  09:12:08 : Logo2: Running connection diagnostics...
+04.08.2021  09:12:09 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:12:11 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:12:12 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:12:12 : Logo1: Running connection diagnostics...
+04.08.2021  09:12:14 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:12:14 : Logo2: Running connection diagnostics...
+04.08.2021  09:12:15 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:12:17 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:12:17 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:12:17 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:12:20 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:12:20 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:12:20 : Logo1: Running connection diagnostics...
+04.08.2021  09:12:23 : Logo2: Running connection diagnostics...
+04.08.2021  09:12:23 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:12:26 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:12:26 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:12:26 : Logo1: Running connection diagnostics...
+04.08.2021  09:12:28 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:12:28 : Logo2: Running connection diagnostics...
+04.08.2021  09:12:29 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:12:32 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:12:32 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:12:32 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:12:34 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:12:34 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:12:35 : Logo1: Running connection diagnostics...
+04.08.2021  09:12:37 : Logo2: Running connection diagnostics...
+04.08.2021  09:12:38 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:12:40 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:12:40 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:12:40 : Logo1: Running connection diagnostics...
+04.08.2021  09:12:43 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:12:43 : Logo2: Running connection diagnostics...
+04.08.2021  09:12:44 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:12:46 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:12:46 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:12:46 : Logo1: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:12:49 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:12:49 : Logo2: Connection error: Watchdog error - Watchdog does not change
+04.08.2021  09:12:49 : Redirected to: MasterMenu
+04.08.2021  09:12:49 : Logo1: Running connection diagnostics...
+04.08.2021  09:12:50 : Redirected to: UpNastavitve
+04.08.2021  09:12:50 : Redirected to: Advanced
+04.08.2021  09:12:52 : Logo2: Running connection diagnostics...
+04.08.2021  09:12:52 : Logo1:   -Ping ERROR at: 192.168.1.200 (DestinationHostUnreachable)
+04.08.2021  09:12:55 : Logo2:   -Ping ERROR at: 192.168.1.201 (DestinationHostUnreachable)
+04.08.2021  09:12:55 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:12:55 : Logo1: Running connection diagnostics...
+04.08.2021  09:12:57 : Logo2: Connection failed. Trying to reconnect
+04.08.2021  09:12:57 : Logo2: Running connection diagnostics...
+04.08.2021  09:12:58 : Logo1:   -Ping ERROR at: 192.168.1.200 (TimedOut)
+04.08.2021  09:13:01 : Logo2:   -Ping ERROR at: 192.168.1.201 (TimedOut)
+04.08.2021  09:13:01 : Logo1: Connection failed. Trying to reconnect
+04.08.2021  09:13:01 : Logo1: Connection error: Watchdog error - Watchdog does not change
