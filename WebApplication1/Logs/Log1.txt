@@ -7935,3 +7935,249 @@ Parameter name: updatePanel Stack trace:    at System.Web.UI.PageRequestManager.
 04.08.2021  13:23:50 : Logo2: Connected
 04.08.2021  13:23:50 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
 04.08.2021  13:24:42 : Redirected to: Vzorci
+05.08.2021  13:34:42 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+05.08.2021  13:34:42 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+05.08.2021  13:34:42 : Logo1: Connecting...
+05.08.2021  13:34:42 : Logo2: Connecting...
+05.08.2021  13:34:45 : Logo1: TCP : Connection Error
+05.08.2021  13:34:45 : Logo1: Running connection diagnostics...
+05.08.2021  13:34:46 : Logo2: TCP : Connection Error
+05.08.2021  13:34:46 : Logo2: Running connection diagnostics...
+05.08.2021  13:34:48 : Logo2: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+05.08.2021  13:34:49 : Logo2: Watchdog error - Watchdog does not change
+05.08.2021  13:34:49 : Logo1: Error: Retrieving data from PLC failed. Message source: Program looptrough inside background worker: An exception occurred during a Ping request.
+05.08.2021  13:34:49 : Logo1: Watchdog error - Watchdog does not change
+05.08.2021  13:34:49 : Logo2: Connection error: Watchdog error - Watchdog does not change
+05.08.2021  13:34:49 : Logo1: Connection error: Watchdog error - Watchdog does not change
+05.08.2021  13:34:52 : Logo2: Running connection diagnostics...
+05.08.2021  13:34:52 : Logo2:   -Ping successful at: 192.168.1.201
+05.08.2021  13:34:52 : Logo1: Running connection diagnostics...
+05.08.2021  13:34:52 : Logo1:   -Ping successful at: 192.168.1.200
+05.08.2021  13:34:53 : Logo2: Connected again
+05.08.2021  13:34:53 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+05.08.2021  13:34:53 : Logo1: Connected again
+05.08.2021  13:34:53 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+05.08.2021  13:35:20 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+05.08.2021  13:35:20 : Logo1: Watchdog error - Watchdog does not change
+05.08.2021  13:35:20 : Logo1: Connection error: Watchdog error - Watchdog does not change
+05.08.2021  13:35:20 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+05.08.2021  13:35:23 : Logo1: Running connection diagnostics...
+05.08.2021  13:35:23 : Logo1:   -Ping successful at: 192.168.1.200
+05.08.2021  13:35:23 : Logo1: Connected again
+05.08.2021  13:35:27 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: TCP : Error receiving Data, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+05.08.2021  13:35:27 : Read from PLC failed. Address: bit at 7920, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:27 : Read from PLC failed. Address: bit at 3150, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:27 : Read from PLC failed. Address: bit at 3160, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:27 : Read from PLC failed. Address: bit at 3170, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:27 : Read from PLC failed. Address: bit at 3180, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:27 : Read from PLC failed. Address: bit at 3190, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:27 : Read from PLC failed. Address: bit at 3200, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:27 : Read from PLC failed. Address: bit at 3210, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:28 : Read from PLC failed. Address: bit at 3260, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:28 : Read from PLC failed. Address: bit at 3270, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:28 : Read from PLC failed. Address: bit at 10, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:28 : Read from PLC failed. Address: bit at 20, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:28 : Read from PLC failed. Address: bit at 40, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:28 : Read from PLC failed. Address: bit at 60, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:30 : Write to PLC failed. Address: VW210, Read Error type: OK, Write Error type: TCP : Error receiving Data, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+05.08.2021  13:35:32 : Write to PLC failed. Address: VW212, Read Error type: OK, Write Error type: TCP : Error receiving Data, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: VW310, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: VW312, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: VW214, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: VW216, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 100, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 120, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 160, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 170, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 180, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 190, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 130, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 140, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 150, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 200, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 220, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 240, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 260, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 280, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 290, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 300, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 320, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 400, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 420, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 440, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 460, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 500, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 520, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 540, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 560, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 570, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 580, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 900, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 910, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 920, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 930, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 940, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 950, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 960, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 970, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 980, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: VW100, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: VW104, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: VW106, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: VW108, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: VW226, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 2000, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 2020, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 2040, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 740, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 4020, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 4030, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 4040, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:32 : Read from PLC failed. Address: bit at 4050, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:33 : Read from PLC failed. Address: bit at 4060, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:33 : Read from PLC failed. Address: bit at 4070, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:33 : Read from PLC failed. Address: bit at 4080, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:33 : Read from PLC failed. Address: bit at 4090, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:33 : Read from PLC failed. Address: bit at 4100, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:33 : Read from PLC failed. Address: bit at 4110, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:33 : Read from PLC failed. Address: bit at 4120, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+05.08.2021  13:35:33 : Logo1: TCP : Error receiving Data
+05.08.2021  13:35:33 : Logo1: Connection error: TCP : Error receiving Data
+05.08.2021  13:35:33 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+05.08.2021  13:35:35 : Page refreshed.
+05.08.2021  13:35:36 : Logo1: Running connection diagnostics...
+05.08.2021  13:35:36 : Logo1:   -Ping successful at: 192.168.1.200
+05.08.2021  13:35:36 : Logo1: Connected again
+05.08.2021  13:35:38 : Page refreshed.
+05.08.2021  13:35:55 : Redirected to: Vzorci
+05.08.2021  13:36:45 : Redirected to: Default
+05.08.2021  13:36:48 : Page refreshed.
+05.08.2021  13:36:48 : Page refreshed.
+05.08.2021  13:37:04 : Page refreshed.
+05.08.2021  13:37:04 : Page refreshed.
+05.08.2021  13:40:28 : Redirected to: Vzorci
+05.08.2021  13:41:01 : Redirected to: Default
+05.08.2021  13:41:07 : Page refreshed.
+05.08.2021  13:41:07 : Page refreshed.
+05.08.2021  13:42:47 : Redirected to: Vzorci
+05.08.2021  13:43:13 : Redirected to: Default
+05.08.2021  13:43:25 : Redirected to: Vzorci
+05.08.2021  13:43:37 : Redirected to: Default
+05.08.2021  13:45:20 : Redirected to: Vzorci
+05.08.2021  13:45:22 : Page refreshed.
+05.08.2021  13:45:23 : Page refreshed.
+05.08.2021  13:45:42 : Redirected to: Default
+05.08.2021  13:48:09 : Redirected to: Vzorci
+05.08.2021  13:49:57 : Redirected to: Default
+05.08.2021  13:51:31 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+05.08.2021  13:51:31 : Logo1: Watchdog error - Watchdog does not change
+05.08.2021  13:51:31 : Logo1: Connection error: Watchdog error - Watchdog does not change
+05.08.2021  13:51:31 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+05.08.2021  13:51:34 : Logo1: Running connection diagnostics...
+05.08.2021  13:51:34 : Logo1:   -Ping successful at: 192.168.1.200
+05.08.2021  13:51:34 : Logo1: Connected again
+05.08.2021  13:51:34 : Write to PLC failed. Address: VW210, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+05.08.2021  13:51:34 : Write to PLC failed. Address: VW212, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+05.08.2021  13:51:34 : Logo1: Connection error: Watchdog error - Watchdog does not change
+05.08.2021  13:51:37 : Logo1: Running connection diagnostics...
+05.08.2021  13:51:37 : Logo1:   -Ping successful at: 192.168.1.200
+05.08.2021  13:51:38 : Logo1: Connected again
+05.08.2021  13:51:45 : Redirected to: Vzorci
+05.08.2021  13:51:56 : Redirected to: Default
+05.08.2021  13:51:59 : Redirected to: Vzorci
+05.08.2021  13:52:02 : Redirected to: Default
+05.08.2021  13:54:08 : Redirected to: Vzorci
+05.08.2021  13:54:12 : Page refreshed.
+05.08.2021  13:54:13 : Page refreshed.
+05.08.2021  13:54:14 : Redirected to: Default
+05.08.2021  13:54:41 : Redirected to: Vzorci
+05.08.2021  13:55:51 : Redirected to: Default
+05.08.2021  13:57:53 : Page refreshed.
+05.08.2021  13:57:53 : Page refreshed.
+05.08.2021  13:58:04 : Redirected to: Vzorci
+05.08.2021  13:59:32 : Redirected to: Default
+05.08.2021  14:02:15 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+05.08.2021  14:02:15 : Logo1: Watchdog error - Watchdog does not change
+05.08.2021  14:02:15 : Logo1: Connection error: Watchdog error - Watchdog does not change
+05.08.2021  14:02:15 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+05.08.2021  14:02:18 : Logo1: Running connection diagnostics...
+05.08.2021  14:02:18 : Logo1:   -Ping successful at: 192.168.1.200
+05.08.2021  14:02:19 : Logo1: Connected again
+05.08.2021  14:02:19 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+05.08.2021  14:02:19 : Logo1: Connection error: Watchdog error - Watchdog does not change
+05.08.2021  14:02:22 : Logo1: Running connection diagnostics...
+05.08.2021  14:02:22 : Logo1:   -Ping successful at: 192.168.1.200
+05.08.2021  14:02:22 : Logo1: Connected again
+05.08.2021  14:05:05 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+05.08.2021  14:05:05 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+05.08.2021  14:05:05 : Logo1: Connecting...
+05.08.2021  14:05:05 : Logo2: Connecting...
+05.08.2021  14:05:06 : Logo1: Connected
+05.08.2021  14:05:06 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+05.08.2021  14:05:07 : Logo2: Connected
+05.08.2021  14:05:07 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+05.08.2021  14:06:01 : Page refreshed.
+05.08.2021  14:06:01 : Page refreshed.
+05.08.2021  14:06:19 : Redirected to: Vzorci
+05.08.2021  14:12:14 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+05.08.2021  14:12:14 : Logo1: Watchdog error - Watchdog does not change
+05.08.2021  14:12:14 : Logo1: Connection error: Watchdog error - Watchdog does not change
+05.08.2021  14:12:15 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+05.08.2021  14:12:17 : Logo1: Running connection diagnostics...
+05.08.2021  14:12:17 : Logo1:   -Ping successful at: 192.168.1.200
+05.08.2021  14:12:18 : Logo1: Connected again
+05.08.2021  14:12:18 : Write to PLC failed. Address: VW210, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+05.08.2021  14:12:18 : Write to PLC failed. Address: VW212, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+05.08.2021  14:12:18 : Logo1: Connection error: Watchdog error - Watchdog does not change
+05.08.2021  14:12:21 : Logo1: Running connection diagnostics...
+05.08.2021  14:12:21 : Logo1:   -Ping successful at: 192.168.1.200
+05.08.2021  14:12:21 : Logo1: Connected again
+05.08.2021  14:13:38 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+05.08.2021  14:13:38 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+05.08.2021  14:13:38 : Logo1: Connecting...
+05.08.2021  14:13:38 : Logo2: Connecting...
+05.08.2021  14:13:39 : Logo1: Connected
+05.08.2021  14:13:39 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+05.08.2021  14:13:40 : Logo2: Connected
+05.08.2021  14:13:40 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+05.08.2021  14:13:56 : Redirected to: Vzorci
+05.08.2021  14:15:35 : Write to PLC failed. Address: VW796, Read Error type: OK, Write Error type: CPU : Address out of range, Client: Logo1. Flags: directionToPLC: True isWritable: True;
+05.08.2021  14:15:35 : Logo1: Watchdog error - Watchdog does not change
+05.08.2021  14:15:35 : Logo1: Connection error: Watchdog error - Watchdog does not change
+05.08.2021  14:15:35 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+05.08.2021  14:15:38 : Logo1: Running connection diagnostics...
+05.08.2021  14:15:38 : Logo1:   -Ping successful at: 192.168.1.200
+05.08.2021  14:15:38 : Logo1: Connected again
+05.08.2021  14:15:47 : Page refreshed.
+05.08.2021  14:15:50 : Page refreshed.
+05.08.2021  14:17:19 : Redirected to: Default
+05.08.2021  14:17:32 : Redirected to: MasterMenu
+05.08.2021  14:17:35 : Redirected to: UpNastavitve
+05.08.2021  14:17:35 : Redirected to: Advanced
+05.08.2021  14:17:36 : Redirected to: MasterMenu
+05.08.2021  14:17:36 : Redirected to: UpNastavitve
+05.08.2021  14:17:36 : Redirected to: Advanced
+05.08.2021  14:17:38 : Redirected to: Editor
+05.08.2021  14:17:57 : Redirected to: Default
+05.08.2021  14:19:08 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+05.08.2021  14:19:08 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+05.08.2021  14:19:08 : Logo1: Connecting...
+05.08.2021  14:19:08 : Logo2: Connecting...
+05.08.2021  14:19:09 : Logo1: Connected
+05.08.2021  14:19:09 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+05.08.2021  14:19:10 : Logo2: Connected
+05.08.2021  14:19:10 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+05.08.2021  14:19:14 : Redirected to: Vzorci
+05.08.2021  14:19:18 : Redirected to: Default
+05.08.2021  14:19:34 : Redirected to: Vzorci
+05.08.2021  14:19:40 : Redirected to: Default
+05.08.2021  14:19:58 : Redirected to: Vzorci
+05.08.2021  14:20:00 : Redirected to: Default
+05.08.2021  14:20:03 : Page refreshed.
+05.08.2021  14:20:03 : Page refreshed.
+05.08.2021  14:20:23 : Page refreshed.
+05.08.2021  14:20:23 : Page refreshed.
+05.08.2021  14:20:29 : Redirected to: Vzorci
+05.08.2021  14:20:49 : Redirected to: Default
+05.08.2021  14:20:53 : Redirected to: Vzorci
+05.08.2021  14:23:30 : Redirected to: Default
