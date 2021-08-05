@@ -54,12 +54,14 @@ namespace WebApplication1
         public PlcVars.Word SpeedSetTrak;
 
         public PlcVars.Bit SemaforGn; public PlcVars.Bit SemaforRd; public PlcVars.Bit SemaforYe;
+        public PlcVars.AlarmBit Reflex1, Reflex2; 
 
         // Alarms
         public PlcVars.Bit AlarmInit;
         public PlcVars.Bit CriticalMalfunction;
         public PlcVars.Bit MotorThermalX; public PlcVars.Bit MotorThermalY; public PlcVars.Bit MotorThermalT;
         public PlcVars.AlarmBit Starting;
+        public PlcVars.AlarmBit ErrEncoderX, ErrEncoderY;
 
         // Kontrola 
         public PlcVars.Bit PermissionToRun;
@@ -83,6 +85,8 @@ namespace WebApplication1
             MotorThermalX = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(319, 0), "Pregretje motorja X!", false, true) ;
             MotorThermalY = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(320, 0), "Pregretje motorja Y!", false, true) ;
             MotorThermalT = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(321, 0), "Pregretje motorja T!", false, true) ;
+            ErrEncoderX = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(326, 0),"NAPAKA ENKODERJA X", false, true);
+            ErrEncoderY = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(327, 0), "NAPAKA ENKODERJA Y", false, true);
 
             // info proces
             Ustavljeno = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(1, 0), "USTAVLJENO", false, true) ;
@@ -136,7 +140,10 @@ namespace WebApplication1
             ReadKSX2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(52, 0), "Končna pozicija X2", false, false, false) ;
             ReadKSY1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(54, 0), "Končna pozicija Y1", false, false, false) ;
             ReadKSY2 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(56, 0), "Končna pozicija Y2", false, false, false) ;
-            
+
+            Reflex1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(57, 0), "NAPRAVA SE JE ZALETELA V STENO!", false, true); //sproži ga končno stikalo ki pritisne na steno, povzroči da se odmik od stene poveča
+            Reflex1 = new PlcVars.AlarmBit(this, new PlcVars.BitAddress(58, 0), "NAPRAVA SE JE ZALETELA V STENO!", false, true); //sproži ga končno stikalo ki pritisne na steno, povzroči da se odmik od stene poveča
+
             JoyStickCommandX1 = new PlcVars.Bit(this, new PlcVars.BitAddress(90, 0), true) ;   // writable - joystick direction command
             JoyStickCommandX2 = new PlcVars.Bit(this, new PlcVars.BitAddress(91, 0), true);    // writable - joystick direction command
             JoyStickCommandY1 = new PlcVars.Bit(this, new PlcVars.BitAddress(92, 0), true);    // writable - joystick direction command

@@ -244,10 +244,10 @@ namespace WebApplication1
 
             private void BazenSel_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
             {
-                setHWLimits();
+                setHWLimits(true);
             }
 
-           public void setHWLimits()
+           public void setHWLimits(bool updateGui)
             {
                 var selectedIndex = bazenSel.GetSelectedValue(); // gets index of selected dropdown item  
                 if (selectedIndex == 0)
@@ -255,7 +255,11 @@ namespace WebApplication1
                     return;
                 }
 
-                Val.Kontrola.selectedBazen = selectedIndex;
+                if (updateGui)
+                {
+                    Val.Kontrola.selectedBazen = selectedIndex;
+                    prop1.ImpulsesDisplayVal.Value_short = selectedIndex;
+                }                
 
                 prop1.XImpulses.Value_short = XmlController.GetBazenTypeXImpulses(selectedIndex); // Gets value from XML about selected item;
                 prop1.YImpulses.Value_short = XmlController.GetBazenTypeYImpulses(selectedIndex); ;
@@ -263,8 +267,10 @@ namespace WebApplication1
                 prop1.XImpulses2.Value_short = XmlController.GetBazenTypeXImpulses2(selectedIndex); // Gets value from XML about selected item;
                 prop1.YImpulses2.Value_short = XmlController.GetBazenTypeYImpulses2(selectedIndex); ;
 
-                prop1.ImpulsesDisplayVal.Value_short = selectedIndex;
+                
             }
+
+          
             
             void Stanje()
             {

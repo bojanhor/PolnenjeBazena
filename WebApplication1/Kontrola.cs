@@ -15,6 +15,7 @@ namespace WebApplication1
         
         int MaxWaitTime_s = 60;
 
+       
         public Kontrola()
         {            
             Misc.SmartThread MovementAutoResolver = new Misc.SmartThread(() => MovementResolver_method());
@@ -403,7 +404,7 @@ namespace WebApplication1
                     {
                         if (Val.guiController.PageDefault_ != null)
                         {
-                            Val.guiController.PageDefault_.setHWLimits();
+                            Val.guiController.PageDefault_.setHWLimits(false);
                             cnt = 0;
                         }
                     }
@@ -425,6 +426,7 @@ namespace WebApplication1
 
         }
 
+        
 
         // helpers
         void InitZigZag()
