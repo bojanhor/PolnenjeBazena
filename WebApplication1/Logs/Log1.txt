@@ -7843,3 +7843,95 @@ Parameter name: updatePanel Stack trace:    at System.Web.UI.PageRequestManager.
 04.08.2021  13:06:29 : Page refreshed.
 04.08.2021  13:06:34 : Page refreshed.
 04.08.2021  13:06:34 : Page refreshed.
+04.08.2021  13:21:19 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+04.08.2021  13:21:19 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+04.08.2021  13:21:19 : Logo1: Connecting...
+04.08.2021  13:21:27 : Logo2: Connecting...
+04.08.2021  13:21:27 : Logo1: Connected
+04.08.2021  13:21:27 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+04.08.2021  13:21:29 : Logo2: Connected
+04.08.2021  13:21:29 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+04.08.2021  13:22:14 : Read from PLC failed. Address: bit at 7920, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:14 : Read from PLC failed. Address: bit at 3150, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:14 : Read from PLC failed. Address: bit at 3160, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:14 : Read from PLC failed. Address: bit at 3170, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:14 : Read from PLC failed. Address: bit at 3180, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:14 : Read from PLC failed. Address: bit at 3190, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:14 : Read from PLC failed. Address: bit at 3200, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:14 : Read from PLC failed. Address: bit at 3210, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:23 : Read from PLC failed. Address: bit at 10, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:23 : Read from PLC failed. Address: bit at 20, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:23 : Read from PLC failed. Address: bit at 40, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:23 : Read from PLC failed. Address: bit at 60, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:23 : Read from PLC failed. Address: VW310, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:23 : Read from PLC failed. Address: VW312, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:23 : Read from PLC failed. Address: VW216, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:23 : Read from PLC failed. Address: bit at 100, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:23 : Read from PLC failed. Address: bit at 120, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:24 : Read from PLC failed. Address: bit at 160, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:24 : Read from PLC failed. Address: bit at 170, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:24 : Read from PLC failed. Address: bit at 180, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:24 : Read from PLC failed. Address: bit at 190, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:24 : Read from PLC failed. Address: bit at 130, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:24 : Read from PLC failed. Address: bit at 140, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:24 : Read from PLC failed. Address: bit at 150, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:24 : Read from PLC failed. Address: bit at 200, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:24 : Read from PLC failed. Address: bit at 220, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:24 : Read from PLC failed. Address: bit at 240, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:25 : Read from PLC failed. Address: bit at 260, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:25 : Read from PLC failed. Address: bit at 280, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:25 : Read from PLC failed. Address: bit at 290, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:25 : Read from PLC failed. Address: bit at 300, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:25 : Read from PLC failed. Address: bit at 320, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:25 : Read from PLC failed. Address: bit at 400, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:25 : Read from PLC failed. Address: bit at 420, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:25 : Read from PLC failed. Address: bit at 440, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:25 : Read from PLC failed. Address: bit at 460, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:25 : Read from PLC failed. Address: bit at 500, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:25 : Read from PLC failed. Address: bit at 520, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:25 : Read from PLC failed. Address: bit at 540, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:25 : Read from PLC failed. Address: bit at 560, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:27 : Read from PLC failed. Address: bit at 900, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:27 : Read from PLC failed. Address: bit at 910, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:27 : Read from PLC failed. Address: bit at 920, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:27 : Read from PLC failed. Address: bit at 930, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:27 : Read from PLC failed. Address: bit at 940, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:27 : Read from PLC failed. Address: bit at 950, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:27 : Read from PLC failed. Address: bit at 960, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:27 : Read from PLC failed. Address: bit at 970, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:27 : Read from PLC failed. Address: bit at 980, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:27 : Read from PLC failed. Address: VW100, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:27 : Read from PLC failed. Address: VW104, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:27 : Read from PLC failed. Address: VW106, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:27 : Read from PLC failed. Address: VW108, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:27 : Read from PLC failed. Address: VW226, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:27 : Read from PLC failed. Address: bit at 2000, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:27 : Read from PLC failed. Address: bit at 2020, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:27 : Read from PLC failed. Address: bit at 2040, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:27 : Read from PLC failed. Address: bit at 740, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: False;
+04.08.2021  13:22:27 : Read from PLC failed. Address: bit at 4020, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:27 : Read from PLC failed. Address: bit at 4030, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:27 : Read from PLC failed. Address: bit at 4040, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:27 : Read from PLC failed. Address: bit at 4050, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:27 : Read from PLC failed. Address: bit at 4060, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:27 : Read from PLC failed. Address: bit at 4070, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:28 : Read from PLC failed. Address: bit at 4080, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:28 : Read from PLC failed. Address: bit at 4090, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:28 : Read from PLC failed. Address: bit at 4100, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:28 : Read from PLC failed. Address: bit at 4110, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:28 : Read from PLC failed. Address: bit at 4120, Read Error type: TCP : Error receiving Data, Write Error type: OK, Client: Logo1. Flags: directionToPLC: False forceRead: ; isWritable: True;
+04.08.2021  13:22:28 : Logo1: TCP : Error receiving Data
+04.08.2021  13:22:28 : Logo1: Connection error: TCP : Error receiving Data
+04.08.2021  13:22:29 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+04.08.2021  13:22:37 : Logo1: Running connection diagnostics...
+04.08.2021  13:22:37 : Logo1:   -Ping successful at: 192.168.1.200
+04.08.2021  13:22:37 : Logo1: Connected again
+04.08.2021  13:23:48 : Message shown to user: NI POVEZAVE S KRMILNIKOM 1!
+04.08.2021  13:23:48 : Message shown to user: NI POVEZAVE S KRMILNIKOM 2!
+04.08.2021  13:23:48 : Logo1: Connecting...
+04.08.2021  13:23:48 : Logo2: Connecting...
+04.08.2021  13:23:49 : Logo1: Connected
+04.08.2021  13:23:49 : Logo1: Watchdog started successfully - Period (Frequency) is 100ms
+04.08.2021  13:23:50 : Logo2: Connected
+04.08.2021  13:23:50 : Logo2: Watchdog started successfully - Period (Frequency) is 150ms
+04.08.2021  13:24:42 : Redirected to: Vzorci

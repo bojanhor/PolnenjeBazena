@@ -72,7 +72,7 @@ namespace WebApplication1
         public Prop1(Sharp7.S7Client client):base(client)
         {
             //PC Watchdog
-            PCWD = new PlcVars.Word(this, new PlcVars.WordAddress(796), true) { SyncEvery_X_Time = 2 };
+            PCWD = new PlcVars.Word(this, new PlcVars.WordAddress(796), true);
             PCWDFAIL = new  PlcVars.AlarmBit(this, new PlcVars.BitAddress(792,0),"Krmilnik ni zaznal Računalnika!", false, true);
 
             // Alarms
