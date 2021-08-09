@@ -1194,7 +1194,19 @@ namespace WebApplication1
                     }
                 }
 
+                public SuperLabel(string text, float top, float left, float width, float height, string fontsizehtml)
+                {
+                    Ctor( text,  top,  left,  width,  height);
+                    label.Style.Add(HtmlTextWriterStyle.FontSize, fontsizehtml);
+
+                }
+
                 public SuperLabel(string text, float top, float left, float width, float height)
+                {
+                    Ctor(text, top, left, width, height);
+                }
+
+                public void Ctor(string text, float top, float left, float width, float height)
                 {
 
                     label.Text = text;
@@ -1203,11 +1215,13 @@ namespace WebApplication1
                     Width = width;
                     Height = height;
 
+
                     label.Style.Add("top", "0");
                     label.Style.Add("left", "0");
                     label.Width = Unit.Percentage(100);
                     label.Height = Unit.Percentage(100);
                     label.Style.Add(HtmlTextWriterStyle.Position, "absolute");
+                    
 
                     Style.Add(HtmlTextWriterStyle.Position, "absolute");
                     Style.Add(HtmlTextWriterStyle.Top, Helper.FloatToStringWeb(top, "%"));

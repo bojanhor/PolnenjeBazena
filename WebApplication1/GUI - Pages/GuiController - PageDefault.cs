@@ -38,6 +38,7 @@ namespace WebApplication1
             GControls.ImageButtonWithID btnStop;           
             GControls.OnOffButton btnTrak;
             GControls.ImageButtonWithID btnCirc;
+            GControls.ImageButtonWithID XYsetBtn;
             public GControls.DropDownListForBazenSel bazenSel;
 
             // Semaphore
@@ -185,6 +186,11 @@ namespace WebApplication1
                     SetControlAbsolutePos(btnCirc, top, left, size); btnCirc.Click += BtnCirc_Click;
                     top += dif; gb1.Controls.Add(btnCirc); btnCirc.Style.Add(HtmlTextWriterStyle.ZIndex, "11");
 
+                    XYsetBtn = new GControls.ImageButtonWithID("xyset", 1)
+                    { ImageUrl = ImageUrl("XYsetBtn") };
+                    SetControlAbsolutePos(XYsetBtn,top+1,left+1,50F,15.1F); XYsetBtn.Click += XYsetBtn_Click;
+                    top += dif; gb1.Controls.Add(XYsetBtn); XYsetBtn.Style.Add(HtmlTextWriterStyle.ZIndex, "11");
+
                     bazenSel = new GControls.DropDownListForBazenSel("bazenSel", 
                         GControls.DropDownListForBazenSel.GetSelectedText(prop1.ImpulsesDisplayValRead.Value_short), 
                         top+1, left+1, size/8.55F, 1.3F, true, false, prop1.Ustavljeno.Value_bool);      
@@ -240,7 +246,10 @@ namespace WebApplication1
 
             }
 
-          
+            private void XYsetBtn_Click(object sender, ImageClickEventArgs e)
+            {
+                Navigator.Redirect("XYset");
+            }
 
             private void BazenSel_SaveClicked(object sender, ImageClickEventArgs e, ListItem selectedItem)
             {
@@ -419,8 +428,11 @@ namespace WebApplication1
 
                     gb_Conveyor = new GControls.GroupBox(0, 0, 100, 100);
 
-                    var coordinates = new Label() { Text = "X:" + prop1.XPos.Value_string + " Y:" + (prop1.YPos.Value_string), ForeColor = System.Drawing.Color.Gray};
-                    SetControlAbsolutePos(coordinates, 1, 1, 20,5);
+                    var coordinates = new Label() { Text = 
+                        "X:" + prop1.XPos.Value_string + " / " + prop1.XImpulses.Value_string + 
+                        " Y:" + (prop1.YPos.Value_string) + " / " + prop1.YImpulses.Value_string,
+                        ForeColor = System.Drawing.Color.Gray};
+                    SetControlAbsolutePos(coordinates, 1, 1, 40,5);
                     coordinates.Style.Add(HtmlTextWriterStyle.FontSize, "0.7vw");
 
                     gb_Conveyor.Controls.Add(coordinates);

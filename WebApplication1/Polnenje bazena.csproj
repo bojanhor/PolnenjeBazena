@@ -144,6 +144,7 @@
     </Content>
     <Content Include="Index.html" />
     <Content Include="Logs\Log1.txt" />
+    <Content Include="Pages\XYset.aspx" />
     <Content Include="Pages\Vzorci.aspx" />
     <Content Include="Pages\UpNastavitve.aspx" />
     <Content Include="Pages\Template.aspx" />
@@ -221,10 +222,10 @@
     <Content Include="Pictures\DirectionArrowDn.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Pictures\DirectionArrowUp.png">
+    <Content Include="Pictures\DirectionArrowLR.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Pictures\DirectionArrowUpDn.png">
+    <Content Include="Pictures\DirectionArrowUp.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Pictures\domov.png">
@@ -377,6 +378,9 @@
     <Content Include="Pictures\Warning.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Pictures\XYsetBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Pictures\Zig1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -527,9 +531,17 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="GUI - Pages Custom\GuiController - UpNastavitve.cs" />
+    <Compile Include="GUI - Pages\GuiController - PageXYset.cs" />
     <Compile Include="GUI - Pages\GuiController - PageVzorci.cs" />
     <Compile Include="Kontrola.cs" />
     <Compile Include="MessageToUser.cs" />
+    <Compile Include="Pages\XYset.aspx.cs">
+      <DependentUpon>XYset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\XYset.aspx.designer.cs">
+      <DependentUpon>XYset.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Vzorci.aspx.cs">
       <DependentUpon>Vzorci.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

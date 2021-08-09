@@ -24,6 +24,8 @@ namespace WebApplication1
         public PageUpNastavitve UpNastavitve_ { get; set; }
 
         public PageVzorci PageVzorci_ {get;set; }
+
+        public PageXYset PageXYset_ { get; set; }
         public EmptyTemplatePage PageTemplate_ { get; set; }
 
         public GuiController()  

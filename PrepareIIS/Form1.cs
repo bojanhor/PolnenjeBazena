@@ -14,7 +14,7 @@ namespace PrepareIIS
     public partial class Form1 : Form
     {
         // Settings
-        public string Name = "testPool";
+        public string name = "testPool";
 
         // //
 
@@ -34,7 +34,7 @@ namespace PrepareIIS
             
             for (int i = 0; i < s.ApplicationPools.Count; i++)
             {
-                if (s.ApplicationPools[i].Name == Name)
+                if (s.ApplicationPools[i].Name == name)
                 {
                     var pool = s.ApplicationPools[i];
                     pool.Stop();
@@ -45,7 +45,7 @@ namespace PrepareIIS
                 }
             }
 
-            s.ApplicationPools.Add(Name);
+            s.ApplicationPools.Add(name);
             
         }
     }
