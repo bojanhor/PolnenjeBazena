@@ -974,7 +974,29 @@ namespace WebApplication1
             {
                 throw new Exception(searchValue + " value in config file is not valid " + searchValue + " value. " +
                     "Correct the " + searchValue + " value in config or call your support administrator. " +
-                    "Index must be more than 0 and less than or equal to 20. Value in xml must be positive number.");
+                    "2nd option: Index must be more than 0 and less than or equal to 20. Value in xml must be positive number.");
+            }
+        }
+
+        public static void SetBazenTypeXImpulses(int index, short value)
+        {
+            var searchValue = "BazenType";
+
+            try
+            {
+                if (index < 1 || index > 20)
+                {
+                    throw new Exception();
+                }
+
+                XmlBazen.Element(searchValue + index + "_X_impulseTo").Value = value.ToString();
+                SaveXML_Auto(XmlFile.ToString());
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception(
+                   "Error while setting value: " + searchValue + ". Error info: " + ex.Message);
             }
         }
 
@@ -1001,6 +1023,28 @@ namespace WebApplication1
             }
         }
 
+        public static void SetBazenTypeYImpulses(int index, short value)
+        {
+            var searchValue = "BazenType";
+
+            try
+            {
+                if (index < 1 || index > 20)
+                {
+                    throw new Exception();
+                }
+
+                XmlBazen.Element(searchValue + index + "_Y_impulseTo").Value = value.ToString();
+                SaveXML_Auto(XmlFile.ToString());
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception(
+                   "Error while setting value: " + searchValue + ". Error info: " + ex.Message);
+            }
+        }
+
         public static short GetBazenTypeXImpulses2(int index)
         {
             var searchValue = "BazenType";
@@ -1024,6 +1068,28 @@ namespace WebApplication1
             }
         }
 
+        public static void SetBazenTypeXImpulses2(int index, short value)
+        {
+            var searchValue = "BazenType";
+
+            try
+            {
+                if (index < 1 || index > 20)
+                {
+                    throw new Exception();
+                }
+
+                XmlBazen.Element(searchValue + index + "_X_impulseFrom").Value = value.ToString();
+                SaveXML_Auto(XmlFile.ToString());
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception(
+                   "Error while setting value: " + searchValue + ". Error info: " + ex.Message);
+            }
+        }
+
         public static short GetBazenTypeYImpulses2(int index)
         {
             var searchValue = "BazenType";
@@ -1044,6 +1110,28 @@ namespace WebApplication1
                 throw new Exception(searchValue + " value in config file is not valid " + searchValue + " value. " +
                     "Correct the " + searchValue + " value in config or call your support administrator. " +
                     "Index must be more than 0 and less than or equal to 20. Value in xml must be positive number.");
+            }
+        }
+
+        public static void SetBazenTypeYImpulses2(int index, short value)
+        {
+            var searchValue = "BazenType";
+
+            try
+            {
+                if (index < 1 || index > 20)
+                {
+                    throw new Exception();
+                }
+
+                XmlBazen.Element(searchValue + index + "_Y_impulseFrom").Value = value.ToString();
+                SaveXML_Auto(XmlFile.ToString());
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception(
+                   "Error while setting value: " + searchValue + ". Error info: " + ex.Message);
             }
         }
 

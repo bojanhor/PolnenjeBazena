@@ -154,10 +154,7 @@ namespace WebApplication1
                 divMaster.Controls.Add(gb1);
             }
 
-            string ImageUrl(string Name)
-            {
-                return "~/Pictures/" + Name + ".png";
-            }
+            
 
             void Kontrola(HtmlGenericControl gb1)
             {
@@ -173,7 +170,7 @@ namespace WebApplication1
                     top += dif; OthersUP.Controls_Add(btnStart);
 
                     btnStop = new GControls.ImageButtonWithID("Stop", 1)
-                    { ImageUrl = ImageUrl("Stop1") }; SetControlAbsolutePos(btnStop, top, left, size); btnStop.Click += BtnStop_Click;
+                    { ImageUrl = Helper.ImageUrl("Stop1") }; SetControlAbsolutePos(btnStop, top, left, size); btnStop.Click += BtnStop_Click;
 
                     top += dif + 2; gb1.Controls.Add(btnStop);
                                         
@@ -182,12 +179,12 @@ namespace WebApplication1
                     top += dif; OthersUP.Controls_Add(btnTrak);
 
                     btnCirc = new GControls.ImageButtonWithID("Circ", 1)
-                    { ImageUrl = ImageUrl("Circ1") };
+                    { ImageUrl = Helper.ImageUrl("Circ1") };
                     SetControlAbsolutePos(btnCirc, top, left, size); btnCirc.Click += BtnCirc_Click;
                     top += dif; gb1.Controls.Add(btnCirc); btnCirc.Style.Add(HtmlTextWriterStyle.ZIndex, "11");
 
                     XYsetBtn = new GControls.ImageButtonWithID("xyset", 1)
-                    { ImageUrl = ImageUrl("XYsetBtn") };
+                    { ImageUrl = Helper.ImageUrl("XYsetBtn") };
                     SetControlAbsolutePos(XYsetBtn,top+1,left+1,50F,15.1F); XYsetBtn.Click += XYsetBtn_Click;
                     top += dif; gb1.Controls.Add(XYsetBtn); XYsetBtn.Style.Add(HtmlTextWriterStyle.ZIndex, "11");
 

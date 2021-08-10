@@ -12,10 +12,10 @@
     <Y_Step>10</Y_Step>//			ZigZag vzorec - korak Y
     //
     <BazenType1_Name>1-8(m)</BazenType1_Name> //
-    <BazenType1_X_impulseFrom>0</BazenType1_X_impulseFrom> //
-    <BazenType1_Y_impulseFrom>0</BazenType1_Y_impulseFrom> //
+    <BazenType1_X_impulseFrom>1</BazenType1_X_impulseFrom> //
+    <BazenType1_Y_impulseFrom>1</BazenType1_Y_impulseFrom> //
     <BazenType1_X_impulseTo>69</BazenType1_X_impulseTo> //
-    <BazenType1_Y_impulseTo>64</BazenType1_Y_impulseTo> //
+    <BazenType1_Y_impulseTo>65</BazenType1_Y_impulseTo> //
     //
     <BazenType2_Name>9-17(v)</BazenType2_Name> //
     <BazenType2_X_impulseFrom>0</BazenType2_X_impulseFrom> //

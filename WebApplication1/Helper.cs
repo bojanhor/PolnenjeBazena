@@ -400,5 +400,10 @@ namespace WebApplication1
         {
             return new string(input.Where(c => char.IsDigit(c)).ToArray());
         }
+
+        public static string ImageUrl(string Name)
+        {
+            return "~/Pictures/" + Name + ".png";
+        }
     }
 }

@@ -21,7 +21,8 @@ namespace WebApplication1.Pages
                       
         private void Initialise()
         {
-            Val.guiController.PageXYset_.UP.Controls_Add(Val.guiController.PageXYset_.gb_main);
+            Val.guiController.PageXYset_.UP.Controls_Add(Val.guiController.PageXYset_.gb_left);
+            Val.guiController.PageXYset_.UP.Controls_Add(Val.guiController.PageXYset_.gb_right);
             TemplateClass.Controls.Add(Val.guiController.PageXYset_.UP);
         }
 
